@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnKindDef ParentName="BasePlayerPawnKind">
+      <defName>Wula_PawnKind</defName>
+      <label>乌拉</label>
+      <race>WulaSpecies</race>
+      <defaultFactionType>PlayerColony</defaultFactionType>
+
+      <!-- This is a required field. 13~21 is the default value for Crashlanded player colonists. -->
+      <initialResistanceRange>13~21</initialResistanceRange>
+
+      <ignoresPainShock>true</ignoresPainShock>
+      <minGenerationAge>1000</minGenerationAge>
+      <!-- <abilities>
+        <li>EntitySkip</li>
+        <li>Heatspikes</li>
+        <li>FleshmelterBolt</li>
+        <li>AgonyPulse</li>
+      </abilities> -->
+  </PawnKindDef>
+</Defs>

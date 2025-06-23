@@ -1,0 +1,221 @@
+﻿l_simp_chinese:
+ wula_planetary_cannon_0_MEGASTRUCTURE_DETAILS:0"恒星曲速炮是乌拉帝国黄金时代所建造过的恒星级巨炮，可以一击打碎整个星系"
+ must_build_around_black_hole:0"$TRIGGER_FAIL$必须围绕黑洞建造"
+ wula_ark_battleship_fallen_empire:0"恒星曲速炮"
+ wula_galaxy_miracle:0"$TRIGGER_FAIL$这是乌拉帝国的星河奇迹，全银河只能存在一个！"
+ need_fallen_empire_awakened:0"$TRIGGER_FAIL$只有在成为觉醒帝国时才能建造"
+ NAME_Wula_Noah_Ark:0"方舟"
+ wula_abandon_goliath_2:0"损坏的乌拉帝国超级旗舰"
+
+ NAME_Wula_PLANETARY_CANNON:0"恒星曲速炮"
+
+ requires_one_star:0"$TRIGGER_FAIL$ 只能在§Y单星星系§!的恒星上建造该巨构"
+ requires_not_another_planetary_cannon:0"$TRIGGER_FAIL$ 该星系已经有一台恒星曲速炮"
+
+ wula_planetary_cannon_0:0"恒星曲速炮：基址"
+ wula_planetary_cannon_0_DESC:0"为了修建乌拉帝国曾经修建过的恒星级巨炮，无数优秀的人才在这里齐聚一堂。"
+ wula_megastructure_event.100.name:0"准备建造恒星曲速炮"
+ wula_megastructure_event.100.desc:0"为了接下来的工程，我们已经聚集了大量的人才，这些来自各行各业的精英将挑战在黑洞上建造一台宏伟的巨炮，这台巨炮曾经是乌拉帝国黄金时代的岸防炮，拥有贯穿星辰的伟力。工程人员来回奔忙，紧锣密鼓地勘探和测算中的黑洞参数，为未来搭建巨炮的脚手架做准备。"
+ wula_megastructure_event.100.a:0"继续施工吧"
+
+ wula_planetary_cannon_1:0"恒星曲速炮：炮管"
+ wula_planetary_cannon_1_DESC:0"恒星曲速炮的炮管直指天际，未来的轨道炮炮弹在加速完从黑洞的事件视界出来后会在这里进行重接，最后被赋予令人难以想象的恐怖破坏力。"
+ wula_megastructure_event.101.name:0"恒星曲速炮炮管完工"
+ wula_megastructure_event.101.desc:0"恒星曲速炮炮管已经组装完成，这门巨炮的炮膛由最坚固的合金铸造，为的是承受炮弹脱离黑洞事件视野时带来的庞大能量，并对炮弹进行重定向以提高精度，使得巨炮炮弹得以打向遥远的星辰。"
+
+ wula_planetary_cannon_2:0"恒星曲速炮：根加速器"
+ wula_planetary_cannon_2_DESC:0"这是恒星曲速炮用于进行第一次加速的轨道，事实上炮弹在这里面就可以加速到超光速，但是为了进一步提升破坏力，炮弹会掉入黑洞的事件视界突破物理限制继续加速，此外，为了让恒星曲速炮可以包住黑洞，黑洞会被人为地诱引而发生坍缩。"
+ wula_megastructure_event.102.name:0"恒星曲速炮根加速器完工"
+ wula_megastructure_event.102.desc:0"恒星曲速炮已经完成了根加速器的组装，这个根加速器负责巨炮炮弹的第一段加速，在加速完成后炮弹将被甩向黑洞，突破物理限制继续加速以增加炮弹的能量。由于黑洞对于脚手架来说太大了，我们的工作人员已经人为地诱发了黑洞的坍缩，以进行进一步的施工。"
+
+ wula_planetary_cannon_3:0"恒星曲速炮：协调器"
+ wula_planetary_cannon_3_DESC:0"当恒星曲速炮的炮弹进入黑洞的事件视界时，这个协调器上的设施将负责监控炮弹的运行情况，当炮弹即将脱离黑洞的事件视界时，这个协调器将负责为炮弹撕开一条维度的缺口以使其可以顺利返回现实宇宙，并被炮管捕获进行重接定向。"
+ wula_megastructure_event.103.name:0"恒星曲速炮协调器完工"
+ wula_megastructure_event.103.desc:0"我们的工作人员回报，恒星加速炮协调器已经完成组装。这是整个工程中最复杂的部分，因为协调器要负责在引导在黑洞内的炮弹，这代表引导炮弹时全程都要突破时空的限制，观测黑洞事件视界内的物体。"
+
+ wula_planetary_cannon_4:0"恒星曲速炮：量子弹射环"
+ wula_planetary_cannon_4_DESC:0"这个环状设施负责弹射舰队或者弹射标定锚点以标记轰炸目标，轰炸目标将与恒星曲速炮所在星系链接，随后象征死亡与毁灭的弹幕将被泼洒到这些星系中。"
+ wula_megastructure_event.104.name:0"恒星曲速炮竣工"
+ wula_megastructure_event.104.desc:0"完成了。\n\n恒星加速炮最后组件——量子弹射环——已经组装到位，该模块负责弹射锚点，来为恒星加速炮的炮击目标标点。随着最后的模块对接到位，恒星曲速炮宣布开始运转。\n\n国内无不欢欣鼓舞，恒星加速炮的竣工代表着银河系所有的星系在我们手中不过是供我们肆意摆弄的玩物，毁灭星辰的力量已经被我们掌握于手中！"
+ wula_megastructure_event.104.a:0"现在谁敢反抗我们！"
+
+ wula_planetary_cannon_idle:0"恒星曲速炮"
+ wula_planetary_cannon_idle_DESC:0"恢弘的堕落乌拉帝国恒星巨炮，用于跨越成百上千个星系向忤逆者发起毁灭性炮击\n\n§E该恒星曲速炮将处于待机状态，不参加轰炸行动§!"
+ wula_planetary_cannon_standby:0"装填恒星曲速炮"
+ wula_planetary_cannon_standby_DESC:0"庞大的炮弹已经被塞入这门巨炮的炮管之中，随时准备向上千万光年外的目标发射\n\n§E装填该恒星曲速炮，允许其参加轰炸行动§!"
+ wula_planetary_cannon_fire:0"恒星曲速炮（冷却中）"
+ wula_planetary_cannon_fire_DESC:0"这台巨炮刚刚将毁灭喷洒向其他星系，正在完成炮管的冷却和修复"
+
+ wula_planetary_cannon_target.name:0"恒星曲速炮目标标记"
+ wula_planetary_cannon_target.num:0"目前可以参与射击的恒星曲速炮数量：§E[From.wula_planetary_cannon_windup_num_count]§!"
+ wula_planetary_cannon_target.target:0"目前已经指定一个炮击目标，继续指定将覆盖之前的目标"
+ wula_planetary_cannon_target.target2:0"该目标已经被指定为炮击目标"
+ wula_planetary_cannon_target.desc:0"将该目标标记为炮击目标，所有的恒星曲速炮在激活时将向该目标射击——炮弹落点将由于距离问题而出现偏差"
+
+ wula_planetary_cannon_salvo.name:0"恒星曲速炮开火"
+ wula_planetary_cannon_salvo.desc:0"向目标释放恒星曲速炮的怒火"
+ wula_planetary_cannon_salvo.desc2:0"向目标释放恒星曲速炮的怒火"
+
+ wula_planetary_cannon_scattering_test.name:0"恒星曲速炮齐射参数测算"
+ wula_planetary_cannon_scattering_test.desc:0"在进行齐射前，恒星曲速炮将需要进行射击诸元计算，按下此按钮将开始计算轰炸覆盖面，并准备进行最终发射确认"
+
+ wula_ark_ruined:0"损毁的恒星曲速炮"
+ wula_ark_ruined_DESC:0"这台恒星曲速炮被摧毁了，已经没有再次修复的可能"
+
+ wula_megastructure_event.105.name:0"§R重要：恒星曲速炮操作须知§!"
+ wula_megastructure_event.105.desc:0"恒星曲速炮发射体系由巨炮本体和用于标记目标星系的§H标定锚点§!组成，可供操作的只有§H标定锚点§!，巨炮属于自主运作，会自动向标记的星系发射炮弹。\n\n§Y当需要开火时，使用§H量子弹射§!（量子弹射按钮位于跃迁按钮的旁边）功能将§H标定锚点§!发射到目标所在地即可§!——由于§H量子弹射§!的不准确性，落点可能有所偏差，想要精准的打击某个星系，需要从§H恒星基地§!生产校准器并发射至打击目标处。\n\n在恒星曲速炮所在的§H恒星基地§!，可以在舰船生产界面生产更多的§H标定锚点§!，对应着各种不同的弹种。"
+ wula_megastructure_event.105.a:0"我已知悉"
+
+ wula_megastructure_event.106.name:0"征服巨炮"
+ wula_megastructure_event.106.desc:0"这是一个值得欢欣鼓舞的日子，我们的敌人——[event_defender.GetName]的恒星曲速炮已经被我们英勇的舰队摧毁！这个巨大的造物发出一声悲鸣，被束缚的黑洞蕴含的巨大能量迸发而出，无数的巨炮碎片四处飞溅，整个星系被残骸所填满。我们再也不用担心那些来自远方的不可防御的火力了，我们的舰队特地倾泻了更饱和的火力，以防[event_defender.GetName]将其修好。"
+ wula_megastructure_event.106.a:0"今天将值得我们纪念！"
+ wula_megastructure_event.107.name:0"§R恒星曲速炮被摧毁！§R!"
+ wula_megastructure_event.107.desc:0"我们的恒星曲速炮被[event_attacker.GetName]摧毁了！他们对娇贵的恒星曲速炮造成了不可弥补的损害，我们已经没办法再使用这台巨炮了！"
+ wula_megastructure_event.107.a:0"这不可能！"
+
+ wula_megastructure_event.108.name:0"乌拉帝国星河奇迹被他人建造"
+ wula_megastructure_event.108.desc:0"我们的乌拉帝国奇迹巨构已经被其他人抢先完成！"
+ wula_megastructure_event.108.a:0"？？？"
+
+ WULA_ARK_PRIMARY_WEAPON:0"恒星曲速炮主炮"
+ WULA_ARK_PRIMARY_WEAPON_HIDE:0"恒星曲速炮主炮"
+ NAME_Wula_Ark_Wormhole:0"恒星曲速炮虫洞"
+ wula_ark_wormhole_fallen_empire:0"恒星曲速炮虫洞"
+ NAME_WULA_ARK_OPERATOR_2:0"恒星曲速炮操作组"
+ NAME_WULA_ARK_OPERATOR:0"恒星曲速炮操作组"
+ wula_ark_trigger_country:0"恒星曲速炮操作组"
+ NAME_Wula_Ark_Anchor_Point:0"恒星曲速炮标定锚点"
+ NAME_Wula_Ark_Anchor_Point_Normal_Shell:0"普通炮弹"
+ wula_ark_anchor_point_fallen_empire:0"标定锚点：普通炮弹"
+ NAME_Wula_Ark_Anchor_Point_2:0"恒星曲速炮标定锚点"
+ wula_ark_anchor_point_2_fallen_empire:0"标定锚点：风暴炮弹"
+ NAME_Wula_Ark_Anchor_Point_Storm_Shell:0"风暴炮弹"
+ NAME_Wula_Ark_Anchor_Point_3:0"恒星曲速炮标定锚点"
+ wula_ark_anchor_point_3_fallen_empire:0"标定锚点：照明炮弹"
+ NAME_Wula_Ark_Anchor_Point_Flare_Shell:0"照明炮弹"
+ NAME_Wula_Ark_Flare:0"侦察信标"
+ wula_ark_flare_fallen_empire:0"侦察信标"
+ NAME_Wula_Ark_Anchor_Point_4:0"恒星曲速炮标定锚点"
+ NAME_Wula_Ark_Anchor_Point_Artillery_Locator_Shell:0"校准射击炮弹"
+ wula_ark_anchor_point_4_fallen_empire:0"标定锚点：校准射击炮弹"
+ NAME_Wula_Ark_Artillery_Locator:0"炮火校准器"
+ wula_ark_artillery_locator_fallen_empire:0"炮火校准器"
+
+ sm_ark_calibration_module:0"恒星曲速炮校准基站"
+ sm_ark_calibration_module_desc:0"这个星际基地的设施负责恒星曲速炮的炮击校准，可以协助星系内的量子弹射以增加恒星曲速炮的射程"
+ sm_ark_starbase_center:0"恒星曲速炮调度中心"
+ sm_ark_starbase_center_desc:0"这里负责统筹规划恒星曲速炮的发射，是恒星曲速炮设施真正意义上的中枢"
+ sm_ark_starbase_center_desc_modifier:0"§E船坞：§!§Y允许建造用于发射恒星曲速炮的标定锚点§!"
+ can_only_built_by_wula_ark_shipyard:0"只能在有§H恒星曲速炮调度中心§!的星际基地组装，而此星际基地建筑只能在有§H恒星曲速炮§!的星际基地建造"
+
+ wula_megastructure_event.109.name:0"[event_solar_system.GetName]被毁灭！"
+ wula_megastructure_event.109.desc:0"我们的星系——[event_solar_system.GetName]——被恒星曲速炮所毁灭，这个星系的一切都被轨道炮打的粉碎！"
+ wula_megastructure_event.109.a:0"怎么会这样！"
+
+ wula_megastructure_event.110.name:0"炮弹飞向[event_solar_system.GetName]"
+ wula_megastructure_event.110.desc:0"我们的恒星曲速炮已经向[event_solar_system.GetName]发射了一组炮弹，[event_solar_system.GetName]的毁灭之日将近！"
+ wula_megastructure_event.110.desc2:0"我们的恒星曲速炮已经依照炮火校准器传输回来的数据，向[event_solar_system.GetName]发射了一组炮弹，[event_solar_system.GetName]的毁灭之日将近！"
+ wula_megastructure_event.110.a:0"粉碎[event_solar_system.GetName]里的一切！"
+
+ MESSAGE_ARK_FIRE_1:0"炮弹已发射"
+ MESSAGE_ARK_FIRE_1_DESC:0"一发足以毁灭[event_solar_system.GetName]的碎星弹已经由恒星曲速炮发射，15天后这个星系的一切将化为乌有！"
+
+ wula_megastructure_event.111.name:0"见证毁灭"
+ wula_megastructure_event.111.desc:0"[event_solar_system.GetName]归于沉寂。\n\n恒星曲速炮炮弹爆炸的余光还在[event_solar_system.GetName]间闪烁，毁灭星辰的力量从潘多拉魔盒中被释放，当[event_solar_system.GetName]被我们肆意抹去的时候，目睹一切的银河系却噤声不语。\n\n现在，游戏的形式已经发生了改变，是时候洗牌了。"
+ wula_megastructure_event.111.desc2:0"随着[wula_ark_owner.GetName]的恒星曲速炮发射的炮弹击中[event_solar_system.GetName]，一切归于沉寂。\n\n恒星曲速炮炮弹爆炸的余光还在[event_solar_system.GetName]间闪烁，毁灭星辰的力量从潘多拉魔盒中被释放，当[wula_ark_owner.GetName]拥有肆意抹去星系力量时，目睹一切的银河系却噤声不语。\n\n现在，谁能对抗[wula_ark_owner.GetName]呢？"
+ wula_megastructure_event.111.a:0"到我们了"
+ wula_megastructure_event.111.b:0"未来一片黯淡"
+
+ wula_megastructure_event.113.name:0"装填完成：普通炮弹"
+ wula_megastructure_event.113.desc:0"我们已经为[event_solar_system.GetName]的恒星曲速炮填充了四发一组的§H普通炮弹§!，并组装了对应的§H标定锚点§!，现在我们只需要使用§H量子弹射§!将标定锚点弹射到我们需要轰击的地方，恒星曲速炮就会自动向落点开火！\n\n§H普通炮弹§!：当击中目标星系的时候，将释放出惊人的毁灭之力，将星系内所有的星球和舰队摧毁，并将恒星轰炸成黑洞，该型号炮弹首次发射会导致[Root.Owner.GetName]和全银河系关系恶化！\n\n该信标可以被炮火校准器引导，如果标定锚点或火炮校准器落入非交战国家，那么打击将不会进行。"
+ wula_megastructure_event.113.a:0"准备发射！"
+ wula_megastructure_event.113.b:0"关于§H普通炮弹§!，不要再提醒我"
+
+ wula_megastructure_event.114.name:0"信标落入[event_solar_system.GetName]"
+ wula_megastructure_event.114.desc:0"我们弹射的某一枚锚定信标落入[event_solar_system.GetName]，而其拥有者[event_defender.GetName]并不是我们的敌人，所以我们并没有创建对该星系进行打击的瞄准诸元······"
+ wula_megastructure_event.114.a:0"这下尴尬了"
+
+ wula_megastructure_event.115.name:0"风暴弹飞向[event_solar_system.GetName]"
+ wula_megastructure_event.115.desc:0"我们的恒星曲速炮已经向[event_solar_system.GetName]发射了一发风暴弹，[event_solar_system.GetName]内的一切都将行瘫痪！"
+ wula_megastructure_event.115.desc2:0"我们的恒星曲速炮已经依照炮火校准器传输回来的数据，向[event_solar_system.GetName]发射了一发风暴弹，[event_solar_system.GetName]内的一切都将行瘫痪！"
+ wula_megastructure_event.115.a:0"让风暴席卷[event_solar_system.GetName]！"
+
+ wula_megastructure_event.116.name:0"装填完成：风暴炮弹"
+ wula_megastructure_event.116.desc:0"我们已经为[event_solar_system.GetName]的恒星曲速炮填充了一发§H风暴炮弹§!，并组装了对应的§H标定锚点§!，现在我们只需要使用§H量子弹射§!将标定锚点弹射到我们需要轰击的地方，恒星曲速炮就会自动向落点开火！\n\n§H风暴炮弹§!：当击中目标星系的时候，将使得星系被永不消散的风暴笼罩，进入风暴的舰队其护盾将无效化并且亚光速速度降低，星系内所有舰队被迫进入紧急超光速而失踪，可居住星球会因大气丢失变成死寂星球。\n\n该信标可以被炮火校准器引导，如果标定锚点或火炮校准器落入非交战国家，那么打击将不会进行。"
+ wula_megastructure_event.116.b:0"关于§H风暴炮弹§!，不要再提醒我"
+
+ wula_megastructure_event.117.name:0"[event_solar_system.GetName]内出现风暴！"
+ wula_megastructure_event.117.desc:0"我们的星系——[event_solar_system.GetName]——被恒星曲速炮发射的炮弹诱发了剧烈的空间风暴，我们的舰队被迫撤退，里面的殖民地都被抽干了大气层！"
+ wula_megastructure_event.117.a:0"什么，风暴？"
+
+ wula_megastructure_event.118.name:0"装填完成：照明炮弹"
+ wula_megastructure_event.118.desc:0"我们已经为[event_solar_system.GetName]的恒星曲速炮填充了一发§H照明炮弹§!，并组装了对应的§H标定锚点§!，现在我们只需要使用§H量子弹射§!将标定锚点弹射到我们需要轰击的地方，恒星曲速炮就会自动向落点开火！\n\n§H照明炮弹§!：当击中目标星系的时候，将在星系内固定一个侦察信标，该信标将提供4跳内的所有星系的信息，且拥有7级隐形等级，在10年后自动销毁。\n\n该信标可以被炮火校准器引导，可以向任何地方发射，哪怕落点星系的拥有者没有与[Root.Owner.GetName]交战或者是没有开放边境。"
+ wula_megastructure_event.118.b:0"关于§H照明炮弹§!，不要再提醒我"
+
+ wula_megastructure_event.119.name:0"照明弹飞向[event_solar_system.GetName]"
+ wula_megastructure_event.119.desc:0"我们的恒星曲速炮已经向[event_solar_system.GetName]发射了一发照明弹，[event_solar_system.GetName]和附近的星系的信息即将尽入彀中！"
+ wula_megastructure_event.119.desc2:0"我们的恒星曲速炮已经依照炮火校准器传输回来的数据，向[event_solar_system.GetName]发射了一发照明弹，[event_solar_system.GetName]和附近的星系的信息即将尽入彀中！"
+ wula_megastructure_event.119.a:0"来看看[event_solar_system.GetName]有什么"
+
+ wula_megastructure_event.18.name:0"[event_solar_system.GetName]的照明信标销毁"
+ wula_megastructure_event.18.desc:0"我们在[event_solar_system.GetName]的侦察信标已经寿终正寝，自行销毁了。"
+ wula_megastructure_event.18.a:0"那就再打一个过去"
+
+ triggered_opinion_not_use_wula_ark:0"恒星曲速炮威慑"
+ triggered_opinion_have_used_wula_ark:0"发射过恒星曲射炮"
+
+ war_goal_wg_wula_ark_war:0"恒星曲速炮威慑"
+ war_goal_wg_wula_ark_war_desc:0"当我们拥有毁灭星辰的力量后，一切的外交都是那么无关紧要\n\n这是一场§H全面战争§!！"
+ war_goal_wg_end_threat_wula_ark:0"摧毁恒星曲速炮"
+ war_goal_wg_end_threat_wula_ark_desc:0"不能放任这些人拥有这样的武器，必须不计一切代价摧毁它！\n\n这是一场§H全面战争§!！"
+ casus_belli_cb_wula_ark:0"恒星曲速炮"
+
+ wula_megastructure_event.121.name:0"装填完成：校准射击炮弹"
+ wula_megastructure_event.121.desc:0"我们已经为[event_solar_system.GetName]的恒星曲速炮填充了一发§H校准射击炮弹§!，并组装了对应的§H标定锚点§!，现在我们只需要使用§H量子弹射§!将标定锚点弹射到我们需要轰击的地方，恒星曲速炮就会自动向落点开火！\n\n§H校准射击炮弹§!：当击中目标星系的时候，将在星系内部署一个火炮校准器，该校准器将引导所有从恒星曲速炮射出的炮火射向其所在星系，无论该炮弹原本射向哪里（不能向和平状态的国家引导进攻型炮弹）。进行任意一发的炮击引导或者发射了新的炮火校准器后，该校准器立刻自动销毁。\n\n如果标定锚点落入非交战国家，那么发射将不会进行。"
+ wula_megastructure_event.121.b:0"关于§H校准射击炮弹§!，不要再提醒我"
+
+ wula_megastructure_event.122.name:0"校准射击弹飞向[event_solar_system.GetName]"
+ wula_megastructure_event.122.desc:0"我们的恒星曲速炮已经向[event_solar_system.GetName]发射了一台火炮校准器，它将会把[event_solar_system.GetName]的射击诸元全部传输回来，以方便我们进行精准射击。"
+ wula_megastructure_event.122.a:0"全部火力准备射向[event_solar_system.GetName]"
+
+ fallen_empire_shroud_fissure:0"可通行虚境裂隙"
+ SHROUD_FISSURE_FALLEN_EMPIRE:0"可通行虚境裂隙"
+ SHROUD_FISSURE_FALLEN_EMPIRE_DESC:0"乌拉帝国使用强大灵能撕扯出来的一条连通现实与虚境的裂隙，其中有一些裂隙足够安全，足以使船只通行"
+ ONLY_FALLEN_EMPIRE_SPIRITUALIST_CAN_USE:0"$TRIGGER_FAIL$只有圣地守卫者——乌拉帝国 大教堂知道如何引领舰队穿过虚境裂隙通道！"
+ wula_shroud_fissure_0:0"可通行虚境裂隙"
+ wula_shroud_fissure_0_DESC:0"乌拉帝国使用强大灵能撕扯出来的一条连通现实与虚境的裂隙，其中有一些裂隙足够安全，足以使船只通行"
+
+ wula_shipyard_orbital_ring_0_MEGASTRUCTURE_DETAILS:0"这个理想城将被大幅改造，成为一个被模块化的框架星球"
+ must_build_around_city_world:0"$TRIGGER_FAIL$这个巨构只能围绕理想城建造"
+
+ wula_shipyard_orbital_ring_0:0"框架星球：基址"
+ wula_shipyard_orbital_ring_0_DESC:0"施工队将从这里开始铺设脚手架，并准备好改造这个被城市覆盖的星球"
+
+ wula_shipyard_orbital_ring_1:0"框架星球：交通环"
+ wula_shipyard_orbital_ring_1_DESC:0"这种星环基地是负责联系星球和近地轨道的交通枢纽，同时也充当施工的脚手架"
+
+ wula_shipyard_orbital_ring_2:0"框架星球：重力环"
+ wula_shipyard_orbital_ring_2_DESC:0"这套围绕赤道建立的结构用于操纵被重塑的星球结构，日后所有的变形信号都将从此向整个星球广播"
+
+ wula_shipyard_orbital_ring_3:0"框架星球：船坞阵列"
+ wula_shipyard_orbital_ring_3_DESC:0"海量的近地船坞将被安装在星环基地上，这些船坞和星球用短距跃迁锚点相互链接，从而适应框架星球的巨大吞吐量"
+
+ wula_shipyard_orbital_ring_4:0"框架星球"
+ wula_shipyard_orbital_ring_4_DESC:0"当完成指挥塔的安装后，整个框架星球将完成建造，这些最后安装的指挥塔负责从两级微调星球重力，以适应不断变化的星球"
+
+ wula_civil_war_fissure_royalist:0"乌拉帝国星门网络"
+ wula_civil_war_fissure_royalist_DESC:0"乌拉帝国使用的特殊星门网络，虽然和新型国家的星门拥有相同的效果，但是却不接入银河系的常规星门网络"
+ wula_civil_war_fissure_progressive:0"乌拉帝国星门网络"
+ wula_civil_war_fissure_progressive_DESC:0"乌拉帝国使用的特殊星门网络，虽然和新型国家的星门拥有相同的效果，但是却不接入银河系的常规星门网络"
+ ONLY_FALLEN_EMPIRE_ROYALIST_CAN_USE:0"$TRIGGER_FAIL$这种通过特殊调频的星门只有堕落帝国保皇派的战舰能够通行"
+ ONLY_FALLEN_EMPIRE_PROGRESSIVE_CAN_USE:0"$TRIGGER_FAIL$这种通过特殊调频的星门只有堕落帝国进步派的战舰能够通行"
+ FALLEN_EMPIRE_CIVIL_WAR_GATEWAY:0"乌拉帝国星门"
+ FALLEN_EMPIRE_CIVIL_WAR_GATEWAY_ROYALIST:0"$FALLEN_EMPIRE_CIVIL_WAR_GATEWAY$"
+ FALLEN_EMPIRE_CIVIL_WAR_GATEWAY_PROGRESSIVE:0"$FALLEN_EMPIRE_CIVIL_WAR_GATEWAY$"
+ FALLEN_EMPIRE_CIVIL_WAR_GATEWAY_DESC:0"一种特殊的星门网络，只供堕落帝国战舰通行"
+
+ wula_materialist_scientist_fissure_0:0"大图书馆科研网络"
+ wula_materialist_scientist_fissure_0_DESC:0"某种通过特殊调频的乌拉帝国星门，乌拉帝国 图书馆的科研船和随行护卫舰队可以自由穿行于这种网道中"
+ FALLEN_EMPIRE_MATERIALIST_SCIENTIST_GATEWAY:0"大图书馆科研网络"
+ FALLEN_EMPIRE_MATERIALIST_SCIENTIST_GATEWAY_DESC:0"一种特殊的星门网络，只供乌拉帝国 图书馆的科研船和随行护卫舰队通行"
+ ONLY_FALLEN_EMPIRE_MATERIALIST_CAN_USE:0"$TRIGGER_FAIL$这种通过特殊调频的星门只有乌拉帝国 图书馆的科研船和随行护卫舰队可以通行"

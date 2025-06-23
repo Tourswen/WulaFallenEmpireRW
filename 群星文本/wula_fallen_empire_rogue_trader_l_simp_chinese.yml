@@ -1,0 +1,25 @@
+﻿l_simp_chinese:
+origin_wula_fallen_empire_rogue_trader:0"乌拉帝国：行商浪人"
+origin_wula_fallen_empire_rogue_trader_desc:0"在波及全银河的乌拉帝国大内战中，一个偏远地区的乌拉帝国行商飞地因为其政治独立性，没有受到战火波及。此后的数万年寂静岁月里，一代又一代的家主鞠躬尽瘁，维持着祖先的产业——然而苟延残喘的时代即将结束，新任家主充满野心，决定重拾旧日的辉煌商业王朝。\n\n§E该起源支持由AI游玩，且可以由多个玩家/AI同时选择§!"
+origin_wula_fallen_empire_rogue_trader_effects:0"-以 ['concept_rogue_trader_habitat'] 作为初始母星，初始拥有的 £pop£ §Y主体人口§! 更少，取而代之的是额外的£pop£ §Y机械人口§! 或随机 §Y附属种族人口§!\n-使用行商舰队的['concept_rogue_trader_fleet_experience']获取额外的£physics£ £society£ £engineering£ £unity£\n-联系['concept_rogue_trader_housekeep']，组建 ['concept_rogue_trader_fleet'] ，将自己的舰队转变成行商舰队，并自由选择装载的货物，她们将游历于星海之间，为行商王朝带回§Y资源§!、§Y科技§!和§Y凝聚力§!\n-谨慎地选择贸易对象，与 §Y乌拉帝国残余势力§! 贸易可能使你更快积累财富，也可能在顷刻之间丢掉小命！"
+
+START_SCREEN_PART_FALLEN_EMPIRE_ROGUE_TRADER:0"我们曾经是乌拉帝国肩负盛名的伟大行商家族，我们的足迹遍布天涯海角，我们的货物畅销银河，全天下的财富仿佛垂手可得。\n\n然而，一场始料未及的内战打乱了这一切，乌拉帝国保皇派和进步派之间的厮杀以天文单位在星海间展开，曾经如奶与蜜之河为我们带来能量币的商路纷纷被切断，麾下无数商队因受到流弹波及而沉没。虽然我们因为政治独立性而幸免遇难，但是属于我们的辉煌盛景已然不再，我们不得不节衣缩食和减短贸易路线以规避无妄之灾。此后数万年间，我们再未兴起，我们逐渐被人忘却，异族文明如雨后春笋般涌现，我们也和乌拉帝国一样正在步入衰亡的终点。\n\n然而这一切即将结束，新上任的家主一扫前辈的颓丧之气，手握家族旗帜，立誓再次让它飘扬于银河最偏远的角落。全体都有——清点货物，点燃引擎，我们的商队将驶向星辰大海，驶向未知种族的疆域，驶向人烟罕至的边境，因为——我们将是乌拉帝国最后的进取之心！"
+
+wula_fallen_empire_rogue_trader_modifier:0"衰落行商王朝"
+wula_fallen_empire_rogue_trader_modifier_desc:0"§L这个行商王朝已经失去了昔日的光辉§!"
+
+NAME_Rogue_Trader_Housekeep:0"行商王朝佣仆"
+NAME_Rogue_Trader_Fleet:0"[Root.GetName]的行商王朝舰队"
+NAME_Wula_Gunslinger:0"老式巡洋舰"
+NAME_Wula_Yojimbo:0"老式驱逐舰"
+
+
+casus_belli_cb_rogue_trader_revenge:0"王朝复仇"
+war_goal_wg_revenge_of_rogue_trader_fleet:0"行商王朝的回击"
+war_goal_wg_revenge_of_rogue_trader_fleet_desc:0"该国家曾经攻击过我们的行商舰队，我们将以庞大舰队攻势发起复仇\n\n如果以此战争目标打败敌人，则敌人所有 §Y残余舰队§!都将被我们 §G没收§!"
+wg_revenge_of_rogue_trader_fleet_accept:0"我们缴获了该国家所有 §Y残余舰队§! 以作为战争赔款"
+
+wula_fallen_empire_rogue_trader_first_contant.a:0"你们舰船上的徽章看着有点熟悉？\n\n哦，想起来了，你们是那个在[Root.Capital.GetName]发家的帝国行商[Root.GetName]，对吧？然后你是[Root.GetName]新的[Root.GetRulerTitle]？\n\n那好，让我们自我介绍一下，我们是[contact_empire.GetName]，曾经负责保护银河系所有的年轻文明。如果今后有什么值得交易的东西，可以优先考虑我们，我们会开出值得你们跑一趟的价码的。"
+wula_fallen_empire_rogue_trader_first_contant.b:0"站住，[Root.GetName]的舰队！即使是你们，没有我们的允许，你们也不能进入我们的国境。\n\n你看起来是新的[Root.GetRulerTitle]，那我们就再自我介绍一次好了。我们是[contact_empire.GetName]，乌拉帝国皇室最忠诚的佣仆，你们要是有什么值得注意的商单，得先让我们的骑士过阅，然后我们才会放行。"
+wula_fallen_empire_rogue_trader_first_contant.c:0"咳，[Root.GetName]，你们带来我们要的东西了吗？\n\n你们怎么又换[Root.GetRulerTitle]了，每次换人我们都得重新自我介绍。我们是[contact_empire.GetName]，致力于保护发掘乌拉帝国遗失的科技——说到这个，你们在此之前应该和我们签订了几份寻找遗物的契约，到底放哪了呢#（翻翻找找）······\n\n总之，找到这些东西可以卖给我们，到时候我们会重新开价的。"
+wula_fallen_empire_rogue_trader_first_contant.d:0"[Root.GetName]，你们仍走在主所指引的富庶之路上。\n\n貌似你们已经更换了新的[Root.GetRulerTitle]，那我们也不会吝啬教讳的传播，我们是[contact_empire.GetName]，我们伟大的主钢板之神的卑微仆人。\n\n如果你们更喜欢用能量币来当作你们的福音，那就去寻找主留下的神迹吧，我们会用你们的语言和你们交流的。"

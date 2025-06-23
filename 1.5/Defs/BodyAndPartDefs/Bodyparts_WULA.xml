@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>  
+  <BodyPartDef>
+    <defName>WULA_Energy_Furnace</defName>
+    <label>中央能源炉</label>
+    <hitPoints>50</hitPoints>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <tags>
+      <li>BloodPumpingSource</li>
+      <li>BreathingSource</li>
+      <li>BloodFiltrationKidney</li>
+      <li>BloodFiltrationLiver</li>
+      <li>MetabolismSource</li>
+    </tags>
+  </BodyPartDef>
+</Defs>

@@ -1,0 +1,314 @@
+﻿l_simp_chinese:
+ origin_wula_fallen_empire_xenophobe:0"堕落乌拉帝国：乌拉骑士团"
+ origin_wula_fallen_empire_xenophobe_desc:0"曾经负责守卫['concept_wula_fallen_empire']皇宫的禁军——乌拉骑士团——的军事力量，在千万年前的乌拉帝国大内战中遭到毁灭性打击，这群皇室麾下最忠诚的战士被迫放弃内战，在骑士团的试炼之地休养生息。现在，历史的车轮再一次转动，乌拉帝国的精锐战士们不再沉睡，而是将目光投向无垠的星河······\n§H选择此起源代表你将直接游玩堕落帝国§!"
+ origin_wula_fallen_empire_xenophobe_effects:0"-直接游玩§H军事孤立者§!['concept_fallen_empire']：乌拉骑士团，成为从万古长夜中苏醒的先古战士！\n-提拔独属于骑士团的领导——['concept_wula_fallen_empire_knight']，并通过['concept_wula_knight_oath']进一步晋升这些拥有独特特质的领导。\n-寻找机会发起§H侠义战争§!——一种骑士团专属的战争类型，允许一次性§H俘虏§!陆军所攻占星球的人口，并将他们全部押送回国内以补充 ['concept_wula_serf'] 人口数。\n-创造['concept_wula_knight_subgroup']，这些拥有堕落帝国科技水平的§H附庸国§!将以普通帝国身份加入星海，成为骑士团实力的延伸。\n-小心不要被['concept_wula_knight_bloodrage']主导，这种古老的§R基因缺陷§!将使得骑士领袖们失去理智变成嗜杀的狂魔！\n-当['concept_wula_fallen_empire_destiny']到来的时候，选择你的最终道途——是以皇室之名清扫星河，还是夺取皇权创立一个新的横跨银河系的帝国？"
+
+ START_SCREEN_PART_FALLEN_EMPIRE_XENOPHOBE:0"曾经，当乌拉帝国繁荣昌盛之时，帝国的疆域横跨银河系，帝国的舰队无处不在，普天之下，莫非王土；率土之滨，莫非王臣。\n但是随着一场宫廷政变的爆发，一切都急转直下：在乌拉帝国末代皇帝驾崩后，整个乌拉帝国群龙无首，国教试图扩张权力，推行她们那没有法令依据的"新王"。尽管伪帝最终被取缔，但是失去了乌拉帝国至高无上的中枢，那些想要推翻皇室的逆贼便站出来，掀起了一场大内战，我们还没有从宫廷政变的内斗中恢复过来，但是为了捍卫皇室还是毅然决然的宣布加入了内战。这场内战耗尽了乌拉帝国最后的气数，我们都没能力再打败对方，不得不和这群窃国贼苟且停战，我们最后一任骑士团团长带着我们撤回到了骑士团的修炼之地，此后便是万年寂静。但是我们不会就此陨落，乌拉帝国的敌人仍未清除，我们只是在等待一个时机，一个向银河系宣布乌拉帝国皇室归来的时机······"
+
+ leader_trait_knight_auxiliary_admiral:0"辅助军司令"
+ leader_trait_knight_auxiliary_admiral_desc:0"以骑士为核心构建的社会里，凡人辅助军就是一个可以随意抛弃的棋子，又有哪位骑士会听这群人的长官的命令呢？"
+ leader_trait_knight_auxiliary_general:0"辅助军司令"
+ leader_trait_knight_auxiliary_general_desc:0"以骑士为核心构建的社会里，凡人辅助军就是一个可以随意抛弃的棋子，又有哪位骑士会听这群人的长官的命令呢？"
+ leader_trait_knight_folk_scientist:0"民间科学家"
+ leader_trait_knight_folk_scientist_desc:0"在骑士团的阶级里面，没有得到骑士晋升资格的科学家无论做出什么成果都会被质疑"
+
+ decision_wula_new_knight_create:0"寻找新的骑士"
+ decision_wula_new_knight_create_desc:0"到乡野间去吧，到军团中去吧，那里有被流沙埋没的金子等待发掘！"
+ decision_wula_new_knight_create_effects:0"发动诸骑士，在国家内寻找一个新的['concept_wula_fallen_empire_knight']，骑士可以担任§H舰队统帅§!，§H科学家§!或§H陆军元帅§!"
+ text_finding_knight:0"已经有一个寻找骑士的计划了"
+ decision_wula_new_knight_trial:0"骑士誓言"
+ decision_wula_new_knight_trial_desc:0"一些优秀的骑士天生就要承担更大的责任，现在是检验的时候了"
+ decision_wula_new_knight_trial_effects:0"使某一个未完成誓言的骑士开启['concept_wula_oath']的试炼，完成后将进一步增强该骑士"
+
+ wula_fallen_empire_xenophobe.11.name:0"开始寻找骑士指挥适任者"
+ wula_fallen_empire_xenophobe.11.desc:0"今天，骑士团圣堂门外列队站着几排披着华美披风的骑士，这群骑士应 [Root.GetRulerTitle][knight_ruler.GetName] 召唤而来，将为骑士团完成一项神圣的使命——[knight_ruler.GetName]面向众人，宣读骑士圣经中的内容：“谨依皇帝之遗志、依骑士团之使命，我在此宣布，伫立于此地的应召者们，你们将深入军团，深入大街小巷，去寻找一位新的 §H骑士团骑士§!，她将成为带领我们军团的新秀，在虚无的深空中指挥骑士团的坚船利炮。现在去吧，适任者必将以其血起誓效忠皇帝！"
+ wula_fallen_empire_xenophobe.11.a:0"启程吧，骑士们"
+
+ wula_knight_finding_knight_title:0"寻找新骑士中"
+ wula_knight_finding_knight_desc:0"诸位骑士已经开始在大街小巷和军团中物色值得提升的人才，预计需要1-3年时间"
+
+ wula_fallen_empire_xenophobe.12.name:0"骑士适任者搜寻报告"
+ wula_fallen_empire_xenophobe.12.desc1:0"在骑士团中寻找骑士指挥适任者的骑士发来了一份报告。\n她们在[event_planet.GetName]的小巷间发现了一位年轻人——§H[new_knight.GetName]§!，这位年轻人是街道自卫队的领头人，她生活的这带治安很差，附近的自动警备系统早已因为年久失修损毁，那些流窜的奴隶和游手好闲的混混经常骚扰这一带的住户，她们不得已建立了街道自卫队来保卫自己的安全。\n当骑士们抵达时，她们正在和一群逃跑至此作乱的奴隶缠斗，当那些奴隶作鸟兽散后，骑士们和威风凛凛的机械坐骑才露面，§H[new_knight.GetName]§!对于官方在治安上的不作为似乎很不高兴，最初拒绝了诸位骑士的邀约，直到骑士们承诺会派人更换附近的自动警备系统，§H[new_knight.GetName]§!才勉强接受了邀请。"
+ wula_fallen_empire_xenophobe.12.desc2:0"在骑士团中寻找骑士指挥适任者的骑士发来了一份报告。\n[event_planet.GetName]的军营中似乎有一个相当适合的士兵——§H[new_knight.GetName]§!，和那些服兵役的人不同，她自愿放弃了身为乌拉帝国公民本可以得到的享乐的权利，为了守卫[event_planet.GetName]加入了军队。军营里的士兵和长官都对这个士兵交口称赞，她平易近人，经常为附近的民众排忧解难，还用智谋直面并瓦解了几场大大小小的奴隶叛乱而没发生流血冲突。\n当骑士们抵达时，这位士兵正在营地里面憩息，对于可以建功立业和服务骑士团的机会，§H[new_knight.GetName]§!当然是欣然接受。"
+ wula_fallen_empire_xenophobe.12.desc3:0"在骑士团中寻找骑士指挥适任者的骑士发来了一份报告。\n[event_fleet.GetName]中有一位战斗机驾驶员——§H[new_knight.GetName]§!——受到了骑士们的关注。这位驾驶员是空战王牌，已经在交锋中击毁了大量的战机，而且这位驾驶员没有其他驾驶员那种倚仗装备先进而趾高气扬的态度，她相当的尊重自己的对手，并尽可能和对手处于公平的状态进行一对一的决斗。\n骑士们对这位驾驶员相当感兴趣，并提出让她晋升为骑士的提议。她似乎对于晋升后可能不再能驾驶战机而有些踌躇，不过最后基于军人的责任，她还是接受了邀请。"
+ wula_fallen_empire_xenophobe.12.desc4:0"在骑士团中寻找骑士指挥适任者的骑士发来了一份报告。\n在[event_planet.GetName]上，一位皇帝的狂热信徒引起了骑士的注意。这位名字叫§H[new_knight.GetName]§!的信徒仿佛从万年前黄金时代走出来的人一样，崇拜着乌拉帝国皇室，并将复苏皇室作为己任。她依靠自己的努力成为了[event_planet.GetName]星球政府的高官，但是却过的非常清贫，反而对她管辖的区域治理有方，力图将传说中的黄金时代带回到她的辖区。\n当收到骑士团的邀请时，她简直欣喜若狂，认为这是皇室的召选，便义无反顾的同意了。"
+ wula_fallen_empire_xenophobe.12.a:0"§H[new_knight.GetName]§!是成为§H骑士§!的人才，批准了"
+ wula_fallen_empire_xenophobe.12.a.tooltip:0"§H[new_knight.GetName]§!将成为§H乌拉骑士团骑士§!，加入领袖列表，同时搜寻的骑士停止行动"
+ wula_fallen_empire_xenophobe.12.d:0"不行，再找"
+
+ wula_fallen_empire_xenophobe.13.name:0"见习骑士晋升"
+ wula_fallen_empire_xenophobe.13.desc:0"今天是庄重的一天，§H[new_knight.GetName]§! 已经证明了自己的实力，结束了骑士的见习，现在所有的骑士领主都聚集在[Root.Capital.GetName]的圣堂中，等待[Root.GetRulerTitle][knight_ruler.GetName]为§H[new_knight.GetName]§!授勋。随着象征骑士团的狼牙棒轻轻落在§H[new_knight.GetName]§!肩上，骑士法典扉页上的宣誓词在圣堂中回响。\n\n吾之身归帝皇剑下，\n吾之名得帝皇祝福，\n于无垠星海中穿梭，\n谨以吾魂向帝皇起誓：\n\n恒以仁慈之心对待帝国人民，恒以怜悯之心善待无助弱者，\n恒以慈悲之心对待无辜妇孺，恒以平等之心看待芸芸众生；\n\n恒以勇武之名诛灭帝国叛逆，恒以骑士之名斩杀帝国之敌，\n恒以帝国之名踏平叛逆之城，恒以帝皇之名荡清无尽寰宇；\n\n恒以智慧之魂思索帝国难题，恒以耐心之魂解答无知质疑，\n恒以虔诚之魂辨明人生真理，恒以信仰之魂教化亿万国民；\n\n恒以探知之志探索帝国疆域，恒以求知之志探寻未明知识，\n恒以坚韧之志追寻帝皇足迹，恒以求索之心明察星海真理；\n\n吾即是帝皇之盾，吾即是帝皇之剑。\n以乌拉帝皇之名，吾即是帝国骑士！"
+ wula_fallen_empire_xenophobe.13.a:0"授勋结束，现在你已是光荣的乌拉帝国骑士！"
+ wula_fallen_empire_xenophobe.13.tooltip:0"§H[new_knight.GetName]§!已经成为了['concept_wula_fallen_empire_knight']，获得了更强大的特质，并允许踏上下一阶段的['concept_wula_oath']修习"
+
+ wula_fallen_empire_xenophobe.24.name:0"骑士美德改变：提升"
+ wula_fallen_empire_xenophobe.24.desc:0"[event_leader.GetName]在修习的过程中，['concept_knight_virtue']发生了变化：现在[event_leader.GetName]能提升一项美德\n\n该领袖的['concept_knight_virtue']：\n——['concept_knight_brave']：[event_leader.knight_leader_count_brave]/[event_leader.knight_leader_count_brave_max]\n——['concept_knight_mercy']：[event_leader.knight_leader_count_mercy]/[event_leader.knight_leader_count_mercy_max]\n——['concept_knight_smart']：[event_leader.knight_leader_count_smart]/[event_leader.knight_leader_count_smart_max]\n——['concept_knight_seek']：[event_leader.knight_leader_count_seek]/[event_leader.knight_leader_count_seek_max]"
+ wula_fallen_empire_xenophobe.24.a:0"§G提升§! 勇武"
+ wula_fallen_empire_xenophobe.24.b:0"§G提升§! 慈悲"
+ wula_fallen_empire_xenophobe.24.c:0"§G提升§! 虔敬"
+ wula_fallen_empire_xenophobe.24.d:0"§G提升§! 求索"
+
+ wula_fallen_empire_xenophobe.23.hire:0"重置选择"
+ wula_fallen_empire_xenophobe.23.hire_custom_tooltip:0"重新选择[event_leader.GetName]在此次升级中的美德变化"
+ wula_fallen_empire_xenophobe.23.abandon:0"放弃改变"
+ wula_fallen_empire_xenophobe.23.abandon_custom_tooltip:0"在此次升级中，[event_leader.GetName]的美德没有变化"
+
+ wula_fallen_empire_xenophobe.14.name:0"['concept_wula_oath']试炼开始：挑选人选"
+ wula_fallen_empire_xenophobe.14.desc:0"沐浴着庄严肃穆的光芒，站在圣堂中央的 [Root.GetRulerTitle][knight_ruler.GetName]，面向一位单膝跪地的骑士，缓缓宣读圣堂中央诫石上的古文：“谨依皇帝之遗志、依骑士团之使命，我在此宣布，骑士·······”"
+ wula_fallen_empire_xenophobe.14.a:0"§H[knight_chosen_1.GetName]§!"
+ wula_fallen_empire_xenophobe.14.b:0"§H[knight_chosen_2.GetName]§!"
+ wula_fallen_empire_xenophobe.14.c:0"§H[knight_chosen_3.GetName]§!"
+ wula_fallen_empire_xenophobe.14.d:0"§H[knight_chosen_4.GetName]§!"
+ wula_fallen_empire_xenophobe.14.e:0"§H[knight_chosen_5.GetName]§!"
+ wula_fallen_empire_xenophobe.14.f:0"§H[knight_chosen_6.GetName]§!"
+ wula_fallen_empire_xenophobe.14.g:0"换份名单"
+ wula_fallen_empire_xenophobe.14.g.tooltip:0"只有正式的['concept_wula_fallen_empire_knight']允许进行['concept_wula_oath']试炼，见习骑士到达4级转正为骑士"
+ wula_fallen_empire_xenophobe.14.h:0"先别急，过会再说"
+ wula_fallen_empire_xenophobe.15.name:0"['concept_wula_oath']试炼开始：选择誓言"
+ wula_fallen_empire_xenophobe.15.desc:0"§H[new_knight.GetName]§! 允许踏上······”"
+ wula_fallen_empire_xenophobe.15.a:0"······§H虔敬誓言§! 的修炼"
+ wula_fallen_empire_xenophobe.15.a.tooltip:0"['concept_knight_smart'] 上限提升至6，并获得特质 §Y虔敬誓言§!，使['concept_knight_smart']提供的奖励翻倍"
+ wula_fallen_empire_xenophobe.15.b:0"······§H勇猛誓言§! 的修炼"
+ wula_fallen_empire_xenophobe.15.b.tooltip:0"['concept_knight_brave'] 上限提升至6，并获得特质 §Y勇猛誓言§!，使['concept_knight_brave']提供的奖励翻倍"
+ wula_fallen_empire_xenophobe.15.c:0"······§H慈悲誓言§! 的修炼"
+ wula_fallen_empire_xenophobe.15.c.tooltip:0"['concept_knight_mercy'] 上限提升至6，并获得特质 §Y慈悲誓言§!，使['concept_knight_mercy']提供的奖励翻倍"
+ wula_fallen_empire_xenophobe.15.d:0"······§H求索誓言§! 的修炼"
+ wula_fallen_empire_xenophobe.15.d.tooltip:0"['concept_knight_seek'] 上限提升至6，并获得特质 §Y求索誓言§!，使['concept_knight_seek']提供的奖励翻倍"
+ wula_fallen_empire_xenophobe.15.e:0"现在没合适的誓言"
+ wula_fallen_empire_xenophobe.15.fail:0"这个领袖相关的['concept_knight_virtue']已经低于0，不可选择此誓言"
+ wula_fallen_empire_xenophobe.15.fail2:0"某个领袖正在完成这个誓言的试炼"
+
+
+ wula_fallen_empire_xenophobe.16.name:0"['concept_wula_oath']试炼开始：完成宣读"
+ wula_fallen_empire_xenophobe.16.desc:0"“······虔敬誓言 的修炼，从今日起，你将为皇帝和骑士团率领军队征战疆场、扫清八方，愿皇帝之极目为你所用，让你得以敌方窥视虚实，破除阴谋。”"
+ wula_fallen_empire_xenophobe.16.desc2:0"“······勇猛誓言 的修炼，从今日起，你将为皇帝和骑士团率领军队征战疆场、扫清八方，愿皇帝剑锋加于汝身，让你化作利刃，撕开帝国的敌人。”"
+ wula_fallen_empire_xenophobe.16.desc3:0"“······慈悲誓言 的修炼，从今日起，你将为皇帝和骑士团率领军队征战疆场、扫清八方，愿皇帝忧国胸怀熏陶汝心，让你成为帝国子民最坚实的盾牌。”"
+ wula_fallen_empire_xenophobe.16.desc4:0"“······求索誓言 的修炼。从今日起，你将为皇帝和骑士团率领军队征战疆场、扫清八方，无论是在遥不可及的星辰，还是在深不可测的秘境，愿皇帝在背后指引你，成为你前进的动力。”"
+ wula_fallen_empire_xenophobe.16.a:0"踏上征程吧，骑士§H[new_knight.GetName]§!"
+
+
+
+
+
+
+
+ wula_fallen_empire_xenophobe.19.name:0"乌拉骑士团团长 [knight_ruler.GetName]"
+ wula_fallen_empire_xenophobe.19.desc:0"听着，下等种族。我们这里有一位骑士——§H[knight_chosen.GetName]§!——准备完成['concept_wula_oath']，晋升['concept_wula_honor_knight']。但是这个倒霉蛋抽到的誓言是慈悲试炼，这代表着她要离开我们的领土，为异族在外效力一段时间，能听懂吧？现在她选择为你们效力，我认为你们没有理由拒绝一位骑士。"
+ wula_fallen_empire_xenophobe.19.a:0"是的，我们很乐意接受一位乌拉骑士团的贵客"
+ wula_fallen_empire_xenophobe.19.a.tooltip:0"我们需要让骑士[knight_chosen.GetName]在我们手下提升§H2§!级"
+ wula_fallen_empire_xenophobe.19.b:0"不好意思这里满员了"
+
+ wula_fallen_empire_xenophobe.20.name:0"[event_default_empire.GetName]接受[knight_chosen.GetName]的效力"
+ wula_fallen_empire_xenophobe.20.desc:0"[event_default_empire.GetName]已经接受了我们的要求，接受了[knight_chosen.GetName]，只要她在[event_default_empire.GetName]得到锻炼并获得骑士团的承认，她便可以宣布完成慈悲誓言的试炼"
+ wula_fallen_empire_xenophobe.20.a:0"不错，希望[knight_chosen.GetName]可以习惯在[event_default_empire.GetName]的生活"
+
+ wula_fallen_empire_xenophobe.22.name:0"乌拉骑士团团长 [knight_ruler.GetName]"
+ wula_fallen_empire_xenophobe.22.desc:0"啊，是你们啊。我们光荣的骑士[new_knight.GetName]即将准备回来接受授勋，作为一个普普通通的下等种族，你们的所作所为让我们十分的赞许。我们不会让你们白干的，现在有几台即将报废的乌拉帝国战舰，而且上面也没包含什么秘密的科技，就送你们得了。"
+ wula_fallen_empire_xenophobe.22.a:0"非常感谢，我们荣幸之至"
+ wula_fallen_empire_xenophobe.22.a.tooltip:0"我们会获得两艘来自乌拉帝国的战列巡洋舰，不过上面的装备并不如乌拉帝国现役战舰先进"
+ wula_fallen_empire_xenophobe.22.b:0"扔垃圾是吧？以为我们是垃圾场？"
+ NAME_Wula_Abandoned_Ship:0"骑士团不要的舰队"
+ NAME_Supremacy_wula_s:0"至尊"
+
+ decision_wula_knight_explorate_fleet_create:0"组建勘探舰队"
+ decision_wula_knight_explorate_fleet_create_desc:0"我们的目光不应当拘泥于骑士团城堡的萧墙之内"
+ decision_wula_knight_explorate_fleet_create_effects:0"在该星球组建一支勘探舰队，她们将出发并寻找可以建立新['concept_wula_subgroup']的星球"
+
+
+
+ NAME_Wula_Prospecting_Team:0"乌拉骑士团勘探舰队"
+ wula_prospecting_team_admiral:0"骑士提督"
+ wula_prospecting_team_scientist:0"探险骑士"
+
+ wula_explorate_fleet_seeking_title:0"勘探舰队正在寻找星球"
+ wula_explorate_fleet_seeking_desc:0"§H勘探舰队§!正在游历星河，并寻找可以创建新骑士团子团的星球"
+ wula_visited_planet_count:0"已经造访过的无主行星"
+
+ wula_fallen_empire_xenophobe.53.name:0"勘探舰队回报勘探完成"
+ wula_fallen_empire_xenophobe.53.desc:0"勘探舰队发回一份汇报，称已经发现符合殖民条件的星球：§H[planet_wula_create_subgroup.GetName]§!，这颗星球尚未被任何文明宣称，骑士团可以让勘探舰队在上面发展['concept_wula_subgroup']。如果我们决定在这个星球上安置['concept_wula_subgroup']，那么勘探舰队将解散。"
+ wula_fallen_empire_xenophobe.53.a:0"不行，勘探舰队的选择还不够好"
+ wula_fallen_empire_xenophobe.53.b:0"批准了，让勘探舰队安家落户吧"
+
+ wula_fallen_empire_xenophobe.47.name:0"试炼失败"
+ wula_fallen_empire_xenophobe.47.desc:0"骑士团的骑士在誓言的试炼之路上倒下了，无论她是如何面临失败的，至少她捍卫了骑士团的荣耀。"
+ wula_fallen_empire_xenophobe.47.a:0"真可惜"
+
+ wula_fallen_empire_xenophobe.48.name:0"[new_knight.GetName]的试炼完成"
+ wula_fallen_empire_xenophobe.48.desc:0"今天本是一个平凡的日子，但对于[new_knight.GetName]来说，却是极为重要的一天。这一天，骑士领主再一次齐聚一堂——她们将允许这位帝国骑士接受属于她的荣耀授勋。\n\n所有的聚光灯都照耀在圣堂中央的[new_knight.GetName]之上，所有在场的帝国骑士无不身披战甲佩戴勋带，在全场骑士的注目之下，骑士团长于圣堂中央郑重地将那柄象征着勇猛誓言的精工动力狼牙棒交予了骑士。[new_knight.GetName]面对站在帝皇圣像之前的骑士团团长单膝跪地双手接过这柄神圣的武器。\n\n“恒以勇武之名诛灭帝国叛逆，恒以骑士之名斩杀帝国之敌。”\n
+ “恒以帝国之名踏平叛逆之城,恒以帝皇之名荡清无尽寰宇。”\n\n骑士团长在誓言声中拿起身旁的狼牙棒，闪耀着湛蓝色光芒的棒头轻轻搭在骑士的肩头。\n\n“如此，吾以帝皇之名在此宣布，汝自即日起即为帝国骑士团['concept_wula_honor_knight']，愿帝皇之剑陪伴你诛灭来犯之敌，愿你能令帝皇威严布满整片银河。”"
+ wula_fallen_empire_xenophobe.48.desc2:0"今天本是一个平凡的日子，但对于[new_knight.GetName]来说，却是极为重要的一天。这一天，骑士领主再一次齐聚一堂——她们将允许这位帝国骑士接受属于她的荣耀授勋。\n\n所有的聚光灯都照耀在圣堂中央的[new_knight.GetName]之上，所有在场的帝国骑士无不身披战甲佩戴勋带，在全场骑士的注目之下，骑士团长于圣堂中央郑重地将那枚象征着仁慈誓言的小小胸盾挂在了骑士胸铠之上。\n\n“恒以仁慈之心对待帝国人民,恒以怜悯之心善待无助弱者。”\n“恒以慈悲之心对待无辜妇孺,恒以平等之心看待芸芸众生。”\n\n骑士团长在誓言声中拿起身旁的狼牙棒，闪耀着湛蓝色光芒的棒头轻轻搭在骑士的肩头。\n\n“如此，吾以帝皇之名在此宣布，汝自即日起即为帝国骑士团['concept_wula_honor_knight']，愿帝皇恩泽协助你守护帝国之民，愿你能以帝皇之名怜悯芸芸众生。”"
+ wula_fallen_empire_xenophobe.48.desc3:0"今天本是一个平凡的日子，但对于[new_knight.GetName]来说，却是极为重要的一天。这一天，骑士领主再一次齐聚一堂——她们将允许这位帝国骑士接受属于她的荣耀授勋。\n\n所有的聚光灯都照耀在圣堂中央的[new_knight.GetName]之上，所有在场的帝国骑士无不身披战甲佩戴勋带，在全场骑士的注目之下，骑士团长于圣堂中央郑重地将那枚象征着求索誓言的徽章挂在了骑士胸铠之上。\n\n“恒以探知之志探索帝国疆域,恒以求知之志探寻未明知识。”\n“恒以坚韧之志追寻帝皇足迹，恒以求索之心明察星海真理。”\n\n骑士团长在誓言声中拿起身旁的狼牙棒，闪耀着湛蓝色光芒的棒头轻轻搭在骑士的肩头。\n\n“如此，吾以帝皇之名在此宣布，汝自即日起即为帝国骑士团['concept_wula_honor_knight']，愿帝皇之光护佑你踏遍无垠星海，愿你能将帝皇之光传遍整片宇宙。”"
+ wula_fallen_empire_xenophobe.48.desc4:0"今天本是一个平凡的日子，但对于[new_knight.GetName]来说，却是极为重要的一天。这一天，骑士领主再一次齐聚一堂——她们将允许这位帝国骑士接受属于她的荣耀授勋。\n\n所有的聚光灯都照耀在圣堂中央的[new_knight.GetName]之上，所有在场的帝国骑士无不身披战甲佩戴勋带，在全场骑士的注目之下，骑士团长于圣堂中央郑重地将那件象征着虔敬誓言且绘有帝国徽记的淡紫色披风披在了骑士双肩。\n\n“恒以智慧之魂思索帝国难题,恒以耐心之魂解答无知质疑。”\n“恒以虔诚之魂辨明人生真理，恒以信仰之魂教化亿万国民。”\n\n骑士团长在誓言声中拿起身旁的狼牙棒，闪耀着湛蓝色光芒的棒头轻轻搭在骑士的肩头。\n\n“如此，吾以帝皇之名在此宣布，汝自即日起即为帝国骑士团['concept_wula_honor_knight']，愿帝皇之魂指引你遨游无垠星海，愿你能以帝皇之理教化亿万国民。”"
+ wula_fallen_empire_xenophobe.48.a:0"一颗新星的锋芒"
+ wula_fallen_empire_xenophobe.48.tooltip:0"[new_knight.GetName]完成了属于自己的誓言，已经升阶为['concept_wula_honor_knight']，并且获取了骑士所能获取的最强大的特质——誓言特质"
+
+ wula_fallen_empire_xenophobe.49.name:0"骑士离去"
+ wula_fallen_empire_xenophobe.49.desc:0"§H[new_knight.GetName]§!永远地从世间离去了，今天所有骑士领主在[Root.Capital.GetName]的空间站中齐聚一堂，为§H[new_knight.GetName]§!送最后一程。随着鱼雷发射管开启，§H[new_knight.GetName]§!的棺材在骑士领主们的目送下向深空中飘去，现在§H[new_knight.GetName]§!于无垠的宇宙融为一体，仿佛登上了一艘没有终点的战舰，继续为[Root.GetName]的伟大事业奋斗"
+ wula_fallen_empire_xenophobe.49.a:0"生者已矣，逝者安息"
+
+ preset_knight_subgroup:0"乌拉骑士团子团"
+ preset_knight_subgroup_desc:0"这个国家是堕落帝国骑士团分出来的子团，负责担任对外战争的主力和输送资源供应母团发展"
+ preset_knight_subgroup_flavor_desc:0"在乌拉骑士团，由骑士领主得到封地分封出来的国家可以成为乌拉骑士团新的子团。通常乌拉骑士团母团的任务是掌握大局走向，而子团则是具体执行者，母团负责向子团输送可用的舰队人员并负责子团的舰队维护，子团则负责输送基础资源产能供养母团，并出资建造舰队成为对外战争的前锋。"
+ wula_knight_subgroup_opinion:"是乌拉骑士团子团"
+ wula_naval_cap_satrapy:0"骑士团子团"
+ wula_naval_cap_satrapy_subgroup:0"舰队维护费 §G-50%§!\n劳工岗位产出 §G+50%§!"
+
+ war_goal_wg_chivalrous_war:0"侠义战争"
+ casus_belli_cb_chivalrous_war:0"侠义战争"
+ war_goal_wg_chivalrous_war_desc:0"战争的目的是为了展示骑士团的道途、锻炼骑士团的年轻骑士们\n\n如果作为§H进攻者§!以此为战争目标，则每一个夺取的星球都会自动触发§H战俘迁徙§!机制——即将£pop£§H人口§!自动迁徙到首都，并摧毁此星球的殖民地"
+ wg_chivalrous_war_accept:0"[Root.GetName]获得§H侠义战争胜利§!修正"
+ wg_chivalrous_war_status_quo:0"[Root.GetName]获得§H侠义战争终止§!修正"
+
+ holding_knight_branch:0"骑士团支部"
+ holding_knight_branch_desc:0"骑士团的母团将一部分产业迁徙到子团的星球上，这可以使得骑士团的母星获得更多的空间"
+ holding_knight_branch_effect:0"此建筑为子团提供生产 £influence£ 的§H骑士团联络员§!岗位，为母团的§H骑士领主§!岗位提供 +1 §H区划§!的岗位效果"
+ holding_knight_branch_effect_2:0"觉醒的骑士团母团的§H骑士领主§!岗位额外提供再 +1 §H区划§!"
+ mod_job_knight_liaison_add:0"骑士团联络员岗位"
+
+ holding_knight_shipyard:0"骑士团近地船坞"
+ holding_knight_shipyard_desc:0"骑士团母团可以兴建这种规模较小的近地船坞，并派出指导者在这里教授子团的年轻一代铸舰的秘诀"
+ holding_knight_shipyard_effect:0"此建筑为子团提供加速舰船生产的§H骑士团造舰学员§!岗位，为母团的§H骑士领主§!岗位提供 §G+5%§! £alloys£ 生产的岗位效果"
+ holding_knight_shipyard_effect_2:0"觉醒的骑士团母团使得此建筑额外为母团战舰提供§H装甲值§!和§H船体值§! §G+10%§!"
+ mod_job_knight_novice_shipwright_add:0"骑士团造舰学员岗位"
+
+ holding_knight_college:0"骑士团忠嗣学院"
+ holding_knight_college_desc:0"骑士团的忠嗣学院是培养将才的地方，那些满腔热血的年轻人们将在这里得到最刻苦的训练"
+ holding_knight_college_effect:0"此建筑为子团提供增加舰船射速的§H骑士团忠嗣§!岗位，为母团提供 §H舰船获得经验速率§! §G+100%§!"
+ mod_job_knight_progena_add:0"骑士团忠嗣岗位"
+
+ holding_knight_database:0"骑士团数据库"
+ holding_knight_database_desc:0"骑士团母团通常会向他们的子团提供科研数据，帮助子团更快地用知识武装起来"
+ holding_knight_database_effect:0"此建筑为子团提供§H探险骑士学徒§!岗位，这个岗位为母团提供 §G1§! £influence£ ，为子团提供 §G20%§! 科研加速"
+ holding_knight_database_effect_2:0"觉醒的骑士团母团使得此建筑额外为母团战舰提供§H跃迁距离§!和§H战舰射程§! §G+10%§!"
+ mod_job_knight_novice_explorer_add:0"探险骑士学徒岗位"
+
+ holding_knight_sanctum:0"骑士团光耀圣堂"
+ holding_knight_sanctum_desc:0"光耀圣堂是骑士团圣堂的分部，骑士们如果无法回到母团，也可在这些分团执行圣堂决议"
+ holding_knight_sanctum_effect:0"此建筑母团提供 §H呼叫骑士舰队回归法案§! §G-10%§! 的 §H花费§!（最高 -90%），每当母团执行§H呼叫骑士舰队回归法案§!时，所有拥有该地产的子团获得 50 £influence£"
+
+ holding_knight_gene_library:0"骑士团基因藏馆"
+ holding_knight_gene_library_desc:0"骑士团会从子团中挑选最好的一批骑士，将他们的基因种子保存起来，然后送回母团精心繁育出下一代强大的新骑士"
+ holding_knight_gene_library_effect:0"此建筑为该子团星球提供 §G35%§! 人口增长速度，为母团的 §H骑士领主§!岗位提供 §G0.1§! 有机人口组装\n§L（只有在能够以任意方式组装有机人口的情况下，该加成才有效）§!"
+ holding_knight_gene_library_effect_2:0"觉醒的骑士团母团使得此建筑额外为母团提供§H人口岗位产出§! §G+5%§!"
+
+ building_knight_sanctum:0"骑士团大圣堂"
+ building_knight_sanctum_desc:0"一座宏伟庄严的堡垒和圣所，承载着一个骑士团的过去和未来"
+ text_no_sanctum:0"§R没有建筑§H骑士团大圣堂§!，不能执行任何圣堂法案！§!"
+
+ wula_legion_of_bloodrage_situation:0"乌拉骑士团：血怒行军"
+ wula_legion_of_bloodrage_situation_type:0"血怒行进"
+ wula_legion_of_bloodrage_situation_desc:0"深埋于基因中的残缺片段造就了我们易怒的性格，如果我们无法控制这些深藏于内心的['concept_wula_knight_bloodrage']，我们很可能被无边的战争扯入深渊！"
+ wula_legion_of_bloodrage_situation_full:0"骑士们狂躁不已，无边无际的战争即将一触即发！"
+ wula_legion_of_bloodrage_situation_low:0"许久没有厮杀，骑士们冷静了下来"
+ wula_legion_of_bloodrage_stable:0"['concept_wula_knight_bloodrage']暂未剧烈地影响我们的骑士们"
+ wula_legion_of_bloodrage_stagnant:0"['concept_wula_knight_bloodrage']被骑士们短暂压制住了"
+ wula_legion_of_bloodrage_rabidly:0"['concept_wula_knight_bloodrage']正在严重干扰骑士们的决策！从现在开始，每个月都有可能让某些有§R血怒§!特质的领袖所率领的舰队失去控制，失去控制的舰队将不再受你指挥，虽然会继续对抗敌人，但是会无差别攻击路上所有的非乌拉骑士团舰队"
+ situation_wula_legion_of_bloodrage_no_war_tt:0"血怒自然消退"
+ wula_legion_of_bloodrage_monthly_change_tooltip:0"战争和战争中的行为会使得骑士们内心的烈火被渐渐点燃，如果['concept_wula_knight_bloodrage']发展到不可控制的地步，就会导致掌管军团和舰队的各位领袖失控！"
+
+ NAME_wula_bloodrage_country:0"被血怒支配的骑士团舰队"
+ bloodrage_country:0"被血怒支配的骑士团舰队"
+ bloodrage_country:0"被血怒支配的骑士团舰队"
+
+ wula_fallen_empire_xenophobe.109.name:0"[event_leader.GetName]率领的舰队回归控制"
+ wula_fallen_empire_xenophobe.109.desc:0"[event_leader.GetName]和她率领的[event_fleet.GetName]已经杀到手软，没新的目标可杀了，我们终于重新和她们建立了联系。"
+ wula_fallen_empire_xenophobe.109.a:0"呃······"
+
+ wula_fallen_empire_xenophobe.110.name:0"§R全面失控§!"
+ wula_fallen_empire_xenophobe.110.desc:0"§R我们所有的舰队都在陆续失去联系，前线的嗜杀欲望已经一发不可收拾！§!\n\n§L（失去控制的['concept_wula_knight_bloodrage']舰队将不再受你指挥，虽然会继续对抗敌人，但是会无差别攻击路上所有的非乌拉骑士团舰队，包括盟友舰队，而且不会进行任何紧急跃迁！）§!"
+ wula_fallen_empire_xenophobe.110.a:0"怎么会这样！！"
+
+ wula_fallen_empire_xenophobe.111.name:0"诸舰队领袖已经冷静下来"
+ wula_fallen_empire_xenophobe.111.desc:0"各个舰队的领袖已经渐渐冷静，我们正逐步重新接管各舰队"
+ wula_fallen_empire_xenophobe.111.a:0"这档子破事终于压住了"
+
+ wula_fallen_empire_xenophobe.113.name:0"警告：[event_leader.GetName]率领的舰队失控！"
+ wula_fallen_empire_xenophobe.113.desc:0"我们已经收不到[event_fleet.GetName]的任何汇报！我们有理由相信其领袖[event_leader.GetName]和其率领的[event_fleet.GetName]已经失控！\n\n§L（失去控制的['concept_wula_knight_bloodrage']舰队将不再受你指挥，虽然会继续对抗敌人，但是会无差别攻击路上所有的非乌拉骑士团舰队，包括盟友舰队，而且不会进行任何紧急跃迁！）§!"
+ wula_fallen_empire_xenophobe.113.a:0"可恶！"
+ wula_fallen_empire_xenophobe.113.b:0"立刻召回[event_fleet.GetName]！"
+
+ wula_fallen_empire_xenophobe.114.name:0"§R血怒失控中！！！§!"
+ wula_fallen_empire_xenophobe.114.desc:0"最近的战争使得我们开始陷入嗜血的疯狂！如果我们继续战争，恐怕现状将向更危险的地步发展！"
+ wula_fallen_empire_xenophobe.114.a:0"！！！"
+ wula_fallen_empire_xenophobe.114.a.tooltip:0"从现在开始，每个月都有可能让某些有§R血怒§!特质的领袖所率领的舰队失去控制，失去控制的舰队将不再受你指挥，虽然会继续对抗敌人，但是会无差别攻击路上所有的非乌拉骑士团舰队，包括盟友舰队，而且不会进行任何紧急跃迁！"
+
+ wula_fallen_empire_xenophobe.115.name:0"血怒行进"
+ wula_fallen_empire_xenophobe.115.desc:0"当我们的祖先还被称为乌拉帝国禁军的时候，基因便被人工植入了一段特殊的基因片段，这片段使得我们更重视荣誉感和获得强烈的战斗欲望，我们的先祖成为了名副其实的不溃之师。但是在长久的时光中，这段人为插入的基因由于不可控的原因发生了一些畸变，导致其出现了负面影响——当形式不利时，这种基因可能会反噬我们自身，并使得我们的战士成为没有理智的嗜杀机器。多年来骑士们一直在寻找切断这段基因的方法，不过失去了乌拉帝国的基因科技，骑士们也对这道附带基因锁的基因片段无可奈何，只能学着以修身养性来对抗那种原始的杀戮渴望。然而现在，这段基因在混在在群体基因池中扩散到了凡人身上，这些人可没有骑士们的美德——随着战争的进行，她们内心的恶魔已经被点燃了。"
+ wula_fallen_empire_xenophobe.115.a:0"真麻烦·······"
+
+ trait_wula_bloodrage:0"血怒"
+ trait_wula_bloodrage.tooltip:0"这个特质不会对人口直接产生正面或负面效果，但是这个种族的领袖将带有血怒特质"
+ trait_wula_bloodrage_desc:0"人工植入的基因片段的损坏使得这个种族及其易怒，好斗成性"
+
+ leader_trait_wula_bloodrage:0"血怒"
+ leader_trait_wula_bloodrage_desc:0"这个将领一旦杀红眼，你就很难把它从战场上拉回来"
+
+ wula_fallen_empire_xenophobe.510.name:0"舰队替换"
+ wula_fallen_empire_xenophobe.510.desc:0"由于我们采用了新的乌拉帝国战舰构型，所以我们打算将手头上所有的乌拉帝国战舰翻新，并取缔旧构型。\n\n§L（翻新对象包括帝国泰坦，战列巡洋舰和护航舰，所有的舰队司令将自动撤职，稍后请自行重新任命！用于取缔旧战舰的构型将从现有的设计中随机抽取，在舰队设计器中编辑并确保只有一种构型"
+ wula_fallen_empire_xenophobe.510.a:0"已经可以替换了"
+ wula_fallen_empire_xenophobe.510.b:0"给我30天准备"
+ wula_fallen_empire_xenophobe.510.c:0"不要再过问这件事了"
+ wula_fallen_empire_xenophobe.510.c.tooltip:0"你已经无法再建造堕落时代的战舰，这意味着你现有舰队将不再允许补员！"
+
+ leader_trait_prince_regent:0"乌拉帝国摄政"
+ leader_trait_prince_regent_desc:0"一个魅力无限的领袖，团结在这位领导人麾下的人都衷心相信美好的未来"
+
+ preset_part_of_wula_empire:0"帝国行省"
+ preset_part_of_wula_empire_desc:0"这些国家名义上还是星海中的一员，但是相当一部分权力已经交归乌拉帝国中央，缴纳大量资源与科研税收，并成为了帝国的自治行省"
+ a_part_of_wula_empire:0"乌拉帝国行省"
+
+ wula_fallen_empire_xenophobe.151.name:0"创造帝国行省"
+ wula_fallen_empire_xenophobe.151.desc:0"当我们夺取[planet_wula_create_provinces.GetName]的捷报传回[root.Capital.GetName]的时候，[Root.GetRulerTitle][knight_ruler.GetName]正捧着骑士法典，静静的伫立在圣堂中央：“谨依皇帝之遗志、依骑士团之使命，我在此宣布，将[planet_wula_create_provinces.GetName]及其所在星系划分为······”"
+ wula_fallen_empire_xenophobe.151.a:0"······新的帝国行省"
+ wula_fallen_empire_xenophobe.151.a.tooltip:0"§H帝国行省§!，一种权力集中、允许整合、可建造大量地产、高额资源征税并且高忠诚度的新附属类型"
+ wula_fallen_empire_xenophobe.151.b:0"······由[root.GetName]直辖的行政区"
+ wula_fallen_empire_xenophobe.152.desc:0"“······新的帝国行省，义务为按时缴纳税款并供应[root.GetName]的发展和作战需求，除此之外将享有高度的自治权。帝国疆域在今日得以扩展，帝国之敌在今日得到惩戒，你们的衷心为你们换得了权力，服侍乌拉帝国和帝国的宏大愿景吧，你们必将升华！”"
+ wula_fallen_empire_xenophobe.152.a:0"又一处失地得以收复！"
+  text_must_control_whole_system:0"必须已经控制整个星系"
+
+ decision_wula_new_knight_fleet_create:0"呼叫骑士舰队回归"
+ decision_wula_new_knight_fleet_create_effects:0"在星球上呼叫一支堕落帝国骑士舰队，其舰船设计从你所拥有的乌拉帝国战舰设计中随机抽取"
+ decision_wula_new_knight_fleet_create_desc:0"将那些仍在流浪的骑士舰队召回，我们的征途需要她们！"
+
+ wula_fallen_empire_xenophobe.153.name:0"回归的骑士舰队抵达"
+ wula_fallen_empire_xenophobe.153.desc:0"回归的骑士舰队已经抵达了我们的首都[Root.Capital.GetName]，这群仍然效忠于乌拉帝国皇室的战士们已经准备好再一次沐浴在叛徒与异形的鲜血中！"
+ wula_fallen_empire_xenophobe.153.a:0"生力军增加了"
+
+ wula_fallen_empire_xenophobe.514.name:0"夺取[event_planet.GetName]"
+ wula_fallen_empire_xenophobe.514.desc:0"我们引以为傲的军团夺取了[event_planet.GetName]！现在我们的骑士已经履行权利，将这颗星球上的俘虏转移到我们的辖地中，很快，装满俘虏的舰队将抵达我们的边界。"
+ wula_fallen_empire_xenophobe.514.a:0"清空[event_planet.GetName]，焚烧这个星球"
+
+ wula_fallen_empire_xenophobe.517.name:0"[event_planet.GetName]的运奴舰队已经出发"
+ wula_fallen_empire_xenophobe.517.desc:0"[event_planet.GetName]已经遵照指示，将所有的的农奴全部装上了运输舰队，接下来这些满载奴隶的舰队将前往各个骑士团子团的星球，为这些新兴的子团输送劳动力。"
+ wula_fallen_empire_xenophobe.517.a:0"出发吧"
+ NAME_Slave_transport_team_country:0"骑士团运奴办事处"
+ Name_wula_knight_serf_transport_team:0"骑士团运奴舰队"
+ wula_auxiliary_ship_transport:0"$Name_wula_knight_serf_transport_team$"
+ wula_slave_transport_team_general:0"奴隶监工"
+ decision_wula_serf_army_create:0"运输农奴"
+ decision_wula_serf_army_create_desc:0"这些奴隶应当去建设我们的子团"
+ decision_wula_serf_army_create_effects:0"该星球上的所有 £pop£ ['concept_wula_serf'] 都将被装载到专用的§H运输舰队§!，并向§H骑士团子团§!的星球运输，当运输舰队抵达子团的星球时，每艘运输舰为星球增加一个 £pop£ ['concept_wula_serf']"
+ text_need_subgroup:0"$TRIGGER_FAIL$至少需要拥有一个 §Y骑士团子团§! 才能运输['concept_wula_serf']"
+ text_need_can_access_subgroup:0"$TRIGGER_FAIL$ 必须知道抵达 §Y骑士团子团§! 的路径才能运输['concept_wula_serf']"
+
+
+
+ wula_fallen_empire_xenophobe.800.name:0"谏言：委任新骑士"
+ wula_fallen_empire_xenophobe.800.desc:0"当我们再次踏入星海的时候，很多旧时代的星图和超空间网道地图已经无法使用——在我们沉睡的这万年间，银河系已经发生了太多改变。经过高阶骑士领主们的商讨，我们现在应该提拔一些有实力的年轻人当骑士，让她们成为我们回归星海的开路先锋。\n\n§L（在骑士团中的乌拉星人存在着两种阶级，第一种是荣耀加身、人前楷模的骑士，第二种则是被称为“凡人”的平民百姓。这两个阶级都可以产生领导，从§H领导池§!招募的领导为低质量的§H凡人领导人§!，她们相比于正常的领导人要弱；但是你也可以从母星§H[Root.Capital.GetName]§!的§H行星决议§!中产生新的§H骑士领导人§!，这群领导人拥有强大的特质，并且可以通过§H誓言修炼§!来进一步加强领导特质）§!"
+ wula_fallen_empire_xenophobe.800.a:0"本应如此"
+ wula_fallen_empire_xenophobe.800.b:0"不，还不是时候"
+
+ wula_fallen_empire_xenophobe.801.name:0"谏言：骑士誓言"
+ wula_fallen_empire_xenophobe.801.desc:0"骑士[new_knight.GetName]作为我们回归星海的第一名正式骑士，已经得到进行誓言试炼的资格。我们可以在圣堂宣布[new_knight.GetName]开始修炼某个誓言，并让她进一步得到磨砺。\n\n§L（[new_knight.GetName]已经可以在母星§H[Root.Capital.GetName]§!的§H行星决议§!中宣布进行某个誓言试炼，誓言试炼有四个，分别是§H勇猛誓言§!，§H求索誓言§!，§H虔敬誓言§!，§H慈悲誓言§!，四个誓言拥有各自的任务，并且每个誓言任务只能由一个骑士进行）§!"
+ wula_fallen_empire_xenophobe.801.a:0"事不宜迟，立刻开始誓言吧"
+ wula_fallen_empire_xenophobe.801.b:0"再等等"
+
+ wula_fallen_empire_xenophobe.802.name:0"谏言：政治阴谋"
+ wula_fallen_empire_xenophobe.802.desc:0"我们已经于最近委任了一名传谕使[From.Leader.GetName]建立间谍网，她很快就会带领新组建的特工团队为我们效命。由于敌人的干涉，我们不能直接介入目前的银河系政局，但是我们可以通过特工之手，创造出一点·······“借口”，来为我们与银河系新生文明的霸权外交铺路。\n\n§L（堕落帝国可以通过§H间谍系统§!创造§H堕落帝国宣称§!——这是一种和普通的领地宣称不同的宣称，这种宣称将要求年轻文明完成某些任务，如果对方未能完成，则我们会获得干涉对方文明发展的契机，这可以帮助我们在不引起宿敌反对的情况下扩张在星海中的话语权）§!"
+ wula_fallen_empire_xenophobe.802.a:0"有时候实力不一定展现在台上"
+ wula_fallen_empire_xenophobe.802.b:0"谁需要那些肮脏的手段"
+
+ wula_fallen_empire_xenophobe.803.name:0"谏言：骑士团子团"
+ wula_fallen_empire_xenophobe.803.desc:0"我们建立了我们的第一个骑士团子团，这代表着我们回归星海的步伐前进了一大步，这群踌躇满志的年轻人将不再受我们的政敌束缚，而是以普通国家的身份加入星海舞台，我们现在应当继续扶持这些年轻的子团，以扩大她们在星海间的影响力和硬实力。\n\n§L（骑士团建立的§H骑士团子团§!是一种特殊的堕落帝国附庸，她们拥有母团的完整科技水平，性质却是普通帝国，我们可以在其首都修建特殊的§H骑士团地产§!协助其发展，或者在我们所拥有的星球上使用§H行星决议§!以将多余的 £pop£ §H农奴§! 运输到§H骑士团子团§!）§!"
+ wula_fallen_empire_xenophobe.803.a:0"这是我们实力的延伸"
+ wula_fallen_empire_xenophobe.803.b:0"让她们自个玩去吧，我们没闲心管她们"

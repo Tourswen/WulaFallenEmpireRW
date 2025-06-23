@@ -1,0 +1,137 @@
+﻿l_simp_chinese:
+
+concept_shroud_energy:0"虚境威能"
+concept_shroud_energy_desc:0"虚境威能是用于驱动乌拉帝国释放大规模术式的资源，当星系内存在§Y['concept_fallen_empire_shroud_beacon']§!时（一般由['concept_movable_court']和['concept_fallen_empire_convent']携带），该星系可以被灌入虚境能量以提升其虚境威能，使得该星系可以支撑更强大的['concept_country_spell']\n\n在星系的 §Y恒星§! 中选择 §H行星决议§!：§E虚境施恩§!，以向该星系注入虚境威能"
+
+concept_country_spell:0"国家级术式"
+concept_country_spell_desc:0"唯心堕落帝国可以驱使来自虚境的庞大能量，释放各种影响范围囊括多个星系的术式。\n\n这些技能需要由拥有 §Y['concept_fallen_empire_shroud_beacon']§! 的['concept_fallen_empire_convent']和['concept_movable_court']引导，选择想要释放术式的星系的 §Y恒星§!，可以在其 §H行星决议§! 中查看术式的具体效果，['concept_movable_court'] 的面板中也可以进行控制"
+
+concept_movable_court:0"移动王庭"
+concept_movable_court_desc:0"§H移动王庭§! 是让人望而生畏的堕落帝国巨舰，搭载着最虔诚的钢板神教信徒在深空中传播福音\n\n这种巨舰拥有自己的控制面板，允许控制其释放['concept_country_spell']，并向其他国家派遣['concept_missionary_fleet']"
+
+concept_fallen_empire_shroud_beacon:0"虚境裂隙信标"
+concept_fallen_empire_shroud_beacon_desc:0"§H虚境裂隙信标§! 可以增强整个星系内的灵能，使得唯心堕落帝国可以在该星系释放['concept_country_spell']。\n\n通常['concept_fallen_empire_convent']拥有 §H虚境裂隙信标§!，而 ['concept_movable_court'] 也具有和虚境裂隙信标相同的效果"
+
+concept_fallen_empire_country_spell_diffuse:0"术式扩散"
+concept_country_spell_diffuse:0"扩散"
+concept_fallen_empire_country_spell_diffuse_desc:0"部分['concept_country_spell']蕴含的灵能是如此强大，以至于这些术式的效果得以沿着超空间航道将向周边星系延申，这种情况称为§H术式扩散§!。\n\n受扩散影响的星系将§Y重现该术式的效果§!，之后将['concept_shroud_energy_extinguish']并把能量向所有临近的星系继续传递，周而复始直到周边满足条件的星系都因为术式扩散而['concept_shroud_energy_extinguish']"
+
+concept_shroud_energy_extinguish:0"熄灭"
+concept_shroud_energy_extinguish_desc:0"由于传导['concept_country_spell']的['concept_fallen_empire_country_spell_diffuse']而导致星系暂时失去['concept_shroud_energy']的现象，熄灭的星系在星系内拥有['concept_fallen_empire_shroud_beacon']时，可通过 §E重启虚境裂隙§! 以恢复该星系原先拥有的['concept_shroud_energy']"
+
+concept_resistance_to_missionary:0"宣讲抵抗"
+concept_resistance_to_missionary_desc:0"由于传教舰队短期内多次到达同一殖民地而导致的惩罚，在这种情况下，传教舰队造成的影响将会减少"
+
+concept_missionary_fleet:0"传教舰队"
+concept_missionary_fleet_desc:0"由唯心堕落帝国的['concept_movable_court']所释放的特殊舰队，这些舰队将自动地执行传教的指令，把她们的宗教带到其他殖民地。该舰队到达其他殖民地时，将自动开启对该殖民地拥有者的§H传教局势§!\n\n传教舰队通常由['concept_missionary_ship_1']、['concept_missionary_ship_2']、['concept_missionary_ship_3']和['concept_missionary_ship_4']组成，每一种战舰都拥有其各种的用处\n\n在 ['concept_movable_court'] 的 §H控制面板§! 中部署传教舰队"
+
+concept_missionary_ship_1:0"传教舰"
+concept_missionary_ship_1_desc:0"§H传教舰§!是['concept_missionary_fleet']的构成成员之一，在到达其他国家的殖民地后，每艘传教舰立刻向该星球的拥有者输出 §G20§! §H宗教压力§!§L（即推进 20 §Y传教局势§!进度）§!\n\n如果该殖民地有§R['concept_resistance_to_missionary']§!，则输出的宗教压力减半"
+concept_missionary_ship_2:0"审判舰"
+concept_missionary_ship_2_desc:0"§H审判舰§!是['concept_missionary_fleet']的构成成员之一，在到达其他国家的殖民地后，每艘审判舰立刻将该星球的2个£pop£ §Y非唯心主义思潮人口§! 修改为 §G唯心主义§!\n\n如果该殖民地有§R['concept_resistance_to_missionary']§!，则影响的 £pop£ 人口数减半"
+concept_missionary_ship_3:0"朝圣舰"
+concept_missionary_ship_3_desc:0"§H朝圣舰§!是['concept_missionary_fleet']的构成成员之一，在到达其他国家的殖民地后，每艘朝圣舰均有20%的几率在该星球上§Y建立乌拉帝国教团§!，同时有50%几率吸引星球上的一个 §Y唯心主义思潮§! £pop£ 人口加入我国§L（如果星球上有乌拉帝国教团，则此概率固定为100%）§!\n\n如果该殖民地有§R['concept_resistance_to_missionary']§!，则 §Y建立乌拉帝国教团§! 和 §Y吸引 £pop£§!的概率均减半"
+concept_missionary_ship_4:0"信众舰"
+concept_missionary_ship_4_desc:0"§H信众舰§!是['concept_missionary_fleet']的构成成员之一，每艘信众舰使得传教舰队 §Y最大拜访星球数量§! §G+1§!\n\n传教舰队抵达一个殖民地后，舰队内的一艘信众舰将§Y离队§!；如果此时传教舰队内已经没有更多的信众舰，那么该传教舰队将§R解散§!"
+
+concept_fallen_empire_convent:0"帝国修道院"
+concept_fallen_empire_convent_desc:0"§H乌拉帝国修道院§! 是唯心堕落帝国使用§Y修道院建造舰§!在星间建立的巨型堡垒，拥有能产出大量资源的区划。当§H帝国修道院§!建立的时候，星系内每一个可供采矿站和研究站获取资源的星球都会被虚境迷雾覆盖，并增加这些区划的建造上限\n\n所有的§H乌拉帝国修道院§!均拥有['concept_fallen_empire_shroud_beacon']"
+
+concept_shroud_energy_storage:0"虚境威能储能"
+concept_shroud_energy_storage_desc:0"用于驱动['concept_country_spell']的['concept_shroud_energy']过于庞大，很难做到一瞬间调用如此多的虚境威能。因此灵能使们会使用某种方式将导出的虚境威能储存起来，以供§Y['concept_fallen_empire_shroud_beacon']§!调用。\n\n在局势§H虚境威能储能§!中可查看剩余的['concept_shroud_energy']，在殖民地上执行§H行星决议§!：§E燃烧使徒§!以获取更多的虚境威能储能"
+
+concept_trait_wula_soul_splitting:0"一魂多体"
+concept_trait_wula_soul_splitting_desc:0"远古堕落帝国的某种禁忌术式可以使一个人的灵魂接管多具躯体\n\n但是该人口一旦从原星球被迁徙，则会§R自动死亡§!！"
+
+concept_wula_fallen_empire_knight:0"乌拉帝国骑士"
+concept_wula_knight:0"帝国骑士"
+concept_wula_fallen_empire_knight_desc:0"§H乌拉帝国骑士§! 是乌拉骑士团独立于原版三大类别的 §Y特殊领袖类型§!，同时可以担任 £scientist£ §Y科学家§! 和 £commander£§Y指挥官§! 的工作，她们拥有强大的§Y骑士特质§!，并允许使用独特的['concept_wula_oath']晋升机制获得提升。\n\n在 §H首都§! 实行 §H行星决议§!：§E寻找新的骑士§! 以获得新的 §Y见习骑士§!，并将她们 §H升级§! 到 §E4§! 级以使其转正成为正式的 §Y乌拉帝国骑士§!"
+
+concept_wula_fallen_empire_honor_knight:0"乌拉帝国荣耀骑士"
+concept_wula_honor_knight:0"荣耀骑士"
+concept_wula_fallen_empire_honor_knight_desc:0"§H乌拉帝国荣耀骑士§!是乌拉骑士团最尊贵最强大的骑士，她们已经拥有了属于自己的['concept_wula_knight_oath']，获得了所有骑士的敬仰和爱戴，并拥有与其誓言相应的§Y誓言特质§!。"
+
+concept_wula_knight_oath:0"骑士誓言"
+concept_wula_oath:0"誓言"
+concept_wula_knight_oath_desc:0"§H骑士誓言§!是['concept_wula_fallen_empire_knight']进一步深造的道途，宣誓骑士誓言的骑士将得到授勋并成为['concept_wula_honor_knight']，获得最强大的 §Y誓言特质§!。\n\n只有正式骑士允许进行誓言试炼，§Y见习骑士§! 升级到 §E4§! 级将转正成为正式的 §Y乌拉帝国骑士§!"
+
+concept_wula_knight_subgroup:0"骑士团子团"
+concept_wula_subgroup:0"子团"
+concept_wula_knight_subgroup_desc:0"§H骑士团子团§!是一种特殊的堕落帝国附庸，她们拥有与堕落帝国相当的完整§E科技水平§!，性质却是§Y普通帝国§!。\n\n骑士团可以在其子团§Y首都§! 修建特殊的 £building£ §H骑士团地产§!协助其发展，也可以在拥有的殖民地上使用 §H行星决议§!：§E运输农奴§! 以将 £pop£ ['concept_wula_serf'] 运输到子团"
+
+concept_wula_knight_bloodrage:0"血怒"
+concept_wula_knight_bloodrage_desc:0"乌拉帝国骑士的基因片段中存在致命的缺陷——这使得她们会陷入一种名为§H血怒§!的状态，一旦在战场上由于连续交战而陷入血怒状态，这名骑士指挥的舰队将失去控制并 §R无差别攻击§! 所有的非骑士团战舰！\n\n如果舰队即将陷入血怒状态，指挥部将获得一次强迫其进行 §Y紧急超光速跃迁§! 的机会，以防止该舰队造成不可预知的损坏。"
+
+concept_wula_fallen_empire_awakened:0"乌拉帝国觉醒"
+concept_wula_fallen_empire_destiny:0"天命"
+concept_wula_fallen_empire_awakened_desc:0"当获取7个['concept_ascension_perk']之后，堕落乌拉帝国势力将允许采用一个特殊的§E飞升§!以使得其转变为['concept_awakened_empire']。\n\n选择该['concept_ascension_perk']后，作为§H首位觉醒者§!降临星海的堕落乌拉帝国势力可以选择§Y道途§!以获得额外机制，但是也要因此面对由远古宿敌发起的['concept_wula_war_in_heaven']\n\n§Y机械堕落帝国§!将使用特殊的觉醒机制，因此没有这类觉醒飞升。"
+
+concept_wula_war_in_heaven:0"乌拉帝国天堂之战"
+concept_wula_war_in_heaven_desc:0"由相互敌对的两派堕落乌拉帝国残余势力发起的战争，其战火将波及全银河系——这场战争只能有一方成为胜者，没有停战的余地"
+
+concept_wula_fallen_empire:0"乌拉帝国"
+concept_wula_fallen_empire_desc:0"曾经统治全星海的§H超级帝国§!，但是由于皇权衰微和子嗣们的相互攻伐，这个政权已经往日不再。在经历一场波及银河的§H乌拉帝国大内战§!后，仍屹立于星海的乌拉帝国子嗣变成了各个堕落帝国。"
+
+concept_wula_serf:0"农奴"
+concept_wula_serf_desc:0"独属于乌拉骑士团的特殊§H奴隶§!类型，这中类型的奴隶在就任 £job£ §H先驱侍从§! 时将使星球上的 §H岗位产出§! §G增加§!。\n\n除此之外，当新建立的['concept_wula_knight_subgroup']需要人口以协助发展的时候，可以在殖民地上施行特殊的 §E行星决议§!：§H运输农奴§! 以将这个殖民地的农奴全部移交给['concept_wula_subgroup']"
+
+concept_wula_goliath_awakened_fallen_empire:0"乌拉帝国超级旗舰"
+concept_goliath_awakened_fallen_empire:0"超级旗舰"
+concept_wula_goliath_awakened_fallen_empire_desc:0"§H乌拉帝国超级旗舰§! 是乌拉帝国最大的现役战舰，主要作为乌拉帝国大型舰队的核心，拥有无与伦比的防御力和武器数量，还能装配其他舰船所不能安装的§Y旗舰立场§!部件。"
+concept_wula_massive_ship_fallen_empire:0"乌拉帝国泰坦"
+concept_massive_ship_fallen_empire:0"泰坦"
+concept_wula_massive_ship_fallen_empire_desc:0"§H乌拉帝国泰坦§! 拥有坚实的船壳和强大的武器阵列，是乌拉帝国舰队中的翘楚，负责组织强大的火力网撕裂敌方防御。和普通泰坦不同的是，乌拉帝国泰坦不能安装§Y光环部件§!"
+concept_wula_large_ship_fallen_empire:0"乌拉帝国战列巡洋舰"
+concept_large_ship_fallen_empire:0"战列巡洋舰"
+concept_wula_large_ship_fallen_empire_desc:0"作为乌拉帝国舰队的中流砥柱，§H乌拉帝国战列巡洋舰§! 拥有比普通战列舰更优秀的性能，并且可以安装多种不同类型的武器"
+concept_wula_small_ship_fallen_empire:0"乌拉帝国护航舰"
+concept_small_ship_fallen_empire:0"护航舰"
+concept_wula_small_ship_fallen_empire_desc:0"虽然 §H乌拉帝国护航舰§! 是乌拉帝国舰队中最小的战舰，但是其拥有的武器数量和防御模块也远非普通驱逐舰所不能及"
+concept_wula_fallen_empire_building:0"先驱者建筑"
+concept_wula_fallen_empire_building_desc:0"§H先驱者建筑§! 是乌拉帝国曾经用于生产一系列资源的 £building£ §Y建筑§!，这些建筑所提供的 £job£ §Y岗位§!可以产出巨量的资源，但是只有独属于['concept_fallen_empire']的§E先驱者§!阶层人口可以就任"
+
+concept_knight_virtue:0"美德"
+concept_knight_virtue_desc:0"§H美德§! 是用于评判乌拉帝国骑士为人的数值，骑士们拥有四个美德：['concept_knight_mercy']、['concept_knight_brave']、['concept_knight_smart']、['concept_knight_seek']，当骑士提升等级的时候，可以任意选择提升这四个美德中的一个\n\n美德将会动态地改变特质 §Y乌拉骑士团骑士§! 提供的数值加成；§Y见习骑士§! 可以提升美德，但是不会获得数值加成"
+
+concept_knight_mercy:0"慈悲"
+concept_knight_mercy_desc:0"§G慈悲§! 是乌拉帝国骑士的['concept_knight_virtue']之一，将会提供以下的数值增幅：\n\n-§Y舰队司令§!：每日船体和装甲回复增加，舰船维护费降低\n-§Y陆军将领§!：陆军生命增加，陆军撤退概率增加\n-§Y科学家§!：隐形等级增加"
+concept_knight_brave:0"勇武"
+concept_knight_brave_desc:0"§R勇武§! 是乌拉帝国骑士的['concept_knight_virtue']之一，将会提供以下的数值增幅：\n\n-§Y舰队司令§!：舰船开火速率增加，舰船亚光速速度增加，舰船武器伤害增加\n-§Y陆军将领§!：陆军伤害增加\n-§Y科学家§!：跃迁距离增加"
+concept_knight_smart:0"虔敬"
+concept_knight_smart_desc:0"§M虔敬§! 是乌拉帝国骑士的['concept_knight_virtue']之一，将会提供以下的数值增幅：\n\n-§Y舰队司令§!：舰船闪避率增加，舰船武器射程增加\n-§Y陆军将领§!：陆军士气伤害增加，陆军士气增加\n-§Y科学家§!：探测范围增加，超空间探测距离增加"
+concept_knight_seek:0"求索"
+concept_knight_seek_desc:0"§E求索§! 是乌拉帝国骑士的['concept_knight_virtue']之一，将会提供以下的数值增幅：\n\n-§Y舰队司令§!：舰队跃迁距离增加，舰队隐形等级增加\n-§Y陆军将领§!：陆军招募花费减少，陆军维持费减少\n-§Y科学家§!：遗迹发掘速度增加，异常研究速度增加"
+
+concept_machine_genesis:0"创世纪育种"
+concept_machine_genesis_desc:0"机械乌拉被设计用于应对银河系中最黑暗的堕落时代，她们肩负着在战乱后恢复银河系生态的任务，§H创世纪育种§! 计划便是为此而生的。\n\n机械乌拉可以使用特殊的 §H生命播种工程船§! ，在荒无人烟的星球上释放大量的环境改造纳米机器人，使其成为 ['concept_pc_nuked']，并诱导新文明的诞生。\n\n机械乌拉与以此法诞生的文明自动 §Y建立联系§!，而不需要在星球上空建设观测站。"
+
+concept_corruption_protocol:0"腐化协议"
+concept_corruption_protocol_desc:0"§H腐化协议§! 是某个远古之敌用于对付机械乌拉的庞大中枢网络而设计的机械病毒，这种病毒几乎摧毁了执掌整个机械乌拉的中枢网络，但是却阴差阳错地残留在网络内，被机械乌拉反向破译，并成为了她们的新武器。\n\n这种病毒专司于点对面破坏，在对机械和合成人国家施行进攻以前，需要经由 §H间谍网络§! 发起特殊的 §Y腐化传播§! 行动以获得线人 ['concept_corruption_protocol_breach']，消耗 §E网络突破点§!将可以施行多种大规模破坏性行动，以对机械和合成人国家造成沉重打击"
+
+concept_threat_archives:0"威胁度档案"
+concept_threat_archives_desc:0"§H威胁度档案§! 是机械乌拉为其他普通帝国建立的一套评定其对银河系安全威胁的系统，当这些文明做出诸如§Y灭绝种族§!、§Y连续宣战§!、§Y毁灭星球§!等拥有 §R灭绝倾向§! 的行为时，机械乌拉将在档案中提升对这些文明的 §Y威胁度评级§!。当威胁度升高时，机械乌拉将逐步解禁对该文明的敌意行动——诸如制裁、代理人战争和直接宣战。\n\n机械乌拉可以在 §H间谍网络§! 中伪造该行为的灭绝行为，以手动欺骗中枢，提高其威胁度"
+
+concept_wula_fallen_empire_machine_destiny:0"清算之日"
+concept_wula_fallen_empire_machine_awakened:0"堕落机械乌拉觉醒"
+concept_wula_fallen_empire_machine_awakened_desc:0"和普通的['concept_wula_fallen_empire_awakened']不同，堕落机械乌拉拥有独特的 §Y觉醒路线§!\n\n被设计用于应对银河系中最黑暗的堕落时代的机械乌拉在检测到['concept_wula_war_in_heaven']的爆发时，将会 §E自动觉醒§! 并尝试以武力干涉的行动结束战争\n\n但是如果机械乌拉完成了 ['concept_broken_personality'] 局势，残缺的人格模拟将使得机械乌拉成为毫无理性的 §H杀戮机械§!，立刻觉醒并向全银河发起§Y灭绝战争§!！"
+
+concept_corruption_protocol_breach:0"网络突破点"
+concept_corruption_protocol_breach_desc:0"一个机械或合成人帝国的网络被腐化协议攻破时，部分腐化机械将成为机械乌拉扩大腐化协议影响的 §Y线人§!，这些腐化机械合称为 §H网络突破点§!\n\n通过 §Y间谍行动§!：§E腐化传播§! 以获得新的 §H网络突破点§!，消耗 §Y网络突破点§! 以发起各种 §H腐化协议§! 间谍行动"
+
+concept_broken_personality:0"破碎人格"
+concept_broken_personality_desc:0"负责维持机械乌拉人格框架的自检协议在机械病毒的进攻下被覆写，这使得机械乌拉的人格变得不完整，并有可能违背其设计初衷做出危险行为——§H破碎人格§!局势便是用于评判机械乌拉人格完整度的局势\n\n通常，该局势并不会自动推进，但是当机械乌拉做出 §R对有机体不利§! 的行为时，局势便会推进，机械乌拉也会变得愈发凶残，§Y解锁§!更深层次的['concept_corruption_protocol']使用权限，并切实地威胁到普通帝国的安危。\n\n当该局势完成时，机械乌拉的人格模拟将完全失效，这个古老的看护者将化身 §H杀戮机械§!，从废墟中觉醒并对全银河发起 §Y灭绝战争§!。"
+
+ concept_IDC:0"干涉使节团"
+ concept_IDC_desc:0"§H干涉使节团§! 是由亲外堕落乌拉遗族设立、用于处理与年轻文明交际事务的特殊国家部门\n\n§Y干涉使节团§! 主要管理负责§R渗透§!和§R干涉§!年轻文明政治层的 §E使节团小组§! 和负责与年轻文明建立贸易的 ['concept_wula_trader_fleet']\n\n亲外堕落乌拉遗族可以在 §E通讯列表§! 联系 §Y干涉使节团§! 以规划行动"
+
+ concept_IDC_group:0"使节团小组"
+ concept_IDC_group_desc:0"§H使节团小组§! 是由亲外堕落乌拉遗族培训的专业渗透者，负责引导甚至逼迫其他年轻文明按照自己的意愿发展\n\n通过联系['concept_IDC']，亲外堕落乌拉遗族将得以部署这些专业团队"
+
+ concept_wula_trader_fleet:0"贸易舰队"
+ concept_wula_trader_fleet_desc:0"§H贸易舰队§! 是效忠于亲外堕落乌拉遗族的特殊舰队，它们在装载乌拉帝国的商品后将游历于各个年轻文明的殖民地，并贩卖这些货物\n\n贸易舰队本身并不产出£trade_value£，但是能使 £job£ §Y受收容者§! 产生更多的£trade_value£，并向拥有['concept_trade_access_agreement']的国家输出['concept_trade_influence']\n\n在 §E通讯列表§! 寻找 ['concept_IDC']，联系她们组建贸易舰队。"
+
+ concept_trade_access_agreement:0"贸易准入协定"
+ concept_trade_access_agreement_desc:0"签订 §H贸易准入协定§! 代表着允许亲外堕落乌拉遗族进入年轻文明市场\n\n由于生产力的差距，堕落乌拉商品流入对本国经济发展是毁灭性打击，年轻文明在通过 §Y贸易准入协定§! 直接获得 £minerals£ £food£ £energy£ 关税的同时，自身生产£minerals£ £food£ £energy£的能力将不断降低——其最终效果由亲外堕落乌拉遗族对该国家的['concept_trade_influence']决定\n\n堕落乌拉可以通过 §H间谍行动§! 提出贸易准入协定的签订"
+
+ concept_trade_influence:0"贸易影响力"
+ concept_trade_influence_desc:0"§H贸易影响力§! 代表亲外堕落乌拉遗族对年轻文明贸易行动产生的影响\n\n每个月，每支['concept_wula_trader_fleet']都会对那些签订了贸易准入协定的国家输出贸易影响力，贸易影响力将强化['concept_trade_access_agreement']带来的效果"

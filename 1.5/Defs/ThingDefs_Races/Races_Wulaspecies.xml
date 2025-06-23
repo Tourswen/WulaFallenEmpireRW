@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<AlienRace.ThingDef_AlienRace ParentName="Human">
+		<defName>WulaSpecies</defName>
+		<label>机械乌拉</label>
+		<description>乌拉星人是一个曾统治银河系的堕落帝国的主要种族，机械乌拉则是仿照她们样貌制作的合成人——随着帝国的衰颓，大量乌拉合成人流散各地。她们拥有近乎无限的寿命，并且拥有一部分机械体的特性。</description>
+    <alienRace>
+      <!-- 核心设置 -->
+      <generalSettings>
+        <!-- 男性生成几率 -->
+        <maleGenderProbability>0</maleGenderProbability>
+        <!-- 禁止生成的特质 -->
+        <disallowedTraits>
+          <li>
+            <defName Degree="-2">Beauty</defName>
+          </li>
+          <li>
+            <defName Degree="-1">Beauty</defName>
+          </li>
+        </disallowedTraits>
+        <!-- 无视年龄疾病 -->
+        <immuneToAge>true</immuneToAge>
+				<!-- 在口角中造成的最大伤害 -->
+        <maxDamageForSocialfight>6</maxDamageForSocialfight>
+        <!-- 免疫人类的异形歧视 -->
+        <immuneToXenophobia>true</immuneToXenophobia>
+        <!-- 最小的可生成成人背景的年龄 -->
+        <minAgeForAdulthood>18</minAgeForAdulthood>
+        <!-- 手术继承自人类 -->
+        <humanRecipeImport>true</humanRecipeImport>
+        <!-- 能否躺下睡觉 -->
+        <canLayDown>true</canLayDown>
+        <!-- 各种零件定义 -->
+        <alienPartGenerator Inherit="False">
+          <!-- 允许的头部 -->
+          <headTypes Inherit="False">
+            <li>Female_AverageNormal</li>
+            <!-- <li>Female_AverageWide</li>
+            <li>Female_AveragePointy</li> -->
+          </headTypes>
+					<!-- 身体类型 -->
+					<bodyTypes Inherit="False">
+						<li>Thin</li>
+					</bodyTypes>
+					<!-- 颜色设置 -->
+					<colorChannels Inherit="false">
+            <!-- 皮肤是特殊的，因为现在由基因定义肤色 -->
+						<li>
+							<name>skin</name>
+              <first Class="AlienRace.ColorGenerator_SkinColorMelanin">
+                <minMelanin>0</minMelanin>
+                <maxMelanin>0</maxMelanin>
+              </first>
+						</li>
+            <!-- 头发颜色 -->
+						<li>
+							<name>hair</name>
+							<first Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>15</weight>
+										<min>(0.4,0.3,0.5)</min>
+										<max>(0.6,0.1,0.7)</max>
+									</li>
+								</options>
+							</first>
+						</li>
+					</colorChannels>
+        </alienPartGenerator>
+      </generalSettings>
+      <!-- 图形 -->
+			<graphicPaths>
+				<body>Wula/Things/WulaSpecies/Bodies/</body>
+				<head>Wula/Things/WulaSpecies/Heads/</head>
+				<skeleton>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Thin</skeleton> 
+        <stump>Wula/Things/WulaSpecies/Bodies</stump>
+			</graphicPaths>
+			<!-- 风格设置 -->
+			<styleSettings>
+				<!-- 头发 -->
+				<li>
+					<key>HairDef</key>
+					<value>
+						<hasStyle>true</hasStyle>
+						<styleTagsOverride>
+							<li>WULA_Style</li>
+						</styleTagsOverride>
+					</value>
+				</li>
+				<!-- 纹身 -->
+				<li>
+					<key>TattooDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+				<!-- 胡须 -->
+				<li>
+					<key>BeardDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+			</styleSettings>
+      <!-- 种族的允许和禁止特化设置 -->
+      <raceRestriction>
+        <!-- 无法拥有的内源性基因 -->
+				<blackEndoCategories MayRequire="Ludeon.RimWorld.Biotech">
+          <li MayRequire="Ludeon.RimWorld.Biotech">HairColor</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Melanin</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">BodyType</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Ears</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Nose</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Voice</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Headbone</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Head</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Jaw</li>
+				</blackEndoCategories>
+        <!-- 无法拥有的Tag基因 -->
+				<blackGeneTags MayRequire="Ludeon.RimWorld.Biotech">
+					<li MayRequire="Ludeon.RimWorld.Biotech">EyeColor</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Tail</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">BeardStyle</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Fur</li>
+				</blackGeneTags>
+        <!-- 无法拥有的基因列表 -->
+				<blackGeneList>
+          <li MayRequire="Ludeon.RimWorld.Biotech">Furskin</li>
+          <li MayRequire="Ludeon.RimWorld.Biotech">Brow_Heavy</li>
+				</blackGeneList>
+        <!-- 禁止的异形变种 -->
+				<blackXenotypeList>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Dirtmole</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Genie</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Hussar</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Sanguophage</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Neanderthal</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Pigskin</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Impid</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Waster</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Yttakin</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Highmate</li>
+				</blackXenotypeList>
+        <!-- 允许的异形类型 -->
+				<whiteXenotypeList MayRequire="Ludeon.RimWorld.Biotech">
+					<li MayRequire="Ludeon.RimWorld.Biotech">Baseliner</li>
+				</whiteXenotypeList>
+				<onlyUseRaceRestrictedXenotypes>true</onlyUseRaceRestrictedXenotypes>
+        <!-- 食物列表 -->
+        <foodList>
+          <li>WULA_Charge_Cube</li>
+        </foodList>
+        <onlyEatRaceRestrictedFood>true</onlyEatRaceRestrictedFood>
+        <!-- 生育能力 -->
+        <canReproduce>false</canReproduce>
+      </raceRestriction>
+      <!-- 想法设置 -->
+      <thoughtSettings>
+        <!-- 不会产生的想法 -->
+        <cannotReceiveThoughts>
+          <li>AteWithoutTable</li>
+        </cannotReceiveThoughts>
+      </thoughtSettings>
+    </alienRace>
+    
+    <!-- 以下是原版标签 -->
+    <!-- 受击音效 -->
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <statBases>
+      <MarketValue>3000</MarketValue>
+      <Mass>50</Mass>
+      <MoveSpeed>4.5</MoveSpeed>
+      <!-- 易燃性，作为半机械生物很难起火 -->
+      <Flammability>0.1</Flammability>
+      <!-- 温度适应性，作为半机械生物适应温度的区间很大 -->
+      <ComfyTemperatureMin>-50</ComfyTemperatureMin>
+      <ComfyTemperatureMax>60</ComfyTemperatureMax>
+      <!-- 有自带护甲，对热量伤害有高抵抗 -->
+      <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+      <ArmorRating_Heat>1.00</ArmorRating_Heat>
+      <!-- 心灵敏感，很低 -->
+      <PsychicSensitivity>0.25</PsychicSensitivity>
+      <!-- 半机械体抗大部分毒和完全抗毒环境 -->
+      <ToxicResistance>0.9</ToxicResistance>
+      <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">1</ToxicEnvironmentResistance>
+      <!-- 免疫速度，以后可能会再次修改 -->
+      <ImmunityGainSpeed>30</ImmunityGainSpeed>
+      <!-- 携带重量 -->
+      <CarryingCapacity>50</CarryingCapacity>
+      <!-- 疼痛阈值，机械体不会因为疼痛倒下，设定在PawnKinds_Wula -->
+      <PainShockThreshold>100</PainShockThreshold>
+      <EatingSpeed>1000</EatingSpeed>
+      <!-- 肉量 -->
+      <MeatAmount>0</MeatAmount>
+      <!-- 皮革量 -->
+      <LeatherAmount>0</LeatherAmount>
+      <!-- 近战闪避 -->
+      <MeleeDodgeChance>1.25</MeleeDodgeChance>
+      <AimingDelayFactor>1.25</AimingDelayFactor>
+      <!-- 谈判能力 -->
+      <NegotiationAbility>1</NegotiationAbility>
+      <!-- 社交效果，机械乌拉社交的影响很小 -->
+      <SocialImpact>0.25</SocialImpact>
+      <!-- 挖矿速度 -->
+      <MiningSpeed>1</MiningSpeed>
+      <!-- 采矿效率 -->
+      <MiningYield>1</MiningYield>
+      <!-- 种植速度 -->
+      <PlantWorkSpeed>1</PlantWorkSpeed>
+      <!-- 狩猎隐蔽 -->
+      <HuntingStealth>1</HuntingStealth>
+      <!-- 建造速度 -->
+      <ConstructionSpeed>1</ConstructionSpeed>
+      <!-- 研究速度 -->
+      <ResearchSpeed>1</ResearchSpeed>
+    </statBases>
+
+    <race>
+			<!-- AI行为，勿改 -->
+			<thinkTreeMain>Humanlike</thinkTreeMain>
+			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+			<!-- 智力水平 -->
+			<intelligence>Humanlike</intelligence>
+			<!-- 血液，不流血 -->
+			<bloodDef>Filth_MachineBits</bloodDef>
+			<!-- 解剖产物 -->
+			<leatherDef>Leather_Light</leatherDef>
+      <specificMeatDef>Meat_Twisted</specificMeatDef>
+			<!-- 身体类型 -->
+			<body>WULA_Machine_Body</body>
+      <!-- 年龄阶段 -->
+      <lifeExpectancy>5000</lifeExpectancy>
+      <lifeStageAges Inherit="False">
+        <li>
+          <def>EntityFullyFormed</def>
+        </li>
+      </lifeStageAges>
+    </race>
+
+    <comps>
+      <li Class="CompProperties_Stunnable">
+        <affectedDamageDefs>
+          <li>Stun</li>
+          <li>EMP</li>
+        </affectedDamageDefs>
+        <adaptableDamageDefs>
+          <li>EMP</li>
+        </adaptableDamageDefs>
+      </li>
+    </comps>
+	</AlienRace.ThingDef_AlienRace>
+</Defs>

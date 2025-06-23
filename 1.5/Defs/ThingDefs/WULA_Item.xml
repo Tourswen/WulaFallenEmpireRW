@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="MealBaseIngredientless">
+    <defName>WULA_Charge_Cube</defName>
+    <label>乌拉帝国能源核心</label>
+    <description>被高度压缩的能源核心，是机械乌拉的能源系统唯一可接受的外部输入性能量来源。</description>
+    <graphicData>
+      <texPath>Wula/Item/WULA_Charge_Cube</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <DeteriorationRate>0.01</DeteriorationRate>
+      <MarketValue>24</MarketValue>
+      <Mass>0.3</Mass>
+      <WorkToMake>450</WorkToMake>
+      <Nutrition>0.9</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>MealSimple</preferability>
+      <optimalityOffsetHumanlikes>-1000</optimalityOffsetHumanlikes>
+      <optimalityOffsetFeedingAnimals>-1000</optimalityOffsetFeedingAnimals>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>MechanoidsWakeUp</ingestSound>
+    </ingestible>
+    <allowedArchonexusCount>40</allowedArchonexusCount>
+  </ThingDef>
+</Defs>
