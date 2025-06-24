@@ -4,7 +4,7 @@
   <HediffDef>
     <defName>Wula_Synth</defName>
     <label>合成人</label>
-    <description>乌拉帝国制式合成人，拥有一部分机械体的特性</description>
+    <description>乌拉帝国制式合成人，拥有一部分机械体的特性——她们无法被点燃、不会中毒、不会抱怨温度，但是也不会自愈创伤，并且需要摄入更多能量以维持机体运转。</description>
     <hediffClass>HediffWithComps</hediffClass>
     <everCurableByItem>false</everCurableByItem>
     <duplicationAllowed>false</duplicationAllowed>
@@ -22,8 +22,8 @@
         </statFactors>
         <!-- 抗毒抗火抗寒热 -->
         <statOffsets>
-          <ComfyTemperatureMin>-50</ComfyTemperatureMin>
-          <ComfyTemperatureMax>60</ComfyTemperatureMax>
+          <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+          <ComfyTemperatureMax>120</ComfyTemperatureMax>
           <ToxicResistance>1</ToxicResistance>
           <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">1</ToxicEnvironmentResistance>
           <Flammability>0</Flammability>
@@ -38,6 +38,18 @@
             <offset>0.20</offset>
           </li>
         </capMods>
+        <!-- 免疫非纳米机械疾病 -->
+        <makeImmuneTo>
+          <li>Flu</li>
+          <li>Malaria</li>
+          <li>SleepingSickness</li>
+          <li>Plague</li>
+          <li>WoundInfection</li>
+          <li>LungRot</li>
+          <li>GutWorms</li>
+          <li>MuscleParasites</li>
+          <li>OrganDecay</li>
+        </makeImmuneTo>
       </li>
     </stages>
     <disablesNeeds>

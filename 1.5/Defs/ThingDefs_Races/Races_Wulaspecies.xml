@@ -221,6 +221,8 @@
 			<intelligence>Humanlike</intelligence>
 			<!-- 血液，不流血 -->
 			<bloodDef>Filth_MachineBits</bloodDef>
+      <!-- 基础血量，很高 -->
+			<baseHealthScale>2.5</baseHealthScale>
 			<!-- 解剖产物 -->
 			<leatherDef>Leather_Light</leatherDef>
       <specificMeatDef>Meat_Twisted</specificMeatDef>

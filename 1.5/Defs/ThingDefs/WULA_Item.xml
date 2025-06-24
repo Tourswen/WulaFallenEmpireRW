@@ -13,7 +13,7 @@
       <MarketValue>24</MarketValue>
       <Mass>0.3</Mass>
       <WorkToMake>450</WorkToMake>
-      <Nutrition>0.9</Nutrition>
+      <Nutrition>1</Nutrition>
     </statBases>
     <ingestible>
       <preferability>MealSimple</preferability>
@@ -22,6 +22,6 @@
       <ingestEffect>EatVegetarian</ingestEffect>
       <ingestSound>MechanoidsWakeUp</ingestSound>
     </ingestible>
-    <allowedArchonexusCount>40</allowedArchonexusCount>
+    <allowedArchonexusCount>200</allowedArchonexusCount>
   </ThingDef>
 </Defs>

@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
 	<BodyDef>
 		<defName>WULA_Machine_Body</defName>
 		<label>机械乌拉</label>
@@ -12,26 +11,35 @@
 				<li>Torso</li>
 			</groups>
 			<parts>
-				<!-- 肋骨 -->
+				<!-- 机械框架，代替了肋骨、胸骨、骨盆、脊椎 -->
 				<li>
+					<def>WULA_Alloy_Framework</def>
+					<coverage>0.076</coverage>
+					<depth>Inside</depth>
+					<groups>
+						<li>Torso</li>
+					</groups>
+				</li>
+				<!-- 肋骨 -->
+				<!-- <li>
 					<def>Ribcage</def>
 					<coverage>0.036</coverage>
 					<depth>Inside</depth>
 					<groups>
 						<li>Torso</li>
 					</groups>
-				</li>
+				</li> -->
 				<!-- 胸骨 -->
-				<li>
+				<!-- <li>
 					<def>Sternum</def>
 					<coverage>0.015</coverage>
 					<depth>Inside</depth>
 					<groups>
 						<li>Torso</li>
 					</groups>
-				</li>
+				</li> -->
 				<!-- 骨盆 -->
-				<li>
+				<!-- <li>
 					<def>Pelvis</def>
 					<coverage>0.025</coverage>
 					<height>Bottom</height>
@@ -39,20 +47,20 @@
 					<groups>
 						<li>Torso</li>
 					</groups>
-				</li>
-				<!-- 能源炉 -->
-				<li>
-					<def>WULA_Energy_Furnace</def>
-					<customLabel>能源炉</customLabel>
+				</li> -->
+				<!-- 脊椎 -->
+				<!-- <li>
+					<def>Spine</def>
 					<coverage>0.025</coverage>
 					<depth>Inside</depth>
 					<groups>
 						<li>Torso</li>
 					</groups>
-				</li>
-				<!-- 脊椎 -->
+				</li> -->
+				<!-- 能源炉，代替了胃、心脏、肺、肾、肝 -->
 				<li>
-					<def>Spine</def>
+					<def>WULA_Energy_Furnace</def>
+					<customLabel>能源炉</customLabel>
 					<coverage>0.025</coverage>
 					<depth>Inside</depth>
 					<groups>
@@ -133,6 +141,7 @@
 						<li>Neck</li>
 					</groups>
 					<parts>
+						<!-- 头部 -->
 						<li>
 							<def>Head</def>
 							<coverage>0.80</coverage>
@@ -597,6 +606,4 @@
 			</parts>
 		</corePart>
 	</BodyDef>
-
-
 </Defs>
