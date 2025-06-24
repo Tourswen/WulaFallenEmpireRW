@@ -172,18 +172,15 @@
       <MoveSpeed>4.5</MoveSpeed>
       <!-- 易燃性，作为半机械生物很难起火 -->
       <Flammability>0</Flammability>
-      <!-- 温度适应性，作为半机械生物适应温度的区间很大 -->
-      <ComfyTemperatureMin>-50</ComfyTemperatureMin>
-      <ComfyTemperatureMax>60</ComfyTemperatureMax>
+      <!-- 温度适应性，在hediff修改 -->
+      <ComfyTemperatureMin>0</ComfyTemperatureMin>
+      <ComfyTemperatureMax>0</ComfyTemperatureMax>
       <!-- 有自带护甲，对热量伤害有高抵抗 -->
       <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
       <ArmorRating_Heat>1.00</ArmorRating_Heat>
       <!-- 心灵敏感，很低 -->
       <PsychicSensitivity>0.25</PsychicSensitivity>
-      <!-- 半机械体抗大部分毒和完全抗毒环境 -->
-      <ToxicResistance>1</ToxicResistance>
-      <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">1</ToxicEnvironmentResistance>
       <!-- 免疫速度，以后可能会再次修改 -->
       <ImmunityGainSpeed>30</ImmunityGainSpeed>
       <!-- 携带重量 -->

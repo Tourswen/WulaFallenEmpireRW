@@ -11,6 +11,13 @@
 
       <ignoresPainShock>true</ignoresPainShock>
       <minGenerationAge>1000</minGenerationAge>
+
+      <startingHediffs>
+        <li>
+          <def>Wula_Synth</def>
+        </li>
+      </startingHediffs>
+
       <!-- <abilities>
         <li>EntitySkip</li>
         <li>Heatspikes</li>
