@@ -171,7 +171,7 @@
       <Mass>50</Mass>
       <MoveSpeed>4.5</MoveSpeed>
       <!-- 易燃性，作为半机械生物很难起火 -->
-      <Flammability>0.1</Flammability>
+      <Flammability>0</Flammability>
       <!-- 温度适应性，作为半机械生物适应温度的区间很大 -->
       <ComfyTemperatureMin>-50</ComfyTemperatureMin>
       <ComfyTemperatureMax>60</ComfyTemperatureMax>
@@ -182,7 +182,7 @@
       <!-- 心灵敏感，很低 -->
       <PsychicSensitivity>0.25</PsychicSensitivity>
       <!-- 半机械体抗大部分毒和完全抗毒环境 -->
-      <ToxicResistance>0.9</ToxicResistance>
+      <ToxicResistance>1</ToxicResistance>
       <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">1</ToxicEnvironmentResistance>
       <!-- 免疫速度，以后可能会再次修改 -->
       <ImmunityGainSpeed>30</ImmunityGainSpeed>

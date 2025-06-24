@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+  <!-- Shamblers -->
+
+  <HediffDef>
+    <defName>Wula_Synth</defName>
+    <label>合成人</label>
+    <description></description>
+    <hediffClass>Hediff_Wula_Synth</hediffClass>
+    <everCurableByItem>false</everCurableByItem>
+    <duplicationAllowed>false</duplicationAllowed>
+    <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+    <stages>
+      <li>
+        <!-- 没有自然自愈系数 -->
+        <naturalHealingFactor>0</naturalHealingFactor>
+        <!-- 不会感到痛苦 -->
+        <painFactor>0</painFactor>
+        <statFactors>
+          <!-- 心灵敏感，很低 -->
+          <PsychicSensitivity>0.25</PsychicSensitivity>
+          <!-- 拥有更高的能量储量 -->
+          <MaxNutrition>2</MaxNutrition>
+        </statFactors>
+        <!-- 抗毒抗火抗寒热 -->
+        <statOffsets>
+          <ComfyTemperatureMin>-50</ComfyTemperatureMin>
+          <ComfyTemperatureMax>60</ComfyTemperatureMax>
+          <ToxicResistance>1</ToxicResistance>
+          <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">1</ToxicEnvironmentResistance>
+          <Flammability>0</Flammability>
+        </statOffsets>
+        <!-- 饿得快 -->
+        <hungerRateFactorOffset>0.5</hungerRateFactorOffset>
+        <!-- 能力修改 -->
+        <capMods>
+          <!-- 初始意识+20% -->
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.20</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>
