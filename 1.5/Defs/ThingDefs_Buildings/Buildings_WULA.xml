@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+
+  <!-- 能源核心制造机 -->
+
   <ThingDef ParentName="BenchBase">
     <defName>WULA_Cube_Productor_BIO</defName>
     <label>能源核心冲压机（生物能）</label>
@@ -67,7 +70,7 @@
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
     </placeWorkers>
     <building>
-      <isMealSource>true</isMealSource>
+      <!-- <isMealSource>true</isMealSource> -->
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
       <heatPerTickWhileWorking>0.10</heatPerTickWhileWorking>
     </building>

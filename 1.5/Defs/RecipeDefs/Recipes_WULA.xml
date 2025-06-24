@@ -6,11 +6,9 @@
     <description>制造一块乌拉帝国能源核心，这是机械乌拉的能源系统唯一可接受的外部输入性能量来源。</description>
     <jobString>正在制造乌拉帝国能源核心</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-    <requiredGiverWorkType>Crafting</requiredGiverWorkType>
+    <!-- <requiredGiverWorkType>Crafting</requiredGiverWorkType> -->
     <effectWorking>Smith</effectWorking>
     <soundWorking>Recipe_Smith</soundWorking>
-    <!-- 允许混合成分 -->
-    <allowMixingIngredients>false</allowMixingIngredients>
     <ingredients>
       <li>
         <filter>
