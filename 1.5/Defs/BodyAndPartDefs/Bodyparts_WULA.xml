@@ -30,4 +30,20 @@
     </tags>
     <destroyableByDamage>false</destroyableByDamage>
   </BodyPartDef>
+  <BodyPartDef>
+    <defName>WULA_Addons_Antenna</defName>
+    <label>上行链路天线</label>
+    <hitPoints>30</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <destroyableByDamage>false</destroyableByDamage>
+    <!-- <tags>
+      <li>BreathingSourceCage</li>
+      <li>Spine</li>
+      <li>Pelvis</li>
+      <li>ManipulationLimbSegment</li>
+    </tags> -->
+  </BodyPartDef>
 </Defs>

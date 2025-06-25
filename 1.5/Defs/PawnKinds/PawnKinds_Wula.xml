@@ -17,6 +17,12 @@
         <li>
           <def>Wula_Synth</def>
         </li>
+        <li>
+          <def>WULA_Addons_Antenna_Hediff</def>
+        </li>
+        <li>
+          <def>MechlinkImplant</def>
+        </li>
       </startingHediffs>
 
       <backstoryFiltersOverride>

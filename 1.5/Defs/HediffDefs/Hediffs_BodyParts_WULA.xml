@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Field hand -->
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>WULA_Addons_Antenna_Hediff</defName>
+    <hediffClass>Hediff_Mechlink</hediffClass>
+    <label>基础上线链路天线</label>
+    <description>一对安装于乌拉帝国合成人脑袋两侧的天线，除了接收来自乌拉帝国人工智能网络“演算圆环”的信号外，还能兼职控制其他低级机械体。</description>
+    <descriptionShort>一对安装于乌拉帝国合成人脑袋两侧的天线。</descriptionShort>
+    <isBad>false</isBad>
+    <duplicationAllowed>false</duplicationAllowed>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <removeOnRedressIfNotOfKind>
+      <li>Wula_PawnKind</li>
+    </removeOnRedressIfNotOfKind>
+    <stages>
+      <li>
+        <statOffsets>
+          <MechBandwidth>-4</MechBandwidth>
+          <MechControlGroups>-1</MechControlGroups>
+        </statOffsets>
+      </li>
+    </stages>
+    <defaultInstallPart>WULA_Addons_Antenna</defaultInstallPart>
+  </HediffDef>
+</Defs>

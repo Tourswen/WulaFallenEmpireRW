@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="ApparelShirtRoyalTier2Base">
+		<defName>WULA_Official_Uniform</defName>
+		<label>乌拉帝国礼服</label>
+		<description>这是乌拉帝国中专门配发给高级官员的制服，裁制得体大方，并且为合成人的躯体做了特殊改造。</description>
+    <graphicData>
+      <texPath>Wula/Apparel/WULA_official_uniform</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <apparel>
+      <bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <wornGraphicPath>Wula/Apparel/WULA_official_uniform</wornGraphicPath>
+    </apparel>
+    <equippedStatOffsets>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
+      <WorkSpeedGlobal>0.15</WorkSpeedGlobal>
+    </equippedStatOffsets>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <possessionCount>1</possessionCount>
+  </ThingDef>
+</Defs>

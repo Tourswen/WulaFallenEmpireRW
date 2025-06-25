@@ -4,7 +4,7 @@
   <HediffDef>
     <defName>Wula_Synth</defName>
     <label>合成人</label>
-    <description>乌拉帝国制式合成人，拥有一部分机械体的特性——她们无法被点燃、不会中毒、不会抱怨温度，但是也不会自愈创伤，并且需要摄入更多能量以维持机体运转。</description>
+    <description>乌拉帝国制式合成人，拥有一部分机械体的特性——她们无法被点燃、不会中毒、免疫大量疾病、不会抱怨温度，但是自我修复速度极慢，并且需要摄入更多能量以维持机体运转。</description>
     <hediffClass>HediffWithComps</hediffClass>
     <everCurableByItem>false</everCurableByItem>
     <duplicationAllowed>false</duplicationAllowed>
@@ -12,8 +12,8 @@
     <isBad>false</isBad>
     <stages>
       <li>
-        <!-- 没有自然自愈系数 -->
-        <naturalHealingFactor>0</naturalHealingFactor>
+        <!-- 自然自愈系数非常低 -->
+        <naturalHealingFactor>0.2</naturalHealingFactor>
         <!-- 不会感到痛苦 -->
         <painFactor>0</painFactor>
         <statFactors>

@@ -8,6 +8,7 @@
       <texPath>Wula/Item/WULA_Charge_Cube</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <stackLimit>30</stackLimit>
     <statBases>
       <DeteriorationRate>0.01</DeteriorationRate>
       <MarketValue>24</MarketValue>

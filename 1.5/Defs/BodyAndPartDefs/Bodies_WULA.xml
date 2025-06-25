@@ -222,6 +222,14 @@
 										<li>FullHead</li>
 									</groups>
 								</li>
+								<!-- 天线 -->
+								<li>
+									<def>WULA_Addons_Antenna</def>
+									<coverage>0.1</coverage>
+									<groups>
+										<li>UpperHead</li>
+									</groups>
+								</li>
 							</parts>
 						</li>
 					</parts>

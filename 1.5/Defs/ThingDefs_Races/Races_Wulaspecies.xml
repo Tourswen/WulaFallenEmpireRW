@@ -66,6 +66,31 @@
 							</first>
 						</li>
 					</colorChannels>
+          <!-- 额外身体部件 -->
+          <bodyAddons>
+            <li>
+              <path>Wula/Things/WulaSpecies/Addons/WULA_Addons_Antenna</path>
+              <offsets>
+                <south>
+                  <offset>(0,0.22)</offset>
+                </south>
+                <north>
+                  <offset>(0,0.22)</offset>
+                </north>
+                <east>
+                  <offset>(0,0.22)</offset>
+                </east>
+                <west>
+                  <offset>(0,0.22)</offset>
+                </west>
+              </offsets>
+              <conditions>
+                <BodyPart>
+                  <bodyPart>WULA_Addons_Antenna</bodyPart>
+                </BodyPart>
+              </conditions>
+            </li>
+          </bodyAddons>
         </alienPartGenerator>
       </generalSettings>
       <!-- 图形 -->
@@ -150,6 +175,10 @@
         <foodList>
           <li>WULA_Charge_Cube</li>
         </foodList>
+        <!-- 可以穿戴的衣服 -->
+        <apparelList>
+          <li>WULA_Official_Uniform</li>
+        </apparelList>
         <onlyEatRaceRestrictedFood>true</onlyEatRaceRestrictedFood>
         <!-- 生育能力 -->
         <canReproduce>false</canReproduce>
