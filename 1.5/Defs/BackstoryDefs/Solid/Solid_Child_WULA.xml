@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <BackstoryDef>
+    <defName>WULA_Child_Backstory01</defName>  
+    <ignoreIllegalLabelCharacterConfigError>False</ignoreIllegalLabelCharacterConfigError>  
+    <slot>Childhood</slot>  
+    <title>乌拉帝国的人造物</title>  
+    <titleShort>缸中之脑</titleShort>  
+    <description>[PAWN_nameDef] 是诞生于培养缸中的大脑，生来便是为了作为乌拉帝国合成人的核心处理器。\n\n纯净、一尘不染的大脑被培养舱人为地植入了大量预设的技能，使得它还未感知这个世界便已经成为了完人。</description>  
+    <skillGains>
+      <Shooting>10</Shooting>
+      <Melee>10</Melee>
+      <Construction>10</Construction>
+      <Mining>10</Mining>
+      <Cooking>10</Cooking>
+      <Plants>10</Plants>
+      <Animals>10</Animals>
+      <Crafting>10</Crafting>
+      <Artistic>10</Artistic>
+      <Medicine>10</Medicine>
+      <Social>10</Social>
+      <Intellectual>10</Intellectual>
+    </skillGains>
+    <spawnCategories>
+      <li>Wula_Backstory</li>
+    </spawnCategories>
+    <requiredWorkTags>None</requiredWorkTags>
+    <shuffleable>False</shuffleable>  
+    <possessions>
+      <MedicineUltratech>2</MedicineUltratech>
+    </possessions>
+  </BackstoryDef>
+</Defs>
