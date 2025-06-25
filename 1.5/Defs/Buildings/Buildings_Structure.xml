@@ -36,9 +36,9 @@
       <MeditationFocusStrength>0.22</MeditationFocusStrength>
       <Cleanliness>0.1</Cleanliness>
     </statBases>
-	<costList>
-		<SRA_Core>1</SRA_Core>
-	</costList>
+    <costList>
+      <Steel>1</Steel>
+    </costList>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <filthLeaving>Filth_RubbleBuilding</filthLeaving>
     <repairEffect>Repair</repairEffect>

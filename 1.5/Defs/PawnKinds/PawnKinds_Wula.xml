@@ -18,6 +18,14 @@
         </li>
       </startingHediffs>
 
+      <backstoryFiltersOverride>
+        <li>
+          <categories>
+            <li>Wula_Backstory_Categories</li>
+          </categories>
+        </li>
+      </backstoryFiltersOverride>
+
       <!-- <abilities>
         <li>EntitySkip</li>
         <li>Heatspikes</li>

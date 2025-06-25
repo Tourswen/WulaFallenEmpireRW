@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <BackstoryDef>
+  <AlienRace.AlienBackstoryDef>
     <defName>WULA_Child_Backstory01</defName>  
     <ignoreIllegalLabelCharacterConfigError>False</ignoreIllegalLabelCharacterConfigError>  
     <slot>Childhood</slot>  
@@ -22,12 +22,12 @@
       <Intellectual>10</Intellectual>
     </skillGains>
     <spawnCategories>
-      <li>Wula_Backstory</li>
+      <li>Wula_Backstory_Categories</li>
     </spawnCategories>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>  
     <possessions>
       <MedicineUltratech>2</MedicineUltratech>
     </possessions>
-  </BackstoryDef>
+  </AlienRace.AlienBackstoryDef>
 </Defs>
