@@ -106,15 +106,15 @@
     <label>合成人充电站</label>
     <description>一台用于给乌拉帝国合成人进行充电的充电站，效率比自机充电高很多。</description>
     <graphicData>
-      <texPath>Things/Building/Furniture/Bed/Bed</texPath>
+      <texPath>Wula/Building/WULA_Charging_Station_Synth</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
-      <drawSize>(2,2)</drawSize>
+      <drawSize>(1.2,2)</drawSize>
       <damageData>
         <rect>(0,0.05,1,1.95)</rect>
       </damageData>
     </graphicData>
     <statBases>
+      <Comfort>0.75</Comfort>
       <MaxHitPoints>140</MaxHitPoints>
       <Beauty>1</Beauty>
       <WorkToBuild>800</WorkToBuild>
@@ -122,16 +122,35 @@
       <BedRestEffectiveness>5</BedRestEffectiveness>
     </statBases>
     <size>(1,2)</size>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
     <costStuffCount>45</costStuffCount>
     <designationHotKey>Misc2</designationHotKey>
     <uiOrder>2010</uiOrder>
+    <castEdgeShadows>false</castEdgeShadows>
     <building>
       <paintable>true</paintable>
+      <bed_showSleeperBody>true</bed_showSleeperBody>
+      <bed_healPerDay>0</bed_healPerDay>
     </building>
+    <placeWorkers>
+      <li>PlaceWorker_GlowRadius</li>
+    </placeWorkers>
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>300</basePowerConsumption>
+        <basePowerConsumption>30</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <!--<glowColor>(105,204,204,0)</glowColor>-->
+        <!-- 蓝色 -->
+        <!-- <glowColor>(79, 96, 119, 0)</glowColor> -->
+        <!-- 红色 -->
+        <glowColor>(177, 0, 31, 0)</glowColor>
+        <colorPickerEnabled>true</colorPickerEnabled>
+        <darklightToggle>true</darklightToggle>
       </li>
     </comps>
   </ThingDef>

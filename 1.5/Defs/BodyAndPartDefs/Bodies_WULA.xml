@@ -13,7 +13,7 @@
 			<parts>
 				<!-- 机械框架，代替了肋骨、胸骨、骨盆、脊椎 -->
 				<li>
-					<def>WULA_Alloy_Framework</def>
+					<def>WULA_Alloy_Framework_Bodypart</def>
 					<coverage>0.076</coverage>
 					<depth>Inside</depth>
 					<groups>
@@ -59,7 +59,7 @@
 				</li> -->
 				<!-- 能源炉，代替了胃、心脏、肺、肾、肝 -->
 				<li>
-					<def>WULA_Energy_Furnace</def>
+					<def>WULA_Energy_Furnace_Bodypart</def>
 					<customLabel>能源炉</customLabel>
 					<coverage>0.025</coverage>
 					<depth>Inside</depth>
@@ -224,7 +224,7 @@
 								</li>
 								<!-- 天线 -->
 								<li>
-									<def>WULA_Addons_Antenna</def>
+									<def>WULA_Addons_Antenna_Bodypart</def>
 									<coverage>0.1</coverage>
 									<groups>
 										<li>UpperHead</li>

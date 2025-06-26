@@ -4,6 +4,7 @@
 		<defName>WulaSpecies</defName>
 		<label>机械乌拉</label>
 		<description>乌拉星人是一个曾统治银河系的堕落帝国的主要种族，机械乌拉则是仿照她们样貌制作的合成人——随着帝国的衰颓，大量乌拉合成人流散各地。她们拥有近乎无限的寿命，并且拥有一部分机械体的特性。</description>
+   
     <alienRace>
       <!-- 核心设置 -->
       <generalSettings>
@@ -68,7 +69,7 @@
 									<li>
 										<weight>6</weight>
 										<min>(0,0,0)</min>
-										<max>(0,0.12,0.12)</max>
+										<max>(0,0,0.1)</max>
 									</li>
 									<li>
 										<weight>6</weight>
@@ -105,7 +106,7 @@
               <inFrontOfBody>true</inFrontOfBody>
               <conditions>
                 <BodyPart>
-                  <bodyPart>WULA_Addons_Antenna</bodyPart>
+                  <bodyPart>WULA_Addons_Antenna_Bodypart</bodyPart>
                 </BodyPart>
               </conditions>
             </li>
@@ -198,6 +199,7 @@
         <!-- 可以穿戴的衣服 -->
         <apparelList>
           <li>WULA_Official_Uniform</li>
+          <li>WULA_Sailor_Dress</li>
         </apparelList>
         <!-- 生育能力 -->
         <canReproduce>false</canReproduce>
@@ -233,8 +235,8 @@
       <Mass>50</Mass>
       <MoveSpeed>4.5</MoveSpeed>
       <!-- 温度适应性，在hediff修改 -->
-      <ComfyTemperatureMin>0</ComfyTemperatureMin>
-      <ComfyTemperatureMax>0</ComfyTemperatureMax>
+      <ComfyTemperatureMin>100</ComfyTemperatureMin>
+      <ComfyTemperatureMax>-100</ComfyTemperatureMax>
       <!-- 心灵敏感，很低 -->
       <PsychicSensitivity>0.25</PsychicSensitivity>
       <!-- 充电（休息）时间 -->

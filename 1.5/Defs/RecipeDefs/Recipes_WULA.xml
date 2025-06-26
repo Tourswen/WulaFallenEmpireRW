@@ -4,7 +4,7 @@
     <defName>WULA_Make_New_Synth</defName>
     <label>制造乌拉帝国合成人</label>
     <description>制造一个新的机械乌拉，这是乌拉帝国合成人派系增加人口的唯一方式。</description>
-    <ingredients Inherit="False">
+    <!-- <ingredients Inherit="False">
       <li>
         <filter>
           <thingDefs>
@@ -54,11 +54,11 @@
         </filter>
         <count>50</count>
       </li>
-    </ingredients>
+    </ingredients> -->
     <!-- 机械师专用配方，覆盖父元素 -->
     <mechanitorOnlyRecipe>false</mechanitorOnlyRecipe>
     <products>
-      <Mech_Militor>1</Mech_Militor>
+      <WulaSpecies>1</WulaSpecies>
     </products>
     <descriptionHyperlinks>
       <ThingDef>WulaSpecies</ThingDef>
@@ -136,7 +136,7 @@
     <jobString>Installing ghoul barbs.</jobString>
     <skillRequirements Inherit="false" />
     <anesthetize>false</anesthetize>
-    <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
+    <surgeryOutcomeEffect IsNull="True" />
     <mutantPrerequisite>
       <li>Ghoul</li>
     </mutantPrerequisite>
@@ -158,6 +158,4 @@
     <appliedOnFixedBodyParts>
       <li>WULA_Energy_Furnace_Bodypart</li>
     </appliedOnFixedBodyParts>
-    <!-- <addsHediff>GhoulBarbs_Base</addsHediff> -->
   </RecipeDef> -->
-

@@ -107,9 +107,11 @@
     </removeOnRedressIfNotOfKind>
     <stages>
       <li>
-        <statOffsets>
+        <statFactors>
           <!-- 易燃性，作为半机械生物很难起火 -->
           <Flammability>0</Flammability>
+        </statFactors>
+        <statOffsets>
           <!-- 有自带护甲，对热量伤害有高抵抗 -->
           <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
           <ArmorRating_Blunt>0.2</ArmorRating_Blunt>

@@ -10,6 +10,11 @@
       <initialResistanceRange>13~21</initialResistanceRange>
       <minGenerationAge>20</minGenerationAge>
 
+      <!-- 初始服装 -->
+      <apparelRequired>
+        <li>WULA_Sailor_Dress</li>
+      </apparelRequired>
+
       <!-- 免疫痛苦 -->
       <ignoresPainShock>true</ignoresPainShock>
 
