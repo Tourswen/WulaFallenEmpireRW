@@ -1,7 +1,72 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <RecipeDef ParentName="MediumMechanoidRecipe">
-    <defName>WULA_make_new_synth</defName>
+  <RecipeDef ParentName="BaseMechanoidRecipe">
+    <defName>WULA_Make_New_Synth</defName>
+    <label>制造乌拉帝国合成人</label>
+    <description>制造一个新的机械乌拉，这是乌拉帝国合成人派系增加人口的唯一方式。</description>
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WULA_Alloy_Framework_Base</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WULA_Energy_Furnace_Base</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WULA_Alloy_Framework_Base</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+      <li>
+        <filter>
+          <customSummary>feedstock</customSummary>
+          <categories>
+            <li>Foods</li>
+            <li>PlantMatter</li>
+          </categories>
+          <disallowedThingDefs>
+            <li>Hay</li>
+            <li>Dye</li>
+          </disallowedThingDefs>
+          <disallowedCategories>
+            <li>FoodMeals</li>
+          </disallowedCategories>
+        </filter>
+        <count>50</count>
+      </li>
+    </ingredients>
+    <!-- 机械师专用配方，覆盖父元素 -->
+    <mechanitorOnlyRecipe>false</mechanitorOnlyRecipe>
+    <products>
+      <Mech_Militor>1</Mech_Militor>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>WulaSpecies</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+</Defs>
+  <!-- <RecipeDef ParentName="BaseMechanoidRecipe">
+    <defName>WULA_Make_New_Synth</defName>
     <label>制造乌拉帝国合成人</label>
     <description>制造一个新的机械乌拉，这是乌拉帝国合成人派系增加人口的唯一方式。</description>
     <ingredients Inherit="False">
@@ -63,9 +128,8 @@
     </descriptionHyperlinks>
     <gestationCycles>3</gestationCycles>
     <researchPrerequisite>BasicMechtech</researchPrerequisite>
-  </RecipeDef>
-
-  <RecipeDef ParentName="SurgeryInstallImplantBase">
+  </RecipeDef> -->
+  <!-- <RecipeDef ParentName="SurgeryInstallImplantBase">
     <defName>WULA_Install_Energy_Furnace_Base</defName>
     <label>install ghoul barbs</label>
     <description>Install ghoul barbs.</description>
@@ -95,5 +159,5 @@
       <li>WULA_Energy_Furnace_Bodypart</li>
     </appliedOnFixedBodyParts>
     <!-- <addsHediff>GhoulBarbs_Base</addsHediff> -->
-  </RecipeDef>
-</Defs>
+  </RecipeDef> -->
+

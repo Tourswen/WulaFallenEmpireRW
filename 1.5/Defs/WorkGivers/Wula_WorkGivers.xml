@@ -2,13 +2,13 @@
 
 <Defs>
   <WorkGiverDef>
-    <defName>WULA_Cube_ProductorBills</defName>
-    <label>在能源核心冲压机制造物品</label>
+    <defName>WULA_Mech_Constructor_Small_Bills</defName>
+    <label>在乌拉帝国构造体培育机械</label>
     <giverClass>WorkGiver_DoBill</giverClass>
     <workType>Smithing</workType>
     <priorityInType>75</priorityInType>
     <fixedBillGiverDefs>
-      <li>WULA_Cube_Productor_BIO</li>
+      <li>WULA_Mech_Constructor_Small</li>
     </fixedBillGiverDefs>
     <verb>工作于</verb>
     <gerund>工作于</gerund>

@@ -8,14 +8,15 @@
     <titleShort>人格-探险骑士</titleShort>
     <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国探险骑士的模拟记忆。\n\n帝国骑士团是乌拉帝国的皇帝禁军，但是在皇室驾崩后，骑士团与国教势力纷争四起，为了适应局势他们无所不用其极，昔日的恪守的美德已经化为教条和传说，变成虚无缥缈的身外之物。诚然，骑士团已经堕落，但是她们的武艺仍犹如鞘中利刃，随时准备斩下帝国之敌的头颅。\n\n探险骑士是帝国骑士团的中坚力量，她们人数众多，是见习骑士向上晋升迈过的第一道门槛，并代表着她们杀敌的技艺和信念已经得到认证。</description>
     <skillGains>
-      <Shooting>8</Shooting>
-      <Melee>8</Melee>
+      <Shooting>5</Shooting>
+      <Melee>5</Melee>
       <Cooking>-5</Cooking>
       <Animals>-7</Animals>
       <Crafting>-5</Crafting>
-      <Intellectual>-5</Intellectual>
+      <Intellectual>8</Intellectual>
+      <Social>3</Social>
     </skillGains>
-    <workDisables>ManualDumb</workDisables>
+    <workDisables>ManualDumb,Cooking,Mining</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <spawnCategories>
       <li>Wula_Backstory_Categories</li>
@@ -23,14 +24,10 @@
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
-    <possessions>
-      <Apparel_PackTurret MayRequire="Ludeon.RimWorld.Anomaly">1</Apparel_PackTurret>
-    </possessions>
     <forcedTraits>
       <WULA_Trait_Knight>1</WULA_Trait_Knight>
     </forcedTraits>
   </AlienRace.AlienBackstoryDef>
-
   <AlienRace.AlienBackstoryDef>
     <defName>WULA_Adult_Backstory02</defName>
     <slot>Adulthood</slot>
@@ -44,8 +41,9 @@
       <Animals>-7</Animals>
       <Crafting>-7</Crafting>
       <Intellectual>-7</Intellectual>
+      <Social>3</Social>
     </skillGains>
-    <workDisables>ManualDumb</workDisables>
+    <workDisables>ManualDumb,Cooking,Mining</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <spawnCategories>
       <li>Wula_Backstory_Categories</li>
@@ -53,14 +51,10 @@
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
-    <possessions>
-      <Apparel_PackTurret MayRequire="Ludeon.RimWorld.Anomaly">1</Apparel_PackTurret>
-    </possessions>
     <forcedTraits>
       <WULA_Trait_Knight>1</WULA_Trait_Knight>
     </forcedTraits>
   </AlienRace.AlienBackstoryDef>
-  
   <AlienRace.AlienBackstoryDef>
     <defName>WULA_Adult_Backstory03</defName>
     <slot>Adulthood</slot>
@@ -73,8 +67,9 @@
       <Construction>8</Construction>
       <Medicine>-7</Medicine>
       <Intellectual>-3</Intellectual>
+      <Social>3</Social>
     </skillGains>
-    <workDisables>ManualDumb</workDisables>
+    <workDisables>ManualDumb,Cooking,Mining</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <spawnCategories>
       <li>Wula_Backstory_Categories</li>
@@ -82,14 +77,10 @@
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
-    <possessions>
-      <Apparel_PackTurret MayRequire="Ludeon.RimWorld.Anomaly">1</Apparel_PackTurret>
-    </possessions>
     <forcedTraits>
       <WULA_Trait_Knight>1</WULA_Trait_Knight>
     </forcedTraits>
   </AlienRace.AlienBackstoryDef>
-  
   <AlienRace.AlienBackstoryDef>
     <defName>WULA_Adult_Backstory04</defName>
     <slot>Adulthood</slot>
@@ -101,6 +92,7 @@
       <Melee>10</Melee>
       <Medicine>-7</Medicine>
       <Intellectual>-3</Intellectual>
+      <Social>7</Social>
     </skillGains>
     <workDisables>ManualDumb,Mining,PlantWork,Animals,Crafting,Cooking,Constructing</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
@@ -110,11 +102,94 @@
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
-    <possessions>
-      <Apparel_PackTurret MayRequire="Ludeon.RimWorld.Anomaly">1</Apparel_PackTurret>
-    </possessions>
     <forcedTraits>
       <WULA_Trait_Knight>2</WULA_Trait_Knight>
     </forcedTraits>
+  </AlienRace.AlienBackstoryDef>
+  <AlienRace.AlienBackstoryDef>
+    <defName>WULA_Adult_Backstory05</defName>
+    <slot>Adulthood</slot>
+    <title>人格矩阵装载：赎罪骑士</title>
+    <titleShort>人格-赎罪骑士</titleShort>
+    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国赎罪骑士的模拟记忆。\n\n帝国骑士团是乌拉帝国的皇帝禁军，但是在皇室驾崩后，骑士团与国教势力纷争四起，为了适应局势他们无所不用其极，昔日的恪守的美德已经化为教条和传说，变成虚无缥缈的身外之物。诚然，骑士团已经堕落，但是她们的武艺仍犹如鞘中利刃，随时准备斩下帝国之敌的头颅。\n\n赎罪骑士是在乌拉帝国大内战后诞生的新骑士阶层，她们认为自己辜负了先帝，没有守护好皇室也没能守住江山，摒弃荣华富贵自我放逐，并踏入了无尽的赎罪远征之路。</description>
+    <skillGains>
+      <Shooting>8</Shooting>
+      <Melee>8</Melee>
+      <Mining>-10</Mining>
+      <Plants>3</Plants>
+      <Animals>5</Animals>
+      <Crafting>5</Crafting>
+      <Intellectual>-8</Intellectual>
+      <Medicine>5</Medicine>
+      <Social>-10</Social>
+    </skillGains>
+    <workDisables>ManualDumb,Cooking</workDisables>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>Wula_Backstory_Categories</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <forcedTraits>
+      <WULA_Trait_Knight>1</WULA_Trait_Knight>
+    </forcedTraits>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>WULA_Adult_Backstory10</defName>
+    <slot>Adulthood</slot>
+    <title>人格矩阵装载：农奴</title>
+    <titleShort>人格-农奴</titleShort>
+    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国农奴的模拟记忆。\n\n农奴是效力于乌拉帝国骑士团的底层人，她们承担了社会中最苦最累的工作，并长期受到上层社会的欺压。通常来说，这个阶层不会出现乌拉星人——这个阶层是留给那些异族俘虏的，但是确实有一些被剥夺身份的罪人会沦落到此般田地。</description>
+    <skillGains>
+      <Shooting>-10</Shooting>
+      <Melee>-8</Melee>
+      <Construction>-8</Construction>
+      <Mining>7</Mining>
+      <Cooking>2</Cooking>
+      <Plants>5</Plants>
+      <Animals>2</Animals>
+      <Crafting>-10</Crafting>
+      <Artistic>-10</Artistic>
+      <Medicine>-10</Medicine>
+      <Social>-10</Social>
+    </skillGains>
+    <workDisables>Intellectual</workDisables>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>Wula_Backstory_Categories</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+    <bodyTypeMale>Thin</bodyTypeMale>
+  </AlienRace.AlienBackstoryDef>
+  <AlienRace.AlienBackstoryDef>
+    <defName>WULA_Adult_Backstory11</defName>
+    <slot>Adulthood</slot>
+    <title>人格矩阵装载：扈从</title>
+    <titleShort>人格-扈从</titleShort>
+    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国扈从的模拟记忆。\n\n扈从是乌拉帝国骑士团的基层，她们是拥有合法身份的非骑士人员，除了生活在骑士团森严堡垒内，过的和其他地方的乌拉星人没什么不同。</description>
+    <skillGains>
+      <Shooting>-5</Shooting>
+      <Melee>-5</Melee>
+      <Construction>6</Construction>
+      <Mining>-3</Mining>
+      <Cooking>5</Cooking>
+      <Plants>-2</Plants>
+      <Animals>-5</Animals>
+      <Crafting>6</Crafting>
+      <Artistic>2</Artistic>
+      <Medicine>-3</Medicine>
+      <Social>-5</Social>
+    </skillGains>
+    <!-- <workDisables>Intellectual</workDisables> -->
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>Wula_Backstory_Categories</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+    <bodyTypeMale>Thin</bodyTypeMale>
   </AlienRace.AlienBackstoryDef>
 </Defs>

@@ -5,100 +5,97 @@
     <label>乌拉帝国构造体</label>
     <description>一台用于构造乌拉帝国的合成人和机械体的小型设备，功能类似于机械培育器，但是不能生产常规的机械体。</description>
     <graphicData>
-      <texPath>Things/Building/Production/MechGestatorLarge</texPath>
+      <texPath>Things/Building/Production/MechGestatorStandard</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(6, 5)</drawSize>
+      <drawSize>(5.6,4)</drawSize>
       <shadowData>
-        <volume>(3.8, 3, 2.7)</volume>
+        <volume>(3, 2, 1.9)</volume>
       </shadowData>
     </graphicData>
-    <uiIconPath>Things/Building/Production/MechGestatorLarge_MenuIcon</uiIconPath>
-    <uiIconScale>1.5</uiIconScale>
-    <interactionCellOffset>(2,0,2)</interactionCellOffset>
+    <uiIconPath>Things/Building/Production/MechGestatorStandard_MenuIcon</uiIconPath>
+    <uiIconScale>1.85</uiIconScale>
+    <interactionCellOffset>(1,0,2)</interactionCellOffset>
+    <recipes>
+      <li>WULA_Make_New_Synth</li>
+    </recipes>
     <statBases>
-      <MaxHitPoints>350</MaxHitPoints>
-      <WorkToBuild>16000</WorkToBuild>
-      <Mass>35</Mass>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>8000</WorkToBuild>
+      <Mass>25</Mass>
       <Flammability>0.5</Flammability>
     </statBases>
-    <size>(4,3)</size>
+    <size>(3,2)</size>
     <costList>
-      <Steel>300</Steel>
-      <ComponentIndustrial>6</ComponentIndustrial>
+      <Steel>150</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
     <researchPrerequisites>
       <li>BasicMechtech</li>
     </researchPrerequisites>
     <building>
-      <!-- <barDrawData>
+      <barDrawData>
         <north>
-          <preRotationOffset>(-1.59, 1.4)</preRotationOffset>
-          <size>(0.72, 0.12)</size>
+          <preRotationOffset>(-1.06, 0.91)</preRotationOffset>
+          <size>(0.7, 0.13)</size>
         </north>
         <south>
-          <preRotationOffset>(-1.59, 1.33)</preRotationOffset>
-          <size>(0.72, 0.12)</size>
+          <preRotationOffset>(-1.06, 0.82)</preRotationOffset>
+          <size>(0.7, 0.13)</size>
         </south>
         <east>
-          <preRotationOffset>(1.59, -1.4)</preRotationOffset>
-          <size>(0.72, 0.12)</size>
+          <preRotationOffset>(1.06, -0.97)</preRotationOffset>
+          <size>(0.7, 0.13)</size>
         </east>
         <west>
-          <preRotationOffset>(-1.59, -1.4)</preRotationOffset>
-          <size>(0.72, 0.12)</size>
+          <preRotationOffset>(-1.06, -0.97)</preRotationOffset>
+          <size>(0.7, 0.13)</size>
         </west>
       </barDrawData>
       <formingGraphicData>
-        <texPath>Things/Pawn/Mechanoid/HalfGestatedMechLarge</texPath>
+        <texPath>Things/Pawn/Mechanoid/HalfGestatedMechSmall</texPath>
         <graphicClass>Graphic_Single</graphicClass>
-        <drawSize>(1.65,1.65)</drawSize>
+        <drawSize>(1,1)</drawSize>
       </formingGraphicData>
-      <formingMechBobSpeed>0.0005</formingMechBobSpeed>
-      <formingMechYBobDistance>0.08</formingMechYBobDistance>
       <formingMechPerRotationOffset>
-        <li>(0, 0, 0.225)</li>
-        <li>(-0.15, 0, 0.225)</li>
-        <li>(0, 0, 0.225)</li>
-        <li>(0.15, 0, 0.225)</li>
+        <li>(0, 0, 0.45)</li>
+        <li>(0, 0, 0.45)</li>
+        <li>(0, 0, 0.45)</li>
+        <li>(0, 0, 0.45)</li>
       </formingMechPerRotationOffset>
       <mechGestatorCylinderGraphic>
-        <texPath>Things/Building/Production/MechGestatorLargeGlass</texPath>
+        <texPath>Things/Building/Production/MechGestatorStandardGlass</texPath>
         <graphicClass>Graphic_Multi</graphicClass>
-        <drawSize>(6, 5)</drawSize>
+        <drawSize>(5.6,4)</drawSize>
         <shaderType>Transparent</shaderType>
       </mechGestatorCylinderGraphic>
       <mechGestatorTopGraphic>
-        <texPath>Things/Building/Production/MechGestatorLargeTop</texPath>
+        <texPath>Things/Building/Production/MechGestatorStandardTop</texPath>
         <graphicClass>Graphic_Multi</graphicClass>
-        <drawSize>(6, 5)</drawSize>
+        <drawSize>(5.6,4)</drawSize>
       </mechGestatorTopGraphic>
       <gestatorFormingMote>
-        <north>MechGestatorFormingLarge_North</north>
-        <east>MechGestatorFormingLarge_East</east>
-        <west>MechGestatorFormingLarge_West</west>
-        <south>MechGestatorFormingLarge_South</south>
+        <north>MechGestatorForming_North</north>
+        <east>MechGestatorForming_East</east>
+        <west>MechGestatorForming_East</west>
+        <south>MechGestatorForming_South</south>
       </gestatorFormingMote>
       <gestatorCycleCompleteMote>
-        <north>MechGestatorCycleCompleteLarge_North</north>
-        <east>MechGestatorCycleCompleteLarge_East</east>
-        <west>MechGestatorCycleCompleteLarge_West</west>
-        <south>MechGestatorCycleCompleteLarge_South</south>
+        <north>MechGestatorCycleComplete_North</north>
+        <east>MechGestatorCycleComplete_East</east>
+        <west>MechGestatorCycleComplete_East</west>
+        <south>MechGestatorCycleComplete_South</south>
       </gestatorCycleCompleteMote>
       <gestatorFormedMote>
-        <north>MechGestatorFormedLarge_North</north>
-        <east>MechGestatorFormedLarge_East</east>
-        <west>MechGestatorFormedLarge_West</west>
-        <south>MechGestatorFormedLarge_South</south>
-      </gestatorFormedMote> -->
+        <north>MechGestatorFormed_North</north>
+        <east>MechGestatorFormed_East</east>
+        <west>MechGestatorFormed_East</west>
+        <south>MechGestatorFormed_South</south>
+      </gestatorFormedMote>
     </building>
-    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
-    <recipes>
-      <li>WULA_make_new_synth</li>
-    </recipes>
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>500</basePowerConsumption>
+        <basePowerConsumption>350</basePowerConsumption>
         <idlePowerDraw>50</idlePowerDraw>
       </li>
     </comps>
@@ -132,17 +129,6 @@
       <paintable>true</paintable>
     </building>
     <comps>
-      <li Class="CompProperties_Flickable"/>
-      <li Class="CompProperties_Forbiddable"/>
-      <li Class="CompProperties_WasteProducer">
-      <li Class="CompProperties_ThingContainer">
-        <compClass>CompThingContainer</compClass>
-        <stackLimit>5</stackLimit>
-        <drawContainedThing>false</drawContainedThing>
-        <dropEffecterDef>MechChargerWasteRemoved</dropEffecterDef>
-      </li>
-        <showContentsInInspectPane>false</showContentsInInspectPane>
-      </li>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>300</basePowerConsumption>

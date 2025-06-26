@@ -209,12 +209,26 @@
           <li>AteWithoutTable</li>
         </cannotReceiveThoughts>
       </thoughtSettings>
+      <!-- 关系设置，不会生成任何随机关系 -->
+      <relationSettings>
+        <relationChanceModifierLover>0</relationChanceModifierLover>
+        <relationChanceModifierExLover>0</relationChanceModifierExLover>
+
+        <relationChanceModifierFiance>0</relationChanceModifierFiance>
+        <relationChanceModifierSpouse>0</relationChanceModifierSpouse>
+        <relationChanceModifierExSpouse>0</relationChanceModifierExSpouse>
+
+        <relationChanceModifierParent>0</relationChanceModifierParent>
+        <relationChanceModifierChild>0</relationChanceModifierChild>
+        <relationChanceModifierSibling>0</relationChanceModifierSibling>
+      </relationSettings>
     </alienRace>
     
     <!-- 以下是原版标签 -->
     <!-- 受击音效 -->
     <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
     <statBases>
+      <WorkToMake>7200</WorkToMake>
       <MarketValue>3000</MarketValue>
       <Mass>50</Mass>
       <MoveSpeed>4.5</MoveSpeed>
