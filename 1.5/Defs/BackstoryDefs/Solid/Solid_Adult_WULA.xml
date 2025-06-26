@@ -15,7 +15,7 @@
       <Crafting>-5</Crafting>
       <Intellectual>-5</Intellectual>
     </skillGains>
-    <workDisables>ManualDumb,Mining,PlantWork,Constructing</workDisables>
+    <workDisables>ManualDumb</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <spawnCategories>
       <li>Wula_Backstory_Categories</li>
@@ -45,7 +45,7 @@
       <Crafting>-7</Crafting>
       <Intellectual>-7</Intellectual>
     </skillGains>
-    <workDisables>ManualDumb,Mining,PlantWork,Constructing</workDisables>
+    <workDisables>ManualDumb</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <spawnCategories>
       <li>Wula_Backstory_Categories</li>
@@ -70,11 +70,11 @@
     <skillGains>
       <Shooting>5</Shooting>
       <Melee>5</Melee>
-      <Construction>8</Constructing>
+      <Construction>8</Construction>
       <Medicine>-7</Medicine>
       <Intellectual>-3</Intellectual>
     </skillGains>
-    <workDisables>ManualDumb,Mining,PlantWork,Animals</workDisables>
+    <workDisables>ManualDumb</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <spawnCategories>
       <li>Wula_Backstory_Categories</li>

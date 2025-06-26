@@ -15,7 +15,7 @@
           <MentalBreakThreshold>-0.2</MentalBreakThreshold>
         </statOffsets>
         <statFactors>
-          <AimingDelayFactor>-0.2</AimingDelayFactor>
+          <AimingDelayFactor>0.2</AimingDelayFactor>
           <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
           <MeleeDamageFactor>1.2</MeleeDamageFactor>
           <MeleeCooldownFactor>0.75</MeleeCooldownFactor>
@@ -32,7 +32,7 @@
           <MentalBreakThreshold>-0.5</MentalBreakThreshold>
         </statOffsets>
         <statFactors>
-          <AimingDelayFactor>-0.5</AimingDelayFactor>
+          <AimingDelayFactor>0.5</AimingDelayFactor>
           <ShootingAccuracyPawn>5</ShootingAccuracyPawn>
           <MeleeDamageFactor>1.5</MeleeDamageFactor>
           <MeleeCooldownFactor>0.5</MeleeCooldownFactor>
