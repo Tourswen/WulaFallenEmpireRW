@@ -1,78 +1,152 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-  <!-- 能源核心制造机 -->
-
-  <ThingDef ParentName="BenchBase">
-    <defName>WULA_Cube_Productor_BIO</defName>
-    <label>能源核心冲压机（生物能）</label>
-    <description>一台仿制乌拉帝国科技而建造的能源核心制造机，用于在没有电力的情况下，通过燃烧木材输入生物能以制造可维持机械乌拉正常运转的能源核心。</description>
-    <thingClass>Building_WorkTable_HeatPush</thingClass>
-    <drawerType>MapMeshAndRealTime</drawerType>
+  <ThingDef ParentName="MechGestatorBase">
+    <defName>WULA_Mech_Constructor_Small</defName>
+    <label>乌拉帝国构造体</label>
+    <description>一台用于构造乌拉帝国的合成人和机械体的小型设备，功能类似于机械培育器，但是不能生产常规的机械体。</description>
     <graphicData>
-      <texPath>Things/Building/Production/TableStoveFueled</texPath>
+      <texPath>Things/Building/Production/MechGestatorLarge</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(3.5,1.5)</drawSize>
-      <damageData>
-        <cornerTL>Damage/Corner</cornerTL>
-        <cornerTR>Damage/Corner</cornerTR>
-        <cornerBL>Damage/Corner</cornerBL>
-        <cornerBR>Damage/Corner</cornerBR>
-      </damageData>
+      <drawSize>(6, 5)</drawSize>
+      <shadowData>
+        <volume>(3.8, 3, 2.7)</volume>
+      </shadowData>
     </graphicData>
-    <castEdgeShadows>true</castEdgeShadows>
-    <staticSunShadowHeight>0.20</staticSunShadowHeight>
-    <constructEffect>ConstructMetal</constructEffect>
-    <costList>
-      <Steel>80</Steel>
-    </costList>
-    <altitudeLayer>Building</altitudeLayer>
-    <fillPercent>0.5</fillPercent>
-    <useHitPoints>True</useHitPoints>
+    <uiIconPath>Things/Building/Production/MechGestatorLarge_MenuIcon</uiIconPath>
+    <uiIconScale>1.5</uiIconScale>
+    <interactionCellOffset>(2,0,2)</interactionCellOffset>
     <statBases>
-      <WorkToBuild>2000</WorkToBuild>
-      <MaxHitPoints>180</MaxHitPoints>
-      <Flammability>1.0</Flammability>
+      <MaxHitPoints>350</MaxHitPoints>
+      <WorkToBuild>16000</WorkToBuild>
+      <Mass>35</Mass>
+      <Flammability>0.5</Flammability>
     </statBases>
-    <size>(3,1)</size>
-    <designationCategory>Production</designationCategory>
-    <uiOrder>2120</uiOrder>
-    <passability>PassThroughOnly</passability>
-    <pathCost>50</pathCost>
-    <hasInteractionCell>True</hasInteractionCell>
-    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
-    <surfaceType>Item</surfaceType>
-    <!-- 可用配方 -->
+    <size>(4,3)</size>
+    <costList>
+      <Steel>300</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <researchPrerequisites>
+      <li>BasicMechtech</li>
+    </researchPrerequisites>
+    <building>
+      <!-- <barDrawData>
+        <north>
+          <preRotationOffset>(-1.59, 1.4)</preRotationOffset>
+          <size>(0.72, 0.12)</size>
+        </north>
+        <south>
+          <preRotationOffset>(-1.59, 1.33)</preRotationOffset>
+          <size>(0.72, 0.12)</size>
+        </south>
+        <east>
+          <preRotationOffset>(1.59, -1.4)</preRotationOffset>
+          <size>(0.72, 0.12)</size>
+        </east>
+        <west>
+          <preRotationOffset>(-1.59, -1.4)</preRotationOffset>
+          <size>(0.72, 0.12)</size>
+        </west>
+      </barDrawData>
+      <formingGraphicData>
+        <texPath>Things/Pawn/Mechanoid/HalfGestatedMechLarge</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+        <drawSize>(1.65,1.65)</drawSize>
+      </formingGraphicData>
+      <formingMechBobSpeed>0.0005</formingMechBobSpeed>
+      <formingMechYBobDistance>0.08</formingMechYBobDistance>
+      <formingMechPerRotationOffset>
+        <li>(0, 0, 0.225)</li>
+        <li>(-0.15, 0, 0.225)</li>
+        <li>(0, 0, 0.225)</li>
+        <li>(0.15, 0, 0.225)</li>
+      </formingMechPerRotationOffset>
+      <mechGestatorCylinderGraphic>
+        <texPath>Things/Building/Production/MechGestatorLargeGlass</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(6, 5)</drawSize>
+        <shaderType>Transparent</shaderType>
+      </mechGestatorCylinderGraphic>
+      <mechGestatorTopGraphic>
+        <texPath>Things/Building/Production/MechGestatorLargeTop</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(6, 5)</drawSize>
+      </mechGestatorTopGraphic>
+      <gestatorFormingMote>
+        <north>MechGestatorFormingLarge_North</north>
+        <east>MechGestatorFormingLarge_East</east>
+        <west>MechGestatorFormingLarge_West</west>
+        <south>MechGestatorFormingLarge_South</south>
+      </gestatorFormingMote>
+      <gestatorCycleCompleteMote>
+        <north>MechGestatorCycleCompleteLarge_North</north>
+        <east>MechGestatorCycleCompleteLarge_East</east>
+        <west>MechGestatorCycleCompleteLarge_West</west>
+        <south>MechGestatorCycleCompleteLarge_South</south>
+      </gestatorCycleCompleteMote>
+      <gestatorFormedMote>
+        <north>MechGestatorFormedLarge_North</north>
+        <east>MechGestatorFormedLarge_East</east>
+        <west>MechGestatorFormedLarge_West</west>
+        <south>MechGestatorFormedLarge_South</south>
+      </gestatorFormedMote> -->
+    </building>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
     <recipes>
-     <li>Make_WULA_Charge_Cube</li>
+      <li>WULA_make_new_synth</li>
     </recipes>
-    <inspectorTabs>
-      <li>ITab_Bills</li>
-    </inspectorTabs>
     <comps>
-      <li Class="CompProperties_Refuelable">
-        <fuelConsumptionRate>500.0</fuelConsumptionRate>
-        <fuelCapacity>150.0</fuelCapacity>
-        <fuelFilter>
-          <thingDefs>
-            <li>WoodLog</li>
-          </thingDefs>
-        </fuelFilter>
-        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
-        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
-      </li>
-      <li Class="CompProperties_HeatPusher">
-        <compClass>CompHeatPusherPowered</compClass>
-        <heatPerSecond>4</heatPerSecond>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>500</basePowerConsumption>
+        <idlePowerDraw>50</idlePowerDraw>
       </li>
     </comps>
-    <placeWorkers>
-      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
-    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="BasicBedBase">
+    <defName>WULA_Charging_Station_Synth</defName>
+    <label>合成人充电站</label>
+    <description>一台用于给乌拉帝国合成人进行充电的充电站，效率比自机充电高很多。</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/Bed/Bed</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2,2)</drawSize>
+      <damageData>
+        <rect>(0,0.05,1,1.95)</rect>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>140</MaxHitPoints>
+      <Beauty>1</Beauty>
+      <WorkToBuild>800</WorkToBuild>
+      <Mass>30</Mass>
+      <BedRestEffectiveness>5</BedRestEffectiveness>
+    </statBases>
+    <size>(1,2)</size>
+    <costStuffCount>45</costStuffCount>
+    <designationHotKey>Misc2</designationHotKey>
+    <uiOrder>2010</uiOrder>
     <building>
-      <!-- <isMealSource>true</isMealSource> -->
-      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-      <heatPerTickWhileWorking>0.10</heatPerTickWhileWorking>
+      <paintable>true</paintable>
     </building>
+    <comps>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_WasteProducer">
+      <li Class="CompProperties_ThingContainer">
+        <compClass>CompThingContainer</compClass>
+        <stackLimit>5</stackLimit>
+        <drawContainedThing>false</drawContainedThing>
+        <dropEffecterDef>MechChargerWasteRemoved</dropEffecterDef>
+      </li>
+        <showContentsInInspectPane>false</showContentsInInspectPane>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>300</basePowerConsumption>
+      </li>
+    </comps>
   </ThingDef>
 </Defs>

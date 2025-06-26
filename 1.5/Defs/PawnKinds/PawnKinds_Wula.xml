@@ -10,15 +10,18 @@
       <initialResistanceRange>13~21</initialResistanceRange>
       <minGenerationAge>20</minGenerationAge>
 
+      <!-- 免疫痛苦 -->
       <ignoresPainShock>true</ignoresPainShock>
-      <minGenerationAge>1000</minGenerationAge>
 
       <startingHediffs>
         <li>
           <def>Wula_Synth</def>
         </li>
         <li>
-          <def>WULA_Addons_Antenna_Hediff</def>
+          <def>WULA_Addons_Antenna_Hediff_Base</def>
+        </li>
+        <li>
+          <def>WULA_Alloy_Framework_Hediff_Base</def>
         </li>
         <li>
           <def>MechlinkImplant</def>

@@ -30,6 +30,9 @@
         <humanRecipeImport>true</humanRecipeImport>
         <!-- 能否躺下睡觉 -->
         <canLayDown>true</canLayDown>
+        <validBeds>
+          <li>WULA_Charging_Station_Synth</li>
+        </validBeds>
         <!-- 各种零件定义 -->
         <alienPartGenerator Inherit="False">
           <!-- 允许的头部 -->
@@ -61,6 +64,21 @@
 										<weight>15</weight>
 										<min>(0.4,0.3,0.5)</min>
 										<max>(0.6,0.1,0.7)</max>
+									</li>
+									<li>
+										<weight>12</weight>
+										<min>(1,0.8,0.8)</min>
+										<max>(1,0.9,0.9)</max>
+									</li>
+									<li>
+										<weight>12</weight>
+										<min>(0,0.1,0.1)</min>
+										<max>(0,0.15,0.2)</max>
+									</li>
+									<li>
+										<weight>12</weight>
+										<min>(1,0.95,0.95)</min>
+										<max>(1,1,1)</max>
 									</li>
 								</options>
 							</first>
@@ -173,13 +191,13 @@
 				<onlyUseRaceRestrictedXenotypes>true</onlyUseRaceRestrictedXenotypes>
         <!-- 食物列表 -->
         <foodList>
-          <li>WULA_Charge_Cube</li>
+          <!-- 留空 -->
         </foodList>
+        <onlyEatRaceRestrictedFood>true</onlyEatRaceRestrictedFood>
         <!-- 可以穿戴的衣服 -->
         <apparelList>
           <li>WULA_Official_Uniform</li>
         </apparelList>
-        <onlyEatRaceRestrictedFood>true</onlyEatRaceRestrictedFood>
         <!-- 生育能力 -->
         <canReproduce>false</canReproduce>
       </raceRestriction>
@@ -199,31 +217,17 @@
       <MarketValue>3000</MarketValue>
       <Mass>50</Mass>
       <MoveSpeed>4.5</MoveSpeed>
-      <!-- 易燃性，作为半机械生物很难起火 -->
-      <Flammability>0</Flammability>
       <!-- 温度适应性，在hediff修改 -->
       <ComfyTemperatureMin>0</ComfyTemperatureMin>
       <ComfyTemperatureMax>0</ComfyTemperatureMax>
-      <!-- 有自带护甲，对热量伤害有高抵抗 -->
-      <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
-      <ArmorRating_Heat>1.00</ArmorRating_Heat>
       <!-- 心灵敏感，很低 -->
       <PsychicSensitivity>0.25</PsychicSensitivity>
-      <!-- 免疫速度，以后可能会再次修改 -->
-      <ImmunityGainSpeed>30</ImmunityGainSpeed>
-      <!-- 携带重量 -->
-      <CarryingCapacity>50</CarryingCapacity>
-      <!-- 疼痛阈值，机械体不会因为疼痛倒下，设定在PawnKinds_Wula -->
-      <PainShockThreshold>100</PainShockThreshold>
-      <EatingSpeed>1000</EatingSpeed>
+      <!-- 充电（休息）时间 -->
+      <RestFallRateFactor>0.25</RestFallRateFactor>
       <!-- 肉量 -->
       <MeatAmount>0</MeatAmount>
       <!-- 皮革量 -->
       <LeatherAmount>0</LeatherAmount>
-      <!-- 近战闪避 -->
-      <MeleeDodgeChance>1.25</MeleeDodgeChance>
-      <AimingDelayFactor>1.25</AimingDelayFactor>
       <!-- 谈判能力 -->
       <NegotiationAbility>1</NegotiationAbility>
       <!-- 社交效果，机械乌拉社交的影响很小 -->

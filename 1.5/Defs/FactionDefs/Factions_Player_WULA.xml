@@ -13,13 +13,6 @@
     <factionNameMaker>NamerFactionOutlander</factionNameMaker>
     <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
     <allowedCultures><li>Astropolitan</li></allowedCultures>
-    <backstoryFilters>
-      <li>
-        <categories>
-          <li>Wula_Backstory_Categories</li>
-        </categories>
-      </li>
-    </backstoryFilters>
     <factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
     <startingResearchTags>
       <li>ClassicStart</li>

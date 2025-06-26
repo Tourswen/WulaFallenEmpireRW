@@ -16,28 +16,13 @@
         <naturalHealingFactor>0.2</naturalHealingFactor>
         <!-- 不会感到痛苦 -->
         <painFactor>0</painFactor>
-        <statFactors>
-          <!-- 拥有更高的能量储量 -->
-          <MaxNutrition>2</MaxNutrition>
-        </statFactors>
         <!-- 抗毒抗火抗寒热 -->
         <statOffsets>
           <ComfyTemperatureMin>-100</ComfyTemperatureMin>
           <ComfyTemperatureMax>120</ComfyTemperatureMax>
           <ToxicResistance>1</ToxicResistance>
           <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">1</ToxicEnvironmentResistance>
-          <Flammability>0</Flammability>
         </statOffsets>
-        <!-- 饿得快 -->
-        <hungerRateFactorOffset>0.5</hungerRateFactorOffset>
-        <!-- 能力修改 -->
-        <capMods>
-          <!-- 初始意识+20% -->
-          <li>
-            <capacity>Consciousness</capacity>
-            <offset>0.20</offset>
-          </li>
-        </capMods>
         <!-- 免疫非纳米机械疾病 -->
         <makeImmuneTo>
           <li>Flu</li>
@@ -53,7 +38,7 @@
       </li>
     </stages>
     <disablesNeeds>
-      <li>Rest</li>
+      <li>Food</li>
     </disablesNeeds>
   </HediffDef>
 </Defs>

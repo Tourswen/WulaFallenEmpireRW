@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>  
   <BodyPartDef>
-    <defName>WULA_Energy_Furnace</defName>
+    <defName>WULA_Energy_Furnace_Bodypart</defName>
     <label>中央能源炉</label>
     <hitPoints>120</hitPoints>
     <skinCovered>false</skinCovered>
@@ -15,7 +15,7 @@
     </tags>
   </BodyPartDef>
   <BodyPartDef>
-    <defName>WULA_Alloy_Framework</defName>
+    <defName>WULA_Alloy_Framework_Bodypart</defName>
     <label>躯体合金框架</label>
     <hitPoints>350</hitPoints>
     <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
@@ -31,7 +31,7 @@
     <destroyableByDamage>false</destroyableByDamage>
   </BodyPartDef>
   <BodyPartDef>
-    <defName>WULA_Addons_Antenna</defName>
+    <defName>WULA_Addons_Antenna_Bodypart</defName>
     <label>上行链路天线</label>
     <hitPoints>30</hitPoints>
     <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
