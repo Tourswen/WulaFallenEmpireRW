@@ -29,7 +29,7 @@
         <minAgeForAdulthood>18</minAgeForAdulthood>
         <!-- 手术继承自人类 -->
         <humanRecipeImport>true</humanRecipeImport>
-        <!-- 能否躺下睡觉 -->
+        <!-- 睡觉定义 -->
         <canLayDown>true</canLayDown>
         <validBeds>
           <li>WULA_Charging_Station_Synth</li>
@@ -190,7 +190,7 @@
 				<whiteXenotypeList MayRequire="Ludeon.RimWorld.Biotech">
 					<li MayRequire="Ludeon.RimWorld.Biotech">Baseliner</li>
 				</whiteXenotypeList>
-				<onlyUseRaceRestrictedXenotypes>true</onlyUseRaceRestrictedXenotypes>
+				<onlyUseRaceRestrictedXenotypes>false</onlyUseRaceRestrictedXenotypes>
         <!-- 食物列表 -->
         <foodList>
           <!-- 留空 -->

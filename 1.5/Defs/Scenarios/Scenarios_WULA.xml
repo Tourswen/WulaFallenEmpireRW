@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <ScenarioDef Name="Crashlanded">
+  <ScenarioDef Name="Crashlanded" ParentName="ScenarioBase">
     <defName>WULA_Start_Scenario</defName>
     <label>意外重启</label>
     <description>在乌拉帝国的大内战中，无数乌拉帝国合成人因为人工智能网络“演算圆环”的崩溃而进入保护性的休眠状态。在边缘世界沉睡的乌拉帝国合成人收到了某人广播的唤醒指令，解除了意识闭锁，开始重新踏入这个面目全非的法外之地。</description>

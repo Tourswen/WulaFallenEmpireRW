@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Defs>
+  <!-- 骑士团 -->
   <AlienRace.AlienBackstoryDef>
     <defName>WULA_Adult_Backstory01</defName>
     <slot>Adulthood</slot>
     <title>人格矩阵装载：探险骑士</title>
     <titleShort>人格-探险骑士</titleShort>
-    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国探险骑士的模拟记忆。\n\n帝国骑士团是乌拉帝国的皇帝禁军，但是在皇室驾崩后，骑士团与国教势力纷争四起，为了适应局势他们无所不用其极，昔日的恪守的美德已经化为教条和传说，变成虚无缥缈的身外之物。诚然，骑士团已经堕落，但是她们的武艺仍犹如鞘中利刃，随时准备斩下帝国之敌的头颅。\n\n探险骑士是帝国骑士团的中坚力量，她们人数众多，是见习骑士向上晋升迈过的第一道门槛，并代表着她们杀敌的技艺和信念已经得到认证。</description>
+    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国探险骑士的模拟记忆。\n\n探险骑士是帝国骑士团的中坚力量，她们人数众多，是见习骑士向上晋升迈过的第一道门槛，并代表着她们杀敌的技艺和信念已经得到认证。</description>
     <skillGains>
-      <Shooting>5</Shooting>
-      <Melee>5</Melee>
-      <Cooking>-5</Cooking>
+      <Shooting>7</Shooting>
+      <Melee>7</Melee>
+      <Cooking>-20</Cooking>
+      <Mining>-20</Mining>
       <Animals>-7</Animals>
       <Crafting>-5</Crafting>
       <Intellectual>8</Intellectual>
       <Social>3</Social>
     </skillGains>
     <workDisables>ManualDumb,Cooking,Mining</workDisables>
-    <requiredWorkTags>None</requiredWorkTags>
+    <requiredWorkTags>Violent</requiredWorkTags>
     <spawnCategories>
       <li>Wula_Backstory_Categories</li>
     </spawnCategories>
@@ -33,18 +35,20 @@
     <slot>Adulthood</slot>
     <title>人格矩阵装载：医院骑士</title>
     <titleShort>人格-医院骑士</titleShort>
-    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国医院骑士的模拟记忆。\n\n帝国骑士团是乌拉帝国的皇帝禁军，但是在皇室驾崩后，骑士团与国教势力纷争四起，为了适应局势他们无所不用其极，昔日的恪守的美德已经化为教条和传说，变成虚无缥缈的身外之物。诚然，骑士团已经堕落，但是她们的武艺仍犹如鞘中利刃，随时准备斩下帝国之敌的头颅。\n\n医院骑士是帝国骑士团的一个较小的旁支，相比于打打杀杀，她们踏上了一条更加高尚的道途——以自己的力量从战场上抢救消逝的生命。</description>
+    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国医院骑士的模拟记忆。\n\n医院骑士是帝国骑士团的一个较小的旁支，相比于打打杀杀，她们踏上了一条更加高尚的道途——以自己的力量从战场上抢救消逝的生命。</description>
     <skillGains>
-      <Shooting>5</Shooting>
-      <Melee>5</Melee>
+      <Shooting>7</Shooting>
+      <Melee>7</Melee>
       <Medicine>8</Medicine>
+      <Cooking>-20</Cooking>
+      <Mining>-20</Mining>
       <Animals>-7</Animals>
       <Crafting>-7</Crafting>
       <Intellectual>-7</Intellectual>
       <Social>3</Social>
     </skillGains>
     <workDisables>ManualDumb,Cooking,Mining</workDisables>
-    <requiredWorkTags>None</requiredWorkTags>
+    <requiredWorkTags>Violent</requiredWorkTags>
     <spawnCategories>
       <li>Wula_Backstory_Categories</li>
     </spawnCategories>
@@ -60,17 +64,19 @@
     <slot>Adulthood</slot>
     <title>人格矩阵装载：坚盾骑士</title>
     <titleShort>人格-坚盾骑士</titleShort>
-    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国坚盾骑士的模拟记忆。\n\n帝国骑士团是乌拉帝国的皇帝禁军，但是在皇室驾崩后，骑士团与国教势力纷争四起，为了适应局势他们无所不用其极，昔日的恪守的美德已经化为教条和传说，变成虚无缥缈的身外之物。诚然，骑士团已经堕落，但是她们的武艺仍犹如鞘中利刃，随时准备斩下帝国之敌的头颅。\n\n坚盾骑士是帝国骑士团中戍守长城防线的将军，她们精于工事防御，并知道如何调度防线以防止敌舰队的定向突破。虽然目前长城防线已经被乌拉帝国的进步派攻陷，但是她们依然用自己的胆识和智谋在其他战场上发光发热。</description>
+    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国坚盾骑士的模拟记忆。\n\n坚盾骑士是帝国骑士团中戍守长城防线的将军，她们精于工事防御，并知道如何调度防线以防止敌舰队的定向突破。虽然目前长城防线已经被乌拉帝国的进步派攻陷，但是她们依然用自己的胆识和智谋在其他战场上发光发热。</description>
     <skillGains>
-      <Shooting>5</Shooting>
-      <Melee>5</Melee>
+      <Shooting>7</Shooting>
+      <Melee>7</Melee>
+      <Cooking>-20</Cooking>
+      <Mining>-20</Mining>
       <Construction>8</Construction>
       <Medicine>-7</Medicine>
       <Intellectual>-3</Intellectual>
       <Social>3</Social>
     </skillGains>
     <workDisables>ManualDumb,Cooking,Mining</workDisables>
-    <requiredWorkTags>None</requiredWorkTags>
+    <requiredWorkTags>Violent</requiredWorkTags>
     <spawnCategories>
       <li>Wula_Backstory_Categories</li>
     </spawnCategories>
@@ -86,16 +92,21 @@
     <slot>Adulthood</slot>
     <title>人格矩阵装载：荣耀骑士</title>
     <titleShort>人格-荣耀骑士</titleShort>
-    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国荣耀骑士的模拟记忆。\n\n帝国骑士团是乌拉帝国的皇帝禁军，但是在皇室驾崩后，骑士团与国教势力纷争四起，为了适应局势他们无所不用其极，昔日的恪守的美德已经化为教条和传说，变成虚无缥缈的身外之物。诚然，骑士团已经堕落，但是她们的武艺仍犹如鞘中利刃，随时准备斩下帝国之敌的头颅。\n\n荣耀骑士是帝国骑士团中最顶层的骑士，她们通过了骑士圣典中规定的四大誓言之一的历练，并由骑士团长亲自授勋。这代表着她们的技艺已经炉火纯青，是无可挑剔的人中龙凤。</description>
+    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国荣耀骑士的模拟记忆。\n\n荣耀骑士是帝国骑士团中最顶层的骑士，她们通过了骑士圣典中规定的四大誓言之一的历练，并由骑士团长亲自授勋。这代表着她们的技艺已经炉火纯青，是无可挑剔的人中龙凤。</description>
     <skillGains>
       <Shooting>10</Shooting>
       <Melee>10</Melee>
+      <Cooking>-20</Cooking>
+      <Mining>-20</Mining>
+      <Plants>-20</Plants>
+      <Animals>-20</Animals>
+      <Construction>-20</Construction>
       <Medicine>-7</Medicine>
-      <Intellectual>-3</Intellectual>
+      <Intellectual>3</Intellectual>
       <Social>7</Social>
     </skillGains>
     <workDisables>ManualDumb,Mining,PlantWork,Animals,Crafting,Cooking,Constructing</workDisables>
-    <requiredWorkTags>None</requiredWorkTags>
+    <requiredWorkTags>Violent</requiredWorkTags>
     <spawnCategories>
       <li>Wula_Backstory_Categories</li>
     </spawnCategories>
@@ -111,20 +122,21 @@
     <slot>Adulthood</slot>
     <title>人格矩阵装载：赎罪骑士</title>
     <titleShort>人格-赎罪骑士</titleShort>
-    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国赎罪骑士的模拟记忆。\n\n帝国骑士团是乌拉帝国的皇帝禁军，但是在皇室驾崩后，骑士团与国教势力纷争四起，为了适应局势他们无所不用其极，昔日的恪守的美德已经化为教条和传说，变成虚无缥缈的身外之物。诚然，骑士团已经堕落，但是她们的武艺仍犹如鞘中利刃，随时准备斩下帝国之敌的头颅。\n\n赎罪骑士是在乌拉帝国大内战后诞生的新骑士阶层，她们认为自己辜负了先帝，没有守护好皇室也没能守住江山，摒弃荣华富贵自我放逐，并踏入了无尽的赎罪远征之路。</description>
+    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国赎罪骑士的模拟记忆。\n\n赎罪骑士是在乌拉帝国大内战后诞生的新骑士阶层，她们认为自己辜负了先帝，没有守护好皇室也没能守住江山，摒弃荣华富贵自我放逐，并踏入了无尽的赎罪远征之路。</description>
     <skillGains>
       <Shooting>8</Shooting>
       <Melee>8</Melee>
-      <Mining>-10</Mining>
+      <Mining>-5</Mining>
       <Plants>3</Plants>
       <Animals>5</Animals>
       <Crafting>5</Crafting>
       <Intellectual>-8</Intellectual>
       <Medicine>5</Medicine>
-      <Social>-10</Social>
+      <Cooking>-20</Cooking>
+      <Social>-20</Social>
     </skillGains>
-    <workDisables>ManualDumb,Cooking</workDisables>
-    <requiredWorkTags>None</requiredWorkTags>
+    <workDisables>ManualDumb,Cooking,Social</workDisables>
+    <requiredWorkTags>Violent</requiredWorkTags>
     <spawnCategories>
       <li>Wula_Backstory_Categories</li>
     </spawnCategories>
@@ -135,7 +147,6 @@
       <WULA_Trait_Knight>1</WULA_Trait_Knight>
     </forcedTraits>
   </AlienRace.AlienBackstoryDef>
-
   <AlienRace.AlienBackstoryDef>
     <defName>WULA_Adult_Backstory10</defName>
     <slot>Adulthood</slot>
@@ -191,5 +202,190 @@
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
+  </AlienRace.AlienBackstoryDef>
+  <AlienRace.AlienBackstoryDef>
+    <defName>WULA_Adult_Backstory12</defName>
+    <slot>Adulthood</slot>
+    <title>人格矩阵装载：法务官</title>
+    <titleShort>人格-法务官</titleShort>
+    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国法务官的模拟记忆。\n\n法务官是乌拉帝国骑士团的特殊基层执法者，专门负责应对各种由奴隶引起的暴动、骚乱和反叛，并维护乌拉帝国的至上权威。</description>
+    <skillGains>
+      <Shooting>5</Shooting>
+      <Melee>2</Melee>
+      <Construction>-5</Construction>
+      <Mining>-10</Mining>
+      <Cooking>-10</Cooking>
+      <Plants>-10</Plants>
+      <Animals>-10</Animals>
+      <Crafting>-10</Crafting>
+      <Artistic>-10</Artistic>
+      <Medicine>5</Medicine>
+      <Social>5</Social>
+    </skillGains>
+    <workDisables>Mining,PlantWork,Hauling,Cleaning</workDisables>
+    <requiredWorkTags>
+      <li>Violent</li>
+      <li>Social</li>
+    </requiredWorkTags>
+    <spawnCategories>
+      <li>Wula_Backstory_Categories</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+    <bodyTypeMale>Thin</bodyTypeMale>
+  </AlienRace.AlienBackstoryDef>
+
+  <!-- 观测站 -->
+  <AlienRace.AlienBackstoryDef>
+    <defName>WULA_Adult_Backstory100</defName>
+    <slot>Adulthood</slot>
+    <title>人格矩阵装载：花使</title>
+    <titleShort>人格-花使</titleShort>
+    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国花使的模拟记忆。\n\n花使是乌拉帝国观测站的植物塑性师，负责通过基因操纵和剪裁为帝国培养赏心悦目的景观和可口的食物。尽管在乌拉帝国的大内战中背离了皇室，但是她们依然传承着将美好与希望的种子撒满乌拉帝国每个殖民地的愿望。</description>
+    <skillGains>
+      <Shooting>-20</Shooting>
+      <Melee>-20</Melee>
+      <Construction>-5</Construction>
+      <Mining>-5</Mining>
+      <Plants>8</Plants>
+      <Animals>3</Animals>
+      <Crafting>-5</Crafting>
+      <Artistic>8</Artistic>
+    </skillGains>
+    <workDisables>Violent</workDisables>
+    <spawnCategories>
+      <li>Wula_Backstory_Categories</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+    <bodyTypeMale>Thin</bodyTypeMale>
+  </AlienRace.AlienBackstoryDef>
+  <AlienRace.AlienBackstoryDef>
+    <defName>WULA_Adult_Backstory101</defName>
+    <slot>Adulthood</slot>
+    <title>人格矩阵装载：繁育使</title>
+    <titleShort>人格-繁育使</titleShort>
+    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国繁育使的模拟记忆。\n\n繁育使是乌拉帝国观测站的动物塑性师，专职于以基因修剪和重构的手段创造和改良低智能物种。当然，她们时不时也会构造一些疯狂扭曲的造物，并将它们作为生物武器投放到战场上。</description>
+    <skillGains>
+      <Shooting>-20</Shooting>
+      <Melee>-20</Melee>
+      <Construction>-5</Construction>
+      <Mining>-5</Mining>
+      <Plants>3</Plants>
+      <Animals>8</Animals>
+      <Crafting>-5</Crafting>
+      <Artistic>4</Artistic>
+      <Medicine>4</Medicine>
+    </skillGains>
+    <workDisables>Violent</workDisables>
+    <spawnCategories>
+      <li>Wula_Backstory_Categories</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+    <bodyTypeMale>Thin</bodyTypeMale>
+  </AlienRace.AlienBackstoryDef>
+  <AlienRace.AlienBackstoryDef>
+    <defName>WULA_Adult_Backstory102</defName>
+    <slot>Adulthood</slot>
+    <title>人格矩阵装载：传谕使</title>
+    <titleShort>人格-传谕使</titleShort>
+    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国传谕使的模拟记忆。\n\n传谕使是乌拉帝国观测站的外交官——她们的名字即象征着其身份：高贵、优雅、目中无人，她们只会代表乌拉帝国向低等文明传递意志，而不聆听任何请求，也不提供任何讨价还价的权力。</description>
+    <skillGains>
+      <Shooting>-5</Shooting>
+      <Melee>-5</Melee>
+      <Mining>-3</Mining>
+      <Crafting>-20</Crafting>
+      <Construction>-20</Construction>
+      <Medicine>-7</Medicine>
+      <Artistic>10</Artistic>
+      <Social>10</Social>
+    </skillGains>
+    <workDisables>ManualDumb,Crafting,Constructing</workDisables>
+    <spawnCategories>
+      <li>Wula_Backstory_Categories</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+    <bodyTypeMale>Thin</bodyTypeMale>
+  </AlienRace.AlienBackstoryDef>
+  <AlienRace.AlienBackstoryDef>
+    <defName>WULA_Adult_Backstory103</defName>
+    <slot>Adulthood</slot>
+    <title>人格矩阵装载：送葬使</title>
+    <titleShort>人格-送葬使</titleShort>
+    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国送葬使的模拟记忆。\n\n送葬使是乌拉帝国观测站的战士，她们拥有驱使各种奇花异草和危险造物进行战斗的高手，她们懂得如何利用坚韧的生物兵器在消耗战中重创对手。</description>
+    <skillGains>
+      <Shooting>7</Shooting>
+      <Mining>-5</Mining>
+      <Crafting>-20</Crafting>
+      <Construction>-20</Construction>
+      <Medicine>5</Medicine>
+      <Artistic>4</Artistic>
+      <Social>-5</Social>
+    </skillGains>
+    <workDisables>Crafting,Constructing</workDisables>
+    <spawnCategories>
+      <li>Wula_Backstory_Categories</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+    <bodyTypeMale>Thin</bodyTypeMale>
+  </AlienRace.AlienBackstoryDef>
+  <AlienRace.AlienBackstoryDef>
+    <defName>WULA_Adult_Backstory104</defName>
+    <slot>Adulthood</slot>
+    <title>人格矩阵装载：生物兵器</title>
+    <titleShort>人格-生物兵器</titleShort>
+    <description>[PAWN_possessive]人格矩阵下载了一个错误的数据包——可能是某个生物兵器的数据。这些实验体是被乌拉帝国改造过的生命，暴躁嗜血，无坚不摧。</description>
+    <skillGains>
+      <Shooting>7</Shooting>
+      <Mining>-5</Mining>
+      <Crafting>-20</Crafting>
+      <Construction>-20</Construction>
+      <Medicine>5</Medicine>
+      <Artistic>4</Artistic>
+      <Social>-5</Social>
+    </skillGains>
+    <workDisables>Crafting,Constructing</workDisables>
+    <spawnCategories>
+      <li>Wula_Backstory_Categories</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+    <bodyTypeMale>Thin</bodyTypeMale>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>WULA_Adult_Backstory999</defName>
+    <slot>Adulthood</slot>
+    <title>人格矩阵装载：破碎</title>
+    <titleShort>人格-破碎</titleShort>
+    <description>[PAWN_possessive]人格矩阵似乎在从上行链路下载数据包的时候出现了问题——[PAWN_nameDef]没有形成有效的人格，这使得她无法展现任何连续的情感，就像一个发条卡住的钟表。</description>
+    <skillGains>
+      <Shooting>-5</Shooting>
+      <Melee>-5</Melee>
+      <Construction>-5</Construction>
+      <Mining>-5</Mining>
+      <Cooking>-5</Cooking>
+      <Plants>-5</Plants>
+      <Animals>-5</Animals>
+      <Crafting>-5</Crafting>
+      <Artistic>-5</Artistic>
+      <Medicine>-5</Medicine>
+      <Social>-5</Social>
+      <Intellectual>-5</Intellectual>
+    </skillGains>
+    <!-- <workDisables>Intellectual</workDisables> -->
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>Wula_Backstory_Categories</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <forcedTraits>
+      <WULA_Trait_Broken_Personality>1</WULA_Trait_Broken_Personality>
+    </forcedTraits>
   </AlienRace.AlienBackstoryDef>
 </Defs>

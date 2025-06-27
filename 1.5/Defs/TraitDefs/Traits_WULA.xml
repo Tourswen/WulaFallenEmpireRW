@@ -42,4 +42,23 @@
       </li>
     </degreeDatas>
   </TraitDef>
+  <TraitDef>
+    <defName>WULA_Trait_Broken_Personality</defName>
+    <degreeDatas>
+      <li>
+        <label>破碎人格</label>
+        <description>这个乌拉帝国合成人没有完整的人格，这使得她更像是一台真正的机械。</description>
+        <disablesNeeds>
+          <li>Mood</li>
+          <li>Joy</li>
+          <li>Beauty</li>
+          <li>Comfort</li>
+          <li>Outdoors</li>
+          <li>Indoors</li>
+          <li>DrugDesire</li>
+          <li>RoomSize</li>
+        </disablesNeeds>
+      </li>
+    </degreeDatas>
+  </TraitDef>
 </Defs>

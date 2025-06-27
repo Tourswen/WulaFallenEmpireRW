@@ -1,25 +1,79 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <ThingDef ParentName="ApparelShirtRoyalTier2Base">
+  <ThingDef Name="NSFV_ApparelRoyalBase" ParentName="ApparelMakeableBase" Abstract="True">
+    <recipeMaker>
+      <researchPrerequisite>NobleApparel</researchPrerequisite>
+      <displayPriority>225</displayPriority>
+    </recipeMaker>
+    <costStuffCount>125</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <thingCategories>
+      <li>ApparelNoble</li>
+    </thingCategories>
+    <statBases>
+      <Mass>0.25</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.22</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.10</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+    <apparel>
+      <tags>
+        <li>Royal</li>
+      </tags>
+      <!-- 在身体后渲染 -->
+      <!-- <shellRenderedBehindHead>true</shellRenderedBehindHead> -->
+      <!-- 待查？ -->
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <!-- 会考虑温度，待查？ -->
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+      <!-- 会考虑毒性环境，待查？ -->
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+  </ThingDef>
+  <ThingDef ParentName="NSFV_ApparelRoyalBase">
 		<defName>WULA_Official_Uniform</defName>
-		<label>乌拉帝国礼服</label>
-		<description>这是乌拉帝国中专门配发给高级官员的制服，裁制得体大方，并且为合成人的躯体做了特殊改造。</description>
+		<label>乌拉帝国双幡礼服</label>
+		<description>这是乌拉帝国宫廷专门配发给高级官员的制服，以一对形似幡的附件而得名。裁制得体大方，设计经久耐用，并且为合成人的躯体做了特殊改造。</description>
     <graphicData>
       <texPath>Wula/Apparel/WULA_official_uniform</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <apparel>
+      <tags>
+        <li>RoyalTier5</li>
+      </tags>
       <bodyPartGroups>
-				<li>Torso</li>
-				<li>Shoulders</li>
-				<li>Arms</li>
-				<li>Legs</li>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
       </bodyPartGroups>
       <layers>
-        <li>OnSkin</li>
+        <li>Middle</li>
       </layers>
       <wornGraphicPath>Wula/Apparel/WULA_official_uniform</wornGraphicPath>
+      <!-- 待查？ -->
+      <!-- <canBeDesiredForIdeo>false</canBeDesiredForIdeo> -->
+      <!-- 会考虑温度，待查？ -->
+      <!-- <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth> -->
+      <!-- 会考虑毒性环境，待查？ -->
+      <!-- <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance> -->
+      <!-- 在身体后渲染 -->
+      <!-- <shellRenderedBehindHead>true</shellRenderedBehindHead> -->
     </apparel>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>6000</WorkToMake>
+      <Insulation_Cold>3</Insulation_Cold>
+      <Insulation_Heat>1.5</Insulation_Heat>
+      <EquipDelay>5</EquipDelay>
+    </statBases>
     <equippedStatOffsets>
       <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
       <WorkSpeedGlobal>0.15</WorkSpeedGlobal>
@@ -35,7 +89,7 @@
   <ThingDef ParentName="ApparelMakeableBase">
 		<defName>WULA_Sailor_Dress</defName>
 		<label>乌拉帝国水手连衣裙</label>
-		<description>这是乌拉帝国的一款连衣裙，在肃穆的帝国中传递出了一丝俏皮和活泼。</description>
+		<description>这是乌拉帝国的一款连衣裙，上到贵族下到平民都可以穿，在肃穆的帝国中传递出了一丝俏皮和活泼。</description>
     <graphicData>
       <texPath>Wula/Apparel/WULA_Sailor_Dress</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -43,9 +97,39 @@
     <apparel>
       <bodyPartGroups>
 				<li>Torso</li>
-				<li>Shoulders</li>
+				<!-- <li>Shoulders</li> -->
 				<li>Arms</li>
 				<li>Legs</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <wornGraphicPath>Wula/Apparel/WULA_Sailor_Dress</wornGraphicPath>
+    </apparel>
+    <equippedStatOffsets>
+      <SocialImpact>0.15</SocialImpact>
+      <!-- <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
+      <WorkSpeedGlobal>0.15</WorkSpeedGlobal> -->
+    </equippedStatOffsets>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <possessionCount>1</possessionCount>
+  </ThingDef>
+  <ThingDef ParentName="ApparelMakeableBase">
+		<defName>WULA_Body_Suit</defName>
+		<label>乌拉帝国驾驶服</label>
+		<description>这是乌拉帝国的战斗人员专用的制服，紧致拥有一整套神经接口用以和其他战斗机械的驾驶舱连接——不过在边缘星区这种贫瘠之地很难见到拥有此类驾驶舱的帝国载具。</description>
+    <graphicData>
+      <texPath>Wula/Apparel/WULA_Sailor_Dress</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <apparel>
+      <bodyPartGroups>
+				<li>Torso</li>
       </bodyPartGroups>
       <layers>
         <li>OnSkin</li>
@@ -59,7 +143,7 @@
     <recipeMaker>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <skillRequirements>
-        <Crafting>3</Crafting>
+        <Crafting>5</Crafting>
       </skillRequirements>
     </recipeMaker>
     <possessionCount>1</possessionCount>

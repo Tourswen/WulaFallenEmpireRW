@@ -1,12 +1,71 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
   <ThingDef ParentName="BaseMeleeWeapon_Blunt">
-    <defName>WULA_MeleeWeapon_Mace</defName>
+    <defName>WULA_MW_Mace</defName>
     <label>战壕狼牙棒</label>
     <description>这种细长的狼牙棒很适合在狭窄空间挥舞，也是乌拉帝国王权的象征——尽管在你手里这只是一根带刺的棍子。</description>
     <graphicData>
-      <texPath>Wula/Weapon/WULA_MeleeWeapon_Mace</texPath>
+      <texPath>Wula/Weapon/WULA_MW_Mace</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <uiIconScale>1.1</uiIconScale>
+    <techLevel>Medieval</techLevel>
+    <weaponTags>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Neolithic</li>
+    </weaponClasses>
+    <costStuffCount>40</costStuffCount>
+    <statBases>
+      <WorkToMake>500</WorkToMake>
+      <Mass>2</Mass>
+    </statBases>
+    <costList>
+      <Steel>10</Steel>
+    </costList>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+      </recipeUsers>
+      <displayPriority>300</displayPriority>
+    </recipeMaker>
+    <tools>
+      <li>
+        <label>棍柄</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1</cooldownTime>
+        <chanceFactor>0.5</chanceFactor>
+      </li>
+      <li>
+        <label>尖头</label>
+        <labelUsedInLogging>false</labelUsedInLogging>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>18</power>
+        <cooldownTime>1.25</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt">
+    <defName>WULA_MW_Scepter_Of_Heaven</defName>
+    <label>天之杖</label>
+    <description></description>
+    <graphicData>
+      <texPath>Wula/Weapon/WULA_MW_Mace</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <!-- <drawSize>3</drawSize> -->
     </graphicData>
@@ -63,11 +122,11 @@
 
   <!-- 乌拉帝国镇爆枪 -->
   <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>WULA_RangedWeapon_Fractal_AR</defName>
+    <defName>WULA_RW_Fractal_AR</defName>
     <label>分形步枪</label>
     <description>乌拉帝国镇暴部队使用的震爆武器之一，在发射前会照射目标并用微型处理器分析目标特征，随后经过编译的复合能量脉冲将以集束形式射出，瘫痪目标并点燃暴动者的身体，同时还不造成直击伤害。</description>
     <graphicData>
-      <texPath>Wula/Weapon/WULA_RangedWeapon_Fractal_AR</texPath>
+      <texPath>Wula/Weapon/WULA_RW_Fractal_AR</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1.55</drawSize>
     </graphicData>
@@ -160,12 +219,12 @@
 
   <!-- 乌拉帝国霰弹枪 -->
   <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>WULA_RangedWeapon_StarDrift_SG</defName>
+    <defName>WULA_RW_StarDrift_SG</defName>
     <label>星流霰弹枪</label>
     <description>乌拉帝国配发的近距离霰弹枪，以威力巨大的梭镖破甲弹为核心，专注于在短距离上的快速反应战斗和持续性压制能力</description>
     <!-- <techLevel>Spacer</techLevel> -->
     <graphicData>
-      <texPath>Wula/Weapon/WULA_RangedWeapon_StarDrift_SG</texPath>
+      <texPath>Wula/Weapon/WULA_RW_StarDrift_SG</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_ChargeRifle</soundInteract>
@@ -212,4 +271,6 @@
       <speed>55</speed>
     </projectile>
   </ThingDef>
+
+  
 </Defs>
