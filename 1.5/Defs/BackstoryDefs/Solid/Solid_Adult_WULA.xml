@@ -337,23 +337,27 @@
     <slot>Adulthood</slot>
     <title>人格矩阵装载：生物兵器</title>
     <titleShort>人格-生物兵器</titleShort>
-    <description>[PAWN_possessive]人格矩阵下载了一个错误的数据包——可能是某个生物兵器的数据。这些实验体是被乌拉帝国改造过的生命，暴躁嗜血，无坚不摧。</description>
+    <description>[PAWN_possessive]人格矩阵下载了一个错误的数据包——可能是某个生物兵器的数据。\n\n实验体是被乌拉帝国改造过的生命，暴躁嗜血，无坚不摧，专为在前线突破坚固防线而设计。</description>
     <skillGains>
-      <Shooting>7</Shooting>
-      <Mining>-5</Mining>
+      <Melee>10</Melee>
+      <Mining>5</Mining>
       <Crafting>-20</Crafting>
-      <Construction>-20</Construction>
-      <Medicine>5</Medicine>
-      <Artistic>4</Artistic>
-      <Social>-5</Social>
+      <Construction>5</Construction>
+      <Medicine>-20</Medicine>
+      <Artistic>-20</Artistic>
+      <Social>-20</Social>
     </skillGains>
-    <workDisables>Crafting,Constructing</workDisables>
+    <workDisables>Crafting,Caring,Social,Artistic</workDisables>
+    <requiredWorkTags>Violent</requiredWorkTags>
     <spawnCategories>
       <li>Wula_Backstory_Categories</li>
     </spawnCategories>
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
+    <forcedTraits>
+      <Bloodlust>1</Bloodlust>
+    </forcedTraits>
   </AlienRace.AlienBackstoryDef>
 
   <AlienRace.AlienBackstoryDef>
