@@ -3,7 +3,7 @@
 	<ThingDef ParentName="BuildingBase">
     <defName>WulaWall</defName>
     <label>乌拉帝国堡垒</label>
-    <description>只能由机械体“工蚁”建造的乌拉帝国堡垒外壁，相当厚实，能够抵御大量爆炸和震荡伤害。</description>
+    <description>乌拉帝国堡垒外壁，相当厚实，能够抵御大量爆炸和震荡伤害。</description>
     <thingClass>Building</thingClass>
     <category>Building</category>
     <graphicData>

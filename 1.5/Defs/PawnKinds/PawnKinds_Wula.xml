@@ -24,6 +24,15 @@
     <combatPower>0</combatPower>
     <itemQuality>Poor</itemQuality>
     <isFighter>false</isFighter>
+    <apparelTags>
+      <li>Wula_Apparel_Init</li>
+    </apparelTags>
+
+    <apparelRequired Inherit="False" />
+
+    <weaponMoney>0</weaponMoney>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelMoney>0</apparelMoney>
 
     <backstoryFiltersOverride>
       <li>
@@ -57,6 +66,11 @@
     <combatPower>0</combatPower>
     <itemQuality>Poor</itemQuality>
     <isFighter>false</isFighter>
+    <apparelTags>
+      <li>Wula_Apparel_Init</li>
+    </apparelTags>
+
+    <apparelRequired Inherit="False" />
 
     <weaponMoney>0</weaponMoney>
     <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>

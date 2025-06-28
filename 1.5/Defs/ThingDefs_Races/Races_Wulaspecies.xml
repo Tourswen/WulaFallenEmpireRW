@@ -91,16 +91,16 @@
               <path>Wula/Things/WulaSpecies/Addons/WULA_Addons_Antenna</path>
               <offsets>
                 <south>
-                  <offset>(0,0.22)</offset>
+                  <offset>(0,0.32)</offset>
                 </south>
                 <north>
-                  <offset>(0,0.22)</offset>
+                  <offset>(0,0.32)</offset>
                 </north>
                 <east>
-                  <offset>(0,0.22)</offset>
+                  <offset>(-0.1,0.32)</offset>
                 </east>
                 <west>
-                  <offset>(0,0.22)</offset>
+                  <offset>(-0.1,0.32)</offset>
                 </west>
               </offsets>
               <inFrontOfBody>true</inFrontOfBody>
@@ -203,7 +203,40 @@
         <apparelList>
           <li>WULA_Official_Uniform</li>
           <li>WULA_Sailor_Dress</li>
+          <li>WULA_Body_Suit</li>
+          <li>WULA_Knight_PowerArmor</li>
         </apparelList>
+        <blackApparelList>
+            <li>Apparel_AdvancedHelmet</li>
+            <li>Apparel_ArmorHelmetRecon</li>
+            <li>Apparel_BowlerHat</li>
+            <li>Apparel_CowboyHat</li>
+            <li>Apparel_HatHood</li>
+            <li>Apparel_PowerArmorHelmet</li>
+            <li>Apparel_PsychicFoilHelmet</li>
+            <li>Apparel_SimpleHelmet</li>
+            <li>Apparel_TribalHeaddress</li>
+            <li>Apparel_Tuque</li>
+            <li>Apparel_WarMask</li>
+            <li>Apparel_WarVeil</li>
+            <li>Apparel_ArmorRecon</li>
+            <li>Apparel_BasicShirt</li>
+            <li>Apparel_Cape</li>
+            <li>Apparel_CollarShirt</li>
+            <li>Apparel_Duster</li>
+            <li>Apparel_FlakJacket</li>
+            <li>Apparel_FlakPants</li>
+            <li>Apparel_FlakVest</li>
+            <li>Apparel_Jacket</li>
+            <li>Apparel_Pants</li>
+            <li>Apparel_Parka</li>
+            <li>Apparel_PlateArmor</li>
+            <li>Apparel_PowerArmor</li>
+            <li>Apparel_Robe</li>
+            <li>Apparel_TribalA</li>
+            <li>Apparel_Sash</li>
+            <li>Apparel_Bandolier</li>
+        </blackApparelList>
         <!-- 生育能力 -->
         <canReproduce>false</canReproduce>
       </raceRestriction>
@@ -241,6 +274,7 @@
       <MarketValue>3000</MarketValue>
       <Mass>50</Mass>
       <MoveSpeed>4.5</MoveSpeed>
+      <EatingSpeed>1000</EatingSpeed>
       <!-- 温度适应性，在hediff修改 -->
       <ComfyTemperatureMin>100</ComfyTemperatureMin>
       <ComfyTemperatureMax>-100</ComfyTemperatureMax>

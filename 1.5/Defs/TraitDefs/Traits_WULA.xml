@@ -15,7 +15,7 @@
           <MentalBreakThreshold>-0.2</MentalBreakThreshold>
         </statOffsets>
         <statFactors>
-          <AimingDelayFactor>0.2</AimingDelayFactor>
+          <AimingDelayFactor>0.75</AimingDelayFactor>
           <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
           <MeleeDamageFactor>1.2</MeleeDamageFactor>
           <MeleeCooldownFactor>0.75</MeleeCooldownFactor>
@@ -47,7 +47,7 @@
     <degreeDatas>
       <li>
         <label>破碎人格</label>
-        <description>这个乌拉帝国合成人没有完整的人格，这使得她更像是一台真正的机械——除了休息外，所有的需求都已经被禁用。</description>
+        <description>这个乌拉帝国合成人没有完整的人格，这使得她更像是一台真正的机械——除了饮食外，所有的需求都已经被禁用。</description>
         <degree>1</degree>
         <disablesNeeds>
           <li>Mood</li>

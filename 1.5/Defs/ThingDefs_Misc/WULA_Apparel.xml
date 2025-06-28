@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+  <!-- 贵族服装 -->
   <ThingDef Name="NSFV_ApparelRoyalBase" ParentName="ApparelMakeableBase" Abstract="True">
     <recipeMaker>
       <researchPrerequisite>NobleApparel</researchPrerequisite>
@@ -23,6 +24,7 @@
     <apparel>
       <tags>
         <li>Royal</li>
+        <li>Wula_Apparel</li>
       </tags>
       <!-- 在身体后渲染 -->
       <!-- <shellRenderedBehindHead>true</shellRenderedBehindHead> -->
@@ -55,17 +57,13 @@
         <li>Legs</li>
       </bodyPartGroups>
       <layers>
+        <li>OnSkin</li>
         <li>Middle</li>
       </layers>
       <wornGraphicPath>Wula/Apparel/WULA_official_uniform</wornGraphicPath>
-      <!-- 待查？ -->
-      <!-- <canBeDesiredForIdeo>false</canBeDesiredForIdeo> -->
-      <!-- 会考虑温度，待查？ -->
-      <!-- <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth> -->
-      <!-- 会考虑毒性环境，待查？ -->
-      <!-- <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance> -->
-      <!-- 在身体后渲染 -->
-      <!-- <shellRenderedBehindHead>true</shellRenderedBehindHead> -->
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
     </apparel>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
@@ -76,7 +74,9 @@
     </statBases>
     <equippedStatOffsets>
       <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
-      <WorkSpeedGlobal>0.15</WorkSpeedGlobal>
+      <ResearchSpeedFactor>0.2</ResearchSpeedFactor>
+      <EntityStudyRate>0.25</EntityStudyRate>
+      <SocialImpact>0.1</SocialImpact>
     </equippedStatOffsets>
     <recipeMaker>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -86,6 +86,8 @@
     </recipeMaker>
     <possessionCount>1</possessionCount>
   </ThingDef>
+
+  <!-- 平民服装 -->
   <ThingDef ParentName="ApparelMakeableBase">
 		<defName>WULA_Sailor_Dress</defName>
 		<label>乌拉帝国水手连衣裙</label>
@@ -95,6 +97,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <apparel>
+      <tags>
+        <li>Wula_Apparel_Init</li>
+        <li>Wula_Apparel</li>
+      </tags>
       <bodyPartGroups>
 				<li>Torso</li>
 				<!-- <li>Shoulders</li> -->
@@ -102,12 +108,17 @@
 				<li>Legs</li>
       </bodyPartGroups>
       <layers>
+        <!-- <li>OnSkin</li> -->
         <li>Middle</li>
       </layers>
       <wornGraphicPath>Wula/Apparel/WULA_Sailor_Dress</wornGraphicPath>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
     </apparel>
     <equippedStatOffsets>
-      <SocialImpact>0.15</SocialImpact>
+      <SocialImpact>0.1</SocialImpact>
+			<MoveSpeed>0.15</MoveSpeed>
       <!-- <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
       <WorkSpeedGlobal>0.15</WorkSpeedGlobal> -->
     </equippedStatOffsets>
@@ -120,14 +131,100 @@
     <possessionCount>1</possessionCount>
   </ThingDef>
   <ThingDef ParentName="ApparelMakeableBase">
+		<defName>WULA_Maid_Uniform</defName>
+		<label>乌拉帝国女仆装</label>
+		<description>乌拉帝国平民所穿的女仆装。虽然她们更习惯让异族的奴隶服侍自己，不过还是有一些乌拉星人选择从事服务业。</description>
+    <graphicData>
+      <texPath>Wula/Apparel/WULA_Maid_Uniform</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <apparel>
+      <tags>
+        <li>Wula_Apparel_Init</li>
+        <li>Wula_Apparel</li>
+      </tags>
+      <bodyPartGroups>
+				<li>Torso</li>
+				<!-- <li>Shoulders</li> -->
+				<li>Arms</li>
+				<li>Legs</li>
+      </bodyPartGroups>
+      <layers>
+        <!-- <li>OnSkin</li> -->
+        <li>Middle</li>
+      </layers>
+      <wornGraphicPath>Wula/Apparel/WULA_Maid_Uniform</wornGraphicPath>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+    </apparel>
+    <equippedStatOffsets>
+			<PlantWorkSpeed>0.2</PlantWorkSpeed>
+			<PlantHarvestYield>0.2</PlantHarvestYield>
+			<CookSpeed>0.2</CookSpeed>
+			<ButcheryFleshSpeed>0.2</ButcheryFleshSpeed>
+      <!-- <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
+      <WorkSpeedGlobal>0.15</WorkSpeedGlobal> -->
+    </equippedStatOffsets>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <possessionCount>1</possessionCount>
+  </ThingDef>
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>WULA_Maid_Uniform_Headband</defName>
+    <label>乌拉帝国女仆发饰</label>
+    <description>乌拉帝国女仆装的配套发饰。</description>
+    <thingCategories>
+      <li>Headgear</li>
+    </thingCategories>
+    <recipeMaker>
+      <displayPriority>105</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Wula/Apparel/WULA_Maid_Uniform_Headband</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>0.1</Mass>
+    </statBases>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <tags>
+        <li>Wula_Apparel</li>
+      </tags>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <parentTagDef>ApparelHead</parentTagDef>
+      <wornGraphicPath>Wula/Apparel/WULA_Maid_Uniform_Headband</wornGraphicPath>
+    </apparel>
+    <thingSetMakerTags>
+      <li>RewardStandardHighFreq</li>
+    </thingSetMakerTags>
+  </ThingDef>
+
+  <!-- 内衬 -->
+  <ThingDef ParentName="ApparelMakeableBase">
 		<defName>WULA_Body_Suit</defName>
 		<label>乌拉帝国驾驶服</label>
-		<description>这是乌拉帝国的战斗人员专用的制服，紧致拥有一整套神经接口用以和其他战斗机械的驾驶舱连接——不过在边缘星区这种贫瘠之地很难见到拥有此类驾驶舱的帝国载具。</description>
+		<description>这是乌拉帝国的战斗人员专用的制服，拥有一整套神经接口用以和其他外接护甲连接。它可以增加穿戴者的战斗技能，但是在干活的时候会束手束脚不太方便。</description>
     <graphicData>
       <texPath>Wula/Apparel/WULA_Body_Suit</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <apparel>
+      <tags>
+        <li>Wula_Apparel</li>
+      </tags>
       <bodyPartGroups>
 				<li>Torso</li>
       </bodyPartGroups>
@@ -135,10 +232,17 @@
         <li>OnSkin</li>
       </layers>
       <wornGraphicPath>Wula/Apparel/WULA_Body_Suit</wornGraphicPath>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
     </apparel>
     <equippedStatOffsets>
-      <!-- <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
-      <WorkSpeedGlobal>0.15</WorkSpeedGlobal> -->
+      <WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
+      <AimingDelayFactor>-0.1</AimingDelayFactor>
+      <ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
+      <MeleeDamageFactor>0.2</MeleeDamageFactor>
+      <MeleeCooldownFactor>-0.1</MeleeCooldownFactor>
+      <MoveSpeed>0.5</MoveSpeed>
     </equippedStatOffsets>
     <recipeMaker>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -148,4 +252,309 @@
     </recipeMaker>
     <possessionCount>1</possessionCount>
   </ThingDef>
+  <ThingDef ParentName="ApparelMakeableBase">
+		<defName>WULA_Bodystocking</defName>
+		<label>乌拉帝国连身黑丝</label>
+		<description>这就是普通的连身黑丝，在哪里造的有什么关系吗？它没有什么别的功能，除了提供一些保暖能力——话说回来，乌拉合成人又不会感到冷。</description>
+    <graphicData>
+      <texPath>Wula/Apparel/WULA_Bodystocking</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <apparel>
+      <tags>
+        <li>Wula_Apparel</li>
+        <li>Wula_Apparel_Init</li>
+      </tags>
+      <bodyPartGroups>
+				<li>Torso</li>
+      </bodyPartGroups>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <wornGraphicPath>Wula/Apparel/WULA_Bodystocking</wornGraphicPath>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+    </apparel>
+    <equippedStatOffsets>
+			<StuffEffectMultiplierInsulation_Cold>0.20</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.10</StuffEffectMultiplierInsulation_Heat>
+    </equippedStatOffsets>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    </recipeMaker>
+    <possessionCount>1</possessionCount>
+  </ThingDef>
+  <ThingDef ParentName="ApparelMakeableBase">
+		<defName>WULA_Bodystocking_White</defName>
+		<label>乌拉帝国连身白丝</label>
+		<description>这就是普通的连身白丝，在哪里造的有什么关系吗？它没有什么别的功能，除了提供一些保暖能力——话说回来，乌拉合成人又不会感到冷。</description>
+    <graphicData>
+      <texPath>Wula/Apparel/WULA_Bodystocking_White</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <apparel>
+      <tags>
+        <li>Wula_Apparel</li>
+        <li>Wula_Apparel_Init</li>
+      </tags>
+      <bodyPartGroups>
+				<li>Torso</li>
+      </bodyPartGroups>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <wornGraphicPath>Wula/Apparel/WULA_Bodystocking_White</wornGraphicPath>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+    </apparel>
+    <equippedStatOffsets>
+			<StuffEffectMultiplierInsulation_Cold>0.20</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.10</StuffEffectMultiplierInsulation_Heat>
+    </equippedStatOffsets>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    </recipeMaker>
+    <possessionCount>1</possessionCount>
+  </ThingDef>
+
+  <!-- 重甲 -->
+  <ThingDef ParentName="ArmorMachineableBase">
+    <defName>WULA_Knight_PowerArmor</defName>
+    <label>乌拉帝国骑士装甲</label>
+    <description>乌拉帝国骑士所穿戴的动力甲，虽然看起来很薄但是实际上防御力相当强大，能够以能量护盾抵挡射弹，还有一只挂载了KRc_7"熔岩"火炮的副肢提供补充火力。</description>
+    <techLevel>Spacer</techLevel>
+    <tickerType>Normal</tickerType>
+    <thingCategories>
+      <li>ApparelNoble</li>
+    </thingCategories>
+    <recipeMaker>
+      <displayPriority>105</displayPriority>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>PoweredArmor</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Wula/Apparel/WULA_Knight_PowerArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>60000</WorkToMake>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <Mass>20</Mass>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+      <ArmorRating_Heat>2.0</ArmorRating_Heat>
+      <EquipDelay>35</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <WorkSpeedGlobal>-0.5</WorkSpeedGlobal>
+      <IncomingDamageFactor>-0.5</IncomingDamageFactor>
+      <StaggerDurationFactor>-0.75</StaggerDurationFactor>
+    </equippedStatOffsets>
+    <costList>
+      <!-- <ComponentSpacer>4</ComponentSpacer>
+      <Plasteel>100</Plasteel>
+      <Uranium>20</Uranium> -->
+    </costList>
+    <apparel>
+      <tags>
+        <li>Wula_Apparel</li>
+        <li>RoyalTier5</li>
+        <li>Royal</li>
+      </tags>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Wula/Apparel/WULA_Knight_PowerArmor</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+      <soundWear>Wear_PowerArmor</soundWear>
+      <soundRemove>Remove_PowerArmor</soundRemove>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+    </apparel>
+    <thingClass>Apparel</thingClass>
+    <comps>
+      <li Class="CompProperties_Biocodable"/>
+      <li Class="CompProperties_ApparelReloadable">
+        <maxCharges>3</maxCharges>
+        <ammoDef>Steel</ammoDef>
+        <ammoCountPerCharge>5</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+        <soundReload>Standard_Reload</soundReload>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>jump</chargeNoun>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+      </li>
+      <li Class="CompProperties_Shield">
+        <startingTicksToReset>1200</startingTicksToReset><!-- 1 mins -->
+        <minDrawSize>2.5</minDrawSize>
+        <maxDrawSize>2.8</maxDrawSize>
+        <energyLossPerDamage>0.01</energyLossPerDamage>
+        <energyOnReset>4.0</energyOnReset>
+        <blocksRangedWeapons>false</blocksRangedWeapons>
+      </li>
+    </comps>
+    <verbs>
+      <li>
+        <verbClass>Verb_LaunchProjectileStaticPsychic</verbClass>
+        <label>KRc_7"熔岩"副炮</label>
+        <defaultProjectile>Bullet_WULA_RW_Handle_Cannon</defaultProjectile>
+        <warmupTime>4.5</warmupTime>
+        <range>22</range>
+        <burstShotCount>1</burstShotCount>
+        <onlyManualCast>true</onlyManualCast>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetable>true</targetable>
+        <violent>false</violent>
+        <targetParams>
+          <canTargetPawns>false</canTargetPawns>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <soundCast>FlareLaunch</soundCast>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+        <canGoWild>false</canGoWild>
+        <explosionRadiusRingColor>(0.8, 0.8, 0.4, 1)</explosionRadiusRingColor><!-- Keep in sync with PlaceWorker_GlowRadius.RingColor -->
+      </li>
+    </verbs>
+    <thingSetMakerTags>
+      <li>RewardStandardHighFreq</li>
+    </thingSetMakerTags>
+  </ThingDef>
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>WULA_Knight_Helmet</defName>
+    <label>乌拉帝国骑士头盔</label>
+    <description>与乌拉帝国骑士的动力甲配套的头盔，能够辅助穿戴者的瞄准。</description>
+    <techLevel>Spacer</techLevel>
+    <thingCategories>
+      <li>HeadgearNoble</li>
+    </thingCategories>
+    <recipeMaker>
+      <displayPriority>105</displayPriority>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>PoweredArmor</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Wula/Apparel/WULA_Knight_Helmet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>20000</WorkToMake>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <Mass>3</Mass>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+      <ArmorRating_Heat>2.0</ArmorRating_Heat>
+      <EquipDelay>15</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
+      <IncomingDamageFactor>-0.2</IncomingDamageFactor>
+      <AimingDelayFactor>-0.25</AimingDelayFactor>
+      <ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <tags>
+        <li>Wula_Apparel</li>
+        <li>RoyalTier5</li>
+        <li>Royal</li>
+      </tags>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <parentTagDef>ApparelHead</parentTagDef>
+      <wornGraphicPath>Wula/Apparel/WULA_Knight_Helmet</wornGraphicPath>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+      <soundWear>Wear_PowerArmor</soundWear>
+      <soundRemove>Remove_PowerArmor</soundRemove>
+    </apparel>
+    <thingSetMakerTags>
+      <li>RewardStandardHighFreq</li>
+    </thingSetMakerTags>
+  </ThingDef>
+
+	<!-- 盾牌 -->
+	<ThingDef Class="NewRatkin.CustomThingDef" ParentName="RK_ApparelMakeableBase">
+		<defName>RK_WoodenShield</defName>
+		<label>ratkin wooden Shield</label>
+		<description>목재 방패.</description>
+		<thingClass>NewRatkin.Shield</thingClass>
+		<graphicData>
+			<texPath>Apparel/RK_WoodenShield</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedArmor</unfinishedThingDef>
+			<researchPrerequisite>RatkinClothing</researchPrerequisite>
+			<recipeUsers Inherit="false">
+				<li>RK_FueledSmithy</li>
+				<li>RK_ElectricSmithy</li>
+			</recipeUsers>		
+		</recipeMaker>
+		<costList>
+			<Steel>25</Steel>
+			<WoodLog>120</WoodLog>
+		</costList>
+		<techLevel>Medieval</techLevel>
+		<statBases>
+			<MaxHitPoints>120</MaxHitPoints>
+			<WorkToMake>12500</WorkToMake>
+			<Mass>3</Mass>
+			<ArmorRating_Sharp>0.57</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.57</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.2</ArmorRating_Heat>
+			<Flammability>0.8</Flammability>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<defaultOutfitTags>
+				<li>Worker</li>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<wornGraphicPath>Apparel/RK_WoodenShield</wornGraphicPath>
+			<layers>
+				<li>OuterClothing</li>
+			</layers>
+			<tags>
+				<li>RK_LightArmor</li>
+			</tags>
+		</apparel>
+		<followStuffColor>false</followStuffColor>
+	</ThingDef>
 </Defs>

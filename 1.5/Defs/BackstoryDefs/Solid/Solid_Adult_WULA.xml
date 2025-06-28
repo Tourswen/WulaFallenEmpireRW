@@ -314,7 +314,7 @@
     <slot>Adulthood</slot>
     <title>人格矩阵装载：送葬使</title>
     <titleShort>人格-送葬使</titleShort>
-    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国送葬使的模拟记忆。\n\n送葬使是乌拉帝国观测站的战士，她们拥有驱使各种奇花异草和危险造物进行战斗的高手，她们懂得如何利用坚韧的生物兵器在消耗战中重创对手。</description>
+    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国送葬使的模拟记忆。\n\n送葬使是乌拉帝国观测站的战士，她们拥有驱使各种奇花异草和危险造物进行战斗的高手，懂得如何利用坚韧的生物兵器在消耗战中重创对手。</description>
     <skillGains>
       <Shooting>7</Shooting>
       <Mining>-5</Mining>
@@ -337,7 +337,7 @@
     <slot>Adulthood</slot>
     <title>人格矩阵装载：生物兵器</title>
     <titleShort>人格-生物兵器</titleShort>
-    <description>[PAWN_possessive]人格矩阵下载了一个错误的数据包——可能是某个生物兵器的数据。\n\n实验体是被乌拉帝国改造过的生命，暴躁嗜血，无坚不摧，专为在前线突破坚固防线而设计。</description>
+    <description>[PAWN_possessive]人格矩阵下载了一个错误的数据包——可能是某个生物兵器的数据。\n\n实验体是被乌拉帝国改造过的生命，暴躁嗜血，无坚不摧，专为在前线突破坚固防线而设计。乌拉星人通常会以凶猛异形为基底进行改造，但是看起来有人把这类数据包上传到网络中然后被[PAWN_nameDef]错误地下载了。</description>
     <skillGains>
       <Melee>10</Melee>
       <Mining>5</Mining>
