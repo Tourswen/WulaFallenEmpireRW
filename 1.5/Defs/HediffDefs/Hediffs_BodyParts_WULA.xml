@@ -7,12 +7,12 @@
     <!-- <descriptionHyperlinks><RecipeDef>InstallFieldHand</RecipeDef></descriptionHyperlinks> -->
     <!-- <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags> -->
     <graphicData>
-      <texPath>Wula/Item/WULA_Energy_Furnace</texPath>
+      <texPath>Things/Item/Health/HealthItem</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <costList>
       <Steel>40</Steel>
-      <ComponentIndustrial>8</ComponentIndustrial>
+      <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
     <recipeMaker>
       <researchPrerequisite>Machining</researchPrerequisite>
@@ -31,7 +31,7 @@
     <!-- <descriptionHyperlinks><RecipeDef>InstallFieldHand</RecipeDef></descriptionHyperlinks> -->
     <!-- <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags> -->
     <graphicData>
-      <texPath>Wula/Item/WULA_Energy_Furnace</texPath>
+      <texPath>Things/Item/Health/HealthItem</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <costList>
@@ -54,12 +54,12 @@
     <!-- <descriptionHyperlinks><RecipeDef>InstallFieldHand</RecipeDef></descriptionHyperlinks> -->
     <!-- <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags> -->
     <graphicData>
-      <texPath>Wula/Item/WULA_Energy_Furnace</texPath>
+      <texPath>Things/Item/Health/HealthItem</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <costList>
-      <Steel>60</Steel>
-      <ComponentIndustrial>8</ComponentIndustrial>
+      <Steel>30</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
     <recipeMaker>
       <researchPrerequisite>Machining</researchPrerequisite>
@@ -81,9 +81,6 @@
     <isBad>false</isBad>
     <duplicationAllowed>false</duplicationAllowed>
     <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
-    <removeOnRedressIfNotOfKind>
-      <li>Wula_PawnKind</li>
-    </removeOnRedressIfNotOfKind>
     <stages>
       <li>
         <statOffsets>
@@ -111,9 +108,6 @@
     <isBad>false</isBad>
     <duplicationAllowed>false</duplicationAllowed>
     <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
-    <removeOnRedressIfNotOfKind>
-      <li>Wula_PawnKind</li>
-    </removeOnRedressIfNotOfKind>
     <stages>
       <li>
         <statFactors>

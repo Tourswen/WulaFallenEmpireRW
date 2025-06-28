@@ -63,11 +63,11 @@
   <ThingDef ParentName="BaseMeleeWeapon_Blunt">
     <defName>WULA_MW_Scepter_Of_Heaven</defName>
     <label>天之杖</label>
-    <description></description>
+    <description>乌拉帝国修女所持武器，可以使用魂锲作为弹药施展灵能法术，将任意人员折跃到地图上的任意地点。</description>
     <graphicData>
-      <texPath>Wula/Weapon/WULA_MW_Mace</texPath>
+      <texPath>Wula/Weapon/WULA_MW_Scepter_Of_Heaven</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <!-- <drawSize>3</drawSize> -->
+      <drawSize>1.3</drawSize>
     </graphicData>
     <uiIconScale>1.1</uiIconScale>
     <techLevel>Medieval</techLevel>
@@ -77,7 +77,6 @@
     <weaponClasses>
       <li>Neolithic</li>
     </weaponClasses>
-    <costStuffCount>40</costStuffCount>
     <statBases>
       <WorkToMake>1200</WorkToMake>
       <Mass>2</Mass>
@@ -86,11 +85,6 @@
       <Steel>10</Steel>
     </costList>
     <equippedAngleOffset>-65</equippedAngleOffset>
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Woody</li>
-      <li>Stony</li>
-    </stuffCategories>
     <recipeMaker>
       <recipeUsers>
         <li>ElectricSmithy</li>
@@ -108,22 +102,60 @@
         <cooldownTime>1</cooldownTime>
         <chanceFactor>0.5</chanceFactor>
       </li>
-      <li>
-        <label>尖头</label>
-        <labelUsedInLogging>false</labelUsedInLogging>
-        <capacities>
-          <li>Stab</li>
-        </capacities>
-        <power>18</power>
-        <cooldownTime>1.25</cooldownTime>
-      </li>
     </tools>
+
+    <comps Inherit="False">
+      <li Class="CompProperties_EquippableAbilityReloadable">
+        <abilityDef>WULA_Scepter_Of_Heaven_Ability</abilityDef>
+        <maxCharges>1</maxCharges>
+        <soundReload>AnomalyAbilityWarmup</soundReload>
+        <chargeNoun>魂锲</chargeNoun>
+        <ammoDef>Steel</ammoDef>
+        <ammoCountPerCharge>1</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+      </li>
+    </comps>
   </ThingDef>
+  <AbilityDef>
+    <defName>WULA_Scepter_Of_Heaven_Ability</defName>
+    <label>天之杖：折跃</label> <!-- non-player facing -->
+    <iconPath>UI/Abilities/Farskip</iconPath>
+    <category MayRequire="Ludeon.RimWorld.Royalty">Skip</category>
+    <description>选择任意目标，然后选择地图内的一个位置将其传送过去，至多只能传送10体型大小的目标。</description> <!-- non-player facing -->
+    <showPsycastEffects>false</showPsycastEffects>
+    <!-- <cooldownTicksRange>180~480</cooldownTicksRange> -->
+    <aiCanUse>true</aiCanUse>
+    <showOnCharacterCard>false</showOnCharacterCard>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_EntitySkip</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <warmupTime>0</warmupTime>
+      <range>30</range>
+      <ai_IsWeapon>false</ai_IsWeapon>
+      <targetParams>
+        <canTargetSelf>True</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityTeleport">
+        <compClass>CompAbilityEffect_Teleport</compClass>
+        <destination>Selected</destination>
+        <requiresLineOfSight>false</requiresLineOfSight>
+        <range>80</range>
+        <clamorType>Ability</clamorType>
+        <clamorRadius>10</clamorRadius>
+        <destClamorType>Ability</destClamorType>
+        <destClamorRadius>10</destClamorRadius>
+        <maxBodySize>10</maxBodySize>
+      </li>
+    </comps>
+  </AbilityDef>
 
   <!-- 乌拉帝国镇爆枪 -->
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>WULA_RW_Fractal_AR</defName>
-    <label>分形步枪</label>
+    <label>CLa_14"蓝锥"</label>
     <description>乌拉帝国镇暴部队使用的震爆武器之一，在发射前会照射目标并用微型处理器分析目标特征，随后经过编译的复合能量脉冲将以集束形式射出，瘫痪目标并点燃暴动者的身体，同时还不造成直击伤害。</description>
     <graphicData>
       <texPath>Wula/Weapon/WULA_RW_Fractal_AR</texPath>
@@ -220,7 +252,7 @@
   <!-- 乌拉帝国霰弹枪 -->
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>WULA_RW_StarDrift_SG</defName>
-    <label>星流霰弹枪</label>
+    <label>DCs_7"黑曜石"</label>
     <description>乌拉帝国配发的近距离霰弹枪，以威力巨大的梭镖破甲弹为核心，专注于在短距离上的快速反应战斗和持续性压制能力</description>
     <!-- <techLevel>Spacer</techLevel> -->
     <graphicData>
@@ -272,5 +304,86 @@
     </projectile>
   </ThingDef>
 
-  
+  <!-- Hellsphere cannon -->
+  <ThingDef ParentName="BaseGun">
+    <defName>WULA_RW_Handle_Cannon</defName>
+    <label>KRc_7"熔岩"</label>
+    <description>一般由乌拉帝国跳帮组或骑士军团携带的手持火炮，能够在锁定后连续发射三发炮弹，夷平敌人的复合型工事或舰船内壁，并给敌人送来最炽热的消亡。</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Wula/Weapon/WULA_RW_Handle_Cannon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.35</drawSize>
+    </graphicData>
+    <tradeability>None</tradeability>
+    <statBases>
+      <MarketValue>1400</MarketValue>
+      <Mass>25</Mass>
+      <AccuracyTouch>0.6</AccuracyTouch>
+      <AccuracyShort>0.6</AccuracyShort>
+      <AccuracyMedium>0.6</AccuracyMedium>
+      <AccuracyLong>0.4</AccuracyLong>
+      <RangedWeapon_Cooldown>4.0</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_WULA_RW_Handle_Cannon</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>22</range>
+        <soundCast>Shot_HellsphereCannonGun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <ai_AvoidFriendlyFireRadius>6</ai_AvoidFriendlyFireRadius>
+        <ai_RangedAlawaysShootGroundBelowTarget>true</ai_RangedAlawaysShootGroundBelowTarget>
+        <ai_ProjectileLaunchingIgnoresMeleeThreats>true</ai_ProjectileLaunchingIgnoresMeleeThreats>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <ai_TargetHasRangedAttackScoreOffset>50</ai_TargetHasRangedAttackScoreOffset>
+        <minRange>6</minRange>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+          <canTargetPawns>false</canTargetPawns>
+        </targetParams>
+        <aimingLineMote>Mote_HellsphereCannon_Aim</aimingLineMote>
+        <aimingChargeMote>Mote_HellsphereCannon_Charge</aimingChargeMote>
+        <aimingChargeMoteOffset>1.07</aimingChargeMoteOffset>
+        <aimingLineMoteFixedLength>3.9</aimingLineMoteFixedLength>
+        <aimingTargetMote>Mote_HellsphereCannon_Target</aimingTargetMote>
+        <burstShotCount>3</burstShotCount>
+        <beamTargetsGround>true</beamTargetsGround>
+        <soundAiming>HellsphereCannon_Aiming</soundAiming>
+        <canGoWild>false</canGoWild>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_WULA_RW_Handle_Cannon</defName>
+    <label>熔岩炮弹</label>
+    <thingClass>Projectile_HellsphereCannon</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/HellsphereCannon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <drawSize>(1.5, 3)</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Vaporize</damageDef>
+      <speed>75</speed>
+      <damageAmountBase>300</damageAmountBase>
+      <explosionRadius>3.9</explosionRadius>
+      <screenShakeFactor>1.5</screenShakeFactor>
+    </projectile>
+  </ThingDef>
 </Defs>

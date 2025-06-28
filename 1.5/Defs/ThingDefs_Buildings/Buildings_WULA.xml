@@ -1,110 +1,179 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <ThingDef ParentName="MechGestatorBase">
+  <ThingDef ParentName="BuildingBase">
     <defName>WULA_Mech_Constructor_Small</defName>
     <label>乌拉帝国构造体</label>
-    <description>一台用于构造乌拉帝国的合成人和机械体的小型设备，功能类似于机械培育器，但是不能生产常规的机械体。</description>
+    <description>一台用于构造乌拉帝国合成人的一次性特殊设备，自备电源，建造完成后将自动启用，工作12天后建造一个新的乌拉帝国合成人。</description>
     <graphicData>
-      <texPath>Things/Building/Production/MechGestatorStandard</texPath>
+      <texPath>Wula/Building/WULA_Mech_Constructor_Small</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(5.6,4)</drawSize>
-      <shadowData>
-        <volume>(3, 2, 1.9)</volume>
-      </shadowData>
+      <drawSize>(2,2)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
     </graphicData>
-    <uiIconPath>Things/Building/Production/MechGestatorStandard_MenuIcon</uiIconPath>
-    <uiIconScale>1.85</uiIconScale>
-    <interactionCellOffset>(1,0,2)</interactionCellOffset>
-    <recipes>
-      <li>WULA_Make_New_Synth</li>
-    </recipes>
+    <castEdgeShadows>false</castEdgeShadows>
+    <size>(2,2)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <canOverlapZones>false</canOverlapZones>
+    <fillPercent>0.8</fillPercent>
     <statBases>
-      <MaxHitPoints>250</MaxHitPoints>
-      <WorkToBuild>8000</WorkToBuild>
-      <Mass>25</Mass>
-      <Flammability>0.5</Flammability>
+      <MaxHitPoints>12800</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <WorkToBuild>12000</WorkToBuild>
     </statBases>
-    <size>(3,2)</size>
+    <tickerType>Normal</tickerType>
+    <building>
+      <!--<soundAmbient>EMIDynamo_Ambience</soundAmbient>-->
+      <destroySound>BuildingDestroyed_Metal_Big</destroySound>
+      <soundAmbient>GeothermalPlant_Ambience</soundAmbient>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <damageMultipliers>
+      <li>
+        <damageDef>Flame</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+    </damageMultipliers>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
+    <rotatable>false</rotatable>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <!--<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>-->
+    <constructEffect>ConstructMetal</constructEffect>
+    <repairEffect>ConstructMetal</repairEffect>
+    <designationCategory>Biotech</designationCategory>
     <costList>
-      <Steel>150</Steel>
-      <ComponentIndustrial>3</ComponentIndustrial>
+      <WULA_Antenna_Base>1</WULA_Antenna_Base>
+      <WULA_Energy_Furnace_Base>1</WULA_Energy_Furnace_Base>
+      <WULA_Alloy_Framework_Base>1</WULA_Alloy_Framework_Base>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <Steel>100</Steel>
+      <Chemfuel>100</Chemfuel>
     </costList>
+    <descriptionHyperlinks>
+      <ThingDef>WulaSpecies</ThingDef>
+      <ThingDef>WULA_Antenna_Base</ThingDef>
+      <ThingDef>WULA_Energy_Furnace_Base</ThingDef>
+      <ThingDef>WULA_Alloy_Framework_Base</ThingDef>
+    </descriptionHyperlinks>
     <researchPrerequisites>
       <li>BasicMechtech</li>
     </researchPrerequisites>
-    <building>
-      <barDrawData>
-        <north>
-          <preRotationOffset>(-1.06, 0.91)</preRotationOffset>
-          <size>(0.7, 0.13)</size>
-        </north>
-        <south>
-          <preRotationOffset>(-1.06, 0.82)</preRotationOffset>
-          <size>(0.7, 0.13)</size>
-        </south>
-        <east>
-          <preRotationOffset>(1.06, -0.97)</preRotationOffset>
-          <size>(0.7, 0.13)</size>
-        </east>
-        <west>
-          <preRotationOffset>(-1.06, -0.97)</preRotationOffset>
-          <size>(0.7, 0.13)</size>
-        </west>
-      </barDrawData>
-      <formingGraphicData>
-        <texPath>Things/Pawn/Mechanoid/HalfGestatedMechSmall</texPath>
-        <graphicClass>Graphic_Single</graphicClass>
-        <drawSize>(1,1)</drawSize>
-      </formingGraphicData>
-      <formingMechPerRotationOffset>
-        <li>(0, 0, 0.45)</li>
-        <li>(0, 0, 0.45)</li>
-        <li>(0, 0, 0.45)</li>
-        <li>(0, 0, 0.45)</li>
-      </formingMechPerRotationOffset>
-      <mechGestatorCylinderGraphic>
-        <texPath>Things/Building/Production/MechGestatorStandardGlass</texPath>
-        <graphicClass>Graphic_Multi</graphicClass>
-        <drawSize>(5.6,4)</drawSize>
-        <shaderType>Transparent</shaderType>
-      </mechGestatorCylinderGraphic>
-      <mechGestatorTopGraphic>
-        <texPath>Things/Building/Production/MechGestatorStandardTop</texPath>
-        <graphicClass>Graphic_Multi</graphicClass>
-        <drawSize>(5.6,4)</drawSize>
-      </mechGestatorTopGraphic>
-      <gestatorFormingMote>
-        <north>MechGestatorForming_North</north>
-        <east>MechGestatorForming_East</east>
-        <west>MechGestatorForming_East</west>
-        <south>MechGestatorForming_South</south>
-      </gestatorFormingMote>
-      <gestatorCycleCompleteMote>
-        <north>MechGestatorCycleComplete_North</north>
-        <east>MechGestatorCycleComplete_East</east>
-        <west>MechGestatorCycleComplete_East</west>
-        <south>MechGestatorCycleComplete_South</south>
-      </gestatorCycleCompleteMote>
-      <gestatorFormedMote>
-        <north>MechGestatorFormed_North</north>
-        <east>MechGestatorFormed_East</east>
-        <west>MechGestatorFormed_East</west>
-        <south>MechGestatorFormed_South</south>
-      </gestatorFormedMote>
-    </building>
     <comps>
-      <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>350</basePowerConsumption>
-        <idlePowerDraw>50</idlePowerDraw>
+      <li Class="CompProperties_SpawnerPawn">
+        <spawnablePawnKinds>
+          <li>Wula_PawnKind_Ingame</li>
+        </spawnablePawnKinds>
+        <maxPawnsToSpawn>1</maxPawnsToSpawn>
+        <pawnSpawnIntervalDays>12</pawnSpawnIntervalDays>
+        <shouldJoinParentLord>True</shouldJoinParentLord>
+        <chooseSingleTypeToSpawn>True</chooseSingleTypeToSpawn>
+        <spawnMessageKey>MessageMechanoidsAssembled</spawnMessageKey>
+        <pawnsLeftToSpawnKey>MessageMechanoidsLeftToAssemble</pawnsLeftToSpawnKey>
+        <noPawnsLeftToSpawnKey>ShutDown</noPawnsLeftToSpawnKey>
+        <nextSpawnInspectStringKey>MechAssemblyCompleteIn</nextSpawnInspectStringKey>
+        <nextSpawnInspectStringKeyDormant>MechAssemblyNextType</nextSpawnInspectStringKeyDormant>
+        <spawnSound>MechAssembler_Spawn</spawnSound>
+        <showNextSpawnInInspect>true</showNextSpawnInInspect>
+        <lordJob>LordJob_MechanoidsDefend</lordJob>
+        <shouldJoinParentLord>True</shouldJoinParentLord>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>6</glowRadius>
+        <!--<glowColor>(105,204,204,0)</glowColor>-->
+        <!-- 蓝色 -->
+        <!-- <glowColor>(79, 96, 119, 0)</glowColor> -->
+        <!-- 红色 -->
+        <glowColor>(177, 0, 31, 0)</glowColor>
+        <colorPickerEnabled>true</colorPickerEnabled>
+        <darklightToggle>true</darklightToggle>
       </li>
     </comps>
   </ThingDef>
 
+  <!-- 能源核心制造机 -->
+  <ThingDef ParentName="BenchBase">
+    <defName>WULA_Cube_Productor_BIO</defName>
+    <label>能源核心冲压机（生物能）</label>
+    <description>一台仿制乌拉帝国科技而建造的能源核心制造机，用于在没有电力的情况下，通过燃烧木材输入生物能以制造可维持机械乌拉正常运转的能源核心。</description>
+    <thingClass>Building_WorkTable_HeatPush</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Wula/Building/WULA_Cube_Productor_BIO</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1,1)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <constructEffect>ConstructMetal</constructEffect>
+    <costList>
+      <Steel>80</Steel>
+    </costList>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>2000</WorkToBuild>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <size>(1,1)</size>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>2120</uiOrder>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <!-- 可用配方 -->
+    <recipes>
+     <li>Make_WULA_Charge_Cube</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>500.0</fuelConsumptionRate>
+        <fuelCapacity>150.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>4</heatPerSecond>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <building>
+      <isMealSource>true</isMealSource>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <heatPerTickWhileWorking>0.10</heatPerTickWhileWorking>
+    </building>
+  </ThingDef>
+
   <ThingDef ParentName="BasicBedBase">
     <defName>WULA_Charging_Station_Synth</defName>
-    <label>合成人充电站</label>
-    <description>一台用于给乌拉帝国合成人进行充电的充电站，效率比自机充电高很多。</description>
+    <label>合成人修复站</label>
+    <description>一台供乌拉帝国合成人进行机体修复的检修站。</description>
     <graphicData>
       <texPath>Wula/Building/WULA_Charging_Station_Synth</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -119,7 +188,7 @@
       <Beauty>1</Beauty>
       <WorkToBuild>800</WorkToBuild>
       <Mass>30</Mass>
-      <BedRestEffectiveness>5</BedRestEffectiveness>
+      <MedicalTendQualityOffset>10</MedicalTendQualityOffset>
     </statBases>
     <size>(1,2)</size>
     <stuffCategories>

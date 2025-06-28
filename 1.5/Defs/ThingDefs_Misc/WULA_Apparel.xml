@@ -124,7 +124,7 @@
 		<label>乌拉帝国驾驶服</label>
 		<description>这是乌拉帝国的战斗人员专用的制服，紧致拥有一整套神经接口用以和其他战斗机械的驾驶舱连接——不过在边缘星区这种贫瘠之地很难见到拥有此类驾驶舱的帝国载具。</description>
     <graphicData>
-      <texPath>Wula/Apparel/WULA_Sailor_Dress</texPath>
+      <texPath>Wula/Apparel/WULA_Body_Suit</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <apparel>
@@ -134,7 +134,7 @@
       <layers>
         <li>OnSkin</li>
       </layers>
-      <wornGraphicPath>Wula/Apparel/WULA_Sailor_Dress</wornGraphicPath>
+      <wornGraphicPath>Wula/Apparel/WULA_Body_Suit</wornGraphicPath>
     </apparel>
     <equippedStatOffsets>
       <!-- <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>

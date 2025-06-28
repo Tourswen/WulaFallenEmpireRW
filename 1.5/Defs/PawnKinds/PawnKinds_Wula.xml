@@ -1,51 +1,74 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <PawnKindDef ParentName="BasePlayerPawnKind">
-      <defName>Wula_PawnKind</defName>
-      <label>乌拉</label>
-      <race>WulaSpecies</race>
-      <defaultFactionType>PlayerColony</defaultFactionType>
+  <PawnKindDef>
+    <defName>Wula_PawnKind</defName>
+    <label>乌拉</label>
+    <race>WulaSpecies</race>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Wula/Item/WULA_Species_Icon</texPath>
+          <maskPath>SRA/Pawn/Mechanoid/AllegianceOverlays/None</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+          <shadowData>
+            <volume>(0.2, 0.3, 0.2)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <minGenerationAge MayRequire="Ludeon.RimWorld.Biotech">200</minGenerationAge>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+    <combatPower>0</combatPower>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
 
-      <!-- This is a required field. 13~21 is the default value for Crashlanded player colonists. -->
-      <initialResistanceRange>13~21</initialResistanceRange>
-      <minGenerationAge>20</minGenerationAge>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>Wula_Backstory_Categories</li>
+          <li>Wula_Old_Synth_Backstory_Categories</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+  </PawnKindDef>
+  <PawnKindDef>
+    <defName>Wula_PawnKind_Ingame</defName>
+    <label>乌拉</label>
+    <race>WulaSpecies</race>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Wula/Item/WULA_Species_Icon</texPath>
+          <maskPath>SRA/Pawn/Mechanoid/AllegianceOverlays/None</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+          <shadowData>
+            <volume>(0.2, 0.3, 0.2)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <minGenerationAge MayRequire="Ludeon.RimWorld.Biotech">200</minGenerationAge>
+    <combatPower>0</combatPower>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
 
-      <!-- 初始服装 -->
-      <apparelRequired>
-        <li>WULA_Sailor_Dress</li>
-      </apparelRequired>
+    <weaponMoney>0</weaponMoney>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelMoney>0</apparelMoney>
 
-      <!-- 免疫痛苦 -->
-      <ignoresPainShock>true</ignoresPainShock>
-
-      <startingHediffs>
-        <li>
-          <def>Wula_Synth</def>
-        </li>
-        <li>
-          <def>WULA_Addons_Antenna_Hediff_Base</def>
-        </li>
-        <li>
-          <def>WULA_Alloy_Framework_Hediff_Base</def>
-        </li>
-        <li>
-          <def>MechlinkImplant</def>
-        </li>
-      </startingHediffs>
-
-      <backstoryFiltersOverride>
-        <li>
-          <categories>
-            <li>Wula_Backstory_Categories</li>
-          </categories>
-        </li>
-      </backstoryFiltersOverride>
-
-      <!-- <abilities>
-        <li>EntitySkip</li>
-        <li>Heatspikes</li>
-        <li>FleshmelterBolt</li>
-        <li>AgonyPulse</li>
-      </abilities> -->
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>Wula_Backstory_Categories</li>
+          <li>Wula_New_Synth_Backstory_Categories</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
   </PawnKindDef>
 </Defs>

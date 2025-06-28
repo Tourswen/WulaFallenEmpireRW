@@ -26,7 +26,7 @@
         <!-- 免疫人类的异形歧视 -->
         <immuneToXenophobia>true</immuneToXenophobia>
         <!-- 最小的可生成成人背景的年龄 -->
-        <minAgeForAdulthood>18</minAgeForAdulthood>
+        <minAgeForAdulthood>0</minAgeForAdulthood>
         <!-- 手术继承自人类 -->
         <humanRecipeImport>true</humanRecipeImport>
         <!-- 睡觉定义 -->
@@ -68,8 +68,8 @@
 									</li>
 									<li>
 										<weight>6</weight>
-										<min>(0,0,0)</min>
-										<max>(0,0,0.1)</max>
+										<min>(0.9,0.9,0.9)</min>
+										<max>(0.9,0.9,0.9)</max>
 									</li>
 									<li>
 										<weight>6</weight>
@@ -112,6 +112,9 @@
             </li>
           </bodyAddons>
         </alienPartGenerator>
+        <growthAges>
+          <li>0</li>
+        </growthAges>
       </generalSettings>
       <!-- 图形 -->
 			<graphicPaths>
@@ -193,7 +196,7 @@
 				<onlyUseRaceRestrictedXenotypes>false</onlyUseRaceRestrictedXenotypes>
         <!-- 食物列表 -->
         <foodList>
-          <!-- 留空 -->
+          <li>WULA_Charge_Cube</li>
         </foodList>
         <onlyEatRaceRestrictedFood>true</onlyEatRaceRestrictedFood>
         <!-- 可以穿戴的衣服 -->
@@ -224,6 +227,10 @@
         <relationChanceModifierChild>0</relationChanceModifierChild>
         <relationChanceModifierSibling>0</relationChanceModifierSibling>
       </relationSettings>
+      <!-- 兼容性标签，非必要 -->
+      <compatibility>
+        <isFlesh>false</isFlesh>
+      </compatibility>
     </alienRace>
     
     <!-- 以下是原版标签 -->
@@ -280,9 +287,34 @@
 			<body>WULA_Machine_Body</body>
       <!-- 年龄阶段 -->
       <lifeExpectancy>5000</lifeExpectancy>
+      <lifeStageWorkSettings MayRequire="Ludeon.RimWorld.Biotech">
+        <Firefighter>0</Firefighter>
+        <Patient>0</Patient>
+        <Doctor>0</Doctor>
+        <PatientBedRest>0</PatientBedRest>
+        <Childcare MayRequire="Ludeon.RimWorld.Biotech">0</Childcare>
+        <BasicWorker>0</BasicWorker>
+        <Warden>0</Warden>
+        <Handling>0</Handling>
+        <Cooking>0</Cooking>
+        <Hunting>0</Hunting>
+        <Construction>0</Construction>
+        <Growing>0</Growing>
+        <Mining>0</Mining>
+        <PlantCutting>0</PlantCutting>
+        <Smithing>0</Smithing>
+        <Tailoring>0</Tailoring>
+        <Art>0</Art>
+        <Crafting>0</Crafting>
+        <Hauling>0</Hauling>
+        <Cleaning>0</Cleaning>
+        <Research>0</Research>
+        <DarkStudy MayRequire="Ludeon.RimWorld.Anomaly">0</DarkStudy>
+      </lifeStageWorkSettings>
       <lifeStageAges Inherit="False">
         <li>
-          <def>EntityFullyFormed</def>
+          <def>Wula_Species_Lifestage</def>
+          <minAge>0</minAge>
         </li>
       </lifeStageAges>
     </race>
