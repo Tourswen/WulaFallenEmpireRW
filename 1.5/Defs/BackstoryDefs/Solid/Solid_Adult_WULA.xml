@@ -393,4 +393,24 @@
       <WULA_Trait_Broken_Personality>1</WULA_Trait_Broken_Personality>
     </forcedTraits>
   </AlienRace.AlienBackstoryDef>
+
+  <!-- 战车 -->
+  <AlienRace.AlienBackstoryDef>
+    <defName>WULA_AI_Heavy_Panzer_Adult_Backstory01</defName>
+    <slot>Adulthood</slot>
+    <title>人格矩阵装载：战争机械</title>
+    <titleShort>人格-战争机械</titleShort>
+    <description>[PAWN_possessive]人格矩阵剔除了大量不需要的情感模拟，只剩冷酷的杀敌技巧。</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <workDisables>AllWork</workDisables>
+    <spawnCategories>
+      <li>WULA_AI_Heavy_Panzer_Backstory_Categories</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <forcedTraits>
+      <WULA_AI_War_Machine>1</WULA_AI_War_Machine>
+    </forcedTraits>
+  </AlienRace.AlienBackstoryDef>
 </Defs>

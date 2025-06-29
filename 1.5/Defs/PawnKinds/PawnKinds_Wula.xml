@@ -85,4 +85,41 @@
       </li>
     </backstoryFiltersOverride>
   </PawnKindDef>
+
+  
+  <PawnKindDef>
+    <defName>Wula_AI_Heavy_Panzer_PawnKind</defName>
+    <label>SMp-38"萨克森"</label>
+    <race>Wula_AI_Heavy_Panzer</race>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Wula/Item/WULA_Species_Icon</texPath>
+          <maskPath>SRA/Pawn/Mechanoid/AllegianceOverlays/None</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+          <shadowData>
+            <volume>(0.2, 0.3, 0.2)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <minGenerationAge MayRequire="Ludeon.RimWorld.Biotech">200</minGenerationAge>
+    <combatPower>600</combatPower>
+    
+    <!-- <weaponTags>
+      <li>Wula_AI_Heavy_Panzer_Rocket</li>
+    </weaponTags>
+    <weaponMoney>99999~99999</weaponMoney> -->
+
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>WULA_AI_Heavy_Panzer_Backstory_Categories</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+  </PawnKindDef>
 </Defs>

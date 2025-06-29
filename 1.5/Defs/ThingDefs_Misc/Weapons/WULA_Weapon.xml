@@ -32,10 +32,11 @@
       <li>Stony</li>
     </stuffCategories>
     <recipeMaker>
-      <recipeUsers>
-        <li>ElectricSmithy</li>
-        <li>FueledSmithy</li>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_BIO</li>
+        <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
+      <researchPrerequisite>WULA_Synth_Weapon_Technology</researchPrerequisite>
       <displayPriority>300</displayPriority>
     </recipeMaker>
     <tools>
@@ -59,10 +60,59 @@
       </li>
     </tools>
   </ThingDef>
+  
+  <!-- 动力破墙锤 -->
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
+    <defName>WULA_MW_Breaker_Bar</defName>
+    <label>PMb_97"定音槌"</label>
+    <description>一种沉重的破墙设备，通常由装备外骨骼的乌拉帝国士兵携带，可以通过加压挥出势大力沉的一击，洞穿对手或墙体。</description>
+    <graphicData>
+      <texPath>Wula/Weapon/WULA_MW_Breaker_Bar</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <techLevel>Spacer</techLevel>
+    <costStuffCount>50</costStuffCount>
+    <statBases>
+      <WorkToMake>3000</WorkToMake>
+      <Mass>20</Mass>
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <tools>
+      <li>
+        <label>加压槌头</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>65</power>
+        <cooldownTime>4</cooldownTime>
+        <armorPenetration>1</armorPenetration>
+        <extraMeleeDamages>
+          <li>
+            <def>Stun</def>
+            <amount>14</amount>
+          </li>
+        </extraMeleeDamages>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+      <researchPrerequisite>WULA_Synth_Weapon_2_Melee_Technology</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <displayPriority>450</displayPriority>
+    </recipeMaker>
+  </ThingDef>
 
+  <!-- 法杖 -->
   <ThingDef ParentName="BaseMeleeWeapon_Blunt">
     <defName>WULA_MW_Scepter_Of_Heaven</defName>
-    <label>天之杖</label>
+    <label>APs_82"天之杖"</label>
     <description>乌拉帝国修女所持武器，可以使用魂锲作为弹药施展灵能法术，将任意人员折跃到地图上的任意地点。</description>
     <graphicData>
       <texPath>Wula/Weapon/WULA_MW_Scepter_Of_Heaven</texPath>
@@ -86,11 +136,10 @@
     </costList>
     <equippedAngleOffset>-65</equippedAngleOffset>
     <recipeMaker>
-      <recipeUsers>
-        <li>ElectricSmithy</li>
-        <li>FueledSmithy</li>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
-      <displayPriority>300</displayPriority>
+      <researchPrerequisite>WULA_Synth_Psi_Technology</researchPrerequisite>
     </recipeMaker>
     <tools>
       <li>
@@ -157,6 +206,7 @@
     <defName>WULA_RW_Fractal_AR</defName>
     <label>CLa_14"蓝锥"</label>
     <description>乌拉帝国镇暴部队使用的震爆武器之一，在发射前会照射目标并用微型处理器分析目标特征，随后经过编译的复合能量脉冲将以集束形式射出，瘫痪目标并点燃暴动者的身体，同时还不造成直击伤害。</description>
+    <techLevel>Ultra</techLevel>
     <graphicData>
       <texPath>Wula/Weapon/WULA_RW_Fractal_AR</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -168,7 +218,10 @@
       <li>RangedHeavy</li>
     </weaponClasses>
     <recipeMaker>
-      <!-- <researchPrerequisite>GasOperation</researchPrerequisite> -->
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+      <researchPrerequisite>WULA_Synth_Weapon_2_Stun_Technology</researchPrerequisite>
       <skillRequirements>
         <Crafting>5</Crafting>
       </skillRequirements>
@@ -254,12 +307,19 @@
     <defName>WULA_RW_StarDrift_SG</defName>
     <label>DCs_7"黑曜石"</label>
     <description>乌拉帝国配发的近距离霰弹枪，以威力巨大的梭镖破甲弹为核心，专注于在短距离上的快速反应战斗和持续性压制能力</description>
+    <techLevel>Ultra</techLevel>
     <!-- <techLevel>Spacer</techLevel> -->
     <graphicData>
       <texPath>Wula/Weapon/WULA_RW_StarDrift_SG</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_ChargeRifle</soundInteract>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+      <researchPrerequisite>WULA_Synth_Weapon_2_Ranged_Technology</researchPrerequisite>
+    </recipeMaker>
     <statBases>
       <WorkToMake>45000</WorkToMake>
       <Mass>3.5</Mass>
@@ -304,21 +364,27 @@
     </projectile>
   </ThingDef>
 
-  <!-- Hellsphere cannon -->
+  <!-- 手持火炮 -->
   <ThingDef ParentName="BaseGun">
     <defName>WULA_RW_Handle_Cannon</defName>
     <label>KRc_7"熔岩"</label>
     <description>一般由乌拉帝国跳帮组或骑士军团携带的手持火炮，能够在锁定后连续发射三发炮弹，夷平敌人的复合型工事或舰船内壁，并给敌人送来最炽热的消亡。</description>
-    <techLevel>Spacer</techLevel>
+    <techLevel>Ultra</techLevel>
     <graphicData>
       <texPath>Wula/Weapon/WULA_RW_Handle_Cannon</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1.35</drawSize>
     </graphicData>
     <tradeability>None</tradeability>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+      <researchPrerequisite>WULA_Synth_Weapon_3_Bomb_Technology</researchPrerequisite>
+    </recipeMaker>
     <statBases>
       <MarketValue>1400</MarketValue>
-      <Mass>25</Mass>
+      <Mass>10</Mass>
       <AccuracyTouch>0.6</AccuracyTouch>
       <AccuracyShort>0.6</AccuracyShort>
       <AccuracyMedium>0.6</AccuracyMedium>
@@ -384,6 +450,77 @@
       <damageAmountBase>300</damageAmountBase>
       <explosionRadius>3.9</explosionRadius>
       <screenShakeFactor>1.5</screenShakeFactor>
+    </projectile>
+  </ThingDef>
+
+  <!-- 机械体装备 -->
+  <ThingDef ParentName="BaseGun">
+    <defName>WULA_WM_Rocket_Pod</defName>
+    <label>PRr_34"石英"</label>
+    <description>由乌拉帝国的"萨克森"战车所装备的火箭发射器，可以发射密集的火箭覆盖可见范围内的敌人。</description>
+    <techLevel>Ultra</techLevel>
+    <graphicData>
+      <texPath>Wula/Weapon/WULA_WM_Rocket_Pod</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.35</drawSize>
+    </graphicData>
+    <tradeability>None</tradeability>
+    <statBases>
+      <MarketValue>1400</MarketValue>
+      <Mass>150</Mass>
+      <AccuracyTouch>0.6</AccuracyTouch>
+      <AccuracyShort>0.6</AccuracyShort>
+      <AccuracyMedium>0.6</AccuracyMedium>
+      <AccuracyLong>0.4</AccuracyLong>
+      <RangedWeapon_Cooldown>4.0</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>Wula_AI_Heavy_Panzer_Rocket</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>2.2</warmupTime>
+        <minRange>4</minRange>
+        <defaultProjectile>Bullet_WULA_WM_Rocket_Pod</defaultProjectile>
+        <range>54</range>
+        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+        <burstShotCount>32</burstShotCount>
+        <forcedMissRadius>6.25</forcedMissRadius>
+        <forcedMissEvenDispersal>true</forcedMissEvenDispersal>
+        <targetParams>
+          <canTargetPawns>false</canTargetPawns>
+          <canTargetLocations>true</canTargetLocations>
+          <canTargetBuildings>false</canTargetBuildings>
+        </targetParams>
+        <soundCast>RocketswarmLauncher_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef>
+    <defName>Bullet_WULA_WM_Rocket_Pod</defName>
+    <label>石英非制导火箭</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <texPath>Things/Projectile/Rocket_Swarm</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <explosionRadius>3.5</explosionRadius>
+      <speed>38</speed>
+      <damageAmountBase>50</damageAmountBase>
+      <arcHeightFactor>0.4</arcHeightFactor>
+      <soundExplode>Explosion_Rocket</soundExplode>
     </projectile>
   </ThingDef>
 </Defs>

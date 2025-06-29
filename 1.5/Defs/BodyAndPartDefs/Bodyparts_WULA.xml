@@ -30,4 +30,59 @@
     <bleedRate>0</bleedRate>
     <destroyableByDamage>false</destroyableByDamage>
   </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>WULA_Panzer_Core_Bodypart</defName>
+    <label>核心发动机</label>
+    <hitPoints>150</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <!-- <solid>true</solid> -->
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>BreathingSource</li>
+      <li>EatingSource</li>
+      <li>Spine</li>
+      <li>Pelvis</li>
+    </tags>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>WULA_Outer_Armor_Bodypart</defName>
+    <label>外装甲板</label>
+    <hitPoints>350</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <destroyableByDamage>false</destroyableByDamage>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>WULA_Panzer_OutBrust_Bodypart</defName>
+    <label>反推喷气孔</label>
+    <hitPoints>150</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <destroyableByDamage>false</destroyableByDamage>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>WULA_AI_Core_Bodypart</defName>
+    <label>人格核心</label>
+    <hitPoints>50</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <destroyableByDamage>false</destroyableByDamage>
+    <tags>
+      <li>ConsciousnessSource</li>
+      <li>SightSource</li>
+      <li>HearingSource</li>
+      <li>ManipulationLimbCore</li>
+    </tags>
+  </BodyPartDef>
 </Defs>

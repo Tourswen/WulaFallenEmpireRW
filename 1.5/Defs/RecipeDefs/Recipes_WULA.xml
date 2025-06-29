@@ -26,5 +26,47 @@
     </products>
     <workSkill>Crafting</workSkill>
     <displayPriority>100</displayPriority>
+    
+    <researchPrerequisites>
+      <li>WULA_Base_Technology</li>
+    </researchPrerequisites>
+  </RecipeDef>
+
+  <RecipeDef ParentName="MediumMechanoidRecipe">
+    <defName>WULA_Build_AI_Heavy_Panzer</defName>
+    <label>建造SMp-38"萨克森"</label>
+    <description>建造一台SMp-38"萨克森"智能战车，不包含配套武器。</description>
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>100</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>40</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <products>
+      <Wula_AI_Heavy_Panzer>1</Wula_AI_Heavy_Panzer>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Wula_AI_Heavy_Panzer</ThingDef>
+    </descriptionHyperlinks>
   </RecipeDef>
 </Defs>

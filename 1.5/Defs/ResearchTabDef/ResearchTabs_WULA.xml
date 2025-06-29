@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <ResearchTabDef>
+    <defName>WULA_ResearchTab</defName>
+    <label>乌拉帝国科技</label>
+    <generalTitle>乌拉帝国科技项目</generalTitle>
+    <generalDescription>解锁和乌拉帝国相关的研究项目，破解强大的堕落帝国科技产物和机械体。</generalDescription>
+  </ResearchTabDef>
+</Defs>

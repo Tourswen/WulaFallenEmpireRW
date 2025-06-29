@@ -62,4 +62,26 @@
       <li>MechlinkImplant</li>
     </forcedHediffs>
   </AlienRace.AlienBackstoryDef>
+
+
+  <!-- 战车 -->
+  <AlienRace.AlienBackstoryDef>
+    <defName>WULA_AI_Heavy_Panzer_Child_Backstory01</defName>  
+    <ignoreIllegalLabelCharacterConfigError>False</ignoreIllegalLabelCharacterConfigError>  
+    <slot>Childhood</slot>  
+    <title>重型战车</title>  
+    <titleShort>重型战车</titleShort>  
+    <description>[PAWN_nameDef] 是一台搭载了高等级智能的重型战车，被设计用于支援乌拉帝国部队的突击。</description>  
+    <skillGains>
+      <Shooting>100</Shooting>
+      <Melee>100</Melee>
+    </skillGains>
+    <spawnCategories>
+      <li>WULA_AI_Heavy_Panzer_Backstory_Categories</li>
+    </spawnCategories>
+    <requiredWorkTags>None</requiredWorkTags>
+    <forcedHediffs>
+      <li>WULA_AI_Heavy_Panzer_Hediff</li>
+    </forcedHediffs>
+  </AlienRace.AlienBackstoryDef>
 </Defs>

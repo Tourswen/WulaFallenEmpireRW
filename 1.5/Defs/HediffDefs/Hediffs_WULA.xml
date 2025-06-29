@@ -4,7 +4,7 @@
   <HediffDef>
     <defName>Wula_Synth</defName>
     <label>合成人</label>
-    <description>乌拉帝国制式合成人，拥有一部分机械体的特性——她们无法被点燃、不会中毒、免疫大量疾病、不会抱怨温度，但是自我修复速度极慢，并且需要摄入更多能量以维持机体运转。</description>
+    <description>乌拉帝国制式合成人，拥有一部分机械体的特性——她们无法被点燃、不会中毒、免疫大量疾病、不会抱怨温度，但是无法自我修复，并且需要获取能量以维持机体运转。</description>
     <hediffClass>HediffWithComps</hediffClass>
     <everCurableByItem>false</everCurableByItem>
     <duplicationAllowed>false</duplicationAllowed>
@@ -12,8 +12,8 @@
     <isBad>false</isBad>
     <stages>
       <li>
-        <!-- 自然自愈系数非常低 -->
-        <naturalHealingFactor>0.2</naturalHealingFactor>
+        <!-- 自然自愈系数0 -->
+        <naturalHealingFactor>0</naturalHealingFactor>
         <!-- 不会感到痛苦 -->
         <painFactor>0</painFactor>
         <!-- 抗毒抗火抗寒热 -->
@@ -45,10 +45,77 @@
           <li>MuscleParasites</li>
           <li>OrganDecay</li>
         </makeImmuneTo>
+        <!-- 能力修改 -->
+        <capMods>
+          <!-- 初始意识+20% -->
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.20</offset>
+          </li>
+        </capMods>
       </li>
     </stages>
     <disablesNeeds>
       <li>Rest</li>
+    </disablesNeeds>
+  </HediffDef>
+  <HediffDef>
+    <defName>WULA_AI_Heavy_Panzer_Hediff</defName>
+    <label>智能战车</label>
+    <description>由乌拉帝国建造的智能战车，拥有一部分机械体的特性——无法被点燃、不会中毒、免疫大量疾病、不会抱怨温度，但是无法自我修复。</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <everCurableByItem>false</everCurableByItem>
+    <duplicationAllowed>false</duplicationAllowed>
+    <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <!-- 自然自愈系数0 -->
+        <naturalHealingFactor>0</naturalHealingFactor>
+        <!-- 不会感到痛苦 -->
+        <painFactor>0</painFactor>
+        <!-- 抗毒抗火抗寒热 -->
+        <statOffsets>
+          <!-- 有自带护甲，对热量伤害有高抵抗 -->
+          <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+          <ArmorRating_Blunt>1.2</ArmorRating_Blunt>
+          <ArmorRating_Heat>2.00</ArmorRating_Heat>
+          <!-- 近战闪避 -->
+          <ToxicResistance>1</ToxicResistance>
+          <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">1</ToxicEnvironmentResistance>
+			    <CarryingCapacity>1200</CarryingCapacity>
+        </statOffsets>
+        <statFactors>
+          <!-- 易燃性，作为半机械生物很难起火 -->
+          <Flammability>0</Flammability>
+        </statFactors>
+        <!-- 免疫非纳米机械疾病 -->
+        <makeImmuneTo>
+          <li>Flu</li>
+          <li>Malaria</li>
+          <li>SleepingSickness</li>
+          <li>Plague</li>
+          <li>WoundInfection</li>
+          <li>LungRot</li>
+          <li>GutWorms</li>
+          <li>MuscleParasites</li>
+          <li>OrganDecay</li>
+          <li>SensoryMechanites</li>
+          <li>FibrousMechanites</li>
+        </makeImmuneTo>
+      </li>
+    </stages>
+    <disablesNeeds>
+      <li>Mood</li>
+      <li>Food</li>
+      <li>Rest</li>
+      <li>Joy</li>
+      <li>Beauty</li>
+      <li>Comfort</li>
+      <li>Outdoors</li>
+      <li>Indoors</li>
+      <li>DrugDesire</li>
+      <li>RoomSize</li>
     </disablesNeeds>
   </HediffDef>
 </Defs>

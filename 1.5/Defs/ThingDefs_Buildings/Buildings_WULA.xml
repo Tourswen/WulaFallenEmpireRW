@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <ThingDef ParentName="BuildingBase">
-    <defName>WULA_Mech_Constructor_Small</defName>
+    <defName>WULA_Synth_Constructor</defName>
     <label>乌拉帝国构造体</label>
     <description>一台用于构造乌拉帝国合成人的一次性特殊设备，自备电源，建造完成后将自动启用，工作12天后建造一个新的乌拉帝国合成人。</description>
     <graphicData>
-      <texPath>Wula/Building/WULA_Mech_Constructor_Small</texPath>
+      <texPath>Wula/Building/WULA_Synth_Constructor</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(2,2)</drawSize>
       <damageData>
@@ -23,7 +23,7 @@
     <canOverlapZones>false</canOverlapZones>
     <fillPercent>0.8</fillPercent>
     <statBases>
-      <MaxHitPoints>12800</MaxHitPoints>
+      <MaxHitPoints>280</MaxHitPoints>
       <Flammability>0</Flammability>
       <WorkToBuild>12000</WorkToBuild>
     </statBases>
@@ -60,7 +60,7 @@
       <ThingDef>WULA_Energy_Furnace_Base</ThingDef>
     </descriptionHyperlinks>
     <researchPrerequisites>
-      <li>BasicMechtech</li>
+      <li>WULA_New_Synth_Built_Technology</li>
     </researchPrerequisites>
     <comps>
       <li Class="CompProperties_SpawnerPawn">
@@ -97,8 +97,8 @@
   <!-- 能源核心制造机 -->
   <ThingDef ParentName="BenchBase">
     <defName>WULA_Cube_Productor_BIO</defName>
-    <label>能源核心冲压机（生物能）</label>
-    <description>一台仿制乌拉帝国科技而建造的能源核心制造机，用于在没有电力的情况下，通过燃烧木材输入生物能以制造可维持机械乌拉正常运转的能源核心。</description>
+    <label>乌拉帝国编织体（生物能）</label>
+    <description>一台仿制乌拉帝国科技而建造的塑性构造体，不仅要消耗大量木头用以提供生物能，还只能生产基础的衣物和能源核心用以维持生存——不过它很轻，可以随探险队一起移动。</description>
     <thingClass>Building_WorkTable_HeatPush</thingClass>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
@@ -122,6 +122,7 @@
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
     <statBases>
+      <Mass>5</Mass>
       <WorkToBuild>2000</WorkToBuild>
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
@@ -135,6 +136,9 @@
     <hasInteractionCell>True</hasInteractionCell>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <surfaceType>Item</surfaceType>
+    <researchPrerequisites>
+      <li>WULA_Base_Technology</li>
+    </researchPrerequisites>
     <!-- 可用配方 -->
     <recipes>
      <li>Make_WULA_Charge_Cube</li>
@@ -144,7 +148,7 @@
     </inspectorTabs>
     <comps>
       <li Class="CompProperties_Refuelable">
-        <fuelConsumptionRate>500.0</fuelConsumptionRate>
+        <fuelConsumptionRate>300.0</fuelConsumptionRate>
         <fuelCapacity>150.0</fuelCapacity>
         <fuelFilter>
           <thingDefs>
@@ -170,8 +174,8 @@
   </ThingDef>
   <ThingDef ParentName="BenchBase">
     <defName>WULA_Cube_Productor_Energy</defName>
-    <label>能源核心冲压机（电能）</label>
-    <description>一台仿制乌拉帝国科技而建造的能源核心制造机，可制造维持机械乌拉正常运转的能源核心。</description>
+    <label>乌拉帝国编织体（电能）</label>
+    <description>一台仿制乌拉帝国科技而建造的塑性构造体，可制造乌拉帝国所有的物品。</description>
     <thingClass>Building_WorkTable</thingClass>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
@@ -195,6 +199,9 @@
     <altitudeLayer>Building</altitudeLayer>
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
+    <researchPrerequisites>
+      <li>WULA_Adv_WorkTable_Technology</li>
+    </researchPrerequisites>
     <statBases>
       <WorkToBuild>2000</WorkToBuild>
       <MaxHitPoints>180</MaxHitPoints>
@@ -259,6 +266,9 @@
     <designationHotKey>Misc2</designationHotKey>
     <uiOrder>2010</uiOrder>
     <castEdgeShadows>false</castEdgeShadows>
+    <researchPrerequisites>
+      <li>WULA_Base_Technology</li>
+    </researchPrerequisites>
     <building>
       <paintable>true</paintable>
       <bed_showSleeperBody>true</bed_showSleeperBody>
@@ -281,6 +291,139 @@
         <glowColor>(177, 0, 31, 0)</glowColor>
         <colorPickerEnabled>true</colorPickerEnabled>
         <darklightToggle>true</darklightToggle>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <!-- 大型生产器 -->
+  <ThingDef ParentName="BuildingBase">
+    <thingClass>Building_MechGestator</thingClass>
+    <containedPawnsSelectable>true</containedPawnsSelectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.5</fillPercent>
+    <hasInteractionCell>true</hasInteractionCell>
+    <castEdgeShadows>false</castEdgeShadows>
+    <pathCost>42</pathCost>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+      <ai_chillDestination>false</ai_chillDestination>
+      <buildingTags>
+        <li>Production</li>
+        <li>Biotech</li>
+      </buildingTags>
+    </building>
+    <designationCategory>Biotech</designationCategory>
+    <uiOrder>2400</uiOrder>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <placeWorkers>
+      <li>PlaceWorker_MechGestatorTop</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_WasteProducer" />
+      <li Class="CompProperties_Flickable"/>
+    </comps>
+
+
+  <defName>WULA_Large_Mechine_proudctor</defName>
+    <label>乌拉帝国机械工厂</label>
+    <description>乌拉帝国所建造的一种机械工厂，能构建各种除了合成人外的乌拉帝国机械体。</description>
+    <graphicData>
+      <texPath>Wula/Building/WULA_Heavy_War_Machine_Productor</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(4, 4)</drawSize>
+    </graphicData>
+    <interactionCellOffset>(1,0,3)</interactionCellOffset>
+    <statBases>
+      <MaxHitPoints>1250</MaxHitPoints>
+      <WorkToBuild>16000</WorkToBuild>
+      <Mass>35</Mass>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <size>(4,4)</size>
+    <costList>
+      <Steel>300</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <researchPrerequisites>
+      <li>StandardMechtech</li>
+    </researchPrerequisites>
+    <building>
+      <barDrawData>
+        <north>
+          <preRotationOffset>(-1.06, 0.91)</preRotationOffset>
+          <size>(0, 0)</size>
+        </north>
+        <south>
+          <preRotationOffset>(-1.06, 0.82)</preRotationOffset>
+          <size>(0, 0)</size>
+        </south>
+        <east>
+          <preRotationOffset>(1.06, -0.97)</preRotationOffset>
+          <size>(0, 0)</size>
+        </east>
+        <west>
+          <preRotationOffset>(-1.06, -0.97)</preRotationOffset>
+          <size>(0, 0)</size>
+        </west>
+      </barDrawData>
+      <formingGraphicData>
+        <texPath>Things/Pawn/Mechanoid/HalfGestatedMechSmall</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+        <drawSize>(0,0)</drawSize>
+      </formingGraphicData>
+      <formingMechPerRotationOffset>
+        <li>(0, 0, 0.45)</li>
+        <li>(0, 0, 0.45)</li>
+        <li>(0, 0, 0.45)</li>
+        <li>(0, 0, 0.45)</li>
+      </formingMechPerRotationOffset>
+      <mechGestatorCylinderGraphic>
+        <texPath>Things/Building/Production/MechGestatorStandardGlass</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(0,0)</drawSize>
+        <shaderType>Transparent</shaderType>
+      </mechGestatorCylinderGraphic>
+      <mechGestatorTopGraphic>
+        <texPath>Things/Building/Production/MechGestatorStandardTop</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(0,0)</drawSize>
+      </mechGestatorTopGraphic>
+      <gestatorFormingMote>
+        <north></north>
+        <east></east>
+        <west></west>
+        <south></south>
+      </gestatorFormingMote>
+      <gestatorCycleCompleteMote>
+        <north></north>
+        <east></east>
+        <west></west>
+        <south></south>
+      </gestatorCycleCompleteMote>
+      <gestatorFormedMote>
+        <north></north>
+        <east></east>
+        <west></west>
+        <south></south>
+      </gestatorFormedMote>
+    </building>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <recipes>
+      <li>WULA_Build_AI_Heavy_Panzer</li>
+    </recipes>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>500</basePowerConsumption>
+        <idlePowerDraw>50</idlePowerDraw>
       </li>
     </comps>
   </ThingDef>

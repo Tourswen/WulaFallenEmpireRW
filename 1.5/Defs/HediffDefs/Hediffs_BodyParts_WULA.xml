@@ -16,9 +16,10 @@
       <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
     <recipeMaker>
-      <researchPrerequisite>Machining</researchPrerequisite>
+      <researchPrerequisite>WULA_Base_Technology</researchPrerequisite>
       <recipeUsers>
-        <li>TableMachining</li>
+        <li>WULA_Cube_Productor_BIO</li>
+        <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
     </recipeMaker>
     <!-- <techHediffsTags>
@@ -42,9 +43,10 @@
       <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
     <recipeMaker>
-      <researchPrerequisite>Machining</researchPrerequisite>
+      <researchPrerequisite>WULA_Base_Technology</researchPrerequisite>
       <recipeUsers>
-        <li>TableMachining</li>
+        <li>WULA_Cube_Productor_BIO</li>
+        <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
     </recipeMaker>
     <!-- <techHediffsTags>
@@ -66,14 +68,6 @@
           <MechBandwidth>-4</MechBandwidth>
           <MechControlGroups>-1</MechControlGroups>
         </statOffsets>
-        <!-- 能力修改 -->
-        <capMods>
-          <!-- 初始意识+20% -->
-          <li>
-            <capacity>Consciousness</capacity>
-            <offset>0.20</offset>
-          </li>
-        </capMods>
       </li>
     </stages>
     <defaultInstallPart>WULA_Addons_Antenna_Bodypart</defaultInstallPart>
@@ -100,6 +94,9 @@
     <effectWorking>Smith</effectWorking>
     <soundWorking>Recipe_Smith</soundWorking>
     <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <researchPrerequisites>
+      <li>WULA_Base_Technology</li>
+    </researchPrerequisites>
 
     <ingredients Inherit="False">
       <li>
@@ -113,7 +110,7 @@
     </ingredients>
   </RecipeDef>
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
-    <defName>WULA_Fix_Hand_Base</defName>
+    <defName>WULA_Fix_Arm_Base</defName>
     <label>修复臂膀</label>
     <description>将这个合成人的手部、手臂和肩部的破损修复，并恢复该部位生命值。比起修复单个部位花费，时间、资源需求和技能等级要求更高。</description>
     <jobString>正在修复手部</jobString>
@@ -133,6 +130,9 @@
     <effectWorking>Smith</effectWorking>
     <soundWorking>Recipe_Smith</soundWorking>
     <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <researchPrerequisites>
+      <li>WULA_Repair_Arm_Technology</li>
+    </researchPrerequisites>
 
     <ingredients Inherit="False">
       <li>
@@ -166,6 +166,9 @@
     <effectWorking>Smith</effectWorking>
     <soundWorking>Recipe_Smith</soundWorking>
     <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <researchPrerequisites>
+      <li>WULA_Repair_Arm_Technology</li>
+    </researchPrerequisites>
 
     <ingredients Inherit="False">
       <li>
@@ -199,6 +202,9 @@
     <effectWorking>Smith</effectWorking>
     <soundWorking>Recipe_Smith</soundWorking>
     <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <researchPrerequisites>
+      <li>WULA_Base_Technology</li>
+    </researchPrerequisites>
 
     <ingredients Inherit="False">
       <li>
@@ -211,7 +217,50 @@
       </li>
     </ingredients>
   </RecipeDef>
-  
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>WULA_Fix_Head_Base</defName>
+    <label>修复头部</label>
+    <description>将这个合成人的头部和颈部的破损修复，并恢复这些部位的生命值。</description>
+    <jobString>正在修复头部</jobString>
+    <appliedOnFixedBodyParts>
+      <li>Neck</li>
+    </appliedOnFixedBodyParts>
+    <uiIconThing>Steel</uiIconThing>
+    <anesthetize>false</anesthetize>
+    <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
+    <addsHediff>WULA_Body_Fixed</addsHediff>
+    
+    <workAmount>1500</workAmount>
+    <skillRequirements>
+      <Crafting>3</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <researchPrerequisites>
+      <li>WULA_Repair_Arm_Technology</li>
+    </researchPrerequisites>
+
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+  </RecipeDef>
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
     <defName>WULA_Fix_Torso_Base</defName>
     <label>修复全身</label>
@@ -226,6 +275,9 @@
     <addsHediff>WULA_Body_Fixed</addsHediff>
     
     <workAmount>7000</workAmount>
+    <researchPrerequisites>
+      <li>WULA_Repair_All_Technology</li>
+    </researchPrerequisites>
     <skillRequirements>
       <Crafting>10</Crafting>
     </skillRequirements>
@@ -249,7 +301,7 @@
             <li>ComponentIndustrial</li>
           </thingDefs>
         </filter>
-        <count>2</count>
+        <count>3</count>
       </li>
     </ingredients>
   </RecipeDef>

@@ -3,7 +3,10 @@
   <!-- 贵族服装 -->
   <ThingDef Name="NSFV_ApparelRoyalBase" ParentName="ApparelMakeableBase" Abstract="True">
     <recipeMaker>
-      <researchPrerequisite>NobleApparel</researchPrerequisite>
+      <researchPrerequisite>WULA_Synth_Clothes_3_Technology</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
       <displayPriority>225</displayPriority>
     </recipeMaker>
     <costStuffCount>125</costStuffCount>
@@ -123,6 +126,11 @@
       <WorkSpeedGlobal>0.15</WorkSpeedGlobal> -->
     </equippedStatOffsets>
     <recipeMaker>
+      <researchPrerequisite>WULA_Synth_Clothes_Technology</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_BIO</li>
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <skillRequirements>
         <Crafting>3</Crafting>
@@ -159,14 +167,19 @@
       <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
     </apparel>
     <equippedStatOffsets>
-			<PlantWorkSpeed>0.2</PlantWorkSpeed>
-			<PlantHarvestYield>0.2</PlantHarvestYield>
+			<PlantWorkSpeed>0.15</PlantWorkSpeed>
+			<PlantHarvestYield>0.1</PlantHarvestYield>
 			<CookSpeed>0.2</CookSpeed>
 			<ButcheryFleshSpeed>0.2</ButcheryFleshSpeed>
       <!-- <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
       <WorkSpeedGlobal>0.15</WorkSpeedGlobal> -->
     </equippedStatOffsets>
     <recipeMaker>
+      <researchPrerequisite>WULA_Synth_Clothes_Technology</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_BIO</li>
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <skillRequirements>
         <Crafting>3</Crafting>
@@ -182,6 +195,11 @@
       <li>Headgear</li>
     </thingCategories>
     <recipeMaker>
+      <researchPrerequisite>WULA_Synth_Clothes_Technology</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_BIO</li>
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
       <displayPriority>105</displayPriority>
     </recipeMaker>
     <graphicData>
@@ -214,45 +232,6 @@
 
   <!-- 内衬 -->
   <ThingDef ParentName="ApparelMakeableBase">
-		<defName>WULA_Body_Suit</defName>
-		<label>乌拉帝国驾驶服</label>
-		<description>这是乌拉帝国的战斗人员专用的制服，拥有一整套神经接口用以和其他外接护甲连接。它可以增加穿戴者的战斗技能，但是在干活的时候会束手束脚不太方便。</description>
-    <graphicData>
-      <texPath>Wula/Apparel/WULA_Body_Suit</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <apparel>
-      <tags>
-        <li>Wula_Apparel</li>
-      </tags>
-      <bodyPartGroups>
-				<li>Torso</li>
-      </bodyPartGroups>
-      <layers>
-        <li>OnSkin</li>
-      </layers>
-      <wornGraphicPath>Wula/Apparel/WULA_Body_Suit</wornGraphicPath>
-      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
-      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
-      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
-    </apparel>
-    <equippedStatOffsets>
-      <WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
-      <AimingDelayFactor>-0.1</AimingDelayFactor>
-      <ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
-      <MeleeDamageFactor>0.2</MeleeDamageFactor>
-      <MeleeCooldownFactor>-0.1</MeleeCooldownFactor>
-      <MoveSpeed>0.5</MoveSpeed>
-    </equippedStatOffsets>
-    <recipeMaker>
-      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-      <skillRequirements>
-        <Crafting>5</Crafting>
-      </skillRequirements>
-    </recipeMaker>
-    <possessionCount>1</possessionCount>
-  </ThingDef>
-  <ThingDef ParentName="ApparelMakeableBase">
 		<defName>WULA_Bodystocking</defName>
 		<label>乌拉帝国连身黑丝</label>
 		<description>这就是普通的连身黑丝，在哪里造的有什么关系吗？它没有什么别的功能，除了提供一些保暖能力——话说回来，乌拉合成人又不会感到冷。</description>
@@ -281,6 +260,11 @@
 			<StuffEffectMultiplierInsulation_Heat>0.10</StuffEffectMultiplierInsulation_Heat>
     </equippedStatOffsets>
     <recipeMaker>
+      <researchPrerequisite>WULA_Synth_Clothes_Technology</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_BIO</li>
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     </recipeMaker>
     <possessionCount>1</possessionCount>
@@ -314,7 +298,55 @@
 			<StuffEffectMultiplierInsulation_Heat>0.10</StuffEffectMultiplierInsulation_Heat>
     </equippedStatOffsets>
     <recipeMaker>
+      <researchPrerequisite>WULA_Synth_Clothes_Technology</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_BIO</li>
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    </recipeMaker>
+    <possessionCount>1</possessionCount>
+  </ThingDef>
+  <ThingDef ParentName="ApparelMakeableBase">
+		<defName>WULA_Body_Suit</defName>
+		<label>乌拉帝国驾驶服</label>
+		<description>这是乌拉帝国的战斗人员专用的制服，拥有一整套神经接口用以和其他外接护甲连接。它可以增加穿戴者的战斗技能，但是在干活的时候会束手束脚不太方便。</description>
+    <graphicData>
+      <texPath>Wula/Apparel/WULA_Body_Suit</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <apparel>
+      <tags>
+        <li>Wula_Apparel</li>
+      </tags>
+      <bodyPartGroups>
+				<li>Torso</li>
+      </bodyPartGroups>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <wornGraphicPath>Wula/Apparel/WULA_Body_Suit</wornGraphicPath>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+    </apparel>
+    <equippedStatOffsets>
+      <WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
+      <AimingDelayFactor>-0.1</AimingDelayFactor>
+      <ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
+      <MeleeDamageFactor>0.2</MeleeDamageFactor>
+      <MeleeCooldownFactor>-0.1</MeleeCooldownFactor>
+      <MoveSpeed>0.5</MoveSpeed>
+    </equippedStatOffsets>
+    <recipeMaker>
+      <researchPrerequisite>WULA_Synth_Clothes_2_Technology</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
     </recipeMaker>
     <possessionCount>1</possessionCount>
   </ThingDef>
@@ -332,13 +364,13 @@
     <recipeMaker>
       <displayPriority>105</displayPriority>
       <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
-      <researchPrerequisite>PoweredArmor</researchPrerequisite>
+      <researchPrerequisite>WULA_Synth_Armor_2_Technology</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
       <skillRequirements>
         <Crafting>7</Crafting>
       </skillRequirements>
-      <recipeUsers Inherit="False">
-        <li>FabricationBench</li>
-      </recipeUsers>
     </recipeMaker>
     <graphicData>
       <texPath>Wula/Apparel/WULA_Knight_PowerArmor</texPath>
@@ -355,9 +387,11 @@
       <EquipDelay>35</EquipDelay>
     </statBases>
     <equippedStatOffsets>
+			<MoveSpeed>-0.25</MoveSpeed>
       <WorkSpeedGlobal>-0.5</WorkSpeedGlobal>
       <IncomingDamageFactor>-0.5</IncomingDamageFactor>
       <StaggerDurationFactor>-0.75</StaggerDurationFactor>
+			<CarryingCapacity>60</CarryingCapacity>
     </equippedStatOffsets>
     <costList>
       <!-- <ComponentSpacer>4</ComponentSpacer>
@@ -403,7 +437,7 @@
         <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
       </li>
       <li Class="CompProperties_Shield">
-        <startingTicksToReset>1200</startingTicksToReset><!-- 1 mins -->
+        <startingTicksToReset>3600</startingTicksToReset><!-- 1 mins -->
         <minDrawSize>2.5</minDrawSize>
         <maxDrawSize>2.8</maxDrawSize>
         <energyLossPerDamage>0.01</energyLossPerDamage>
@@ -449,12 +483,12 @@
     <recipeMaker>
       <displayPriority>105</displayPriority>
       <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
-      <researchPrerequisite>PoweredArmor</researchPrerequisite>
       <skillRequirements>
         <Crafting>7</Crafting>
       </skillRequirements>
+      <researchPrerequisite>WULA_Synth_Armor_2_Technology</researchPrerequisite>
       <recipeUsers Inherit="False">
-        <li>FabricationBench</li>
+        <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
     </recipeMaker>
     <graphicData>
@@ -500,5 +534,4 @@
       <li>RewardStandardHighFreq</li>
     </thingSetMakerTags>
   </ThingDef>
-
 </Defs>
