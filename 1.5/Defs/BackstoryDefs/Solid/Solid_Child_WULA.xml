@@ -28,7 +28,6 @@
     <forcedHediffs>
       <li>Wula_Synth</li>
       <li>WULA_Addons_Antenna_Hediff_Base</li>
-      <li>WULA_Alloy_Framework_Hediff_Base</li>
       <li>MechlinkImplant</li>
     </forcedHediffs>
   </AlienRace.AlienBackstoryDef>
@@ -60,7 +59,6 @@
     <forcedHediffs>
       <li>Wula_Synth</li>
       <li>WULA_Addons_Antenna_Hediff_Base</li>
-      <li>WULA_Alloy_Framework_Hediff_Base</li>
       <li>MechlinkImplant</li>
     </forcedHediffs>
   </AlienRace.AlienBackstoryDef>

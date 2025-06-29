@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+  <!-- 能源炉 -->
   <ThingDef ParentName="BodyPartProstheticImperialBase">
     <defName>WULA_Energy_Furnace_Base</defName>
     <label>中央能源炉（基础）</label>
@@ -24,31 +25,10 @@
       <li>FieldHand</li>
     </techHediffsTags> -->
   </ThingDef>
+
+  <!-- 天线 -->
   <ThingDef ParentName="BodyPartProstheticImperialBase">
-    <defName>WULA_Alloy_Framework_Base</defName>
-    <label>躯体合金框架（基础）</label>
-    <description>机械乌拉的核心部件之一，负责替代骨架支撑身体。</description>
-    <!-- <descriptionHyperlinks><RecipeDef>InstallFieldHand</RecipeDef></descriptionHyperlinks> -->
-    <!-- <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags> -->
-    <graphicData>
-      <texPath>Things/Item/Health/HealthItem</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <costList>
-      <Steel>100</Steel>
-    </costList>
-    <recipeMaker>
-      <researchPrerequisite>Machining</researchPrerequisite>
-      <recipeUsers>
-        <li>TableMachining</li>
-      </recipeUsers>
-    </recipeMaker>
-    <!-- <techHediffsTags>
-      <li>FieldHand</li>
-    </techHediffsTags> -->
-  </ThingDef>
-  <ThingDef ParentName="BodyPartProstheticImperialBase">
-    <defName>WULA_Antenna_Base</defName>
+    <defName>WULA_Addons_Antenna_Base</defName>
     <label>上行链路天线（基础）</label>
     <description>机械乌拉的核心部件之一，除了接收来自乌拉帝国人工智能网络“演算圆环”的信号外，还能兼职控制其他低级机械体。</description>
     <!-- <descriptionHyperlinks><RecipeDef>InstallFieldHand</RecipeDef></descriptionHyperlinks> -->
@@ -71,7 +51,6 @@
       <li>FieldHand</li>
     </techHediffsTags> -->
   </ThingDef>
-
   <HediffDef ParentName="ImplantHediffBase">
     <defName>WULA_Addons_Antenna_Hediff_Base</defName>
     <hediffClass>Hediff_Mechlink</hediffClass>
@@ -99,31 +78,190 @@
     </stages>
     <defaultInstallPart>WULA_Addons_Antenna_Bodypart</defaultInstallPart>
   </HediffDef>
-  <HediffDef ParentName="ImplantHediffBase">
-    <defName>WULA_Alloy_Framework_Hediff_Base</defName>
-    <hediffClass>Hediff_Mechlink</hediffClass>
-    <label>躯体合金框架</label>
-    <description>机械乌拉体内负责替代骨架支撑身体的框架，能够提供强大的防御力。</description>
-    <descriptionShort>一副替代骨架支撑身体的框架。</descriptionShort>
-    <isBad>false</isBad>
-    <duplicationAllowed>false</duplicationAllowed>
-    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
-    <stages>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>WULA_Fix_Hand_Base</defName>
+    <label>修复手部</label>
+    <description>将这个合成人的手部破损修复，并恢复该部位生命值。</description>
+    <jobString>正在修复手部</jobString>
+    <appliedOnFixedBodyParts>
+      <li>Hand</li>
+    </appliedOnFixedBodyParts>
+    <uiIconThing>Steel</uiIconThing>
+    <anesthetize>false</anesthetize>
+    <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
+    <addsHediff>WULA_Body_Fixed</addsHediff>
+    
+    <workAmount>1500</workAmount>
+    <skillRequirements>
+      <Crafting>3</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+
+    <ingredients Inherit="False">
       <li>
-        <statFactors>
-          <!-- 易燃性，作为半机械生物很难起火 -->
-          <Flammability>0</Flammability>
-        </statFactors>
-        <statOffsets>
-          <!-- 有自带护甲，对热量伤害有高抵抗 -->
-          <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
-          <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
-          <ArmorRating_Heat>2.00</ArmorRating_Heat>
-          <!-- 近战闪避 -->
-          <MeleeDodgeChance>1.25</MeleeDodgeChance>
-        </statOffsets>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
       </li>
-    </stages>
-    <defaultInstallPart>WULA_Alloy_Framework_Bodypart</defaultInstallPart>
+    </ingredients>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>WULA_Fix_Hand_Base</defName>
+    <label>修复臂膀</label>
+    <description>将这个合成人的手部、手臂和肩部的破损修复，并恢复该部位生命值。比起修复单个部位花费，时间、资源需求和技能等级要求更高。</description>
+    <jobString>正在修复手部</jobString>
+    <appliedOnFixedBodyParts>
+      <li>Shoulder</li>
+    </appliedOnFixedBodyParts>
+    <uiIconThing>Steel</uiIconThing>
+    <anesthetize>false</anesthetize>
+    <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
+    <addsHediff>WULA_Body_Fixed</addsHediff>
+    
+    <workAmount>3000</workAmount>
+    <skillRequirements>
+      <Crafting>7</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>WULA_Fix_Leg_Base</defName>
+    <label>修复腿部</label>
+    <description>将这个合成人的腿部和足部破损修复，并恢复这些部位的生命值。比起修复单个部位花费，时间、资源需求和技能等级要求更高。</description>
+    <jobString>正在修复腿部</jobString>
+    <appliedOnFixedBodyParts>
+      <li>Leg</li>
+    </appliedOnFixedBodyParts>
+    <uiIconThing>Steel</uiIconThing>
+    <anesthetize>false</anesthetize>
+    <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
+    <addsHediff>WULA_Body_Fixed</addsHediff>
+    
+    <workAmount>3000</workAmount>
+    <skillRequirements>
+      <Crafting>7</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>WULA_Fix_Foot_Base</defName>
+    <label>修复足部</label>
+    <description>将这个合成人的足部破损修复，并恢复这些部位的生命值。</description>
+    <jobString>正在修复足部</jobString>
+    <appliedOnFixedBodyParts>
+      <li>Foot</li>
+    </appliedOnFixedBodyParts>
+    <uiIconThing>Steel</uiIconThing>
+    <anesthetize>false</anesthetize>
+    <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
+    <addsHediff>WULA_Body_Fixed</addsHediff>
+    
+    <workAmount>1500</workAmount>
+    <skillRequirements>
+      <Crafting>3</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>WULA_Fix_Torso_Base</defName>
+    <label>修复全身</label>
+    <description>此项修复将修复这个合成人全身损伤，并恢复所有部位生命值。比起修复单个部位花费，时间、资源需求和技能等级要求更高。</description>
+    <jobString>正在修复躯干</jobString>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <uiIconThing>Steel</uiIconThing>
+    <anesthetize>false</anesthetize>
+    <surgeryOutcomeEffect IsNull="True"/> <!-- Always succeeds -->
+    <addsHediff>WULA_Body_Fixed</addsHediff>
+    
+    <workAmount>7000</workAmount>
+    <skillRequirements>
+      <Crafting>10</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+  </RecipeDef>
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>WULA_Body_Fixed</defName>
+    <hediffClass>Hediff_Implant</hediffClass>
+    <label>已修复</label>
+    <description>这个合成人的破损已被细致地修复。</description>
+    <descriptionShort>已修复</descriptionShort>
+    <isBad>false</isBad>
+    <duplicationAllowed>true</duplicationAllowed>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
   </HediffDef>
 </Defs>

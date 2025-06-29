@@ -5,30 +5,20 @@
     <label>中央能源炉</label>
     <hitPoints>120</hitPoints>
     <skinCovered>false</skinCovered>
-    <solid>true</solid>
+    <!-- <solid>true</solid> -->
     <tags>
       <li>BloodPumpingSource</li>
       <li>BreathingSource</li>
       <li>BloodFiltrationKidney</li>
       <li>BloodFiltrationLiver</li>
       <li>MetabolismSource</li>
-    </tags>
-  </BodyPartDef>
-  <BodyPartDef>
-    <defName>WULA_Alloy_Framework_Bodypart</defName>
-    <label>躯体合金框架</label>
-    <hitPoints>350</hitPoints>
-    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-    <skinCovered>false</skinCovered>
-    <solid>true</solid>
-    <bleedRate>0</bleedRate>
-    <tags>
-      <li>BreathingSourceCage</li>
+      <li>EatingSource</li>
       <li>Spine</li>
       <li>Pelvis</li>
       <li>ManipulationLimbSegment</li>
+      <li>TalkingSource</li>
     </tags>
-    <destroyableByDamage>false</destroyableByDamage>
+    <spawnThingOnRemoved>WULA_Energy_Furnace_Base</spawnThingOnRemoved>
   </BodyPartDef>
   <BodyPartDef>
     <defName>WULA_Addons_Antenna_Bodypart</defName>
@@ -36,14 +26,8 @@
     <hitPoints>30</hitPoints>
     <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
     <skinCovered>false</skinCovered>
-    <solid>true</solid>
+    <!-- <solid>true</solid> -->
     <bleedRate>0</bleedRate>
     <destroyableByDamage>false</destroyableByDamage>
-    <!-- <tags>
-      <li>BreathingSourceCage</li>
-      <li>Spine</li>
-      <li>Pelvis</li>
-      <li>ManipulationLimbSegment</li>
-    </tags> -->
   </BodyPartDef>
 </Defs>

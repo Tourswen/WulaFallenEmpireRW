@@ -18,11 +18,21 @@
         <painFactor>0</painFactor>
         <!-- 抗毒抗火抗寒热 -->
         <statOffsets>
+          <!-- 有自带护甲，对热量伤害有高抵抗 -->
+          <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+          <ArmorRating_Heat>2.00</ArmorRating_Heat>
+          <!-- 近战闪避 -->
+          <MeleeDodgeChance>1.25</MeleeDodgeChance>
           <ComfyTemperatureMin>-100</ComfyTemperatureMin>
           <ComfyTemperatureMax>120</ComfyTemperatureMax>
           <ToxicResistance>1</ToxicResistance>
           <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">1</ToxicEnvironmentResistance>
         </statOffsets>
+        <statFactors>
+          <!-- 易燃性，作为半机械生物很难起火 -->
+          <Flammability>0</Flammability>
+        </statFactors>
         <!-- 免疫非纳米机械疾病 -->
         <makeImmuneTo>
           <li>Flu</li>

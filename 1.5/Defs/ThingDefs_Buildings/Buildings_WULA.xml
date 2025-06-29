@@ -48,18 +48,16 @@
     <repairEffect>ConstructMetal</repairEffect>
     <designationCategory>Biotech</designationCategory>
     <costList>
-      <WULA_Antenna_Base>1</WULA_Antenna_Base>
+      <WULA_Addons_Antenna_Base>1</WULA_Addons_Antenna_Base>
       <WULA_Energy_Furnace_Base>1</WULA_Energy_Furnace_Base>
-      <WULA_Alloy_Framework_Base>1</WULA_Alloy_Framework_Base>
       <ComponentIndustrial>4</ComponentIndustrial>
       <Steel>100</Steel>
       <Chemfuel>100</Chemfuel>
     </costList>
     <descriptionHyperlinks>
       <ThingDef>WulaSpecies</ThingDef>
-      <ThingDef>WULA_Antenna_Base</ThingDef>
+      <ThingDef>WULA_Addons_Antenna_Base</ThingDef>
       <ThingDef>WULA_Energy_Furnace_Base</ThingDef>
-      <ThingDef>WULA_Alloy_Framework_Base</ThingDef>
     </descriptionHyperlinks>
     <researchPrerequisites>
       <li>BasicMechtech</li>

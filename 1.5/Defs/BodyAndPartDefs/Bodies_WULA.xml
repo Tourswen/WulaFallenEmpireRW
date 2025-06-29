@@ -11,52 +11,6 @@
 				<li>Torso</li>
 			</groups>
 			<parts>
-				<!-- 机械框架，代替了肋骨、胸骨、骨盆、脊椎 -->
-				<li>
-					<def>WULA_Alloy_Framework_Bodypart</def>
-					<coverage>0.076</coverage>
-					<depth>Inside</depth>
-					<groups>
-						<li>Torso</li>
-					</groups>
-				</li>
-				<!-- 肋骨 -->
-				<!-- <li>
-					<def>Ribcage</def>
-					<coverage>0.036</coverage>
-					<depth>Inside</depth>
-					<groups>
-						<li>Torso</li>
-					</groups>
-				</li> -->
-				<!-- 胸骨 -->
-				<!-- <li>
-					<def>Sternum</def>
-					<coverage>0.015</coverage>
-					<depth>Inside</depth>
-					<groups>
-						<li>Torso</li>
-					</groups>
-				</li> -->
-				<!-- 骨盆 -->
-				<!-- <li>
-					<def>Pelvis</def>
-					<coverage>0.025</coverage>
-					<height>Bottom</height>
-					<depth>Inside</depth>
-					<groups>
-						<li>Torso</li>
-					</groups>
-				</li> -->
-				<!-- 脊椎 -->
-				<!-- <li>
-					<def>Spine</def>
-					<coverage>0.025</coverage>
-					<depth>Inside</depth>
-					<groups>
-						<li>Torso</li>
-					</groups>
-				</li> -->
 				<!-- 能源炉，代替了胃、心脏、肺、肾、肝 -->
 				<li>
 					<def>WULA_Energy_Furnace_Bodypart</def>
@@ -67,74 +21,10 @@
 						<li>Torso</li>
 					</groups>
 				</li>
-				<!-- 胃 -->
-				<!-- <li>
-					<def>Stomach</def>
-					<coverage>0.025</coverage>
-					<depth>Inside</depth>
-					<groups>
-						<li>Torso</li>
-					</groups>
-				</li> -->
-				<!-- 心脏 -->
-				<!-- <li>
-					<def>Heart</def>
-					<coverage>0.020</coverage>
-					<depth>Inside</depth>
-					<groups>
-						<li>Torso</li>
-					</groups>
-				</li> -->
-				<!-- 肺 -->
-				<!-- <li>
-					<def>Lung</def>
-					<customLabel>left lung</customLabel>
-					<coverage>0.025</coverage>
-					<depth>Inside</depth>
-					<groups>
-						<li>Torso</li>
-					</groups>
-				</li>
-				<li>
-					<def>Lung</def>
-					<customLabel>right lung</customLabel>
-					<coverage>0.025</coverage>
-					<depth>Inside</depth>
-					<groups>
-						<li>Torso</li>
-					</groups>
-				</li> -->
-				<!-- 肾 -->
-				<!-- <li>
-					<def>Kidney</def>
-					<customLabel>left kidney</customLabel>
-					<coverage>0.017</coverage>
-					<depth>Inside</depth>
-					<groups>
-						<li>Torso</li>
-					</groups>
-				</li>
-				<li>
-					<def>Kidney</def>
-					<customLabel>right kidney</customLabel>
-					<coverage>0.017</coverage>
-					<depth>Inside</depth>
-					<groups>
-						<li>Torso</li>
-					</groups>
-				</li> -->
-				<!-- 肝 -->
-				<!-- <li>
-					<def>Liver</def>
-					<coverage>0.025</coverage>
-					<depth>Inside</depth>
-					<groups>
-						<li>Torso</li>
-					</groups>
-				</li> -->
 				<!-- 脖子和头部 -->
 				<li>
 					<def>Neck</def>
+					<customLabel>脖子</customLabel>
 					<coverage>0.075</coverage>
 					<height>Top</height>
 					<groups>
@@ -144,6 +34,7 @@
 						<!-- 头部 -->
 						<li>
 							<def>Head</def>
+							<customLabel>头部</customLabel>
 							<coverage>0.80</coverage>
 							<groups>
 								<li>UpperHead</li>
@@ -153,6 +44,7 @@
 							<parts>
 								<li>
 									<def>Skull</def>
+									<customLabel>颅骨</customLabel>
 									<coverage>0.18</coverage>
 									<depth>Inside</depth>
 									<groups>
@@ -162,6 +54,7 @@
 									<parts>
 										<li>
 											<def>Brain</def>
+											<customLabel>生物处理器</customLabel>
 											<coverage>0.8</coverage>
 											<groups>
 												<li>UpperHead</li>
@@ -172,7 +65,7 @@
 								</li>
 								<li>
 									<def>Eye</def>
-									<customLabel>left eye</customLabel>
+									<customLabel>左视觉传感器</customLabel>
 									<coverage>0.07</coverage>
 									<groups>
 										<li>FullHead</li>
@@ -181,7 +74,7 @@
 								</li>
 								<li>
 									<def>Eye</def>
-									<customLabel>right eye</customLabel>
+									<customLabel>右视觉传感器</customLabel>
 									<coverage>0.07</coverage>
 									<groups>
 										<li>FullHead</li>
@@ -190,7 +83,7 @@
 								</li>
 								<li>
 									<def>Ear</def>
-									<customLabel>left ear</customLabel>
+									<customLabel>左听觉传感器</customLabel>
 									<coverage>0.07</coverage>
 									<groups>
 										<li>UpperHead</li>
@@ -199,7 +92,7 @@
 								</li>
 								<li>
 									<def>Ear</def>
-									<customLabel>right ear</customLabel>
+									<customLabel>右听觉传感器</customLabel>
 									<coverage>0.07</coverage>
 									<groups>
 										<li>UpperHead</li>
@@ -208,18 +101,11 @@
 								</li>
 								<li>
 									<def>Nose</def>
+									<customLabel>嗅觉传感器</customLabel>
 									<coverage>0.10</coverage>
 									<groups>
 										<li>FullHead</li>
 										<li>Teeth</li>
-									</groups>
-								</li>
-								<li>
-									<def>Jaw</def>
-									<coverage>0.15</coverage>
-									<groups>
-										<li>Teeth</li>
-										<li>FullHead</li>
 									</groups>
 								</li>
 								<!-- 天线 -->
@@ -237,13 +123,13 @@
 				<!-- 肩部 -->
 				<li>
 					<def>Shoulder</def>
-					<customLabel>left shoulder</customLabel>
+					<customLabel>左肩</customLabel>
 					<coverage>0.12</coverage>
 					<groups>
 						<li>Shoulders</li>
 					</groups>
 					<parts>
-						<li>
+						<!-- <li>
 							<def>Clavicle</def>
 							<customLabel>left clavicle</customLabel>
 							<coverage>0.09</coverage>
@@ -252,16 +138,16 @@
 							<groups>
 								<li>Torso</li>
 							</groups>
-						</li>
+						</li> -->
 						<li>
 							<def>Arm</def>
-							<customLabel>left arm</customLabel>
+							<customLabel>左臂</customLabel>
 							<coverage>0.77</coverage>
 							<groups>
 								<li>Arms</li>
 							</groups>
 							<parts>
-								<li>
+								<!-- <li>
 									<def>Humerus</def>
 									<customLabel>left humerus</customLabel>
 									<coverage>0.1</coverage>
@@ -269,8 +155,8 @@
 									<groups>
 										<li>Arms</li>
 									</groups>
-								</li>
-								<li>
+								</li> -->
+								<!-- <li>
 									<def>Radius</def>
 									<customLabel>left radius</customLabel>
 									<coverage>0.1</coverage>
@@ -278,10 +164,10 @@
 									<groups>
 										<li>Arms</li>
 									</groups>
-								</li>
+								</li> -->
 								<li>
 									<def>Hand</def>
-									<customLabel>left hand</customLabel>
+									<customLabel>左手</customLabel>
 									<coverage>0.14</coverage>
 									<height>Bottom</height>
 									<groups>
@@ -290,7 +176,7 @@
 									<parts>
 										<li>
 											<def>Finger</def>
-											<customLabel>left pinky</customLabel>
+											<customLabel>左尾指</customLabel>
 											<coverage>0.06</coverage>
 											<groups>
 												<li>Hands</li>
@@ -299,7 +185,7 @@
 										</li>
 										<li>
 											<def>Finger</def>
-											<customLabel>left ring finger</customLabel>
+											<customLabel>左无名指</customLabel>
 											<coverage>0.07</coverage>
 											<groups>
 												<li>Hands</li>
@@ -308,7 +194,7 @@
 										</li>
 										<li>
 											<def>Finger</def>
-											<customLabel>left middle finger</customLabel>
+											<customLabel>左中指</customLabel>
 											<coverage>0.08</coverage>
 											<groups>
 												<li>Hands</li>
@@ -317,7 +203,7 @@
 										</li>
 										<li>
 											<def>Finger</def>
-											<customLabel>left index finger</customLabel>
+											<customLabel>左食指</customLabel>
 											<coverage>0.07</coverage>
 											<groups>
 												<li>Hands</li>
@@ -326,7 +212,7 @@
 										</li>
 										<li>
 											<def>Finger</def>
-											<customLabel>left thumb</customLabel>
+											<customLabel>左拇指</customLabel>
 											<coverage>0.08</coverage>
 											<groups>
 												<li>Hands</li>
@@ -341,13 +227,13 @@
 				</li>
 				<li>
 					<def>Shoulder</def>
-					<customLabel>right shoulder</customLabel>
+					<customLabel>右肩</customLabel>
 					<coverage>0.12</coverage>
 					<groups>
 						<li>Shoulders</li>
 					</groups>
 					<parts>
-						<li>
+						<!-- <li>
 							<def>Clavicle</def>
 							<customLabel>right clavicle</customLabel>
 							<coverage>0.09</coverage>
@@ -356,16 +242,16 @@
 							<groups>
 								<li>Torso</li>
 							</groups>
-						</li>
+						</li> -->
 						<li>
 							<def>Arm</def>
-							<customLabel>right arm</customLabel>
+							<customLabel>右臂</customLabel>
 							<coverage>0.77</coverage>
 							<groups>
 								<li>Arms</li>
 							</groups>
 							<parts>
-								<li>
+								<!-- <li>
 									<def>Humerus</def>
 									<customLabel>right humerus</customLabel>
 									<coverage>0.1</coverage>
@@ -382,10 +268,10 @@
 									<groups>
 										<li>Arms</li>
 									</groups>
-								</li>
+								</li> -->
 								<li>
 									<def>Hand</def>
-									<customLabel>right hand</customLabel>
+									<customLabel>右手</customLabel>
 									<coverage>0.14</coverage>
 									<height>Bottom</height>
 									<groups>
@@ -394,7 +280,7 @@
 									<parts>
 										<li>
 											<def>Finger</def>
-											<customLabel>right pinky</customLabel>
+											<customLabel>右尾指</customLabel>
 											<coverage>0.06</coverage>
 											<groups>
 												<li>Hands</li>
@@ -403,7 +289,7 @@
 										</li>
 										<li>
 											<def>Finger</def>
-											<customLabel>right ring finger</customLabel>
+											<customLabel>右无名指</customLabel>
 											<coverage>0.07</coverage>
 											<groups>
 												<li>Hands</li>
@@ -412,7 +298,7 @@
 										</li>
 										<li>
 											<def>Finger</def>
-											<customLabel>right middle finger</customLabel>
+											<customLabel>右中指</customLabel>
 											<coverage>0.08</coverage>
 											<groups>
 												<li>Hands</li>
@@ -421,7 +307,7 @@
 										</li>
 										<li>
 											<def>Finger</def>
-											<customLabel>right index finger</customLabel>
+											<customLabel>右食指</customLabel>
 											<coverage>0.07</coverage>
 											<groups>
 												<li>Hands</li>
@@ -430,7 +316,7 @@
 										</li>
 										<li>
 											<def>Finger</def>
-											<customLabel>right thumb</customLabel>
+											<customLabel>右拇指</customLabel>
 											<coverage>0.08</coverage>
 											<groups>
 												<li>Hands</li>
@@ -455,14 +341,14 @@
 				<!-- 腿 -->
 				<li>
 					<def>Leg</def>
-					<customLabel>left leg</customLabel>
+					<customLabel>左腿</customLabel>
 					<coverage>0.14</coverage>
 					<height>Bottom</height>
 					<groups>
 						<li>Legs</li>
 					</groups>
 					<parts>
-						<li>
+						<!-- <li>
 							<def>Femur</def>
 							<customLabel>left femur</customLabel>
 							<coverage>0.1</coverage>
@@ -470,8 +356,8 @@
 							<groups>
 								<li>Legs</li>
 							</groups>
-						</li>
-						<li>
+						</li> -->
+						<!-- <li>
 							<def>Tibia</def>
 							<customLabel>left tibia</customLabel>
 							<coverage>0.1</coverage>
@@ -479,10 +365,10 @@
 							<groups>
 								<li>Legs</li>
 							</groups>
-						</li>
+						</li> -->
 						<li>
 							<def>Foot</def>
-							<customLabel>left foot</customLabel>
+							<customLabel>左足</customLabel>
 							<coverage>0.1</coverage>
 							<groups>
 								<li>Feet</li>
@@ -490,7 +376,7 @@
 							<parts>
 								<li>
 									<def>Toe</def>
-									<customLabel>left little toe</customLabel>
+									<customLabel>左小趾</customLabel>
 									<coverage>0.06</coverage>
 									<groups>
 										<li>Feet</li>
@@ -498,7 +384,7 @@
 								</li>
 								<li>
 									<def>Toe</def>
-									<customLabel>left fourth toe</customLabel>
+									<customLabel>左次小趾</customLabel>
 									<coverage>0.07</coverage>
 									<groups>
 										<li>Feet</li>
@@ -506,7 +392,7 @@
 								</li>
 								<li>
 									<def>Toe</def>
-									<customLabel>left middle toe</customLabel>
+									<customLabel>左三趾</customLabel>
 									<coverage>0.08</coverage>
 									<groups>
 										<li>Feet</li>
@@ -514,7 +400,7 @@
 								</li>
 								<li>
 									<def>Toe</def>
-									<customLabel>left second toe</customLabel>
+									<customLabel>左二趾</customLabel>
 									<coverage>0.09</coverage>
 									<groups>
 										<li>Feet</li>
@@ -522,7 +408,7 @@
 								</li>
 								<li>
 									<def>Toe</def>
-									<customLabel>left big toe</customLabel>
+									<customLabel>左大拇趾</customLabel>
 									<coverage>0.09</coverage>
 									<groups>
 										<li>Feet</li>
@@ -534,14 +420,14 @@
 				</li>
 				<li>
 					<def>Leg</def>
-					<customLabel>right leg</customLabel>
+					<customLabel>右腿</customLabel>
 					<coverage>0.14</coverage>
 					<height>Bottom</height>
 					<groups>
 						<li>Legs</li>
 					</groups>
 					<parts>
-						<li>
+						<!-- <li>
 							<def>Femur</def>
 							<customLabel>right femur</customLabel>
 							<coverage>0.1</coverage>
@@ -558,10 +444,10 @@
 							<groups>
 								<li>Legs</li>
 							</groups>
-						</li>
+						</li> -->
 						<li>
 							<def>Foot</def>
-							<customLabel>right foot</customLabel>
+							<customLabel>右足</customLabel>
 							<coverage>0.1</coverage>
 							<groups>
 								<li>Feet</li>
@@ -569,7 +455,7 @@
 							<parts>
 								<li>
 									<def>Toe</def>
-									<customLabel>right little toe</customLabel>
+									<customLabel>右小趾</customLabel>
 									<coverage>0.06</coverage>
 									<groups>
 										<li>Feet</li>
@@ -577,7 +463,7 @@
 								</li>
 								<li>
 									<def>Toe</def>
-									<customLabel>right fourth toe</customLabel>
+									<customLabel>右次小趾</customLabel>
 									<coverage>0.07</coverage>
 									<groups>
 										<li>Feet</li>
@@ -585,7 +471,7 @@
 								</li>
 								<li>
 									<def>Toe</def>
-									<customLabel>right middle toe</customLabel>
+									<customLabel>右三趾</customLabel>
 									<coverage>0.08</coverage>
 									<groups>
 										<li>Feet</li>
@@ -593,7 +479,7 @@
 								</li>
 								<li>
 									<def>Toe</def>
-									<customLabel>right second toe</customLabel>
+									<customLabel>右二趾</customLabel>
 									<coverage>0.09</coverage>
 									<groups>
 										<li>Feet</li>
@@ -601,7 +487,7 @@
 								</li>
 								<li>
 									<def>Toe</def>
-									<customLabel>right big toe</customLabel>
+									<customLabel>右大拇趾</customLabel>
 									<coverage>0.09</coverage>
 									<groups>
 										<li>Feet</li>

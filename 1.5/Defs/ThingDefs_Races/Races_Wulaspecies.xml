@@ -352,6 +352,9 @@
         </li>
       </lifeStageAges>
     </race>
+    <recipes>
+      <li>WULA_Fix_Hand_Base</li>
+    </recipes>
 
     <comps>
       <li Class="CompProperties_Stunnable">
