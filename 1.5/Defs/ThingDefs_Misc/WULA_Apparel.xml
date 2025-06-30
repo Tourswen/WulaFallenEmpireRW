@@ -433,7 +433,7 @@
         <baseReloadTicks>60</baseReloadTicks>
         <soundReload>Standard_Reload</soundReload>
         <hotKey>Misc4</hotKey>
-        <chargeNoun>jump</chargeNoun>
+        <chargeNoun>炮弹</chargeNoun>
         <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
       </li>
       <li Class="CompProperties_Shield">

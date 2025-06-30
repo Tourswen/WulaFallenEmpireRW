@@ -410,13 +410,27 @@
 					</bodyTypes>
 					<!-- 颜色设置 -->
 					<colorChannels Inherit="false">
-            <!-- 皮肤是特殊的，因为现在由基因定义肤色 -->
 						<li>
 							<name>skin</name>
-              <first Class="AlienRace.ColorGenerator_SkinColorMelanin">
-                <minMelanin>0</minMelanin>
-                <maxMelanin>0</maxMelanin>
-              </first>
+							<first Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>1</weight>
+										<only>RGBA(1,1,1,1)</only>
+									</li>
+								</options>
+							</first>
+						</li>
+						<li>
+							<name>favorite</name>
+							<first Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>1</weight>
+										<only>RGBA(1,1,1,1)</only>
+									</li>
+								</options>
+							</first>
 						</li>
 					</colorChannels>
           <customDrawSize>(3, 3)</customDrawSize>
@@ -432,7 +446,7 @@
 				<head>Wula/Things/Wula_AI_Heavy_Panzer/Heads/</head>
 				<skeleton>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Thin</skeleton> 
         <stump>Wula/Things/Wula_AI_Heavy_Panzer/Bodies</stump>
-        <skinColor>(0,0,0,0)</skinColor>
+        <skinColor>(1,1,1,1)</skinColor>
 			</graphicPaths>
 			<!-- 风格设置 -->
 			<styleSettings>
@@ -465,12 +479,19 @@
         </traitList>
         <weaponList>
           <li>WULA_WM_Rocket_Pod</li>
+          <li>WULA_WM_Panzer_Turret</li>
         </weaponList>
         <onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel>
         <onlyUseRaceRestrictedWeapons>true</onlyUseRaceRestrictedWeapons>
         <onlyBuildRaceRestrictedBuildings>true</onlyBuildRaceRestrictedBuildings>
         <onlyGetRaceRestrictedTraits>true</onlyGetRaceRestrictedTraits>
         <onlyEatRaceRestrictedFood>true</onlyEatRaceRestrictedFood>
+        <blackEndoCategories>
+          <li>Melanin</li>
+          <li>HairColor</li>
+          <li>BodyType</li>
+        </blackEndoCategories>
+        <onlyHaveRaceRestrictedGenes>true</onlyHaveRaceRestrictedGenes>
         <!-- 生育能力 -->
         <canReproduce>false</canReproduce>
       </raceRestriction>
@@ -514,7 +535,7 @@
       <ComfyTemperatureMin>-300</ComfyTemperatureMin>
       <ComfyTemperatureMax>300</ComfyTemperatureMax>
       <!-- 心灵敏感，很低 -->
-      <PsychicSensitivity>0.25</PsychicSensitivity>
+      <PsychicSensitivity>0</PsychicSensitivity>
       <!-- 肉量 -->
       <MeatAmount>0</MeatAmount>
       <!-- 皮革量 -->
@@ -593,9 +614,9 @@
         <Plasteel>20</Plasteel>
       </butcherProducts>
       <nameGenerator MayRequire="Ludeon.RimWorld.Biotech">NamerMech</nameGenerator>
-      <mechFixedSkillLevel>20</mechFixedSkillLevel>
       <mechWeightClass>Heavy</mechWeightClass>
     </race>
+    <mechFixedSkillLevel>20</mechFixedSkillLevel>
     <recipe Inherit="False">
     </recipe>
 

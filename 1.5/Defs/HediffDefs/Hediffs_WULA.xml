@@ -84,6 +84,8 @@
           <ToxicResistance>1</ToxicResistance>
           <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">1</ToxicEnvironmentResistance>
 			    <CarryingCapacity>1200</CarryingCapacity>
+          <ShootingAccuracyPawn>300</ShootingAccuracyPawn>
+          <IncomingDamageFactor>0.3</IncomingDamageFactor>
         </statOffsets>
         <statFactors>
           <!-- 易燃性，作为半机械生物很难起火 -->

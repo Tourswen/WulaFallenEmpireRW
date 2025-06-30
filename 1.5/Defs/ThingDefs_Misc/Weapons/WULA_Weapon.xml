@@ -60,9 +60,10 @@
     <label>DLa_1"页岩"</label>
     <description>乌拉帝国的旧式突击步枪，仍然使用落后的导气式结构驱动自动射击构件，通常被派发给炮灰战斗人员。不过好在这种突击步枪下挂了一枚榴弹，可以对付一些棘手目标，保卫殖民地也是绰绰有余。</description>
     <techLevel>Industrial</techLevel>
+    <tickerType>Normal</tickerType>
     <!-- <techLevel>Spacer</techLevel> -->
     <graphicData>
-      <texPath>Wula/Weapon/WULA_RW_StarDrift_SG</texPath>
+      <texPath>Wula/Weapon/WULA_RW_Base_AR</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_Rifle</soundInteract>
@@ -91,13 +92,13 @@
         <range>32</range>
         <burstShotCount>4</burstShotCount>
         <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
-        <soundCast>ChargeLance_Fire</soundCast>
-        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <soundCast>Shot_AssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>7</muzzleFlashScale>
       </li>
     </verbs>
 
-    <comps Inherit="False">
+    <comps>
       <li Class="CompProperties_EquippableAbilityReloadable">
         <abilityDef>WULA_RW_Base_AR_Ability</abilityDef>
         <maxCharges>1</maxCharges>
@@ -107,26 +108,25 @@
         <ammoCountPerCharge>5</ammoCountPerCharge>
         <baseReloadTicks>120</baseReloadTicks>
       </li>
+      <li Class="CompProperties_Forbiddable"/>
     </comps>
   </ThingDef>
   <AbilityDef>
     <defName>WULA_RW_Base_AR_Ability</defName>
     <label>下挂榴弹发射</label>
-    <iconPath>UI/Abilities/Farskip</iconPath>
-    <category MayRequire="Ludeon.RimWorld.Royalty">Skip</category>
     <description>发射一枚榴弹，对敌方造成范围伤害，擅长对付低甲目标。</description>
-    <showPsycastEffects>false</showPsycastEffects>
-    <!-- <cooldownTicksRange>180~480</cooldownTicksRange> -->
+    <iconPath>UI/Abilities/Burner</iconPath>
     <aiCanUse>true</aiCanUse>
+    <ai_IsIncendiary>true</ai_IsIncendiary>
+    <warmupStartSound>FireSpew_Warmup</warmupStartSound>
     <showOnCharacterCard>false</showOnCharacterCard>
-    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <charges>1</charges>
+    <cooldownTicksRange>7200</cooldownTicksRange>
     <verbProperties>
       <verbClass>Verb_AbilityShoot</verbClass>
-      <warmupTime>0.7</warmupTime>
-      <forcedMissRadius>2</forcedMissRadius>
-      <ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+      <warmupTime>0.5</warmupTime>
       <soundCast>Mortar_LaunchA</soundCast>
-      <soundCastTail>GunTail_Light</soundCastTail>
+      <ai_IsWeapon>false</ai_IsWeapon>
       <range>28</range>
       <defaultProjectile>Bullet_Shell_HighExplosive</defaultProjectile>
     </verbProperties>
@@ -141,7 +141,9 @@
       <texPath>Wula/Weapon/WULA_MW_Breaker_Bar</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <equippedAngleOffset>-65</equippedAngleOffset>
+    <weaponTags>
+      <li>Spear</li>
+    </weaponTags>
     <techLevel>Spacer</techLevel>
     <costStuffCount>50</costStuffCount>
     <statBases>
@@ -157,8 +159,8 @@
         <capacities>
           <li>Poke</li>
         </capacities>
-        <power>185</power>
-        <cooldownTime>8</cooldownTime>
+        <power>225</power>
+        <cooldownTime>6</cooldownTime>
         <armorPenetration>1</armorPenetration>
         <extraMeleeDamages>
           <li>
@@ -188,12 +190,14 @@
       <li>Spear</li>
     </weaponTags>
     <graphicData>
-      <texPath>Wula/Weapon/WULA_MW_Breaker_Bar</texPath>
+      <texPath>Wula/Weapon/WULA_MW_Lance</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>2</drawSize>
     </graphicData>
     <!-- <equippedAngleOffset>-65</equippedAngleOffset> -->
     <techLevel>Spacer</techLevel>
     <costStuffCount>120</costStuffCount>
+    <equippedAngleOffset>-25</equippedAngleOffset>
     <stuffCategories>
       <li>Metallic</li>
     </stuffCategories>
@@ -247,9 +251,9 @@
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
     <defName>WULA_MW_ChainSword</defName>
     <label>CMs_1"链锯剑"</label>
-    <description>这种嗡嗡作响的链锯类武器看起来有些过时，但仍不失为撕碎敌人的好兵器。</description>
+    <description>这种嗡嗡作响的乌拉帝国链锯类武器有多条环绕剑脊高速旋转的多层复合锯齿链条，之间嵌有能量传导节点或微型冷却剂喷口，是力量与纯粹疯狂的象征。</description>
     <graphicData>
-      <texPath>Wula/Weapon/WULA_MW_Breaker_Bar</texPath>
+      <texPath>Wula/Weapon/WULA_MW_ChainSword</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <!-- <equippedAngleOffset>-65</equippedAngleOffset> -->
@@ -310,7 +314,7 @@
     <label>CMp_7"钉头锤"</label>
     <description>这种乌拉帝国战士使用的近战武器由多层复合的高密度钨合金或贫铀合金核心构成，可以利用无与伦比的冲击质量击碎护甲，同时锤头镶嵌着数个单分子碳化硅撞针，用于为EMP装置的释放创造接触点。</description>
     <graphicData>
-      <texPath>Wula/Weapon/WULA_MW_Breaker_Bar</texPath>
+      <texPath>Wula/Weapon/WULA_MW_Charge_Mace</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <equippedAngleOffset>-65</equippedAngleOffset>
@@ -329,13 +333,13 @@
         <capacities>
           <li>Poke</li>
         </capacities>
-        <power>35</power>
-        <cooldownTime>4</cooldownTime>
+        <power>25</power>
+        <cooldownTime>1.5</cooldownTime>
         <armorPenetration>0.8</armorPenetration>
         <extraMeleeDamages>
           <li>
-            <def>EMP</def>
-            <amount>18</amount>
+            <def>Stun</def>
+            <amount>4</amount>
           </li>
         </extraMeleeDamages>
       </li>
@@ -417,6 +421,10 @@
     <aiCanUse>true</aiCanUse>
     <showOnCharacterCard>false</showOnCharacterCard>
     <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <statBases>
+      <Ability_EntropyGain>0</Ability_EntropyGain>
+      <Ability_PsyfocusCost>-1</Ability_PsyfocusCost>
+    </statBases>
     <verbProperties>
       <verbClass>Verb_EntitySkip</verbClass>
       <drawAimPie>false</drawAimPie>
@@ -446,7 +454,7 @@
     <label>APs_97"智之杖"</label>
     <description>乌拉帝国修女所持武器，可以使用魂锲作为充能媒介施展灵能法术，为其他殖民者提供随机灵感。</description>
     <graphicData>
-      <texPath>Wula/Weapon/WULA_MW_Scepter_Of_Heaven</texPath>
+      <texPath>Wula/Weapon/WULA_MW_Scepter_Of_Perception</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1.3</drawSize>
     </graphicData>
@@ -505,15 +513,15 @@
     <showOnCharacterCard>false</showOnCharacterCard>
     <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
     <verbProperties>
-      <verbClass>Verb_EntitySkip</verbClass>
-      <drawAimPie>false</drawAimPie>
       <warmupTime>2</warmupTime>
-      <range>30</range>
-      <ai_IsWeapon>false</ai_IsWeapon>
       <targetParams>
         <onlyTargetColonists>True</onlyTargetColonists>
       </targetParams>
     </verbProperties>
+    <statBases>
+      <Ability_EntropyGain>0</Ability_EntropyGain>
+      <Ability_PsyfocusCost>-1</Ability_PsyfocusCost>
+    </statBases>
     <comps>
       <li Class="CompProperties_AbilityGiveInspiration">
         <canTargetBaby>False</canTargetBaby>
@@ -528,7 +536,7 @@
     <label>APs_7"闪之杖"</label>
     <description>乌拉帝国修女所持武器，可以使用魂锲作为充能媒介施展灵能法术，使得一片范围内的生物感到恶心眩晕。</description>
     <graphicData>
-      <texPath>Wula/Weapon/WULA_MW_Scepter_Of_Heaven</texPath>
+      <texPath>Wula/Weapon/WULA_MW_Scepter_Of_Flash</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1.3</drawSize>
     </graphicData>
@@ -584,8 +592,8 @@
     <writeCombatLog>True</writeCombatLog>
     <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
     <statBases>
-      <!-- <Ability_EntropyGain>30</Ability_EntropyGain> -->
-      <!-- <Ability_PsyfocusCost>0.02</Ability_PsyfocusCost> -->
+      <Ability_EntropyGain>0</Ability_EntropyGain>
+      <Ability_PsyfocusCost>-1</Ability_PsyfocusCost>
       <Ability_Duration>30</Ability_Duration>
       <Ability_EffectRadius>5</Ability_EffectRadius>
     </statBases>
@@ -774,11 +782,11 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>WULA_RW_Sphene_MG</defName>
     <label>FLm_43"榍石"</label>
-    <description>乌拉帝国的通用机枪，负责提供</description>
+    <description>乌拉帝国的通用机枪，负责在班组中提供如暴雨倾泻的高速连射光束流，产生的高温熔烧效果将融化一切敌人的装甲。</description>
     <techLevel>Ultra</techLevel>
     <!-- <techLevel>Spacer</techLevel> -->
     <graphicData>
-      <texPath>Wula/Weapon/WULA_RW_StarDrift_SG</texPath>
+      <texPath>Wula/Weapon/WULA_RW_Sphene_MG</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_ChargeRifle</soundInteract>
@@ -970,6 +978,66 @@
       <damageAmountBase>50</damageAmountBase>
       <arcHeightFactor>0.4</arcHeightFactor>
       <soundExplode>Explosion_Rocket</soundExplode>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseGun">
+    <defName>WULA_WM_Panzer_Turret</defName>
+    <label>ATt_6"金红石"</label>
+    <description>由乌拉帝国的"萨克森"战车所装备的战车炮塔，可以从极远距离上精准地点杀高价值目标。</description>
+    <techLevel>Ultra</techLevel>
+    <graphicData>
+      <texPath>Wula/Weapon/WULA_WM_Panzer_Turret</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.35</drawSize>
+    </graphicData>
+    <tradeability>None</tradeability>
+    <statBases>
+      <MarketValue>1400</MarketValue>
+      <Mass>150</Mass>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>2</AccuracyShort>
+      <AccuracyMedium>2</AccuracyMedium>
+      <AccuracyLong>2</AccuracyLong>
+      <RangedWeapon_Cooldown>4.0</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>Wula_AI_Heavy_Panzer_Turret</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_WULA_WM_Panzer_Turret</defaultProjectile>
+        <warmupTime>0</warmupTime>
+        <minRange>5.9</minRange>
+        <range>65</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_TurretSniper</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>18</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_WULA_WM_Panzer_Turret</defName>
+    <label>金红石穿甲弹</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <tickerType>Normal</tickerType>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <texPath>Things/Projectile/ChargeLanceShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>2.4</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>285</damageAmountBase>
+      <speed>220</speed>
+      <explosionRadius>3.5</explosionRadius>
+      <arcHeightFactor>0.4</arcHeightFactor>
+      <soundExplode>Explosion_Rocket</soundExplode>
+      <armorPenetrationBase>1</armorPenetrationBase>
     </projectile>
   </ThingDef>
 </Defs>

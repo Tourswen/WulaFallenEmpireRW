@@ -308,7 +308,7 @@
     <passability>PassThroughOnly</passability>
     <fillPercent>0.5</fillPercent>
     <hasInteractionCell>true</hasInteractionCell>
-    <castEdgeShadows>false</castEdgeShadows>
+    <castEdgeShadows>true</castEdgeShadows>
     <pathCost>42</pathCost>
     <surfaceType>Item</surfaceType>
     <inspectorTabs>
