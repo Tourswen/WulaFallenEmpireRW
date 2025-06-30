@@ -43,7 +43,7 @@
             <li>Steel</li>
           </thingDefs>
         </filter>
-        <count>100</count>
+        <count>300</count>
       </li>
       <li>
         <filter>
@@ -51,7 +51,7 @@
             <li>Plasteel</li>
           </thingDefs>
         </filter>
-        <count>40</count>
+        <count>160</count>
       </li>
       <li>
         <filter>
@@ -59,7 +59,15 @@
             <li>ComponentIndustrial</li>
           </thingDefs>
         </filter>
-        <count>4</count>
+        <count>15</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentSpacer</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
       </li>
     </ingredients>
     <products>

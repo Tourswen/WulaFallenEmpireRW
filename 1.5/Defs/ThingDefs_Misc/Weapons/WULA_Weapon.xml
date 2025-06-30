@@ -101,7 +101,7 @@
       <recipeUsers Inherit="False">
         <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
-      <researchPrerequisite>WULA_Synth_Weapon_2_Melee_Technology</researchPrerequisite>
+      <researchPrerequisite>WULA_Synth_Weapon_2_Stun_Technology</researchPrerequisite>
       <skillRequirements>
         <Crafting>7</Crafting>
       </skillRequirements>
@@ -113,13 +113,16 @@
   <ThingDef ParentName="BaseMeleeWeapon_Blunt">
     <defName>WULA_MW_Scepter_Of_Heaven</defName>
     <label>APs_82"天之杖"</label>
-    <description>乌拉帝国修女所持武器，可以使用魂锲作为弹药施展灵能法术，将任意人员折跃到地图上的任意地点。</description>
+    <description>乌拉帝国修女所持武器，可以使用魂锲作为充能媒介施展灵能法术，将任意人员折跃到地图上的任意地点。</description>
     <graphicData>
       <texPath>Wula/Weapon/WULA_MW_Scepter_Of_Heaven</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1.3</drawSize>
     </graphicData>
     <uiIconScale>1.1</uiIconScale>
+    <descriptionHyperlinks>
+      <ThingDef>WULA_Soul_Wedge</ThingDef>
+    </descriptionHyperlinks>
     <techLevel>Medieval</techLevel>
     <weaponTags>
       <li>NeolithicMeleeBasic</li>
@@ -156,10 +159,10 @@
     <comps Inherit="False">
       <li Class="CompProperties_EquippableAbilityReloadable">
         <abilityDef>WULA_Scepter_Of_Heaven_Ability</abilityDef>
-        <maxCharges>1</maxCharges>
+        <maxCharges>3</maxCharges>
         <soundReload>AnomalyAbilityWarmup</soundReload>
         <chargeNoun>魂锲</chargeNoun>
-        <ammoDef>Steel</ammoDef>
+        <ammoDef>WULA_Soul_Wedge</ammoDef>
         <ammoCountPerCharge>1</ammoCountPerCharge>
         <baseReloadTicks>60</baseReloadTicks>
       </li>

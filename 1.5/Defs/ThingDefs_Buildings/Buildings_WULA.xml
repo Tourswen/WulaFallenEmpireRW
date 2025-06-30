@@ -297,6 +297,9 @@
   
   <!-- 大型生产器 -->
   <ThingDef ParentName="BuildingBase">
+    <defName>WULA_Large_Mechine_proudctor</defName>
+    <label>乌拉帝国机械工厂</label>
+    <description>乌拉帝国所建造的一种机械工厂，能构建各种除了合成人外的乌拉帝国机械体。</description>
     <thingClass>Building_MechGestator</thingClass>
     <containedPawnsSelectable>true</containedPawnsSelectable>
     <tickerType>Normal</tickerType>
@@ -311,30 +314,13 @@
     <inspectorTabs>
       <li>ITab_Bills</li>
     </inspectorTabs>
-    <building>
-      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-      <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
-      <ai_chillDestination>false</ai_chillDestination>
-      <buildingTags>
-        <li>Production</li>
-        <li>Biotech</li>
-      </buildingTags>
-    </building>
     <designationCategory>Biotech</designationCategory>
     <uiOrder>2400</uiOrder>
     <defaultPlacingRot>South</defaultPlacingRot>
     <placeWorkers>
       <li>PlaceWorker_MechGestatorTop</li>
     </placeWorkers>
-    <comps>
-      <li Class="CompProperties_WasteProducer" />
-      <li Class="CompProperties_Flickable"/>
-    </comps>
 
-
-  <defName>WULA_Large_Mechine_proudctor</defName>
-    <label>乌拉帝国机械工厂</label>
-    <description>乌拉帝国所建造的一种机械工厂，能构建各种除了合成人外的乌拉帝国机械体。</description>
     <graphicData>
       <texPath>Wula/Building/WULA_Heavy_War_Machine_Productor</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -356,6 +342,13 @@
       <li>StandardMechtech</li>
     </researchPrerequisites>
     <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+      <ai_chillDestination>false</ai_chillDestination>
+      <buildingTags>
+        <li>Production</li>
+        <li>Biotech</li>
+      </buildingTags>
       <barDrawData>
         <north>
           <preRotationOffset>(-1.06, 0.91)</preRotationOffset>
@@ -420,6 +413,8 @@
       <li>WULA_Build_AI_Heavy_Panzer</li>
     </recipes>
     <comps>
+      <li Class="CompProperties_WasteProducer" />
+      <li Class="CompProperties_Flickable"/>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>500</basePowerConsumption>

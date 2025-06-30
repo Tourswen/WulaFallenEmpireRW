@@ -97,11 +97,11 @@
         </li>
         <li Class="ScenPart_StartingResearch">
           <def>StartingResearch</def>
-          <project>BasicMechtech</project>
+          <project>Batteries</project>
         </li>
         <li Class="ScenPart_StartingResearch">
           <def>StartingResearch</def>
-          <project>Batteries</project>
+          <project>WULA_Base_Technology</project>
         </li>
         
         <!-- Game start dialog -->

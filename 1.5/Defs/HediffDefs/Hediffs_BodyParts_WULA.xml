@@ -305,15 +305,93 @@
       </li>
     </ingredients>
   </RecipeDef>
-
   <HediffDef ParentName="ImplantHediffBase">
     <defName>WULA_Body_Fixed</defName>
     <hediffClass>Hediff_Implant</hediffClass>
     <label>已修复</label>
     <description>这个合成人的破损已被细致地修复。</description>
-    <descriptionShort>已修复</descriptionShort>
+    <descriptionShort>这个合成人的破损已被细致地修复。</descriptionShort>
     <isBad>false</isBad>
     <duplicationAllowed>true</duplicationAllowed>
-    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <keepOnBodyPartRestoration>false</keepOnBodyPartRestoration>  <!-- true -->
+  </HediffDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>WULA_Soul_Wedge</defName>
+    <label>魂楔</label>
+    <description>一种通过特殊手段将生命体部分灵魂抽离封装得到的物品，是乌拉帝国灵能理论中“灵魂量化”的集中体现，可为各种乌拉帝国灵能法杖充能。</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Silver</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>First</resourceReadoutPriority>
+    <soundInteract>Silver_Drop</soundInteract>
+    <soundDrop>Silver_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <resourceReadoutAlwaysShow>true</resourceReadoutAlwaysShow>
+    <statBases>
+      <MarketValue>10</MarketValue>
+      <Mass>0.001</Mass>
+    </statBases>
+    <stackLimit>500</stackLimit>
+    <smallVolume>true</smallVolume>
+    <deepCommonality>0.5</deepCommonality>
+    <deepCountPerPortion>70</deepCountPerPortion>
+    <deepLumpSizeRange>2~10</deepLumpSizeRange>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>true</smeltable>
+    <possessionCount>40</possessionCount>
+    <stuffProps>
+      <color>(180,173,150)</color>
+      <commonality>0.05</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
+    </stuffProps>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>WULA_Extract_Soul_Wedge</defName>
+    <label>提取魂楔</label>
+    <description>从该目标体内提取一枚魂楔以供乌拉帝国灵能法杖充能，提取魂楔会永久伤害目标的意识。</description>
+    <jobString>正在提取魂楔</jobString>
+    <workAmount>500</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <targetsBodyPart>false</targetsBodyPart>
+    <isViolation>true</isViolation>
+    <descriptionHyperlinks>
+      <ThingDef>WULA_Soul_Wedge</ThingDef>
+    </descriptionHyperlinks>
+    <uiIconThing>HemogenPack</uiIconThing>
+    <anesthetize>false</anesthetize>
+    <workSkillLearnFactor>2</workSkillLearnFactor>
+    <products>
+      <WULA_Soul_Wedge>1</WULA_Soul_Wedge>
+    </products>
+    <addsHediff>WULA_Extract_Soul_Wedge_Hediff</addsHediff>
+  </RecipeDef>
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>WULA_Extract_Soul_Wedge_Hediff</defName>
+    <hediffClass>Hediff_Implant</hediffClass>
+    <label>灵魂抽离</label>
+    <description>该生物有一部分灵魂被人为的分离了。</description>
+    <descriptionShort>该生物有一部分灵魂被人为的分离了。</descriptionShort>
+    <isBad>true</isBad>
+    <duplicationAllowed>true</duplicationAllowed>
+    <keepOnBodyPartRestoration>false</keepOnBodyPartRestoration>  <!-- true -->
+    <stages>
+      <li>
+        <!-- 能力修改 -->
+        <capMods>
+          <!-- 初始意识+20% -->
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.20</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
   </HediffDef>
 </Defs>
