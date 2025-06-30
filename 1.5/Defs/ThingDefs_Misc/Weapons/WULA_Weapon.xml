@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+  <!-- 简易武器 -->
   <ThingDef ParentName="BaseMeleeWeapon_Blunt">
     <defName>WULA_MW_Mace</defName>
     <label>战壕狼牙棒</label>
@@ -11,21 +12,15 @@
     </graphicData>
     <uiIconScale>1.1</uiIconScale>
     <techLevel>Medieval</techLevel>
-    <weaponTags>
-      <li>NeolithicMeleeBasic</li>
-    </weaponTags>
-    <weaponClasses>
-      <li>Neolithic</li>
-    </weaponClasses>
-    <costStuffCount>40</costStuffCount>
     <statBases>
-      <WorkToMake>500</WorkToMake>
+      <WorkToMake>300</WorkToMake>
       <Mass>2</Mass>
     </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
     <costList>
       <Steel>10</Steel>
     </costList>
-    <equippedAngleOffset>-65</equippedAngleOffset>
+    <costStuffCount>40</costStuffCount>
     <stuffCategories>
       <li>Metallic</li>
       <li>Woody</li>
@@ -60,6 +55,82 @@
       </li>
     </tools>
   </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>WULA_RW_Base_AR</defName>
+    <label>DLa_1"页岩"</label>
+    <description>乌拉帝国的旧式突击步枪，仍然使用落后的导气式结构驱动自动射击构件，通常被派发给炮灰战斗人员。不过好在这种突击步枪下挂了一枚榴弹，可以对付一些棘手目标，保卫殖民地也是绰绰有余。</description>
+    <techLevel>Industrial</techLevel>
+    <!-- <techLevel>Spacer</techLevel> -->
+    <graphicData>
+      <texPath>Wula/Weapon/WULA_RW_StarDrift_SG</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_BIO</li>
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+      <researchPrerequisite>WULA_Synth_Weapon_Technology</researchPrerequisite>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>700</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.75</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.55</AccuracyMedium>
+      <AccuracyLong>0.45</AccuracyLong>
+      <RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_AssaultRifle</defaultProjectile>
+        <warmupTime>0.6</warmupTime>
+        <range>32</range>
+        <burstShotCount>4</burstShotCount>
+        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>7</muzzleFlashScale>
+      </li>
+    </verbs>
+
+    <comps Inherit="False">
+      <li Class="CompProperties_EquippableAbilityReloadable">
+        <abilityDef>WULA_RW_Base_AR_Ability</abilityDef>
+        <maxCharges>1</maxCharges>
+        <soundReload>Standard_Reload</soundReload>
+        <chargeNoun>榴弹</chargeNoun>
+        <ammoDef>Steel</ammoDef>
+        <ammoCountPerCharge>5</ammoCountPerCharge>
+        <baseReloadTicks>120</baseReloadTicks>
+      </li>
+    </comps>
+  </ThingDef>
+  <AbilityDef>
+    <defName>WULA_RW_Base_AR_Ability</defName>
+    <label>下挂榴弹发射</label>
+    <iconPath>UI/Abilities/Farskip</iconPath>
+    <category MayRequire="Ludeon.RimWorld.Royalty">Skip</category>
+    <description>发射一枚榴弹，对敌方造成范围伤害，擅长对付低甲目标。</description>
+    <showPsycastEffects>false</showPsycastEffects>
+    <!-- <cooldownTicksRange>180~480</cooldownTicksRange> -->
+    <aiCanUse>true</aiCanUse>
+    <showOnCharacterCard>false</showOnCharacterCard>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_AbilityShoot</verbClass>
+      <warmupTime>0.7</warmupTime>
+      <forcedMissRadius>2</forcedMissRadius>
+      <ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+      <soundCast>Mortar_LaunchA</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <range>28</range>
+      <defaultProjectile>Bullet_Shell_HighExplosive</defaultProjectile>
+    </verbProperties>
+  </AbilityDef>
   
   <!-- 动力破墙锤 -->
   <ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
@@ -74,7 +145,7 @@
     <techLevel>Spacer</techLevel>
     <costStuffCount>50</costStuffCount>
     <statBases>
-      <WorkToMake>3000</WorkToMake>
+      <WorkToMake>40000</WorkToMake>
       <Mass>20</Mass>
     </statBases>
     <stuffCategories>
@@ -86,13 +157,13 @@
         <capacities>
           <li>Poke</li>
         </capacities>
-        <power>65</power>
-        <cooldownTime>4</cooldownTime>
+        <power>185</power>
+        <cooldownTime>8</cooldownTime>
         <armorPenetration>1</armorPenetration>
         <extraMeleeDamages>
           <li>
             <def>Stun</def>
-            <amount>14</amount>
+            <amount>34</amount>
           </li>
         </extraMeleeDamages>
       </li>
@@ -102,6 +173,178 @@
         <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
       <researchPrerequisite>WULA_Synth_Weapon_2_Stun_Technology</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <displayPriority>450</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+  <!-- 长枪 -->
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>WULA_MW_Lance</defName>
+    <label>CMl_28"骑枪"</label>
+    <description>乌拉帝国骑士所喜爱的重型近战武器，采用高强度纳米碳纤维复合材料内芯，外层覆盖着带有散热格栅和能量导流槽的记忆合金装甲板，在进行穿刺时能短暂激活反推引擎增加攻击力。</description>
+    <weaponTags>
+      <li>Spear</li>
+    </weaponTags>
+    <graphicData>
+      <texPath>Wula/Weapon/WULA_MW_Breaker_Bar</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <!-- <equippedAngleOffset>-65</equippedAngleOffset> -->
+    <techLevel>Spacer</techLevel>
+    <costStuffCount>120</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <WorkToMake>40000</WorkToMake>
+      <Mass>10</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>横扫</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>32</power>
+        <cooldownTime>2.6</cooldownTime>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>穿刺</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>45</power>
+        <armorPenetration>0.70</armorPenetration>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+      <researchPrerequisite>WULA_Synth_Weapon_2_Melee_Technology</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <displayPriority>450</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+  <!-- 链锯剑 -->
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>WULA_MW_ChainSword</defName>
+    <label>CMs_1"链锯剑"</label>
+    <description>这种嗡嗡作响的链锯类武器看起来有些过时，但仍不失为撕碎敌人的好兵器。</description>
+    <graphicData>
+      <texPath>Wula/Weapon/WULA_MW_Breaker_Bar</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <!-- <equippedAngleOffset>-65</equippedAngleOffset> -->
+    <techLevel>Spacer</techLevel>
+    <costStuffCount>120</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <WorkToMake>40000</WorkToMake>
+      <Mass>2.5</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>链锯</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <armorPenetration>0.5</armorPenetration>
+        <power>25</power> <!-- 2.5x natural fist -->
+        <cooldownTime>0.75</cooldownTime>
+      </li>
+      <li>
+        <label>柄击</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>18</power>
+        <cooldownTime>0.75</cooldownTime>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>5</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+      <researchPrerequisite>WULA_Synth_Weapon_2_Melee_Technology</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <displayPriority>450</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+  <!-- 动力钉头锤 -->
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
+    <defName>WULA_MW_Charge_Mace</defName>
+    <label>CMp_7"钉头锤"</label>
+    <description>这种乌拉帝国战士使用的近战武器由多层复合的高密度钨合金或贫铀合金核心构成，可以利用无与伦比的冲击质量击碎护甲，同时锤头镶嵌着数个单分子碳化硅撞针，用于为EMP装置的释放创造接触点。</description>
+    <graphicData>
+      <texPath>Wula/Weapon/WULA_MW_Breaker_Bar</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <techLevel>Spacer</techLevel>
+    <costStuffCount>50</costStuffCount>
+    <statBases>
+      <WorkToMake>40000</WorkToMake>
+      <Mass>5</Mass>
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <tools>
+      <li>
+        <label>槌头</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>35</power>
+        <cooldownTime>4</cooldownTime>
+        <armorPenetration>0.8</armorPenetration>
+        <extraMeleeDamages>
+          <li>
+            <def>EMP</def>
+            <amount>18</amount>
+          </li>
+        </extraMeleeDamages>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+      <researchPrerequisite>WULA_Synth_Weapon_2_Melee_Technology</researchPrerequisite>
       <skillRequirements>
         <Crafting>7</Crafting>
       </skillRequirements>
@@ -123,19 +366,14 @@
     <descriptionHyperlinks>
       <ThingDef>WULA_Soul_Wedge</ThingDef>
     </descriptionHyperlinks>
-    <techLevel>Medieval</techLevel>
-    <weaponTags>
-      <li>NeolithicMeleeBasic</li>
-    </weaponTags>
-    <weaponClasses>
-      <li>Neolithic</li>
-    </weaponClasses>
+    <techLevel>Ultra</techLevel>
     <statBases>
-      <WorkToMake>1200</WorkToMake>
+      <WorkToMake>8000</WorkToMake>
       <Mass>2</Mass>
     </statBases>
     <costList>
-      <Steel>10</Steel>
+      <WULA_Soul_Wedge>20</WULA_Soul_Wedge>
+      <Steel>50</Steel>
     </costList>
     <equippedAngleOffset>-65</equippedAngleOffset>
     <recipeMaker>
@@ -163,7 +401,7 @@
         <soundReload>AnomalyAbilityWarmup</soundReload>
         <chargeNoun>魂锲</chargeNoun>
         <ammoDef>WULA_Soul_Wedge</ammoDef>
-        <ammoCountPerCharge>1</ammoCountPerCharge>
+        <ammoCountPerCharge>5</ammoCountPerCharge>
         <baseReloadTicks>60</baseReloadTicks>
       </li>
     </comps>
@@ -203,6 +441,178 @@
       </li>
     </comps>
   </AbilityDef>
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt">
+    <defName>WULA_MW_Scepter_Of_Perception</defName>
+    <label>APs_97"智之杖"</label>
+    <description>乌拉帝国修女所持武器，可以使用魂锲作为充能媒介施展灵能法术，为其他殖民者提供随机灵感。</description>
+    <graphicData>
+      <texPath>Wula/Weapon/WULA_MW_Scepter_Of_Heaven</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.3</drawSize>
+    </graphicData>
+    <uiIconScale>1.1</uiIconScale>
+    <descriptionHyperlinks>
+      <ThingDef>WULA_Soul_Wedge</ThingDef>
+    </descriptionHyperlinks>
+    <techLevel>Ultra</techLevel>
+    <statBases>
+      <WorkToMake>8000</WorkToMake>
+      <Mass>2</Mass>
+    </statBases>
+    <costList>
+      <WULA_Soul_Wedge>20</WULA_Soul_Wedge>
+      <Steel>50</Steel>
+    </costList>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+      <researchPrerequisite>WULA_Synth_Psi_Technology</researchPrerequisite>
+    </recipeMaker>
+    <tools>
+      <li>
+        <label>棍柄</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1</cooldownTime>
+        <chanceFactor>0.5</chanceFactor>
+      </li>
+    </tools>
+
+    <comps Inherit="False">
+      <li Class="CompProperties_EquippableAbilityReloadable">
+        <abilityDef>WULA_MW_Scepter_Of_Perception_Ability</abilityDef>
+        <maxCharges>1</maxCharges>
+        <soundReload>AnomalyAbilityWarmup</soundReload>
+        <chargeNoun>魂锲</chargeNoun>
+        <ammoDef>WULA_Soul_Wedge</ammoDef>
+        <ammoCountPerCharge>30</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+      </li>
+    </comps>
+  </ThingDef>
+  <AbilityDef ParentName="WordOfBase">
+    <defName>WULA_MW_Scepter_Of_Perception_Ability</defName>
+    <label>智之杖：拔擢</label>
+    <description>以魂楔为媒介传递灵能，加速目标思维。目标将获得一个适合的随机灵感。</description>
+    <iconPath>UI/Abilities/WordOfInspiration</iconPath>
+    <showPsycastEffects>false</showPsycastEffects>
+    <!-- <cooldownTicksRange>180~480</cooldownTicksRange> -->
+    <aiCanUse>true</aiCanUse>
+    <showOnCharacterCard>false</showOnCharacterCard>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_EntitySkip</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <warmupTime>2</warmupTime>
+      <range>30</range>
+      <ai_IsWeapon>false</ai_IsWeapon>
+      <targetParams>
+        <onlyTargetColonists>True</onlyTargetColonists>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveInspiration">
+        <canTargetBaby>False</canTargetBaby>
+      </li>
+      <li Class="CompProperties_AbilitySocialInteraction">
+        <interactionDef>WordOfInspiration</interactionDef>
+      </li>
+    </comps>
+  </AbilityDef>
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt">
+    <defName>WULA_MW_Scepter_Of_Flash</defName>
+    <label>APs_7"闪之杖"</label>
+    <description>乌拉帝国修女所持武器，可以使用魂锲作为充能媒介施展灵能法术，使得一片范围内的生物感到恶心眩晕。</description>
+    <graphicData>
+      <texPath>Wula/Weapon/WULA_MW_Scepter_Of_Heaven</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.3</drawSize>
+    </graphicData>
+    <uiIconScale>1.1</uiIconScale>
+    <descriptionHyperlinks>
+      <ThingDef>WULA_Soul_Wedge</ThingDef>
+    </descriptionHyperlinks>
+    <techLevel>Ultra</techLevel>
+    <statBases>
+      <WorkToMake>8000</WorkToMake>
+      <Mass>2</Mass>
+    </statBases>
+    <costList>
+      <WULA_Soul_Wedge>20</WULA_Soul_Wedge>
+      <Steel>50</Steel>
+    </costList>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+      <researchPrerequisite>WULA_Synth_Psi_Technology</researchPrerequisite>
+    </recipeMaker>
+    <tools>
+      <li>
+        <label>棍柄</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1</cooldownTime>
+        <chanceFactor>0.5</chanceFactor>
+      </li>
+    </tools>
+
+    <comps Inherit="False">
+      <li Class="CompProperties_EquippableAbilityReloadable">
+        <abilityDef>WULA_MW_Scepter_Of_Flash_Ability</abilityDef>
+        <maxCharges>10</maxCharges>
+        <soundReload>AnomalyAbilityWarmup</soundReload>
+        <chargeNoun>魂锲</chargeNoun>
+        <ammoDef>WULA_Soul_Wedge</ammoDef>
+        <ammoCountPerCharge>2</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+      </li>
+    </comps>
+  </ThingDef>
+  <AbilityDef ParentName="PsycastBase">
+    <defName>WULA_MW_Scepter_Of_Flash_Ability</defName>
+    <label>闪之杖：冲击</label>
+    <description>使一片范围内的生物感到恶心眩晕。</description>
+    <iconPath>UI/Abilities/NauseaPulse</iconPath>
+    <writeCombatLog>True</writeCombatLog>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <statBases>
+      <!-- <Ability_EntropyGain>30</Ability_EntropyGain> -->
+      <!-- <Ability_PsyfocusCost>0.02</Ability_PsyfocusCost> -->
+      <Ability_Duration>30</Ability_Duration>
+      <Ability_EffectRadius>5</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <warmupTime>1</warmupTime>
+      <range>35</range>
+      <targetParams>
+        <canTargetSelf>True</canTargetSelf>
+        <canTargetAnimals>True</canTargetAnimals>
+        <canTargetLocations>True</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class = "CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>PsychicVertigo</hediffDef>
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+        <psychic>True</psychic>
+        <goodwillImpact>-15</goodwillImpact>
+        <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
+      </li>
+      <li Class="CompProperties_AbilityFleckOnTarget">
+        <fleckDef>PsycastPsychicEffect</fleckDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
 
   <!-- 乌拉帝国镇爆枪 -->
   <ThingDef ParentName="BaseHumanMakeableGun">
@@ -221,6 +631,7 @@
       <li>RangedHeavy</li>
     </weaponClasses>
     <recipeMaker>
+      <WorkToMake>60000</WorkToMake>
       <recipeUsers Inherit="False">
         <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
@@ -280,10 +691,6 @@
         </beamLineFleckChanceCurve>
       </li>
     </verbs>
-    <weaponTags>
-      <li>MechanoidGunMedium</li>
-      <li>SpacerGun</li>
-    </weaponTags>
     <tools>
       <li>
         <label>grip</label>
@@ -332,10 +739,6 @@
       <AccuracyLong>0.25</AccuracyLong>
       <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
     </statBases>
-    <weaponTags>
-      <li>MechanoidGunShortRange</li>
-      <li>SpacerGun</li>
-    </weaponTags>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
@@ -365,6 +768,49 @@
       <armorPenetrationBase>0.65</armorPenetrationBase>
       <speed>55</speed>
     </projectile>
+  </ThingDef>
+
+  <!-- 机枪 -->
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>WULA_RW_Sphene_MG</defName>
+    <label>FLm_43"榍石"</label>
+    <description>乌拉帝国的通用机枪，负责提供</description>
+    <techLevel>Ultra</techLevel>
+    <!-- <techLevel>Spacer</techLevel> -->
+    <graphicData>
+      <texPath>Wula/Weapon/WULA_RW_StarDrift_SG</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+      <researchPrerequisite>WULA_Synth_Weapon_2_Ranged_Technology</researchPrerequisite>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>60000</WorkToMake>
+      <Mass>4.5</Mass>
+      <AccuracyTouch>0.8</AccuracyTouch>
+      <AccuracyShort>0.8</AccuracyShort>
+      <AccuracyMedium>0.8</AccuracyMedium>
+      <AccuracyLong>0.65</AccuracyLong>
+      <RangedWeapon_Cooldown>1.4</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ChargeRifle</defaultProjectile>
+        <warmupTime>0.5</warmupTime>
+        <range>36.9</range>
+        <burstShotCount>32</burstShotCount>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <soundCast>Shot_ChargeRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
   </ThingDef>
 
   <!-- 手持火炮 -->

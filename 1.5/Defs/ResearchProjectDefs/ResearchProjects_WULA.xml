@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
   <ResearchProjectDef Abstract="True" Name="WULAtechBase">
     <techLevel>Spacer</techLevel>
     <tab>WULA_ResearchTab</tab>
