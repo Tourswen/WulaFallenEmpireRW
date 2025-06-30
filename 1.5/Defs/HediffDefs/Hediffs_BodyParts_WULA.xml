@@ -319,7 +319,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>WULA_Soul_Wedge</defName>
     <label>魂楔</label>
-    <description>一种通过特殊手段将生命体部分灵魂抽离封装得到的物品，是乌拉帝国灵能理论中“灵魂量化”的集中体现，可为各种乌拉帝国灵能法杖充能。</description>
+    <description>一种通过特殊手段将生命体灵魂抽离封装得到的物品，是乌拉帝国灵能理论中“灵魂量化”的集中体现，可为各种乌拉帝国灵能法杖充能。</description>
     <graphicData>
       <texPath>Things/Item/Resource/Silver</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -355,7 +355,7 @@
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
     <defName>WULA_Extract_Soul_Wedge</defName>
     <label>提取魂楔</label>
-    <description>从该目标体内提取一枚魂楔以供乌拉帝国灵能法杖充能，提取魂楔会永久伤害目标的意识。</description>
+    <description>从该目标体内提取10枚魂楔以供乌拉帝国灵能法杖充能，提取魂楔很可能会杀死目标。</description>
     <jobString>正在提取魂楔</jobString>
     <workAmount>500</workAmount>
     <hideBodyPartNames>true</hideBodyPartNames>
@@ -368,7 +368,7 @@
     <anesthetize>false</anesthetize>
     <workSkillLearnFactor>2</workSkillLearnFactor>
     <products>
-      <WULA_Soul_Wedge>1</WULA_Soul_Wedge>
+      <WULA_Soul_Wedge>10</WULA_Soul_Wedge>
     </products>
     <addsHediff>WULA_Extract_Soul_Wedge_Hediff</addsHediff>
   </RecipeDef>
@@ -376,8 +376,11 @@
     <defName>WULA_Extract_Soul_Wedge_Hediff</defName>
     <hediffClass>Hediff_Implant</hediffClass>
     <label>灵魂抽离</label>
-    <description>该生物有一部分灵魂被人为的分离了。</description>
-    <descriptionShort>该生物有一部分灵魂被人为的分离了。</descriptionShort>
+    <description>该生物的灵魂被人为的分离了。</description>
+    <descriptionShort>该生物的灵魂被人为的分离了，现在这只是一具空躯壳。</descriptionShort>
+    <initialSeverity>1</initialSeverity>
+    <minSeverity>1</minSeverity>
+    <alwaysShowSeverity>true</alwaysShowSeverity>
     <isBad>true</isBad>
     <duplicationAllowed>true</duplicationAllowed>
     <keepOnBodyPartRestoration>false</keepOnBodyPartRestoration>  <!-- true -->
@@ -388,10 +391,15 @@
           <!-- 初始意识+20% -->
           <li>
             <capacity>Consciousness</capacity>
-            <offset>-0.20</offset>
+            <offset>-2</offset>
           </li>
         </capMods>
       </li>
     </stages>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.2</severityPerDay>
+      </li>
+    </comps>
   </HediffDef>
 </Defs>
