@@ -259,10 +259,10 @@
       <MedicalTendQualityOffset>10</MedicalTendQualityOffset>
     </statBases>
     <size>(1,2)</size>
-    <stuffCategories>
-      <li>Metallic</li>
-    </stuffCategories>
-    <costStuffCount>50</costStuffCount>
+    <costList>
+      <Steel>50</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
     <designationHotKey>Misc2</designationHotKey>
     <uiOrder>2010</uiOrder>
     <castEdgeShadows>false</castEdgeShadows>
@@ -339,7 +339,8 @@
       <ComponentIndustrial>6</ComponentIndustrial>
     </costList>
     <researchPrerequisites>
-      <li>StandardMechtech</li>
+      <li>BasicMechtech</li>
+      <li>WULA_Machine_Productor_Technology</li>
     </researchPrerequisites>
     <building>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>

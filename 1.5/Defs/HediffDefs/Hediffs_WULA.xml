@@ -58,6 +58,12 @@
     <disablesNeeds>
       <li>Rest</li>
     </disablesNeeds>
+    <comps>
+      <li Class="HediffCompProperties_ReactOnDamage">
+        <damageDefIncoming>EMP</damageDefIncoming>
+        <vomit>true</vomit>
+      </li>
+    </comps>
   </HediffDef>
   <HediffDef>
     <defName>WULA_AI_Heavy_Panzer_Hediff</defName>
@@ -84,7 +90,7 @@
           <ToxicResistance>1</ToxicResistance>
           <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">1</ToxicEnvironmentResistance>
 			    <CarryingCapacity>1200</CarryingCapacity>
-          <ShootingAccuracyPawn>300</ShootingAccuracyPawn>
+          <ShootingAccuracyPawn>200</ShootingAccuracyPawn>
           <IncomingDamageFactor>0.3</IncomingDamageFactor>
         </statOffsets>
         <statFactors>
@@ -119,5 +125,11 @@
       <li>DrugDesire</li>
       <li>RoomSize</li>
     </disablesNeeds>
+    <comps>
+      <li Class="HediffCompProperties_ReactOnDamage">
+        <damageDefIncoming>EMP</damageDefIncoming>
+        <vomit>true</vomit>
+      </li>
+    </comps>
   </HediffDef>
 </Defs>

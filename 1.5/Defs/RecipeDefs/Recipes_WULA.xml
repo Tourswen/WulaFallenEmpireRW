@@ -76,5 +76,8 @@
     <descriptionHyperlinks>
       <ThingDef>Wula_AI_Heavy_Panzer</ThingDef>
     </descriptionHyperlinks>
+    <researchPrerequisites>
+      <li>WULA_Machine_Productor_2_Technology</li>
+    </researchPrerequisites>
   </RecipeDef>
 </Defs>

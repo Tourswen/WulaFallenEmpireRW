@@ -71,6 +71,93 @@
       </li>
     </stages>
     <defaultInstallPart>WULA_Addons_Antenna_Bodypart</defaultInstallPart>
+    <spawnThingOnRemoved>WULA_Addons_Antenna_Base</spawnThingOnRemoved>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartProstheticImperialBase">
+    <defName>WULA_Addons_Antenna_Expansion</defName>
+    <label>上行链路天线（扩容）</label>
+    <description>上行链路天线的高级版，支持更多的机械体带宽，以指挥更庞大的钢铁洪流。</description>
+    <!-- <descriptionHyperlinks><RecipeDef>InstallFieldHand</RecipeDef></descriptionHyperlinks> -->
+    <!-- <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags> -->
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <Steel>50</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>WULA_Base_Technology</researchPrerequisite>
+      <recipeUsers>
+        <li>WULA_Cube_Productor_BIO</li>
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+    </recipeMaker>
+    <!-- <techHediffsTags>
+      <li>FieldHand</li>
+    </techHediffsTags> -->
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>WULA_Install_Addons_Antenna_Hediff_Base</defName>
+    <label>替换上线链路天线（扩容）</label>
+    <description>使用一副扩容上线链路天线替换该合成人的现有天线</description>
+    <jobString>正在替换上线链路天线</jobString>
+    <appliedOnFixedBodyParts>
+      <li>WULA_Addons_Antenna_Bodypart</li>
+    </appliedOnFixedBodyParts>
+    <uiIconThing>Steel</uiIconThing>
+    <anesthetize>false</anesthetize>
+    <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
+    <addsHediff>WULA_Addons_Antenna_Hediff_Expansion</addsHediff>
+    
+    <workAmount>1500</workAmount>
+    <skillRequirements>
+      <Medicine>3</Medicine>
+    </skillRequirements>
+    <workSkill>Medicine</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <!-- <researchPrerequisites>
+      <li>WULA_Base_Technology</li>
+    </researchPrerequisites> -->
+
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WULA_Addons_Antenna_Expansion</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WULA_Addons_Antenna_Expansion</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>WULA_Addons_Antenna_Hediff_Expansion</defName>
+    <hediffClass>Hediff_Mechlink</hediffClass>
+    <label>扩容上线链路天线</label>
+    <description>一对安装于乌拉帝国合成人脑袋两侧的天线，除了接收来自乌拉帝国人工智能网络“演算圆环”的信号外，还能兼职控制其他低级机械体。</description>
+    <descriptionShort>一对安装于乌拉帝国合成人脑袋两侧的天线。</descriptionShort>
+    <isBad>false</isBad>
+    <duplicationAllowed>false</duplicationAllowed>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <stages>
+      <!-- <li>
+        <statOffsets>
+          <MechBandwidth>-4</MechBandwidth>
+          <MechControlGroups>-1</MechControlGroups>
+        </statOffsets>
+      </li> -->
+    </stages>
+    <defaultInstallPart>WULA_Addons_Antenna_Bodypart</defaultInstallPart>
+    <spawnThingOnRemoved>WULA_Addons_Antenna_Expansion</spawnThingOnRemoved>
   </HediffDef>
 
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
@@ -88,9 +175,9 @@
     
     <workAmount>1500</workAmount>
     <skillRequirements>
-      <Crafting>3</Crafting>
+      <Medicine>3</Medicine>
     </skillRequirements>
-    <workSkill>Crafting</workSkill>
+    <workSkill>Medicine</workSkill>
     <effectWorking>Smith</effectWorking>
     <soundWorking>Recipe_Smith</soundWorking>
     <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
@@ -124,9 +211,9 @@
     
     <workAmount>3000</workAmount>
     <skillRequirements>
-      <Crafting>7</Crafting>
+      <Medicine>7</Medicine>
     </skillRequirements>
-    <workSkill>Crafting</workSkill>
+    <workSkill>Medicine</workSkill>
     <effectWorking>Smith</effectWorking>
     <soundWorking>Recipe_Smith</soundWorking>
     <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
@@ -160,9 +247,9 @@
     
     <workAmount>3000</workAmount>
     <skillRequirements>
-      <Crafting>7</Crafting>
+      <Medicine>7</Medicine>
     </skillRequirements>
-    <workSkill>Crafting</workSkill>
+    <workSkill>Medicine</workSkill>
     <effectWorking>Smith</effectWorking>
     <soundWorking>Recipe_Smith</soundWorking>
     <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
@@ -196,9 +283,9 @@
     
     <workAmount>1500</workAmount>
     <skillRequirements>
-      <Crafting>3</Crafting>
+      <Medicine>3</Medicine>
     </skillRequirements>
-    <workSkill>Crafting</workSkill>
+    <workSkill>Medicine</workSkill>
     <effectWorking>Smith</effectWorking>
     <soundWorking>Recipe_Smith</soundWorking>
     <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
@@ -232,9 +319,9 @@
     
     <workAmount>1500</workAmount>
     <skillRequirements>
-      <Crafting>3</Crafting>
+      <Medicine>3</Medicine>
     </skillRequirements>
-    <workSkill>Crafting</workSkill>
+    <workSkill>Medicine</workSkill>
     <effectWorking>Smith</effectWorking>
     <soundWorking>Recipe_Smith</soundWorking>
     <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
@@ -279,9 +366,9 @@
       <li>WULA_Repair_All_Technology</li>
     </researchPrerequisites>
     <skillRequirements>
-      <Crafting>10</Crafting>
+      <Medicine>10</Medicine>
     </skillRequirements>
-    <workSkill>Crafting</workSkill>
+    <workSkill>Medicine</workSkill>
     <effectWorking>Smith</effectWorking>
     <soundWorking>Recipe_Smith</soundWorking>
     <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
@@ -386,9 +473,7 @@
     <keepOnBodyPartRestoration>false</keepOnBodyPartRestoration>  <!-- true -->
     <stages>
       <li>
-        <!-- 能力修改 -->
         <capMods>
-          <!-- 初始意识+20% -->
           <li>
             <capacity>Consciousness</capacity>
             <offset>-2</offset>

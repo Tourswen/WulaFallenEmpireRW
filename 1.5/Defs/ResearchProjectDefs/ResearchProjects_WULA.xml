@@ -226,6 +226,7 @@
     <researchViewX>4.00</researchViewX>
     <researchViewY>5.30</researchViewY>
     <prerequisites>
+      <li>StandardMechtech</li>
       <li>WULA_Machine_Productor_1_Technology</li>
     </prerequisites>
   </ResearchProjectDef>
@@ -237,6 +238,7 @@
     <researchViewX>4.00</researchViewX>
     <researchViewY>4.60</researchViewY>
     <prerequisites>
+      <li>StandardMechtech</li>
       <li>WULA_Machine_Productor_1_Technology</li>
     </prerequisites>
   </ResearchProjectDef>
