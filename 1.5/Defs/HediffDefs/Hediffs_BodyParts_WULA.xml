@@ -30,7 +30,7 @@
   <!-- 天线 -->
   <ThingDef ParentName="BodyPartProstheticImperialBase">
     <defName>WULA_Addons_Antenna_Base</defName>
-    <label>上行链路天线（基础）</label>
+    <label>上行链路天线</label>
     <description>机械乌拉的核心部件之一，除了接收来自乌拉帝国人工智能网络“演算圆环”的信号外，还能兼职控制其他低级机械体。</description>
     <!-- <descriptionHyperlinks><RecipeDef>InstallFieldHand</RecipeDef></descriptionHyperlinks> -->
     <!-- <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags> -->
@@ -49,9 +49,6 @@
         <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
     </recipeMaker>
-    <!-- <techHediffsTags>
-      <li>FieldHand</li>
-    </techHediffsTags> -->
   </ThingDef>
   <HediffDef ParentName="ImplantHediffBase">
     <defName>WULA_Addons_Antenna_Hediff_Base</defName>
@@ -73,91 +70,70 @@
     <defaultInstallPart>WULA_Addons_Antenna_Bodypart</defaultInstallPart>
     <spawnThingOnRemoved>WULA_Addons_Antenna_Base</spawnThingOnRemoved>
   </HediffDef>
-  <ThingDef ParentName="BodyPartProstheticImperialBase">
+  <ThingDef ParentName="ControlSublinkBase">
     <defName>WULA_Addons_Antenna_Expansion</defName>
-    <label>上行链路天线（扩容）</label>
-    <description>上行链路天线的高级版，支持更多的机械体带宽，以指挥更庞大的钢铁洪流。</description>
-    <!-- <descriptionHyperlinks><RecipeDef>InstallFieldHand</RecipeDef></descriptionHyperlinks> -->
-    <!-- <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags> -->
-    <graphicData>
-      <texPath>Things/Item/Health/HealthItem</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <costList>
-      <Steel>50</Steel>
-      <ComponentIndustrial>6</ComponentIndustrial>
-    </costList>
-    <recipeMaker>
-      <researchPrerequisite>WULA_Base_Technology</researchPrerequisite>
-      <recipeUsers>
-        <li>WULA_Cube_Productor_BIO</li>
-        <li>WULA_Cube_Productor_Energy</li>
-      </recipeUsers>
-    </recipeMaker>
-    <!-- <techHediffsTags>
-      <li>FieldHand</li>
-    </techHediffsTags> -->
-  </ThingDef>
-  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
-    <defName>WULA_Install_Addons_Antenna_Hediff_Base</defName>
-    <label>替换上线链路天线（扩容）</label>
-    <description>使用一副扩容上线链路天线替换该合成人的现有天线</description>
-    <jobString>正在替换上线链路天线</jobString>
-    <appliedOnFixedBodyParts>
-      <li>WULA_Addons_Antenna_Bodypart</li>
-    </appliedOnFixedBodyParts>
-    <uiIconThing>Steel</uiIconThing>
-    <anesthetize>false</anesthetize>
-    <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
-    <addsHediff>WULA_Addons_Antenna_Hediff_Expansion</addsHediff>
-    
-    <workAmount>1500</workAmount>
-    <skillRequirements>
-      <Medicine>3</Medicine>
-    </skillRequirements>
-    <workSkill>Medicine</workSkill>
-    <effectWorking>Smith</effectWorking>
-    <soundWorking>Recipe_Smith</soundWorking>
-    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
-    <!-- <researchPrerequisites>
-      <li>WULA_Base_Technology</li>
-    </researchPrerequisites> -->
-
-    <ingredients Inherit="False">
-      <li>
-        <filter>
-          <thingDefs>
-            <li>WULA_Addons_Antenna_Expansion</li>
-          </thingDefs>
-        </filter>
-        <count>1</count>
+    <label>上行链路天线-扩容插件</label>
+    <description>用于为上行链路天线进行带宽扩容的组件，支持更多的机械体带宽和机械组，以指挥更庞大的钢铁洪流。</description>
+    <!-- <costList>
+      <SignalChip>1</SignalChip>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList> -->
+    <!-- <recipeMaker>
+      <researchPrerequisite>StandardMechtech</researchPrerequisite>
+    </recipeMaker> -->
+    <comps>
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsableImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>安装上行链路天线扩容插件</useLabel>
+        <userMustHaveHediff>WULA_Addons_Antenna_Hediff_Base</userMustHaveHediff>
       </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li>WULA_Addons_Antenna_Expansion</li>
-      </thingDefs>
-    </fixedIngredientFilter>
-  </RecipeDef>
-  <HediffDef ParentName="ImplantHediffBase">
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>WULA_Addons_Antenna_Hediff_Expansion</hediffDef>
+        <bodyPart>WULA_Addons_Antenna_Bodypart</bodyPart>
+        <canUpgrade>true</canUpgrade>
+        <maxSeverity>3</maxSeverity>
+      </li>
+    </comps>
+  </ThingDef>
+  <HediffDef>
     <defName>WULA_Addons_Antenna_Hediff_Expansion</defName>
-    <hediffClass>Hediff_Mechlink</hediffClass>
-    <label>扩容上线链路天线</label>
-    <description>一对安装于乌拉帝国合成人脑袋两侧的天线，除了接收来自乌拉帝国人工智能网络“演算圆环”的信号外，还能兼职控制其他低级机械体。</description>
-    <descriptionShort>一对安装于乌拉帝国合成人脑袋两侧的天线。</descriptionShort>
+    <hediffClass>Hediff_Level</hediffClass>
+    <label>扩容插件</label>
+    <description>用于为上行链路天线进行带宽扩容的组件，支持更多的机械体带宽和机械组，以指挥更庞大的钢铁洪流。</description>
+    <descriptionShort>用于为上行链路天线进行带宽扩容的组件。</descriptionShort>
+    <defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
     <isBad>false</isBad>
+    <priceImpact>true</priceImpact>
+    <initialSeverity>1</initialSeverity> <!-- Severity is bound to level of implant -->
+    <minSeverity>0</minSeverity>
+    <maxSeverity>3</maxSeverity>
+    <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+    <levelIsQuantity>true</levelIsQuantity>
     <duplicationAllowed>false</duplicationAllowed>
-    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
     <stages>
-      <!-- <li>
+      <li>
+        <minSeverity>1</minSeverity>
         <statOffsets>
-          <MechBandwidth>-4</MechBandwidth>
-          <MechControlGroups>-1</MechControlGroups>
+          <MechBandwidth>4</MechBandwidth>
+          <MechControlGroups>1</MechControlGroups>
         </statOffsets>
-      </li> -->
+      </li>
+      <li>
+        <minSeverity>2</minSeverity>
+        <statOffsets>
+          <MechBandwidth>8</MechBandwidth>
+          <MechControlGroups>1</MechControlGroups>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>3</minSeverity>
+        <statOffsets>
+          <MechBandwidth>12</MechBandwidth>
+          <MechControlGroups>2</MechControlGroups>
+        </statOffsets>
+      </li>
     </stages>
-    <defaultInstallPart>WULA_Addons_Antenna_Bodypart</defaultInstallPart>
-    <spawnThingOnRemoved>WULA_Addons_Antenna_Expansion</spawnThingOnRemoved>
   </HediffDef>
 
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
@@ -408,8 +384,8 @@
     <label>魂楔</label>
     <description>一种通过特殊手段将生命体灵魂抽离封装得到的物品，是乌拉帝国灵能理论中“灵魂量化”的集中体现，可为各种乌拉帝国灵能法杖充能。</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Silver</texPath>
-      <graphicClass>Graphic_StackCount</graphicClass>
+      <texPath>Wula/Item/WULA_Soul_Wedge</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <resourceReadoutPriority>First</resourceReadoutPriority>
     <soundInteract>Silver_Drop</soundInteract>
@@ -429,15 +405,6 @@
     <burnableByRecipe>false</burnableByRecipe>
     <smeltable>true</smeltable>
     <possessionCount>40</possessionCount>
-    <stuffProps>
-      <color>(180,173,150)</color>
-      <commonality>0.05</commonality>
-      <constructEffect>ConstructMetal</constructEffect>
-      <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
-      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
-      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
-      <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
-    </stuffProps>
   </ThingDef>
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
     <defName>WULA_Extract_Soul_Wedge</defName>
@@ -448,10 +415,11 @@
     <hideBodyPartNames>true</hideBodyPartNames>
     <targetsBodyPart>false</targetsBodyPart>
     <isViolation>true</isViolation>
+    <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
     <descriptionHyperlinks>
       <ThingDef>WULA_Soul_Wedge</ThingDef>
     </descriptionHyperlinks>
-    <uiIconThing>HemogenPack</uiIconThing>
+    <uiIconThing>WULA_Soul_Wedge</uiIconThing>
     <anesthetize>false</anesthetize>
     <workSkillLearnFactor>2</workSkillLearnFactor>
     <products>

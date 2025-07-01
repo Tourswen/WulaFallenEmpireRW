@@ -480,6 +480,8 @@
         <weaponList>
           <li>WULA_WM_Rocket_Pod</li>
           <li>WULA_WM_Panzer_Turret</li>
+          <li>WULA_WM_Panzer_Autocannon</li>
+          <li>WULA_WM_Panzer_Mortar</li>
         </weaponList>
         <onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel>
         <onlyUseRaceRestrictedWeapons>true</onlyUseRaceRestrictedWeapons>

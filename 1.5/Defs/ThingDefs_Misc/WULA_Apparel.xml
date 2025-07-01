@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <!-- 贵族服装 -->
-  <ThingDef Name="NSFV_ApparelRoyalBase" ParentName="ApparelMakeableBase" Abstract="True">
+  <ThingDef Name="WULA_ApparelRoyalBase" ParentName="ApparelMakeableBase" Abstract="True">
     <recipeMaker>
       <researchPrerequisite>WULA_Synth_Clothes_3_Technology</researchPrerequisite>
       <recipeUsers Inherit="False">
@@ -38,9 +38,16 @@
       <!-- 会考虑毒性环境，待查？ -->
       <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
     </apparel>
-    <colorGenerator Class="ColorGenerator_StandardApparel" />
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>(1,1,1,1)</only>
+        </li>
+      </options>
+    </colorGenerator>
   </ThingDef>
-  <ThingDef ParentName="NSFV_ApparelRoyalBase">
+  <ThingDef ParentName="WULA_ApparelRoyalBase">
 		<defName>WULA_Official_Uniform</defName>
 		<label>乌拉帝国双幡礼服</label>
 		<description>这是乌拉帝国宫廷专门配发给高级官员的制服，以一对形似幡的附件而得名。裁制得体大方，设计经久耐用，并且为合成人的躯体做了特殊改造。</description>
@@ -91,7 +98,45 @@
   </ThingDef>
 
   <!-- 平民服装 -->
-  <ThingDef ParentName="ApparelMakeableBase">
+  <ThingDef Name="WULA_ApparelCivilBase" ParentName="ApparelMakeableBase" Abstract="True">
+    <apparel>
+      <tags>
+        <li>Wula_Apparel</li>
+      </tags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>(1,1,1,1)</only>
+        </li>
+      </options>
+    </colorGenerator>
+    <possessionCount>1</possessionCount>
+  </ThingDef>
+  <ThingDef Name="WULA_ApparelCivilHatBase" ParentName="HatMakeableBase" Abstract="True">
+    <apparel>
+      <tags>
+        <li>Wula_Apparel</li>
+      </tags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>(1,1,1,1)</only>
+        </li>
+      </options>
+    </colorGenerator>
+    <possessionCount>1</possessionCount>
+  </ThingDef>
+  <ThingDef ParentName="WULA_ApparelCivilBase">
 		<defName>WULA_Sailor_Dress</defName>
 		<label>乌拉帝国水手连衣裙</label>
 		<description>这是乌拉帝国的一款连衣裙，上到贵族下到平民都可以穿，在肃穆的帝国中传递出了一丝俏皮和活泼。</description>
@@ -102,7 +147,6 @@
     <apparel>
       <tags>
         <li>Wula_Apparel_Init</li>
-        <li>Wula_Apparel</li>
       </tags>
       <bodyPartGroups>
 				<li>Torso</li>
@@ -115,9 +159,6 @@
         <li>Middle</li>
       </layers>
       <wornGraphicPath>Wula/Apparel/WULA_Sailor_Dress</wornGraphicPath>
-      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
-      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
-      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
     </apparel>
     <costStuffCount>100</costStuffCount>
     <stuffCategories>
@@ -141,9 +182,8 @@
         <Crafting>3</Crafting>
       </skillRequirements>
     </recipeMaker>
-    <possessionCount>1</possessionCount>
   </ThingDef>
-  <ThingDef ParentName="ApparelMakeableBase">
+  <ThingDef ParentName="WULA_ApparelCivilBase">
 		<defName>WULA_Maid_Uniform</defName>
 		<label>乌拉帝国女仆装</label>
 		<description>乌拉帝国平民所穿的女仆装。虽然她们更习惯让异族的奴隶服侍自己，不过还是有一些乌拉星人选择从事服务业。</description>
@@ -154,7 +194,6 @@
     <apparel>
       <tags>
         <li>Wula_Apparel_Init</li>
-        <li>Wula_Apparel</li>
       </tags>
       <bodyPartGroups>
 				<li>Torso</li>
@@ -167,9 +206,6 @@
         <li>Middle</li>
       </layers>
       <wornGraphicPath>Wula/Apparel/WULA_Maid_Uniform</wornGraphicPath>
-      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
-      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
-      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
     </apparel>
     <equippedStatOffsets>
 			<PlantWorkSpeed>0.15</PlantWorkSpeed>
@@ -195,9 +231,8 @@
         <Crafting>3</Crafting>
       </skillRequirements>
     </recipeMaker>
-    <possessionCount>1</possessionCount>
   </ThingDef>
-  <ThingDef ParentName="HatMakeableBase">
+  <ThingDef ParentName="WULA_ApparelCivilHatBase">
     <defName>WULA_Maid_Uniform_Headband</defName>
     <label>乌拉帝国女仆发饰</label>
     <description>乌拉帝国女仆装的配套发饰。</description>
@@ -228,9 +263,6 @@
     </stuffCategories>
     <apparel>
       <countsAsClothingForNudity>false</countsAsClothingForNudity>
-      <tags>
-        <li>Wula_Apparel</li>
-      </tags>
       <bodyPartGroups>
         <li>FullHead</li>
       </bodyPartGroups>
@@ -244,18 +276,17 @@
       <li>RewardStandardHighFreq</li>
     </thingSetMakerTags>
   </ThingDef>
-  <ThingDef ParentName="ApparelMakeableBase">
+  <ThingDef ParentName="WULA_ApparelCivilBase">
 		<defName>WULA_Nurse_Uniform</defName>
 		<label>乌拉帝国护士装</label>
 		<description>乌拉帝国平民所穿的护士装。一反常态的深色护士服反倒让病人感到不安——不过比起救人，她们更多的是在执行一些在其他种族看来“非道德”的医学操作。</description>
     <graphicData>
-      <texPath>Wula/Apparel/WULA_Maid_Uniform</texPath>
+      <texPath>Wula/Apparel/WULA_Nurse_Uniform</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <apparel>
       <tags>
         <li>Wula_Apparel_Init</li>
-        <li>Wula_Apparel</li>
       </tags>
       <bodyPartGroups>
 				<li>Torso</li>
@@ -267,10 +298,7 @@
         <!-- <li>OnSkin</li> -->
         <li>Middle</li>
       </layers>
-      <wornGraphicPath>Wula/Apparel/WULA_Maid_Uniform</wornGraphicPath>
-      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
-      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
-      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+      <wornGraphicPath>Wula/Apparel/WULA_Nurse_Uniform</wornGraphicPath>
     </apparel>
     <equippedStatOffsets>
 			<MedicalTendQualityOffset>1</MedicalTendQualityOffset>
@@ -291,9 +319,8 @@
         <Crafting>3</Crafting>
       </skillRequirements>
     </recipeMaker>
-    <possessionCount>1</possessionCount>
   </ThingDef>
-  <ThingDef ParentName="HatMakeableBase">
+  <ThingDef ParentName="WULA_ApparelCivilHatBase">
     <defName>WULA_Nurse_Uniform_Headband</defName>
     <label>乌拉帝国护士帽</label>
     <description>乌拉帝国护士装的配套发饰。</description>
@@ -309,7 +336,7 @@
       <displayPriority>105</displayPriority>
     </recipeMaker>
     <graphicData>
-      <texPath>Wula/Apparel/WULA_Maid_Uniform_Headband</texPath>
+      <texPath>Wula/Apparel/WULA_Nurse_Uniform_Headband</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
@@ -324,9 +351,6 @@
     </stuffCategories>
     <apparel>
       <countsAsClothingForNudity>false</countsAsClothingForNudity>
-      <tags>
-        <li>Wula_Apparel</li>
-      </tags>
       <bodyPartGroups>
         <li>FullHead</li>
       </bodyPartGroups>
@@ -334,7 +358,7 @@
         <li>Overhead</li>
       </layers>
       <parentTagDef>ApparelHead</parentTagDef>
-      <wornGraphicPath>Wula/Apparel/WULA_Maid_Uniform_Headband</wornGraphicPath>
+      <wornGraphicPath>Wula/Apparel/WULA_Nurse_Uniform_Headband</wornGraphicPath>
     </apparel>
     <thingSetMakerTags>
       <li>RewardStandardHighFreq</li>

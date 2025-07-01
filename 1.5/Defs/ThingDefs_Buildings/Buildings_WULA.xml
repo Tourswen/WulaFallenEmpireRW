@@ -112,13 +112,12 @@
         <cornerBR>Damage/Corner</cornerBR>
       </damageData>
     </graphicData>
-    <castEdgeShadows>true</castEdgeShadows>
-    <staticSunShadowHeight>0.20</staticSunShadowHeight>
     <constructEffect>ConstructMetal</constructEffect>
     <costList>
       <Steel>50</Steel>
     </costList>
     <altitudeLayer>Building</altitudeLayer>
+    <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
     <statBases>
@@ -190,7 +189,6 @@
       </damageData>
     </graphicData>
     <castEdgeShadows>true</castEdgeShadows>
-    <staticSunShadowHeight>0.20</staticSunShadowHeight>
     <constructEffect>ConstructMetal</constructEffect>
     <costList>
       <Steel>80</Steel>
@@ -234,7 +232,6 @@
     <building>
       <isMealSource>true</isMealSource>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-      <heatPerTickWhileWorking>0.10</heatPerTickWhileWorking>
     </building>
   </ThingDef>
 
@@ -245,7 +242,7 @@
     <graphicData>
       <texPath>Wula/Building/WULA_Charging_Station_Synth</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(1.2,2)</drawSize>
+      <drawSize>(1,2)</drawSize>
       <damageData>
         <rect>(0,0.05,1,1.95)</rect>
       </damageData>
@@ -265,12 +262,14 @@
     </costList>
     <designationHotKey>Misc2</designationHotKey>
     <uiOrder>2010</uiOrder>
-    <castEdgeShadows>false</castEdgeShadows>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.5</fillPercent>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
     <researchPrerequisites>
       <li>WULA_Base_Technology</li>
     </researchPrerequisites>
     <building>
-      <paintable>true</paintable>
+      <paintable>false</paintable>
       <bed_showSleeperBody>true</bed_showSleeperBody>
       <bed_healPerDay>0</bed_healPerDay>
     </building>
@@ -422,5 +421,67 @@
         <idlePowerDraw>50</idlePowerDraw>
       </li>
     </comps>
+  </ThingDef>
+  <!-- 武装生产器 -->
+  <ThingDef ParentName="BenchBase">
+    <defName>WULA_War_Machine_Weapon_Productor</defName>
+    <label>乌拉帝国智械武装组装台</label>
+    <description>一台专门用于构建乌拉帝国各种高阶机械体所用武器和装甲的特殊工作台。</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Wula/Building/WULA_War_Machine_Weapon_Productor</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.5</fillPercent>
+    <constructEffect>ConstructMetal</constructEffect>
+    <costList>
+      <Steel>120</Steel>
+    </costList>
+    <altitudeLayer>Building</altitudeLayer>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <Mass>50</Mass>
+      <WorkToBuild>6000</WorkToBuild>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <WorkTableWorkSpeedFactor>0.5</WorkTableWorkSpeedFactor>
+    </statBases>
+    <size>(2,2)</size>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>2120</uiOrder>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <researchPrerequisites>
+      <li>WULA_Machine_Equipment_Technology</li>
+    </researchPrerequisites>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <comps>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>200</basePowerConsumption>
+      </li>
+    </comps>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
   </ThingDef>
 </Defs>
