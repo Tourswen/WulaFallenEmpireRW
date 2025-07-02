@@ -85,7 +85,6 @@
       </li>
     </backstoryFiltersOverride>
   </PawnKindDef>
-
   
   <PawnKindDef>
     <defName>Wula_AI_Heavy_Panzer_PawnKind</defName>
@@ -95,14 +94,11 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Wula/Item/WULA_Species_Icon</texPath>
-          <maskPath>SRA/Pawn/Mechanoid/AllegianceOverlays/None</maskPath>
+          <texPath>Wula/Things/Wula_AI_Heavy_Panzer/Bodies/Naked_Thin</texPath>
+          <maskPath>Wula/Things/WULA_Cat/AllegianceOverlays/None</maskPath>
           <shaderType>CutoutWithOverlay</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>1.1</drawSize>
-          <shadowData>
-            <volume>(0.2, 0.3, 0.2)</volume>
-          </shadowData>
         </bodyGraphicData>
       </li>
     </lifeStages>
@@ -121,5 +117,23 @@
         </categories>
       </li>
     </backstoryFiltersOverride>
+  </PawnKindDef>
+    
+  <PawnKindDef ParentName="NonCombatLightMechanoidKind">
+    <defName>Mech_WULA_Cat</defName>
+    <label>乌拉猫猫</label>
+    <race>Mech_WULA_Cat</race>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Wula/Things/WULA_Cat/WULA_Cat_Thin</texPath>
+          <maskPath>Wula/Things/WULA_Cat/AllegianceOverlays/None</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
   </PawnKindDef>
 </Defs>

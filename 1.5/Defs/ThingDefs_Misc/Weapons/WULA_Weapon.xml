@@ -1045,7 +1045,7 @@
     </projectile>
   </ThingDef>
 
-  <!-- 机械体装备 -->
+  <!-- 萨克森装备 -->
   <ThingDef ParentName="BaseGun">
     <defName>WULA_WM_Rocket_Pod</defName>
     <label>PRr-34"石英"</label>
@@ -1075,7 +1075,7 @@
       <recipeUsers Inherit="False">
         <li>WULA_War_Machine_Weapon_Productor</li>
       </recipeUsers>
-      <researchPrerequisite>WULA_Machine_Equipment_Technology</researchPrerequisite>
+      <researchPrerequisite>WULA_AI_Machine_Panzer_Technology</researchPrerequisite>
     </recipeMaker>
     <weaponTags>
       <li>Wula_AI_Heavy_Panzer_Turret</li>
@@ -1155,7 +1155,7 @@
       <recipeUsers Inherit="False">
         <li>WULA_War_Machine_Weapon_Productor</li>
       </recipeUsers>
-      <researchPrerequisite>WULA_Machine_Equipment_Technology</researchPrerequisite>
+      <researchPrerequisite>WULA_AI_Machine_Panzer_Technology</researchPrerequisite>
     </recipeMaker>
     <weaponTags>
       <li>Wula_AI_Heavy_Panzer_Turret</li>
@@ -1229,7 +1229,7 @@
       <recipeUsers Inherit="False">
         <li>WULA_War_Machine_Weapon_Productor</li>
       </recipeUsers>
-      <researchPrerequisite>WULA_Machine_Equipment_Technology</researchPrerequisite>
+      <researchPrerequisite>WULA_AI_Machine_Panzer_Technology</researchPrerequisite>
     </recipeMaker>
     <verbs>
       <li>
@@ -1303,7 +1303,7 @@
       <recipeUsers Inherit="False">
         <li>WULA_War_Machine_Weapon_Productor</li>
       </recipeUsers>
-      <researchPrerequisite>WULA_Machine_Equipment_Technology</researchPrerequisite>
+      <researchPrerequisite>WULA_AI_Machine_Panzer_Technology</researchPrerequisite>
     </recipeMaker>
     <weaponTags>
       <li>Wula_AI_Heavy_Panzer_Turret</li>

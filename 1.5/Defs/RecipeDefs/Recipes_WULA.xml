@@ -77,7 +77,40 @@
       <ThingDef>Wula_AI_Heavy_Panzer</ThingDef>
     </descriptionHyperlinks>
     <researchPrerequisites>
-      <li>WULA_Machine_Productor_2_Technology</li>
+      <li>WULA_AI_Machine_Panzer_Technology</li>
+    </researchPrerequisites>
+  </RecipeDef>
+
+  <RecipeDef ParentName="LightMechanoidRecipe">
+    <defName>WULA_Build_Mech_Cat</defName>
+    <label>建造CAt-11"猫猫"</label>
+    <description>建造一台CAt-11"猫猫"辅助机器人，可以执行包括搬运、挖矿、建造、烹饪、种植收割、清理、急救和灭火一类的简单工作。</description>
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <products>
+      <Mech_WULA_Cat>1</Mech_WULA_Cat>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_WULA_Cat</ThingDef>
+    </descriptionHyperlinks>
+    <researchPrerequisites>
+      <li>WULA_Machine_Productor_Technology</li>
     </researchPrerequisites>
   </RecipeDef>
 </Defs>

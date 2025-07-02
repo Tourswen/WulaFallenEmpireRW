@@ -526,7 +526,7 @@
       </skillRequirements>
     </recipeMaker>
     <graphicData>
-      <texPath>Wula/Apparel/WULA_Knight_PowerArmor</texPath>
+      <texPath>Wula/Apparel/WULA_Assault_Troop_PowerArmor</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
@@ -538,7 +538,7 @@
       <ArmorRating_Blunt>1</ArmorRating_Blunt>
       <ArmorRating_Heat>2.0</ArmorRating_Heat>
       <EquipDelay>15</EquipDelay>
-      <EnergyShieldEnergyMax>1.5</EnergyShieldEnergyMax>
+      <!-- <EnergyShieldEnergyMax>1.5</EnergyShieldEnergyMax> -->
     </statBases>
     <equippedStatOffsets>
       <WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
@@ -564,7 +564,7 @@
         <li>Arms</li>
         <li>Legs</li>
       </bodyPartGroups>
-      <wornGraphicPath>Wula/Apparel/WULA_Knight_PowerArmor</wornGraphicPath>
+      <wornGraphicPath>Wula/Apparel/WULA_Assault_Troop_PowerArmor</wornGraphicPath>
       <layers>
         <li>Middle</li>
         <li>Shell</li>
@@ -593,7 +593,7 @@
     </thingSetMakerTags>
   </ThingDef>
   <ThingDef ParentName="HatMakeableBase">
-    <defName>WULA_Knight_Helmet</defName>
+    <defName>WULA_Assault_Troop_Helmet</defName>
     <label>乌拉帝国突击队头盔</label>
     <description>与乌拉帝国突击队装甲配套的头盔，能够辅助穿戴者的瞄准。</description>
     <techLevel>Spacer</techLevel>
@@ -612,7 +612,7 @@
       </recipeUsers>
     </recipeMaker>
     <graphicData>
-      <texPath>Wula/Apparel/WULA_Knight_Helmet</texPath>
+      <texPath>Wula/Apparel/WULA_Assault_Troop_Helmet</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
@@ -645,7 +645,7 @@
         <li>Overhead</li>
       </layers>
       <parentTagDef>ApparelHead</parentTagDef>
-      <wornGraphicPath>Wula/Apparel/WULA_Knight_Helmet</wornGraphicPath>
+      <wornGraphicPath>Wula/Apparel/WULA_Assault_Troop_Helmet</wornGraphicPath>
       <useDeflectMetalEffect>true</useDeflectMetalEffect>
       <soundWear>Wear_PowerArmor</soundWear>
       <soundRemove>Remove_PowerArmor</soundRemove>
@@ -850,6 +850,301 @@
     <costList Inherit="False">
       <ComponentSpacer>1</ComponentSpacer>
     </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardHighFreq</li>
+    </thingSetMakerTags>
+  </ThingDef>
+
+
+  <!-- 萨克森装备 -->
+  <ThingDef ParentName="ArmorMachineableBase">
+    <defName>WULA_SMp38_Shield</defName>
+    <label>SMp-38附加护盾</label>
+    <description>由乌拉帝国的"萨克森"战车所装备的中型护盾立场，可以保护车体免受敌方远程火力打击，但是会拖累战车的移动。</description>
+    <techLevel>Spacer</techLevel>
+    <tickerType>Normal</tickerType>
+    <thingCategories>
+      <li>ApparelNoble</li>
+    </thingCategories>
+    <recipeMaker>
+      <displayPriority>105</displayPriority>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>WULA_AI_Machine_Panzer_Technology</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>WULA_War_Machine_Weapon_Productor</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Wula/Apparel/WULA_Knight_PowerArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>60000</WorkToMake>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>100</Mass>
+      <Flammability>0</Flammability>
+      <!-- <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+      <ArmorRating_Heat>2.0</ArmorRating_Heat> -->
+      <EnergyShieldEnergyMax>2.0</EnergyShieldEnergyMax>
+    </statBases>
+    <equippedStatOffsets>
+			<MoveSpeed>-1</MoveSpeed>
+      <!-- <WorkSpeedGlobal>-0.5</WorkSpeedGlobal>
+      <IncomingDamageFactor>-0.5</IncomingDamageFactor> -->
+      <!-- <StaggerDurationFactor>-2</StaggerDurationFactor> -->
+			<!-- <CarryingCapacity>60</CarryingCapacity> -->
+    </equippedStatOffsets>
+    <costStuffCount>150</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList Inherit="False">
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <apparel>
+      <tags>
+        <li>Wula_AI_Heavy_Panzer_Armor</li>
+      </tags>
+      <bodyPartGroups>
+        <li>Torso</li>
+      </bodyPartGroups>
+      <!-- <wornGraphicPath>Wula/Apparel/WULA_Knight_PowerArmor</wornGraphicPath> -->
+      <layers>
+        <li>OnSkin</li>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+      <soundWear>Wear_PowerArmor</soundWear>
+      <soundRemove>Remove_PowerArmor</soundRemove>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+    </apparel>
+    <thingClass>Apparel</thingClass>
+    <comps>
+      <li Class="CompProperties_Biocodable"/>
+      <li Class="CompProperties_Shield">
+        <startingTicksToReset>3600</startingTicksToReset>
+        <minDrawSize>3.5</minDrawSize>
+        <maxDrawSize>3.8</maxDrawSize>
+        <energyLossPerDamage>0.01</energyLossPerDamage>
+        <energyOnReset>4.0</energyOnReset>
+        <blocksRangedWeapons>false</blocksRangedWeapons>
+      </li>
+      <!-- <li Class="CompProperties_ProjectileInterceptor">
+        <radius>6</radius>
+        <interceptGroundProjectiles>true</interceptGroundProjectiles>
+        <color>(0.4, 0.4, 0.4)</color>
+        <reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
+        <activeSound>BulletShield_Ambience</activeSound>
+        <hitPoints>300</hitPoints>
+        <hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
+        <chargeDurationTicks>1800</chargeDurationTicks>
+        <rechargeHitPointsIntervalTicks>120</rechargeHitPointsIntervalTicks>
+        <minIdleAlpha>0.2</minIdleAlpha>
+        <drawWithNoSelection>True</drawWithNoSelection>
+        <disarmedByEmpForTicks>1500</disarmedByEmpForTicks>
+        <gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
+      </li> -->
+    </comps>
+    <thingSetMakerTags>
+      <li>RewardStandardHighFreq</li>
+    </thingSetMakerTags>
+  </ThingDef>
+  <ThingDef ParentName="ArmorMachineableBase">
+    <defName>WULA_SMp38_Armor</defName>
+    <label>SMp-38外置装甲</label>
+    <description>由乌拉帝国的"萨克森"战车所装备的额外的零素装甲，给予车体更大的防护力度,并减免受到的伤害。</description>
+    <techLevel>Spacer</techLevel>
+    <tickerType>Normal</tickerType>
+    <thingCategories>
+      <li>ApparelNoble</li>
+    </thingCategories>
+    <recipeMaker>
+      <displayPriority>105</displayPriority>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>WULA_AI_Machine_Panzer_Technology</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>WULA_War_Machine_Weapon_Productor</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Wula/Apparel/WULA_Knight_PowerArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>60000</WorkToMake>
+      <MaxHitPoints>5000</MaxHitPoints>
+      <Mass>100</Mass>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+      <ArmorRating_Heat>2.0</ArmorRating_Heat>
+      <!-- <EnergyShieldEnergyMax>2.0</EnergyShieldEnergyMax> -->
+    </statBases>
+    <equippedStatOffsets>
+			<!-- <MoveSpeed>-1</MoveSpeed> -->
+      <IncomingDamageFactor>-0.5</IncomingDamageFactor>
+    </equippedStatOffsets>
+    <costStuffCount>300</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList Inherit="False">
+      <!-- <ComponentSpacer>4</ComponentSpacer> -->
+    </costList>
+    <apparel>
+      <tags>
+        <li>Wula_AI_Heavy_Panzer_Armor</li>
+      </tags>
+      <bodyPartGroups>
+        <li>Torso</li>
+      </bodyPartGroups>
+      <!-- <wornGraphicPath>Wula/Apparel/WULA_Knight_PowerArmor</wornGraphicPath> -->
+      <layers>
+        <li>OnSkin</li>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+      <soundWear>Wear_PowerArmor</soundWear>
+      <soundRemove>Remove_PowerArmor</soundRemove>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+    </apparel>
+    <thingClass>Apparel</thingClass>
+    <comps>
+      <li Class="CompProperties_Biocodable"/>
+      <!-- <li Class="CompProperties_Shield">
+        <startingTicksToReset>3600</startingTicksToReset>
+        <minDrawSize>3.5</minDrawSize>
+        <maxDrawSize>3.8</maxDrawSize>
+        <energyLossPerDamage>0.01</energyLossPerDamage>
+        <energyOnReset>4.0</energyOnReset>
+        <blocksRangedWeapons>false</blocksRangedWeapons>
+      </li> -->
+      <!-- <li Class="CompProperties_ProjectileInterceptor">
+        <radius>6</radius>
+        <interceptGroundProjectiles>true</interceptGroundProjectiles>
+        <color>(0.4, 0.4, 0.4)</color>
+        <reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
+        <activeSound>BulletShield_Ambience</activeSound>
+        <hitPoints>300</hitPoints>
+        <hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
+        <chargeDurationTicks>1800</chargeDurationTicks>
+        <rechargeHitPointsIntervalTicks>120</rechargeHitPointsIntervalTicks>
+        <minIdleAlpha>0.2</minIdleAlpha>
+        <drawWithNoSelection>True</drawWithNoSelection>
+        <disarmedByEmpForTicks>1500</disarmedByEmpForTicks>
+        <gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
+      </li> -->
+    </comps>
+    <thingSetMakerTags>
+      <li>RewardStandardHighFreq</li>
+    </thingSetMakerTags>
+  </ThingDef>
+  <ThingDef ParentName="ArmorMachineableBase">
+    <defName>WULA_SMp38_Engine</defName>
+    <label>SMp-38高推力喷口</label>
+    <description>由乌拉帝国的"萨克森"战车所装备的额外的移动组件，可以让战车获得更大的速度，并且增加额外的近战手段。</description>
+    <techLevel>Spacer</techLevel>
+    <tickerType>Normal</tickerType>
+    <thingCategories>
+      <li>ApparelNoble</li>
+    </thingCategories>
+    <recipeMaker>
+      <displayPriority>105</displayPriority>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>WULA_AI_Machine_Panzer_Technology</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>WULA_War_Machine_Weapon_Productor</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Wula/Apparel/WULA_Knight_PowerArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>60000</WorkToMake>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <Mass>100</Mass>
+      <Flammability>0</Flammability>
+      <!-- <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+      <ArmorRating_Heat>2.0</ArmorRating_Heat> -->
+      <!-- <EnergyShieldEnergyMax>2.0</EnergyShieldEnergyMax> -->
+    </statBases>
+    <equippedStatOffsets>
+			<MoveSpeed>4</MoveSpeed>
+      <MeleeDamageFactor>5</MeleeDamageFactor>
+      <MeleeCooldownFactor>-0.85</MeleeCooldownFactor>
+    </equippedStatOffsets>
+    <costStuffCount>300</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList Inherit="False">
+      <!-- <ComponentSpacer>4</ComponentSpacer> -->
+    </costList>
+    <apparel>
+      <tags>
+        <li>Wula_AI_Heavy_Panzer_Armor</li>
+      </tags>
+      <bodyPartGroups>
+        <li>Torso</li>
+      </bodyPartGroups>
+      <!-- <wornGraphicPath>Wula/Apparel/WULA_Knight_PowerArmor</wornGraphicPath> -->
+      <layers>
+        <li>OnSkin</li>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+      <soundWear>Wear_PowerArmor</soundWear>
+      <soundRemove>Remove_PowerArmor</soundRemove>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+    </apparel>
+    <thingClass>Apparel</thingClass>
+    <comps>
+      <li Class="CompProperties_Biocodable"/>
+      <!-- <li Class="CompProperties_Shield">
+        <startingTicksToReset>3600</startingTicksToReset>
+        <minDrawSize>3.5</minDrawSize>
+        <maxDrawSize>3.8</maxDrawSize>
+        <energyLossPerDamage>0.01</energyLossPerDamage>
+        <energyOnReset>4.0</energyOnReset>
+        <blocksRangedWeapons>false</blocksRangedWeapons>
+      </li> -->
+      <!-- <li Class="CompProperties_ProjectileInterceptor">
+        <radius>6</radius>
+        <interceptGroundProjectiles>true</interceptGroundProjectiles>
+        <color>(0.4, 0.4, 0.4)</color>
+        <reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
+        <activeSound>BulletShield_Ambience</activeSound>
+        <hitPoints>300</hitPoints>
+        <hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
+        <chargeDurationTicks>1800</chargeDurationTicks>
+        <rechargeHitPointsIntervalTicks>120</rechargeHitPointsIntervalTicks>
+        <minIdleAlpha>0.2</minIdleAlpha>
+        <drawWithNoSelection>True</drawWithNoSelection>
+        <disarmedByEmpForTicks>1500</disarmedByEmpForTicks>
+        <gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
+      </li> -->
+    </comps>
     <thingSetMakerTags>
       <li>RewardStandardHighFreq</li>
     </thingSetMakerTags>

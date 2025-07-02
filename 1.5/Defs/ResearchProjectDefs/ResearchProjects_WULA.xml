@@ -231,9 +231,9 @@
     </prerequisites>
   </ResearchProjectDef>
   <ResearchProjectDef ParentName="WULAtechBase">
-    <defName>WULA_Machine_Productor_2_Technology</defName>
-    <label>重装机兵部署套件</label>
-    <description>获取构建乌拉帝国高级机械体知识，用最强大的机械体支配战场。</description>
+    <defName>WULA_AI_Machine_Panzer_Technology</defName>
+    <label>SMp部署套件</label>
+    <description>获取构建乌拉帝国智能战车SMp-38"萨克森"的知识，并得以生产它所装备的各种强大火力武备。</description>
     <baseCost>1200</baseCost>
     <researchViewX>4.00</researchViewX>
     <researchViewY>4.60</researchViewY>
