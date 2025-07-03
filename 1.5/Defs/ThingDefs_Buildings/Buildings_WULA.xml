@@ -409,7 +409,9 @@
     </building>
     <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
     <recipes>
+      <li>WULA_Build_Mech_Cat</li>
       <li>WULA_Build_AI_Heavy_Panzer</li>
+      <li>WULA_Build_Storm_Skitter</li>
     </recipes>
     <comps>
       <li Class="CompProperties_WasteProducer" />

@@ -113,7 +113,42 @@
     <backstoryFiltersOverride>
       <li>
         <categories>
+          <li>WULA_AI_War_Machine_Backstory_Categories</li>
           <li>WULA_AI_Heavy_Panzer_Backstory_Categories</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+  </PawnKindDef>
+  
+  <PawnKindDef>
+    <defName>Wula_Storm_Skitter_PawnKind</defName>
+    <label>SMp-11"风暴"</label>
+    <race>Wula_Storm_Skitter</race>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Wula/Things/Wula_Storm_Skitter/Bodies/Naked_Thin</texPath>
+          <maskPath>Wula/Things/WULA_Cat/AllegianceOverlays/None</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <minGenerationAge MayRequire="Ludeon.RimWorld.Biotech">200</minGenerationAge>
+    <combatPower>600</combatPower>
+    
+    <!-- <weaponTags>
+      <li>Wula_AI_Heavy_Panzer_Rocket</li>
+    </weaponTags>
+    <weaponMoney>99999~99999</weaponMoney> -->
+
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>WULA_AI_War_Machine_Backstory_Categories</li>
+          <li>WULA_Storm_Skitter_Backstory_Categories</li>
         </categories>
       </li>
     </backstoryFiltersOverride>

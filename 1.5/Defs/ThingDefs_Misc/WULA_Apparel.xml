@@ -963,7 +963,7 @@
       </skillRequirements>
     </recipeMaker>
     <graphicData>
-      <texPath>Wula/Apparel/WULA_Shield_Base</texPath>
+      <texPath>Wula/Apparel/WULA_Shield_Advance</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
@@ -998,7 +998,7 @@
       <bodyPartGroups>
         <li>Arms</li>
       </bodyPartGroups>
-      <wornGraphicPath>Wula/Apparel/WULA_Shield_Base</wornGraphicPath>
+      <wornGraphicPath>Wula/Apparel/WULA_Shield_Advance</wornGraphicPath>
       <layers>
         <li>Shield</li>
       </layers>
@@ -1047,7 +1047,7 @@
       </skillRequirements>
     </recipeMaker>
     <graphicData>
-      <texPath>Wula/Apparel/WULA_Shield_Base</texPath>
+      <texPath>Wula/Apparel/WULA_Shield_Prismatic</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
@@ -1088,7 +1088,7 @@
         <li>Neck</li>
         <li>Shoulders</li>
       </bodyPartGroups>
-      <wornGraphicPath>Wula/Apparel/WULA_Shield_Base</wornGraphicPath>
+      <wornGraphicPath>Wula/Apparel/WULA_Shield_Prismatic</wornGraphicPath>
       <layers>
         <li>Shield</li>
       </layers>
@@ -1165,7 +1165,7 @@
   <!-- 萨克森装备 -->
   <ThingDef ParentName="ArmorMachineableBase">
     <defName>WULA_SMp38_Shield</defName>
-    <label>SMp-38附加护盾</label>
+    <label>SMp-38"萨克森"附加护盾</label>
     <description>由乌拉帝国的"萨克森"战车所装备的中型护盾立场，可以保护车体免受敌方远程火力打击，但是会拖累战车的移动。</description>
     <techLevel>Spacer</techLevel>
     <tickerType>Normal</tickerType>
@@ -1264,7 +1264,7 @@
   </ThingDef>
   <ThingDef ParentName="ArmorMachineableBase">
     <defName>WULA_SMp38_Armor</defName>
-    <label>SMp-38外置装甲</label>
+    <label>SMp-38"萨克森"外置装甲</label>
     <description>由乌拉帝国的"萨克森"战车所装备的额外的零素装甲，给予车体更大的防护力度,并减免受到的伤害。</description>
     <techLevel>Spacer</techLevel>
     <tickerType>Normal</tickerType>
@@ -1360,7 +1360,7 @@
   </ThingDef>
   <ThingDef ParentName="ArmorMachineableBase">
     <defName>WULA_SMp38_Engine</defName>
-    <label>SMp-38高推力喷口</label>
+    <label>SMp-38"萨克森"高推力喷口</label>
     <description>由乌拉帝国的"萨克森"战车所装备的额外的移动组件，可以让战车获得更大的速度，并且增加额外的近战手段。</description>
     <techLevel>Spacer</techLevel>
     <tickerType>Normal</tickerType>

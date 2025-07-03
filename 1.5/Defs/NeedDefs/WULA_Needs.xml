@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <NeedDef>
+    <defName>WULA_Energy</defName>
+    <needClass>Need_Food</needClass>
+    <label>能量</label>
+    <description>乌拉帝国的合成人正常活动需要能量维持，否则身体机能将持续恶化，最终导致有机部分不可逆的死亡。\n\n机械乌拉和常规机械体不同，她们只有一种指定的能量接口，只能通过能源核心补充能量，在乌拉帝国编织体工作台制造这种核心。</description>
+    <listPriority>800</listPriority>
+    <major>true</major>
+    <onlyIfCausedByHediff>true</onlyIfCausedByHediff>
+    <showForCaravanMembers>true</showForCaravanMembers>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <showUnitTicks>true</showUnitTicks>
+  </NeedDef>
+</Defs>

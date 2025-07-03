@@ -30,4 +30,14 @@
 			<li>WULA_Style</li>
 		</styleTags>
 	</HairDef>
+	<HairDef>
+		<defName>WULA_High_Ponytail</defName>
+		<label>高马尾发</label>
+		<hairGender>Female</hairGender>
+		<texPath>Wula/Hair/WULA_High_Ponytail</texPath>
+		<category>WULA_Style</category>
+		<styleTags>
+			<li>WULA_Style</li>
+		</styleTags>
+	</HairDef>
 </Defs>

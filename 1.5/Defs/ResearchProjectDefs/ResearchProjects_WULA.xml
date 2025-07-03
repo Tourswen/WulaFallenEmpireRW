@@ -243,11 +243,23 @@
   </ResearchProjectDef>
   <ResearchProjectDef ParentName="WULAtechBase">
     <defName>WULA_AI_Machine_Panzer_Technology</defName>
-    <label>SMp部署套件</label>
+    <label>基础战车部署套件</label>
     <description>获取构建乌拉帝国智能战车SMp-38"萨克森"的知识，并得以生产它所装备的各种强大火力武备。</description>
     <baseCost>1200</baseCost>
     <researchViewX>4.00</researchViewX>
     <researchViewY>4.60</researchViewY>
+    <prerequisites>
+      <li>WULA_Machine_Equipment_Technology</li>
+      <li>WULA_Machine_Productor_1_Technology</li>
+    </prerequisites>
+  </ResearchProjectDef>
+  <ResearchProjectDef ParentName="WULAtechBase">
+    <defName>WULA_Storm_Skitter_Technology</defName>
+    <label>基础战甲套件</label>
+    <description>获取构建乌拉帝国大型战甲SMp-11"风暴"的知识，并得以生产它所装备的各种大型近战武器和远程武器。</description>
+    <baseCost>1200</baseCost>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>5.30</researchViewY>
     <prerequisites>
       <li>WULA_Machine_Equipment_Technology</li>
       <li>WULA_Machine_Productor_1_Technology</li>

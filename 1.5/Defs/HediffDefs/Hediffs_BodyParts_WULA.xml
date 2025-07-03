@@ -672,6 +672,9 @@
     <descriptionHyperlinks>
       <ThingDef>WULA_Soul_Wedge</ThingDef>
     </descriptionHyperlinks>
+    <researchPrerequisites>
+      <li>WULA_Synth_Psi_Technology</li>
+    </researchPrerequisites>
     <uiIconThing>WULA_Soul_Wedge</uiIconThing>
     <anesthetize>false</anesthetize>
     <workSkillLearnFactor>2</workSkillLearnFactor>

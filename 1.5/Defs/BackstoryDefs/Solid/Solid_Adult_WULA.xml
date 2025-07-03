@@ -396,7 +396,7 @@
 
   <!-- 战车 -->
   <AlienRace.AlienBackstoryDef>
-    <defName>WULA_AI_Heavy_Panzer_Adult_Backstory01</defName>
+    <defName>WULA_AI_War_Machine_Adult_Backstory01</defName>
     <slot>Adulthood</slot>
     <title>人格矩阵装载：战争机械</title>
     <titleShort>人格-战争机械</titleShort>
@@ -404,7 +404,7 @@
     <requiredWorkTags>None</requiredWorkTags>
     <workDisables>AllWork</workDisables>
     <spawnCategories>
-      <li>WULA_AI_Heavy_Panzer_Backstory_Categories</li>
+      <li>WULA_AI_War_Machine_Backstory_Categories</li>
     </spawnCategories>
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>

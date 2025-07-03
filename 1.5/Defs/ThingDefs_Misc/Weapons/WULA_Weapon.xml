@@ -1303,4 +1303,136 @@
       <soundAmbient>MortarRound_Ambient</soundAmbient>
     </projectile>
   </ThingDef>
+  <!-- 风暴装备 -->
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>WULA_MW_Storm_Skitter_Glaive</defName>
+    <label>CMl-99"剑冢"</label>
+    <description>由SMp-11"风暴"所持的大型双头刀，功防兼备，可以劈开坚固的装甲。</description>
+    <weaponTags>
+      <li>Spear</li>
+    </weaponTags>
+    <graphicData>
+      <texPath>Wula/Weapon/WULA_MW_Storm_Skitter_Glaive</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>3.5</drawSize>
+    </graphicData>
+    <uiIconScale>0.4</uiIconScale>
+    <!-- <equippedAngleOffset>-65</equippedAngleOffset> -->
+    <techLevel>Spacer</techLevel>
+    <equippedAngleOffset>-25</equippedAngleOffset>
+    <costStuffCount>120</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList Inherit="False">
+      <Plasteel>10</Plasteel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <WorkToMake>40000</WorkToMake>
+      <Mass>100</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>横扫</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>132</power>
+        <cooldownTime>2</cooldownTime>
+        <armorPenetration>0.50</armorPenetration>
+      </li>
+      <li>
+        <label>穿刺</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>145</power>
+        <armorPenetration>0.90</armorPenetration>
+        <cooldownTime>1.7</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>WULA_War_Machine_Weapon_Productor</li>
+      </recipeUsers>
+      <researchPrerequisite>WULA_Storm_Skitter_Technology</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>WULA_RW_Storm_Skitter_AR</defName>
+    <label>FLm-78"萤石"</label>
+    <description>由SMp-11"风暴"所持的重型自动炮，火力比单兵装备要凶猛得多。</description>
+    <techLevel>Ultra</techLevel>
+    <!-- <techLevel>Spacer</techLevel> -->
+    <graphicData>
+      <texPath>Wula/Weapon/WULA_RW_Storm_Skitter_AR</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>2.75</drawSize>
+    </graphicData>
+    <uiIconScale>0.4</uiIconScale>
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>WULA_War_Machine_Weapon_Productor</li>
+      </recipeUsers>
+      <researchPrerequisite>WULA_Storm_Skitter_Technology</researchPrerequisite>
+    </recipeMaker>
+    <costList Inherit="False">
+      <Steel>350</Steel>
+      <Plasteel>200</Plasteel>
+      <ComponentSpacer>8</ComponentSpacer>
+    </costList>
+    <statBases>
+      <WorkToMake>60000</WorkToMake>
+      <Mass>100</Mass>
+      <AccuracyTouch>0.85</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.75</AccuracyMedium>
+      <AccuracyLong>0.65</AccuracyLong>
+      <RangedWeapon_Cooldown>1.25</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_WULA_RW_Storm_Skitter_AR</defaultProjectile>
+        <warmupTime>0.5</warmupTime>
+        <range>32</range>
+        <burstShotCount>12</burstShotCount>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <soundCast>Shot_ChargeRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <targetParams>
+          <canTargetPawns>true</canTargetPawns>
+          <canTargetLocations>true</canTargetLocations>
+          <canTargetBuildings>true</canTargetBuildings>
+        </targetParams>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_WULA_RW_Storm_Skitter_AR</defName>
+    <label>萤石自动炮子弹</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <tickerType>Normal</tickerType>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <texPath>Wula/Projectile/WULA_Bullet_ChargeLanceShot_Red</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>1.4</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>22</damageAmountBase>
+      <speed>90</speed>
+      <explosionRadius>1.2</explosionRadius>
+      <arcHeightFactor>0.4</arcHeightFactor>
+      <soundExplode>Explosion_Rocket</soundExplode>
+      <armorPenetrationBase>0.75</armorPenetrationBase>
+      <screenShakeFactor>0.1</screenShakeFactor>
+    </projectile>
+  </ThingDef>
 </Defs>
