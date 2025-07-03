@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThoughtDef>
+    <defName>WULA_Energy_Furnace_Though_Hunger</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>WULA_Energy_Furnace_Hediff_Hunger</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>小馋猫</label>
+        <description>我要疯狂偷吃能源核心，这真是太爽了！</description>
+        <baseMoodEffect>20</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

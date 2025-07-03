@@ -23,7 +23,7 @@
     <description>获取修复乌拉帝国合成人四肢和头部的必须知识。</description>
     <baseCost>1200</baseCost>
     <researchViewX>1.00</researchViewX>
-    <researchViewY>3.80</researchViewY>
+    <researchViewY>5.30</researchViewY>
     <prerequisites>
       <li>WULA_Base_Technology</li>
     </prerequisites>
@@ -34,7 +34,7 @@
     <description>获取修复完全修复乌拉帝国合成人的必须知识。</description>
     <baseCost>1200</baseCost>
     <researchViewX>2.00</researchViewX>
-    <researchViewY>3.80</researchViewY>
+    <researchViewY>5.30</researchViewY>
     <prerequisites>
       <li>WULA_Repair_Arm_Technology</li>
     </prerequisites>
@@ -44,8 +44,8 @@
     <label>高级编织体套件</label>
     <description>开发功能性更强的工作台，以支持后续的高级设备构建。</description>
     <baseCost>1200</baseCost>
-    <researchViewX>1.00</researchViewX>
-    <researchViewY>2.50</researchViewY>
+    <researchViewX>1.00</researchViewX> 
+    <researchViewY>1.70</researchViewY>
     <prerequisites>
       <li>WULA_Base_Technology</li>
       <li>MicroelectronicsBasics</li>
@@ -57,7 +57,7 @@
     <description>开发用于构建新乌拉帝国合成人的套件，以增加殖民地人口。</description>
     <baseCost>1600</baseCost>
     <researchViewX>1.00</researchViewX>
-    <researchViewY>4.60</researchViewY>
+    <researchViewY>3.20</researchViewY>
     <prerequisites>
       <li>WULA_Base_Technology</li>
     </prerequisites>
@@ -69,7 +69,7 @@
     <description>开发能够被乌拉帝国合成人穿着的基础衣物。</description>
     <baseCost>1200</baseCost>
     <researchViewX>1.00</researchViewX>
-    <researchViewY>3.20</researchViewY>
+    <researchViewY>2.50</researchViewY>
     <prerequisites>
       <li>ComplexClothing</li>
       <li>WULA_Base_Technology</li>
@@ -81,7 +81,7 @@
     <description>开发能够被乌拉帝国合成人穿着的具有功能性的衣物。</description>
     <baseCost>1200</baseCost>
     <researchViewX>2.00</researchViewX>
-    <researchViewY>3.20</researchViewY>
+    <researchViewY>2.50</researchViewY>
     <prerequisites>
       <li>WULA_Synth_Clothes_Technology</li>
       <li>WULA_Adv_WorkTable_Technology</li>
@@ -93,7 +93,7 @@
     <description>开发能够被乌拉帝国合成人穿着的昂贵的衣物，这类装备包含更多的加成，并且可以满足贵族的穿衣需求。</description>
     <baseCost>1200</baseCost>
     <researchViewX>3.00</researchViewX>
-    <researchViewY>3.80</researchViewY>
+    <researchViewY>3.20</researchViewY>
     <prerequisites>
       <li>NobleApparel</li>
       <li>WULA_Synth_Clothes_2_Technology</li>
@@ -105,7 +105,7 @@
     <description>开发能够被乌拉帝国合成人穿着的装甲，这类装备可以为乌拉帝国合成人提供保护。</description>
     <baseCost>1200</baseCost>
     <researchViewX>3.00</researchViewX>
-    <researchViewY>3.20</researchViewY>
+    <researchViewY>2.50</researchViewY>
     <prerequisites>
       <li>MicroelectronicsBasics</li>
       <li>WULA_Synth_Clothes_2_Technology</li>
@@ -117,7 +117,7 @@
     <description>开发能够被乌拉帝国合成人穿着的重型装甲，这类装备可以提供大量保护的同时兼具其他的功能性。</description>
     <baseCost>1200</baseCost>
     <researchViewX>4.00</researchViewX>
-    <researchViewY>3.20</researchViewY>
+    <researchViewY>2.50</researchViewY>
     <prerequisites>
       <li>Fabrication</li>
       <li>WULA_Synth_Armor_Technology</li>
@@ -130,7 +130,7 @@
     <description>开发能够武装乌拉帝国合成人的老式气动武器，以抵御针对殖民地的外部袭击。</description>
     <baseCost>1200</baseCost>
     <researchViewX>1.00</researchViewX>
-    <researchViewY>1.80</researchViewY>
+    <researchViewY>1.00</researchViewY>
     <prerequisites>
       <li>Machining</li>
       <li>WULA_Base_Technology</li>
@@ -142,7 +142,7 @@
     <description>开发能够武装乌拉帝国合成人的近距离武器，可以在短距离上消灭敌人。</description>
     <baseCost>1200</baseCost>
     <researchViewX>2.00</researchViewX>
-    <researchViewY>1.80</researchViewY>
+    <researchViewY>1.00</researchViewY>
     <prerequisites>
       <li>WULA_Adv_WorkTable_Technology</li>
       <li>WULA_Synth_Weapon_Technology</li>
@@ -154,7 +154,7 @@
     <description>开发能够武装乌拉帝国合成人的镇暴类装备，以盾牌和失能武器构成，旨在抑制对手的行动。</description>
     <baseCost>1200</baseCost>
     <researchViewX>3.00</researchViewX>
-    <researchViewY>1.80</researchViewY>
+    <researchViewY>1.00</researchViewY>
     <prerequisites>
       <li>WULA_Synth_Weapon_2_Melee_Technology</li>
     </prerequisites>
@@ -165,7 +165,7 @@
     <description>开发能够武装乌拉帝国合成人的远距离武器，旨在构建密集火力网消灭敌人。</description>
     <baseCost>1200</baseCost>
     <researchViewX>2.00</researchViewX>
-    <researchViewY>1.10</researchViewY>
+    <researchViewY>0.20</researchViewY>
     <prerequisites>
       <li>WULA_Adv_WorkTable_Technology</li>
       <li>MicroelectronicsBasics</li>
@@ -178,7 +178,7 @@
     <description>开发能够武装乌拉帝国合成人的大范围杀伤性武器，用于对抗最难应付的敌人。</description>
     <baseCost>1200</baseCost>
     <researchViewX>3.00</researchViewX>
-    <researchViewY>1.10</researchViewY>
+    <researchViewY>0.20</researchViewY>
     <prerequisites>
       <li>WULA_Synth_Weapon_2_Ranged_Technology</li>
     </prerequisites>
@@ -186,13 +186,24 @@
   <!-- 法杖 -->
   <ResearchProjectDef ParentName="WULAtechBase">
     <defName>WULA_Synth_Psi_Technology</defName>
-    <label>灵能武装套件</label>
+    <label>灵能基础套件</label>
     <description>开发能够供乌拉帝国合成人使用的基础灵能法杖，同时解锁从俘虏身上获取魂锲的能力。</description>
     <baseCost>1200</baseCost>
     <researchViewX>2.00</researchViewX>
-    <researchViewY>2.50</researchViewY>
+    <researchViewY>1.70</researchViewY>
     <prerequisites>
       <li>WULA_Adv_WorkTable_Technology</li>
+    </prerequisites>
+  </ResearchProjectDef>
+  <ResearchProjectDef ParentName="WULAtechBase">
+    <defName>WULA_Synth_Psi_2_Technology</defName>
+    <label>灵能高级套件</label>
+    <description>开发能够供乌拉帝国合成人使用的高级灵能法杖。</description>
+    <baseCost>1200</baseCost>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>1.70</researchViewY>
+    <prerequisites>
+      <li>WULA_Synth_Psi_Technology</li>
     </prerequisites>
   </ResearchProjectDef>
   <!-- 机械 -->
@@ -202,7 +213,7 @@
     <description>获取构建乌拉帝国机械体的设施，以支持后续的机械体开发。</description>
     <baseCost>1200</baseCost>
     <researchViewX>2.00</researchViewX>
-    <researchViewY>4.60</researchViewY>
+    <researchViewY>3.90</researchViewY>
     <prerequisites>
       <li>WULA_New_Synth_Built_Technology</li>
     </prerequisites>
@@ -223,11 +234,11 @@
     <label>机械体武装构装套件</label>
     <description>获取构建乌拉帝国高级机械体武装的知识，以为机械体换装不同的武备。</description>
     <baseCost>1200</baseCost>
-    <researchViewX>4.00</researchViewX>
+    <researchViewX>3.00</researchViewX>
     <researchViewY>5.30</researchViewY>
     <prerequisites>
       <li>StandardMechtech</li>
-      <li>WULA_Machine_Productor_1_Technology</li>
+      <li>WULA_Machine_Productor_Technology</li>
     </prerequisites>
   </ResearchProjectDef>
   <ResearchProjectDef ParentName="WULAtechBase">
@@ -238,8 +249,31 @@
     <researchViewX>4.00</researchViewX>
     <researchViewY>4.60</researchViewY>
     <prerequisites>
-      <li>StandardMechtech</li>
+      <li>WULA_Machine_Equipment_Technology</li>
       <li>WULA_Machine_Productor_1_Technology</li>
+    </prerequisites>
+  </ResearchProjectDef>
+  <!-- 植入物 -->
+  <ResearchProjectDef ParentName="WULAtechBase">
+    <defName>WULA_Synth_Addons_Technology</defName>
+    <label>基础植入物套件</label>
+    <description>获取构建乌拉帝国合成人基础植入物的技术，用以增强乌拉帝国合成人的机体性能。</description>
+    <baseCost>1200</baseCost>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>3.20</researchViewY>
+    <prerequisites>
+      <li>WULA_New_Synth_Built_Technology</li>
+    </prerequisites>
+  </ResearchProjectDef>
+  <ResearchProjectDef ParentName="WULAtechBase">
+    <defName>WULA_Synth_Addons_2_Technology</defName>
+    <label>高级植入物套件</label>
+    <description>获取构建乌拉帝国合成人进阶植入物的技术，用以增强乌拉帝国合成人的机体性能。</description>
+    <baseCost>1200</baseCost>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>3.90</researchViewY>
+    <prerequisites>
+      <li>WULA_Synth_Addons_Technology</li>
     </prerequisites>
   </ResearchProjectDef>
 </Defs>

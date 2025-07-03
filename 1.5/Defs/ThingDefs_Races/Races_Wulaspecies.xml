@@ -653,7 +653,6 @@
     </tools>
 	</AlienRace.ThingDef_AlienRace>
     
-  <!-- WarUrchin -->  
   <ThingDef ParentName="LightMechanoid">
     <defName>Mech_WULA_Cat</defName>
     <label>乌拉猫猫</label>

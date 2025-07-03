@@ -46,6 +46,7 @@
         </li>
       </options>
     </colorGenerator>
+		<followStuffColor>False</followStuffColor>
   </ThingDef>
   <ThingDef ParentName="WULA_ApparelRoyalBase">
 		<defName>WULA_Official_Uniform</defName>
@@ -116,6 +117,7 @@
       </options>
     </colorGenerator>
     <possessionCount>1</possessionCount>
+		<followStuffColor>False</followStuffColor>
   </ThingDef>
   <ThingDef Name="WULA_ApparelCivilHatBase" ParentName="HatMakeableBase" Abstract="True">
     <apparel>
@@ -135,6 +137,7 @@
       </options>
     </colorGenerator>
     <possessionCount>1</possessionCount>
+		<followStuffColor>False</followStuffColor>
   </ThingDef>
   <ThingDef ParentName="WULA_ApparelCivilBase">
 		<defName>WULA_Sailor_Dress</defName>
@@ -408,6 +411,7 @@
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     </recipeMaker>
     <possessionCount>1</possessionCount>
+		<followStuffColor>False</followStuffColor>
   </ThingDef>
   <ThingDef ParentName="ApparelMakeableBase">
 		<defName>WULA_Bodystocking_White</defName>
@@ -451,6 +455,7 @@
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     </recipeMaker>
     <possessionCount>1</possessionCount>
+		<followStuffColor>False</followStuffColor>
   </ThingDef>
   <ThingDef ParentName="ApparelMakeableBase">
 		<defName>WULA_Body_Suit</defName>
@@ -502,13 +507,14 @@
       </skillRequirements>
     </recipeMaker>
     <possessionCount>1</possessionCount>
+		<followStuffColor>False</followStuffColor>
   </ThingDef>
 
   <!-- 普通甲 -->
   <ThingDef ParentName="ArmorMachineableBase">
     <defName>WULA_Assault_Troop_PowerArmor</defName>
     <label>乌拉帝国突击队装甲</label>
-    <description>乌拉帝国的常规步兵部队穿戴的动力甲，装备了轻型护盾阻挡射弹，以轻便和高防御力受到喜爱。</description>
+    <description>乌拉帝国的常规步兵部队穿戴的动力甲，以轻便和高防御力受到喜爱。</description>
     <techLevel>Spacer</techLevel>
     <tickerType>Normal</tickerType>
     <thingCategories>
@@ -542,7 +548,6 @@
     </statBases>
     <equippedStatOffsets>
       <WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
-      <IncomingDamageFactor>-0.3</IncomingDamageFactor>
       <StaggerDurationFactor>-0.5</StaggerDurationFactor>
 			<CarryingCapacity>60</CarryingCapacity>
     </equippedStatOffsets>
@@ -551,7 +556,7 @@
       <li>Metallic</li>
     </stuffCategories>
     <costList Inherit="False">
-      <ComponentIndustrial>4</ComponentIndustrial>
+      <ComponentIndustrial>8</ComponentIndustrial>
     </costList>
     <apparel>
       <tags>
@@ -579,18 +584,19 @@
     <thingClass>Apparel</thingClass>
     <comps>
       <li Class="CompProperties_Biocodable"/>
-      <li Class="CompProperties_Shield">
-        <startingTicksToReset>7200</startingTicksToReset><!-- 1 mins -->
+      <!-- <li Class="CompProperties_Shield">
+        <startingTicksToReset>7200</startingTicksToReset>
         <minDrawSize>2.5</minDrawSize>
         <maxDrawSize>2.8</maxDrawSize>
         <energyLossPerDamage>0.01</energyLossPerDamage>
         <energyOnReset>4.0</energyOnReset>
         <blocksRangedWeapons>false</blocksRangedWeapons>
-      </li>
+      </li> -->
     </comps>
     <thingSetMakerTags>
       <li>RewardStandardHighFreq</li>
     </thingSetMakerTags>
+		<followStuffColor>False</followStuffColor>
   </ThingDef>
   <ThingDef ParentName="HatMakeableBase">
     <defName>WULA_Assault_Troop_Helmet</defName>
@@ -627,7 +633,6 @@
     </statBases>
     <equippedStatOffsets>
       <WorkSpeedGlobal>-0.1</WorkSpeedGlobal>
-      <IncomingDamageFactor>-0.15</IncomingDamageFactor>
       <AimingDelayFactor>-0.15</AimingDelayFactor>
       <ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
     </equippedStatOffsets>
@@ -660,6 +665,7 @@
     <thingSetMakerTags>
       <li>RewardStandardHighFreq</li>
     </thingSetMakerTags>
+		<followStuffColor>False</followStuffColor>
   </ThingDef>
   <!-- 重甲 -->
   <ThingDef ParentName="ArmorMachineableBase">
@@ -700,7 +706,7 @@
     <equippedStatOffsets>
 			<MoveSpeed>-0.25</MoveSpeed>
       <WorkSpeedGlobal>-0.5</WorkSpeedGlobal>
-      <IncomingDamageFactor>-0.5</IncomingDamageFactor>
+      <IncomingDamageFactor>-0.25</IncomingDamageFactor>
       <StaggerDurationFactor>-2</StaggerDurationFactor>
 			<CarryingCapacity>60</CarryingCapacity>
     </equippedStatOffsets>
@@ -709,7 +715,7 @@
       <li>Metallic</li>
     </stuffCategories>
     <costList Inherit="False">
-      <ComponentSpacer>4</ComponentSpacer>
+      <ComponentSpacer>8</ComponentSpacer>
     </costList>
     <apparel>
       <tags>
@@ -784,6 +790,7 @@
     <thingSetMakerTags>
       <li>RewardStandardHighFreq</li>
     </thingSetMakerTags>
+		<followStuffColor>False</followStuffColor>
   </ThingDef>
   <ThingDef ParentName="HatMakeableBase">
     <defName>WULA_Knight_Helmet</defName>
@@ -820,7 +827,7 @@
     </statBases>
     <equippedStatOffsets>
       <WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
-      <IncomingDamageFactor>-0.2</IncomingDamageFactor>
+      <IncomingDamageFactor>-0.1</IncomingDamageFactor>
       <AimingDelayFactor>-0.25</AimingDelayFactor>
       <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
     </equippedStatOffsets>
@@ -853,8 +860,89 @@
     <thingSetMakerTags>
       <li>RewardStandardHighFreq</li>
     </thingSetMakerTags>
+		<followStuffColor>False</followStuffColor>
   </ThingDef>
 
+  <!-- 盾牌 -->
+  <ThingDef ParentName="ArmorMachineableBase">
+    <defName>WULA_Shield_Base</defName>
+    <label>乌拉帝国盾牌</label>
+    <description>一面供乌拉帝国突击队使用的盾牌，比看上去轻，在各种乌拉帝国产品中属于最廉价的那类。</description>
+    <techLevel>Spacer</techLevel>
+    <tickerType>Normal</tickerType>
+    <thingCategories>
+      <li>ApparelNoble</li>
+    </thingCategories>
+    <recipeMaker>
+      <displayPriority>105</displayPriority>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>WULA_Synth_Weapon_2_Stun_Technology</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Wula/Apparel/WULA_Knight_PowerArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>30000</WorkToMake>
+      <MaxHitPoints>2000</MaxHitPoints>
+      <Mass>10</Mass>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>1.8</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.8</ArmorRating_Blunt>
+      <ArmorRating_Heat>2.0</ArmorRating_Heat>
+      <EquipDelay>3</EquipDelay>
+      <!-- <EnergyShieldEnergyMax>4.0</EnergyShieldEnergyMax> -->
+    </statBases>
+    <equippedStatOffsets>
+			<MoveSpeed>-0.5</MoveSpeed>
+      <!-- <IncomingDamageFactor>-0.2</IncomingDamageFactor> -->
+      <!-- <StaggerDurationFactor>-2</StaggerDurationFactor> -->
+			<!-- <CarryingCapacity>60</CarryingCapacity> -->
+    </equippedStatOffsets>
+    <costStuffCount>100</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList Inherit="False">
+      <!-- <ComponentSpacer>4</ComponentSpacer> -->
+    </costList>
+    <apparel>
+      <tags>
+        <li>Wula_Apparel</li>
+      </tags>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Wula/Apparel/WULA_Knight_PowerArmor</wornGraphicPath>
+      <layers>
+        <li>OuterClothing</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+      <!-- <soundWear>Wear_PowerArmor</soundWear>
+      <soundRemove>Remove_PowerArmor</soundRemove> -->
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+    </apparel>
+    <thingClass>Apparel</thingClass>
+    <comps>
+      <li Class="CompProperties_Biocodable"/>
+    </comps>
+    <thingSetMakerTags>
+      <li>RewardStandardHighFreq</li>
+    </thingSetMakerTags>
+		<followStuffColor>False</followStuffColor>
+  </ThingDef>
 
   <!-- 萨克森装备 -->
   <ThingDef ParentName="ArmorMachineableBase">

@@ -26,6 +26,180 @@
       <li>FieldHand</li>
     </techHediffsTags> -->
   </ThingDef>
+  <ThingDef ParentName="BodyPartProstheticImperialBase">
+    <defName>WULA_Energy_Furnace_Overdrive</defName>
+    <label>中央能源炉-超载组件</label>
+    <description>安装于能源炉的特殊改件，除了获得常驻的移动速度外，还可以短时间超载机体，获得力量上的爆发性增益。</description>
+    <!-- <descriptionHyperlinks><RecipeDef>InstallFieldHand</RecipeDef></descriptionHyperlinks> -->
+    <!-- <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags> -->
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <recipeMaker Inherit="False">
+      <researchPrerequisite>WULA_Synth_Addons_Technology</researchPrerequisite>
+      <recipeUsers>
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+    </recipeMaker>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsableImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>安装中央能源炉超载组件</useLabel>
+        <!-- <userMustHaveHediff>WULA_Addons_Antenna_Hediff_Base</userMustHaveHediff> -->
+      </li>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>WULA_Energy_Furnace_Hediff_Overdrive</hediffDef>
+        <bodyPart>WULA_Energy_Furnace_Bodypart</bodyPart>
+        <canUpgrade>false</canUpgrade>
+        <maxSeverity>1</maxSeverity>
+      </li>
+    </comps>
+  </ThingDef>
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>WULA_Energy_Furnace_Hediff_Overdrive</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>超载组件</label>
+    <description>安装于能源炉的特殊改件，除了获得常驻的移动速度外，还可以短时间超载机体，获得力量上的爆发性增益。</description>
+    <isBad>false</isBad>
+    <duplicationAllowed>false</duplicationAllowed>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <stages>
+      <li>
+        <statOffsets>
+          <MoveSpeed>1</MoveSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+    <defaultInstallPart>WULA_Energy_Furnace_Bodypart</defaultInstallPart>
+    <!-- <spawnThingOnRemoved>WULA_Addons_Antenna_Base</spawnThingOnRemoved> -->
+    <comps>
+      <li Class="HediffCompProperties_GiveAbility">
+        <abilityDefs>
+          <li>WULA_Energy_Furnace_Skill_Overdrive</li>
+        </abilityDefs>
+      </li>
+    </comps>
+  </HediffDef>
+  <AbilityDef>
+    <defName>WULA_Energy_Furnace_Skill_Overdrive</defName>
+    <label>能源炉超载</label>
+    <description>立刻激活能源炉的超载能力，极大增加近战的命中率和速度，并且不会被敌人的近战减速。</description>
+    <iconPath>UI/Abilities/MetalbloodInjection</iconPath>
+    <cooldownTicksRange>1800</cooldownTicksRange> <!-- 30 seconds -->
+    <hostile>false</hostile>
+    <groupAbility>true</groupAbility>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <aiCanUse>true</aiCanUse>
+    <ai_IsOffensive>true</ai_IsOffensive>
+    <targetRequired>false</targetRequired>
+    <statBases>
+      <Ability_Duration>15</Ability_Duration>
+    </statBases>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <requireLineOfSight>false</requireLineOfSight>
+      <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+      <soundCast>Pawn_Ghoul_Frenzy</soundCast>
+      <targetable>false</targetable>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>WULA_Energy_Furnace_Skill_Hediff_Overdrive</hediffDef>
+        <onlyApplyToSelf>True</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+  <HediffDef>
+    <defName>WULA_Energy_Furnace_Skill_Hediff_Overdrive</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>能源炉超载</label>
+    <description>能源炉正处于超载状态，极大增加了近战的命中率、攻击速度和移动速度，并且不会被敌人的近战减速。</description>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li>
+        <statFactors>
+          <MeleeCooldownFactor>0.5</MeleeCooldownFactor>
+          <MeleeHitChance>1</MeleeHitChance>
+          <StaggerDurationFactor>0</StaggerDurationFactor>
+        </statFactors>
+        <statOffsets>
+          <MoveSpeed>2</MoveSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="HediffCompProperties_Effecter">
+        <stateEffecter>GhoulFrenzy</stateEffecter>
+      </li>
+    </comps>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartProstheticImperialBase">
+    <defName>WULA_Energy_Furnace_Hunger</defName>
+    <label>中央能源炉-偷吃组件</label>
+    <description>安装于能源炉的特殊改件，通过增加能源需求变相制造满足感，以增加合成人的心情。</description>
+    <!-- <descriptionHyperlinks><RecipeDef>InstallFieldHand</RecipeDef></descriptionHyperlinks> -->
+    <!-- <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags> -->
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <recipeMaker Inherit="False">
+      <researchPrerequisite>WULA_Synth_Addons_Technology</researchPrerequisite>
+      <recipeUsers>
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+    </recipeMaker>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsableImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>安装中央能源炉偷吃组件</useLabel>
+        <!-- <userMustHaveHediff>WULA_Addons_Antenna_Hediff_Base</userMustHaveHediff> -->
+      </li>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>WULA_Energy_Furnace_Hediff_Overdrive</hediffDef>
+        <bodyPart>WULA_Energy_Furnace_Bodypart</bodyPart>
+        <canUpgrade>false</canUpgrade>
+        <maxSeverity>1</maxSeverity>
+      </li>
+    </comps>
+  </ThingDef>
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>WULA_Energy_Furnace_Hediff_Hunger</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>偷吃插件</label>
+    <description>安装于能源炉的特殊改件，通过增加能源需求变相制造满足感，以增加合成人的心情。</description>
+    <isBad>false</isBad>
+    <duplicationAllowed>false</duplicationAllowed>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <stages>
+      <li>
+        <hungerRateFactor>2</hungerRateFactor>
+      </li>
+    </stages>
+    <defaultInstallPart>WULA_Energy_Furnace_Bodypart</defaultInstallPart>
+    <!-- <spawnThingOnRemoved>WULA_Addons_Antenna_Base</spawnThingOnRemoved> -->
+  </HediffDef>
 
   <!-- 天线 -->
   <ThingDef ParentName="BodyPartProstheticImperialBase">
@@ -68,19 +242,22 @@
       </li>
     </stages>
     <defaultInstallPart>WULA_Addons_Antenna_Bodypart</defaultInstallPart>
-    <spawnThingOnRemoved>WULA_Addons_Antenna_Base</spawnThingOnRemoved>
+    <!-- <spawnThingOnRemoved>WULA_Addons_Antenna_Base</spawnThingOnRemoved> -->
   </HediffDef>
-  <ThingDef ParentName="ControlSublinkBase">
+  <ThingDef ParentName="MechanitorImplantCraftableBase">
     <defName>WULA_Addons_Antenna_Expansion</defName>
     <label>上行链路天线-扩容插件</label>
     <description>用于为上行链路天线进行带宽扩容的组件，支持更多的机械体带宽和机械组，以指挥更庞大的钢铁洪流。</description>
-    <!-- <costList>
-      <SignalChip>1</SignalChip>
+    <costList>
+      <Plasteel>10</Plasteel>
       <ComponentIndustrial>4</ComponentIndustrial>
-    </costList> -->
-    <!-- <recipeMaker>
-      <researchPrerequisite>StandardMechtech</researchPrerequisite>
-    </recipeMaker> -->
+    </costList>
+    <recipeMaker Inherit="False">
+      <researchPrerequisite>WULA_Synth_Addons_Technology</researchPrerequisite>
+      <recipeUsers>
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+    </recipeMaker>
     <comps>
       <li Class="CompProperties_Usable">
         <compClass>CompUsableImplant</compClass>
@@ -102,7 +279,7 @@
     <label>扩容插件</label>
     <description>用于为上行链路天线进行带宽扩容的组件，支持更多的机械体带宽和机械组，以指挥更庞大的钢铁洪流。</description>
     <descriptionShort>用于为上行链路天线进行带宽扩容的组件。</descriptionShort>
-    <defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+    <defaultLabelColor>(0.5, 0.8, 1.0)</defaultLabelColor>
     <isBad>false</isBad>
     <priceImpact>true</priceImpact>
     <initialSeverity>1</initialSeverity> <!-- Severity is bound to level of implant -->
@@ -135,6 +312,82 @@
       </li>
     </stages>
   </HediffDef>
+  <ThingDef ParentName="MechanitorImplantCraftableBase">
+    <defName>WULA_Addons_Antenna_Repairer</defName>
+    <label>上行链路天线-维修插件</label>
+    <description>用于为上行链路天线添加额外维修能力的组件，可以向乌拉帝国的机械体发送特殊的信号，使其能够利用上行链路自行诊断和修复伤势，并提高维修速度。</description>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <recipeMaker Inherit="False">
+      <researchPrerequisite>WULA_Synth_Addons_Technology</researchPrerequisite>
+      <recipeUsers>
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+    </recipeMaker>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsableImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>安装上行链路天线维修插件</useLabel>
+        <userMustHaveHediff>WULA_Addons_Antenna_Hediff_Base</userMustHaveHediff>
+      </li>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>WULA_Addons_Antenna_Hediff_Repairer</hediffDef>
+        <bodyPart>WULA_Addons_Antenna_Bodypart</bodyPart>
+        <canUpgrade>true</canUpgrade>
+        <maxSeverity>3</maxSeverity>
+      </li>
+    </comps>
+  </ThingDef>
+  <HediffDef>
+    <defName>WULA_Addons_Antenna_Hediff_Repairer</defName>
+    <hediffClass>Hediff_Level</hediffClass>
+    <label>维修插件</label>
+    <description>用于为上行链路天线添加额外维修能力的组件，可以向乌拉帝国的机械体发送特殊的信号，使其能够利用上行链路自行诊断和修复伤势，并提高维修速度。</description>
+    <defaultLabelColor>(0.5, 0.8, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <priceImpact>true</priceImpact>
+    <initialSeverity>1</initialSeverity> <!-- Severity is bound to level of implant -->
+    <minSeverity>0</minSeverity>
+    <maxSeverity>3</maxSeverity>
+    <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+    <levelIsQuantity>true</levelIsQuantity>
+    <duplicationAllowed>false</duplicationAllowed>
+    <comps>
+      <li Class="HediffCompProperties_GiveAbility">
+        <abilityDefs>
+          <li>RemoteRepair</li>
+        </abilityDefs>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>1</minSeverity>
+        <statOffsets>
+          <MechRemoteRepairDistance>10</MechRemoteRepairDistance>
+          <MechRepairSpeed>0.66</MechRepairSpeed>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>2</minSeverity>
+        <statOffsets>
+          <MechRemoteRepairDistance>12</MechRemoteRepairDistance>
+          <MechRepairSpeed>1.3</MechRepairSpeed>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>3</minSeverity>
+        <statOffsets>
+          <MechRemoteRepairDistance>15</MechRemoteRepairDistance>
+          <MechRepairSpeed>2</MechRepairSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- 插件 -->
 
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
     <defName>WULA_Fix_Hand_Base</defName>
