@@ -35,17 +35,22 @@
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
           <thingDef>MedicineIndustrial</thingDef>
-          <count>30</count>
+          <count>10</count>
         </li>
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
           <thingDef>ComponentIndustrial</thingDef>
-          <count>30</count>
+          <count>50</count>
         </li>
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
-          <thingDef>MeleeWeapon_Knife</thingDef>
-          <stuff>Plasteel</stuff>
+          <thingDef>WULA_MW_Mace</thingDef>
+          <stuff>Uranium</stuff>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>WULA_RW_Base_AR</thingDef>
+          <count>1</count>
         </li>
 
         <!-- Scatter some things near player start -->
@@ -72,22 +77,12 @@
           <thingDef>Steel</thingDef>
           <count>720</count>
         </li>
-        <li Class="ScenPart_ScatterThingsAnywhere">
-          <def>ScatterThingsAnywhere</def>
-          <thingDef>MealSurvivalPack</thingDef>
-          <count>7</count>
-        </li>
 
         <!-- Starting mechs -->
         <li Class="ScenPart_StartingMech">
           <def>StartingMech</def>
-          <mechKind>Mech_Lifter</mechKind>
-          <overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
-        </li>
-        <li Class="ScenPart_StartingMech">
-          <def>StartingMech</def>
-          <mechKind>Mech_Constructoid</mechKind>
-          <overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
+          <mechKind>Mech_WULA_Cat</mechKind>
+          <overseenByPlayerPawnChance>2</overseenByPlayerPawnChance>
         </li>
 
         <!-- Starting research -->
@@ -107,7 +102,7 @@
         <!-- Game start dialog -->
         <li Class="ScenPart_GameStartDialog">
           <def>GameStartDialog</def>
-          <textKey>GameStartDialog</textKey>
+          <text>堕落乌拉mod游玩前提示：\n\n1.乌拉帝国合成人（机械乌拉）是一种特殊的机械体殖民者，</text>
           <closeSound>GameStartSting</closeSound>
         </li>
       </parts>

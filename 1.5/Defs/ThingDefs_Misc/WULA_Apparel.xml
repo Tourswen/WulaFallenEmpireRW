@@ -670,7 +670,7 @@
   <!-- 重甲 -->
   <ThingDef ParentName="ArmorMachineableBase">
     <defName>WULA_Knight_PowerArmor</defName>
-    <label>乌拉帝国骑士装甲</label>
+    <label>乌拉帝国骑士军团甲</label>
     <description>乌拉帝国骑士所穿戴的动力甲，虽然看起来很薄但是实际上防御力相当强大，能够以能量护盾抵挡射弹，还有一只挂载了KRc-7"熔岩"火炮的副肢提供补充火力。</description>
     <techLevel>Spacer</techLevel>
     <tickerType>Normal</tickerType>
@@ -701,7 +701,7 @@
       <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
       <ArmorRating_Heat>2.0</ArmorRating_Heat>
       <EquipDelay>35</EquipDelay>
-      <EnergyShieldEnergyMax>4.0</EnergyShieldEnergyMax>
+      <EnergyShieldEnergyMax>0.25</EnergyShieldEnergyMax>
     </statBases>
     <equippedStatOffsets>
 			<MoveSpeed>-0.25</MoveSpeed>
@@ -775,10 +775,10 @@
         <onlyManualCast>true</onlyManualCast>
         <hasStandardCommand>true</hasStandardCommand>
         <targetable>true</targetable>
-        <violent>false</violent>
+        <violent>true</violent>
         <targetParams>
-          <canTargetPawns>false</canTargetPawns>
-          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetPawns>true</canTargetPawns>
+          <canTargetBuildings>true</canTargetBuildings>
           <canTargetLocations>true</canTargetLocations>
         </targetParams>
         <soundCast>FlareLaunch</soundCast>
@@ -867,7 +867,7 @@
   <ThingDef ParentName="ArmorMachineableBase">
     <defName>WULA_Shield_Base</defName>
     <label>乌拉帝国盾牌</label>
-    <description>一面供乌拉帝国突击队使用的盾牌，比看上去轻，在各种乌拉帝国产品中属于最廉价的那类。</description>
+    <description>一面供乌拉帝国突击队使用的盾牌，在武装序列中属于重型盾牌，可以为远程武器提供架枪支柱以稳定瞄准。</description>
     <techLevel>Spacer</techLevel>
     <tickerType>Normal</tickerType>
     <thingCategories>
@@ -889,7 +889,7 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <WorkToMake>30000</WorkToMake>
+      <WorkToMake>5000</WorkToMake>
       <MaxHitPoints>1000</MaxHitPoints>
       <Mass>10</Mass>
       <Flammability>0</Flammability>
@@ -901,9 +901,8 @@
     </statBases>
     <equippedStatOffsets>
 			<MoveSpeed>-0.5</MoveSpeed>
-      <!-- <IncomingDamageFactor>-0.2</IncomingDamageFactor> -->
-      <!-- <StaggerDurationFactor>-2</StaggerDurationFactor> -->
-			<!-- <CarryingCapacity>60</CarryingCapacity> -->
+      <AimingDelayFactor>-0.25</AimingDelayFactor>
+      <ShootingAccuracyPawn>5</ShootingAccuracyPawn>
     </equippedStatOffsets>
     <costStuffCount>100</costStuffCount>
     <stuffCategories>
@@ -943,6 +942,220 @@
     </thingSetMakerTags>
 		<followStuffColor>False</followStuffColor>
   </ThingDef>
+  <ThingDef ParentName="ArmorMachineableBase">
+    <defName>WULA_Shield_Advance</defName>
+    <label>乌拉帝国幻光盾</label>
+    <description>一面轻型盾牌，为乌拉帝国的突击队和骑士军团设计，轻便易携，可以提供抵御大量敌方投射火力的护盾立场，但是本身无法给予额外护甲。</description>
+    <techLevel>Spacer</techLevel>
+    <tickerType>Normal</tickerType>
+    <thingCategories>
+      <li>ApparelNoble</li>
+    </thingCategories>
+    <recipeMaker>
+      <displayPriority>105</displayPriority>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>WULA_Synth_Weapon_2_Stun_Technology</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Wula/Apparel/WULA_Shield_Base</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>40000</WorkToMake>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>2</Mass>
+      <Flammability>0</Flammability>
+      <!-- <ArmorRating_Sharp>1.8</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.8</ArmorRating_Blunt>
+      <ArmorRating_Heat>2.0</ArmorRating_Heat> -->
+      <EquipDelay>1</EquipDelay>
+      <EnergyShieldEnergyMax>0.5</EnergyShieldEnergyMax>
+    </statBases>
+    <equippedStatOffsets>
+			<MoveSpeed>-0.2</MoveSpeed>
+			<!-- <MoveSpeed>-0.5</MoveSpeed> -->
+      <!-- <IncomingDamageFactor>-0.2</IncomingDamageFactor> -->
+      <!-- <StaggerDurationFactor>-2</StaggerDurationFactor> -->
+			<!-- <CarryingCapacity>60</CarryingCapacity> -->
+    </equippedStatOffsets>
+    <costStuffCount>50</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList Inherit="False">
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <apparel>
+      <tags>
+        <li>Wula_Apparel</li>
+      </tags>
+      <bodyPartGroups>
+        <li>Arms</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Wula/Apparel/WULA_Shield_Base</wornGraphicPath>
+      <layers>
+        <li>Shield</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+      <!-- <soundWear>Wear_PowerArmor</soundWear>
+      <soundRemove>Remove_PowerArmor</soundRemove> -->
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+    </apparel>
+    <thingClass>Apparel</thingClass>
+    <comps>
+      <li Class="CompProperties_Shield">
+        <startingTicksToReset>3600</startingTicksToReset><!-- 1 mins -->
+        <minDrawSize>2.5</minDrawSize>
+        <maxDrawSize>2.8</maxDrawSize>
+        <energyLossPerDamage>0.01</energyLossPerDamage>
+        <energyOnReset>4.0</energyOnReset>
+        <blocksRangedWeapons>false</blocksRangedWeapons>
+      </li>
+      <li Class="CompProperties_Biocodable"/>
+    </comps>
+    <thingSetMakerTags>
+      <li>RewardStandardHighFreq</li>
+    </thingSetMakerTags>
+		<followStuffColor>False</followStuffColor>
+  </ThingDef>
+  <ThingDef ParentName="ArmorMachineableBase">
+    <defName>WULA_Shield_Prismatic</defName>
+    <label>乌拉帝国棱形盾</label>
+    <description>乌拉帝国骑士军团所偏好的一种盾牌，覆盖面积小护甲低，容易阻碍远程武器瞄准，但是可以提供大量的近战闪避能力，而且内置了可以近距离击倒敌军的梭镖发射装置。</description>
+    <techLevel>Spacer</techLevel>
+    <tickerType>Normal</tickerType>
+    <thingCategories>
+      <li>ApparelNoble</li>
+    </thingCategories>
+    <recipeMaker>
+      <displayPriority>105</displayPriority>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>WULA_Synth_Weapon_2_Stun_Technology</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Wula/Apparel/WULA_Shield_Base</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>30000</WorkToMake>
+      <MaxHitPoints>500</MaxHitPoints>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>1</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1</ArmorRating_Blunt>
+      <ArmorRating_Heat>1</ArmorRating_Heat>
+      <EquipDelay>2</EquipDelay>
+      <!-- <EnergyShieldEnergyMax>0.5</EnergyShieldEnergyMax> -->
+    </statBases>
+    <equippedStatOffsets>
+			<MoveSpeed>-0.2</MoveSpeed>
+			<MeleeDodgeChance>20</MeleeDodgeChance>	
+      <AimingDelayFactor>0.5</AimingDelayFactor>
+      <ShootingAccuracyPawn>-10</ShootingAccuracyPawn>
+			<!-- <MoveSpeed>-0.5</MoveSpeed> -->
+      <!-- <IncomingDamageFactor>-0.2</IncomingDamageFactor> -->
+      <!-- <StaggerDurationFactor>-2</StaggerDurationFactor> -->
+			<!-- <CarryingCapacity>60</CarryingCapacity> -->
+    </equippedStatOffsets>
+    <costStuffCount>50</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList Inherit="False">
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <apparel>
+      <tags>
+        <li>Wula_Apparel</li>
+      </tags>
+      <bodyPartGroups>
+        <li>Arms</li>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Wula/Apparel/WULA_Shield_Base</wornGraphicPath>
+      <layers>
+        <li>Shield</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+      <!-- <soundWear>Wear_PowerArmor</soundWear>
+      <soundRemove>Remove_PowerArmor</soundRemove> -->
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+    </apparel>
+    <thingClass>Apparel</thingClass>
+    <comps>
+      <li Class="CompProperties_ApparelReloadable">
+        <maxCharges>2</maxCharges>
+        <ammoDef>Steel</ammoDef>
+        <ammoCountPerCharge>5</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+        <soundReload>Standard_Reload</soundReload>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>梭镖</chargeNoun>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+      </li>
+      <li Class="CompProperties_Biocodable"/>
+    </comps>
+    <verbs>
+      <li>
+        <verbClass>Verb_LaunchProjectileStaticPsychic</verbClass>
+        <label>梭镖发射装置</label>
+        <defaultProjectile>Bullet_WULA_Shield_Prismatic</defaultProjectile>
+        <warmupTime>0.1</warmupTime>
+        <range>5.5</range>
+        <burstShotCount>1</burstShotCount>
+        <onlyManualCast>true</onlyManualCast>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetable>true</targetable>
+        <violent>true</violent>
+        <targetParams>
+          <canTargetPawns>true</canTargetPawns>
+          <canTargetBuildings>true</canTargetBuildings>
+          <canTargetLocations>False</canTargetLocations>
+        </targetParams>
+        <soundCast>RocketswarmLauncher_Fire</soundCast>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+        <canGoWild>false</canGoWild>
+        <!-- <explosionRadiusRingColor>(0.8, 0.8, 0.4, 1)</explosionRadiusRingColor> -->
+      </li>
+    </verbs>
+    <thingSetMakerTags>
+      <li>RewardStandardHighFreq</li>
+    </thingSetMakerTags>
+		<followStuffColor>False</followStuffColor>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_WULA_Shield_Prismatic</defName>
+    <label>梭镖</label>
+    <graphicData>
+      <texPath>Wula/Projectile/WULA_Bullet_StarDrift_Shotgun_Spear</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>35</damageAmountBase>
+      <stoppingPower>15</stoppingPower>
+      <armorPenetrationBase>0.65</armorPenetrationBase>
+      <speed>55</speed>
+    </projectile>
+  </ThingDef>
 	<ApparelLayerDef>
 		<defName>Shield</defName>
 		<label>盾牌</label>
@@ -971,7 +1184,7 @@
       </skillRequirements>
     </recipeMaker>
     <graphicData>
-      <texPath>Wula/Apparel/WULA_Knight_PowerArmor</texPath>
+      <texPath>Things/Item/Health/HealthItem</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
@@ -1070,7 +1283,7 @@
       </skillRequirements>
     </recipeMaker>
     <graphicData>
-      <texPath>Wula/Apparel/WULA_Knight_PowerArmor</texPath>
+      <texPath>Things/Item/Health/HealthItem</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
@@ -1166,7 +1379,7 @@
       </skillRequirements>
     </recipeMaker>
     <graphicData>
-      <texPath>Wula/Apparel/WULA_Knight_PowerArmor</texPath>
+      <texPath>Things/Item/Health/HealthItem</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
