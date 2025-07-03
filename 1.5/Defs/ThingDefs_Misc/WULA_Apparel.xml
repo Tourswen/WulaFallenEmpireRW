@@ -885,12 +885,12 @@
       </skillRequirements>
     </recipeMaker>
     <graphicData>
-      <texPath>Wula/Apparel/WULA_Knight_PowerArmor</texPath>
+      <texPath>Wula/Apparel/WULA_Shield_Base</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
       <WorkToMake>30000</WorkToMake>
-      <MaxHitPoints>2000</MaxHitPoints>
+      <MaxHitPoints>1000</MaxHitPoints>
       <Mass>10</Mass>
       <Flammability>0</Flammability>
       <ArmorRating_Sharp>1.8</ArmorRating_Sharp>
@@ -923,9 +923,9 @@
         <li>Arms</li>
         <li>Legs</li>
       </bodyPartGroups>
-      <wornGraphicPath>Wula/Apparel/WULA_Knight_PowerArmor</wornGraphicPath>
+      <wornGraphicPath>Wula/Apparel/WULA_Shield_Base</wornGraphicPath>
       <layers>
-        <li>OuterClothing</li>
+        <li>Shield</li>
       </layers>
       <useDeflectMetalEffect>true</useDeflectMetalEffect>
       <!-- <soundWear>Wear_PowerArmor</soundWear>
@@ -943,6 +943,11 @@
     </thingSetMakerTags>
 		<followStuffColor>False</followStuffColor>
   </ThingDef>
+	<ApparelLayerDef>
+		<defName>Shield</defName>
+		<label>盾牌</label>
+		<drawOrder>275</drawOrder>
+	</ApparelLayerDef>
 
   <!-- 萨克森装备 -->
   <ThingDef ParentName="ArmorMachineableBase">
