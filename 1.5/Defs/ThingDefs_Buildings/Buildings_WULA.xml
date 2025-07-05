@@ -1,11 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <ThingDef ParentName="BuildingBase">
-    <defName>WULA_Synth_Constructor</defName>
-    <label>乌拉帝国构造体</label>
-    <description>一台用于构造乌拉帝国合成人的一次性特殊设备，自备电源，建造完成后将自动启用，工作12天后建造一个新的乌拉帝国合成人。</description>
+  <ThingDef ParentName="BenchBase">
+    <defName>WULA_Synth_Server</defName>
+    <label>乌拉帝国服务器系统</label>
+    <description>一台大型服务器，可以从乌拉帝国的上行链路接收关于各种技能的数据，并以实体数据包的形式封装储存起来，供那些新生代合成人使用。</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
-      <texPath>Wula/Building/WULA_Synth_Constructor</texPath>
+      <texPath>Wula/Building/WULA_Synth_Server</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(2,2)</drawSize>
       <damageData>
@@ -15,83 +17,47 @@
         <cornerBR>Damage/Corner</cornerBR>
       </damageData>
     </graphicData>
-    <castEdgeShadows>false</castEdgeShadows>
-    <size>(2,2)</size>
+    <castEdgeShadows>true</castEdgeShadows>
+    <constructEffect>ConstructMetal</constructEffect>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <WULA_Charge_Cube>1</WULA_Charge_Cube>
+    </costList>
     <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <researchPrerequisites>
+      <li>WULA_New_Synth_Skill_Technology</li>
+    </researchPrerequisites>
+    <statBases>
+      <WorkToBuild>2000</WorkToBuild>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <size>(2,2)</size>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>2120</uiOrder>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
-    <canOverlapZones>false</canOverlapZones>
-    <fillPercent>0.8</fillPercent>
-    <statBases>
-      <MaxHitPoints>280</MaxHitPoints>
-      <Flammability>0</Flammability>
-      <WorkToBuild>12000</WorkToBuild>
-    </statBases>
-    <tickerType>Normal</tickerType>
-    <building>
-      <!--<soundAmbient>EMIDynamo_Ambience</soundAmbient>-->
-      <destroySound>BuildingDestroyed_Metal_Big</destroySound>
-      <soundAmbient>GeothermalPlant_Ambience</soundAmbient>
-      <ai_chillDestination>false</ai_chillDestination>
-    </building>
-    <damageMultipliers>
-      <li>
-        <damageDef>Flame</damageDef>
-        <multiplier>0</multiplier>
-      </li>
-    </damageMultipliers>
-    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
-    <rotatable>false</rotatable>
-    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-    <!--<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>-->
-    <constructEffect>ConstructMetal</constructEffect>
-    <repairEffect>ConstructMetal</repairEffect>
-    <designationCategory>Biotech</designationCategory>
-    <costList>
-      <WULA_Addons_Antenna_Base>1</WULA_Addons_Antenna_Base>
-      <WULA_Energy_Furnace_Base>1</WULA_Energy_Furnace_Base>
-      <ComponentIndustrial>4</ComponentIndustrial>
-      <Steel>100</Steel>
-      <Chemfuel>100</Chemfuel>
-    </costList>
-    <descriptionHyperlinks>
-      <ThingDef>WulaSpecies</ThingDef>
-      <ThingDef>WULA_Addons_Antenna_Base</ThingDef>
-      <ThingDef>WULA_Energy_Furnace_Base</ThingDef>
-    </descriptionHyperlinks>
-    <researchPrerequisites>
-      <li>WULA_New_Synth_Built_Technology</li>
-    </researchPrerequisites>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
     <comps>
-      <li Class="CompProperties_SpawnerPawn">
-        <spawnablePawnKinds>
-          <li>Wula_PawnKind_Ingame</li>
-        </spawnablePawnKinds>
-        <maxPawnsToSpawn>1</maxPawnsToSpawn>
-        <pawnSpawnIntervalDays>12</pawnSpawnIntervalDays>
-        <shouldJoinParentLord>True</shouldJoinParentLord>
-        <chooseSingleTypeToSpawn>True</chooseSingleTypeToSpawn>
-        <spawnMessageKey>MessageMechanoidsAssembled</spawnMessageKey>
-        <pawnsLeftToSpawnKey>MessageMechanoidsLeftToAssemble</pawnsLeftToSpawnKey>
-        <noPawnsLeftToSpawnKey>ShutDown</noPawnsLeftToSpawnKey>
-        <nextSpawnInspectStringKey>MechAssemblyCompleteIn</nextSpawnInspectStringKey>
-        <nextSpawnInspectStringKeyDormant>MechAssemblyNextType</nextSpawnInspectStringKeyDormant>
-        <spawnSound>MechAssembler_Spawn</spawnSound>
-        <showNextSpawnInInspect>true</showNextSpawnInInspect>
-        <lordJob>LordJob_MechanoidsDefend</lordJob>
-        <shouldJoinParentLord>True</shouldJoinParentLord>
-      </li>
-      <li Class="CompProperties_Glower">
-        <glowRadius>6</glowRadius>
-        <!--<glowColor>(105,204,204,0)</glowColor>-->
-        <!-- 蓝色 -->
-        <!-- <glowColor>(79, 96, 119, 0)</glowColor> -->
-        <!-- 红色 -->
-        <glowColor>(177, 0, 31, 0)</glowColor>
-        <colorPickerEnabled>true</colorPickerEnabled>
-        <darklightToggle>true</darklightToggle>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>300</basePowerConsumption>
       </li>
     </comps>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
   </ThingDef>
 
   <!-- 能源核心制造机 -->
@@ -259,6 +225,7 @@
     <costList>
       <Steel>50</Steel>
       <ComponentIndustrial>1</ComponentIndustrial>
+      <WULA_Charge_Cube>1</WULA_Charge_Cube>
     </costList>
     <designationHotKey>Misc2</designationHotKey>
     <uiOrder>2010</uiOrder>
@@ -268,6 +235,7 @@
     <researchPrerequisites>
       <li>WULA_Base_Technology</li>
     </researchPrerequisites>
+    <stuffCategories Inherit="False" IsNull="True" />
     <building>
       <paintable>false</paintable>
       <bed_showSleeperBody>true</bed_showSleeperBody>
@@ -298,7 +266,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>WULA_Large_Mechine_proudctor</defName>
     <label>乌拉帝国机械工厂</label>
-    <description>乌拉帝国所建造的一种机械工厂，能构建各种除了合成人外的乌拉帝国机械体。</description>
+    <description>乌拉帝国所建造的一种机械工厂，能构建各种乌拉帝国机械体，包括机械乌拉。</description>
     <thingClass>Building_MechGestator</thingClass>
     <containedPawnsSelectable>true</containedPawnsSelectable>
     <tickerType>Normal</tickerType>
@@ -336,6 +304,7 @@
     <costList>
       <Steel>300</Steel>
       <ComponentIndustrial>6</ComponentIndustrial>
+      <WULA_Charge_Cube>5</WULA_Charge_Cube>
     </costList>
     <researchPrerequisites>
       <li>WULA_Machine_Productor_Technology</li>
@@ -409,7 +378,10 @@
     </building>
     <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
     <recipes>
+      <li>WULA_Build_Wula_Synth</li>
       <li>WULA_Build_Mech_Cat</li>
+      <li>WULA_Build_Mech_Cat_EMP</li>
+      <li>WULA_Build_Mech_Cat_Fire</li>
       <li>WULA_Build_AI_Heavy_Panzer</li>
       <li>WULA_Build_Storm_Skitter</li>
     </recipes>
@@ -446,6 +418,8 @@
     <constructEffect>ConstructMetal</constructEffect>
     <costList>
       <Steel>120</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <WULA_Charge_Cube>1</WULA_Charge_Cube>
     </costList>
     <altitudeLayer>Building</altitudeLayer>
     <useHitPoints>True</useHitPoints>
@@ -538,6 +512,7 @@
     <costList>
       <Steel>250</Steel>
       <ComponentIndustrial>2</ComponentIndustrial>
+      <WULA_Charge_Cube>1</WULA_Charge_Cube>
     </costList>
     <researchPrerequisites>
       <li>WULA_Machine_Productor_Technology</li>

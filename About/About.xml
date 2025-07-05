@@ -26,18 +26,12 @@
 			<displayName>Humanoid Alien Races 2.0</displayName>
 			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=839005762</steamWorkshopUrl>
 		</li>	
-		<li>
-			<packageId>AB.HATweaker</packageId>
-			<displayName>AB's Head Apparel Tweaker</displayName>
-			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2990606008</steamWorkshopUrl>
-		</li>	
   </modDependencies>
   
   <loadAfter>
     <li>brrainz.harmony</li>
     <li>Ludeon.RimWorld</li>
     <li>erdelf.HumanoidAlienRaces</li>
-    <li>AB.HATweaker</li>
   </loadAfter>
   
 </ModMetaData>

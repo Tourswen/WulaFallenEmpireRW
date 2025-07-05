@@ -37,21 +37,7 @@
     <slot>Childhood</slot>  
     <title>新生代合成人</title>  
     <titleShort>新生代</titleShort>  
-    <description>[PAWN_nameDef] 诞生于人工智能网络“演算圆环”崩溃后，软硬件未受到崩溃的影响。</description>  
-    <skillGains>
-      <Shooting>30</Shooting>
-      <Melee>30</Melee>
-      <Construction>30</Construction>
-      <Mining>30</Mining>
-      <Cooking>30</Cooking>
-      <Plants>30</Plants>
-      <Animals>30</Animals>
-      <Crafting>30</Crafting>
-      <Artistic>30</Artistic>
-      <Medicine>30</Medicine>
-      <Social>30</Social>
-      <Intellectual>30</Intellectual>
-    </skillGains>
+    <description>[PAWN_nameDef] 诞生于人工智能网络“演算圆环”崩溃后，软硬件未受到崩溃的影响，但是其储存空间内无任何技能数据包。</description>
     <spawnCategories>
       <li>Wula_New_Synth_Backstory_Categories</li>
     </spawnCategories>
@@ -75,6 +61,7 @@
       <Shooting>100</Shooting>
       <Melee>100</Melee>
     </skillGains>
+    <workDisables>AllWork</workDisables>
     <spawnCategories>
       <li>WULA_AI_Heavy_Panzer_Backstory_Categories</li>
     </spawnCategories>
@@ -94,6 +81,7 @@
       <Shooting>100</Shooting>
       <Melee>100</Melee>
     </skillGains>
+    <workDisables>Intellectual,Caring,Social,Animals,Artistic,Crafting,Cooking,Firefighting,Cleaning,PlantWork,Mining,Hunting,Constructing</workDisables>
     <spawnCategories>
       <li>WULA_Storm_Skitter_Backstory_Categories</li>
     </spawnCategories>

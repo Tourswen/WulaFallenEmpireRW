@@ -11,8 +11,6 @@
     <skillGains>
       <Shooting>7</Shooting>
       <Melee>7</Melee>
-      <Cooking>-20</Cooking>
-      <Mining>-20</Mining>
       <Animals>-7</Animals>
       <Crafting>-5</Crafting>
       <Intellectual>8</Intellectual>
@@ -40,8 +38,6 @@
       <Shooting>7</Shooting>
       <Melee>7</Melee>
       <Medicine>8</Medicine>
-      <Cooking>-20</Cooking>
-      <Mining>-20</Mining>
       <Animals>-7</Animals>
       <Crafting>-7</Crafting>
       <Intellectual>-7</Intellectual>
@@ -68,8 +64,6 @@
     <skillGains>
       <Shooting>7</Shooting>
       <Melee>7</Melee>
-      <Cooking>-20</Cooking>
-      <Mining>-20</Mining>
       <Construction>8</Construction>
       <Medicine>-7</Medicine>
       <Intellectual>-3</Intellectual>
@@ -96,11 +90,6 @@
     <skillGains>
       <Shooting>10</Shooting>
       <Melee>10</Melee>
-      <Cooking>-20</Cooking>
-      <Mining>-20</Mining>
-      <Plants>-20</Plants>
-      <Animals>-20</Animals>
-      <Construction>-20</Construction>
       <Medicine>-7</Medicine>
       <Intellectual>3</Intellectual>
       <Social>7</Social>
@@ -132,8 +121,6 @@
       <Crafting>5</Crafting>
       <Intellectual>-8</Intellectual>
       <Medicine>5</Medicine>
-      <Cooking>-20</Cooking>
-      <Social>-20</Social>
     </skillGains>
     <workDisables>ManualDumb,Cooking,Social</workDisables>
     <requiredWorkTags>Violent</requiredWorkTags>
@@ -213,7 +200,6 @@
       <Shooting>5</Shooting>
       <Melee>2</Melee>
       <Construction>-5</Construction>
-      <Mining>-10</Mining>
       <Cooking>-10</Cooking>
       <Plants>-10</Plants>
       <Animals>-10</Animals>
@@ -243,8 +229,6 @@
     <titleShort>人格-花使</titleShort>
     <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国花使的模拟记忆。\n\n花使是乌拉帝国观测站的植物塑性师，负责通过基因操纵和剪裁为帝国培养赏心悦目的景观和可口的食物。尽管在乌拉帝国的大内战中背离了皇室，但是她们依然传承着将美好与希望的种子撒满乌拉帝国每个殖民地的愿望。</description>
     <skillGains>
-      <Shooting>-20</Shooting>
-      <Melee>-20</Melee>
       <Construction>-5</Construction>
       <Mining>-5</Mining>
       <Plants>8</Plants>
@@ -267,8 +251,6 @@
     <titleShort>人格-繁育使</titleShort>
     <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国繁育使的模拟记忆。\n\n繁育使是乌拉帝国观测站的动物塑性师，专职于以基因修剪和重构的手段创造和改良低智能物种。当然，她们时不时也会构造一些疯狂扭曲的造物，并将它们作为生物武器投放到战场上。</description>
     <skillGains>
-      <Shooting>-20</Shooting>
-      <Melee>-20</Melee>
       <Construction>-5</Construction>
       <Mining>-5</Mining>
       <Plants>3</Plants>
@@ -295,8 +277,6 @@
       <Shooting>-5</Shooting>
       <Melee>-5</Melee>
       <Mining>-3</Mining>
-      <Crafting>-20</Crafting>
-      <Construction>-20</Construction>
       <Medicine>-7</Medicine>
       <Artistic>10</Artistic>
       <Social>10</Social>
@@ -318,8 +298,6 @@
     <skillGains>
       <Shooting>7</Shooting>
       <Mining>-5</Mining>
-      <Crafting>-20</Crafting>
-      <Construction>-20</Construction>
       <Medicine>5</Medicine>
       <Artistic>4</Artistic>
       <Social>-5</Social>
@@ -341,11 +319,7 @@
     <skillGains>
       <Melee>10</Melee>
       <Mining>5</Mining>
-      <Crafting>-20</Crafting>
       <Construction>5</Construction>
-      <Medicine>-20</Medicine>
-      <Artistic>-20</Artistic>
-      <Social>-20</Social>
     </skillGains>
     <workDisables>Crafting,Caring,Social,Artistic</workDisables>
     <requiredWorkTags>Violent</requiredWorkTags>
@@ -356,7 +330,7 @@
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
     <forcedTraits>
-      <Bloodlust>1</Bloodlust>
+      <Bloodlust>0</Bloodlust>
     </forcedTraits>
   </AlienRace.AlienBackstoryDef>
 
@@ -394,7 +368,7 @@
     </forcedTraits>
   </AlienRace.AlienBackstoryDef>
 
-  <!-- 战车 -->
+  <!-- 战争机械 -->
   <AlienRace.AlienBackstoryDef>
     <defName>WULA_AI_War_Machine_Adult_Backstory01</defName>
     <slot>Adulthood</slot>
@@ -402,7 +376,6 @@
     <titleShort>人格-战争机械</titleShort>
     <description>[PAWN_possessive]人格矩阵剔除了大量不需要的情感模拟，只剩冷酷的杀敌技巧。</description>
     <requiredWorkTags>None</requiredWorkTags>
-    <workDisables>AllWork</workDisables>
     <spawnCategories>
       <li>WULA_AI_War_Machine_Backstory_Categories</li>
     </spawnCategories>

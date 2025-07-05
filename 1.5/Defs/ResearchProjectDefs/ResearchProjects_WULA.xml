@@ -23,7 +23,7 @@
     <description>获取修复乌拉帝国合成人四肢和头部的必须知识。</description>
     <baseCost>1200</baseCost>
     <researchViewX>1.00</researchViewX>
-    <researchViewY>5.30</researchViewY>
+    <researchViewY>3.90</researchViewY>
     <prerequisites>
       <li>WULA_Base_Technology</li>
     </prerequisites>
@@ -34,7 +34,7 @@
     <description>获取修复完全修复乌拉帝国合成人的必须知识。</description>
     <baseCost>1200</baseCost>
     <researchViewX>2.00</researchViewX>
-    <researchViewY>5.30</researchViewY>
+    <researchViewY>3.90</researchViewY>
     <prerequisites>
       <li>WULA_Repair_Arm_Technology</li>
     </prerequisites>
@@ -52,12 +52,12 @@
     </prerequisites>
   </ResearchProjectDef>
   <ResearchProjectDef ParentName="WULAtechBase">
-    <defName>WULA_New_Synth_Built_Technology</defName>
-    <label>构造者套件</label>
-    <description>开发用于构建新乌拉帝国合成人的套件，以增加殖民地人口。</description>
+    <defName>WULA_New_Synth_Skill_Technology</defName>
+    <label>数据下载套件</label>
+    <description>开发用于从上行链路下载各种预设技能包的套件，以增加殖民地的技能等级。</description>
     <baseCost>1600</baseCost>
     <researchViewX>1.00</researchViewX>
-    <researchViewY>3.20</researchViewY>
+    <researchViewY>4.60</researchViewY>
     <prerequisites>
       <li>WULA_Base_Technology</li>
     </prerequisites>
@@ -213,9 +213,9 @@
     <description>获取构建乌拉帝国机械体的设施，以支持后续的机械体开发。</description>
     <baseCost>1200</baseCost>
     <researchViewX>2.00</researchViewX>
-    <researchViewY>3.90</researchViewY>
+    <researchViewY>4.60</researchViewY>
     <prerequisites>
-      <li>WULA_New_Synth_Built_Technology</li>
+      <li>WULA_New_Synth_Skill_Technology</li>
     </prerequisites>
   </ResearchProjectDef>
   <ResearchProjectDef ParentName="WULAtechBase">
@@ -237,7 +237,6 @@
     <researchViewX>3.00</researchViewX>
     <researchViewY>5.30</researchViewY>
     <prerequisites>
-      <li>StandardMechtech</li>
       <li>WULA_Machine_Productor_Technology</li>
     </prerequisites>
   </ResearchProjectDef>
@@ -271,10 +270,10 @@
     <label>基础植入物套件</label>
     <description>获取构建乌拉帝国合成人基础植入物的技术，用以增强乌拉帝国合成人的机体性能。</description>
     <baseCost>1200</baseCost>
-    <researchViewX>2.00</researchViewX>
-    <researchViewY>3.20</researchViewY>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>3.90</researchViewY>
     <prerequisites>
-      <li>WULA_New_Synth_Built_Technology</li>
+      <li>WULA_Repair_All_Technology</li>
     </prerequisites>
   </ResearchProjectDef>
   <ResearchProjectDef ParentName="WULAtechBase">
@@ -282,7 +281,7 @@
     <label>高级植入物套件</label>
     <description>获取构建乌拉帝国合成人进阶植入物的技术，用以增强乌拉帝国合成人的机体性能。</description>
     <baseCost>1200</baseCost>
-    <researchViewX>3.00</researchViewX>
+    <researchViewX>4.00</researchViewX>
     <researchViewY>3.90</researchViewY>
     <prerequisites>
       <li>WULA_Synth_Addons_Technology</li>

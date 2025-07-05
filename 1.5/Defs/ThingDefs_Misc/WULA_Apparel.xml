@@ -3,6 +3,7 @@
   <!-- 贵族服装 -->
   <ThingDef Name="WULA_ApparelRoyalBase" ParentName="ApparelMakeableBase" Abstract="True">
     <recipeMaker>
+      <useIngredientsForColor>false</useIngredientsForColor>
       <researchPrerequisite>WULA_Synth_Clothes_3_Technology</researchPrerequisite>
       <recipeUsers Inherit="False">
         <li>WULA_Cube_Productor_Energy</li>
@@ -46,7 +47,6 @@
         </li>
       </options>
     </colorGenerator>
-		<followStuffColor>False</followStuffColor>
   </ThingDef>
   <ThingDef ParentName="WULA_ApparelRoyalBase">
 		<defName>WULA_Official_Uniform</defName>
@@ -102,6 +102,7 @@
   <ThingDef Name="WULA_ApparelCivilBase" ParentName="ApparelMakeableBase" Abstract="True">
     <apparel>
       <tags>
+        <li>Wula_Apparel_Init</li>
         <li>Wula_Apparel</li>
       </tags>
       <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
@@ -117,13 +118,18 @@
       </options>
     </colorGenerator>
     <possessionCount>1</possessionCount>
-		<followStuffColor>False</followStuffColor>
+    <recipeMaker>
+      <useIngredientsForColor>false</useIngredientsForColor>
+    </recipeMaker>
   </ThingDef>
   <ThingDef Name="WULA_ApparelCivilHatBase" ParentName="HatMakeableBase" Abstract="True">
     <apparel>
       <tags>
         <li>Wula_Apparel</li>
       </tags>
+      <renderSkipFlags>
+        <li>None</li>
+      </renderSkipFlags>
       <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
       <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
       <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
@@ -137,7 +143,9 @@
       </options>
     </colorGenerator>
     <possessionCount>1</possessionCount>
-		<followStuffColor>False</followStuffColor>
+    <recipeMaker>
+      <useIngredientsForColor>false</useIngredientsForColor>
+    </recipeMaker>
   </ThingDef>
   <ThingDef ParentName="WULA_ApparelCivilBase">
 		<defName>WULA_Sailor_Dress</defName>
@@ -148,9 +156,6 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <apparel>
-      <tags>
-        <li>Wula_Apparel_Init</li>
-      </tags>
       <bodyPartGroups>
 				<li>Torso</li>
 				<!-- <li>Shoulders</li> -->
@@ -195,9 +200,6 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <apparel>
-      <tags>
-        <li>Wula_Apparel_Init</li>
-      </tags>
       <bodyPartGroups>
 				<li>Torso</li>
 				<!-- <li>Shoulders</li> -->
@@ -288,9 +290,6 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <apparel>
-      <tags>
-        <li>Wula_Apparel_Init</li>
-      </tags>
       <bodyPartGroups>
 				<li>Torso</li>
 				<!-- <li>Shoulders</li> -->
@@ -409,14 +408,14 @@
         <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <useIngredientsForColor>false</useIngredientsForColor>
     </recipeMaker>
     <possessionCount>1</possessionCount>
-		<followStuffColor>False</followStuffColor>
   </ThingDef>
   <ThingDef ParentName="ApparelMakeableBase">
 		<defName>WULA_Bodystocking_White</defName>
 		<label>乌拉帝国连身白丝</label>
-		<description>这就是普通的连身白丝，在哪里造的有什么关系吗？它没有什么别的功能，除了提供一些保暖能力——话说回来，乌拉合成人又不会感到冷。</description>
+		<description>虽然名为连身白丝，但是这种织物的实际颜色取决于材料的颜色。</description>
     <graphicData>
       <texPath>Wula/Apparel/WULA_Bodystocking_White</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -453,9 +452,10 @@
         <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <useIngredientsForColor>false</useIngredientsForColor>
     </recipeMaker>
     <possessionCount>1</possessionCount>
-		<followStuffColor>False</followStuffColor>
+		
   </ThingDef>
   <ThingDef ParentName="ApparelMakeableBase">
 		<defName>WULA_Body_Suit</defName>
@@ -505,9 +505,10 @@
       <skillRequirements>
         <Crafting>5</Crafting>
       </skillRequirements>
+      <useIngredientsForColor>false</useIngredientsForColor>
     </recipeMaker>
     <possessionCount>1</possessionCount>
-		<followStuffColor>False</followStuffColor>
+		
   </ThingDef>
 
   <!-- 普通甲 -->
@@ -530,6 +531,7 @@
       <skillRequirements>
         <Crafting>5</Crafting>
       </skillRequirements>
+      <useIngredientsForColor>false</useIngredientsForColor>
     </recipeMaker>
     <graphicData>
       <texPath>Wula/Apparel/WULA_Assault_Troop_PowerArmor</texPath>
@@ -596,7 +598,6 @@
     <thingSetMakerTags>
       <li>RewardStandardHighFreq</li>
     </thingSetMakerTags>
-		<followStuffColor>False</followStuffColor>
   </ThingDef>
   <ThingDef ParentName="HatMakeableBase">
     <defName>WULA_Assault_Troop_Helmet</defName>
@@ -637,6 +638,9 @@
       <ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
     </equippedStatOffsets>
     <apparel>
+      <renderSkipFlags>
+        <li>None</li>
+      </renderSkipFlags>
       <countsAsClothingForNudity>false</countsAsClothingForNudity>
       <tags>
         <li>Wula_Apparel</li>
@@ -665,7 +669,7 @@
     <thingSetMakerTags>
       <li>RewardStandardHighFreq</li>
     </thingSetMakerTags>
-		<followStuffColor>False</followStuffColor>
+		
   </ThingDef>
   <!-- 重甲 -->
   <ThingDef ParentName="ArmorMachineableBase">
@@ -687,6 +691,7 @@
       <skillRequirements>
         <Crafting>7</Crafting>
       </skillRequirements>
+      <useIngredientsForColor>false</useIngredientsForColor>
     </recipeMaker>
     <graphicData>
       <texPath>Wula/Apparel/WULA_Knight_PowerArmor</texPath>
@@ -790,7 +795,7 @@
     <thingSetMakerTags>
       <li>RewardStandardHighFreq</li>
     </thingSetMakerTags>
-		<followStuffColor>False</followStuffColor>
+		
   </ThingDef>
   <ThingDef ParentName="HatMakeableBase">
     <defName>WULA_Knight_Helmet</defName>
@@ -832,6 +837,9 @@
       <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
     </equippedStatOffsets>
     <apparel>
+      <renderSkipFlags>
+        <li>None</li>
+      </renderSkipFlags>
       <countsAsClothingForNudity>false</countsAsClothingForNudity>
       <tags>
         <li>Wula_Apparel</li>
@@ -860,7 +868,7 @@
     <thingSetMakerTags>
       <li>RewardStandardHighFreq</li>
     </thingSetMakerTags>
-		<followStuffColor>False</followStuffColor>
+		
   </ThingDef>
 
   <!-- 盾牌 -->
@@ -883,6 +891,7 @@
       <skillRequirements>
         <Crafting>7</Crafting>
       </skillRequirements>
+      <useIngredientsForColor>false</useIngredientsForColor>
     </recipeMaker>
     <graphicData>
       <texPath>Wula/Apparel/WULA_Shield_Base</texPath>
@@ -940,7 +949,7 @@
     <thingSetMakerTags>
       <li>RewardStandardHighFreq</li>
     </thingSetMakerTags>
-		<followStuffColor>False</followStuffColor>
+		
   </ThingDef>
   <ThingDef ParentName="ArmorMachineableBase">
     <defName>WULA_Shield_Advance</defName>
@@ -961,6 +970,7 @@
       <skillRequirements>
         <Crafting>7</Crafting>
       </skillRequirements>
+      <useIngredientsForColor>false</useIngredientsForColor>
     </recipeMaker>
     <graphicData>
       <texPath>Wula/Apparel/WULA_Shield_Advance</texPath>
@@ -1024,7 +1034,7 @@
     <thingSetMakerTags>
       <li>RewardStandardHighFreq</li>
     </thingSetMakerTags>
-		<followStuffColor>False</followStuffColor>
+		
   </ThingDef>
   <ThingDef ParentName="ArmorMachineableBase">
     <defName>WULA_Shield_Prismatic</defName>
@@ -1045,6 +1055,7 @@
       <skillRequirements>
         <Crafting>7</Crafting>
       </skillRequirements>
+      <useIngredientsForColor>false</useIngredientsForColor>
     </recipeMaker>
     <graphicData>
       <texPath>Wula/Apparel/WULA_Shield_Prismatic</texPath>
@@ -1076,7 +1087,7 @@
       <li>Metallic</li>
     </stuffCategories>
     <costList Inherit="False">
-      <ComponentSpacer>4</ComponentSpacer>
+      <ComponentIndustrial>4</ComponentIndustrial>
     </costList>
     <apparel>
       <tags>
@@ -1139,7 +1150,7 @@
     <thingSetMakerTags>
       <li>RewardStandardHighFreq</li>
     </thingSetMakerTags>
-		<followStuffColor>False</followStuffColor>
+		
   </ThingDef>
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_WULA_Shield_Prismatic</defName>

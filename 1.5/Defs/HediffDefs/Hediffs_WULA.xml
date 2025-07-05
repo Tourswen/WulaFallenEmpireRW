@@ -13,6 +13,8 @@
     <isBad>false</isBad>
     <stages>
       <li>
+        <!-- 不会食物中毒 -->
+        <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
         <!-- 自然自愈系数0 -->
         <naturalHealingFactor>0</naturalHealingFactor>
         <!-- 不会感到痛苦 -->

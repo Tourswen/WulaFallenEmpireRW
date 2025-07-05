@@ -30,7 +30,7 @@
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
           <thingDef>WULA_Charge_Cube</thingDef>
-          <count>50</count>
+          <count>80</count>
         </li>
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
@@ -41,6 +41,11 @@
           <def>StartingThing_Defined</def>
           <thingDef>ComponentIndustrial</thingDef>
           <count>50</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Chemfuel</thingDef>
+          <count>300</count>
         </li>
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
@@ -84,6 +89,11 @@
           <mechKind>Mech_WULA_Cat</mechKind>
           <overseenByPlayerPawnChance>2</overseenByPlayerPawnChance>
         </li>
+        <li Class="ScenPart_StartingMech">
+          <def>StartingMech</def>
+          <mechKind>Mech_WULA_Cat_Constructor</mechKind>
+          <overseenByPlayerPawnChance>2</overseenByPlayerPawnChance>
+        </li>
 
         <!-- Starting research -->
         <li Class="ScenPart_StartingResearch">
@@ -97,6 +107,10 @@
         <li Class="ScenPart_StartingResearch">
           <def>StartingResearch</def>
           <project>WULA_Base_Technology</project>
+        </li>
+        <li Class="ScenPart_StartingResearch">
+          <def>StartingResearch</def>
+          <project>BiofuelRefinery</project>
         </li>
         
         <!-- Game start dialog -->

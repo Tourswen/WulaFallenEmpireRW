@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <ThingDef ParentName="MealBaseIngredientless">
+  <ThingDef ParentName="MealBase">
     <defName>WULA_Charge_Cube</defName>
     <label>乌拉帝国能源核心</label>
     <description>被高度压缩的能源核心，是机械乌拉的能源系统唯一可接受的外部输入性能量来源。</description>
@@ -29,5 +29,249 @@
       <!-- <researchPrerequisite>DeadlifeDust</researchPrerequisite> -->
       <displayPriority>0</displayPriority>
     </recipeMaker>
+    <tradeability>None</tradeability>
+  </ThingDef>
+
+  <ThingDef Abstract="True" Name="WULA_Syhth_Trainer">
+    <!-- <defName>WULA_Syhth_Trainer</defName>
+    <label>乌拉帝国技能预设</label> -->
+    <description>一个蕴含了提升特定技能所需知识的数据包，需要通过乌拉帝国合成人特有的神经接口接入，其他种族无法使用。</description>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <drawerType>MapMeshOnly</drawerType>
+    <techLevel>Archotech</techLevel>
+    <useHitPoints>true</useHitPoints>
+    <pathCost>14</pathCost>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <tickerType>Never</tickerType>
+    <alwaysHaulable>true</alwaysHaulable>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <thingCategories>
+      <li>NeurotrainersPsycast</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Beauty>-4</Beauty>
+      <Mass>1</Mass>
+      <MarketValue>5</MarketValue>
+      <DeteriorationRate>0.1</DeteriorationRate>
+      <WorkToMake>50000</WorkToMake>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/Special/MechSerumNeurotrainer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <researchPrerequisites>
+      <li>WULA_New_Synth_Skill_Technology</li>
+    </researchPrerequisites>
+    <costList>
+      <WULA_Charge_Cube>1</WULA_Charge_Cube>
+    </costList>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+      <recipeUsers>
+        <li>WULA_Synth_Server</li>
+      </recipeUsers>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <displayPriority>650</displayPriority>
+    </recipeMaker>
+    <tradeability>None</tradeability>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+      <!-- <li Class="CompProperties_Usable">
+        <useJob>UseNeurotrainer</useJob>
+        <useLabel>123</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+      </li>
+      <li Class="CompProperties_UseEffect_LearnSkill">
+        <skill>Shooting</skill>
+      </li> -->
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="WULA_Syhth_Trainer">
+    <defName>WULA_Syhth_Trainer_Soothing</defName>
+    <label>乌拉帝国数据包（射击）</label>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseNeurotrainer</useJob>
+        <useLabel>使用数据包训练射击技能</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+        <userMustHaveHediff>Wula_Synth</userMustHaveHediff>
+      </li>
+      <li Class="CompProperties_UseEffect_LearnSkill">
+        <skill>Shooting</skill>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="WULA_Syhth_Trainer">
+    <defName>WULA_Syhth_Trainer_Melee</defName>
+    <label>乌拉帝国数据包（格斗）</label>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseNeurotrainer</useJob>
+        <useLabel>使用数据包训练格斗技能</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+        <userMustHaveHediff>Wula_Synth</userMustHaveHediff>
+      </li>
+      <li Class="CompProperties_UseEffect_LearnSkill">
+        <skill>Melee</skill>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="WULA_Syhth_Trainer">
+    <defName>WULA_Syhth_Trainer_Animals</defName>
+    <label>乌拉帝国数据包（驯兽）</label>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseNeurotrainer</useJob>
+        <useLabel>使用数据包训练驯兽技能</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+        <userMustHaveHediff>Wula_Synth</userMustHaveHediff>
+      </li>
+      <li Class="CompProperties_UseEffect_LearnSkill">
+        <skill>Animals</skill>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="WULA_Syhth_Trainer">
+    <defName>WULA_Syhth_Trainer_Artistic</defName>
+    <label>乌拉帝国数据包（艺术）</label>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseNeurotrainer</useJob>
+        <useLabel>使用数据包训练艺术技能</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+        <userMustHaveHediff>Wula_Synth</userMustHaveHediff>
+      </li>
+      <li Class="CompProperties_UseEffect_LearnSkill">
+        <skill>Artistic</skill>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="WULA_Syhth_Trainer">
+    <defName>WULA_Syhth_Trainer_Construction</defName>
+    <label>乌拉帝国数据包（建造）</label>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseNeurotrainer</useJob>
+        <useLabel>使用数据包训练建造技能</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+        <userMustHaveHediff>Wula_Synth</userMustHaveHediff>
+      </li>
+      <li Class="CompProperties_UseEffect_LearnSkill">
+        <skill>Construction</skill>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="WULA_Syhth_Trainer">
+    <defName>WULA_Syhth_Trainer_Cooking</defName>
+    <label>乌拉帝国数据包（烹饪）</label>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseNeurotrainer</useJob>
+        <useLabel>使用数据包训练烹饪技能</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+        <userMustHaveHediff>Wula_Synth</userMustHaveHediff>
+      </li>
+      <li Class="CompProperties_UseEffect_LearnSkill">
+        <skill>Cooking</skill>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="WULA_Syhth_Trainer">
+    <defName>WULA_Syhth_Trainer_Crafting</defName>
+    <label>乌拉帝国数据包（手工）</label>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseNeurotrainer</useJob>
+        <useLabel>使用数据包训练手工技能</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+        <userMustHaveHediff>Wula_Synth</userMustHaveHediff>
+      </li>
+      <li Class="CompProperties_UseEffect_LearnSkill">
+        <skill>Crafting</skill>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="WULA_Syhth_Trainer">
+    <defName>WULA_Syhth_Trainer_Intellectual</defName>
+    <label>乌拉帝国数据包（智识）</label>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseNeurotrainer</useJob>
+        <useLabel>使用数据包训练智识技能</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+        <userMustHaveHediff>Wula_Synth</userMustHaveHediff>
+      </li>
+      <li Class="CompProperties_UseEffect_LearnSkill">
+        <skill>Intellectual</skill>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="WULA_Syhth_Trainer">
+    <defName>WULA_Syhth_Trainer_Medicine</defName>
+    <label>乌拉帝国数据包（医疗）</label>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseNeurotrainer</useJob>
+        <useLabel>使用数据包训练医疗技能</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+        <userMustHaveHediff>Wula_Synth</userMustHaveHediff>
+      </li>
+      <li Class="CompProperties_UseEffect_LearnSkill">
+        <skill>Medicine</skill>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="WULA_Syhth_Trainer">
+    <defName>WULA_Syhth_Trainer_Mining</defName>
+    <label>乌拉帝国数据包（采矿）</label>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseNeurotrainer</useJob>
+        <useLabel>使用数据包训练采矿技能</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+        <userMustHaveHediff>Wula_Synth</userMustHaveHediff>
+      </li>
+      <li Class="CompProperties_UseEffect_LearnSkill">
+        <skill>Mining</skill>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="WULA_Syhth_Trainer">
+    <defName>WULA_Syhth_Trainer_Plants</defName>
+    <label>乌拉帝国数据包（种植）</label>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseNeurotrainer</useJob>
+        <useLabel>使用数据包训练种植技能</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+        <userMustHaveHediff>Wula_Synth</userMustHaveHediff>
+      </li>
+      <li Class="CompProperties_UseEffect_LearnSkill">
+        <skill>Plants</skill>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="WULA_Syhth_Trainer">
+    <defName>WULA_Syhth_Trainer_Social</defName>
+    <label>乌拉帝国数据包（社交）</label>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseNeurotrainer</useJob>
+        <useLabel>使用数据包训练社交技能</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+        <userMustHaveHediff>Wula_Synth</userMustHaveHediff>
+      </li>
+      <li Class="CompProperties_UseEffect_LearnSkill">
+        <skill>Social</skill>
+      </li>
+    </comps>
   </ThingDef>
 </Defs>

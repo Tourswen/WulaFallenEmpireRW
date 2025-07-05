@@ -24,7 +24,7 @@
     <!-- 指定初始衣物的材质 -->
     <apparelStuffFilter>
       <thingDefs>
-        <li>Synthread</li>
+        <li>Cloth</li>
       </thingDefs>
     </apparelStuffFilter>
   </FactionDef>

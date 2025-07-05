@@ -401,6 +401,9 @@
     <anesthetize>false</anesthetize>
     <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
     <addsHediff>WULA_Body_Fixed</addsHediff>
+    <recipeUsers>
+      <li>wulaspecies</li>
+    </recipeUsers>
     
     <workAmount>1500</workAmount>
     <skillRequirements>
@@ -437,6 +440,9 @@
     <anesthetize>false</anesthetize>
     <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
     <addsHediff>WULA_Body_Fixed</addsHediff>
+    <recipeUsers>
+      <li>wulaspecies</li>
+    </recipeUsers>
     
     <workAmount>3000</workAmount>
     <skillRequirements>
@@ -473,6 +479,9 @@
     <anesthetize>false</anesthetize>
     <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
     <addsHediff>WULA_Body_Fixed</addsHediff>
+    <recipeUsers>
+      <li>wulaspecies</li>
+    </recipeUsers>
     
     <workAmount>3000</workAmount>
     <skillRequirements>
@@ -509,6 +518,9 @@
     <anesthetize>false</anesthetize>
     <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
     <addsHediff>WULA_Body_Fixed</addsHediff>
+    <recipeUsers>
+      <li>wulaspecies</li>
+    </recipeUsers>
     
     <workAmount>1500</workAmount>
     <skillRequirements>
@@ -545,6 +557,9 @@
     <anesthetize>false</anesthetize>
     <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
     <addsHediff>WULA_Body_Fixed</addsHediff>
+    <recipeUsers>
+      <li>wulaspecies</li>
+    </recipeUsers>
     
     <workAmount>1500</workAmount>
     <skillRequirements>
@@ -589,6 +604,9 @@
     <anesthetize>false</anesthetize>
     <surgeryOutcomeEffect IsNull="True"/> <!-- Always succeeds -->
     <addsHediff>WULA_Body_Fixed</addsHediff>
+    <recipeUsers>
+      <li>wulaspecies</li>
+    </recipeUsers>
     
     <workAmount>7000</workAmount>
     <researchPrerequisites>
@@ -658,6 +676,9 @@
     <burnableByRecipe>false</burnableByRecipe>
     <smeltable>true</smeltable>
     <possessionCount>40</possessionCount>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
   </ThingDef>
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
     <defName>WULA_Extract_Soul_Wedge</defName>
@@ -681,6 +702,9 @@
     <products>
       <WULA_Soul_Wedge>10</WULA_Soul_Wedge>
     </products>
+
+    <ingredients Inherit="False">
+    </ingredients>
     <addsHediff>WULA_Extract_Soul_Wedge_Hediff</addsHediff>
   </RecipeDef>
   <HediffDef ParentName="ImplantHediffBase">

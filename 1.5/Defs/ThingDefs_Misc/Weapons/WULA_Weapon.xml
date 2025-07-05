@@ -13,7 +13,7 @@
     <uiIconScale>1.1</uiIconScale>
     <techLevel>Medieval</techLevel>
     <statBases>
-      <WorkToMake>300</WorkToMake>
+      <!-- <WorkToMake>300</WorkToMake> -->
       <Mass>2</Mass>
     </statBases>
     <equippedAngleOffset>-65</equippedAngleOffset>
@@ -75,11 +75,11 @@
       <researchPrerequisite>WULA_Synth_Weapon_Technology</researchPrerequisite>
     </recipeMaker>
     <statBases>
-      <WorkToMake>700</WorkToMake>
+      <!-- <WorkToMake>700</WorkToMake> -->
       <Mass>3.5</Mass>
       <AccuracyTouch>0.75</AccuracyTouch>
-      <AccuracyShort>0.85</AccuracyShort>
-      <AccuracyMedium>0.55</AccuracyMedium>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.65</AccuracyMedium>
       <AccuracyLong>0.45</AccuracyLong>
       <RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
     </statBases>
@@ -88,8 +88,8 @@
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_AssaultRifle</defaultProjectile>
-        <warmupTime>0.6</warmupTime>
-        <range>32</range>
+        <warmupTime>1</warmupTime>
+        <range>25</range>
         <burstShotCount>4</burstShotCount>
         <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
         <soundCast>Shot_AssaultRifle</soundCast>
@@ -101,6 +101,35 @@
       <Steel>60</Steel>
       <ComponentIndustrial>8</ComponentIndustrial>
     </costList>
+  </ThingDef>
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
+    <defName>WULA_MW_Constructor_Hammer</defName>
+    <label>HAm-1"装修锤"</label>
+    <description>供乌拉猫猫使用的多功能工具，兼具施工和开采的能力。</description>
+    <graphicData>
+      <texPath>Wula/Weapon/WULA_MW_Constructor_Hammer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <techLevel>Spacer</techLevel>
+    <statBases>
+      <!-- <WorkToMake>40000</WorkToMake> -->
+      <Mass>1</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>槌头</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>1.5</cooldownTime>
+        <armorPenetration>0.8</armorPenetration>
+      </li>
+    </tools>
+    <weaponTags>
+      <li>Wula_Constructor_Cat_Weapon</li>
+    </weaponTags>
   </ThingDef>
   
   <!-- 动力破墙锤 -->
@@ -118,10 +147,9 @@
     <techLevel>Spacer</techLevel>
     <costStuffCount>50</costStuffCount>
     <statBases>
-      <WorkToMake>40000</WorkToMake>
+      <!-- <WorkToMake>40000</WorkToMake> -->
       <Mass>20</Mass>
     </statBases>
-    <costStuffCount>70</costStuffCount>
     <stuffCategories>
       <li>Metallic</li>
     </stuffCategories>
@@ -182,7 +210,7 @@
       <ComponentIndustrial>6</ComponentIndustrial>
     </costList>
     <statBases>
-      <WorkToMake>40000</WorkToMake>
+      <!-- <WorkToMake>40000</WorkToMake> -->
       <Mass>10</Mass>
     </statBases>
     <tools>
@@ -243,11 +271,8 @@
       <Plasteel>5</Plasteel>
       <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
-    <costList>
-      <ComponentIndustrial>4</ComponentIndustrial>
-    </costList>
     <statBases>
-      <WorkToMake>40000</WorkToMake>
+      <!-- <WorkToMake>40000</WorkToMake> -->
       <Mass>2.5</Mass>
     </statBases>
     <tools>
@@ -301,7 +326,7 @@
     <equippedAngleOffset>-65</equippedAngleOffset>
     <techLevel>Spacer</techLevel>
     <statBases>
-      <WorkToMake>40000</WorkToMake>
+      <!-- <WorkToMake>40000</WorkToMake> -->
       <Mass>5</Mass>
     </statBases>
     <costStuffCount>60</costStuffCount>
@@ -357,7 +382,7 @@
     </descriptionHyperlinks>
     <techLevel>Ultra</techLevel>
     <statBases>
-      <WorkToMake>8000</WorkToMake>
+      <!-- <WorkToMake>8000</WorkToMake> -->
       <Mass>2</Mass>
     </statBases>
     <costList>
@@ -449,7 +474,7 @@
     </descriptionHyperlinks>
     <techLevel>Ultra</techLevel>
     <statBases>
-      <WorkToMake>8000</WorkToMake>
+      <!-- <WorkToMake>8000</WorkToMake> -->
       <Mass>2</Mass>
     </statBases>
     <costList>
@@ -531,7 +556,7 @@
     </descriptionHyperlinks>
     <techLevel>Ultra</techLevel>
     <statBases>
-      <WorkToMake>8000</WorkToMake>
+      <!-- <WorkToMake>8000</WorkToMake> -->
       <Mass>2</Mass>
     </statBases>
     <costList>
@@ -620,7 +645,7 @@
     </descriptionHyperlinks>
     <techLevel>Ultra</techLevel>
     <statBases>
-      <WorkToMake>8000</WorkToMake>
+      <!-- <WorkToMake>8000</WorkToMake> -->
       <Mass>2</Mass>
     </statBases>
     <costList>
@@ -710,7 +735,7 @@
       <li>RangedHeavy</li>
     </weaponClasses>
     <recipeMaker>
-      <WorkToMake>60000</WorkToMake>
+      <!-- <WorkToMake>60000</WorkToMake> -->
       <recipeUsers Inherit="False">
         <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
@@ -722,7 +747,7 @@
     </recipeMaker>
     <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
     <statBases>
-      <WorkToMake>45000</WorkToMake>
+      <!-- <WorkToMake>45000</WorkToMake> -->
       <Mass>3.5</Mass>
       <AccuracyTouch>0.5</AccuracyTouch>
       <AccuracyShort>0.9</AccuracyShort>
@@ -811,7 +836,7 @@
       <researchPrerequisite>WULA_Synth_Weapon_2_Ranged_Technology</researchPrerequisite>
     </recipeMaker>
     <statBases>
-      <WorkToMake>45000</WorkToMake>
+      <!-- <WorkToMake>45000</WorkToMake> -->
       <Mass>3.5</Mass>
       <AccuracyTouch>1</AccuracyTouch>
       <AccuracyShort>0.9</AccuracyShort>
@@ -879,7 +904,7 @@
       <ComponentSpacer>8</ComponentSpacer>
     </costList>
     <statBases>
-      <WorkToMake>60000</WorkToMake>
+      <!-- <WorkToMake>60000</WorkToMake> -->
       <Mass>4.5</Mass>
       <AccuracyTouch>0.8</AccuracyTouch>
       <AccuracyShort>0.8</AccuracyShort>
@@ -1329,7 +1354,7 @@
       <ComponentIndustrial>6</ComponentIndustrial>
     </costList>
     <statBases>
-      <WorkToMake>40000</WorkToMake>
+      <!-- <WorkToMake>40000</WorkToMake> -->
       <Mass>100</Mass>
     </statBases>
     <tools>
@@ -1338,7 +1363,7 @@
         <capacities>
           <li>Cut</li>
         </capacities>
-        <power>132</power>
+        <power>82</power>
         <cooldownTime>2</cooldownTime>
         <armorPenetration>0.50</armorPenetration>
       </li>
@@ -1347,7 +1372,7 @@
         <capacities>
           <li>Stab</li>
         </capacities>
-        <power>145</power>
+        <power>75</power>
         <armorPenetration>0.90</armorPenetration>
         <cooldownTime>1.7</cooldownTime>
       </li>
@@ -1384,7 +1409,7 @@
       <ComponentSpacer>8</ComponentSpacer>
     </costList>
     <statBases>
-      <WorkToMake>60000</WorkToMake>
+      <!-- <WorkToMake>60000</WorkToMake> -->
       <Mass>100</Mass>
       <AccuracyTouch>0.85</AccuracyTouch>
       <AccuracyShort>0.85</AccuracyShort>
