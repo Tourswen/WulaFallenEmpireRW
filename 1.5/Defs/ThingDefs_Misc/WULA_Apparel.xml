@@ -19,6 +19,7 @@
       <li>ApparelNoble</li>
     </thingCategories>
     <statBases>
+      <WorkToMake>15000</WorkToMake>
       <Mass>0.25</Mass>
       <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
       <StuffEffectMultiplierInsulation_Cold>0.22</StuffEffectMultiplierInsulation_Cold>
@@ -121,6 +122,9 @@
     <recipeMaker>
       <useIngredientsForColor>false</useIngredientsForColor>
     </recipeMaker>
+    <statBases>
+      <WorkToMake>7000</WorkToMake>
+    </statBases>
   </ThingDef>
   <ThingDef Name="WULA_ApparelCivilHatBase" ParentName="HatMakeableBase" Abstract="True">
     <apparel>
@@ -146,6 +150,9 @@
     <recipeMaker>
       <useIngredientsForColor>false</useIngredientsForColor>
     </recipeMaker>
+    <statBases>
+      <WorkToMake>3000</WorkToMake>
+    </statBases>
   </ThingDef>
   <ThingDef ParentName="WULA_ApparelCivilBase">
 		<defName>WULA_Sailor_Dress</defName>
@@ -411,6 +418,9 @@
       <useIngredientsForColor>false</useIngredientsForColor>
     </recipeMaker>
     <possessionCount>1</possessionCount>
+    <statBases>
+      <WorkToMake>3000</WorkToMake>
+    </statBases>
   </ThingDef>
   <ThingDef ParentName="ApparelMakeableBase">
 		<defName>WULA_Bodystocking_White</defName>
@@ -455,7 +465,9 @@
       <useIngredientsForColor>false</useIngredientsForColor>
     </recipeMaker>
     <possessionCount>1</possessionCount>
-		
+    <statBases>
+      <WorkToMake>3000</WorkToMake>
+    </statBases>
   </ThingDef>
   <ThingDef ParentName="ApparelMakeableBase">
 		<defName>WULA_Body_Suit</defName>
@@ -508,7 +520,9 @@
       <useIngredientsForColor>false</useIngredientsForColor>
     </recipeMaker>
     <possessionCount>1</possessionCount>
-		
+    <statBases>
+      <WorkToMake>7000</WorkToMake>
+    </statBases>
   </ThingDef>
 
   <!-- 普通甲 -->
@@ -1034,7 +1048,6 @@
     <thingSetMakerTags>
       <li>RewardStandardHighFreq</li>
     </thingSetMakerTags>
-		
   </ThingDef>
   <ThingDef ParentName="ArmorMachineableBase">
     <defName>WULA_Shield_Prismatic</defName>
@@ -1062,7 +1075,7 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <WorkToMake>30000</WorkToMake>
+      <WorkToMake>20000</WorkToMake>
       <MaxHitPoints>500</MaxHitPoints>
       <Mass>5</Mass>
       <Flammability>0</Flammability>
@@ -1150,7 +1163,6 @@
     <thingSetMakerTags>
       <li>RewardStandardHighFreq</li>
     </thingSetMakerTags>
-		
   </ThingDef>
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_WULA_Shield_Prismatic</defName>
@@ -1298,7 +1310,7 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <WorkToMake>60000</WorkToMake>
+      <WorkToMake>20000</WorkToMake>
       <MaxHitPoints>5000</MaxHitPoints>
       <Mass>100</Mass>
       <Flammability>0</Flammability>
@@ -1394,7 +1406,7 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <WorkToMake>60000</WorkToMake>
+      <WorkToMake>30000</WorkToMake>
       <MaxHitPoints>1000</MaxHitPoints>
       <Mass>100</Mass>
       <Flammability>0</Flammability>

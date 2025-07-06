@@ -110,7 +110,7 @@
         </li>
         <li Class="ScenPart_StartingResearch">
           <def>StartingResearch</def>
-          <project>BiofuelRefinery</project>
+          <project>BiofuelRefining</project>
         </li>
         
         <!-- Game start dialog -->

@@ -4,6 +4,7 @@
     <defName>WULA_Trait_Knight</defName>
     <forcedPassions>
       <li>Melee</li>
+      <li>Shooting</li>
     </forcedPassions>
     <degreeDatas>
       <li>
@@ -42,6 +43,76 @@
       </li>
     </degreeDatas>
   </TraitDef>
+  <TraitDef>
+    <defName>WULA_Trait_Legal_Officer</defName>
+    <forcedPassions>
+      <li>Shooting</li>
+      <li>Social</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <label>法务官</label>
+        <description>法务官是乌拉帝国骑士团的特殊基层执法者，接受了良好的射击训练，并且拥有镇压和安抚奴隶所需的如簧巧舌。</description>
+        <statFactors>
+          <AimingDelayFactor>0.5</AimingDelayFactor>
+          <ShootingAccuracyPawn>5</ShootingAccuracyPawn>
+        </statFactors>
+        <StatOffsets>
+          <SocialImpact>0.2</SocialImpact>
+        </StatOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  <TraitDef>
+    <defName>WULA_Trait_Sculptor</defName>
+    <forcedPassions>
+      <li>Artistic</li>
+      <li>Intellectual</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <label>雕琢者</label>
+        <description>雕琢者是乌拉帝国观测站的科学家，她们将基因编辑技术视为终极的艺术媒介，将生物体视为雕塑原材料，以创造独一无二、具有震撼美学价值或哲学意涵的“活体艺术品”。</description>
+        <statOffsets>
+          <ResearchSpeedFactor>0.15</ResearchSpeedFactor>
+          <WorkSpeedGlobal>0.15</WorkSpeedGlobal>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  <TraitDef>
+    <defName>WULA_Trait_Diplomat</defName>
+    <forcedPassions>
+      <li>Artistic</li>
+      <li>Social</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <label>外交官</label>
+        <description>乌拉帝国的外交官被称为传谕使，她们彬彬有礼的礼节中也无法掩盖属于堕落帝国的傲慢与目中无人。</description>
+        <statFactors>
+          <SocialImpact>1</SocialImpact>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  <TraitDef>
+    <defName>WULA_Trait_Nun</defName>
+    <forcedPassions>
+      <li>Melee</li>
+      <li>Medicine</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <label>修女</label>
+        <description>乌拉帝国的修女是乌拉帝国大教堂的主体，她们抛弃了养尊处优的堕落生活，以身体力行的布道远征贯彻虔诚的信仰。</description>
+        <statFactors>
+          <PsychicSensitivity>8</PsychicSensitivity>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  
   <TraitDef>
     <defName>WULA_Trait_Broken_Personality</defName>
     <degreeDatas>

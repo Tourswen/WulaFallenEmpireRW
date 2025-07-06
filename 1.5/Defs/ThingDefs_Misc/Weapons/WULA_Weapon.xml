@@ -13,7 +13,8 @@
     <uiIconScale>1.1</uiIconScale>
     <techLevel>Medieval</techLevel>
     <statBases>
-      <!-- <WorkToMake>300</WorkToMake> -->
+      <!-- <MarketValue>76</MarketValue> -->
+      <WorkToMake>300</WorkToMake>
       <Mass>2</Mass>
     </statBases>
     <equippedAngleOffset>-65</equippedAngleOffset>
@@ -75,7 +76,8 @@
       <researchPrerequisite>WULA_Synth_Weapon_Technology</researchPrerequisite>
     </recipeMaker>
     <statBases>
-      <!-- <WorkToMake>700</WorkToMake> -->
+      <WorkToMake>700</WorkToMake>
+      <!-- <MarketValue>370</MarketValue> -->
       <Mass>3.5</Mass>
       <AccuracyTouch>0.75</AccuracyTouch>
       <AccuracyShort>0.75</AccuracyShort>
@@ -113,7 +115,6 @@
     <equippedAngleOffset>-65</equippedAngleOffset>
     <techLevel>Spacer</techLevel>
     <statBases>
-      <!-- <WorkToMake>40000</WorkToMake> -->
       <Mass>1</Mass>
     </statBases>
     <tools>
@@ -147,7 +148,8 @@
     <techLevel>Spacer</techLevel>
     <costStuffCount>50</costStuffCount>
     <statBases>
-      <!-- <WorkToMake>40000</WorkToMake> -->
+      <!-- <MarketValue>441</MarketValue> -->
+      <WorkToMake>20000</WorkToMake>
       <Mass>20</Mass>
     </statBases>
     <stuffCategories>
@@ -163,8 +165,8 @@
         <capacities>
           <li>Poke</li>
         </capacities>
-        <power>225</power>
-        <cooldownTime>6</cooldownTime>
+        <power>150</power>
+        <cooldownTime>5</cooldownTime>
         <armorPenetration>1</armorPenetration>
         <extraMeleeDamages>
           <li>
@@ -210,7 +212,7 @@
       <ComponentIndustrial>6</ComponentIndustrial>
     </costList>
     <statBases>
-      <!-- <WorkToMake>40000</WorkToMake> -->
+      <WorkToMake>20000</WorkToMake>
       <Mass>10</Mass>
     </statBases>
     <tools>
@@ -272,7 +274,7 @@
       <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
     <statBases>
-      <!-- <WorkToMake>40000</WorkToMake> -->
+      <WorkToMake>20000</WorkToMake>
       <Mass>2.5</Mass>
     </statBases>
     <tools>
@@ -282,8 +284,8 @@
           <li>Cut</li>
         </capacities>
         <armorPenetration>0.5</armorPenetration>
-        <power>25</power> <!-- 2.5x natural fist -->
-        <cooldownTime>0.75</cooldownTime>
+        <power>18</power> <!-- 2.5x natural fist -->
+        <cooldownTime>1</cooldownTime>
       </li>
       <li>
         <label>柄击</label>
@@ -291,7 +293,7 @@
           <li>Blunt</li>
           <li>Poke</li>
         </capacities>
-        <power>18</power>
+        <power>14</power>
         <cooldownTime>0.75</cooldownTime>
         <surpriseAttack>
           <extraMeleeDamages>
@@ -326,7 +328,7 @@
     <equippedAngleOffset>-65</equippedAngleOffset>
     <techLevel>Spacer</techLevel>
     <statBases>
-      <!-- <WorkToMake>40000</WorkToMake> -->
+      <WorkToMake>20000</WorkToMake>
       <Mass>5</Mass>
     </statBases>
     <costStuffCount>60</costStuffCount>
@@ -382,7 +384,7 @@
     </descriptionHyperlinks>
     <techLevel>Ultra</techLevel>
     <statBases>
-      <!-- <WorkToMake>8000</WorkToMake> -->
+      <WorkToMake>10000</WorkToMake>
       <Mass>2</Mass>
     </statBases>
     <costList>
@@ -474,7 +476,7 @@
     </descriptionHyperlinks>
     <techLevel>Ultra</techLevel>
     <statBases>
-      <!-- <WorkToMake>8000</WorkToMake> -->
+      <WorkToMake>10000</WorkToMake>
       <Mass>2</Mass>
     </statBases>
     <costList>
@@ -556,7 +558,7 @@
     </descriptionHyperlinks>
     <techLevel>Ultra</techLevel>
     <statBases>
-      <!-- <WorkToMake>8000</WorkToMake> -->
+      <WorkToMake>10000</WorkToMake>
       <Mass>2</Mass>
     </statBases>
     <costList>
@@ -645,7 +647,7 @@
     </descriptionHyperlinks>
     <techLevel>Ultra</techLevel>
     <statBases>
-      <!-- <WorkToMake>8000</WorkToMake> -->
+      <WorkToMake>10000</WorkToMake>
       <Mass>2</Mass>
     </statBases>
     <costList>
@@ -747,7 +749,7 @@
     </recipeMaker>
     <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
     <statBases>
-      <!-- <WorkToMake>45000</WorkToMake> -->
+      <WorkToMake>25000</WorkToMake>
       <Mass>3.5</Mass>
       <AccuracyTouch>0.5</AccuracyTouch>
       <AccuracyShort>0.9</AccuracyShort>
@@ -836,7 +838,7 @@
       <researchPrerequisite>WULA_Synth_Weapon_2_Ranged_Technology</researchPrerequisite>
     </recipeMaker>
     <statBases>
-      <!-- <WorkToMake>45000</WorkToMake> -->
+      <WorkToMake>25000</WorkToMake>
       <Mass>3.5</Mass>
       <AccuracyTouch>1</AccuracyTouch>
       <AccuracyShort>0.9</AccuracyShort>
@@ -904,7 +906,7 @@
       <ComponentSpacer>8</ComponentSpacer>
     </costList>
     <statBases>
-      <!-- <WorkToMake>60000</WorkToMake> -->
+      <WorkToMake>40000</WorkToMake>
       <Mass>4.5</Mass>
       <AccuracyTouch>0.8</AccuracyTouch>
       <AccuracyShort>0.8</AccuracyShort>
@@ -947,7 +949,7 @@
       <researchPrerequisite>WULA_Synth_Weapon_3_Bomb_Technology</researchPrerequisite>
     </recipeMaker>
     <statBases>
-      <MarketValue>1400</MarketValue>
+      <WorkToMake>50000</WorkToMake>
       <Mass>10</Mass>
       <AccuracyTouch>0.6</AccuracyTouch>
       <AccuracyShort>0.6</AccuracyShort>
@@ -1040,7 +1042,7 @@
       <ComponentSpacer>8</ComponentSpacer>
     </costList>
     <statBases>
-      <MarketValue>1400</MarketValue>
+      <WorkToMake>40000</WorkToMake>
       <Mass>150</Mass>
       <AccuracyTouch>0.6</AccuracyTouch>
       <AccuracyShort>0.6</AccuracyShort>
@@ -1115,7 +1117,7 @@
     </graphicData>
     <tradeability>None</tradeability>
     <statBases>
-      <MarketValue>1400</MarketValue>
+      <WorkToMake>20000</WorkToMake>
       <Mass>150</Mass>
       <AccuracyTouch>1</AccuracyTouch>
       <AccuracyShort>2</AccuracyShort>
@@ -1186,7 +1188,7 @@
     </graphicData>
     <tradeability>None</tradeability>
     <statBases>
-      <MarketValue>1400</MarketValue>
+      <WorkToMake>40000</WorkToMake>
       <Mass>150</Mass>
       <AccuracyTouch>0.9</AccuracyTouch>
       <AccuracyShort>0.9</AccuracyShort>
@@ -1263,7 +1265,7 @@
     </graphicData>
     <tradeability>None</tradeability>
     <statBases>
-      <MarketValue>1400</MarketValue>
+      <WorkToMake>40000</WorkToMake>
       <Mass>150</Mass>
       <AccuracyTouch>0.5</AccuracyTouch>
       <AccuracyShort>0.9</AccuracyShort>
@@ -1354,7 +1356,7 @@
       <ComponentIndustrial>6</ComponentIndustrial>
     </costList>
     <statBases>
-      <!-- <WorkToMake>40000</WorkToMake> -->
+      <WorkToMake>30000</WorkToMake>
       <Mass>100</Mass>
     </statBases>
     <tools>
@@ -1409,7 +1411,7 @@
       <ComponentSpacer>8</ComponentSpacer>
     </costList>
     <statBases>
-      <!-- <WorkToMake>60000</WorkToMake> -->
+      <WorkToMake>40000</WorkToMake>
       <Mass>100</Mass>
       <AccuracyTouch>0.85</AccuracyTouch>
       <AccuracyShort>0.85</AccuracyShort>

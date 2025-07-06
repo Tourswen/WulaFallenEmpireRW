@@ -181,7 +181,7 @@
       <Medicine>-3</Medicine>
       <Social>-5</Social>
     </skillGains>
-    <!-- <workDisables>Intellectual</workDisables> -->
+    <workDisables>Intellectual</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <spawnCategories>
       <li>Wula_Backstory_Categories</li>
@@ -219,6 +219,9 @@
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
+    <forcedTraits>
+      <WULA_Trait_Legal_Officer>0</WULA_Trait_Legal_Officer>
+    </forcedTraits>
   </AlienRace.AlienBackstoryDef>
 
   <!-- 观测站 -->
@@ -235,6 +238,7 @@
       <Animals>3</Animals>
       <Crafting>-5</Crafting>
       <Artistic>8</Artistic>
+      <Intellectual>5</Intellectual>
     </skillGains>
     <workDisables>Violent</workDisables>
     <spawnCategories>
@@ -243,6 +247,9 @@
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
+    <forcedTraits>
+      <WULA_Trait_Sculptor>0</WULA_Trait_Sculptor>
+    </forcedTraits>
   </AlienRace.AlienBackstoryDef>
   <AlienRace.AlienBackstoryDef>
     <defName>WULA_Adult_Backstory101</defName>
@@ -258,6 +265,7 @@
       <Crafting>-5</Crafting>
       <Artistic>4</Artistic>
       <Medicine>4</Medicine>
+      <Intellectual>5</Intellectual>
     </skillGains>
     <workDisables>Violent</workDisables>
     <spawnCategories>
@@ -266,6 +274,9 @@
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
+    <forcedTraits>
+      <WULA_Trait_Sculptor>0</WULA_Trait_Sculptor>
+    </forcedTraits>
   </AlienRace.AlienBackstoryDef>
   <AlienRace.AlienBackstoryDef>
     <defName>WULA_Adult_Backstory102</defName>
@@ -288,6 +299,9 @@
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
+    <forcedTraits>
+      <WULA_Trait_Diplomat>0</WULA_Trait_Diplomat>
+    </forcedTraits>
   </AlienRace.AlienBackstoryDef>
   <AlienRace.AlienBackstoryDef>
     <defName>WULA_Adult_Backstory103</defName>
@@ -334,6 +348,133 @@
     </forcedTraits>
   </AlienRace.AlienBackstoryDef>
 
+  <!-- 大教堂 -->
+  <AlienRace.AlienBackstoryDef>
+    <defName>WULA_Adult_Backstory200</defName>
+    <slot>Adulthood</slot>
+    <title>人格矩阵装载：和谐侍者</title>
+    <titleShort>人格-和谐侍者</titleShort>
+    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国和谐侍者的模拟记忆。\n\n和谐侍者是乌拉帝国大教堂的教众之一，她们精于农耕，知道如何利用灵能催产作物，并在丰收之日为主献上最完美的贡品。</description>
+    <skillGains>
+      <Melee>5</Melee>
+      <Plants>8</Plants>
+      <Medicine>5</Medicine>
+      <Animals>-5</Animals>
+      <Artistic>-10</Artistic>
+      <Intellectual>-10</Intellectual>
+    </skillGains>
+    <workDisables>Construction,Mining</workDisables>
+    <spawnCategories>
+      <li>Wula_Backstory_Categories</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <forcedTraits>
+      <WULA_Trait_Nun>0</WULA_Trait_Nun>
+    </forcedTraits>
+  </AlienRace.AlienBackstoryDef>
+  <AlienRace.AlienBackstoryDef>
+    <defName>WULA_Adult_Backstory201</defName>
+    <slot>Adulthood</slot>
+    <title>人格矩阵装载：锻锤侍者</title>
+    <titleShort>人格-锻锤侍者</titleShort>
+    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国锻锤侍者的模拟记忆。\n\n锻锤侍者是乌拉帝国大教堂的教众之一，她们是铸造剑犁的好手，通过驱动灵能对物品进行塑性，她们可以将自己的信仰雕刻在精美的器具中。</description>
+    <skillGains>
+      <Melee>5</Melee>
+      <Crafting>8</Crafting>
+      <Medicine>5</Medicine>
+      <Animals>-5</Animals>
+      <Artistic>-10</Artistic>
+      <Intellectual>-10</Intellectual>
+    </skillGains>
+    <workDisables>Plants,Mining</workDisables>
+    <spawnCategories>
+      <li>Wula_Backstory_Categories</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <forcedTraits>
+      <WULA_Trait_Nun>0</WULA_Trait_Nun>
+    </forcedTraits>
+  </AlienRace.AlienBackstoryDef>
+  <AlienRace.AlienBackstoryDef>
+    <defName>WULA_Adult_Backstory202</defName>
+    <slot>Adulthood</slot>
+    <title>人格矩阵装载：圣堂武士</title>
+    <titleShort>人格-圣堂武士</titleShort>
+    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国圣堂武士的模拟记忆。\n\n圣堂武士是乌拉帝国大教堂的教众之一，她们是护教军的主体，深谙使用灵能战斗的搏杀技巧，以宿敌之血证心中的无限热忱。</description>
+    <skillGains>
+      <Melee>8</Melee>
+      <Shooting>8</Shooting>
+      <Medicine>5</Medicine>
+      <Animals>-10</Animals>
+      <Artistic>-10</Artistic>
+      <Intellectual>-10</Intellectual>
+    </skillGains>
+    <workDisables>Plants,Mining,Crafting</workDisables>
+    <spawnCategories>
+      <li>Wula_Backstory_Categories</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <forcedTraits>
+      <WULA_Trait_Nun>0</WULA_Trait_Nun>
+    </forcedTraits>
+  </AlienRace.AlienBackstoryDef>
+  <AlienRace.AlienBackstoryDef>
+    <defName>WULA_Adult_Backstory202</defName>
+    <slot>Adulthood</slot>
+    <title>人格矩阵装载：奥秘学士</title>
+    <titleShort>人格-奥秘学士</titleShort>
+    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国奥秘学士的模拟记忆。\n\n奥秘学士是乌拉帝国大教堂的教众之一，她们负责用乌拉帝国的唯心理论体系论证世间一切事物，并从中寻找主的指引。</description>
+    <skillGains>
+      <Melee>3</Melee>
+      <Shooting>-5</Shooting>
+      <Medicine>5</Medicine>
+      <Animals>-10</Animals>
+      <Artistic>-10</Artistic>
+      <Intellectual>8</Intellectual>
+    </skillGains>
+    <workDisables>Plants,Mining,Crafting</workDisables>
+    <spawnCategories>
+      <li>Wula_Backstory_Categories</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <forcedTraits>
+      <WULA_Trait_Nun>0</WULA_Trait_Nun>
+    </forcedTraits>
+  </AlienRace.AlienBackstoryDef>
+  <AlienRace.AlienBackstoryDef>
+    <defName>WULA_Adult_Backstory203</defName>
+    <slot>Adulthood</slot>
+    <title>人格矩阵装载：福音侍者</title>
+    <titleShort>人格-福音侍者</titleShort>
+    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国福音侍者的模拟记忆。\n\n福音侍者是乌拉帝国大教堂的教众之一，她们维护着社会的安定，并致力于在异种间传播福音。</description>
+    <skillGains>
+      <Melee>-5</Melee>
+      <Crafting>3</Crafting>
+      <Shooting>-5</Shooting>
+      <Medicine>5</Medicine>
+      <Animals>-10</Animals>
+      <Artistic>-10</Artistic>
+      <Social>8</Social>
+    </skillGains>
+    <workDisables>Plants,Mining</workDisables>
+    <spawnCategories>
+      <li>Wula_Backstory_Categories</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <forcedTraits>
+      <WULA_Trait_Nun>0</WULA_Trait_Nun>
+    </forcedTraits>
+  </AlienRace.AlienBackstoryDef>
 
   <AlienRace.AlienBackstoryDef>
     <defName>WULA_Adult_Backstory999</defName>
