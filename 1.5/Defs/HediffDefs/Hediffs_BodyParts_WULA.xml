@@ -53,6 +53,7 @@
         <useLabel>安装中央能源炉超载组件</useLabel>
         <!-- <userMustHaveHediff>WULA_Addons_Antenna_Hediff_Base</userMustHaveHediff> -->
       </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
       <li Class="CompProperties_UseEffectInstallImplant">
         <hediffDef>WULA_Energy_Furnace_Hediff_Overdrive</hediffDef>
         <bodyPart>WULA_Energy_Furnace_Bodypart</bodyPart>
@@ -176,8 +177,9 @@
         <useLabel>安装中央能源炉偷吃组件</useLabel>
         <!-- <userMustHaveHediff>WULA_Addons_Antenna_Hediff_Base</userMustHaveHediff> -->
       </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
       <li Class="CompProperties_UseEffectInstallImplant">
-        <hediffDef>WULA_Energy_Furnace_Hediff_Overdrive</hediffDef>
+        <hediffDef>WULA_Energy_Furnace_Hediff_Hunger</hediffDef>
         <bodyPart>WULA_Energy_Furnace_Bodypart</bodyPart>
         <canUpgrade>false</canUpgrade>
         <maxSeverity>1</maxSeverity>
@@ -388,7 +390,6 @@
   </HediffDef>
 
   <!-- 插件 -->
-
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
     <defName>WULA_Fix_Hand_Base</defName>
     <label>修复手部</label>

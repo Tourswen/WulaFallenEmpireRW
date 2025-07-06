@@ -84,7 +84,7 @@
       <li>
         <categories>
           <li>Wula_Backstory_Categories</li>
-          <li>Wula_New_Synth_Backstory_Categories</li>
+          <li>Wula_Old_Synth_Backstory_Categories</li>
         </categories>
       </li>
     </backstoryFiltersOverride>
@@ -215,14 +215,14 @@
       <li>GrenadeEMP</li>
     </weaponTags>
   </PawnKindDef>
-  <PawnKindDef ParentName="LightMechanoidKind">
+  <PawnKindDef ParentName="Mech_WULA_Cat_Soldier_PawnKind">
     <defName>Mech_WULA_Cat_Constructor</defName>
     <label>土木乌拉猫猫</label>
     <race>Mech_WULA_Cat_Constructor</race>
     <weaponTags>
       <li>Wula_Constructor_Cat_Weapon</li>
     </weaponTags>
-    <lifeStages>
+    <lifeStages Inherit="False"> 
       <li>
         <bodyGraphicData>
           <texPath>Wula/Things/WULA_Constructor_Cat/WULA_Cat_Thin</texPath>
@@ -233,9 +233,5 @@
         </bodyGraphicData>
       </li>
     </lifeStages>
-    <allowInMechClusters>False</allowInMechClusters>
-    <combatPower>100</combatPower>
-    <weaponMoney>9999~9999</weaponMoney>
-    <defaultFactionType>PlayerColony</defaultFactionType>
   </PawnKindDef>
 </Defs>

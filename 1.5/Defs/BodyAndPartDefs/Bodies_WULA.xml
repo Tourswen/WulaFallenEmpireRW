@@ -537,6 +537,13 @@
 							</groups>
 						</li>
 						<li>
+							<def>SightSensor</def>
+							<coverage>0.13</coverage>
+							<groups>
+								<li>Torso</li>
+							</groups>
+						</li>
+						<li>
 							<def>WULA_Panzer_OutBrust_Bodypart</def>
 							<customLabel>第一反推喷气孔</customLabel>
 							<coverage>0.025</coverage>
@@ -616,6 +623,10 @@
 								<li>HeadAttackTool</li>
 							</groups>
 							<parts>
+								<li>
+									<def>SightSensor</def>
+									<coverage>0.13</coverage>
+								</li>
 								<li>
 									<def>WULA_AI_Core_Bodypart</def>
 									<coverage>0.025</coverage>

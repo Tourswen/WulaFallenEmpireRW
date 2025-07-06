@@ -24,9 +24,13 @@
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
-    <forcedTraits>
-      <WULA_Trait_Knight>1</WULA_Trait_Knight>
-    </forcedTraits>
+    <forcedTraitsChance>
+      <li>
+        <defName>WULA_Trait_Knight</defName>
+        <degree>1</degree>
+        <chance>100</chance>
+      </li>
+    </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
   <AlienRace.AlienBackstoryDef>
     <defName>WULA_Adult_Backstory02</defName>
@@ -51,9 +55,13 @@
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
-    <forcedTraits>
-      <WULA_Trait_Knight>1</WULA_Trait_Knight>
-    </forcedTraits>
+    <forcedTraitsChance>
+      <li>
+        <defName>WULA_Trait_Knight</defName>
+        <degree>1</degree>
+        <chance>100</chance>
+      </li>
+    </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
   <AlienRace.AlienBackstoryDef>
     <defName>WULA_Adult_Backstory03</defName>
@@ -77,9 +85,13 @@
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
-    <forcedTraits>
-      <WULA_Trait_Knight>1</WULA_Trait_Knight>
-    </forcedTraits>
+    <forcedTraitsChance>
+      <li>
+        <defName>WULA_Trait_Knight</defName>
+        <degree>1</degree>
+        <chance>100</chance>
+      </li>
+    </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
   <AlienRace.AlienBackstoryDef>
     <defName>WULA_Adult_Backstory04</defName>
@@ -102,9 +114,13 @@
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
-    <forcedTraits>
-      <WULA_Trait_Knight>2</WULA_Trait_Knight>
-    </forcedTraits>
+    <forcedTraitsChance>
+      <li>
+        <defName>WULA_Trait_Knight</defName>
+        <degree>2</degree>
+        <chance>100</chance>
+      </li>
+    </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
   <AlienRace.AlienBackstoryDef>
     <defName>WULA_Adult_Backstory05</defName>
@@ -130,9 +146,13 @@
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
-    <forcedTraits>
-      <WULA_Trait_Knight>1</WULA_Trait_Knight>
-    </forcedTraits>
+    <forcedTraitsChance>
+      <li>
+        <defName>WULA_Trait_Knight</defName>
+        <degree>1</degree>
+        <chance>100</chance>
+      </li>
+    </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
   <AlienRace.AlienBackstoryDef>
     <defName>WULA_Adult_Backstory10</defName>
@@ -219,9 +239,13 @@
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
-    <forcedTraits>
-      <WULA_Trait_Legal_Officer>0</WULA_Trait_Legal_Officer>
-    </forcedTraits>
+    <forcedTraitsChance>
+      <li>
+        <defName>WULA_Trait_Legal_Officer</defName>
+        <degree>0</degree>
+        <chance>100</chance>
+      </li>
+    </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
 
   <!-- 观测站 -->
@@ -247,9 +271,13 @@
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
-    <forcedTraits>
-      <WULA_Trait_Sculptor>0</WULA_Trait_Sculptor>
-    </forcedTraits>
+    <forcedTraitsChance>
+      <li>
+        <defName>WULA_Trait_Sculptor</defName>
+        <degree>0</degree>
+        <chance>100</chance>
+      </li>
+    </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
   <AlienRace.AlienBackstoryDef>
     <defName>WULA_Adult_Backstory101</defName>
@@ -274,9 +302,13 @@
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
-    <forcedTraits>
-      <WULA_Trait_Sculptor>0</WULA_Trait_Sculptor>
-    </forcedTraits>
+    <forcedTraitsChance>
+      <li>
+        <defName>WULA_Trait_Sculptor</defName>
+        <degree>0</degree>
+        <chance>100</chance>
+      </li>
+    </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
   <AlienRace.AlienBackstoryDef>
     <defName>WULA_Adult_Backstory102</defName>
@@ -299,9 +331,13 @@
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
-    <forcedTraits>
-      <WULA_Trait_Diplomat>0</WULA_Trait_Diplomat>
-    </forcedTraits>
+    <forcedTraitsChance>
+      <li>
+        <defName>WULA_Trait_Diplomat</defName>
+        <degree>0</degree>
+        <chance>100</chance>
+      </li>
+    </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
   <AlienRace.AlienBackstoryDef>
     <defName>WULA_Adult_Backstory103</defName>
@@ -343,9 +379,13 @@
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
-    <forcedTraits>
-      <Bloodlust>0</Bloodlust>
-    </forcedTraits>
+    <forcedTraitsChance>
+      <li>
+        <defName>Bloodlust</defName>
+        <degree>0</degree>
+        <chance>100</chance>
+      </li>
+    </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
 
   <!-- 大教堂 -->
@@ -363,16 +403,23 @@
       <Artistic>-10</Artistic>
       <Intellectual>-10</Intellectual>
     </skillGains>
-    <workDisables>Construction,Mining</workDisables>
+    <workDisables>
+      <li>Constructing</li>
+      <li>Mining</li>
+    </workDisables>
     <spawnCategories>
       <li>Wula_Backstory_Categories</li>
     </spawnCategories>
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
-    <forcedTraits>
-      <WULA_Trait_Nun>0</WULA_Trait_Nun>
-    </forcedTraits>
+    <forcedTraitsChance>
+      <li>
+        <defName>WULA_Trait_Nun</defName>
+        <degree>0</degree>
+        <chance>100</chance>
+      </li>
+    </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
   <AlienRace.AlienBackstoryDef>
     <defName>WULA_Adult_Backstory201</defName>
@@ -388,16 +435,23 @@
       <Artistic>-10</Artistic>
       <Intellectual>-10</Intellectual>
     </skillGains>
-    <workDisables>Plants,Mining</workDisables>
+    <workDisables>
+      <li>PlantWork</li>
+      <li>Mining</li>
+    </workDisables>
     <spawnCategories>
       <li>Wula_Backstory_Categories</li>
     </spawnCategories>
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
-    <forcedTraits>
-      <WULA_Trait_Nun>0</WULA_Trait_Nun>
-    </forcedTraits>
+    <forcedTraitsChance>
+      <li>
+        <defName>WULA_Trait_Nun</defName>
+        <degree>0</degree>
+        <chance>100</chance>
+      </li>
+    </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
   <AlienRace.AlienBackstoryDef>
     <defName>WULA_Adult_Backstory202</defName>
@@ -413,16 +467,24 @@
       <Artistic>-10</Artistic>
       <Intellectual>-10</Intellectual>
     </skillGains>
-    <workDisables>Plants,Mining,Crafting</workDisables>
+    <workDisables>
+      <li>PlantWork</li>
+      <li>Mining</li>
+      <li>Crafting</li>
+    </workDisables>
     <spawnCategories>
       <li>Wula_Backstory_Categories</li>
     </spawnCategories>
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
-    <forcedTraits>
-      <WULA_Trait_Nun>0</WULA_Trait_Nun>
-    </forcedTraits>
+    <forcedTraitsChance>
+      <li>
+        <defName>WULA_Trait_Nun</defName>
+        <degree>0</degree>
+        <chance>100</chance>
+      </li>
+    </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
   <AlienRace.AlienBackstoryDef>
     <defName>WULA_Adult_Backstory202</defName>
@@ -438,16 +500,24 @@
       <Artistic>-10</Artistic>
       <Intellectual>8</Intellectual>
     </skillGains>
-    <workDisables>Plants,Mining,Crafting</workDisables>
+    <workDisables>
+      <li>PlantWork</li>
+      <li>Mining</li>
+      <li>Crafting</li>
+    </workDisables>
     <spawnCategories>
       <li>Wula_Backstory_Categories</li>
     </spawnCategories>
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
-    <forcedTraits>
-      <WULA_Trait_Nun>0</WULA_Trait_Nun>
-    </forcedTraits>
+    <forcedTraitsChance>
+      <li>
+        <defName>WULA_Trait_Nun</defName>
+        <degree>0</degree>
+        <chance>100</chance>
+      </li>
+    </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
   <AlienRace.AlienBackstoryDef>
     <defName>WULA_Adult_Backstory203</defName>
@@ -464,16 +534,23 @@
       <Artistic>-10</Artistic>
       <Social>8</Social>
     </skillGains>
-    <workDisables>Plants,Mining</workDisables>
+    <workDisables>
+      <li>PlantWork</li>
+      <li>Mining</li>
+    </workDisables>
     <spawnCategories>
       <li>Wula_Backstory_Categories</li>
     </spawnCategories>
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
-    <forcedTraits>
-      <WULA_Trait_Nun>0</WULA_Trait_Nun>
-    </forcedTraits>
+    <forcedTraitsChance>
+      <li>
+        <defName>WULA_Trait_Nun</defName>
+        <degree>0</degree>
+        <chance>100</chance>
+      </li>
+    </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
 
   <AlienRace.AlienBackstoryDef>
@@ -504,9 +581,13 @@
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
-    <forcedTraits>
-      <WULA_Trait_Broken_Personality>1</WULA_Trait_Broken_Personality>
-    </forcedTraits>
+    <forcedTraitsChance>
+      <li>
+        <defName>WULA_Trait_Broken_Personality</defName>
+        <degree>0</degree>
+        <chance>100</chance>
+      </li>
+    </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
 
   <!-- 战争机械 -->
@@ -523,8 +604,12 @@
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
-    <forcedTraits>
-      <WULA_AI_War_Machine>1</WULA_AI_War_Machine>
-    </forcedTraits>
+    <forcedTraitsChance>
+      <li>
+        <defName>WULA_AI_War_Machine</defName>
+        <degree>0</degree>
+        <chance>100</chance>
+      </li>
+    </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
 </Defs>

@@ -21,7 +21,7 @@
       <optimalityOffsetHumanlikes>-1000</optimalityOffsetHumanlikes>
       <optimalityOffsetFeedingAnimals>-1000</optimalityOffsetFeedingAnimals>
       <ingestEffect>EatVegetarian</ingestEffect>
-      <ingestSound>MechanoidsWakeUp</ingestSound>
+      <ingestSound>MechResurrectCast</ingestSound>
     </ingestible>
     <allowedArchonexusCount>200</allowedArchonexusCount>
     <recipeMaker>
@@ -56,7 +56,7 @@
       <Mass>1</Mass>
       <MarketValue>5</MarketValue>
       <DeteriorationRate>0.1</DeteriorationRate>
-      <WorkToMake>50000</WorkToMake>
+      <WorkToMake>15000</WorkToMake>
     </statBases>
     <graphicData>
       <texPath>Things/Item/Special/MechSerumNeurotrainer</texPath>

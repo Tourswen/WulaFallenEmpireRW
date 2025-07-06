@@ -34,6 +34,7 @@
       </recipeUsers>
       <researchPrerequisite>WULA_Synth_Weapon_Technology</researchPrerequisite>
       <displayPriority>300</displayPriority>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
     </recipeMaker>
     <tools>
       <li>
@@ -74,6 +75,7 @@
         <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
       <researchPrerequisite>WULA_Synth_Weapon_Technology</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
     </recipeMaker>
     <statBases>
       <WorkToMake>700</WorkToMake>
@@ -115,6 +117,8 @@
     <equippedAngleOffset>-65</equippedAngleOffset>
     <techLevel>Spacer</techLevel>
     <statBases>
+      <MarketValue>100</MarketValue>
+      <WorkToMake>1000</WorkToMake>
       <Mass>1</Mass>
     </statBases>
     <tools>
@@ -141,10 +145,12 @@
     <graphicData>
       <texPath>Wula/Weapon/WULA_MW_Breaker_Bar</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.35</drawSize>
     </graphicData>
-    <weaponTags>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <!-- <weaponTags>
       <li>Spear</li>
-    </weaponTags>
+    </weaponTags> -->
     <techLevel>Spacer</techLevel>
     <costStuffCount>50</costStuffCount>
     <statBases>
@@ -185,6 +191,7 @@
         <Crafting>7</Crafting>
       </skillRequirements>
       <displayPriority>450</displayPriority>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
     </recipeMaker>
   </ThingDef>
   <!-- 长枪 -->
@@ -252,6 +259,7 @@
         <Crafting>7</Crafting>
       </skillRequirements>
       <displayPriority>450</displayPriority>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
     </recipeMaker>
   </ThingDef>
   <!-- 链锯剑 -->
@@ -314,6 +322,7 @@
         <Crafting>7</Crafting>
       </skillRequirements>
       <displayPriority>450</displayPriority>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
     </recipeMaker>
   </ThingDef>
   <!-- 动力钉头锤 -->
@@ -365,6 +374,7 @@
         <Crafting>7</Crafting>
       </skillRequirements>
       <displayPriority>450</displayPriority>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
     </recipeMaker>
   </ThingDef>
 
@@ -397,6 +407,7 @@
         <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
       <researchPrerequisite>WULA_Synth_Psi_2_Technology</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
     </recipeMaker>
     <tools>
       <li>
@@ -489,6 +500,7 @@
         <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
       <researchPrerequisite>WULA_Synth_Psi_Technology</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
     </recipeMaker>
     <tools>
       <li>
@@ -571,6 +583,7 @@
         <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
       <researchPrerequisite>WULA_Synth_Psi_Technology</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
     </recipeMaker>
     <tools>
       <li>
@@ -660,6 +673,7 @@
         <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
       <researchPrerequisite>WULA_Synth_Psi_2_Technology</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
     </recipeMaker>
     <tools>
       <li>
@@ -746,6 +760,7 @@
         <Crafting>5</Crafting>
       </skillRequirements>
       <displayPriority>440</displayPriority>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
     </recipeMaker>
     <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
     <statBases>
@@ -836,6 +851,7 @@
         <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
       <researchPrerequisite>WULA_Synth_Weapon_2_Ranged_Technology</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
     </recipeMaker>
     <statBases>
       <WorkToMake>25000</WorkToMake>
@@ -899,6 +915,7 @@
         <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
       <researchPrerequisite>WULA_Synth_Weapon_2_Ranged_Technology</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
     </recipeMaker>
     <costList Inherit="False">
       <Steel>350</Steel>
@@ -947,6 +964,7 @@
         <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
       <researchPrerequisite>WULA_Synth_Weapon_3_Bomb_Technology</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
     </recipeMaker>
     <statBases>
       <WorkToMake>50000</WorkToMake>
@@ -1055,6 +1073,7 @@
         <li>WULA_War_Machine_Weapon_Productor</li>
       </recipeUsers>
       <researchPrerequisite>WULA_AI_Machine_Panzer_Technology</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
     </recipeMaker>
     <weaponTags>
       <li>Wula_AI_Heavy_Panzer_Turret</li>
@@ -1135,6 +1154,7 @@
         <li>WULA_War_Machine_Weapon_Productor</li>
       </recipeUsers>
       <researchPrerequisite>WULA_AI_Machine_Panzer_Technology</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
     </recipeMaker>
     <weaponTags>
       <li>Wula_AI_Heavy_Panzer_Turret</li>
@@ -1209,6 +1229,7 @@
         <li>WULA_War_Machine_Weapon_Productor</li>
       </recipeUsers>
       <researchPrerequisite>WULA_AI_Machine_Panzer_Technology</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
     </recipeMaker>
     <verbs>
       <li>
@@ -1283,6 +1304,7 @@
         <li>WULA_War_Machine_Weapon_Productor</li>
       </recipeUsers>
       <researchPrerequisite>WULA_AI_Machine_Panzer_Technology</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
     </recipeMaker>
     <weaponTags>
       <li>Wula_AI_Heavy_Panzer_Turret</li>
@@ -1384,6 +1406,7 @@
         <li>WULA_War_Machine_Weapon_Productor</li>
       </recipeUsers>
       <researchPrerequisite>WULA_Storm_Skitter_Technology</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
     </recipeMaker>
   </ThingDef>
   <ThingDef ParentName="BaseHumanMakeableGun">
@@ -1404,6 +1427,7 @@
         <li>WULA_War_Machine_Weapon_Productor</li>
       </recipeUsers>
       <researchPrerequisite>WULA_Storm_Skitter_Technology</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
     </recipeMaker>
     <costList Inherit="False">
       <Steel>350</Steel>
@@ -1460,6 +1484,183 @@
       <soundExplode>Explosion_Rocket</soundExplode>
       <armorPenetrationBase>0.75</armorPenetrationBase>
       <screenShakeFactor>0.1</screenShakeFactor>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>WULA_RW_Storm_Skitter_GL</defName>
+    <label>SEl-78"角砾岩"</label>
+    <description>由SMp-11"风暴"所持的自动榴弹炮，得益于风暴战甲庞大的身躯，这种重型武器可以跟随小队移动并向敌人释放铺天盖地的榴弹雨。</description>
+    <techLevel>Ultra</techLevel>
+    <!-- <techLevel>Spacer</techLevel> -->
+    <graphicData>
+      <texPath>Wula/Weapon/WULA_RW_Storm_Skitter_GL</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>2.75</drawSize>
+    </graphicData>
+    <uiIconScale>0.4</uiIconScale>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>WULA_War_Machine_Weapon_Productor</li>
+      </recipeUsers>
+      <researchPrerequisite>WULA_Storm_Skitter_Technology</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+    </recipeMaker>
+    <costList Inherit="False">
+      <Steel>350</Steel>
+      <Plasteel>200</Plasteel>
+      <ComponentSpacer>8</ComponentSpacer>
+    </costList>
+    <statBases>
+      <WorkToMake>40000</WorkToMake>
+      <Mass>150</Mass>
+      <AccuracyTouch>0.5</AccuracyTouch>
+      <AccuracyShort>0.5</AccuracyShort>
+      <AccuracyMedium>0.4</AccuracyMedium>
+      <AccuracyLong>0.3</AccuracyLong>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_WULA_RW_Storm_Skitter_GL</defaultProjectile>
+        <warmupTime>0.2</warmupTime>
+        <forcedMissRadius>1</forcedMissRadius>
+        <forcedMissRadiusClassicMortars>1</forcedMissRadiusClassicMortars>
+        <isMortar>true</isMortar>
+        <requireLineOfSight>false</requireLineOfSight>
+        <minRange>4</minRange>
+        <range>54</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Mortar_LaunchA</soundCast>
+        <muzzleFlashScale>12</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_WULA_RW_Storm_Skitter_GL</defName>
+    <label>角砾岩榴弹</label>
+    <graphicData>
+      <texPath>Wula/Projectile/WULA_Mortar_Shell</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>35</damageAmountBase>
+      <speed>35</speed>
+      <explosionRadius>3.5</explosionRadius>
+      <flyOverhead>true</flyOverhead>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+      <soundExplode>MortarBomb_Explode</soundExplode>
+      <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+      <soundAmbient>MortarRound_Ambient</soundAmbient>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>WULA_MW_Storm_Skitter_Lance</defName>
+    <label>CMl-67"铳枪"</label>
+    <description>SMp-11"风暴"所持的枪炮合一的武器，既可以在近战中刺穿对手，也可以从远距离上发射高精度炮弹打击敌军。</description>
+    <weaponTags>
+      <li>Spear</li>
+    </weaponTags>
+    <graphicData>
+      <texPath>Wula/Weapon/WULA_MW_Storm_Skitter_Lance</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>3.5</drawSize>
+    </graphicData>
+    <uiIconScale>0.4</uiIconScale>
+    <!-- <equippedAngleOffset>-65</equippedAngleOffset> -->
+    <techLevel>Spacer</techLevel>
+    <!-- <equippedAngleOffset>-25</equippedAngleOffset> -->
+    <costList Inherit="False">
+      <Steel>500</Steel>
+      <Plasteel>120</Plasteel>
+      <ComponentIndustrial>12</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <WorkToMake>50000</WorkToMake>
+      <Mass>150</Mass>
+      <AccuracyTouch>0.5</AccuracyTouch>
+      <AccuracyShort>0.5</AccuracyShort>
+      <AccuracyMedium>0.4</AccuracyMedium>
+      <AccuracyLong>0.3</AccuracyLong>
+      <RangedWeapon_Cooldown>0</RangedWeapon_Cooldown>
+    </statBases>
+    <tools>
+      <li>
+        <label>横扫</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>36</power>
+        <cooldownTime>2.2</cooldownTime>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>18</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>穿刺</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>45</power>
+        <armorPenetration>0.80</armorPenetration>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>WULA_War_Machine_Weapon_Productor</li>
+      </recipeUsers>
+      <researchPrerequisite>WULA_Storm_Skitter_Technology</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_WULA_MW_Storm_Skitter_Lance</defaultProjectile>
+        <warmupTime>2.25</warmupTime>
+        <minRange>3</minRange>
+        <range>68</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_TurretSniper</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>18</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_WULA_MW_Storm_Skitter_Lance</defName>
+    <label>铳枪穿甲弹</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <tickerType>Normal</tickerType>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <texPath>Wula/Projectile/WULA_Bullet_ChargeLanceShot_Red</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>3.4</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>300</damageAmountBase>
+      <speed>180</speed>
+      <explosionRadius>2.6</explosionRadius>
+      <arcHeightFactor>0.4</arcHeightFactor>
+      <soundExplode>Explosion_Rocket</soundExplode>
+      <armorPenetrationBase>1</armorPenetrationBase>
     </projectile>
   </ThingDef>
 </Defs>

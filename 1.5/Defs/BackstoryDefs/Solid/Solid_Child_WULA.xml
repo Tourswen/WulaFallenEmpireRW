@@ -6,7 +6,7 @@
     <slot>Childhood</slot>  
     <title>旧日遗物</title>  
     <titleShort>旧日遗物</titleShort>  
-    <description>[PAWN_nameDef] 是诞生于乌拉帝国大内战前的合成人，高度依赖上行链路系统与网络链接，在人工智能网络“演算圆环”崩溃时受到了大量冲击。</description>  
+    <description>[PAWN_nameDef] 是诞生于乌拉帝国的合成人。</description>  
     <skillGains>
       <Shooting>5</Shooting>
       <Melee>5</Melee>
@@ -23,23 +23,6 @@
     </skillGains>
     <spawnCategories>
       <li>Wula_Old_Synth_Backstory_Categories</li>
-    </spawnCategories>
-    <requiredWorkTags>None</requiredWorkTags>
-    <forcedHediffs>
-      <li>Wula_Synth</li>
-      <li>WULA_Addons_Antenna_Hediff_Base</li>
-      <li>MechlinkImplant</li>
-    </forcedHediffs>
-  </AlienRace.AlienBackstoryDef>
-  <AlienRace.AlienBackstoryDef>
-    <defName>WULA_Child_Backstory02</defName>  
-    <ignoreIllegalLabelCharacterConfigError>False</ignoreIllegalLabelCharacterConfigError>  
-    <slot>Childhood</slot>  
-    <title>新生代合成人</title>  
-    <titleShort>新生代</titleShort>  
-    <description>[PAWN_nameDef] 诞生于人工智能网络“演算圆环”崩溃后，软硬件未受到崩溃的影响，但是其储存空间内无任何技能数据包。</description>
-    <spawnCategories>
-      <li>Wula_New_Synth_Backstory_Categories</li>
     </spawnCategories>
     <requiredWorkTags>None</requiredWorkTags>
     <forcedHediffs>

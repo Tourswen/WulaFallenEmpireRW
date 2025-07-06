@@ -116,6 +116,57 @@
         <growthAges>
           <li>0</li>
         </growthAges>
+        <!-- 年龄工作效率等的覆盖 -->
+        <ageStatOverrides>
+          <WorkSpeedGlobal>
+            <useBiologicalYears>true</useBiologicalYears>
+            <curve>
+              <points>
+                <li>(0,1)</li>
+              </points>
+            </curve>
+          </WorkSpeedGlobal>
+          <ShootingAccuracyChildFactor MayRequire="Ludeon.RimWorld.Biotech">
+            <useBiologicalYears>true</useBiologicalYears>
+            <curve>
+              <points>
+                <li>(0,1)</li>
+              </points>
+            </curve>
+          </ShootingAccuracyChildFactor>
+          <MarketValue>
+            <useBiologicalYears>true</useBiologicalYears>
+            <curve>
+              <points>
+                <li>(0,1)</li>
+              </points>
+            </curve>
+          </MarketValue>
+          <MeleeHitChance>
+            <useBiologicalYears>true</useBiologicalYears>
+            <curve>
+              <points>
+                <li>(0,1)</li>
+              </points>
+            </curve>
+          </MeleeHitChance>
+          <AimingDelayFactor>
+            <useBiologicalYears>true</useBiologicalYears>
+            <curve>
+              <points>
+                <li>(0,1)</li>
+              </points>
+            </curve>
+          </AimingDelayFactor>
+          <ArrestSuccessChance>
+            <useBiologicalYears>true</useBiologicalYears>
+            <curve>
+              <points>
+                <li>(0, 1)</li>
+              </points>
+            </curve>
+          </ArrestSuccessChance>
+        </ageStatOverrides>
       </generalSettings>
       <!-- 图形 -->
 			<graphicPaths>
@@ -448,6 +499,57 @@
         <growthAges>
           <li>0</li>
         </growthAges>
+        <!-- 年龄工作效率等的覆盖 -->
+        <ageStatOverrides>
+          <WorkSpeedGlobal>
+            <useBiologicalYears>true</useBiologicalYears>
+            <curve>
+              <points>
+                <li>(0,1)</li>
+              </points>
+            </curve>
+          </WorkSpeedGlobal>
+          <ShootingAccuracyChildFactor MayRequire="Ludeon.RimWorld.Biotech">
+            <useBiologicalYears>true</useBiologicalYears>
+            <curve>
+              <points>
+                <li>(0,1)</li>
+              </points>
+            </curve>
+          </ShootingAccuracyChildFactor>
+          <MarketValue>
+            <useBiologicalYears>true</useBiologicalYears>
+            <curve>
+              <points>
+                <li>(0,1)</li>
+              </points>
+            </curve>
+          </MarketValue>
+          <MeleeHitChance>
+            <useBiologicalYears>true</useBiologicalYears>
+            <curve>
+              <points>
+                <li>(0,1)</li>
+              </points>
+            </curve>
+          </MeleeHitChance>
+          <AimingDelayFactor>
+            <useBiologicalYears>true</useBiologicalYears>
+            <curve>
+              <points>
+                <li>(0,1)</li>
+              </points>
+            </curve>
+          </AimingDelayFactor>
+          <ArrestSuccessChance>
+            <useBiologicalYears>true</useBiologicalYears>
+            <curve>
+              <points>
+                <li>(0, 1)</li>
+              </points>
+            </curve>
+          </ArrestSuccessChance>
+        </ageStatOverrides>
       </generalSettings>
       <!-- 图形 -->
 			<graphicPaths>
@@ -661,7 +763,7 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>22</power>
+        <power>14</power>
         <cooldownTime>2.9</cooldownTime>
         <linkedBodyPartsGroup>WULA_Panzer_Core_Bodypart</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
@@ -736,6 +838,57 @@
         <growthAges>
           <li>0</li>
         </growthAges>
+        <!-- 年龄工作效率等的覆盖 -->
+        <ageStatOverrides>
+          <WorkSpeedGlobal>
+            <useBiologicalYears>true</useBiologicalYears>
+            <curve>
+              <points>
+                <li>(0,1)</li>
+              </points>
+            </curve>
+          </WorkSpeedGlobal>
+          <ShootingAccuracyChildFactor MayRequire="Ludeon.RimWorld.Biotech">
+            <useBiologicalYears>true</useBiologicalYears>
+            <curve>
+              <points>
+                <li>(0,1)</li>
+              </points>
+            </curve>
+          </ShootingAccuracyChildFactor>
+          <MarketValue>
+            <useBiologicalYears>true</useBiologicalYears>
+            <curve>
+              <points>
+                <li>(0,1)</li>
+              </points>
+            </curve>
+          </MarketValue>
+          <MeleeHitChance>
+            <useBiologicalYears>true</useBiologicalYears>
+            <curve>
+              <points>
+                <li>(0,1)</li>
+              </points>
+            </curve>
+          </MeleeHitChance>
+          <AimingDelayFactor>
+            <useBiologicalYears>true</useBiologicalYears>
+            <curve>
+              <points>
+                <li>(0,1)</li>
+              </points>
+            </curve>
+          </AimingDelayFactor>
+          <ArrestSuccessChance>
+            <useBiologicalYears>true</useBiologicalYears>
+            <curve>
+              <points>
+                <li>(0, 1)</li>
+              </points>
+            </curve>
+          </ArrestSuccessChance>
+        </ageStatOverrides>
       </generalSettings>
       <!-- 图形 -->
 			<graphicPaths>
@@ -778,12 +931,13 @@
         <weaponList>
           <li>WULA_RW_Storm_Skitter_AR</li>
           <li>WULA_MW_Storm_Skitter_Glaive</li>
+          <li>WULA_RW_Storm_Skitter_GL</li>
+          <li>WULA_MW_Storm_Skitter_Lance</li>
         </weaponList>
         <!-- 可以穿戴的衣服 -->
         <apparelList>
-          <!-- <li>WULA_SMp38_Shield</li>
-          <li>WULA_SMp38_Armor</li>
-          <li>WULA_SMp38_Engine</li> -->
+          <li>WULA_SMp11_Shield</li>
+          <li>WULA_SMp11_Armor</li>
         </apparelList>
         <onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel>
         <onlyUseRaceRestrictedWeapons>true</onlyUseRaceRestrictedWeapons>
@@ -960,14 +1114,25 @@
 
     <tools>
       <li>
-        <label>碾压</label>
-        <labelNoLocation>碾压</labelNoLocation>
+        <label>肘击</label>
+        <labelNoLocation>肘击</labelNoLocation>
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>22</power>
-        <cooldownTime>2.9</cooldownTime>
-        <linkedBodyPartsGroup>WULA_Panzer_Core_Bodypart</linkedBodyPartsGroup>
+        <power>15</power>
+        <cooldownTime>1.75</cooldownTime>
+        <linkedBodyPartsGroup>Arm</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+      </li>
+      <li>
+        <label>拍击</label>
+        <labelNoLocation>拍击</labelNoLocation>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>Hand</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
       </li>
     </tools>
@@ -1073,10 +1238,10 @@
     <label>CAt-42"烈焰猫猫"</label>
     <description>乌拉帝国的一种小型机械体，只能执行救火、搬运和清扫任务，但是相比起基础型号多配备了一个燃烧瓶投掷物，可以点燃靠近阵线的敌军。</description>
   </ThingDef>
-  <AlienRace.ThingDef_AlienRace ParentName="Mech_WULA_Cat_Soldier">
+  <ThingDef ParentName="Mech_WULA_Cat_Soldier">
     <defName>Mech_WULA_Cat_Constructor</defName>
     <label>CAt-86"土木猫猫"</label>
-    <description>乌拉帝国的一种小型机械体，只能执行建造和开采任务，不仅可以建造特殊的乌拉帝国堡垒结构，也可以跳起来用手上的HAm-1"装修锤"锤烂敌人的膝盖。</description>
+    <description>乌拉帝国的一种小型机械体，只能执行建造和开采任务，可以跳起来用手上的HAm-1"装修锤"锤烂敌人的膝盖。</description>
     <uiIconPath>Wula/Things/WULA_Constructor_Cat/WULA_Cat_Thin_south</uiIconPath>
     <race>
       <mechEnabledWorkTypes Inherit="False">
@@ -1084,12 +1249,5 @@
         <li>Construction</li>
       </mechEnabledWorkTypes>
     </race>
-    <alienRace>
-      <raceRestriction>
-        <buildingList>
-          <li>WulaWall</li>
-        </buildingList>
-      </raceRestriction>
-    </alienRace>
-  </AlienRace.ThingDef_AlienRace>
+  </ThingDef>
 </Defs>

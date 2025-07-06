@@ -238,7 +238,7 @@
   <RecipeDef ParentName="LightMechanoidRecipe">
     <defName>WULA_Build_Mech_Cat</defName>
     <label>建造CAt-11"猫猫"</label>
-    <description>建造一台CAt-11"猫猫"辅助机器人，可以执行包括搬运、挖矿、建造、烹饪、种植收割、清理、急救和灭火一类的简单工作。</description>
+    <description>建造一台CAt-11"猫猫"辅助机器人，可以执行包括搬运、烹饪、种植收割、清理、急救和灭火一类的简单工作。</description>
     <ingredients Inherit="False">
       <li>
         <filter>
@@ -262,6 +262,36 @@
     </products>
     <descriptionHyperlinks>
       <ThingDef>Mech_WULA_Cat</ThingDef>
+    </descriptionHyperlinks>
+    <researchPrerequisite>WULA_Machine_Productor_Technology</researchPrerequisite>
+  </RecipeDef>
+  <RecipeDef ParentName="LightMechanoidRecipe">
+    <defName>WULA_Build_Mech_Cat_Constructor</defName>
+    <label>建造CAt-86"土木猫猫"</label>
+    <description>建造一台CAt-86"土木猫猫"辅助机器人，允许执行挖矿和建造的工作，并且拥有一把可以砸碎敌人膝盖的锤子。</description>
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <products>
+      <Mech_WULA_Cat_Constructor>1</Mech_WULA_Cat_Constructor>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_WULA_Cat_Constructor</ThingDef>
     </descriptionHyperlinks>
     <researchPrerequisite>WULA_Machine_Productor_Technology</researchPrerequisite>
   </RecipeDef>
