@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+  <!-- 服务器 -->
   <ThingDef ParentName="BenchBase">
     <defName>WULA_Synth_Server</defName>
     <label>乌拉帝国服务器系统</label>
@@ -49,7 +50,7 @@
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>300</basePowerConsumption>
+        <basePowerConsumption>100</basePowerConsumption>
       </li>
     </comps>
     <placeWorkers>
@@ -60,7 +61,7 @@
     </building>
   </ThingDef>
 
-  <!-- 能源核心制造机 -->
+  <!-- 制造机 -->
   <ThingDef ParentName="BenchBase">
     <defName>WULA_Cube_Productor_BIO</defName>
     <label>乌拉帝国编织体（生物能）</label>
@@ -201,6 +202,7 @@
     </building>
   </ThingDef>
 
+  <!-- 床 -->
   <ThingDef ParentName="BasicBedBase">
     <defName>WULA_Charging_Station_Synth</defName>
     <label>合成人修复站</label>
@@ -262,7 +264,7 @@
     </comps>
   </ThingDef>
   
-  <!-- 大型生产器 -->
+  <!-- 机械工厂 -->
   <ThingDef ParentName="BuildingBase">
     <defName>WULA_Large_Mechine_proudctor</defName>
     <label>乌拉帝国机械工厂</label>

@@ -174,8 +174,8 @@
 
   <RecipeDef ParentName="LightMechanoidRecipe">
     <defName>WULA_Build_Wula_Synth</defName>
-    <label>建造Ura-00"机械乌拉"</label>
-    <description>建造一台Ura-00"机械乌拉"合成人，是乌拉帝国合成人殖民地的主体种族，作为机械体的同时拥有复杂拟真的模拟情感。\n\n以此方法建造的合成人被称为新生代合成人，它们在出厂时只会设置人格，不会拥有任何技能等级，需要通过乌拉帝国数据库下载相关技能！</description>
+    <label>建造URa-00"机械乌拉"</label>
+    <description>建造一台URa-00"机械乌拉"合成人，是乌拉帝国合成人殖民地的主体种族，作为机械体的同时拥有复杂拟真的模拟情感。\n\n以此方法建造的合成人被称为新生代合成人，它们在出厂时只会设置人格，不会拥有任何技能等级，需要通过乌拉帝国数据库下载相关技能！</description>
     <ingredients Inherit="False">
       <li>
         <filter>

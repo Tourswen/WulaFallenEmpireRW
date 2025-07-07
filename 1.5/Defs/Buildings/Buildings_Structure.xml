@@ -31,13 +31,13 @@
       <MarketValue>2</MarketValue>
       <Beauty>1</Beauty>
       <MaxHitPoints>10000</MaxHitPoints>
-      <WorkToBuild>500</WorkToBuild>
+      <WorkToBuild>2500</WorkToBuild>
       <Flammability>0</Flammability>
       <MeditationFocusStrength>0.22</MeditationFocusStrength>
       <Cleanliness>0.1</Cleanliness>
     </statBases>
     <costList>
-      <Steel>1</Steel>
+      <Steel>10</Steel>
     </costList>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <filthLeaving>Filth_RubbleBuilding</filthLeaving>
@@ -67,7 +67,7 @@
       <ai_chillDestination>false</ai_chillDestination>
       <supportsWallAttachments>true</supportsWallAttachments>
       <blueprintGraphicData>
-        <texPath>Wula/Building/Linked/SRAWall_Blueprint</texPath>
+        <texPath>Wula/Building/Linked/WULA_Fortress_Wall_Blueprint</texPath>
       </blueprintGraphicData>
       <relatedBuildCommands>
         <li>Door</li>
@@ -97,5 +97,60 @@
         <multiplier>0.01</multiplier>
       </li>
     </damageMultipliers>
+  </ThingDef>
+
+  <ThingDef ParentName="DoorBase">
+    <defName>WulaDoor</defName>
+    <label>乌拉帝国大门</label>
+    <description>乌拉帝国堡垒的大门，相当厚实，能够抵御大量爆炸和震荡伤害。</description>
+    <thingClass>Building_MultiTileDoor</thingClass>
+    <statBases>
+      <WorkToBuild>15000</WorkToBuild>
+      <MaxHitPoints>15000</MaxHitPoints>
+      <Beauty>10</Beauty>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Building/OrnateDoor/OrnateDoor2x1_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/OrnateDoor/OrnateDoor_MenuIcon_south</uiIconPath>
+    <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+    <size>(2, 1)</size>
+    <rotatable>true</rotatable>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <costStuffCount>75</costStuffCount>
+    <costList>
+      <Steel>50</Steel>
+    </costList>
+    <building>
+      <blueprintClass>Blueprint_Build</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>Things/Building/OrnateDoor/OrnateDoor_MenuIcon</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <shaderType>EdgeDetect</shaderType>
+        <drawSize>(2.6, 3.1)</drawSize>
+      </blueprintGraphicData>
+      <doorTopGraphic>
+        <texPath>Things/Building/OrnateDoor/OrnateDoor2x1_Top</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(3.1, 2.3)</drawSize>
+      </doorTopGraphic>
+      <doorSupportGraphic>
+        <texPath>Things/Building/OrnateDoor/OrnateDoor2x1_Support</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(3.1, 2.3)</drawSize>
+      </doorSupportGraphic>
+    </building>
+    <researchPrerequisites>
+      <li>ComplexFurniture</li>
+    </researchPrerequisites>
+    <designationHotKey>Misc3</designationHotKey>
+    <placeWorkers>
+      <li>PlaceWorker_MultiCellDoor</li>
+    </placeWorkers>
   </ThingDef>
 </Defs>
