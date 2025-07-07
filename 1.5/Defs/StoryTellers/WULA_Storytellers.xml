@@ -4,8 +4,8 @@
 	<defName>WULA_Anisia</defName>
 	<label>URa-1138「艾妮西娅」</label>
 	<description>一位诞生于乌拉帝国黄金时代的合成人，是黄金时代禁忌科技的守密者。她在边缘世界一带强制唤醒了大量的旧时代乌拉帝国合成人，无人知晓她真正的目的。\n\n艾妮西娅喜欢大场面，因此她不会安排任何小型袭击，而是安排比其他叙事者所安排的大型袭击更加强大的袭击。不过，在两次袭击间她将安排充足的时间让殖民地进行发展，并让殖民者得到放松以充分消化战利品和修补战线。</description>
-	<portraitLarge>SRA/Storyteller/SRA_Rocivia</portraitLarge>
-	<portraitTiny>SRA/Storyteller/SRA_Rocivia_TINY</portraitTiny>
+	<portraitLarge>Wula/Storyteller/WULA_Anisia</portraitLarge>
+	<portraitTiny>Wula/Storyteller/WULA_Anisia_TINY</portraitTiny>
   <listOrder>20</listOrder>
     <comps>
       <!-- Intro -->

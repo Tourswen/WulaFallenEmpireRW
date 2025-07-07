@@ -414,6 +414,9 @@
           <minAge>0</minAge>
         </li>
       </lifeStageAges>
+      <butcherProducts>
+        <Steel>30</Steel>
+      </butcherProducts>
     </race>
 
     <Recipes>

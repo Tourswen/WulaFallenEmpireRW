@@ -86,9 +86,7 @@
     </statBases>
     <equippedStatOffsets>
       <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
-      <ResearchSpeedFactor>0.2</ResearchSpeedFactor>
-      <EntityStudyRate>0.25</EntityStudyRate>
-      <SocialImpact>0.1</SocialImpact>
+      <WorkSpeedGlobal>0.35</WorkSpeedGlobal>
     </equippedStatOffsets>
     <recipeMaker>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -209,7 +207,7 @@
     <apparel>
       <bodyPartGroups>
 				<li>Torso</li>
-				<!-- <li>Shoulders</li> -->
+				<li>Shoulders</li>
 				<li>Arms</li>
 				<li>Legs</li>
       </bodyPartGroups>
@@ -299,7 +297,7 @@
     <apparel>
       <bodyPartGroups>
 				<li>Torso</li>
-				<!-- <li>Shoulders</li> -->
+				<li>Shoulders</li>
 				<li>Arms</li>
 				<li>Legs</li>
       </bodyPartGroups>
@@ -372,6 +370,49 @@
     <thingSetMakerTags>
       <li>RewardStandardHighFreq</li>
     </thingSetMakerTags>
+  </ThingDef>
+  <ThingDef ParentName="WULA_ApparelCivilBase">
+		<defName>WULA_Qipao</defName>
+		<label>乌拉帝国旗袍</label>
+		<description>乌拉帝国中较高等的公民所着服装，修身而不失典雅之姿。</description>
+    <graphicData>
+      <texPath>Wula/Apparel/WULA_Qipao</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <apparel>
+      <bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+      </bodyPartGroups>
+      <layers>
+        <!-- <li>OnSkin</li> -->
+        <li>Middle</li>
+      </layers>
+      <wornGraphicPath>Wula/Apparel/WULA_Qipao</wornGraphicPath>
+    </apparel>
+    <equippedStatOffsets>
+			<ResearchSpeedFactor>0.1</ResearchSpeedFactor>
+      <EntityStudyRate>0.1</EntityStudyRate>
+      <SocialImpact>0.1</SocialImpact>
+    </equippedStatOffsets>
+    <costStuffCount>100</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <recipeMaker>
+      <researchPrerequisite>WULA_Synth_Clothes_Technology</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_BIO</li>
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+    </recipeMaker>
   </ThingDef>
 
   <!-- 内衬 -->
@@ -563,7 +604,7 @@
       <!-- <EnergyShieldEnergyMax>1.5</EnergyShieldEnergyMax> -->
     </statBases>
     <equippedStatOffsets>
-      <WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
+      <WorkSpeedGlobal>-0.05</WorkSpeedGlobal>
       <StaggerDurationFactor>-0.5</StaggerDurationFactor>
 			<CarryingCapacity>60</CarryingCapacity>
     </equippedStatOffsets>
@@ -616,7 +657,7 @@
   <ThingDef ParentName="HatMakeableBase">
     <defName>WULA_Assault_Troop_Helmet</defName>
     <label>乌拉帝国突击队头盔</label>
-    <description>与乌拉帝国突击队装甲配套的头盔，能够辅助穿戴者的瞄准。</description>
+    <description>与乌拉帝国突击队装甲配套的头盔，能够辅助穿戴者的瞄准，但是会导致使用者头部重心向前，十分阻碍日常工作。</description>
     <techLevel>Spacer</techLevel>
     <thingCategories>
       <li>HeadgearNoble</li>
@@ -720,11 +761,11 @@
       <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
       <ArmorRating_Heat>2.0</ArmorRating_Heat>
       <EquipDelay>35</EquipDelay>
-      <EnergyShieldEnergyMax>0.25</EnergyShieldEnergyMax>
+      <EnergyShieldEnergyMax>0.5</EnergyShieldEnergyMax>
     </statBases>
     <equippedStatOffsets>
 			<MoveSpeed>-0.25</MoveSpeed>
-      <WorkSpeedGlobal>-0.5</WorkSpeedGlobal>
+      <WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
       <IncomingDamageFactor>-0.25</IncomingDamageFactor>
       <StaggerDurationFactor>-2</StaggerDurationFactor>
 			<CarryingCapacity>60</CarryingCapacity>
@@ -845,7 +886,6 @@
       <EquipDelay>15</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-      <WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
       <IncomingDamageFactor>-0.1</IncomingDamageFactor>
       <AimingDelayFactor>-0.25</AimingDelayFactor>
       <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
@@ -883,6 +923,149 @@
       <li>RewardStandardHighFreq</li>
     </thingSetMakerTags>
 		
+  </ThingDef>
+  <ThingDef ParentName="ArmorMachineableBase">
+    <defName>WULA_Heavy_Infantry_PowerArmor</defName>
+    <label>乌拉帝国重装装甲</label>
+    <description>乌拉帝国重步兵所穿戴的动力甲，在乌拉帝国常规装备库中属于最重型那一档——行动缓慢，防御力强大，拥有厚重的立场盾，背挂两门ILm-60"铬铁"迫击炮用于轰炸坚固阵地。</description>
+    <techLevel>Spacer</techLevel>
+    <tickerType>Normal</tickerType>
+    <thingCategories>
+      <li>ApparelNoble</li>
+    </thingCategories>
+    <recipeMaker>
+      <displayPriority>105</displayPriority>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>WULA_Synth_Armor_2_Technology</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <useIngredientsForColor>false</useIngredientsForColor>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Wula/Apparel/WULA_Heavy_Infantry_PowerArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>50000</WorkToMake>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <Mass>20</Mass>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>1.85</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.85</ArmorRating_Blunt>
+      <ArmorRating_Heat>2.0</ArmorRating_Heat>
+      <EquipDelay>40</EquipDelay>
+      <!-- <EnergyShieldEnergyMax>0.25</EnergyShieldEnergyMax> -->
+    </statBases>
+    <equippedStatOffsets>
+			<MoveSpeed>-0.25</MoveSpeed>
+      <WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
+      <IncomingDamageFactor>-0.25</IncomingDamageFactor>
+      <StaggerDurationFactor>-2</StaggerDurationFactor>
+			<CarryingCapacity>60</CarryingCapacity>
+			<MoveSpeed>-2</MoveSpeed>
+    </equippedStatOffsets>
+    <costStuffCount>350</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList Inherit="False">
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <apparel>
+      <tags>
+        <li>Wula_Apparel</li>
+      </tags>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Wula/Apparel/WULA_Heavy_Infantry_PowerArmor</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+      <soundWear>Wear_PowerArmor</soundWear>
+      <soundRemove>Remove_PowerArmor</soundRemove>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+    </apparel>
+    <thingClass>Apparel</thingClass>
+    <comps>
+      <li Class="CompProperties_Biocodable"/>
+      <li Class="CompProperties_ApparelReloadable">
+        <maxCharges>30</maxCharges>
+        <ammoDef>Steel</ammoDef>
+        <ammoCountPerCharge>2</ammoCountPerCharge>
+        <baseReloadTicks>360</baseReloadTicks>
+        <soundReload>Standard_Reload</soundReload>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>炮弹</chargeNoun>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+      </li>
+      <li Class="CompProperties_Shield">
+        <startingTicksToReset>3600</startingTicksToReset><!-- 1 mins -->
+        <minDrawSize>2.5</minDrawSize>
+        <maxDrawSize>2.8</maxDrawSize>
+        <energyLossPerDamage>0.01</energyLossPerDamage>
+        <energyOnReset>4.0</energyOnReset>
+        <blocksRangedWeapons>false</blocksRangedWeapons>
+      </li>
+    </comps>
+    <verbs>
+      <li>
+        <verbClass>Verb_LaunchProjectileStaticPsychic</verbClass>
+        <label>ILm-60"铬铁"迫击炮</label>
+        <defaultProjectile>Bullet_WULA_Heavy_Infantry_PowerArmor</defaultProjectile>
+        <warmupTime>1</warmupTime>
+        <range>500</range>
+        <minRange>8</minRange>
+        <onlyManualCast>true</onlyManualCast>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetable>true</targetable>
+        <violent>true</violent>
+        <targetParams>
+          <canTargetPawns>true</canTargetPawns>
+          <canTargetBuildings>true</canTargetBuildings>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <soundCast>Mortar_LaunchA</soundCast>
+        <canGoWild>false</canGoWild>
+        <explosionRadiusRingColor>(0.8, 0.8, 0.4, 1)</explosionRadiusRingColor><!-- Keep in sync with PlaceWorker_GlowRadius.RingColor -->
+      </li>
+    </verbs>
+    <thingSetMakerTags>
+      <li>RewardStandardHighFreq</li>
+    </thingSetMakerTags>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_WULA_Heavy_Infantry_PowerArmor</defName>
+    <label>铬铁迫击炮弹</label>
+    <graphicData>
+      <texPath>Wula/Projectile/WULA_Mortar_Shell</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>25</damageAmountBase>
+      <speed>45</speed>
+      <explosionRadius>3.5</explosionRadius>
+      <flyOverhead>true</flyOverhead>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+      <soundExplode>MortarBomb_Explode</soundExplode>
+      <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+      <soundAmbient>MortarRound_Ambient</soundAmbient>
+    </projectile>
   </ThingDef>
 
   <!-- 盾牌 -->

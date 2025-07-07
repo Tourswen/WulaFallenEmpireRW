@@ -1328,6 +1328,7 @@
         <targetParams>
           <canTargetLocations>true</canTargetLocations>
         </targetParams>
+        <explosionRadiusRingColor>(0.8, 0.8, 0.4, 1)</explosionRadiusRingColor><!-- Keep in sync with PlaceWorker_GlowRadius.RingColor -->
       </li>
     </verbs>
   </ThingDef>
