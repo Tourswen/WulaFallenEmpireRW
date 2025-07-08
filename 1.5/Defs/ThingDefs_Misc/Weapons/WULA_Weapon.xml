@@ -8,6 +8,7 @@
     <graphicData>
       <texPath>Wula/Weapon/WULA_MW_Mace</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
       <drawSize>0.8</drawSize>
     </graphicData>
     <uiIconScale>1.1</uiIconScale>
@@ -113,6 +114,7 @@
     <graphicData>
       <texPath>Wula/Weapon/WULA_MW_Constructor_Hammer</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
     </graphicData>
     <equippedAngleOffset>-65</equippedAngleOffset>
     <techLevel>Spacer</techLevel>
@@ -144,6 +146,7 @@
     <description>一种沉重的破墙设备，通常由装备外骨骼的乌拉帝国士兵携带，可以通过加压挥出势大力沉的一击，洞穿对手或墙体。</description>
     <graphicData>
       <texPath>Wula/Weapon/WULA_MW_Breaker_Bar</texPath>
+      <shaderType>CutoutComplex</shaderType>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1.35</drawSize>
     </graphicData>
@@ -169,7 +172,7 @@
       <li>
         <label>加压槌头</label>
         <capacities>
-          <li>Poke</li>
+          <li>Demolish</li>
         </capacities>
         <power>150</power>
         <cooldownTime>5</cooldownTime>
@@ -205,6 +208,7 @@
     <graphicData>
       <texPath>Wula/Weapon/WULA_MW_Lance</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
       <drawSize>2</drawSize>
     </graphicData>
     <!-- <equippedAngleOffset>-65</equippedAngleOffset> -->
@@ -270,6 +274,7 @@
     <graphicData>
       <texPath>Wula/Weapon/WULA_MW_ChainSword</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
     </graphicData>
     <!-- <equippedAngleOffset>-65</equippedAngleOffset> -->
     <techLevel>Spacer</techLevel>
@@ -333,6 +338,7 @@
     <graphicData>
       <texPath>Wula/Weapon/WULA_MW_Charge_Mace</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
     </graphicData>
     <equippedAngleOffset>-65</equippedAngleOffset>
     <techLevel>Spacer</techLevel>
@@ -1119,6 +1125,7 @@
       <damageDef>Bomb</damageDef>
       <explosionRadius>2.5</explosionRadius>
       <speed>38</speed>
+      <armorPenetrationBase>0.35</armorPenetrationBase>
       <damageAmountBase>50</damageAmountBase>
       <arcHeightFactor>0.4</arcHeightFactor>
       <soundExplode>Explosion_Rocket</soundExplode>
@@ -1314,15 +1321,15 @@
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_WULA_WM_Panzer_Mortar</defaultProjectile>
-        <warmupTime>0.2</warmupTime>
-        <forcedMissRadius>1</forcedMissRadius>
+        <warmupTime>0.75</warmupTime>
+        <forcedMissRadius>3</forcedMissRadius>
         <forcedMissRadiusClassicMortars>1</forcedMissRadiusClassicMortars>
         <isMortar>true</isMortar>
         <requireLineOfSight>false</requireLineOfSight>
         <minRange>8</minRange>
         <range>500</range>
-        <burstShotCount>3</burstShotCount>
-        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <!-- <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots> -->
         <soundCast>Mortar_LaunchA</soundCast>
         <muzzleFlashScale>12</muzzleFlashScale>
         <targetParams>
@@ -1345,7 +1352,8 @@
       <damageDef>Bomb</damageDef>
       <damageAmountBase>30</damageAmountBase>
       <speed>25</speed>
-      <explosionRadius>4.9</explosionRadius>
+      <explosionRadius>4.2</explosionRadius>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
       <flyOverhead>true</flyOverhead>
       <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
       <soundExplode>MortarBomb_Explode</soundExplode>
@@ -1357,13 +1365,14 @@
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
     <defName>WULA_MW_Storm_Skitter_Glaive</defName>
     <label>CMl-99"剑冢"</label>
-    <description>由SMp-11"风暴"所持的大型双头刀，功防兼备，可以劈开坚固的装甲。</description>
+    <description>由SMp-11"风暴"所持的大型双头刀，攻防兼备，可以劈开坚固的装甲。</description>
     <weaponTags>
       <li>Spear</li>
     </weaponTags>
     <graphicData>
       <texPath>Wula/Weapon/WULA_MW_Storm_Skitter_Glaive</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
       <drawSize>3.5</drawSize>
     </graphicData>
     <uiIconScale>0.4</uiIconScale>
@@ -1545,7 +1554,7 @@
     <defName>Bullet_WULA_RW_Storm_Skitter_GL</defName>
     <label>角砾岩榴弹</label>
     <graphicData>
-      <texPath>Wula/Projectile/WULA_Mortar_Shell</texPath>
+      <texPath>Wula/Projectile/WULA_Shrapnel</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
@@ -1555,6 +1564,7 @@
       <damageAmountBase>35</damageAmountBase>
       <speed>35</speed>
       <explosionRadius>3.5</explosionRadius>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
       <flyOverhead>true</flyOverhead>
       <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
       <soundExplode>MortarBomb_Explode</soundExplode>
@@ -1572,6 +1582,7 @@
     <graphicData>
       <texPath>Wula/Weapon/WULA_MW_Storm_Skitter_Lance</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
       <drawSize>3.5</drawSize>
     </graphicData>
     <uiIconScale>0.4</uiIconScale>

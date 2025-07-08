@@ -268,7 +268,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>WULA_Large_Mechine_proudctor</defName>
     <label>乌拉帝国机械工厂</label>
-    <description>乌拉帝国所建造的一种机械工厂，能构建各种乌拉帝国机械体，包括机械乌拉。</description>
+    <description>乌拉帝国所建造的一种机械工厂，能构建各种乌拉帝国机械体，包括机械乌拉。该设施仅限机械乌拉种族操作。</description>
     <thingClass>Building_MechGestator</thingClass>
     <containedPawnsSelectable>true</containedPawnsSelectable>
     <tickerType>Normal</tickerType>

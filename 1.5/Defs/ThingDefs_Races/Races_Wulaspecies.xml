@@ -303,6 +303,10 @@
         </blackApparelList>
         <!-- 生育能力 -->
         <canReproduce>false</canReproduce>
+        <!-- 允许的工作台类型 -->
+        <workGiverList>
+          <li>WULA_Large_Mechine_proudctor_Bills</li>
+        </workGiverList>
       </raceRestriction>
       <!-- 想法设置 -->
       <thoughtSettings>

@@ -19,16 +19,16 @@
     </genericWounds>
     <bandagedWounds>
       <li>
-        <texture>Things/Pawn/Wounds/BandagedA</texture>
+        <texture>Wula/Things/WulaSpecies/Wounds/WULA_Species_Wound_None</texture>
       </li>
-      <li>
+      <!-- <li>
         <texture>Things/Pawn/Wounds/BandagedB</texture>
       </li>
       <li>
         <texture>Things/Pawn/Wounds/BandagedC</texture>
-      </li>
+      </li> -->
     </bandagedWounds>
-    <hediffWounds>
+    <!-- <hediffWounds>
       <li MayRequire="Ludeon.RimWorld.Ideology">
         <hediff>Scarification</hediff>
         <wounds>
@@ -92,6 +92,6 @@
           </li>
         </wounds>
       </li>
-    </hediffWounds>
+    </hediffWounds> -->
   </FleshTypeDef>
 </Defs>
