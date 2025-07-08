@@ -753,7 +753,7 @@
       <WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
       <IncomingDamageFactor>-0.25</IncomingDamageFactor>
       <StaggerDurationFactor>-2</StaggerDurationFactor>
-			<CarryingCapacity>60</CarryingCapacity>
+			<CarryingCapacity>120</CarryingCapacity>
     </equippedStatOffsets>
     <costStuffCount>250</costStuffCount>
     <costList Inherit="False">
@@ -859,7 +859,7 @@
   <ThingDef ParentName="WULA_ApparelArmorBase">
     <defName>WULA_Heavy_Infantry_PowerArmor</defName>
     <label>乌拉帝国重装装甲</label>
-    <description>乌拉帝国重步兵所穿戴的动力甲，在乌拉帝国常规装备库中属于最重型那一档——行动缓慢，防御力强大，拥有厚重的立场盾，背挂两门ILm-60"铬铁"迫击炮用于轰炸坚固阵地。</description>
+    <description>乌拉帝国重步兵所穿戴的动力甲，在乌拉帝国常规装备库中属于最重型那一档——行动缓慢，防御力强大，拥有厚重的立场盾，自带额外的动力拳武器，并且背挂两门ILm-60"铬铁"迫击炮用于轰炸敌军。</description>
     <thingCategories>
       <li>ApparelNoble</li>
     </thingCategories>
@@ -887,7 +887,7 @@
       <WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
       <IncomingDamageFactor>-0.25</IncomingDamageFactor>
       <StaggerDurationFactor>-2</StaggerDurationFactor>
-			<CarryingCapacity>60</CarryingCapacity>
+			<CarryingCapacity>250</CarryingCapacity>
 			<MoveSpeed>-2</MoveSpeed>
     </equippedStatOffsets>
     <costStuffCount>350</costStuffCount>
@@ -919,6 +919,10 @@
         <energyLossPerDamage>0.01</energyLossPerDamage>
         <energyOnReset>4.0</energyOnReset>
         <blocksRangedWeapons>false</blocksRangedWeapons>
+      </li>
+      <li Class="CompProperties_CauseHediff_Apparel">
+        <hediff>WULA_Heavy_Infantry_PowerArmor_PowerFist</hediff>
+        <!-- <part>Hand</part> -->
       </li>
     </comps>
     <verbs>

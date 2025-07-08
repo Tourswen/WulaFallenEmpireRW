@@ -299,6 +299,8 @@
         <armorPenetration>0.5</armorPenetration>
         <power>18</power> <!-- 2.5x natural fist -->
         <cooldownTime>1</cooldownTime>
+        <soundMeleeHit>Pawn_Melee_PowerClaw_Hit</soundMeleeHit>
+        <soundMeleeMiss>Pawn_Melee_PowerClaw_Miss</soundMeleeMiss>
       </li>
       <li>
         <label>柄击</label>
