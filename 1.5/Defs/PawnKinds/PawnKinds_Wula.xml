@@ -110,10 +110,10 @@
     <minGenerationAge MayRequire="Ludeon.RimWorld.Biotech">200</minGenerationAge>
     <combatPower>600</combatPower>
     
-    <!-- <weaponTags>
-      <li>Wula_AI_Heavy_Panzer_Rocket</li>
+    <weaponTags>
+      <li>WULA_AI_Heavy_Panzer_Init_Weapon</li>
     </weaponTags>
-    <weaponMoney>99999~99999</weaponMoney> -->
+    <weaponMoney>99999~99999</weaponMoney>
 
     <backstoryFiltersOverride>
       <li>
@@ -145,10 +145,10 @@
     <combatPower>600</combatPower>
     <allowInMechClusters>False</allowInMechClusters>
     
-    <!-- <weaponTags>
-      <li>Wula_AI_Heavy_Panzer_Rocket</li>
+    <weaponTags>
+      <li>WULA_Storm_Skitter_Init_Weapon</li>
     </weaponTags>
-    <weaponMoney>99999~99999</weaponMoney> -->
+    <weaponMoney>99999~99999</weaponMoney>
 
     <backstoryFiltersOverride>
       <li>

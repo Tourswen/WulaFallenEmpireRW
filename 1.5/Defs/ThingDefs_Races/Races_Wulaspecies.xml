@@ -303,6 +303,15 @@
         </blackApparelList>
         <!-- 生育能力 -->
         <canReproduce>false</canReproduce>
+        <!-- 允许的特质类型 -->
+        <traitList>
+          <li>WULA_Trait_Knight</li>
+          <li>WULA_Trait_Legal_Officer</li>
+          <li>WULA_Trait_Sculptor</li>
+          <li>WULA_Trait_Diplomat</li>
+          <li>WULA_Trait_Nun</li>
+          <li>WULA_Trait_Broken_Personality</li>
+        </traitList>
         <!-- 允许的工作台类型 -->
         <workGiverList>
           <li>WULA_Large_Mechine_proudctor_Bills</li>
@@ -608,6 +617,10 @@
           <li>WULA_SMp38_Armor</li>
           <li>WULA_SMp38_Engine</li>
         </apparelList>
+        <!-- 允许的特质类型 -->
+        <traitList>
+          <li>WULA_AI_War_Machine</li>
+        </traitList>
         <onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel>
         <onlyUseRaceRestrictedWeapons>true</onlyUseRaceRestrictedWeapons>
         <onlyBuildRaceRestrictedBuildings>true</onlyBuildRaceRestrictedBuildings>
@@ -946,6 +959,10 @@
           <li>WULA_SMp11_Shield</li>
           <li>WULA_SMp11_Armor</li>
         </apparelList>
+        <!-- 允许的特质类型 -->
+        <traitList>
+          <li>WULA_AI_War_Machine</li>
+        </traitList>
         <onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel>
         <onlyUseRaceRestrictedWeapons>true</onlyUseRaceRestrictedWeapons>
         <onlyBuildRaceRestrictedBuildings>true</onlyBuildRaceRestrictedBuildings>

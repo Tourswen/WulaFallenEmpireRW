@@ -90,7 +90,7 @@
             <li>Steel</li>
           </thingDefs>
         </filter>
-        <count>300</count>
+        <count>600</count>
       </li>
       <li>
         <filter>
@@ -98,7 +98,7 @@
             <li>Plasteel</li>
           </thingDefs>
         </filter>
-        <count>160</count>
+        <count>250</count>
       </li>
       <li>
         <filter>
@@ -106,7 +106,7 @@
             <li>ComponentIndustrial</li>
           </thingDefs>
         </filter>
-        <count>15</count>
+        <count>24</count>
       </li>
       <li>
         <filter>
@@ -114,7 +114,7 @@
             <li>ComponentSpacer</li>
           </thingDefs>
         </filter>
-        <count>2</count>
+        <count>4</count>
       </li>
     </ingredients>
     <products>
@@ -136,7 +136,7 @@
             <li>Steel</li>
           </thingDefs>
         </filter>
-        <count>300</count>
+        <count>500</count>
       </li>
       <li>
         <filter>
@@ -144,7 +144,7 @@
             <li>Plasteel</li>
           </thingDefs>
         </filter>
-        <count>160</count>
+        <count>200</count>
       </li>
       <li>
         <filter>
@@ -152,7 +152,7 @@
             <li>ComponentIndustrial</li>
           </thingDefs>
         </filter>
-        <count>15</count>
+        <count>20</count>
       </li>
       <li>
         <filter>
@@ -160,7 +160,7 @@
             <li>ComponentSpacer</li>
           </thingDefs>
         </filter>
-        <count>2</count>
+        <count>3</count>
       </li>
     </ingredients>
     <products>

@@ -651,36 +651,6 @@
     <keepOnBodyPartRestoration>false</keepOnBodyPartRestoration>  <!-- true -->
   </HediffDef>
 
-  <ThingDef ParentName="ResourceBase">
-    <defName>WULA_Soul_Wedge</defName>
-    <label>魂楔</label>
-    <description>一种通过特殊手段将生命体灵魂抽离封装得到的物品，是乌拉帝国灵能理论中“灵魂量化”的集中体现，可为各种乌拉帝国灵能法杖充能。</description>
-    <graphicData>
-      <texPath>Wula/Item/WULA_Soul_Wedge</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <resourceReadoutPriority>First</resourceReadoutPriority>
-    <soundInteract>Silver_Drop</soundInteract>
-    <soundDrop>Silver_Drop</soundDrop>
-    <useHitPoints>false</useHitPoints>
-    <healthAffectsPrice>false</healthAffectsPrice>
-    <resourceReadoutAlwaysShow>true</resourceReadoutAlwaysShow>
-    <statBases>
-      <MarketValue>10</MarketValue>
-      <Mass>0.001</Mass>
-    </statBases>
-    <stackLimit>500</stackLimit>
-    <smallVolume>true</smallVolume>
-    <deepCommonality>0.5</deepCommonality>
-    <deepCountPerPortion>70</deepCountPerPortion>
-    <deepLumpSizeRange>2~10</deepLumpSizeRange>
-    <burnableByRecipe>false</burnableByRecipe>
-    <smeltable>true</smeltable>
-    <possessionCount>40</possessionCount>
-    <thingCategories>
-      <li>Manufactured</li>
-    </thingCategories>
-  </ThingDef>
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
     <defName>WULA_Extract_Soul_Wedge</defName>
     <label>提取魂楔</label>
@@ -701,7 +671,7 @@
     <anesthetize>false</anesthetize>
     <workSkillLearnFactor>2</workSkillLearnFactor>
     <products>
-      <WULA_Soul_Wedge>10</WULA_Soul_Wedge>
+      <WULA_Soul_Wedge>50</WULA_Soul_Wedge>
     </products>
 
     <ingredients Inherit="False">

@@ -35,7 +35,7 @@
       </recipeUsers>
       <researchPrerequisite>WULA_Synth_Weapon_Technology</researchPrerequisite>
       <displayPriority>300</displayPriority>
-      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
     <tools>
       <li>
@@ -76,7 +76,7 @@
         <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
       <researchPrerequisite>WULA_Synth_Weapon_Technology</researchPrerequisite>
-      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
     <statBases>
       <WorkToMake>700</WorkToMake>
@@ -194,7 +194,7 @@
         <Crafting>7</Crafting>
       </skillRequirements>
       <displayPriority>450</displayPriority>
-      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
   </ThingDef>
   <!-- 长枪 -->
@@ -263,7 +263,7 @@
         <Crafting>7</Crafting>
       </skillRequirements>
       <displayPriority>450</displayPriority>
-      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
   </ThingDef>
   <!-- 链锯剑 -->
@@ -329,7 +329,7 @@
         <Crafting>7</Crafting>
       </skillRequirements>
       <displayPriority>450</displayPriority>
-      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
   </ThingDef>
   <!-- 动力钉头锤 -->
@@ -382,7 +382,7 @@
         <Crafting>7</Crafting>
       </skillRequirements>
       <displayPriority>450</displayPriority>
-      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
   </ThingDef>
 
@@ -415,7 +415,7 @@
         <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
       <researchPrerequisite>WULA_Synth_Psi_2_Technology</researchPrerequisite>
-      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
     <tools>
       <li>
@@ -508,7 +508,7 @@
         <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
       <researchPrerequisite>WULA_Synth_Psi_Technology</researchPrerequisite>
-      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
     <tools>
       <li>
@@ -591,7 +591,7 @@
         <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
       <researchPrerequisite>WULA_Synth_Psi_Technology</researchPrerequisite>
-      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
     <tools>
       <li>
@@ -681,7 +681,7 @@
         <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
       <researchPrerequisite>WULA_Synth_Psi_2_Technology</researchPrerequisite>
-      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
     <tools>
       <li>
@@ -741,6 +741,212 @@
     </comps>
     
   </AbilityDef>
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt">
+    <defName>WULA_MW_Scepter_Of_Explosive</defName>
+    <label>APs-66"燃之杖"</label>
+    <description>乌拉帝国修女所持武器，可以使用魂锲作为充能媒介施展灵能法术，投射一发魂烬裂矢轰炸目标区域——这种以纯粹灵能作为驱动的炮弹将无视所有的非护盾阻碍，发射时也不需要目标视线。</description>
+    <graphicData>
+      <texPath>Wula/Weapon/WULA_MW_Scepter_Of_Flash</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.3</drawSize>
+    </graphicData>
+    <uiIconScale>1.1</uiIconScale>
+    <descriptionHyperlinks>
+      <ThingDef>WULA_Soul_Wedge</ThingDef>
+    </descriptionHyperlinks>
+    <techLevel>Ultra</techLevel>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <Mass>2</Mass>
+    </statBases>
+    <costList>
+      <WULA_Soul_Wedge>20</WULA_Soul_Wedge>
+      <Steel>50</Steel>
+    </costList>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+      <researchPrerequisite>WULA_Synth_Psi_2_Technology</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+    <tools>
+      <li>
+        <label>棍柄</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1</cooldownTime>
+        <chanceFactor>0.5</chanceFactor>
+      </li>
+    </tools>
+
+    <comps Inherit="False">
+      <li Class="CompProperties_EquippableAbilityReloadable">
+        <abilityDef>WULA_MW_Scepter_Of_Explosive_Ability</abilityDef>
+        <maxCharges>10</maxCharges>
+        <soundReload>AnomalyAbilityWarmup</soundReload>
+        <chargeNoun>魂锲</chargeNoun>
+        <ammoDef>WULA_Soul_Wedge</ammoDef>
+        <ammoCountPerCharge>2</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+      </li>
+    </comps>
+  </ThingDef>
+  <AbilityDef>
+    <defName>WULA_MW_Scepter_Of_Explosive_Ability</defName>
+    <label>燃之杖：裂矢</label>
+    <description>发射魂烬裂矢，将目标区域烧成灰烬——这种以纯粹灵能作为驱动的炮弹将无视所有的非护盾阻碍，发射时也不需要目标视线。</description>
+    <iconPath>UI/Abilities/Burner</iconPath>
+    <writeCombatLog>True</writeCombatLog>
+    <showPsycastEffects>False</showPsycastEffects>
+    <!-- <cooldownTicksRange>120~240</cooldownTicksRange> -->
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>35.9</range>
+      <warmupTime>2</warmupTime>
+      <muzzleFlashScale>9</muzzleFlashScale>
+      <beamTargetsGround>true</beamTargetsGround>
+      <soundAiming>FleshmelterBolt_Charging</soundAiming>
+      <ai_IsWeapon>true</ai_IsWeapon>
+      <soundCast>Shot_HellsphereCannonGun</soundCast>
+      <requireLineOfSight>false</requireLineOfSight>
+      
+      <aimingLineMote>Mote_FleshmelterBolt_Aim</aimingLineMote>
+      <aimingChargeMote>Mote_FleshmelterBolt_Charge</aimingChargeMote> 
+      <aimingChargeMoteOffset>1.07</aimingChargeMoteOffset>
+      <aimingLineMoteFixedLength>15.9</aimingLineMoteFixedLength>
+      <aimingTargetMote>Mote_FleshmelterBolt_Target</aimingTargetMote> 
+      
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>true</canTargetBuildings>
+        <canTargetPlants>true</canTargetPlants>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityLaunchProjectile">
+        <projectileDef>Bullet_WULA_MW_Scepter_Of_Explosive</projectileDef>
+      </li>
+    </comps>
+  </AbilityDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_WULA_MW_Scepter_Of_Explosive</defName>
+    <label>魂烬裂矢</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/FleshmelterBolt</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Mote</shaderType>
+      <drawSize>(1.5, 3)</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>50</damageAmountBase>
+      <speed>45</speed>
+      <soundAmbient>FleshmelterBolt_Launch</soundAmbient>
+      <explosionRadius>2.49</explosionRadius>
+      <screenShakeFactor>0.75</screenShakeFactor>
+      <explosionChanceToStartFire>0.75</explosionChanceToStartFire>
+      <armorPenetrationBase>0.5</armorPenetrationBase>
+      <!-- <flyOverhead>true</flyOverhead> -->
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt">
+    <defName>WULA_MW_Scepter_Of_Lost</defName>
+    <label>APs-00"惘之杖"</label>
+    <description>乌拉帝国修女所持武器，可以使用魂锲作为充能媒介施展灵能法术，使小范围内的敌人陷入心灵冲击状态，从而失去战斗力。</description>
+    <graphicData>
+      <texPath>Wula/Weapon/WULA_MW_Scepter_Of_Flash</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.3</drawSize>
+    </graphicData>
+    <uiIconScale>1.1</uiIconScale>
+    <descriptionHyperlinks>
+      <ThingDef>WULA_Soul_Wedge</ThingDef>
+    </descriptionHyperlinks>
+    <techLevel>Ultra</techLevel>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <Mass>2</Mass>
+    </statBases>
+    <costList>
+      <WULA_Soul_Wedge>20</WULA_Soul_Wedge>
+      <Steel>50</Steel>
+    </costList>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+      <researchPrerequisite>WULA_Synth_Psi_2_Technology</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+    <tools>
+      <li>
+        <label>棍柄</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1</cooldownTime>
+        <chanceFactor>0.5</chanceFactor>
+      </li>
+    </tools>
+
+    <comps Inherit="False">
+      <li Class="CompProperties_EquippableAbilityReloadable">
+        <abilityDef>WULA_MW_Scepter_Of_Lost_Ability</abilityDef>
+        <maxCharges>1</maxCharges>
+        <soundReload>AnomalyAbilityWarmup</soundReload>
+        <chargeNoun>魂锲</chargeNoun>
+        <ammoDef>WULA_Soul_Wedge</ammoDef>
+        <ammoCountPerCharge>5</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+      </li>
+    </comps>
+  </ThingDef>
+  <AbilityDef ParentName="PsycastBase">
+    <defName>WULA_MW_Scepter_Of_Lost_Ability</defName>
+    <label>惘之杖：失能</label>
+    <description>使一小片范围内的生物直接陷入心灵冲击状态，从而失去战斗力。</description>
+    <iconPath>UI/Abilities/Neuroquake</iconPath>
+    <writeCombatLog>True</writeCombatLog>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <statBases>
+      <Ability_EntropyGain>0</Ability_EntropyGain>
+      <Ability_PsyfocusCost>-1</Ability_PsyfocusCost>
+      <Ability_Duration>1500</Ability_Duration>
+      <Ability_EffectRadius>1.1</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <warmupTime>5</warmupTime>
+      <range>18</range>
+      
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class = "CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>PsychicShock</hediffDef>
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+        <psychic>True</psychic>
+        <goodwillImpact>-15</goodwillImpact>
+        <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
+      </li>
+      <li Class="CompProperties_AbilityFleckOnTarget">
+        <fleckDef>PsycastPsychicEffect</fleckDef>
+      </li>
+    </comps>
+  </AbilityDef>
 
   <!-- 乌拉帝国镇爆枪 -->
   <ThingDef ParentName="BaseHumanMakeableGun">
@@ -768,7 +974,7 @@
         <Crafting>5</Crafting>
       </skillRequirements>
       <displayPriority>440</displayPriority>
-      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
     <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
     <statBases>
@@ -859,7 +1065,7 @@
         <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
       <researchPrerequisite>WULA_Synth_Weapon_2_Ranged_Technology</researchPrerequisite>
-      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
     <statBases>
       <WorkToMake>25000</WorkToMake>
@@ -923,7 +1129,7 @@
         <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
       <researchPrerequisite>WULA_Synth_Weapon_2_Ranged_Technology</researchPrerequisite>
-      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
     <costList Inherit="False">
       <Steel>350</Steel>
@@ -972,7 +1178,7 @@
         <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
       <researchPrerequisite>WULA_Synth_Weapon_3_Bomb_Technology</researchPrerequisite>
-      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
     <statBases>
       <WorkToMake>50000</WorkToMake>
@@ -1081,11 +1287,8 @@
         <li>WULA_War_Machine_Weapon_Productor</li>
       </recipeUsers>
       <researchPrerequisite>WULA_AI_Machine_Panzer_Technology</researchPrerequisite>
-      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
-    <weaponTags>
-      <li>Wula_AI_Heavy_Panzer_Turret</li>
-    </weaponTags>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
@@ -1155,18 +1358,18 @@
     </statBases>
     <costList Inherit="False">
       <Steel>500</Steel>
-      <Plasteel>150</Plasteel>
-      <ComponentSpacer>8</ComponentSpacer>
+      <Plasteel>100</Plasteel>
+      <ComponentIndustrial>6</ComponentIndustrial>
     </costList>
     <recipeMaker>
       <recipeUsers Inherit="False">
         <li>WULA_War_Machine_Weapon_Productor</li>
       </recipeUsers>
       <researchPrerequisite>WULA_AI_Machine_Panzer_Technology</researchPrerequisite>
-      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
     <weaponTags>
-      <li>Wula_AI_Heavy_Panzer_Turret</li>
+      <li>WULA_AI_Heavy_Panzer_Init_Weapon</li>
     </weaponTags>
     <verbs>
       <li>
@@ -1230,15 +1433,12 @@
       <Plasteel>150</Plasteel>
       <ComponentSpacer>8</ComponentSpacer>
     </costList>
-    <weaponTags>
-      <li>Wula_AI_Heavy_Panzer_Turret</li>
-    </weaponTags>
     <recipeMaker>
       <recipeUsers Inherit="False">
         <li>WULA_War_Machine_Weapon_Productor</li>
       </recipeUsers>
       <researchPrerequisite>WULA_AI_Machine_Panzer_Technology</researchPrerequisite>
-      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
     <verbs>
       <li>
@@ -1313,11 +1513,8 @@
         <li>WULA_War_Machine_Weapon_Productor</li>
       </recipeUsers>
       <researchPrerequisite>WULA_AI_Machine_Panzer_Technology</researchPrerequisite>
-      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
-    <weaponTags>
-      <li>Wula_AI_Heavy_Panzer_Turret</li>
-    </weaponTags>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
@@ -1369,6 +1566,7 @@
     <label>CMl-99"剑冢"</label>
     <description>由SMp-11"风暴"所持的大型双头刀，攻防兼备，可以劈开坚固的装甲。</description>
     <weaponTags>
+      <li>WULA_Storm_Skitter_Init_Weapon</li>
       <li>Spear</li>
     </weaponTags>
     <graphicData>
@@ -1418,7 +1616,7 @@
         <li>WULA_War_Machine_Weapon_Productor</li>
       </recipeUsers>
       <researchPrerequisite>WULA_Storm_Skitter_Technology</researchPrerequisite>
-      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
   </ThingDef>
   <ThingDef ParentName="BaseHumanMakeableGun">
@@ -1439,7 +1637,7 @@
         <li>WULA_War_Machine_Weapon_Productor</li>
       </recipeUsers>
       <researchPrerequisite>WULA_Storm_Skitter_Technology</researchPrerequisite>
-      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
     <costList Inherit="False">
       <Steel>350</Steel>
@@ -1515,7 +1713,7 @@
         <li>WULA_War_Machine_Weapon_Productor</li>
       </recipeUsers>
       <researchPrerequisite>WULA_Storm_Skitter_Technology</researchPrerequisite>
-      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
     <costList Inherit="False">
       <Steel>350</Steel>
@@ -1638,7 +1836,7 @@
         <li>WULA_War_Machine_Weapon_Productor</li>
       </recipeUsers>
       <researchPrerequisite>WULA_Storm_Skitter_Technology</researchPrerequisite>
-      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
     <verbs>
       <li>
