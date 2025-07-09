@@ -471,6 +471,7 @@
         <compClass>CompAbilityEffect_Teleport</compClass>
         <destination>Selected</destination>
         <requiresLineOfSight>false</requiresLineOfSight>
+        <psychic>True</psychic>
         <range>80</range>
         <clamorType>Ability</clamorType>
         <clamorRadius>10</clamorRadius>
@@ -557,6 +558,7 @@
     <comps>
       <li Class="CompProperties_AbilityGiveInspiration">
         <canTargetBaby>False</canTargetBaby>
+        <psychic>True</psychic>
       </li>
       <li Class="CompProperties_AbilitySocialInteraction">
         <interactionDef>WordOfInspiration</interactionDef>
@@ -831,6 +833,8 @@
     <comps>
       <li Class="CompProperties_AbilityLaunchProjectile">
         <projectileDef>Bullet_WULA_MW_Scepter_Of_Explosive</projectileDef>
+        <psychic>true</psychic>
+        <screenShakeIntensity>0.5</screenShakeIntensity>
       </li>
     </comps>
   </AbilityDef>
@@ -1023,7 +1027,7 @@
     <verbProperties>
       <warmupTime>5</warmupTime>
       <range>60</range>
-      <drawAimPie>false</drawAimPie>
+      <drawAimPie>true</drawAimPie>
       <requireLineOfSight>false</requireLineOfSight>
       <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
       <soundCast>VoidTerrorCast</soundCast>
