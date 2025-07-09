@@ -744,7 +744,7 @@
   <ThingDef ParentName="BaseMeleeWeapon_Blunt">
     <defName>WULA_MW_Scepter_Of_Explosive</defName>
     <label>APs-66"燃之杖"</label>
-    <description>乌拉帝国修女所持武器，可以使用魂锲作为充能媒介施展灵能法术，投射一发魂烬裂矢轰炸目标区域——这种以纯粹灵能作为驱动的炮弹将无视所有的非护盾阻碍，发射时也不需要目标视线。</description>
+    <description>乌拉帝国修女所持武器，可以使用魂锲作为充能媒介施展灵能法术，投射一发魂烬裂矢轰炸目标区域——这种以纯粹灵能作为驱动的射弹将无视所有的非护盾阻碍，发射时也不需要目标视线。</description>
     <graphicData>
       <texPath>Wula/Weapon/WULA_MW_Scepter_Of_Flash</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -798,7 +798,7 @@
   <AbilityDef>
     <defName>WULA_MW_Scepter_Of_Explosive_Ability</defName>
     <label>燃之杖：裂矢</label>
-    <description>发射魂烬裂矢，将目标区域烧成灰烬——这种以纯粹灵能作为驱动的炮弹将无视所有的非护盾阻碍，发射时也不需要目标视线。</description>
+    <description>发射魂烬裂矢，将目标区域烧成灰烬——这种以纯粹灵能作为驱动的射弹将无视所有的非护盾阻碍，发射时也不需要目标视线。</description>
     <iconPath>UI/Abilities/Burner</iconPath>
     <writeCombatLog>True</writeCombatLog>
     <showPsycastEffects>False</showPsycastEffects>
@@ -859,7 +859,104 @@
   <ThingDef ParentName="BaseMeleeWeapon_Blunt">
     <defName>WULA_MW_Scepter_Of_Lost</defName>
     <label>APs-00"惘之杖"</label>
-    <description>乌拉帝国修女所持武器，可以使用魂锲作为充能媒介施展灵能法术，使小范围内的敌人陷入心灵冲击状态，从而失去战斗力。</description>
+    <description>乌拉帝国修女所持武器，可以使用魂锲作为充能媒介施展灵能法术，使小范围内的敌人陷入心灵冲击状态，从而失去战斗力。由于释放距离相当近，这种法杖被特地设计为长刀的样式，以在不使用法术的情况下对抗眼前的敌人。</description>
+    <graphicData>
+      <texPath>Wula/Weapon/WULA_MW_Scepter_Of_Flash</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.3</drawSize>
+    </graphicData>
+    <uiIconScale>1.1</uiIconScale>
+    <descriptionHyperlinks>
+      <ThingDef>WULA_Soul_Wedge</ThingDef>
+    </descriptionHyperlinks>
+    <techLevel>Ultra</techLevel>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <Mass>2</Mass>
+    </statBases>
+    <costList>
+      <WULA_Soul_Wedge>20</WULA_Soul_Wedge>
+      <Steel>50</Steel>
+    </costList>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+      <researchPrerequisite>WULA_Synth_Psi_2_Technology</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+    <tools>
+      <li>
+        <label>挥砍</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>18</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>直刺</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>25</power>
+        <cooldownTime>2.25</cooldownTime>
+      </li>
+    </tools>
+
+    <comps Inherit="False">
+      <li Class="CompProperties_EquippableAbilityReloadable">
+        <abilityDef>WULA_MW_Scepter_Of_Lost_Ability</abilityDef>
+        <maxCharges>1</maxCharges>
+        <soundReload>AnomalyAbilityWarmup</soundReload>
+        <chargeNoun>魂锲</chargeNoun>
+        <ammoDef>WULA_Soul_Wedge</ammoDef>
+        <ammoCountPerCharge>5</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+      </li>
+    </comps>
+  </ThingDef>
+  <AbilityDef ParentName="PsycastBase">
+    <defName>WULA_MW_Scepter_Of_Lost_Ability</defName>
+    <label>惘之杖：失能</label>
+    <description>使一小片范围内的生物直接陷入心灵冲击状态，从而失去战斗力。</description>
+    <iconPath>UI/Abilities/Neuroquake</iconPath>
+    <writeCombatLog>True</writeCombatLog>
+    <statBases>
+      <Ability_EntropyGain>0</Ability_EntropyGain>
+      <Ability_PsyfocusCost>-1</Ability_PsyfocusCost>
+      <Ability_Duration>1500</Ability_Duration>
+      <Ability_EffectRadius>1.1</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <warmupTime>5</warmupTime>
+      <range>14</range>
+      
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class = "CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>PsychicShock</hediffDef>
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+        <psychic>True</psychic>
+        <goodwillImpact>-15</goodwillImpact>
+        <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
+      </li>
+      <li Class="CompProperties_AbilityFleckOnTarget">
+        <fleckDef>PsycastPsychicEffect</fleckDef>
+      </li>
+    </comps>
+  </AbilityDef>
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt">
+    <defName>WULA_MW_Scepter_Of_Feather</defName>
+    <label>APs-72"羽之杖"</label>
+    <description>乌拉帝国修女所持武器，可以使用魂锲作为充能媒介施展灵能法术，为大范围内的所有殖民者提供持续数天的额外移动速度和工作速度。</description>
     <graphicData>
       <texPath>Wula/Weapon/WULA_MW_Scepter_Of_Flash</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -900,53 +997,72 @@
 
     <comps Inherit="False">
       <li Class="CompProperties_EquippableAbilityReloadable">
-        <abilityDef>WULA_MW_Scepter_Of_Lost_Ability</abilityDef>
+        <abilityDef>WULA_MW_Scepter_Of_Feather_Ability</abilityDef>
         <maxCharges>1</maxCharges>
         <soundReload>AnomalyAbilityWarmup</soundReload>
         <chargeNoun>魂锲</chargeNoun>
         <ammoDef>WULA_Soul_Wedge</ammoDef>
-        <ammoCountPerCharge>5</ammoCountPerCharge>
+        <ammoCountPerCharge>20</ammoCountPerCharge>
         <baseReloadTicks>60</baseReloadTicks>
       </li>
     </comps>
   </ThingDef>
   <AbilityDef ParentName="PsycastBase">
-    <defName>WULA_MW_Scepter_Of_Lost_Ability</defName>
-    <label>惘之杖：失能</label>
-    <description>使一小片范围内的生物直接陷入心灵冲击状态，从而失去战斗力。</description>
-    <iconPath>UI/Abilities/Neuroquake</iconPath>
+    <defName>WULA_MW_Scepter_Of_Feather_Ability</defName>
+    <label>羽之杖：激励</label>
+    <description>以自身为中心，为大范围内的所有殖民者提供持续数天的额外移动速度和工作速度。</description>
+    <iconPath>UI/Abilities/WordOfSerenity</iconPath>
     <writeCombatLog>True</writeCombatLog>
     <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
     <statBases>
       <Ability_EntropyGain>0</Ability_EntropyGain>
       <Ability_PsyfocusCost>-1</Ability_PsyfocusCost>
-      <Ability_Duration>1500</Ability_Duration>
-      <Ability_EffectRadius>1.1</Ability_EffectRadius>
+      <Ability_Duration>4000</Ability_Duration>
+      <Ability_EffectRadius>60</Ability_EffectRadius>
     </statBases>
     <verbProperties>
       <warmupTime>5</warmupTime>
-      <range>18</range>
-      
+      <range>14</range>
+      <drawAimPie>false</drawAimPie>
+      <requireLineOfSight>false</requireLineOfSight>
+      <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+      <soundCast>VoidTerrorCast</soundCast>
+      <targetable>false</targetable>
       <targetParams>
-        <canTargetLocations>true</canTargetLocations>
-        <canTargetSelf>false</canTargetSelf>
-        <canTargetPawns>true</canTargetPawns>
+        <canTargetSelf>true</canTargetSelf>
       </targetParams>
     </verbProperties>
     <comps>
       <li Class = "CompProperties_AbilityGiveHediff">
         <compClass>CompAbilityEffect_GiveHediff</compClass>
-        <hediffDef>PsychicShock</hediffDef>
+        <hediffDef>WULA_MW_Scepter_Of_Feather_Hediff</hediffDef>
         <durationMultiplier>PsychicSensitivity</durationMultiplier>
         <psychic>True</psychic>
-        <goodwillImpact>-15</goodwillImpact>
-        <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
       </li>
       <li Class="CompProperties_AbilityFleckOnTarget">
         <fleckDef>PsycastPsychicEffect</fleckDef>
       </li>
     </comps>
   </AbilityDef>
+  <HediffDef>
+    <defName>WULA_MW_Scepter_Of_Feather_Hediff</defName>
+    <label>羽之杖：激励</label>
+    <description>这个殖民者受到了乌拉帝国灵能法术的激励，行动和生产变得更加有效率了。</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <stages>
+      <li>
+        <statFactors>
+          move
+        </statFactors>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>240000~240000</disappearsAfterTicks> <!-- 1~2 days -->
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
 
   <!-- 乌拉帝国镇爆枪 -->
   <ThingDef ParentName="BaseHumanMakeableGun">
