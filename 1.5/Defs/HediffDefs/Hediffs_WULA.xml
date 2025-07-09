@@ -212,7 +212,7 @@
     <defName>WULA_Heavy_Infantry_PowerArmor_PowerFist</defName>
     <label>动力拳</label>
     <labelNoun>动力拳</labelNoun>
-    <description>一个由外骨骼和加压线圈组成的拳套，内置于乌拉帝国重装装甲的夹层中，可以击碎任何胆敢靠近的敌军的头颅。</description>
+    <description>一个由外骨骼和加压线圈组成的拳套，内置于乌拉帝国重装装甲的夹层中，可以击碎任何胆敢靠近的敌军的头颅。这套武备是由神经系统直接驱动的——无论盔甲穿戴者是否还拥有生物学意义上的“手”。</description>
     <comps>
       <li Class="HediffCompProperties_VerbGiver">
         <tools>
@@ -237,6 +237,7 @@
           </li>
         </tools>
       </li>
+      <li Class="HediffCompProperties_RemoveIfApparelDropped" />
     </comps>
   </HediffDef>
 </Defs>

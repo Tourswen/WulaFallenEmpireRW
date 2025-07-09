@@ -260,9 +260,6 @@
           <li>WULA_Fix_Head_Base</li>
           <li>WULA_Fix_Torso_Base</li>
         </recipeList>
-        <blackRecipeList>
-          <li>WULA_Extract_Soul_Wedge</li>
-        </blackRecipeList>
         <!-- 可以穿戴的衣服 -->
         <apparelList>
           <li>WULA_Official_Uniform</li>
@@ -757,6 +754,7 @@
       <mechWeightClass>Heavy</mechWeightClass>
       <!-- <mechFixedSkillLevel>20</mechFixedSkillLevel> -->
     </race>
+    
     <recipe Inherit="False">
     </recipe>
 

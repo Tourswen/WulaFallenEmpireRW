@@ -402,7 +402,7 @@
     <anesthetize>false</anesthetize>
     <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
     <addsHediff>WULA_Body_Fixed</addsHediff>
-    <recipeUsers>
+    <recipeUsers Inherit="False">
       <li>wulaspecies</li>
     </recipeUsers>
     
@@ -441,7 +441,7 @@
     <anesthetize>false</anesthetize>
     <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
     <addsHediff>WULA_Body_Fixed</addsHediff>
-    <recipeUsers>
+    <recipeUsers Inherit="False">
       <li>wulaspecies</li>
     </recipeUsers>
     
@@ -480,7 +480,7 @@
     <anesthetize>false</anesthetize>
     <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
     <addsHediff>WULA_Body_Fixed</addsHediff>
-    <recipeUsers>
+    <recipeUsers Inherit="False">
       <li>wulaspecies</li>
     </recipeUsers>
     
@@ -519,7 +519,7 @@
     <anesthetize>false</anesthetize>
     <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
     <addsHediff>WULA_Body_Fixed</addsHediff>
-    <recipeUsers>
+    <recipeUsers Inherit="False">
       <li>wulaspecies</li>
     </recipeUsers>
     
@@ -558,7 +558,7 @@
     <anesthetize>false</anesthetize>
     <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
     <addsHediff>WULA_Body_Fixed</addsHediff>
-    <recipeUsers>
+    <recipeUsers Inherit="False">
       <li>wulaspecies</li>
     </recipeUsers>
     
@@ -605,7 +605,7 @@
     <anesthetize>false</anesthetize>
     <surgeryOutcomeEffect IsNull="True"/> <!-- Always succeeds -->
     <addsHediff>WULA_Body_Fixed</addsHediff>
-    <recipeUsers>
+    <recipeUsers Inherit="False">
       <li>wulaspecies</li>
     </recipeUsers>
     
@@ -654,9 +654,10 @@
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
     <defName>WULA_Extract_Soul_Wedge</defName>
     <label>提取魂楔</label>
-    <description>从该目标体内提取10枚魂楔以供乌拉帝国灵能法杖充能，提取魂楔很可能会杀死目标。</description>
+    <description>从该目标体内提取50枚魂楔以供乌拉帝国灵能法杖充能，被提取灵魂的目标将进入灵魂抽离状态，在这种状态下，目标不稳定的灵魂每过一段时间都可能导致目标无法行动、陷入昏迷甚至是直接死亡——这种症状没有固定的治愈时间，但是每天都将有一定几率自动消失，届时可再次开展提取手术。</description>
     <jobString>正在提取魂楔</jobString>
     <workAmount>500</workAmount>
+    <workerClass>Recipe_AddHediff</workerClass>
     <hideBodyPartNames>true</hideBodyPartNames>
     <targetsBodyPart>false</targetsBodyPart>
     <isViolation>true</isViolation>
@@ -680,30 +681,60 @@
   </RecipeDef>
   <HediffDef ParentName="ImplantHediffBase">
     <defName>WULA_Extract_Soul_Wedge_Hediff</defName>
-    <hediffClass>Hediff_Implant</hediffClass>
+    <hediffClass>HediffWithComps</hediffClass>
     <label>灵魂抽离</label>
     <description>该生物的灵魂被人为的分离了。</description>
-    <descriptionShort>该生物的灵魂被人为的分离了，现在这只是一具空躯壳。</descriptionShort>
-    <initialSeverity>1</initialSeverity>
-    <minSeverity>1</minSeverity>
+    <descriptionShort>该生物的灵魂被人为的分离了，在这种状态下，目标不稳定的灵魂每过一段时间都可能导致目标无法行动、陷入昏迷甚至是直接死亡——这种症状没有固定的治愈时间，但是每天都将有一定几率自动消失，届时可再次开展提取手术。</descriptionShort>
+    <!-- <initialSeverity>0.5</initialSeverity> -->
+    <minSeverity>0</minSeverity>
+    <maxSeverity>1</maxSeverity>
     <alwaysShowSeverity>true</alwaysShowSeverity>
     <isBad>true</isBad>
     <duplicationAllowed>true</duplicationAllowed>
-    <keepOnBodyPartRestoration>false</keepOnBodyPartRestoration>  <!-- true -->
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>  <!-- true -->
+    <defaultInstallPart>Brain</defaultInstallPart>
+    <comps>
+      <li Class="HediffCompProperties_ChanceToRemove">
+        <intervalTicks>60000</intervalTicks>
+        <chance>0.5</chance>
+      </li>
+      <li Class="HediffCompProperties_RandomizeStageWithInterval">
+        <ticksToRandomize>60000</ticksToRandomize>
+        <notifyMessage>{PAWN_labelShort} 的灵魂状态从 {1} 转变为 {2}.</notifyMessage>
+      </li>
+      <li Class="HediffCompProperties_DisappearsOnDeath"/>
+    </comps>
     <stages>
       <li>
+        <label>残缺</label>
+        <minSeverity>0.01</minSeverity>
         <capMods>
           <li>
             <capacity>Consciousness</capacity>
-            <offset>-2</offset>
+            <setMax>0.5</setMax>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>破碎</label>
+        <minSeverity>0.3</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>弥散</label>
+        <minSeverity>0.9</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0</setMax>
           </li>
         </capMods>
       </li>
     </stages>
-    <comps>
-      <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.2</severityPerDay>
-      </li>
-    </comps>
   </HediffDef>
 </Defs>
