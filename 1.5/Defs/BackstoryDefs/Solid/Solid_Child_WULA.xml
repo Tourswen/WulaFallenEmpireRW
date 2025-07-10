@@ -54,7 +54,7 @@
     </forcedHediffs>
   </AlienRace.AlienBackstoryDef>
   <AlienRace.AlienBackstoryDef>
-    <defName>WULA_Storm_Skitter_Child_Backstory01</defName>  
+    <defName>WULA_Armour_Child_Backstory01</defName>  
     <ignoreIllegalLabelCharacterConfigError>False</ignoreIllegalLabelCharacterConfigError>  
     <slot>Childhood</slot>  
     <title>智能战甲</title>  
@@ -66,11 +66,11 @@
     </skillGains>
     <workDisables>Intellectual,Caring,Social,Animals,Artistic,Crafting,Cooking,Firefighting,Cleaning,PlantWork,Mining,Hunting,Constructing</workDisables>
     <spawnCategories>
-      <li>WULA_Storm_Skitter_Backstory_Categories</li>
+      <li>WULA_Armour_Backstory_Categories</li>
     </spawnCategories>
     <requiredWorkTags>None</requiredWorkTags>
     <forcedHediffs>
-      <li>WULA_Storm_Skitter_Hediff</li>
+      <li>WULA_Armour_Hediff</li>
     </forcedHediffs>
   </AlienRace.AlienBackstoryDef>
 </Defs>

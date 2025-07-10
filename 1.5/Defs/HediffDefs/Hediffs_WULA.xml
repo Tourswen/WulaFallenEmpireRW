@@ -137,7 +137,7 @@
     </comps>
   </HediffDef>
   <HediffDef>
-    <defName>WULA_Storm_Skitter_Hediff</defName>
+    <defName>WULA_Armour_Hediff</defName>
     <label>大型战甲</label>
     <description>由乌拉帝国建造的大型战甲，拥有一部分机械体的特性——无法被点燃、不会中毒、免疫大量疾病、不会抱怨温度，但是无法自我修复。</description>
     <hediffClass>HediffWithComps</hediffClass>

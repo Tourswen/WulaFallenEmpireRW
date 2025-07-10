@@ -126,9 +126,9 @@
     <researchPrerequisite>WULA_AI_Machine_Panzer_Technology</researchPrerequisite>
   </RecipeDef>
   <RecipeDef ParentName="MediumMechanoidRecipe">
-    <defName>WULA_Build_Storm_Skitter</defName>
-    <label>建造SMp-11"风暴"</label>
-    <description>建造一台SMp-11"风暴"大型战甲，不包含配套武器。</description>
+    <defName>WULA_Build_Armour</defName>
+    <label>建造SMp-11"甲胄"</label>
+    <description>建造一台SMp-11"甲胄"大型战甲，不包含配套武器。</description>
     <ingredients Inherit="False">
       <li>
         <filter>
@@ -164,12 +164,12 @@
       </li>
     </ingredients>
     <products>
-      <Wula_Storm_Skitter>1</Wula_Storm_Skitter>
+      <Wula_Armour>1</Wula_Armour>
     </products>
     <descriptionHyperlinks>
-      <ThingDef>Wula_Storm_Skitter</ThingDef>
+      <ThingDef>Wula_Armour</ThingDef>
     </descriptionHyperlinks>
-    <researchPrerequisite>WULA_Storm_Skitter_Technology</researchPrerequisite>
+    <researchPrerequisite>WULA_Armour_Technology</researchPrerequisite>
   </RecipeDef>
 
   <RecipeDef ParentName="LightMechanoidRecipe">

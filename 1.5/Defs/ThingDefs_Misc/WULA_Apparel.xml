@@ -666,9 +666,9 @@
       <MaxHitPoints>500</MaxHitPoints>
       <Mass>8</Mass>
       <Flammability>0</Flammability>
-      <ArmorRating_Sharp>1</ArmorRating_Sharp>
-      <ArmorRating_Blunt>1</ArmorRating_Blunt>
-      <ArmorRating_Heat>2.0</ArmorRating_Heat>
+      <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+      <ArmorRating_Heat>1.0</ArmorRating_Heat>
       <EquipDelay>15</EquipDelay>
       <!-- <EnergyShieldEnergyMax>1.5</EnergyShieldEnergyMax> -->
     </statBases>
@@ -1515,8 +1515,8 @@
   <!-- 风暴装备 -->
   <ThingDef ParentName="ArmorMachineableBase">
     <defName>WULA_SMp11_Armor</defName>
-    <label>SMp-11"风暴"外装甲</label>
-    <description>由乌拉帝国的"风暴"战甲所装备的额外装甲，提供大量护甲和高额的伤害减免，但是会拖慢机体的移动速度。</description>
+    <label>SMp-11"甲胄"外装甲</label>
+    <description>由乌拉帝国的"甲胄"战甲所装备的额外装甲，提供大量护甲和高额的伤害减免，但是会拖慢机体的移动速度。</description>
     <techLevel>Spacer</techLevel>
     <tickerType>Normal</tickerType>
     <thingCategories>
@@ -1527,7 +1527,7 @@
       <recipeUsers Inherit="False">
         <li>WULA_War_Machine_Weapon_Productor</li>
       </recipeUsers>
-      <researchPrerequisite>WULA_Storm_Skitter_Technology</researchPrerequisite>
+      <researchPrerequisite>WULA_Armour_Technology</researchPrerequisite>
       <skillRequirements>
         <Crafting>7</Crafting>
       </skillRequirements>
@@ -1561,7 +1561,7 @@
     </costList>
     <apparel>
       <tags>
-        <li>Wula_Storm_Skitter_Armor</li>
+        <li>Wula_Armour_Armor</li>
       </tags>
       <bodyPartGroups>
         <li>Torso</li>
@@ -1593,8 +1593,8 @@
   </ThingDef>
   <ThingDef ParentName="ArmorMachineableBase">
     <defName>WULA_SMp11_Shield</defName>
-    <label>SMp-11"风暴"附加护盾</label>
-    <description>由乌拉帝国的"风暴"战甲所装备的中型护盾立场，在大型立场盾内部再附加一个小型立场盾，以实现对远程火力的绝对防御。</description>
+    <label>SMp-11"甲胄"附加护盾</label>
+    <description>由乌拉帝国的"甲胄"战甲所装备的中型护盾立场，在大型立场盾内部再附加一个小型立场盾，以实现对远程火力的绝对防御。</description>
     <techLevel>Spacer</techLevel>
     <tickerType>Normal</tickerType>
     <thingCategories>
@@ -1603,7 +1603,7 @@
     <recipeMaker>
       <displayPriority>105</displayPriority>
       <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
-      <researchPrerequisite>WULA_Storm_Skitter_Technology</researchPrerequisite>
+      <researchPrerequisite>WULA_Armour_Technology</researchPrerequisite>
       <recipeUsers Inherit="False">
         <li>WULA_War_Machine_Weapon_Productor</li>
       </recipeUsers>
@@ -1640,7 +1640,7 @@
     </costList>
     <apparel>
       <tags>
-        <li>Wula_Storm_Skitter_Armor</li>
+        <li>Wula_Armour_Armor</li>
       </tags>
       <bodyPartGroups>
         <li>Torso</li>

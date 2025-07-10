@@ -585,7 +585,7 @@
 		</corePart>
 	</BodyDef>
 	<BodyDef>
-		<defName>Wula_Storm_Skitter_Body</defName>
+		<defName>Wula_Armour_Body</defName>
 		<label>大型战甲</label>
 		<corePart>
 			<def>Torso</def>

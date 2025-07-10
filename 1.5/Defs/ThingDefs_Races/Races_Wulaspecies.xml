@@ -448,7 +448,7 @@
 	<AlienRace.ThingDef_AlienRace ParentName="Human">
 		<defName>Wula_AI_Heavy_Panzer</defName>
 		<label>SMp-38"萨克森"</label>
-		<description>乌拉帝国所使用的中型突击战车，搭载了一个和合成人相同的AI核心，这使得它可以像生物一样思考——只是没有多余的感情，它们唯一思考的就是如何撕碎敌人。</description>
+		<description>乌拉帝国所使用的中型突击战车，以逆重的方式悬浮于战场上，并使用其搭载的火力强大的武备撕碎敌人。</description>
     <uiIconPath>Wula/Things/Wula_AI_Heavy_Panzer/Wula_AI_Heavy_Panzer_Icon</uiIconPath>
 
     <alienRace>
@@ -790,10 +790,10 @@
     </tools>
 	</AlienRace.ThingDef_AlienRace>
 	<AlienRace.ThingDef_AlienRace ParentName="Human">
-		<defName>Wula_Storm_Skitter</defName>
-		<label>SMp-11"风暴"</label>
-		<description>乌拉帝国的大型战斗机械，拥有高挑的外形和矫健的身手，人格核心内置的人格更是百战老兵的复制体。</description>
-    <uiIconPath>Wula/Things/Wula_Storm_Skitter/Wula_Storm_Skitter_Icon</uiIconPath>
+		<defName>Wula_Armour</defName>
+		<label>SMp-11"甲胄"</label>
+		<description>乌拉帝国的大型战斗机械，外形似一副悬空的盔甲，手持巨大的长柄武器或自动炮，是乌拉帝国战线的前锋。</description>
+    <uiIconPath>Wula/Things/Wula_Armour/Wula_Armour_Icon</uiIconPath>
 
     <alienRace>
       <!-- 核心设置 -->
@@ -911,10 +911,10 @@
       </generalSettings>
       <!-- 图形 -->
 			<graphicPaths>
-				<body>Wula/Things/Wula_Storm_Skitter/Bodies/</body>
-				<head>Wula/Things/Wula_Storm_Skitter/Heads/</head>
+				<body>Wula/Things/Wula_Armour/Bodies/</body>
+				<head>Wula/Things/Wula_Armour/Heads/</head>
 				<skeleton>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Thin</skeleton> 
-        <stump>Wula/Things/Wula_Storm_Skitter/Bodies</stump>
+        <stump>Wula/Things/Wula_Armour/Bodies</stump>
         <skinColor>(1,1,1,1)</skinColor>
 			</graphicPaths>
 			<!-- 风格设置 -->
@@ -948,10 +948,10 @@
         </traitList>
         <!-- 武器列表 -->
         <weaponList>
-          <li>WULA_RW_Storm_Skitter_AR</li>
-          <li>WULA_MW_Storm_Skitter_Glaive</li>
-          <li>WULA_RW_Storm_Skitter_GL</li>
-          <li>WULA_MW_Storm_Skitter_Lance</li>
+          <li>WULA_RW_Armour_AR</li>
+          <li>WULA_MW_Armour_Glaive</li>
+          <li>WULA_RW_Armour_GL</li>
+          <li>WULA_MW_Armour_Lance</li>
         </weaponList>
         <!-- 可以穿戴的衣服 -->
         <apparelList>
@@ -1058,7 +1058,7 @@
 			<leatherDef>Leather_Light</leatherDef>
       <specificMeatDef>Meat_Twisted</specificMeatDef>
 			<!-- 身体类型 -->
-			<body>Wula_Storm_Skitter_Body</body>
+			<body>Wula_Armour_Body</body>
       <!-- 大小 -->
       <baseBodySize>10.0</baseBodySize>
       <!-- 年龄阶段 -->

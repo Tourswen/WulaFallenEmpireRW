@@ -264,9 +264,9 @@
     </prerequisites>
   </ResearchProjectDef>
   <ResearchProjectDef ParentName="WULAtechBase">
-    <defName>WULA_Storm_Skitter_Technology</defName>
+    <defName>WULA_Armour_Technology</defName>
     <label>基础战甲套件</label>
-    <description>获取构建乌拉帝国大型战甲SMp-11"风暴"的知识，并得以生产它所装备的各种大型近战武器和远程武器。</description>
+    <description>获取构建乌拉帝国大型战甲SMp-11"甲胄"的知识，并得以生产它所装备的各种大型近战武器和远程武器。</description>
     <baseCost>2400</baseCost>
     <researchViewX>4.00</researchViewX>
     <researchViewY>5.30</researchViewY>

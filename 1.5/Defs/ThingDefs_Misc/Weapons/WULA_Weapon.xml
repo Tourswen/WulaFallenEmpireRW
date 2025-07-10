@@ -233,8 +233,8 @@
           <li>Blunt</li>
           <li>Poke</li>
         </capacities>
-        <power>32</power>
-        <cooldownTime>2.6</cooldownTime>
+        <power>42</power>
+        <cooldownTime>1.6</cooldownTime>
         <surpriseAttack>
           <extraMeleeDamages>
             <li>
@@ -249,8 +249,8 @@
         <capacities>
           <li>Stab</li>
         </capacities>
-        <power>45</power>
-        <armorPenetration>0.70</armorPenetration>
+        <power>65</power>
+        <armorPenetration>0.80</armorPenetration>
         <cooldownTime>2.6</cooldownTime>
       </li>
     </tools>
@@ -526,7 +526,7 @@
     <comps Inherit="False">
       <li Class="CompProperties_EquippableAbilityReloadable">
         <abilityDef>WULA_MW_Scepter_Of_Perception_Ability</abilityDef>
-        <maxCharges>1</maxCharges>
+        <maxCharges>2</maxCharges>
         <soundReload>AnomalyAbilityWarmup</soundReload>
         <chargeNoun>魂锲</chargeNoun>
         <ammoDef>WULA_Soul_Wedge</ammoDef>
@@ -535,7 +535,7 @@
       </li>
     </comps>
   </ThingDef>
-  <AbilityDef ParentName="WordOfBase">
+  <AbilityDef ParentName="PsycastBase">
     <defName>WULA_MW_Scepter_Of_Perception_Ability</defName>
     <label>智之杖：拔擢</label>
     <description>以魂楔为媒介传递灵能，加速目标思维。目标将获得一个适合的随机灵感。</description>
@@ -1684,17 +1684,17 @@
       <soundAmbient>MortarRound_Ambient</soundAmbient>
     </projectile>
   </ThingDef>
-  <!-- 风暴装备 -->
+  <!-- 甲胄装备 -->
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
-    <defName>WULA_MW_Storm_Skitter_Glaive</defName>
+    <defName>WULA_MW_Armour_Glaive</defName>
     <label>CMl-99"剑冢"</label>
-    <description>由SMp-11"风暴"所持的大型双头刀，攻防兼备，可以劈开坚固的装甲。</description>
+    <description>由SMp-11"甲胄"所持的大型双头刀，攻防兼备，可以劈开坚固的装甲。</description>
     <weaponTags>
-      <li>WULA_Storm_Skitter_Init_Weapon</li>
+      <li>WULA_Armour_Init_Weapon</li>
       <li>Spear</li>
     </weaponTags>
     <graphicData>
-      <texPath>Wula/Weapon/WULA_MW_Storm_Skitter_Glaive</texPath>
+      <texPath>Wula/Weapon/WULA_MW_Armour_Glaive</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <drawSize>3.5</drawSize>
@@ -1739,18 +1739,18 @@
       <recipeUsers Inherit="False">
         <li>WULA_War_Machine_Weapon_Productor</li>
       </recipeUsers>
-      <researchPrerequisite>WULA_Storm_Skitter_Technology</researchPrerequisite>
+      <researchPrerequisite>WULA_Armour_Technology</researchPrerequisite>
       <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
   </ThingDef>
   <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>WULA_RW_Storm_Skitter_AR</defName>
+    <defName>WULA_RW_Armour_AR</defName>
     <label>FLm-78"萤石"</label>
-    <description>由SMp-11"风暴"所持的重型自动炮，火力比单兵装备要凶猛得多。</description>
+    <description>由SMp-11"甲胄"所持的重型自动炮，火力比单兵装备要凶猛得多。</description>
     <techLevel>Ultra</techLevel>
     <!-- <techLevel>Spacer</techLevel> -->
     <graphicData>
-      <texPath>Wula/Weapon/WULA_RW_Storm_Skitter_AR</texPath>
+      <texPath>Wula/Weapon/WULA_RW_Armour_AR</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>2.75</drawSize>
     </graphicData>
@@ -1760,7 +1760,7 @@
       <recipeUsers Inherit="False">
         <li>WULA_War_Machine_Weapon_Productor</li>
       </recipeUsers>
-      <researchPrerequisite>WULA_Storm_Skitter_Technology</researchPrerequisite>
+      <researchPrerequisite>WULA_Armour_Technology</researchPrerequisite>
       <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
     <costList Inherit="False">
@@ -1781,7 +1781,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_WULA_RW_Storm_Skitter_AR</defaultProjectile>
+        <defaultProjectile>Bullet_WULA_RW_Armour_AR</defaultProjectile>
         <warmupTime>0.5</warmupTime>
         <range>32</range>
         <burstShotCount>12</burstShotCount>
@@ -1798,7 +1798,7 @@
     </verbs>
   </ThingDef>
   <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_WULA_RW_Storm_Skitter_AR</defName>
+    <defName>Bullet_WULA_RW_Armour_AR</defName>
     <label>萤石自动炮子弹</label>
     <thingClass>Projectile_Explosive</thingClass>
     <tickerType>Normal</tickerType>
@@ -1821,13 +1821,13 @@
     </projectile>
   </ThingDef>
   <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>WULA_RW_Storm_Skitter_GL</defName>
+    <defName>WULA_RW_Armour_GL</defName>
     <label>SEl-78"角砾岩"</label>
-    <description>由SMp-11"风暴"所持的自动榴弹炮，得益于风暴战甲庞大的身躯，这种重型武器可以跟随小队移动并向敌人释放铺天盖地的榴弹雨。</description>
+    <description>由SMp-11"甲胄"所持的自动榴弹炮，得益于战甲庞大的身躯，这种重型武器可以跟随小队移动并向敌人释放铺天盖地的榴弹雨。</description>
     <techLevel>Ultra</techLevel>
     <!-- <techLevel>Spacer</techLevel> -->
     <graphicData>
-      <texPath>Wula/Weapon/WULA_RW_Storm_Skitter_GL</texPath>
+      <texPath>Wula/Weapon/WULA_RW_Armour_GL</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>2.75</drawSize>
     </graphicData>
@@ -1836,7 +1836,7 @@
       <recipeUsers Inherit="False">
         <li>WULA_War_Machine_Weapon_Productor</li>
       </recipeUsers>
-      <researchPrerequisite>WULA_Storm_Skitter_Technology</researchPrerequisite>
+      <researchPrerequisite>WULA_Armour_Technology</researchPrerequisite>
       <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
     <costList Inherit="False">
@@ -1857,7 +1857,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_WULA_RW_Storm_Skitter_GL</defaultProjectile>
+        <defaultProjectile>Bullet_WULA_RW_Armour_GL</defaultProjectile>
         <warmupTime>0.2</warmupTime>
         <forcedMissRadius>1</forcedMissRadius>
         <forcedMissRadiusClassicMortars>1</forcedMissRadiusClassicMortars>
@@ -1875,7 +1875,7 @@
     </verbs>
   </ThingDef>
   <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_WULA_RW_Storm_Skitter_GL</defName>
+    <defName>Bullet_WULA_RW_Armour_GL</defName>
     <label>角砾岩榴弹</label>
     <graphicData>
       <texPath>Wula/Projectile/WULA_Shrapnel</texPath>
@@ -1897,14 +1897,14 @@
     </projectile>
   </ThingDef>
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
-    <defName>WULA_MW_Storm_Skitter_Lance</defName>
+    <defName>WULA_MW_Armour_Lance</defName>
     <label>CMl-67"铳枪"</label>
-    <description>SMp-11"风暴"所持的枪炮合一的武器，既可以在近战中刺穿对手，也可以从远距离上发射高精度炮弹打击敌军。</description>
+    <description>SMp-11"甲胄"所持的枪炮合一的武器，既可以在近战中刺穿对手，也可以从远距离上发射高精度炮弹打击敌军。</description>
     <weaponTags>
       <li>Spear</li>
     </weaponTags>
     <graphicData>
-      <texPath>Wula/Weapon/WULA_MW_Storm_Skitter_Lance</texPath>
+      <texPath>Wula/Weapon/WULA_MW_Armour_Lance</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <drawSize>3.5</drawSize>
@@ -1959,14 +1959,14 @@
       <recipeUsers Inherit="False">
         <li>WULA_War_Machine_Weapon_Productor</li>
       </recipeUsers>
-      <researchPrerequisite>WULA_Storm_Skitter_Technology</researchPrerequisite>
+      <researchPrerequisite>WULA_Armour_Technology</researchPrerequisite>
       <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_WULA_MW_Storm_Skitter_Lance</defaultProjectile>
+        <defaultProjectile>Bullet_WULA_MW_Armour_Lance</defaultProjectile>
         <warmupTime>2.25</warmupTime>
         <minRange>3</minRange>
         <range>68</range>
@@ -1978,7 +1978,7 @@
     </verbs>
   </ThingDef>
   <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_WULA_MW_Storm_Skitter_Lance</defName>
+    <defName>Bullet_WULA_MW_Armour_Lance</defName>
     <label>铳枪穿甲弹</label>
     <thingClass>Projectile_Explosive</thingClass>
     <tickerType>Normal</tickerType>

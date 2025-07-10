@@ -126,14 +126,14 @@
   </PawnKindDef>
   
   <PawnKindDef>
-    <defName>Wula_Storm_Skitter_PawnKind</defName>
-    <label>SMp-11"风暴"</label>
-    <race>Wula_Storm_Skitter</race>
+    <defName>Wula_Armour_PawnKind</defName>
+    <label>SMp-11"甲胄"</label>
+    <race>Wula_Armour</race>
     <defaultFactionType>PlayerColony</defaultFactionType>
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Wula/Things/Wula_Storm_Skitter/Bodies/Naked_Thin</texPath>
+          <texPath>Wula/Things/Wula_Armour/Bodies/Naked_Thin</texPath>
           <maskPath>Wula/Things/WULA_Cat/AllegianceOverlays/None</maskPath>
           <shaderType>CutoutWithOverlay</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
@@ -146,7 +146,7 @@
     <allowInMechClusters>False</allowInMechClusters>
     
     <weaponTags>
-      <li>WULA_Storm_Skitter_Init_Weapon</li>
+      <li>WULA_Armour_Init_Weapon</li>
     </weaponTags>
     <weaponMoney>99999~99999</weaponMoney>
 
@@ -154,7 +154,7 @@
       <li>
         <categories>
           <li>WULA_AI_War_Machine_Backstory_Categories</li>
-          <li>WULA_Storm_Skitter_Backstory_Categories</li>
+          <li>WULA_Armour_Backstory_Categories</li>
         </categories>
       </li>
     </backstoryFiltersOverride>
