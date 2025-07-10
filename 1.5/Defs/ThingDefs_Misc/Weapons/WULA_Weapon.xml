@@ -863,7 +863,7 @@
   <ThingDef ParentName="BaseMeleeWeapon_Blunt">
     <defName>WULA_MW_Scepter_Of_Lost</defName>
     <label>APs-00"惘之杖"</label>
-    <description>乌拉帝国修女所持武器，可以使用魂锲作为充能媒介施展灵能法术，使小范围内的敌人陷入心灵冲击状态，从而失去战斗力。由于释放距离相当近，这种法杖被特地设计为长刀的样式，以在不使用法术的情况下对抗眼前的敌人。</description>
+    <description>乌拉帝国修女所持武器，可以使用魂锲作为充能媒介施展灵能法术，使小范围内的敌人陷入心灵冲击状态，从而失去战斗力。由于释放距离相当近，这种法杖被特地设计为短矛的样式，以在不使用法术的情况下对抗眼前的敌人。</description>
     <graphicData>
       <texPath>Wula/Weapon/WULA_MW_Scepter_Of_Lost</texPath>
       <graphicClass>Graphic_Single</graphicClass>
