@@ -112,6 +112,60 @@
       </li>
     </degreeDatas>
   </TraitDef>
+  <TraitDef>
+    <defName>WULA_Trait_Researcher</defName>
+    <forcedPassions>
+      <li>Crafting</li>
+      <li>Intellectual</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <label>档案管理员</label>
+        <description>为了发掘和维护乌拉帝国的失落知识，乌拉帝国图书馆的档案管理员不辞辛劳地穿梭在群书的汪洋间。</description>
+        <statOffsets>
+          <GlobalLearningFactor>0.5</GlobalLearningFactor>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  <TraitDef>
+    <defName>WULA_Trait_Connector</defName>
+    <forcedPassions>
+      <li>Intellectual</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <label>高维链接者</label>
+        <description>这些乌拉星人长时间与一个非本位面的设施进行跨维链接，已经慢慢地变得非人化。</description>
+        <disablesNeeds>
+          <li>Joy</li>
+          <li>DrugDesire</li>
+        </disablesNeeds>
+        <statOffsets>
+          <GlobalLearningFactor>0.5</GlobalLearningFactor>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  <TraitDef>
+    <defName>WULA_Trait_Connector</defName>
+    <forcedPassions>
+      <li>Intellectual</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <label>高维链接者</label>
+        <description>这些乌拉星人长时间与一个非本位面的设施进行跨维链接，已经慢慢地变得非人化。</description>
+        <disablesNeeds>
+          <li>Joy</li>
+          <li>DrugDesire</li>
+        </disablesNeeds>
+        <statOffsets>
+          <GlobalLearningFactor>0.5</GlobalLearningFactor>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
   
   <TraitDef>
     <defName>WULA_Trait_Broken_Personality</defName>

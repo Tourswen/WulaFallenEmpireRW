@@ -1,5 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+  <HediffDef Name="Wula_ImplantHediffBase">
+    <hediffClass>Hediff_Implant</hediffClass>
+    <defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <priceImpact>true</priceImpact>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <countsAsAddedPartOrImplant>true</countsAsAddedPartOrImplant>
+    <allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
+  </HediffDef>
+  <HediffDef Name="Wula_ImplantHediffBase_T1" ParentName="Wula_ImplantHediffBase">
+    <stages>
+      <li>
+        <offset>
+          <li>
+            <capacity>Consciousness</capacity>
+            <chance>-0.05</chance>
+          </li>
+        </offset>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef Name="Wula_ImplantHediffBase_T2" ParentName="Wula_ImplantHediffBase">
+    <stages>
+      <li>
+        <offset>
+          <li>
+            <capacity>Consciousness</capacity>
+            <chance>-0.1</chance>
+          </li>
+        </offset>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef Name="Wula_ImplantHediffBase_T3" ParentName="Wula_ImplantHediffBase">
+    <stages>
+      <li>
+        <offset>
+          <li>
+            <capacity>Consciousness</capacity>
+            <chance>-0.2</chance>
+          </li>
+        </offset>
+      </li>
+    </stages>
+  </HediffDef>
   <!-- 能源炉 -->
   <ThingDef ParentName="BodyPartProstheticImperialBase">
     <defName>WULA_Energy_Furnace_Base</defName>
@@ -62,14 +107,11 @@
       </li>
     </comps>
   </ThingDef>
-  <HediffDef ParentName="ImplantHediffBase">
+  <HediffDef ParentName="Wula_ImplantHediffBase_T2">
     <defName>WULA_Energy_Furnace_Hediff_Overdrive</defName>
-    <hediffClass>HediffWithComps</hediffClass>
     <label>超载组件</label>
     <description>安装于能源炉的特殊改件，除了获得常驻的移动速度外，还可以短时间超载机体，获得力量上的爆发性增益。</description>
-    <isBad>false</isBad>
     <duplicationAllowed>false</duplicationAllowed>
-    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
     <stages>
       <li>
         <statOffsets>
@@ -127,7 +169,7 @@
     <defName>WULA_Energy_Furnace_Skill_Hediff_Overdrive</defName>
     <hediffClass>HediffWithComps</hediffClass>
     <label>能源炉超载</label>
-    <description>能源炉正处于超载状态，极大增加了近战的命中率、攻击速度和移动速度，并且不会被敌人的近战减速。</description>
+    <description>能源炉正处于超载状态，极大增加了近战的命中率、攻击速度和移动速度，并且不会被伤害所减速。</description>
     <everCurableByItem>false</everCurableByItem>
     <stages>
       <li>
@@ -186,22 +228,192 @@
       </li>
     </comps>
   </ThingDef>
-  <HediffDef ParentName="ImplantHediffBase">
+  <HediffDef ParentName="Wula_ImplantHediffBase_T2">
     <defName>WULA_Energy_Furnace_Hediff_Hunger</defName>
-    <hediffClass>HediffWithComps</hediffClass>
     <label>偷吃插件</label>
     <description>安装于能源炉的特殊改件，通过增加能源需求变相制造满足感，以增加合成人的心情。</description>
-    <isBad>false</isBad>
     <duplicationAllowed>false</duplicationAllowed>
-    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
     <stages>
       <li>
-        <hungerRateFactor>2</hungerRateFactor>
+        <hungerRateFactor>1</hungerRateFactor>
       </li>
     </stages>
     <defaultInstallPart>WULA_Energy_Furnace_Bodypart</defaultInstallPart>
     <!-- <spawnThingOnRemoved>WULA_Addons_Antenna_Base</spawnThingOnRemoved> -->
   </HediffDef>
+  <ThingDef ParentName="BodyPartProstheticImperialBase">
+    <defName>WULA_Energy_Furnace_Jumpdrive</defName>
+    <label>中央能源炉-跃迁组件</label>
+    <description>将一台精简的跃迁引擎直接安装在合成人的动力炉中，允许它们发起短距离传送。</description>
+    <!-- <descriptionHyperlinks><RecipeDef>InstallFieldHand</RecipeDef></descriptionHyperlinks> -->
+    <!-- <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags> -->
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <Steel>200</Steel>
+      <Plasteel>25</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <recipeMaker Inherit="False">
+      <researchPrerequisite>WULA_Synth_Addons_2_Technology</researchPrerequisite>
+      <recipeUsers>
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+    </recipeMaker>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsableImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>安装中央能源炉跃迁组件</useLabel>
+        <!-- <userMustHaveHediff>WULA_Addons_Antenna_Hediff_Base</userMustHaveHediff> -->
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>WULA_Energy_Furnace_Hediff_Jumpdrive</hediffDef>
+        <bodyPart>WULA_Energy_Furnace_Bodypart</bodyPart>
+        <canUpgrade>false</canUpgrade>
+        <maxSeverity>1</maxSeverity>
+      </li>
+    </comps>
+  </ThingDef>
+  <HediffDef ParentName="Wula_ImplantHediffBase_T3">
+    <defName>WULA_Energy_Furnace_Hediff_Jumpdrive</defName>
+    <label>跃迁组件</label>
+    <description>安装在合成人的动力炉中的精简的跃迁引擎，允许它们发起短距离的传送。</description>
+    <duplicationAllowed>false</duplicationAllowed>
+    <defaultInstallPart>WULA_Energy_Furnace_Bodypart</defaultInstallPart>
+    <!-- <spawnThingOnRemoved>WULA_Addons_Antenna_Base</spawnThingOnRemoved> -->
+    <comps>
+      <li Class="HediffCompProperties_GiveAbility">
+        <abilityDefs>
+          <li>WULA_Energy_Furnace_Skill_Jumpdrive</li>
+        </abilityDefs>
+      </li>
+    </comps>
+  </HediffDef>
+  <AbilityDef ParentName="PsycastBase">
+    <defName>WULA_Energy_Furnace_Skill_Jumpdrive</defName>
+    <label>短距离折跃</label>
+    <description>启动能源炉中的跃迁引擎，迅速折跃至指定位置，不需要目标位置的视野。</description>
+    <iconPath>UI/Abilities/Skip</iconPath>
+    <writeCombatLog>True</writeCombatLog>
+    <showPsycastEffects>False</showPsycastEffects>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <category>Skip</category>
+    <cooldownTicksRange>180~480</cooldownTicksRange>
+    <statBases>
+      <Ability_EntropyGain>0</Ability_EntropyGain>
+      <Ability_PsyfocusCost>-1</Ability_PsyfocusCost>
+    </statBases>
+    <verbProperties>
+      <warmupTime>1</warmupTime>
+      <range>35</range>
+      <targetParams>
+        <canTargetSelf>True</canTargetSelf>
+        <canTargetAnimals>True</canTargetAnimals>
+        <canTargetItems>True</canTargetItems>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class = "CompProperties_AbilityTeleport">
+        <compClass>CompAbilityEffect_Teleport</compClass>
+        <destination>Selected</destination>
+        <requiresLineOfSight>False</requiresLineOfSight>
+        <range>35</range>
+        <clamorType>Ability</clamorType>
+        <clamorRadius>10</clamorRadius>
+        <destClamorType>Ability</destClamorType>
+        <destClamorRadius>10</destClamorRadius>
+        <stunTicks>0</stunTicks>
+        <goodwillImpact>-15</goodwillImpact>
+        <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
+      </li>
+    </comps>
+  </AbilityDef>
+  <ThingDef ParentName="BodyPartProstheticImperialBase">
+    <defName>WULA_Energy_Furnace_AntigrainShell</defName>
+    <label>中央能源炉-自爆组件</label>
+    <description>把一枚反粒子弹安装到体内的能源炉附近，允许合成人发起自杀式袭击。</description>
+    <!-- <descriptionHyperlinks><RecipeDef>InstallFieldHand</RecipeDef></descriptionHyperlinks> -->
+    <!-- <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags> -->
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <Shell_AntigrainWarhead>1</Shell_AntigrainWarhead>
+    </costList>
+    <recipeMaker Inherit="False">
+      <researchPrerequisite>WULA_Synth_Addons_2_Technology</researchPrerequisite>
+      <recipeUsers>
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+    </recipeMaker>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsableImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>安装中央能源炉自爆组件</useLabel>
+        <!-- <userMustHaveHediff>WULA_Addons_Antenna_Hediff_Base</userMustHaveHediff> -->
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>WULA_Energy_Furnace_Hediff_AntigrainShell</hediffDef>
+        <bodyPart>WULA_Energy_Furnace_Bodypart</bodyPart>
+        <canUpgrade>false</canUpgrade>
+        <maxSeverity>1</maxSeverity>
+      </li>
+    </comps>
+  </ThingDef>
+  <HediffDef ParentName="Wula_ImplantHediffBase_T1">
+    <defName>WULA_Energy_Furnace_AntigrainShell</defName>
+    <label>自爆组件</label>
+    <description>一枚安装到体内的能源炉附近的反粒子弹，允许合成人发起自杀式袭击。</description>
+    <duplicationAllowed>false</duplicationAllowed>
+    <defaultInstallPart>WULA_Energy_Furnace_Bodypart</defaultInstallPart>
+    <!-- <spawnThingOnRemoved>WULA_Addons_Antenna_Base</spawnThingOnRemoved> -->
+    <comps>
+      <li Class="HediffCompProperties_GiveAbility">
+        <abilityDefs>
+          <li>WULA_Energy_Furnace_Skill_AntigrainShell</li>
+        </abilityDefs>
+      </li>
+    </comps>
+  </HediffDef>
+  <AbilityDef ParentName="PsycastBase">
+    <defName>WULA_Energy_Furnace_Skill_AntigrainShell</defName>
+    <label>反物质自爆</label>
+    <description>启动能源炉附近的反粒子弹，将附近的一切都化为灰烬。</description>
+    <iconPath>UI/Abilities/AcidSpray</iconPath>
+    <writeCombatLog>True</writeCombatLog>
+    <showPsycastEffects>False</showPsycastEffects>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <!-- <category>Skip</category> -->
+    <!-- <cooldownTicksRange>180~480</cooldownTicksRange> -->
+    <statBases>
+      <Ability_EntropyGain>0</Ability_EntropyGain>
+      <Ability_PsyfocusCost>-1</Ability_PsyfocusCost>
+    </statBases>
+    <verbProperties>
+      <warmupTime>0</warmupTime>
+      <range>14.9</range>
+      <drawAimPie>true</drawAimPie>
+      <requireLineOfSight>false</requireLineOfSight>
+      <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+      <soundCast>VoidTerrorCast</soundCast>
+      <targetable>false</targetable>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityLaunchProjectile">
+        <projectileDef>Bullet_Shell_AntigrainWarhead</projectileDef>
+      </li>
+    </comps>
+  </AbilityDef>
 
   <!-- 天线 -->
   <ThingDef ParentName="BodyPartProstheticImperialBase">
@@ -686,7 +898,7 @@
     <description>该生物的灵魂被人为的分离了。</description>
     <descriptionShort>该生物的灵魂被人为的分离了，在这种状态下，目标不稳定的灵魂每过一段时间都可能导致目标无法行动、陷入昏迷甚至是直接死亡——这种症状没有固定的治愈时间，但是每天都将有一定几率自动消失，届时可再次开展提取手术。</descriptionShort>
     <!-- <initialSeverity>0.5</initialSeverity> -->
-    <minSeverity>0</minSeverity>
+    <minSeverity>0.01</minSeverity>
     <maxSeverity>1</maxSeverity>
     <alwaysShowSeverity>true</alwaysShowSeverity>
     <isBad>true</isBad>

@@ -434,6 +434,7 @@
 
     <comps>
       <li Class="CompProperties_Stunnable">
+        <useLargeEMPEffecter>true</useLargeEMPEffecter>
         <affectedDamageDefs>
           <li>Stun</li>
           <li>EMP</li>

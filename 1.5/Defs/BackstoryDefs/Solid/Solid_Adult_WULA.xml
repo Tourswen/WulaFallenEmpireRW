@@ -557,11 +557,11 @@
   <AlienRace.AlienBackstoryDef>
     <defName>WULA_Adult_Backstory300</defName>
     <slot>Adulthood</slot>
-    <title>人格矩阵装载：星典卫队</title>
-    <titleShort>人格-星典卫队</titleShort>
-    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国星典卫队的模拟记忆。\n\n星典卫队是乌拉帝国图书馆的正规军，她们操纵着天铸军团中那些神秘莫测的战争机械，以对抗入侵之敌并保护乌拉帝国的知识库免遭窃取或破坏。</description>
+    <title>人格矩阵装载：秘典卫队</title>
+    <titleShort>人格-秘典卫队</titleShort>
+    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国秘典卫队的模拟记忆。\n\n秘典卫队是乌拉帝国图书馆的正规军，她们操纵着天铸军团中那些神秘莫测的战争机械，以对抗入侵之敌并保护乌拉帝国的知识库免遭窃取或破坏。</description>
     <skillGains>
-      <Melee>-20</Melee>
+      <Melee>-10</Melee>
       <Shooting>8</Shooting>
       <Construction>5</Construction>
       <Mining>-5</Mining>
@@ -583,7 +583,7 @@
     <bodyTypeMale>Thin</bodyTypeMale>
     <forcedTraitsChance>
       <li>
-        <defName>WULA_Trait_Nun</defName>
+        <defName>WULA_Trait_Researcher</defName>
         <degree>0</degree>
         <chance>100</chance>
       </li>
@@ -592,9 +592,9 @@
   <AlienRace.AlienBackstoryDef>
     <defName>WULA_Adult_Backstory301</defName>
     <slot>Adulthood</slot>
-    <title>人格矩阵装载：秘卷司书</title>
-    <titleShort>人格-秘卷司书</titleShort>
-    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国秘卷司书的模拟记忆。\n\n秘卷司书是乌拉帝国图书馆的档案管理员，为上百种各式语言所编写的时间跨度超过数万年的留存资料进行书目撰写，是维系乌拉帝国知识库正常运转的齿轮。</description>
+    <title>人格矩阵装载：编目司书</title>
+    <titleShort>人格-编目司书</titleShort>
+    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国编目司书的模拟记忆。\n\n编目司书是乌拉帝国图书馆的档案管理员之一，为上千种各式语言所编写的时间跨度超过数百万年的留存资料进行书目撰写，是维系乌拉帝国知识库正常运转的齿轮。</description>
     <skillGains>
       <Construction>-10</Construction>
       <Mining>-5</Mining>
@@ -617,7 +617,7 @@
     <bodyTypeMale>Thin</bodyTypeMale>
     <forcedTraitsChance>
       <li>
-        <defName>WULA_Trait_Nun</defName>
+        <defName>WULA_Trait_Researcher</defName>
         <degree>0</degree>
         <chance>100</chance>
       </li>
@@ -628,20 +628,23 @@
     <slot>Adulthood</slot>
     <title>人格矩阵装载：仲裁圣贤</title>
     <titleShort>人格-仲裁圣贤</titleShort>
-    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国仲裁圣贤的模拟记忆。\n\n仲裁圣贤是专门负责持续校准乌拉帝国图书馆因果论武器“尽归尘土”与宇宙法则的同步，。</description>
+    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国仲裁圣贤的模拟记忆。\n\n仲裁圣贤是专门负责持续校准乌拉帝国图书馆因果论武器“尽归尘土”与宇宙法则的同步，长期凝视高维伟力导致她们变得异于常人，她们洞悉世界最深处的奥秘，不再关注现实世界的浮华。</description>
     <skillGains>
-      <Construction>-10</Construction>
-      <Mining>-5</Mining>
-      <Plants>-5</Plants>
-      <Medicine>-10</Medicine>
-      <Animals>-10</Animals>
-      <Crafting>5</Crafting>
-      <Intellectual>8</Intellectual>
+      <Intellectual>30</Intellectual>
     </skillGains>
     <workDisables>
+      <li>Caring</li>
       <li>Social</li>
       <li>Artistic</li>
+      <li>Crafting</li>
+      <li>Animals</li>
+      <li>Firefighting</li>
+      <li>PlantWork</li>
+      <li>Mining</li>
+      <li>Hunting</li>
+      <li>Constructing</li>
       <li>ManualDumb</li>
+      <li>Violent</li>
     </workDisables>
     <spawnCategories>
       <li>Wula_Backstory_Categories</li>
@@ -651,35 +654,63 @@
     <bodyTypeMale>Thin</bodyTypeMale>
     <forcedTraitsChance>
       <li>
-        <defName>WULA_Trait_Nun</defName>
+        <defName>WULA_Trait_Connector</defName>
         <degree>0</degree>
         <chance>100</chance>
       </li>
     </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
-
   <AlienRace.AlienBackstoryDef>
-    <defName>WULA_Adult_Backstory999</defName>
+    <defName>WULA_Adult_Backstory303</defName>
     <slot>Adulthood</slot>
-    <title>人格矩阵装载：破碎</title>
-    <titleShort>人格-破碎</titleShort>
-    <description>[PAWN_possessive]人格矩阵似乎在从上行链路下载数据包的时候出现了问题——[PAWN_nameDef]没有形成有效的人格，这使得她无法展现任何连续的情感，就像一个发条卡住的钟表。</description>
+    <title>人格矩阵装载：档案司卷</title>
+    <titleShort>人格-档案司卷</titleShort>
+    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国档案司卷的模拟记忆。\n\n档案司卷是乌拉帝国图书馆的档案管理员之一，负责从浩如烟海的知识库中寻找可以被转化为实际生产力的失落科技，并使其重见天日。她们也经常跟随科考舰队执行外勤任务，从宇宙各处回收被时间掩埋的资料。</description>
     <skillGains>
-      <Shooting>-5</Shooting>
-      <Melee>-5</Melee>
-      <Construction>-5</Construction>
+      <Construction>5</Construction>
       <Mining>-5</Mining>
-      <Cooking>-5</Cooking>
       <Plants>-5</Plants>
-      <Animals>-5</Animals>
-      <Crafting>-5</Crafting>
-      <Artistic>-5</Artistic>
-      <Medicine>-5</Medicine>
-      <Social>-5</Social>
-      <Intellectual>-5</Intellectual>
+      <Medicine>-10</Medicine>
+      <Animals>-10</Animals>
+      <Crafting>8</Crafting>
+      <Intellectual>5</Intellectual>
     </skillGains>
-    <!-- <workDisables>Intellectual</workDisables> -->
-    <requiredWorkTags>None</requiredWorkTags>
+    <workDisables>
+      <li>Social</li>
+      <li>Artistic</li>
+    </workDisables>
+    <spawnCategories>
+      <li>Wula_Backstory_Categories</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <forcedTraitsChance>
+      <li>
+        <defName>WULA_Trait_Researcher</defName>
+        <degree>0</degree>
+        <chance>100</chance>
+      </li>
+    </forcedTraitsChance>
+  </AlienRace.AlienBackstoryDef>
+  <AlienRace.AlienBackstoryDef>
+    <defName>WULA_Adult_Backstory304</defName>
+    <slot>Adulthood</slot>
+    <title>人格矩阵装载：伟业劳工</title>
+    <titleShort>人格-伟业劳工</titleShort>
+    <description>[PAWN_possessive]人格矩阵中装载了一个乌拉帝国伟业劳工的模拟记忆。\n\n伟业劳工是服侍于乌拉帝国图书馆、没有感情模拟模块的机械族——通常它们被禁止做成乌拉星人相仿的外貌，但是不知道为何，有人将相关数据上传到乌拉帝国合成人专用的上行链路之中。</description>
+    <skillGains>
+      <Construction>8</Construction>
+      <Plants>-10</Plants>
+      <Animals>-10</Animals>
+      <Crafting>8</Crafting>
+      <Medicine>-10</Medicine>
+    </skillGains>
+    <workDisables>
+      <li>Social</li>
+      <li>Artistic</li>
+      <li>Intellectual</li>
+    </workDisables>
     <spawnCategories>
       <li>Wula_Backstory_Categories</li>
     </spawnCategories>
