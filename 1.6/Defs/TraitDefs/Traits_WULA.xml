@@ -57,9 +57,9 @@
           <AimingDelayFactor>0.5</AimingDelayFactor>
           <ShootingAccuracyPawn>5</ShootingAccuracyPawn>
         </statFactors>
-        <StatOffsets>
+        <statOffsets>
           <SocialImpact>0.2</SocialImpact>
-        </StatOffsets>
+        </statOffsets>
       </li>
     </degreeDatas>
   </TraitDef>
@@ -82,10 +82,6 @@
   </TraitDef>
   <TraitDef>
     <defName>WULA_Trait_Diplomat</defName>
-    <forcedPassions>
-      <li>Artistic</li>
-      <li>Social</li>
-    </forcedPassions>
     <degreeDatas>
       <li>
         <label>外交官</label>
@@ -147,25 +143,6 @@
       </li>
     </degreeDatas>
   </TraitDef>
-  <TraitDef>
-    <defName>WULA_Trait_Connector</defName>
-    <forcedPassions>
-      <li>Intellectual</li>
-    </forcedPassions>
-    <degreeDatas>
-      <li>
-        <label>高维链接者</label>
-        <description>这些乌拉星人长时间与一个非本位面的设施进行跨维链接，已经慢慢地变得非人化。</description>
-        <disablesNeeds>
-          <li>Joy</li>
-          <li>DrugDesire</li>
-        </disablesNeeds>
-        <statOffsets>
-          <GlobalLearningFactor>0.5</GlobalLearningFactor>
-        </statOffsets>
-      </li>
-    </degreeDatas>
-  </TraitDef>
   
   <TraitDef>
     <defName>WULA_Trait_Broken_Personality</defName>
@@ -193,7 +170,6 @@
       <li>
         <label>战争机器</label>
         <description>这是乌拉帝国创造的高智能战争机械，拥有思考的能力。</description>
-        <degree>1</degree>
         <disablesNeeds>
         </disablesNeeds>
       </li>

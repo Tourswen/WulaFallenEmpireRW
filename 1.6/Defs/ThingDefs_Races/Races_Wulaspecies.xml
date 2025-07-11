@@ -266,6 +266,18 @@
           <li>WULA_Sailor_Dress</li>
           <li>WULA_Body_Suit</li>
           <li>WULA_Knight_PowerArmor</li>
+          <li>WULA_Maid_Uniform</li>
+          <li>WULA_Maid_Uniform_Headband</li>
+          <li>WULA_Nurse_Uniform</li>
+          <li>WULA_Nurse_Uniform_Headband</li>
+          <li>WULA_Qipao</li>
+          <li>WULA_Bodystocking</li>
+          <li>WULA_Bodystocking_White</li>
+          <li>WULA_Body_Suit</li>
+          <li>WULA_Assault_Troop_PowerArmor</li>
+          <li>WULA_Assault_Troop_Helmet</li>
+          <li>WULA_Knight_Helmet</li>
+          <li>WULA_Heavy_Infantry_PowerArmor</li>
         </apparelList>
         <blackApparelList>
             <li>Apparel_AdvancedHelmet</li>
@@ -388,8 +400,8 @@
       <!-- 基础血量，很高 -->
 			<baseHealthScale>2.5</baseHealthScale>
 			<!-- 解剖产物 -->
-			<leatherDef>Leather_Light</leatherDef>
-      <specificMeatDef>Meat_Twisted</specificMeatDef>
+			<leatherDef>Steel</leatherDef>
+      <specificMeatDef>Steel</specificMeatDef>
 			<!-- 身体类型 -->
 			<body>WULA_Machine_Body</body>
       <!-- 年龄阶段 -->
@@ -424,13 +436,15 @@
           <minAge>0</minAge>
         </li>
       </lifeStageAges>
-      <butcherProducts>
-        <Steel>30</Steel>
-      </butcherProducts>
+      <canFlyInVacuum>true</canFlyInVacuum>
     </race>
 
-    <Recipes>
-    </Recipes> 
+    <butcherProducts>
+      <Steel>30</Steel>
+    </butcherProducts>
+
+    <recipes>
+    </recipes> 
 
     <comps>
       <li Class="CompProperties_Stunnable">
@@ -474,7 +488,7 @@
         <alienPartGenerator Inherit="False">
           <!-- 允许的头部 -->
           <headTypes Inherit="False">
-            <li>Female_AverageNormal</li>
+            <li>AverageNormal</li>
             <!-- <li>Female_AverageWide</li>
             <li>Female_AveragePointy</li> -->
           </headTypes>
@@ -708,9 +722,6 @@
 			<bloodDef>Filth_MachineBits</bloodDef>
       <!-- 基础血量，很高 -->
 			<baseHealthScale>5</baseHealthScale>
-			<!-- 解剖产物 -->
-			<leatherDef>Leather_Light</leatherDef>
-      <specificMeatDef>Meat_Twisted</specificMeatDef>
 			<!-- 身体类型 -->
 			<body>WULA_AI_Heavy_Panzer_Body</body>
       <!-- 大小 -->
@@ -747,17 +758,21 @@
           <minAge>0</minAge>
         </li>
       </lifeStageAges>
-      <butcherProducts>
-        <Steel>50</Steel>
-        <Plasteel>20</Plasteel>
-      </butcherProducts>
       <nameGenerator MayRequire="Ludeon.RimWorld.Biotech">NamerMech</nameGenerator>
       <mechWeightClass>Heavy</mechWeightClass>
+      <canFlyInVacuum>true</canFlyInVacuum>
       <!-- <mechFixedSkillLevel>20</mechFixedSkillLevel> -->
     </race>
+
+    <butcherProducts>
+      <Steel>50</Steel>
+      <Plasteel>20</Plasteel>
+    </butcherProducts>
     
-    <recipe Inherit="False">
-    </recipe>
+    <recipes>
+    </recipes>
+
+    <receivesSignals>true</receivesSignals>
 
     <comps>
       <li Class="CompProperties_CanBeDormant" />
@@ -775,7 +790,7 @@
       <li MayRequire="Ludeon.RimWorld.Biotech" Class="CompProperties_MechRepairable" />
     </comps>
 
-    <tools>
+    <tools Inherit="False">
       <li>
         <label>碾压</label>
         <labelNoLocation>碾压</labelNoLocation>
@@ -784,7 +799,7 @@
         </capacities>
         <power>14</power>
         <cooldownTime>2.9</cooldownTime>
-        <linkedBodyPartsGroup>WULA_Panzer_Core_Bodypart</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
       </li>
     </tools>
@@ -818,7 +833,7 @@
         <alienPartGenerator Inherit="False">
           <!-- 允许的头部 -->
           <headTypes Inherit="False">
-            <li>Female_AverageNormal</li>
+            <li>AverageNormal</li>
             <!-- <li>Female_AverageWide</li>
             <li>Female_AveragePointy</li> -->
           </headTypes>
@@ -1054,9 +1069,6 @@
 			<bloodDef>Filth_MachineBits</bloodDef>
       <!-- 基础血量，很高 -->
 			<baseHealthScale>4</baseHealthScale>
-			<!-- 解剖产物 -->
-			<leatherDef>Leather_Light</leatherDef>
-      <specificMeatDef>Meat_Twisted</specificMeatDef>
 			<!-- 身体类型 -->
 			<body>Wula_Armour_Body</body>
       <!-- 大小 -->
@@ -1093,16 +1105,21 @@
           <minAge>0</minAge>
         </li>
       </lifeStageAges>
-      <butcherProducts>
-        <Steel>50</Steel>
-        <Plasteel>20</Plasteel>
-      </butcherProducts>
       <nameGenerator MayRequire="Ludeon.RimWorld.Biotech">NamerMech</nameGenerator>
       <mechWeightClass>Heavy</mechWeightClass>
+      <canFlyInVacuum>true</canFlyInVacuum>
       <!-- <mechFixedSkillLevel>20</mechFixedSkillLevel> -->
     </race>
-    <recipe Inherit="False">
-    </recipe>
+
+    <receivesSignals>true</receivesSignals>
+    
+    <recipes>
+    </recipes>
+  
+    <butcherProducts>
+      <Steel>50</Steel>
+      <Plasteel>20</Plasteel>
+    </butcherProducts>
 
     <comps>
       <li Class="CompProperties_CanBeDormant" />
@@ -1135,7 +1152,7 @@
       </li>
     </comps>
 
-    <tools>
+    <tools Inherit="False">
       <li>
         <label>肘击</label>
         <labelNoLocation>肘击</labelNoLocation>
@@ -1144,7 +1161,7 @@
         </capacities>
         <power>15</power>
         <cooldownTime>1.75</cooldownTime>
-        <linkedBodyPartsGroup>Arm</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>Arms</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
       </li>
       <li>
@@ -1155,7 +1172,7 @@
         </capacities>
         <power>12</power>
         <cooldownTime>1.5</cooldownTime>
-        <linkedBodyPartsGroup>Hand</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>Hands</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
       </li>
     </tools>
@@ -1193,6 +1210,7 @@
       </lifeStageAges>
       <!-- <thinkTreeConstant>WarUrchinConstant</thinkTreeConstant> -->
       <!-- <baseHealthScale>4</baseHealthScale> -->
+       <canFlyInVacuum>true</canFlyInVacuum>
     </race>
     <!-- <comps Inherit="False">
       <li Class="CompProperties_CanBeDormant" />
@@ -1238,6 +1256,7 @@
       </lifeStageAges>
       <!-- <thinkTreeConstant>WarUrchinConstant</thinkTreeConstant> -->
       <!-- <baseHealthScale>4</baseHealthScale> -->
+       <canFlyInVacuum>true</canFlyInVacuum>
     </race>
     <!-- <comps Inherit="False">
       <li Class="CompProperties_CanBeDormant" />

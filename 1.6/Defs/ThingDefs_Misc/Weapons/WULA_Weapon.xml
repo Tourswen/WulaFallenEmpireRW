@@ -118,11 +118,15 @@
     </graphicData>
     <equippedAngleOffset>-65</equippedAngleOffset>
     <techLevel>Spacer</techLevel>
+    <smeltable>false</smeltable>
     <statBases>
       <MarketValue>100</MarketValue>
       <WorkToMake>1000</WorkToMake>
       <Mass>1</Mass>
     </statBases>
+    <costList Inherit="False">
+      <Steel>20</Steel>
+    </costList>
     <tools>
       <li>
         <label>槌头</label>
@@ -471,7 +475,7 @@
         <compClass>CompAbilityEffect_Teleport</compClass>
         <destination>Selected</destination>
         <requiresLineOfSight>false</requiresLineOfSight>
-        <psychic>True</psychic>
+        <psychic MayRequire="Ludeon.RimWorld.Royalty">True</psychic>
         <range>80</range>
         <clamorType>Ability</clamorType>
         <clamorRadius>10</clamorRadius>
@@ -481,7 +485,7 @@
       </li>
     </comps>
   </AbilityDef>
-  <ThingDef ParentName="BaseMeleeWeapon_Blunt">
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt" MayRequire="Ludeon.RimWorld.Royalty">
     <defName>WULA_MW_Scepter_Of_Perception</defName>
     <label>APs-97"智之杖"</label>
     <description>乌拉帝国修女所持武器，可以使用魂锲作为充能媒介施展灵能法术，为其他殖民者提供随机灵感。</description>
@@ -559,13 +563,13 @@
       <li Class="CompProperties_AbilityGiveInspiration">
         <canTargetBaby>False</canTargetBaby>
         <psychic>True</psychic>
-      </li>
+      </li> 
       <li Class="CompProperties_AbilitySocialInteraction">
         <interactionDef>WordOfInspiration</interactionDef>
       </li>
     </comps>
   </AbilityDef>
-  <ThingDef ParentName="BaseMeleeWeapon_Blunt">
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt" MayRequire="Ludeon.RimWorld.Royalty">
     <defName>WULA_MW_Scepter_Of_Flash</defName>
     <label>APs-7"闪之杖"</label>
     <description>乌拉帝国修女所持武器，可以使用魂锲作为充能媒介施展灵能法术，使得一片范围内的生物感到恶心眩晕。</description>
@@ -646,7 +650,7 @@
         <compClass>CompAbilityEffect_GiveHediff</compClass>
         <hediffDef>PsychicVertigo</hediffDef>
         <durationMultiplier>PsychicSensitivity</durationMultiplier>
-        <psychic>True</psychic>
+        <psychic MayRequire="Ludeon.RimWorld.Royalty">True</psychic>
         <goodwillImpact>-15</goodwillImpact>
         <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
       </li>
@@ -655,7 +659,7 @@
       </li>
     </comps>
   </AbilityDef>
-  <ThingDef ParentName="BaseMeleeWeapon_Blunt">
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt" MayRequire="Ludeon.RimWorld.Royalty">
     <defName>WULA_MW_Scepter_Of_CLoak</defName>
     <label>APs-50"隐之杖"</label>
     <description>乌拉帝国修女所持武器，可以使用魂锲作为充能媒介施展灵能法术，使得一个目标在其他生物的眼皮底下被遮蔽而获得隐身。</description>
@@ -735,7 +739,7 @@
       <li Class = "CompProperties_AbilityGiveHediff">
         <compClass>CompAbilityEffect_GiveHediff</compClass>
         <hediffDef>PsychicInvisibility</hediffDef>
-        <psychic>True</psychic>
+        <psychic MayRequire="Ludeon.RimWorld.Royalty">True</psychic>
       </li>
       <li Class="CompProperties_AbilityFleckOnTarget">
         <fleckDef>PsycastPsychicEffect</fleckDef>
@@ -743,7 +747,7 @@
     </comps>
     
   </AbilityDef>
-  <ThingDef ParentName="BaseMeleeWeapon_Blunt">
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt" MayRequire="Ludeon.RimWorld.Royalty">
     <defName>WULA_MW_Scepter_Of_Explosive</defName>
     <label>APs-66"燃之杖"</label>
     <description>乌拉帝国修女所持武器，可以使用魂锲作为充能媒介施展灵能法术，投射一发魂烬裂矢轰炸目标区域——这种以纯粹灵能作为驱动的射弹将无视所有的非护盾阻碍，发射时也不需要目标视线。</description>
@@ -833,7 +837,7 @@
     <comps>
       <li Class="CompProperties_AbilityLaunchProjectile">
         <projectileDef>Bullet_WULA_MW_Scepter_Of_Explosive</projectileDef>
-        <psychic>true</psychic>
+        <psychic MayRequire="Ludeon.RimWorld.Royalty">True</psychic>
         <screenShakeIntensity>0.5</screenShakeIntensity>
       </li>
     </comps>
@@ -860,7 +864,7 @@
       <!-- <flyOverhead>true</flyOverhead> -->
     </projectile>
   </ThingDef>
-  <ThingDef ParentName="BaseMeleeWeapon_Blunt">
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt" MayRequire="Ludeon.RimWorld.Royalty">
     <defName>WULA_MW_Scepter_Of_Lost</defName>
     <label>APs-00"惘之杖"</label>
     <description>乌拉帝国修女所持武器，可以使用魂锲作为充能媒介施展灵能法术，使小范围内的敌人陷入心灵冲击状态，从而失去战斗力。由于释放距离相当近，这种法杖被特地设计为短矛的样式，以在不使用法术的情况下对抗眼前的敌人。</description>
@@ -951,7 +955,7 @@
         <compClass>CompAbilityEffect_GiveHediff</compClass>
         <hediffDef>PsychicShock</hediffDef>
         <durationMultiplier>PsychicSensitivity</durationMultiplier>
-        <psychic>True</psychic>
+        <psychic MayRequire="Ludeon.RimWorld.Royalty">True</psychic>
         <goodwillImpact>-15</goodwillImpact>
         <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
       </li>
@@ -960,7 +964,7 @@
       </li>
     </comps>
   </AbilityDef>
-  <ThingDef ParentName="BaseMeleeWeapon_Blunt">
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt" MayRequire="Ludeon.RimWorld.Royalty">
     <defName>WULA_MW_Scepter_Of_Feather</defName>
     <label>APs-72"羽之杖"</label>
     <description>乌拉帝国修女所持武器，可以使用魂锲作为充能媒介施展灵能法术，为大范围内的所有殖民者和机械体提供持续数天的额外移动速度和工作速度。</description>
@@ -1044,7 +1048,7 @@
         <compClass>CompAbilityEffect_GiveHediff</compClass>
         <hediffDef>WULA_MW_Scepter_Of_Feather_Hediff</hediffDef>
         <durationMultiplier>PsychicSensitivity</durationMultiplier>
-        <psychic>True</psychic>
+        <psychic MayRequire="Ludeon.RimWorld.Royalty">True</psychic>
       </li>
       <li Class="CompProperties_AbilityFleckOnTarget">
         <fleckDef>PsycastPsychicEffect</fleckDef>
@@ -1263,11 +1267,11 @@
     <statBases>
       <WorkToMake>40000</WorkToMake>
       <Mass>4.5</Mass>
-      <AccuracyTouch>0.8</AccuracyTouch>
-      <AccuracyShort>0.8</AccuracyShort>
-      <AccuracyMedium>0.8</AccuracyMedium>
-      <AccuracyLong>0.65</AccuracyLong>
-      <RangedWeapon_Cooldown>1.4</RangedWeapon_Cooldown>
+      <AccuracyTouch>0.5</AccuracyTouch>
+      <AccuracyShort>0.5</AccuracyShort>
+      <AccuracyMedium>0.5</AccuracyMedium>
+      <AccuracyLong>0.4</AccuracyLong>
+      <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
     </statBases>
     <verbs>
       <li>
@@ -1501,6 +1505,7 @@
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_WULA_WM_Panzer_Turret</defaultProjectile>
         <warmupTime>0</warmupTime>
+        <forcedMissRadius>0.1</forcedMissRadius>
         <minRange>5.9</minRange>
         <range>75</range>
         <burstShotCount>1</burstShotCount>
@@ -1546,11 +1551,11 @@
     <statBases>
       <WorkToMake>40000</WorkToMake>
       <Mass>150</Mass>
-      <AccuracyTouch>0.9</AccuracyTouch>
-      <AccuracyShort>0.9</AccuracyShort>
-      <AccuracyMedium>0.8</AccuracyMedium>
-      <AccuracyLong>0.75</AccuracyLong>
-      <RangedWeapon_Cooldown>1.1</RangedWeapon_Cooldown>
+      <AccuracyTouch>0.8</AccuracyTouch>
+      <AccuracyShort>0.8</AccuracyShort>
+      <AccuracyMedium>0.7</AccuracyMedium>
+      <AccuracyLong>0.65</AccuracyLong>
+      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
     </statBases>
     <costList Inherit="False">
       <Steel>500</Steel>
@@ -1572,6 +1577,7 @@
         <warmupTime>0.25</warmupTime>
         <range>36</range>
         <burstShotCount>10</burstShotCount>
+        <forcedMissRadius>0.1</forcedMissRadius>
         <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
         <soundCast>Shot_TurretSniper</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
@@ -1784,6 +1790,7 @@
         <defaultProjectile>Bullet_WULA_RW_Armour_AR</defaultProjectile>
         <warmupTime>0.5</warmupTime>
         <range>32</range>
+        <forcedMissRadius>0.1</forcedMissRadius>
         <burstShotCount>12</burstShotCount>
         <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
         <soundCast>Shot_ChargeRifle</soundCast>
@@ -1969,6 +1976,7 @@
         <defaultProjectile>Bullet_WULA_MW_Armour_Lance</defaultProjectile>
         <warmupTime>2.25</warmupTime>
         <minRange>3</minRange>
+        <forcedMissRadius>0.1</forcedMissRadius>
         <range>68</range>
         <burstShotCount>1</burstShotCount>
         <soundCast>Shot_TurretSniper</soundCast>

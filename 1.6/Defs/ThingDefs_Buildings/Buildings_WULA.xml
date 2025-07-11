@@ -183,6 +183,7 @@
     <!-- 可用配方 -->
     <recipes>
      <li>Make_WULA_Charge_Cube</li>
+     <li>Make_WULA_Charge_Cube_Group</li>
     </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
@@ -448,12 +449,10 @@
       <li>ITab_Bills</li>
     </inspectorTabs>
     <comps>
-    <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>200</basePowerConsumption>
       </li>
-    </comps>
     </comps>
     <placeWorkers>
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>

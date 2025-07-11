@@ -24,11 +24,6 @@
       <ingestSound>MechResurrectCast</ingestSound>
     </ingestible>
     <allowedArchonexusCount>200</allowedArchonexusCount>
-    <recipeMaker>
-      <!-- <workAmount>1080</workAmount> -->
-      <!-- <researchPrerequisite>DeadlifeDust</researchPrerequisite> -->
-      <displayPriority>0</displayPriority>
-    </recipeMaker>
     <tradeability>None</tradeability>
   </ThingDef>
 

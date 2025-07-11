@@ -22,17 +22,13 @@
     <minGenerationAge MayRequire="Ludeon.RimWorld.Biotech">200</minGenerationAge>
     <forceNormalGearQuality>true</forceNormalGearQuality>
     <combatPower>0</combatPower>
+    <initialWillRange>10~20</initialWillRange>
+    <initialResistanceRange>10~20</initialResistanceRange>
     <itemQuality>Poor</itemQuality>
     <isFighter>false</isFighter>
     <apparelTags>
       <li>Wula_Apparel_Init</li>
     </apparelTags>
-
-    <apparelRequired>
-      <li>WULA_Sailor_Dress</li>
-      <li>WULA_Maid_Uniform</li>
-      <li>WULA_Nurse_Uniform</li>
-    </apparelRequired>
 
     <weaponMoney>0</weaponMoney>
     <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
@@ -68,6 +64,8 @@
     </lifeStages>
     <minGenerationAge MayRequire="Ludeon.RimWorld.Biotech">200</minGenerationAge>
     <combatPower>0</combatPower>
+    <initialWillRange>10~20</initialWillRange>
+    <initialResistanceRange>10~20</initialResistanceRange>
     <itemQuality>Poor</itemQuality>
     <isFighter>false</isFighter>
     <apparelTags>
@@ -96,6 +94,8 @@
     <race>Wula_AI_Heavy_Panzer</race>
     <defaultFactionType>PlayerColony</defaultFactionType>
     <allowInMechClusters>False</allowInMechClusters>
+    <initialWillRange>9999</initialWillRange>
+    <initialResistanceRange>9999</initialResistanceRange>
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -130,6 +130,8 @@
     <label>SMp-11"甲胄"</label>
     <race>Wula_Armour</race>
     <defaultFactionType>PlayerColony</defaultFactionType>
+    <initialWillRange>9999</initialWillRange>
+    <initialResistanceRange>9999</initialResistanceRange>
     <lifeStages>
       <li>
         <bodyGraphicData>

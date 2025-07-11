@@ -8,6 +8,9 @@
     <listPriority>800</listPriority>
     <major>true</major>
     <onlyIfCausedByHediff>true</onlyIfCausedByHediff>
+    <hediffRequiredAny>
+      <li>Wula_Synth</li>
+    </hediffRequiredAny>
     <showForCaravanMembers>true</showForCaravanMembers>
     <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
     <showUnitTicks>true</showUnitTicks>

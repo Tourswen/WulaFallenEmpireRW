@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>AverageNormal</defName>
+    <graphicPath>Wula/Things/Wula_Armour/Average_Normal</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+</Defs>

@@ -106,7 +106,6 @@
     <researchViewX>3.00</researchViewX>
     <researchViewY>3.20</researchViewY>
     <prerequisites>
-      <li>NobleApparel</li>
       <li>WULA_Synth_Clothes_2_Technology</li>
     </prerequisites>
   </ResearchProjectDef>
@@ -195,7 +194,7 @@
     </prerequisites>
   </ResearchProjectDef>
   <!-- 法杖 -->
-  <ResearchProjectDef ParentName="WULAtechBase">
+  <ResearchProjectDef ParentName="WULAtechBase" MayRequire="Ludeon.RimWorld.Royalty">
     <defName>WULA_Synth_Psi_Technology</defName>
     <label>灵能基础套件</label>
     <description>开发能够供乌拉帝国合成人使用的基础灵能法杖，同时解锁从俘虏身上获取魂锲的能力。</description>
@@ -206,7 +205,7 @@
       <li>WULA_Adv_WorkTable_Technology</li>
     </prerequisites>
   </ResearchProjectDef>
-  <ResearchProjectDef ParentName="WULAtechBase">
+  <ResearchProjectDef ParentName="WULAtechBase" MayRequire="Ludeon.RimWorld.Royalty">
     <defName>WULA_Synth_Psi_2_Technology</defName>
     <label>灵能高级套件</label>
     <description>开发能够供乌拉帝国合成人使用的高级灵能法杖。</description>

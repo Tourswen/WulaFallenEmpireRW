@@ -25,7 +25,7 @@
     </thingCategories>
     <statBases>
       <WorkToMake>15000</WorkToMake>
-      <Mass>0.25</Mass>
+      <Mass>1</Mass>
       <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
       <StuffEffectMultiplierInsulation_Cold>0.22</StuffEffectMultiplierInsulation_Cold>
       <StuffEffectMultiplierInsulation_Heat>0.10</StuffEffectMultiplierInsulation_Heat>
@@ -132,6 +132,7 @@
       <useIngredientsForColor>false</useIngredientsForColor>
     </recipeMaker>
     <statBases>
+      <Mass>1</Mass>
       <WorkToMake>7000</WorkToMake>
     </statBases>
   </ThingDef>
@@ -166,6 +167,7 @@
       <useIngredientsForColor>false</useIngredientsForColor>
     </recipeMaker>
     <statBases>
+      <Mass>0.2</Mass>
       <WorkToMake>3000</WorkToMake>
     </statBases>
   </ThingDef>
@@ -261,9 +263,6 @@
     <defName>WULA_Maid_Uniform_Headband</defName>
     <label>乌拉帝国女仆发饰</label>
     <description>乌拉帝国女仆装的配套发饰。</description>
-    <thingCategories>
-      <li>Headgear</li>
-    </thingCategories>
     <recipeMaker>
       <researchPrerequisite>WULA_Synth_Clothes_Technology</researchPrerequisite>
       <recipeUsers Inherit="False">
@@ -344,9 +343,6 @@
     <defName>WULA_Nurse_Uniform_Headband</defName>
     <label>乌拉帝国护士帽</label>
     <description>乌拉帝国护士装的配套发饰。</description>
-    <thingCategories>
-      <li>Headgear</li>
-    </thingCategories>
     <recipeMaker>
       <researchPrerequisite>WULA_Synth_Clothes_Technology</researchPrerequisite>
       <recipeUsers Inherit="False">
@@ -405,7 +401,7 @@
     </apparel>
     <equippedStatOffsets>
 			<ResearchSpeedFactor>0.1</ResearchSpeedFactor>
-      <EntityStudyRate>0.1</EntityStudyRate>
+      <EntityStudyRate MayRequire="Ludeon.RimWorld.Anomaly">0.1</EntityStudyRate>
       <SocialImpact>0.1</SocialImpact>
     </equippedStatOffsets>
     <costStuffCount>100</costStuffCount>
@@ -458,6 +454,9 @@
       <useIngredientsForColor>false</useIngredientsForColor>
     </recipeMaker>
     <possessionCount>1</possessionCount>
+    <statBases>
+      <Mass>0.2</Mass>
+    </statBases>
   </ThingDef>
   <ThingDef ParentName="WULA_ApparelOnSkinBase">
 		<defName>WULA_Bodystocking</defName>
@@ -606,9 +605,6 @@
   </ThingDef>
   <ThingDef Name="WULA_ApparelHelmetBase" ParentName="HatMakeableBase" Abstract="True">
     <techLevel>Spacer</techLevel>
-    <thingCategories>
-      <li>Headgear</li>
-    </thingCategories>
     <recipeMaker>
       <displayPriority>105</displayPriority>
       <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
@@ -935,6 +931,7 @@
         <minRange>8</minRange>
         <onlyManualCast>true</onlyManualCast>
         <hasStandardCommand>true</hasStandardCommand>
+        <forcedMissRadius>2</forcedMissRadius>
         <targetable>true</targetable>
         <violent>true</violent>
         <targetParams>

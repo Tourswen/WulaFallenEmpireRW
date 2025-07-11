@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <HediffDef Name="Wula_ImplantHediffBase">
+  <HediffDef Name="Wula_ImplantHediffBase" Abstract="True">
     <hediffClass>Hediff_Implant</hediffClass>
     <defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
     <isBad>false</isBad>
@@ -9,7 +9,7 @@
     <countsAsAddedPartOrImplant>true</countsAsAddedPartOrImplant>
     <allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
   </HediffDef>
-  <HediffDef Name="Wula_ImplantHediffBase_T1" ParentName="Wula_ImplantHediffBase">
+  <HediffDef Name="Wula_ImplantHediffBase_T1" ParentName="Wula_ImplantHediffBase" Abstract="True">
     <stages>
       <li>
         <capMods>
@@ -21,7 +21,7 @@
       </li>
     </stages>
   </HediffDef>
-  <HediffDef Name="Wula_ImplantHediffBase_T2" ParentName="Wula_ImplantHediffBase">
+  <HediffDef Name="Wula_ImplantHediffBase_T2" ParentName="Wula_ImplantHediffBase" Abstract="True">
     <stages>
       <li>
         <capMods>
@@ -33,7 +33,7 @@
       </li>
     </stages>
   </HediffDef>
-  <HediffDef Name="Wula_ImplantHediffBase_T3" ParentName="Wula_ImplantHediffBase">
+  <HediffDef Name="Wula_ImplantHediffBase_T3" ParentName="Wula_ImplantHediffBase" Abstract="True">
     <stages>
       <li>
         <capMods>
@@ -46,7 +46,7 @@
     </stages>
   </HediffDef>
   <!-- 能源炉 -->
-  <ThingDef ParentName="BodyPartProstheticImperialBase">
+  <ThingDef ParentName="BodyPartProstheticMakeableBase">
     <defName>WULA_Energy_Furnace_Base</defName>
     <label>中央能源炉（基础）</label>
     <description>机械乌拉的核心部件之一，负责提供永不衰竭的澎湃机械动力，并代替各种内脏执行内循环的任务。</description>
@@ -71,7 +71,7 @@
       <li>FieldHand</li>
     </techHediffsTags> -->
   </ThingDef>
-  <ThingDef ParentName="BodyPartProstheticImperialBase">
+  <ThingDef ParentName="BodyPartProstheticMakeableBase">
     <defName>WULA_Energy_Furnace_Overdrive</defName>
     <label>中央能源炉-超载组件</label>
     <description>安装于能源炉的特殊改件，除了获得常驻的移动速度外，还可以短时间超载机体，获得力量上的爆发性增益。</description>
@@ -112,6 +112,7 @@
     <label>超载组件</label>
     <description>安装于能源炉的特殊改件，除了获得常驻的移动速度外，还可以短时间超载机体，获得力量上的爆发性增益。</description>
     <duplicationAllowed>false</duplicationAllowed>
+    <minSeverity>1</minSeverity>
     <stages>
       <li>
         <statOffsets>
@@ -187,12 +188,12 @@
       <li Class="HediffCompProperties_Disappears">
         <showRemainingTime>true</showRemainingTime>
       </li>
-      <li Class="HediffCompProperties_Effecter">
+      <li Class="HediffCompProperties_Effecter" MayRequire="Ludeon.RimWorld.Anomaly">
         <stateEffecter>GhoulFrenzy</stateEffecter>
       </li>
     </comps>
   </HediffDef>
-  <ThingDef ParentName="BodyPartProstheticImperialBase">
+  <ThingDef ParentName="BodyPartProstheticMakeableBase">
     <defName>WULA_Energy_Furnace_Hunger</defName>
     <label>中央能源炉-偷吃组件</label>
     <description>安装于能源炉的特殊改件，通过增加能源需求变相制造满足感，以增加合成人的心情。</description>
@@ -241,7 +242,7 @@
     <defaultInstallPart>WULA_Energy_Furnace_Bodypart</defaultInstallPart>
     <!-- <spawnThingOnRemoved>WULA_Addons_Antenna_Base</spawnThingOnRemoved> -->
   </HediffDef>
-  <!-- <ThingDef ParentName="BodyPartProstheticImperialBase">
+  <!-- <ThingDef ParentName="BodyPartProstheticMakeableBase">
     <defName>WULA_Energy_Furnace_Jumpdrive</defName>
     <label>中央能源炉-跃迁组件</label>
     <description>将一台精简的跃迁引擎直接安装在合成人的动力炉中，允许它们传送至附近的随机位置。</description>
@@ -327,7 +328,7 @@
       </li>
     </comps>
   </AbilityDef>
-  <ThingDef ParentName="BodyPartProstheticImperialBase">
+  <ThingDef ParentName="BodyPartProstheticMakeableBase">
     <defName>WULA_Energy_Furnace_AntigrainShell</defName>
     <label>中央能源炉-自爆组件</label>
     <description>把一枚反粒子弹安装到体内的能源炉附近，允许合成人发起自杀式袭击。</description>
@@ -405,7 +406,7 @@
   </AbilityDef> -->
 
   <!-- 天线 -->
-  <ThingDef ParentName="BodyPartProstheticImperialBase">
+  <ThingDef ParentName="BodyPartProstheticMakeableBase">
     <defName>WULA_Addons_Antenna_Base</defName>
     <label>上行链路天线</label>
     <description>机械乌拉的核心部件之一，除了接收来自乌拉帝国人工智能网络“演算圆环”的信号外，还能兼职控制其他低级机械体。</description>
@@ -640,7 +641,7 @@
     <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
     <addsHediff>WULA_Body_Fixed</addsHediff>
     <recipeUsers Inherit="False">
-      <li>wulaspecies</li>
+      <li>WulaSpecies</li>
     </recipeUsers>
     
     <workAmount>1500</workAmount>
@@ -679,7 +680,7 @@
     <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
     <addsHediff>WULA_Body_Fixed</addsHediff>
     <recipeUsers Inherit="False">
-      <li>wulaspecies</li>
+      <li>WulaSpecies</li>
     </recipeUsers>
     
     <workAmount>3000</workAmount>
@@ -718,7 +719,7 @@
     <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
     <addsHediff>WULA_Body_Fixed</addsHediff>
     <recipeUsers Inherit="False">
-      <li>wulaspecies</li>
+      <li>WulaSpecies</li>
     </recipeUsers>
     
     <workAmount>3000</workAmount>
@@ -757,7 +758,7 @@
     <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
     <addsHediff>WULA_Body_Fixed</addsHediff>
     <recipeUsers Inherit="False">
-      <li>wulaspecies</li>
+      <li>WulaSpecies</li>
     </recipeUsers>
     
     <workAmount>1500</workAmount>
@@ -796,7 +797,7 @@
     <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
     <addsHediff>WULA_Body_Fixed</addsHediff>
     <recipeUsers Inherit="False">
-      <li>wulaspecies</li>
+      <li>WulaSpecies</li>
     </recipeUsers>
     
     <workAmount>1500</workAmount>
@@ -843,7 +844,7 @@
     <surgeryOutcomeEffect IsNull="True"/> <!-- Always succeeds -->
     <addsHediff>WULA_Body_Fixed</addsHediff>
     <recipeUsers Inherit="False">
-      <li>wulaspecies</li>
+      <li>WulaSpecies</li>
     </recipeUsers>
     
     <workAmount>7000</workAmount>
