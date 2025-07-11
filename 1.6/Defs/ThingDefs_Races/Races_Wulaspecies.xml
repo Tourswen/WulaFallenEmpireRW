@@ -311,6 +311,7 @@
             <li>Apparel_Bandolier</li>
         </blackApparelList>
         <!-- 生育能力 -->
+         <onlyReproduceWithRestrictedRaces>true</onlyReproduceWithRestrictedRaces>
         <canReproduce>false</canReproduce>
         <!-- 允许的特质类型 -->
         <traitList>
@@ -386,6 +387,7 @@
       <ConstructionSpeed>1</ConstructionSpeed>
       <!-- 研究速度 -->
       <ResearchSpeed>1</ResearchSpeed>
+      <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">1</VacuumResistance>
     </statBases>
 
     <race>
@@ -645,6 +647,7 @@
         </blackEndoCategories>
         <onlyHaveRaceRestrictedGenes>true</onlyHaveRaceRestrictedGenes>
         <!-- 生育能力 -->
+        <onlyReproduceWithRestrictedRaces>true</onlyReproduceWithRestrictedRaces>
         <canReproduce>false</canReproduce>
       </raceRestriction>
       <!-- 想法设置 -->
@@ -708,6 +711,7 @@
       <ConstructionSpeed>1</ConstructionSpeed>
       <!-- 研究速度 -->
       <ResearchSpeed>1</ResearchSpeed>
+      <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">1</VacuumResistance>
     </statBases>
 
     <race>
@@ -989,6 +993,7 @@
         </blackEndoCategories>
         <onlyHaveRaceRestrictedGenes>true</onlyHaveRaceRestrictedGenes>
         <!-- 生育能力 -->
+        <onlyReproduceWithRestrictedRaces>true</onlyReproduceWithRestrictedRaces>
         <canReproduce>false</canReproduce>
       </raceRestriction>
       <!-- 想法设置 -->
@@ -1052,6 +1057,7 @@
       <ConstructionSpeed>1</ConstructionSpeed>
       <!-- 研究速度 -->
       <ResearchSpeed>1</ResearchSpeed>
+      <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">1</VacuumResistance>
     </statBases>
 
     <race>
