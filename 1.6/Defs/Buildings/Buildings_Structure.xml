@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ThingDef ParentName="BuildingBase">
+	<ThingDef ParentName="Wall">
     <defName>WulaWall</defName>
     <label>乌拉帝国堡垒</label>
-    <description>乌拉帝国堡垒外壁，相当厚实，能够抵御大量爆炸和震荡伤害。</description>
+    <description>乌拉帝国堡垒外壁，相当厚实，能够抵御大量爆炸和震荡伤害，并且拥有气密性，可以用在飞船外壳上。</description>
     <thingClass>Building</thingClass>
     <category>Building</category>
     <graphicData>
@@ -60,7 +60,10 @@
     <blockLight>true</blockLight>
     <canOverlapZones>false</canOverlapZones>
     <fertility>0</fertility>
+    <costStuffCount>0</costStuffCount>
+    <stuffCategories Inherit="False"></stuffCategories>
     <building>
+      <isAirtight>true</isAirtight>
       <paintable>true</paintable>
       <isInert>true</isInert>
       <isPlaceOverableWall>true</isPlaceOverableWall>
