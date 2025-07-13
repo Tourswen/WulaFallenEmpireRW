@@ -201,141 +201,6 @@
       <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
   </ThingDef>
-  <!-- 长枪 -->
-  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
-    <defName>WULA_MW_Lance</defName>
-    <label>CMl-28"骑枪"</label>
-    <description>乌拉帝国骑士所喜爱的重型近战武器，采用高强度纳米碳纤维复合材料内芯，外层覆盖着带有散热格栅和能量导流槽的记忆合金装甲板，在进行穿刺时能短暂激活反推引擎增加攻击力。</description>
-    <weaponTags>
-      <li>Spear</li>
-    </weaponTags>
-    <graphicData>
-      <texPath>Wula/Weapon/WULA_MW_Lance</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
-      <drawSize>2</drawSize>
-    </graphicData>
-    <!-- <equippedAngleOffset>-65</equippedAngleOffset> -->
-    <techLevel>Spacer</techLevel>
-    <equippedAngleOffset>-25</equippedAngleOffset>
-    <costStuffCount>120</costStuffCount>
-    <stuffCategories>
-      <li>Metallic</li>
-    </stuffCategories>
-    <costList Inherit="False">
-      <Plasteel>10</Plasteel>
-      <ComponentIndustrial>6</ComponentIndustrial>
-    </costList>
-    <statBases>
-      <WorkToMake>20000</WorkToMake>
-      <Mass>10</Mass>
-    </statBases>
-    <tools>
-      <li>
-        <label>横扫</label>
-        <capacities>
-          <li>Blunt</li>
-          <li>Poke</li>
-        </capacities>
-        <power>42</power>
-        <cooldownTime>1.6</cooldownTime>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li>
-              <def>Stun</def>
-              <amount>14</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-      </li>
-      <li>
-        <label>穿刺</label>
-        <capacities>
-          <li>Stab</li>
-        </capacities>
-        <power>65</power>
-        <armorPenetration>0.80</armorPenetration>
-        <cooldownTime>2.6</cooldownTime>
-      </li>
-    </tools>
-    <recipeMaker>
-      <recipeUsers Inherit="False">
-        <li>WULA_Cube_Productor_Energy</li>
-      </recipeUsers>
-      <researchPrerequisite>WULA_Synth_Weapon_2_Melee_Technology</researchPrerequisite>
-      <skillRequirements>
-        <Crafting>7</Crafting>
-      </skillRequirements>
-      <displayPriority>450</displayPriority>
-      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
-    </recipeMaker>
-  </ThingDef>
-  <!-- 链锯剑 -->
-  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
-    <defName>WULA_MW_ChainSword</defName>
-    <label>CMs-1"链锯剑"</label>
-    <description>这种嗡嗡作响的乌拉帝国链锯类武器有多条环绕剑脊高速旋转的多层复合锯齿链条，之间嵌有能量传导节点或微型冷却剂喷口，是力量与纯粹疯狂的象征。</description>
-    <graphicData>
-      <texPath>Wula/Weapon/WULA_MW_ChainSword</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
-    </graphicData>
-    <!-- <equippedAngleOffset>-65</equippedAngleOffset> -->
-    <techLevel>Spacer</techLevel>
-    <costStuffCount>60</costStuffCount>
-    <stuffCategories>
-      <li>Metallic</li>
-    </stuffCategories>
-    <costList Inherit="False">
-      <Plasteel>5</Plasteel>
-      <ComponentIndustrial>3</ComponentIndustrial>
-    </costList>
-    <statBases>
-      <WorkToMake>20000</WorkToMake>
-      <Mass>2.5</Mass>
-    </statBases>
-    <tools>
-      <li>
-        <label>链锯</label>
-        <capacities>
-          <li>Cut</li>
-        </capacities>
-        <armorPenetration>0.5</armorPenetration>
-        <power>18</power> <!-- 2.5x natural fist -->
-        <cooldownTime>1</cooldownTime>
-        <soundMeleeHit>Pawn_Melee_PowerClaw_Hit</soundMeleeHit>
-        <soundMeleeMiss>Pawn_Melee_PowerClaw_Miss</soundMeleeMiss>
-      </li>
-      <li>
-        <label>柄击</label>
-        <capacities>
-          <li>Blunt</li>
-          <li>Poke</li>
-        </capacities>
-        <power>14</power>
-        <cooldownTime>0.75</cooldownTime>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li>
-              <def>Stun</def>
-              <amount>5</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-      </li>
-    </tools>
-    <recipeMaker>
-      <recipeUsers Inherit="False">
-        <li>WULA_Cube_Productor_Energy</li>
-      </recipeUsers>
-      <researchPrerequisite>WULA_Synth_Weapon_2_Melee_Technology</researchPrerequisite>
-      <skillRequirements>
-        <Crafting>7</Crafting>
-      </skillRequirements>
-      <displayPriority>450</displayPriority>
-      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
-    </recipeMaker>
-  </ThingDef>
   <!-- 动力钉头锤 -->
   <ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
     <defName>WULA_MW_Charge_Mace</defName>
@@ -381,11 +246,244 @@
       <recipeUsers Inherit="False">
         <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
+      <researchPrerequisite>WULA_Synth_Weapon_2_Stun_Technology</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <displayPriority>450</displayPriority>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+  <!-- 长枪 -->
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>WULA_MW_Lance</defName>
+    <label>CMl-28"铳枪"</label>
+    <description>乌拉帝国骑士所喜爱的枪炮合一的重型近战武器，采用高强度纳米碳纤维复合材料内芯，外层覆盖着带有散热格栅和能量导流槽的记忆合金装甲板，既可以在近战中刺穿对手，也可以从远距离上发射高精度射弹打击敌军。</description>
+    <weaponTags>
+      <li>Spear</li>
+    </weaponTags>
+    <graphicData>
+      <texPath>Wula/Weapon/WULA_MW_Lance</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>2</drawSize>
+    </graphicData>
+    <techLevel>Spacer</techLevel>
+    <costStuffCount>120</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList Inherit="False">
+      <Plasteel>10</Plasteel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <WorkToMake>20000</WorkToMake>
+      <Mass>10</Mass>
+      <AccuracyTouch>0.5</AccuracyTouch>
+      <AccuracyShort>0.5</AccuracyShort>
+      <AccuracyMedium>0.4</AccuracyMedium>
+      <AccuracyLong>0.3</AccuracyLong>
+      <RangedWeapon_Cooldown>0</RangedWeapon_Cooldown>
+    </statBases>
+    <tools>
+      <li>
+        <label>横扫</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>42</power>
+        <cooldownTime>1.6</cooldownTime>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>穿刺</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>65</power>
+        <armorPenetration>0.80</armorPenetration>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
       <researchPrerequisite>WULA_Synth_Weapon_2_Melee_Technology</researchPrerequisite>
       <skillRequirements>
         <Crafting>7</Crafting>
       </skillRequirements>
       <displayPriority>450</displayPriority>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_WULA_MW_Lance</defaultProjectile>
+        <warmupTime>2.25</warmupTime>
+        <minRange>3</minRange>
+        <forcedMissRadius>0.1</forcedMissRadius>
+        <range>38</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_TurretSniper</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>6</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_WULA_MW_Lance</defName>
+    <label>铳枪穿甲弹</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <tickerType>Normal</tickerType>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <texPath>Wula/Projectile/WULA_Bullet_ChargeLanceShot_Red</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>3.4</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>120</damageAmountBase>
+      <speed>180</speed>
+      <explosionRadius>1.6</explosionRadius>
+      <arcHeightFactor>0.4</arcHeightFactor>
+      <soundExplode>Explosion_Rocket</soundExplode>
+      <armorPenetrationBase>0.7</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+  <!-- 链锯剑 -->
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>WULA_MW_ChainSword</defName>
+    <label>CMs-1"链锯剑"</label>
+    <description>这种嗡嗡作响的乌拉帝国链锯类武器有多条环绕剑脊高速旋转的多层复合锯齿链条，之间嵌有能量传导节点或微型冷却剂喷口，是力量与纯粹疯狂的象征。</description>
+    <graphicData>
+      <texPath>Wula/Weapon/WULA_MW_ChainSword</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <!-- <equippedAngleOffset>-65</equippedAngleOffset> -->
+    <techLevel>Spacer</techLevel>
+    <costStuffCount>60</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList Inherit="False">
+      <Plasteel>5</Plasteel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <WorkToMake>20000</WorkToMake>
+      <Mass>2.5</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>链锯</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <armorPenetration>0.5</armorPenetration>
+        <power>18</power> <!-- 2.5x natural fist -->
+        <cooldownTime>1.4</cooldownTime>
+        <soundMeleeHit>Pawn_Melee_PowerClaw_Hit</soundMeleeHit>
+        <soundMeleeMiss>Pawn_Melee_PowerClaw_Miss</soundMeleeMiss>
+      </li>
+      <li>
+        <label>柄击</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>1.75</cooldownTime>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>5</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+      <researchPrerequisite>WULA_Synth_Weapon_2_Melee_Technology</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <displayPriority>450</displayPriority>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+  <!-- 双头刀 -->
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>WULA_MW_Glaive</defName>
+    <label>CMl-99"剑冢"</label>
+    <description>乌拉帝国修女惯用的大型双头刀，装备了悬浮轴承、能量刃、惯性控制场和精密的传感器系统，让使用者能像舞蹈般挥舞两端的致命锋刃。</description>
+    <weaponTags>
+      <li>Spear</li>
+    </weaponTags>
+    <graphicData>
+      <texPath>Wula/Weapon/WULA_MW_Glaive</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    <!-- <uiIconScale>0.4</uiIconScale> -->
+    <!-- <equippedAngleOffset>-65</equippedAngleOffset> -->
+    <techLevel>Spacer</techLevel>
+    <!-- <equippedAngleOffset>-25</equippedAngleOffset> -->
+    <costStuffCount>200</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList Inherit="False">
+      <Plasteel>10</Plasteel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <WorkToMake>30000</WorkToMake>
+      <Mass>100</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>横扫</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>32</power>
+        <cooldownTime>1.7</cooldownTime>
+        <armorPenetration>0.50</armorPenetration>
+      </li>
+      <li>
+        <label>穿刺</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>40</power>
+        <armorPenetration>0.90</armorPenetration>
+        <cooldownTime>2.1</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+      <researchPrerequisite>WULA_Synth_Weapon_2_Melee_Technology</researchPrerequisite>
       <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
   </ThingDef>
@@ -1310,7 +1408,7 @@
     </recipeMaker>
     <statBases>
       <WorkToMake>50000</WorkToMake>
-      <Mass>10</Mass>
+      <Mass>20</Mass>
       <AccuracyTouch>0.6</AccuracyTouch>
       <AccuracyShort>0.6</AccuracyShort>
       <AccuracyMedium>0.6</AccuracyMedium>
@@ -1383,87 +1481,164 @@
       <screenShakeFactor>1.5</screenShakeFactor>
     </projectile>
   </ThingDef>
-
-  <!-- 萨克森装备 -->
-  <ThingDef ParentName="BaseGun">
-    <defName>WULA_WM_Rocket_Pod</defName>
-    <label>PRr-34"石英"</label>
-    <description>由乌拉帝国的"萨克森"战车所装备的火箭发射器，可以发射密集的火箭覆盖可见范围内的敌人。</description>
+  <!-- 自动炮 -->
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>WULA_RW_AutoCannon</defName>
+    <label>FLm-78"萤石"</label>
+    <description>一般由乌拉帝国跳帮组或骑士军团携带的自动炮，在拥有长射程的同时火力也非常凶猛，会造成区域性的爆炸效果以控制集群敌军。</description>
     <techLevel>Ultra</techLevel>
+    <!-- <techLevel>Spacer</techLevel> -->
     <graphicData>
-      <texPath>Wula/Weapon/WULA_WM_Rocket_Pod</texPath>
+      <texPath>Wula/Weapon/WULA_RW_AutoCannon</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>1.35</drawSize>
+      <drawSize>1.65</drawSize>
     </graphicData>
-    <tradeability>None</tradeability>
+    <uiIconScale>0.75</uiIconScale>
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+      <researchPrerequisite>WULA_Synth_Weapon_3_Bomb_Technology</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
     <costList Inherit="False">
-      <Steel>500</Steel>
-      <Plasteel>150</Plasteel>
+      <Steel>300</Steel>
+      <Plasteel>80</Plasteel>
       <ComponentSpacer>8</ComponentSpacer>
     </costList>
     <statBases>
       <WorkToMake>40000</WorkToMake>
-      <Mass>150</Mass>
-      <AccuracyTouch>0.6</AccuracyTouch>
-      <AccuracyShort>0.6</AccuracyShort>
-      <AccuracyMedium>0.6</AccuracyMedium>
-      <AccuracyLong>0.4</AccuracyLong>
-      <RangedWeapon_Cooldown>4.0</RangedWeapon_Cooldown>
+      <Mass>20</Mass>
+      <AccuracyTouch>0.85</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.75</AccuracyMedium>
+      <AccuracyLong>0.65</AccuracyLong>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
     </statBases>
-    <recipeMaker>
-      <recipeUsers Inherit="False">
-        <li>WULA_War_Machine_Weapon_Productor</li>
-      </recipeUsers>
-      <researchPrerequisite>WULA_AI_Machine_Panzer_Technology</researchPrerequisite>
-      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
-    </recipeMaker>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <warmupTime>2.2</warmupTime>
-        <minRange>4</minRange>
-        <defaultProjectile>Bullet_WULA_WM_Rocket_Pod</defaultProjectile>
-        <range>38</range>
-        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
-        <burstShotCount>32</burstShotCount>
-        <forcedMissRadius>6.25</forcedMissRadius>
-        <forcedMissEvenDispersal>true</forcedMissEvenDispersal>
+        <defaultProjectile>Bullet_WULA_RW_AutoCannon</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>32</range>
+        <forcedMissRadius>0.1</forcedMissRadius>
+        <burstShotCount>6</burstShotCount>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <soundCast>Shot_ChargeRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
         <targetParams>
           <canTargetPawns>true</canTargetPawns>
           <canTargetLocations>true</canTargetLocations>
           <canTargetBuildings>true</canTargetBuildings>
         </targetParams>
-        <soundCast>RocketswarmLauncher_Fire</soundCast>
-        <soundCastTail>GunTail_Heavy</soundCastTail>
-        <muzzleFlashScale>14</muzzleFlashScale>
       </li>
     </verbs>
   </ThingDef>
-  <ThingDef>
-    <defName>Bullet_WULA_WM_Rocket_Pod</defName>
-    <label>石英非制导火箭</label>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_WULA_RW_AutoCannon</defName>
+    <label>萤石自动炮子弹</label>
     <thingClass>Projectile_Explosive</thingClass>
-    <category>Projectile</category>
     <tickerType>Normal</tickerType>
-    <altitudeLayer>Projectile</altitudeLayer>
-    <useHitPoints>False</useHitPoints>
     <neverMultiSelect>True</neverMultiSelect>
     <graphicData>
-      <texPath>Things/Projectile/Rocket_Swarm</texPath>
+      <texPath>Wula/Projectile/WULA_Bullet_ChargeLanceShot_Red</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>1.2</drawSize>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>1.4</drawSize>
     </graphicData>
     <projectile>
-      <damageDef>Bomb</damageDef>
-      <explosionRadius>2.5</explosionRadius>
-      <speed>38</speed>
-      <armorPenetrationBase>0.35</armorPenetrationBase>
-      <damageAmountBase>50</damageAmountBase>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>22</damageAmountBase>
+      <speed>90</speed>
+      <explosionRadius>1.2</explosionRadius>
       <arcHeightFactor>0.4</arcHeightFactor>
       <soundExplode>Explosion_Rocket</soundExplode>
+      <armorPenetrationBase>0.75</armorPenetrationBase>
+      <screenShakeFactor>0.1</screenShakeFactor>
     </projectile>
   </ThingDef>
+  <!-- 榴弹发射器 -->
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>WULA_RW_Auto_GL</defName>
+    <label>SEl-78"角砾岩"</label>
+    <description>乌拉帝国所装备的自动榴弹炮，所发射高抛的高爆榴弹或许杀伤力没有想象的这么强，但是射速极快，几乎可以依靠单兵创造一片轰炸区。</description>
+    <techLevel>Ultra</techLevel>
+    <!-- <techLevel>Spacer</techLevel> -->
+    <graphicData>
+      <texPath>Wula/Weapon/WULA_RW_Auto_GL</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.65</drawSize>
+    </graphicData>
+    <uiIconScale>0.75</uiIconScale>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+      <researchPrerequisite>WULA_Synth_Weapon_3_Bomb_Technology</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+    <costList Inherit="False">
+      <Steel>380</Steel>
+      <Plasteel>60</Plasteel>
+      <ComponentSpacer>8</ComponentSpacer>
+    </costList>
+    <statBases>
+      <WorkToMake>40000</WorkToMake>
+      <Mass>20</Mass>
+      <AccuracyTouch>0.5</AccuracyTouch>
+      <AccuracyShort>0.5</AccuracyShort>
+      <AccuracyMedium>0.4</AccuracyMedium>
+      <AccuracyLong>0.3</AccuracyLong>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_WULA_RW_Auto_GL</defaultProjectile>
+        <warmupTime>0.2</warmupTime>
+        <forcedMissRadius>1</forcedMissRadius>
+        <forcedMissRadiusClassicMortars>1</forcedMissRadiusClassicMortars>
+        <isMortar>true</isMortar>
+        <requireLineOfSight>false</requireLineOfSight>
+        <minRange>4</minRange>
+        <range>48</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Mortar_LaunchA</soundCast>
+        <muzzleFlashScale>12</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_WULA_RW_Auto_GL</defName>
+    <label>角砾岩榴弹</label>
+    <graphicData>
+      <texPath>Wula/Projectile/WULA_Shrapnel</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>25</damageAmountBase>
+      <speed>35</speed>
+      <explosionRadius>3.5</explosionRadius>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
+      <flyOverhead>true</flyOverhead>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+      <soundExplode>MortarBomb_Explode</soundExplode>
+      <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+      <soundAmbient>MortarRound_Ambient</soundAmbient>
+    </projectile>
+  </ThingDef>
+
+  <!-- 萨克森装备 -->
   <ThingDef ParentName="BaseGun">
     <defName>WULA_WM_Panzer_Turret</defName>
     <label>ATt-6"金红石"</label>
@@ -1472,9 +1647,10 @@
     <graphicData>
       <texPath>Wula/Weapon/WULA_WM_Panzer_Turret</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>1.35</drawSize>
+      <drawSize>2</drawSize>
     </graphicData>
     <tradeability>None</tradeability>
+    <uiIconScale>0.5</uiIconScale>
     <statBases>
       <WorkToMake>20000</WorkToMake>
       <Mass>150</Mass>
@@ -1497,7 +1673,7 @@
       <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
     <weaponTags>
-      <li>WULA_AI_Heavy_Panzer_Init_Weapon</li>
+      <li>WULA_AI_Heavy_Panzer_AT_Weapon</li>
     </weaponTags>
     <verbs>
       <li>
@@ -1540,13 +1716,14 @@
   <ThingDef ParentName="BaseGun">
     <defName>WULA_WM_Panzer_Autocannon</defName>
     <label>SRc-15"辉锑"</label>
-    <description>由乌拉帝国的"萨克森"战车所装备的自动炮，能够组织起高射速的弹幕压制杀伤大规模目标。</description>
+    <description>由乌拉帝国的"萨克森"战车所装备的自动炮，能够组织起高射速的弹幕压制杀伤大规模目标，并且外挂了两具PRr-34"石英"火箭发射器，用于对抗集群冲击。</description>
     <techLevel>Ultra</techLevel>
     <graphicData>
       <texPath>Wula/Weapon/WULA_WM_Panzer_Autocannon</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>1.35</drawSize>
+      <drawSize>2</drawSize>
     </graphicData>
+    <uiIconScale>0.5</uiIconScale>
     <tradeability>None</tradeability>
     <statBases>
       <WorkToMake>40000</WorkToMake>
@@ -1557,6 +1734,9 @@
       <AccuracyLong>0.65</AccuracyLong>
       <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
     </statBases>
+    <weaponTags>
+      <li>WULA_AI_Heavy_Panzer_Gunner_Weapon</li>
+    </weaponTags>
     <costList Inherit="False">
       <Steel>500</Steel>
       <Plasteel>150</Plasteel>
@@ -1589,6 +1769,18 @@
         </targetParams>
       </li>
     </verbs>
+
+    <comps Inherit="False">
+      <li Class="CompProperties_EquippableAbilityReloadable">
+        <abilityDef>WULA_WM_Panzer_Autocannon_Ability</abilityDef>
+        <!-- <maxCharges>2</maxCharges> -->
+        <soundReload>AnomalyAbilityWarmup</soundReload>
+        <chargeNoun>火箭弹</chargeNoun>
+        <!-- <ammoDef>WULA_Soul_Wedge</ammoDef> -->
+        <!-- <ammoCountPerCharge>20</ammoCountPerCharge> -->
+        <baseReloadTicks>60</baseReloadTicks>
+      </li>
+    </comps>
   </ThingDef>
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_WULA_WM_Panzer_Autocannon</defName>
@@ -1613,398 +1805,71 @@
       <screenShakeFactor>0.1</screenShakeFactor>
     </projectile>
   </ThingDef>
-  <ThingDef ParentName="BaseGun">
-    <defName>WULA_WM_Panzer_Mortar</defName>
-    <label>PLm-15"镍铁"</label>
-    <description>由乌拉帝国的"萨克森"战车所装备的迫击炮，虽然型号老旧但是射速相当快，提供的弹药投射量也是不容置疑的。</description>
-    <techLevel>Ultra</techLevel>
-    <graphicData>
-      <texPath>Wula/Weapon/WULA_WM_Panzer_Mortar</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>1.35</drawSize>
-    </graphicData>
-    <tradeability>None</tradeability>
-    <statBases>
-      <WorkToMake>40000</WorkToMake>
-      <Mass>150</Mass>
-      <AccuracyTouch>0.5</AccuracyTouch>
-      <AccuracyShort>0.9</AccuracyShort>
-      <AccuracyMedium>0.9</AccuracyMedium>
-      <AccuracyLong>0.9</AccuracyLong>
-      <RangedWeapon_Cooldown>2.1</RangedWeapon_Cooldown>
-    </statBases>
-    <costList Inherit="False">
-      <Steel>500</Steel>
-      <Plasteel>150</Plasteel>
-      <ComponentSpacer>8</ComponentSpacer>
-    </costList>
-    <recipeMaker>
-      <recipeUsers Inherit="False">
-        <li>WULA_War_Machine_Weapon_Productor</li>
-      </recipeUsers>
-      <researchPrerequisite>WULA_AI_Machine_Panzer_Technology</researchPrerequisite>
-      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
-    </recipeMaker>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_WULA_WM_Panzer_Mortar</defaultProjectile>
-        <warmupTime>0.75</warmupTime>
-        <forcedMissRadius>3</forcedMissRadius>
-        <forcedMissRadiusClassicMortars>1</forcedMissRadiusClassicMortars>
-        <isMortar>true</isMortar>
-        <requireLineOfSight>false</requireLineOfSight>
-        <minRange>8</minRange>
-        <range>500</range>
-        <!-- <burstShotCount>3</burstShotCount>
-        <ticksBetweenBurstShots>10</ticksBetweenBurstShots> -->
-        <soundCast>Mortar_LaunchA</soundCast>
-        <muzzleFlashScale>12</muzzleFlashScale>
-        <targetParams>
-          <canTargetLocations>true</canTargetLocations>
-        </targetParams>
-        <explosionRadiusRingColor>(0.8, 0.8, 0.4, 1)</explosionRadiusRingColor><!-- Keep in sync with PlaceWorker_GlowRadius.RingColor -->
+  <AbilityDef>
+    <defName>WULA_WM_Panzer_Autocannon_Ability</defName>
+    <label>PRr-34"石英"</label>
+    <description>发射大威力的火箭弹轰炸目标区域，这种火箭可以有效杀伤软目标，并对仍然活着的敌人造成巨大的震撼效果。</description>
+    <iconPath>Wula/Projectile/WULA_Mortar_Shell</iconPath>
+    <writeCombatLog>True</writeCombatLog>
+    <showPsycastEffects>False</showPsycastEffects>
+    <cooldownTicksRange>3600</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>26</range>
+      <warmupTime>1</warmupTime>
+      <muzzleFlashScale>9</muzzleFlashScale>
+      <beamTargetsGround>true</beamTargetsGround>
+      <soundAiming>HellsphereCannon_Aiming</soundAiming>
+      <ai_IsWeapon>true</ai_IsWeapon>
+      <soundCast>Shot_HellsphereCannonGun</soundCast>
+      
+      <aimingLineMote>Mote_HellsphereCannon_Aim</aimingLineMote>
+      <aimingChargeMote>Mote_HellsphereCannon_Charge</aimingChargeMote>
+      <aimingChargeMoteOffset>1.07</aimingChargeMoteOffset>
+      <aimingLineMoteFixedLength>3.9</aimingLineMoteFixedLength>
+      <aimingTargetMote>Mote_HellsphereCannon_Target</aimingTargetMote>
+      
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>true</canTargetBuildings>
+        <canTargetPlants>true</canTargetPlants>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityLaunchProjectile">
+        <projectileDef>Bullet_WULA_WM_Panzer_Autocannon_Ability</projectileDef>
+        <psychic>false</psychic>
+        <screenShakeIntensity>1</screenShakeIntensity>
       </li>
-    </verbs>
-  </ThingDef>
+    </comps>
+  </AbilityDef>
   <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_WULA_WM_Panzer_Mortar</defName>
-    <label>镍铁迫击炮弹</label>
+    <defName>Bullet_WULA_WM_Panzer_Autocannon_Ability</defName>
+    <label>石英非制导火箭</label>
+    <thingClass>Projectile_Explosive</thingClass>
     <graphicData>
       <texPath>Wula/Projectile/WULA_Mortar_Shell</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>TransparentPostLight</shaderType>
+      <shaderType>Mote</shaderType>
+      <drawSize>(2, 2)</drawSize>
     </graphicData>
-    <thingClass>Projectile_Explosive</thingClass>
     <projectile>
-      <damageDef>Bomb</damageDef>
-      <damageAmountBase>30</damageAmountBase>
-      <speed>25</speed>
-      <explosionRadius>4.2</explosionRadius>
-      <armorPenetrationBase>0.1</armorPenetrationBase>
-      <flyOverhead>true</flyOverhead>
+      <damageDef>BombSuper</damageDef>
+      <damageAmountBase>120</damageAmountBase>
+      <speed>41</speed>
+      <explosionRadius>6.9</explosionRadius>
+      <stoppingPower>15</stoppingPower>
+      <explosionChanceToStartFire>1</explosionChanceToStartFire>
+      <explosionDamageFalloff>true</explosionDamageFalloff>
+      <explosionEffect>GiantExplosion</explosionEffect>
+      <flyOverhead>false</flyOverhead>
       <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
-      <soundExplode>MortarBomb_Explode</soundExplode>
+      <soundExplode>Explosion_GiantBomb</soundExplode>
       <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
       <soundAmbient>MortarRound_Ambient</soundAmbient>
-    </projectile>
-  </ThingDef>
-  <!-- 甲胄装备 -->
-  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
-    <defName>WULA_MW_Armour_Glaive</defName>
-    <label>CMl-99"剑冢"</label>
-    <description>由SMp-11"甲胄"所持的大型双头刀，攻防兼备，可以劈开坚固的装甲。</description>
-    <weaponTags>
-      <li>WULA_Armour_Init_Weapon</li>
-      <li>Spear</li>
-    </weaponTags>
-    <graphicData>
-      <texPath>Wula/Weapon/WULA_MW_Armour_Glaive</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
-      <drawSize>3.5</drawSize>
-    </graphicData>
-    <uiIconScale>0.4</uiIconScale>
-    <!-- <equippedAngleOffset>-65</equippedAngleOffset> -->
-    <techLevel>Spacer</techLevel>
-    <equippedAngleOffset>-25</equippedAngleOffset>
-    <costStuffCount>120</costStuffCount>
-    <stuffCategories>
-      <li>Metallic</li>
-    </stuffCategories>
-    <costList Inherit="False">
-      <Plasteel>10</Plasteel>
-      <ComponentIndustrial>6</ComponentIndustrial>
-    </costList>
-    <statBases>
-      <WorkToMake>30000</WorkToMake>
-      <Mass>100</Mass>
-    </statBases>
-    <tools>
-      <li>
-        <label>横扫</label>
-        <capacities>
-          <li>Cut</li>
-        </capacities>
-        <power>82</power>
-        <cooldownTime>2</cooldownTime>
-        <armorPenetration>0.50</armorPenetration>
-      </li>
-      <li>
-        <label>穿刺</label>
-        <capacities>
-          <li>Stab</li>
-        </capacities>
-        <power>75</power>
-        <armorPenetration>0.90</armorPenetration>
-        <cooldownTime>1.7</cooldownTime>
-      </li>
-    </tools>
-    <recipeMaker>
-      <recipeUsers Inherit="False">
-        <li>WULA_War_Machine_Weapon_Productor</li>
-      </recipeUsers>
-      <researchPrerequisite>WULA_Armour_Technology</researchPrerequisite>
-      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
-    </recipeMaker>
-  </ThingDef>
-  <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>WULA_RW_Armour_AR</defName>
-    <label>FLm-78"萤石"</label>
-    <description>由SMp-11"甲胄"所持的重型自动炮，火力比单兵装备要凶猛得多。</description>
-    <techLevel>Ultra</techLevel>
-    <!-- <techLevel>Spacer</techLevel> -->
-    <graphicData>
-      <texPath>Wula/Weapon/WULA_RW_Armour_AR</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>2.75</drawSize>
-    </graphicData>
-    <uiIconScale>0.4</uiIconScale>
-    <soundInteract>Interact_ChargeRifle</soundInteract>
-    <recipeMaker>
-      <recipeUsers Inherit="False">
-        <li>WULA_War_Machine_Weapon_Productor</li>
-      </recipeUsers>
-      <researchPrerequisite>WULA_Armour_Technology</researchPrerequisite>
-      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
-    </recipeMaker>
-    <costList Inherit="False">
-      <Steel>350</Steel>
-      <Plasteel>200</Plasteel>
-      <ComponentSpacer>8</ComponentSpacer>
-    </costList>
-    <statBases>
-      <WorkToMake>40000</WorkToMake>
-      <Mass>100</Mass>
-      <AccuracyTouch>0.85</AccuracyTouch>
-      <AccuracyShort>0.85</AccuracyShort>
-      <AccuracyMedium>0.75</AccuracyMedium>
-      <AccuracyLong>0.65</AccuracyLong>
-      <RangedWeapon_Cooldown>1.25</RangedWeapon_Cooldown>
-    </statBases>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_WULA_RW_Armour_AR</defaultProjectile>
-        <warmupTime>0.5</warmupTime>
-        <range>32</range>
-        <forcedMissRadius>0.1</forcedMissRadius>
-        <burstShotCount>12</burstShotCount>
-        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
-        <soundCast>Shot_ChargeRifle</soundCast>
-        <soundCastTail>GunTail_Medium</soundCastTail>
-        <muzzleFlashScale>9</muzzleFlashScale>
-        <targetParams>
-          <canTargetPawns>true</canTargetPawns>
-          <canTargetLocations>true</canTargetLocations>
-          <canTargetBuildings>true</canTargetBuildings>
-        </targetParams>
-      </li>
-    </verbs>
-  </ThingDef>
-  <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_WULA_RW_Armour_AR</defName>
-    <label>萤石自动炮子弹</label>
-    <thingClass>Projectile_Explosive</thingClass>
-    <tickerType>Normal</tickerType>
-    <neverMultiSelect>True</neverMultiSelect>
-    <graphicData>
-      <texPath>Wula/Projectile/WULA_Bullet_ChargeLanceShot_Red</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>TransparentPostLight</shaderType>
-      <drawSize>1.4</drawSize>
-    </graphicData>
-    <projectile>
-      <damageDef>Bullet</damageDef>
-      <damageAmountBase>22</damageAmountBase>
-      <speed>90</speed>
-      <explosionRadius>1.2</explosionRadius>
-      <arcHeightFactor>0.4</arcHeightFactor>
-      <soundExplode>Explosion_Rocket</soundExplode>
-      <armorPenetrationBase>0.75</armorPenetrationBase>
-      <screenShakeFactor>0.1</screenShakeFactor>
-    </projectile>
-  </ThingDef>
-  <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>WULA_RW_Armour_GL</defName>
-    <label>SEl-78"角砾岩"</label>
-    <description>由SMp-11"甲胄"所持的自动榴弹炮，得益于战甲庞大的身躯，这种重型武器可以跟随小队移动并向敌人释放铺天盖地的榴弹雨。</description>
-    <techLevel>Ultra</techLevel>
-    <!-- <techLevel>Spacer</techLevel> -->
-    <graphicData>
-      <texPath>Wula/Weapon/WULA_RW_Armour_GL</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>2.75</drawSize>
-    </graphicData>
-    <uiIconScale>0.4</uiIconScale>
-    <recipeMaker>
-      <recipeUsers Inherit="False">
-        <li>WULA_War_Machine_Weapon_Productor</li>
-      </recipeUsers>
-      <researchPrerequisite>WULA_Armour_Technology</researchPrerequisite>
-      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
-    </recipeMaker>
-    <costList Inherit="False">
-      <Steel>350</Steel>
-      <Plasteel>200</Plasteel>
-      <ComponentSpacer>8</ComponentSpacer>
-    </costList>
-    <statBases>
-      <WorkToMake>40000</WorkToMake>
-      <Mass>150</Mass>
-      <AccuracyTouch>0.5</AccuracyTouch>
-      <AccuracyShort>0.5</AccuracyShort>
-      <AccuracyMedium>0.4</AccuracyMedium>
-      <AccuracyLong>0.3</AccuracyLong>
-      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
-    </statBases>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_WULA_RW_Armour_GL</defaultProjectile>
-        <warmupTime>0.2</warmupTime>
-        <forcedMissRadius>1</forcedMissRadius>
-        <forcedMissRadiusClassicMortars>1</forcedMissRadiusClassicMortars>
-        <isMortar>true</isMortar>
-        <requireLineOfSight>false</requireLineOfSight>
-        <minRange>4</minRange>
-        <range>54</range>
-        <burstShotCount>1</burstShotCount>
-        <soundCast>Mortar_LaunchA</soundCast>
-        <muzzleFlashScale>12</muzzleFlashScale>
-        <targetParams>
-          <canTargetLocations>true</canTargetLocations>
-        </targetParams>
-      </li>
-    </verbs>
-  </ThingDef>
-  <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_WULA_RW_Armour_GL</defName>
-    <label>角砾岩榴弹</label>
-    <graphicData>
-      <texPath>Wula/Projectile/WULA_Shrapnel</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>TransparentPostLight</shaderType>
-    </graphicData>
-    <thingClass>Projectile_Explosive</thingClass>
-    <projectile>
-      <damageDef>Bomb</damageDef>
-      <damageAmountBase>35</damageAmountBase>
-      <speed>35</speed>
-      <explosionRadius>3.5</explosionRadius>
-      <armorPenetrationBase>0.1</armorPenetrationBase>
-      <flyOverhead>true</flyOverhead>
-      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
-      <soundExplode>MortarBomb_Explode</soundExplode>
-      <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
-      <soundAmbient>MortarRound_Ambient</soundAmbient>
-    </projectile>
-  </ThingDef>
-  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
-    <defName>WULA_MW_Armour_Lance</defName>
-    <label>CMl-67"铳枪"</label>
-    <description>SMp-11"甲胄"所持的枪炮合一的武器，既可以在近战中刺穿对手，也可以从远距离上发射高精度炮弹打击敌军。</description>
-    <weaponTags>
-      <li>Spear</li>
-    </weaponTags>
-    <graphicData>
-      <texPath>Wula/Weapon/WULA_MW_Armour_Lance</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
-      <drawSize>3.5</drawSize>
-    </graphicData>
-    <uiIconScale>0.4</uiIconScale>
-    <!-- <equippedAngleOffset>-65</equippedAngleOffset> -->
-    <techLevel>Spacer</techLevel>
-    <!-- <equippedAngleOffset>-25</equippedAngleOffset> -->
-    <costList Inherit="False">
-      <Steel>500</Steel>
-      <Plasteel>120</Plasteel>
-      <ComponentIndustrial>12</ComponentIndustrial>
-    </costList>
-    <statBases>
-      <WorkToMake>50000</WorkToMake>
-      <Mass>150</Mass>
-      <AccuracyTouch>0.5</AccuracyTouch>
-      <AccuracyShort>0.5</AccuracyShort>
-      <AccuracyMedium>0.4</AccuracyMedium>
-      <AccuracyLong>0.3</AccuracyLong>
-      <RangedWeapon_Cooldown>0</RangedWeapon_Cooldown>
-    </statBases>
-    <tools>
-      <li>
-        <label>横扫</label>
-        <capacities>
-          <li>Blunt</li>
-          <li>Poke</li>
-        </capacities>
-        <power>36</power>
-        <cooldownTime>2.2</cooldownTime>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li>
-              <def>Stun</def>
-              <amount>18</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-      </li>
-      <li>
-        <label>穿刺</label>
-        <capacities>
-          <li>Stab</li>
-        </capacities>
-        <power>45</power>
-        <armorPenetration>0.80</armorPenetration>
-        <cooldownTime>2</cooldownTime>
-      </li>
-    </tools>
-    <recipeMaker>
-      <recipeUsers Inherit="False">
-        <li>WULA_War_Machine_Weapon_Productor</li>
-      </recipeUsers>
-      <researchPrerequisite>WULA_Armour_Technology</researchPrerequisite>
-      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
-    </recipeMaker>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_WULA_MW_Armour_Lance</defaultProjectile>
-        <warmupTime>2.25</warmupTime>
-        <minRange>3</minRange>
-        <forcedMissRadius>0.1</forcedMissRadius>
-        <range>68</range>
-        <burstShotCount>1</burstShotCount>
-        <soundCast>Shot_TurretSniper</soundCast>
-        <soundCastTail>GunTail_Heavy</soundCastTail>
-        <muzzleFlashScale>18</muzzleFlashScale>
-      </li>
-    </verbs>
-  </ThingDef>
-  <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_WULA_MW_Armour_Lance</defName>
-    <label>铳枪穿甲弹</label>
-    <thingClass>Projectile_Explosive</thingClass>
-    <tickerType>Normal</tickerType>
-    <neverMultiSelect>True</neverMultiSelect>
-    <graphicData>
-      <texPath>Wula/Projectile/WULA_Bullet_ChargeLanceShot_Red</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>TransparentPostLight</shaderType>
-      <drawSize>3.4</drawSize>
-    </graphicData>
-    <projectile>
-      <damageDef>Bullet</damageDef>
-      <damageAmountBase>300</damageAmountBase>
-      <speed>180</speed>
-      <explosionRadius>2.6</explosionRadius>
-      <arcHeightFactor>0.4</arcHeightFactor>
-      <soundExplode>Explosion_Rocket</soundExplode>
-      <armorPenetrationBase>1</armorPenetrationBase>
+      <!-- <preExplosionSpawnSingleThingDef>CraterMedium</preExplosionSpawnSingleThingDef> -->
     </projectile>
   </ThingDef>
 </Defs>

@@ -239,7 +239,7 @@
       <li>WULA_Machine_Productor_Technology</li>
     </prerequisites>
   </ResearchProjectDef>
-  <ResearchProjectDef ParentName="WULAtechBase">
+  <!-- <ResearchProjectDef ParentName="WULAtechBase">
     <defName>WULA_Machine_Equipment_Technology</defName>
     <label>机械体武装构装套件</label>
     <description>获取构建乌拉帝国高级机械体武装的知识，以为机械体换装不同的武备。</description>
@@ -249,7 +249,7 @@
     <prerequisites>
       <li>WULA_Machine_Productor_Technology</li>
     </prerequisites>
-  </ResearchProjectDef>
+  </ResearchProjectDef> -->
   <ResearchProjectDef ParentName="WULAtechBase">
     <defName>WULA_AI_Machine_Panzer_Technology</defName>
     <label>基础战车部署套件</label>
@@ -258,11 +258,10 @@
     <researchViewX>4.00</researchViewX>
     <researchViewY>4.60</researchViewY>
     <prerequisites>
-      <li>WULA_Machine_Equipment_Technology</li>
       <li>WULA_Machine_Productor_1_Technology</li>
     </prerequisites>
   </ResearchProjectDef>
-  <ResearchProjectDef ParentName="WULAtechBase">
+  <!-- <ResearchProjectDef ParentName="WULAtechBase">
     <defName>WULA_Armour_Technology</defName>
     <label>基础战甲套件</label>
     <description>获取构建乌拉帝国大型战甲SMp-11"甲胄"的知识，并得以生产它所装备的各种大型近战武器和远程武器。</description>
@@ -273,7 +272,7 @@
       <li>WULA_Machine_Equipment_Technology</li>
       <li>WULA_Machine_Productor_1_Technology</li>
     </prerequisites>
-  </ResearchProjectDef>
+  </ResearchProjectDef> -->
   <!-- 植入物 -->
   <ResearchProjectDef ParentName="WULAtechBase">
     <defName>WULA_Synth_Addons_Technology</defName>
@@ -286,7 +285,7 @@
       <li>WULA_Repair_All_Technology</li>
     </prerequisites>
   </ResearchProjectDef>
-  <ResearchProjectDef ParentName="WULAtechBase">
+  <!-- <ResearchProjectDef ParentName="WULAtechBase">
     <defName>WULA_Synth_Addons_2_Technology</defName>
     <label>高级植入物套件</label>
     <description>获取构建乌拉帝国合成人进阶植入物的技术，用以增强乌拉帝国合成人的机体性能。</description>
@@ -296,5 +295,5 @@
     <prerequisites>
       <li>WULA_Synth_Addons_Technology</li>
     </prerequisites>
-  </ResearchProjectDef>
+  </ResearchProjectDef> -->
 </Defs>

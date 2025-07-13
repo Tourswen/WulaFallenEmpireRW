@@ -462,353 +462,6 @@
     </comps>
 	</AlienRace.ThingDef_AlienRace>
 	<AlienRace.ThingDef_AlienRace ParentName="Human">
-		<defName>Wula_AI_Heavy_Panzer</defName>
-		<label>SMp-38"萨克森"</label>
-		<description>乌拉帝国所使用的中型突击战车，以逆重的方式悬浮于战场上，并使用其搭载的火力强大的武备撕碎敌人。</description>
-    <uiIconPath>Wula/Things/Wula_AI_Heavy_Panzer/Wula_AI_Heavy_Panzer_Icon</uiIconPath>
-
-    <alienRace>
-      <!-- 核心设置 -->
-      <generalSettings>
-        <!-- 男性生成几率 -->
-        <maleGenderProbability>0</maleGenderProbability>
-        <!-- 无视年龄疾病 -->
-        <immuneToAge>true</immuneToAge>
-				<!-- 在口角中造成的最大伤害 -->
-        <maxDamageForSocialfight>6</maxDamageForSocialfight>
-        <!-- 免疫人类的异形歧视 -->
-        <immuneToXenophobia>true</immuneToXenophobia>
-        <!-- 最小的可生成成人背景的年龄 -->
-        <minAgeForAdulthood>0</minAgeForAdulthood>
-        <!-- 手术继承自人类 -->
-        <humanRecipeImport>false</humanRecipeImport>
-        <!-- 睡觉定义 -->
-        <canLayDown>false</canLayDown>
-        <validBeds>
-        </validBeds>
-        <!-- 各种零件定义 -->
-        <alienPartGenerator Inherit="False">
-          <!-- 允许的头部 -->
-          <headTypes Inherit="False">
-            <li>AverageNormal</li>
-            <!-- <li>Female_AverageWide</li>
-            <li>Female_AveragePointy</li> -->
-          </headTypes>
-					<!-- 身体类型 -->
-					<bodyTypes Inherit="False">
-						<li>Thin</li>
-					</bodyTypes>
-					<!-- 颜色设置 -->
-					<colorChannels Inherit="false">
-						<li>
-							<name>skin</name>
-							<first Class="ColorGenerator_Options">
-								<options>
-									<li>
-										<weight>1</weight>
-										<only>RGBA(1,1,1,1)</only>
-									</li>
-								</options>
-							</first>
-						</li>
-						<li>
-							<name>favorite</name>
-							<first Class="ColorGenerator_Options">
-								<options>
-									<li>
-										<weight>1</weight>
-										<only>RGBA(1,1,1,1)</only>
-									</li>
-								</options>
-							</first>
-						</li>
-					</colorChannels>
-          <customDrawSize>(3, 3)</customDrawSize>
-          <borderScale>3.0</borderScale>
-        </alienPartGenerator>
-        <growthAges>
-          <li>0</li>
-        </growthAges>
-        <!-- 年龄工作效率等的覆盖 -->
-        <ageStatOverrides>
-          <WorkSpeedGlobal>
-            <useBiologicalYears>true</useBiologicalYears>
-            <curve>
-              <points>
-                <li>(0,1)</li>
-              </points>
-            </curve>
-          </WorkSpeedGlobal>
-          <ShootingAccuracyChildFactor MayRequire="Ludeon.RimWorld.Biotech">
-            <useBiologicalYears>true</useBiologicalYears>
-            <curve>
-              <points>
-                <li>(0,1)</li>
-              </points>
-            </curve>
-          </ShootingAccuracyChildFactor>
-          <MarketValue>
-            <useBiologicalYears>true</useBiologicalYears>
-            <curve>
-              <points>
-                <li>(0,1)</li>
-              </points>
-            </curve>
-          </MarketValue>
-          <MeleeHitChance>
-            <useBiologicalYears>true</useBiologicalYears>
-            <curve>
-              <points>
-                <li>(0,1)</li>
-              </points>
-            </curve>
-          </MeleeHitChance>
-          <AimingDelayFactor>
-            <useBiologicalYears>true</useBiologicalYears>
-            <curve>
-              <points>
-                <li>(0,1)</li>
-              </points>
-            </curve>
-          </AimingDelayFactor>
-          <ArrestSuccessChance>
-            <useBiologicalYears>true</useBiologicalYears>
-            <curve>
-              <points>
-                <li>(0, 1)</li>
-              </points>
-            </curve>
-          </ArrestSuccessChance>
-        </ageStatOverrides>
-      </generalSettings>
-      <!-- 图形 -->
-			<graphicPaths>
-				<body>Wula/Things/Wula_AI_Heavy_Panzer/Bodies/</body>
-				<head>Wula/Things/Wula_AI_Heavy_Panzer/Heads/</head>
-				<skeleton>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Thin</skeleton> 
-        <stump>Wula/Things/Wula_AI_Heavy_Panzer/Bodies</stump>
-        <skinColor>(1,1,1,1)</skinColor>
-			</graphicPaths>
-			<!-- 风格设置 -->
-			<styleSettings>
-				<!-- 头发 -->
-				<li>
-					<key>HairDef</key>
-					<value>
-						<hasStyle>false</hasStyle>
-					</value>
-				</li>
-				<!-- 纹身 -->
-				<li>
-					<key>TattooDef</key>
-					<value>
-						<hasStyle>false</hasStyle>
-					</value>
-				</li>
-				<!-- 胡须 -->
-				<li>
-					<key>BeardDef</key>
-					<value>
-						<hasStyle>false</hasStyle>
-					</value>
-				</li>
-			</styleSettings>
-      <!-- 种族的允许和禁止特化设置 -->
-      <raceRestriction>
-        <traitList>
-          <li>WULA_AI_War_Machine</li>
-        </traitList>
-        <!-- 武器列表 -->
-        <weaponList>
-          <li>WULA_WM_Rocket_Pod</li>
-          <li>WULA_WM_Panzer_Turret</li>
-          <li>WULA_WM_Panzer_Autocannon</li>
-          <li>WULA_WM_Panzer_Mortar</li>
-        </weaponList>
-        <!-- 可以穿戴的衣服 -->
-        <apparelList>
-          <li>WULA_SMp38_Shield</li>
-          <li>WULA_SMp38_Armor</li>
-          <li>WULA_SMp38_Engine</li>
-        </apparelList>
-        <!-- 允许的特质类型 -->
-        <traitList>
-          <li>WULA_AI_War_Machine</li>
-        </traitList>
-        <onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel>
-        <onlyUseRaceRestrictedWeapons>true</onlyUseRaceRestrictedWeapons>
-        <onlyBuildRaceRestrictedBuildings>true</onlyBuildRaceRestrictedBuildings>
-        <onlyGetRaceRestrictedTraits>true</onlyGetRaceRestrictedTraits>
-        <onlyEatRaceRestrictedFood>true</onlyEatRaceRestrictedFood>
-        <blackEndoCategories>
-          <li>Melanin</li>
-          <li>HairColor</li>
-          <li>BodyType</li>
-        </blackEndoCategories>
-        <onlyHaveRaceRestrictedGenes>true</onlyHaveRaceRestrictedGenes>
-        <!-- 生育能力 -->
-        <onlyReproduceWithRestrictedRaces>true</onlyReproduceWithRestrictedRaces>
-        <canReproduce>false</canReproduce>
-      </raceRestriction>
-      <!-- 想法设置 -->
-      <thoughtSettings>
-        <cannotReceiveThoughtsAtAll>true</cannotReceiveThoughtsAtAll>
-      </thoughtSettings>
-      <!-- 关系设置，不会生成任何随机关系 -->
-      <relationSettings>
-        <relationChanceModifierLover>0</relationChanceModifierLover>
-        <relationChanceModifierExLover>0</relationChanceModifierExLover>
-
-        <relationChanceModifierFiance>0</relationChanceModifierFiance>
-        <relationChanceModifierSpouse>0</relationChanceModifierSpouse>
-        <relationChanceModifierExSpouse>0</relationChanceModifierExSpouse>
-
-        <relationChanceModifierParent>0</relationChanceModifierParent>
-        <relationChanceModifierChild>0</relationChanceModifierChild>
-        <relationChanceModifierSibling>0</relationChanceModifierSibling>
-      </relationSettings>
-      <!-- 兼容性标签，非必要 -->
-      <compatibility>
-        <isFlesh>false</isFlesh>
-      </compatibility>
-    </alienRace>
-    
-    <!-- 以下是原版标签 -->
-    <!-- 受击音效 -->
-    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-    <statBases>
-      <BandwidthCost>5</BandwidthCost>
-      <MechEnergyLossPerHP MayRequire="Ludeon.RimWorld.Biotech">0</MechEnergyLossPerHP>
-      <WastepacksPerRecharge MayRequire="Ludeon.RimWorld.Biotech">5</WastepacksPerRecharge>
-      
-      <WorkToMake>40000</WorkToMake>
-      <MarketValue>10000</MarketValue>
-      <Mass>250</Mass>
-      <MoveSpeed>2.5</MoveSpeed>
-      <EatingSpeed>1000</EatingSpeed>
-      <!-- 温度适应性，在hediff修改 -->
-      <ComfyTemperatureMin>-300</ComfyTemperatureMin>
-      <ComfyTemperatureMax>300</ComfyTemperatureMax>
-      <!-- 心灵敏感，很低 -->
-      <PsychicSensitivity>0</PsychicSensitivity>
-      <!-- 肉量 -->
-      <MeatAmount>0</MeatAmount>
-      <!-- 皮革量 -->
-      <LeatherAmount>0</LeatherAmount>
-      <!-- 谈判能力 -->
-      <NegotiationAbility>1</NegotiationAbility>
-      <!-- 社交效果，机械乌拉社交的影响很小 -->
-      <SocialImpact>0.25</SocialImpact>
-      <!-- 挖矿速度 -->
-      <MiningSpeed>1</MiningSpeed>
-      <!-- 采矿效率 -->
-      <MiningYield>1</MiningYield>
-      <!-- 种植速度 -->
-      <PlantWorkSpeed>1</PlantWorkSpeed>
-      <!-- 狩猎隐蔽 -->
-      <HuntingStealth>1</HuntingStealth>
-      <!-- 建造速度 -->
-      <ConstructionSpeed>1</ConstructionSpeed>
-      <!-- 研究速度 -->
-      <ResearchSpeed>1</ResearchSpeed>
-      <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">1</VacuumResistance>
-    </statBases>
-
-    <race>
-      <fleshType>Mechanoid</fleshType>
-			<hasGenders>false</hasGenders>
-			<!-- AI行为，勿改 -->
-			<thinkTreeMain>Mechanoid</thinkTreeMain>
-			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
-			<!-- 智力水平 -->
-			<intelligence>Humanlike</intelligence>
-			<!-- 血液，不流血 -->
-			<bloodDef>Filth_MachineBits</bloodDef>
-      <!-- 基础血量，很高 -->
-			<baseHealthScale>5</baseHealthScale>
-			<!-- 身体类型 -->
-			<body>WULA_AI_Heavy_Panzer_Body</body>
-      <!-- 大小 -->
-      <baseBodySize>10.0</baseBodySize>
-      <!-- 年龄阶段 -->
-      <lifeExpectancy>5000</lifeExpectancy>
-      <lifeStageWorkSettings MayRequire="Ludeon.RimWorld.Biotech">
-        <Firefighter>0</Firefighter>
-        <Patient>0</Patient>
-        <Doctor>0</Doctor>
-        <PatientBedRest>0</PatientBedRest>
-        <Childcare MayRequire="Ludeon.RimWorld.Biotech">0</Childcare>
-        <BasicWorker>0</BasicWorker>
-        <Warden>0</Warden>
-        <Handling>0</Handling>
-        <Cooking>0</Cooking>
-        <Hunting>0</Hunting>
-        <Construction>0</Construction>
-        <Growing>0</Growing>
-        <Mining>0</Mining>
-        <PlantCutting>0</PlantCutting>
-        <Smithing>0</Smithing>
-        <Tailoring>0</Tailoring>
-        <Art>0</Art>
-        <Crafting>0</Crafting>
-        <Hauling>0</Hauling>
-        <Cleaning>0</Cleaning>
-        <Research>0</Research>
-        <DarkStudy MayRequire="Ludeon.RimWorld.Anomaly">0</DarkStudy>
-      </lifeStageWorkSettings>
-      <lifeStageAges Inherit="False">
-        <li>
-          <def>Wula_Species_Lifestage</def>
-          <minAge>0</minAge>
-        </li>
-      </lifeStageAges>
-      <nameGenerator MayRequire="Ludeon.RimWorld.Biotech">NamerMech</nameGenerator>
-      <mechWeightClass>Heavy</mechWeightClass>
-      <canFlyInVacuum>true</canFlyInVacuum>
-      <!-- <mechFixedSkillLevel>20</mechFixedSkillLevel> -->
-    </race>
-
-    <butcherProducts>
-      <Steel>50</Steel>
-      <Plasteel>20</Plasteel>
-    </butcherProducts>
-    
-    <recipes>
-    </recipes>
-
-    <receivesSignals>true</receivesSignals>
-
-    <comps>
-      <li Class="CompProperties_CanBeDormant" />
-      <li Class="CompProperties_WakeUpDormant">
-        <wakeUpOnDamage>true</wakeUpOnDamage>
-        <wakeUpCheckRadius>30</wakeUpCheckRadius>
-        <wakeUpSound>MechanoidsWakeUp</wakeUpSound>
-      </li>
-      <li MayRequire="Ludeon.RimWorld.Biotech" Class="CompProperties_OverseerSubject">
-        <needsOverseerEffect>MechUncontrolled</needsOverseerEffect>
-        <delayUntilFeralCheck>60000</delayUntilFeralCheck>
-        <feralMtbDays>10</feralMtbDays>
-        <feralCascadeRadialDistance>25</feralCascadeRadialDistance>
-      </li>
-      <li MayRequire="Ludeon.RimWorld.Biotech" Class="CompProperties_MechRepairable" />
-    </comps>
-
-    <tools Inherit="False">
-      <li>
-        <label>碾压</label>
-        <labelNoLocation>碾压</labelNoLocation>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>14</power>
-        <cooldownTime>2.9</cooldownTime>
-        <linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-      </li>
-    </tools>
-	</AlienRace.ThingDef_AlienRace>
-	<AlienRace.ThingDef_AlienRace ParentName="Human">
 		<defName>Wula_Armour</defName>
 		<label>SMp-11"甲胄"</label>
 		<description>乌拉帝国的大型战斗机械，外形似一副悬空的盔甲，手持巨大的长柄武器或自动炮，是乌拉帝国战线的前锋。</description>
@@ -1138,7 +791,7 @@
         <needsOverseerEffect>MechUncontrolled</needsOverseerEffect>
         <delayUntilFeralCheck>60000</delayUntilFeralCheck>
         <feralMtbDays>10</feralMtbDays>
-        <feralCascadeRadialDistance>25</feralCascadeRadialDistance>
+        <feralCascadeRadialDistance>2500</feralCascadeRadialDistance>
       </li>
       <li MayRequire="Ludeon.RimWorld.Biotech" Class="CompProperties_MechRepairable" />
       <li Class="CompProperties_ProjectileInterceptor">
@@ -1183,6 +836,76 @@
       </li>
     </tools>
 	</AlienRace.ThingDef_AlienRace>
+
+  
+  <ThingDef Name="Wula_AI_Heavy_Panzer" ParentName="HeavyMechanoid">
+		<defName>Wula_AI_Heavy_Panzer</defName>
+		<label>SMp-38"萨克森"</label>
+		<description>乌拉帝国所使用的中型突击战车，以逆重的方式悬浮于战场上，搭载了一门在远距离上可以发挥高威力的穿甲主炮，并且拥有足以保护一支突击小队的护盾。</description>
+    <uiIconPath>Wula/Things/Wula_AI_Heavy_Panzer/Wula_AI_Heavy_Panzer_Icon</uiIconPath>
+    <statBases>
+      <BandwidthCost>3</BandwidthCost>
+      <MoveSpeed>3</MoveSpeed>
+      <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">1</VacuumResistance>
+      <!-- 有自带护甲，对热量伤害有高抵抗 -->
+      <ArmorRating_Sharp>1</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1</ArmorRating_Blunt>
+      <ArmorRating_Heat>2.00</ArmorRating_Heat>
+      <!-- 近战闪避 -->
+      <CarryingCapacity>1200</CarryingCapacity>
+      <ShootingAccuracyPawn>200</ShootingAccuracyPawn>
+      <IncomingDamageFactor>0.75</IncomingDamageFactor>
+    </statBases>
+    <race>
+      <body>WULA_AI_Heavy_Panzer_Body</body>
+      <baseBodySize>10.0</baseBodySize>
+			<baseHealthScale>5</baseHealthScale>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <soundWounded>Pawn_Mech_Tunneler_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Tunneler_Death</soundDeath>
+          <soundCall>Pawn_Mech_Tunneler_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <bulletStaggerEffecterDef>TunnelerSlowedDown</bulletStaggerEffecterDef>
+    </race>
+    <tools Inherit="False">
+      <li>
+        <label>碾压</label>
+        <labelNoLocation>碾压</labelNoLocation>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>2.9</cooldownTime>
+        <linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+      </li>
+    </tools>
+    <comps>
+      <li Class="CompProperties_ProjectileInterceptor">
+        <radius>3</radius>
+        <interceptGroundProjectiles>true</interceptGroundProjectiles>
+        <color>(0.9, 0.2, 0.2)</color>
+        <reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
+        <activeSound>BulletShield_Ambience</activeSound>
+        <hitPoints>500</hitPoints>
+        <hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
+        <chargeDurationTicks>1800</chargeDurationTicks>
+        <rechargeHitPointsIntervalTicks>120</rechargeHitPointsIntervalTicks>
+        <minIdleAlpha>0.2</minIdleAlpha>
+        <drawWithNoSelection>True</drawWithNoSelection>
+        <disarmedByEmpForTicks>1500</disarmedByEmpForTicks>
+        <gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef Name="Wula_AI_Heavy_Panzer_Gunnery" ParentName="Wula_AI_Heavy_Panzer">
+		<defName>Wula_AI_Heavy_Panzer_Gunnery</defName>
+		<label>SMp-38A"斯佩萨特"</label>
+		<description>乌拉帝国所使用的中型突击战车，以逆重的方式悬浮于战场上，搭载了联装机炮和用于杀伤软目标的"磷灰"火箭弹，并且拥有足以保护一支突击小队的护盾。</description>
+  </ThingDef>
     
   <ThingDef ParentName="LightMechanoid">
     <defName>Mech_WULA_Cat</defName>
@@ -1297,5 +1020,8 @@
         <li>Construction</li>
       </mechEnabledWorkTypes>
     </race>
+    <statBases>
+      <WorkSpeedGlobal>2</WorkSpeedGlobal>
+    </statBases>
   </ThingDef>
 </Defs>
