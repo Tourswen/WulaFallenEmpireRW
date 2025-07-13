@@ -82,7 +82,7 @@
   <RecipeDef ParentName="MediumMechanoidRecipe">
     <defName>WULA_Build_AI_Heavy_Panzer</defName>
     <label>建造SMp-38"萨克森"</label>
-    <description>建造一台SMp-38"萨克森"智能战车，不包含配套武器。</description>
+    <description>建造一台SMp-38"萨克森"智能战车。</description>
     <ingredients Inherit="False">
       <li>
         <filter>
@@ -126,9 +126,9 @@
     <researchPrerequisite>WULA_AI_Machine_Panzer_Technology</researchPrerequisite>
   </RecipeDef>
   <RecipeDef ParentName="MediumMechanoidRecipe">
-    <defName>WULA_Build_Armour</defName>
-    <label>建造SMp-11"甲胄"</label>
-    <description>建造一台SMp-11"甲胄"大型战甲，不包含配套武器。</description>
+    <defName>WULA_Build_AI_Heavy_Panzer_Gunnery</defName>
+    <label>建造SMp-38A"斯佩萨特"</label>
+    <description>建造一台SMp-38A"斯佩萨特"智能战车。</description>
     <ingredients Inherit="False">
       <li>
         <filter>
@@ -136,7 +136,7 @@
             <li>Steel</li>
           </thingDefs>
         </filter>
-        <count>500</count>
+        <count>600</count>
       </li>
       <li>
         <filter>
@@ -144,7 +144,7 @@
             <li>Plasteel</li>
           </thingDefs>
         </filter>
-        <count>200</count>
+        <count>250</count>
       </li>
       <li>
         <filter>
@@ -152,7 +152,7 @@
             <li>ComponentIndustrial</li>
           </thingDefs>
         </filter>
-        <count>20</count>
+        <count>24</count>
       </li>
       <li>
         <filter>
@@ -160,16 +160,16 @@
             <li>ComponentSpacer</li>
           </thingDefs>
         </filter>
-        <count>3</count>
+        <count>4</count>
       </li>
     </ingredients>
     <products>
-      <Wula_Armour>1</Wula_Armour>
+      <Wula_AI_Heavy_Panzer_Gunnery>1</Wula_AI_Heavy_Panzer_Gunnery>
     </products>
     <descriptionHyperlinks>
-      <ThingDef>Wula_Armour</ThingDef>
+      <ThingDef>Wula_AI_Heavy_Panzer_Gunnery</ThingDef>
     </descriptionHyperlinks>
-    <researchPrerequisite>WULA_Armour_Technology</researchPrerequisite>
+    <researchPrerequisite>WULA_AI_Machine_Panzer_Technology</researchPrerequisite>
   </RecipeDef>
 
   <RecipeDef ParentName="LightMechanoidRecipe">

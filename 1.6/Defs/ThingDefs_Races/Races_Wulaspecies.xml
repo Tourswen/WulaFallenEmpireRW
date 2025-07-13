@@ -855,6 +855,9 @@
       <CarryingCapacity>1200</CarryingCapacity>
       <ShootingAccuracyPawn>200</ShootingAccuracyPawn>
       <IncomingDamageFactor>0.75</IncomingDamageFactor>
+
+      <MechEnergyLossPerHP MayRequire="Ludeon.RimWorld.Biotech">0.1</MechEnergyLossPerHP>
+      <WastepacksPerRecharge MayRequire="Ludeon.RimWorld.Biotech">5</WastepacksPerRecharge>
     </statBases>
     <race>
       <body>WULA_AI_Heavy_Panzer_Body</body>
@@ -915,6 +918,8 @@
 
     <statBases>
       <MoveSpeed>6</MoveSpeed>
+
+      <WastepacksPerRecharge MayRequire="Ludeon.RimWorld.Biotech">0</WastepacksPerRecharge>
     </statBases>
     <race>
       <mechEnabledWorkTypes>
@@ -961,6 +966,8 @@
 
     <statBases>
       <MoveSpeed>5</MoveSpeed>
+      
+      <WastepacksPerRecharge MayRequire="Ludeon.RimWorld.Biotech">0</WastepacksPerRecharge>
     </statBases>
     <race>
       <mechEnabledWorkTypes>

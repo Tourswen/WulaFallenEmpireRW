@@ -887,6 +887,12 @@
     <isBad>false</isBad>
     <duplicationAllowed>true</duplicationAllowed>
     <keepOnBodyPartRestoration>false</keepOnBodyPartRestoration>  <!-- true -->
+    <comps>
+      <li Class="HediffCompProperties_ChanceToRemove">
+        <intervalTicks>1</intervalTicks>
+        <chance>1</chance>
+      </li>
+    </comps>
   </HediffDef>
 
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
