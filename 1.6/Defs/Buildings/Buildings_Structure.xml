@@ -1,32 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ThingDef ParentName="Wall">
+  <ThingDef ParentName="Wall">
     <defName>WulaWall</defName>
     <label>乌拉帝国堡垒</label>
     <description>乌拉帝国堡垒外壁，相当厚实，能够抵御大量爆炸和震荡伤害，并且拥有气密性，可以用在飞船外壳上。</description>
-    <thingClass>Building</thingClass>
-    <category>Building</category>
-    <graphicData>
-      <texPath>Wula/Building/Linked/WulaWall</texPath>
-			<shaderType>CutoutComplex</shaderType>
-			<graphicClass>Graphic_Appearances</graphicClass>
-			<linkType>CornerFiller</linkType>
-      <linkFlags>
-        <li>Wall</li>
-        <li>Rock</li>
-      </linkFlags>
-      <damageData>
-        <cornerTL>Damage/Corner</cornerTL>
-        <cornerTR>Damage/Corner</cornerTR>
-        <cornerBL>Damage/Corner</cornerBL>
-        <cornerBR>Damage/Corner</cornerBR>
-        <edgeTop>Damage/Edge</edgeTop>
-        <edgeBot>Damage/Edge</edgeBot>
-        <edgeLeft>Damage/Edge</edgeLeft>
-        <edgeRight>Damage/Edge</edgeRight>
-      </damageData>
-    </graphicData>
+    <uiOrder>1800</uiOrder>
     <uiIconPath>Wula/Building/Linked/WULA_Fortress_Wall_MenuIcon</uiIconPath>
+    <graphicData>
+      <texPath>Wula/Building/Linked/WulaWall/WulaWall_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <researchPrerequisites>
+      <li>WULA_Structure_Technology</li>
+    </researchPrerequisites>
     <statBases>
       <MarketValue>2</MarketValue>
       <Beauty>1</Beauty>
@@ -36,49 +23,28 @@
       <MeditationFocusStrength>0.22</MeditationFocusStrength>
       <Cleanliness>0.1</Cleanliness>
     </statBases>
-    <costList>
-      <Steel>10</Steel>
-    </costList>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <filthLeaving>Filth_RubbleBuilding</filthLeaving>
-    <repairEffect>Repair</repairEffect>
-    <altitudeLayer>Building</altitudeLayer>
-    <passability>Impassable</passability>
-    <blockWind>true</blockWind>
-    <castEdgeShadows>true</castEdgeShadows>
-    <fillPercent>1</fillPercent>
-    <coversFloor>true</coversFloor>
-    <!-- <placingDraggableDimensions>1</placingDraggableDimensions> -->
-    <tickerType>Never</tickerType>
-    <rotatable>false</rotatable>
-    <selectable>true</selectable>
-    <neverMultiSelect>true</neverMultiSelect>
-    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded> <!-- Best affordance needed for stone -->
-    <holdsRoof>true</holdsRoof>
-    <designationCategory>Structure</designationCategory>
-    <staticSunShadowHeight>1.0</staticSunShadowHeight>
-    <blockLight>true</blockLight>
-    <canOverlapZones>false</canOverlapZones>
-    <fertility>0</fertility>
-    <costStuffCount>0</costStuffCount>
-    <stuffCategories Inherit="False"></stuffCategories>
+    <costStuffCount>15</costStuffCount>
     <building>
       <isAirtight>true</isAirtight>
-      <paintable>true</paintable>
-      <isInert>true</isInert>
-      <isPlaceOverableWall>true</isPlaceOverableWall>
-      <ai_chillDestination>false</ai_chillDestination>
-      <supportsWallAttachments>true</supportsWallAttachments>
-      <blueprintGraphicData>
-        <texPath>Wula/Building/Linked/WULA_Fortress_Wall_Blueprint</texPath>
-      </blueprintGraphicData>
-      <relatedBuildCommands>
-        <li>Door</li>
-        <li>Autodoor</li>
-      </relatedBuildCommands>
     </building>
-    <uiOrder>3000</uiOrder>
-    <comps>
+    <stuffCategories Inherit="False">
+      <li>Metallic</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <placeWorkers>
+      <li>PlaceWorker_OnSubstructure</li>
+    </placeWorkers>
+    <damageMultipliers>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>0.01</multiplier>
+      </li>
+      <li>
+        <damageDef>Thump</damageDef>
+        <multiplier>0.01</multiplier>
+      </li>
+    </damageMultipliers>
+    <comps Inherit="False">
       <li Class="CompProperties_MeditationFocus">
         <statDef>MeditationFocusStrength</statDef>
         <focusTypes>
@@ -90,19 +56,6 @@
 				<transmitsPower>true</transmitsPower>
 			</li>
     </comps>
-    <damageMultipliers>
-      <li>
-        <damageDef>Bomb</damageDef>
-        <multiplier>0.01</multiplier>
-      </li>
-      <li>
-        <damageDef>Thump</damageDef>
-        <multiplier>0.01</multiplier>
-      </li>
-    </damageMultipliers>
-    <researchPrerequisites>
-      <li>WULA_Structure_Technology</li>
-    </researchPrerequisites>
   </ThingDef>
 
   <ThingDef ParentName="DoorBase">

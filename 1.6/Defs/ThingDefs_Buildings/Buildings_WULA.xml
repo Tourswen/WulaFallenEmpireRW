@@ -133,7 +133,7 @@
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
     </placeWorkers>
     <building>
-      <isMealSource>true</isMealSource>
+      <!-- <isMealSource>true</isMealSource> -->
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
       <heatPerTickWhileWorking>0.10</heatPerTickWhileWorking>
     </building>
@@ -198,7 +198,7 @@
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
     </placeWorkers>
     <building>
-      <isMealSource>true</isMealSource>
+      <!-- <isMealSource>true</isMealSource> -->
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
     </building>
   </ThingDef>
@@ -541,11 +541,11 @@
     <thingClass>Building_GravEngine</thingClass>
     <drawerType>RealtimeOnly</drawerType>
     <tickerType>Normal</tickerType>
-    <minifiedDef>MinifiedGravEngine</minifiedDef>
+    <!-- <minifiedDef>MinifiedGravEngine</minifiedDef> -->
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
-      <texPath>Things/Building/GravEngine/GravEngine</texPath>
-      <drawSize>(3,3)</drawSize>
+      <texPath>Wula/Building/Wula_DarkEnergy_Engine</texPath>
+      <drawSize>(3.2,3.5)</drawSize>
     </graphicData>
     <statBases>
       <MaxHitPoints>800</MaxHitPoints>
@@ -555,7 +555,7 @@
       <MarketValue>2000</MarketValue>
     </statBases>
     <size>(3,3)</size>
-    <castEdgeShadows>true</castEdgeShadows>
+    <castEdgeShadows>false</castEdgeShadows>
     <fillPercent>0.6</fillPercent>
     <passability>PassThroughOnly</passability>
     <pathCost>20</pathCost>
@@ -572,6 +572,7 @@
       </relatedTerrain>
     </building>
     <comps>
+      <li Class="CompProperties_Flickable"/>
       <li Class="CompProperties_SubstructureFootprint">
         <radius>25</radius>
       </li>
@@ -593,16 +594,21 @@
           <li>SignalJammer</li>
           <li>PilotSubpersonaCore</li>
           <li>GravshipShieldGenerator</li>
+          <!-- <li>Wula_DarkEnergy_FuelTank</li> -->
         </linkableFacilities>
       </li>
       <li Class="CompProperties_AmbientSound">
         <sound>GravshipEngine_Ambient</sound>
       </li>
       <li Class="CompProperties_Power">
-        <compClass>CompPowerPlant</compClass>
+        <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>-36000</basePowerConsumption>
         <transmitsPower>true</transmitsPower>
         <soundAmbientProducingPower>ChemfuelFiredGenerator_Ambience</soundAmbientProducingPower>
+      </li>
+      <li Class="CompProperties_LowPowerUnlessVacuum">
+        <lowPowerConsumptionFactor>0</lowPowerConsumptionFactor>
+        <checkRoomVacuum>false</checkRoomVacuum>
       </li>
       <li Class="CompProperties_Refuelable">
         <fuelConsumptionRate>150</fuelConsumptionRate>
@@ -617,7 +623,7 @@
       </li>
     </comps>
   </ThingDef>
-  <ThingDef ParentName="FuelTankBase">
+  <!-- <ThingDef ParentName="FuelTankBase">
     <defName>Wula_DarkEnergy_FuelTank</defName>
     <label>暗物质引擎</label>
     <description>乌拉帝国用于存储湮灭反应释放的巨量能源并将其转化为飞行器飞行所需燃料的设备——在星球环境下，这些能源无法直接输入引擎。</description>
@@ -637,12 +643,10 @@
     <costList>
       <Steel>200</Steel>
     </costList>
-    <researchPrerequisites>
-      <li>StandardGravtech</li>
-    </researchPrerequisites>
+    <designationCategory>Production</designationCategory>
     <comps>
-      <li Class="CompPowerTrader">
-        <compClass>CompPowerPlant</compClass>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>1000</basePowerConsumption>
         <transmitsPower>true</transmitsPower>
         <soundAmbientProducingPower>ChemfuelFiredGenerator_Ambience</soundAmbientProducingPower>
@@ -669,7 +673,7 @@
       </li>
     </comps>
     <uiOrder>2155</uiOrder>
-  </ThingDef>
+  </ThingDef> -->
 
   <!-- 联络台 -->
   <!-- <ThingDef ParentName="BuildingBase">

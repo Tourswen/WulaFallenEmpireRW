@@ -643,6 +643,7 @@
     <description>以魂楔为媒介传递灵能，加速目标思维。目标将获得一个适合的随机灵感。</description>
     <iconPath>UI/Abilities/WordOfInspiration</iconPath>
     <showPsycastEffects>false</showPsycastEffects>
+    <level>-1</level>
     <!-- <cooldownTicksRange>180~480</cooldownTicksRange> -->
     <aiCanUse>true</aiCanUse>
     <showOnCharacterCard>false</showOnCharacterCard>
@@ -727,6 +728,7 @@
     <description>使一片范围内的生物感到恶心眩晕。</description>
     <iconPath>UI/Abilities/NauseaPulse</iconPath>
     <writeCombatLog>True</writeCombatLog>
+    <level>-1</level>
     <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
     <statBases>
       <Ability_EntropyGain>0</Ability_EntropyGain>
@@ -817,6 +819,7 @@
     <description>使用灵能让一个目标短时间内被附近的其他生物忽略，从而获得隐身效果</description>
     <iconPath>UI/Abilities/Invisibility</iconPath>
     <writeCombatLog>True</writeCombatLog>
+    <level>-1</level>
     <hotKey>Misc12</hotKey>
     <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
     <statBases>
@@ -906,6 +909,7 @@
     <iconPath>UI/Abilities/Burner</iconPath>
     <writeCombatLog>True</writeCombatLog>
     <showPsycastEffects>False</showPsycastEffects>
+    <level>-1</level>
     <!-- <cooldownTicksRange>120~240</cooldownTicksRange> -->
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
@@ -1032,6 +1036,7 @@
     <description>使一小片范围内的生物直接陷入心灵冲击状态，从而失去战斗力。</description>
     <iconPath>UI/Abilities/Neuroquake</iconPath>
     <writeCombatLog>True</writeCombatLog>
+    <level>-1</level>
     <statBases>
       <Ability_EntropyGain>0</Ability_EntropyGain>
       <Ability_PsyfocusCost>-1</Ability_PsyfocusCost>
@@ -1123,6 +1128,7 @@
     <iconPath>UI/Abilities/WordOfSerenity</iconPath>
     <writeCombatLog>True</writeCombatLog>
     <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <level>-1</level>
     <statBases>
       <Ability_EntropyGain>0</Ability_EntropyGain>
       <Ability_PsyfocusCost>-1</Ability_PsyfocusCost>
