@@ -121,6 +121,49 @@
     <possessionCount>50</possessionCount>
   </ThingDef>
 
+  <ThingDef ParentName="ResourceBase">
+    <defName>WULA_Dark_Matter_Item</defName>
+    <label>封装的暗物质</label>
+    <description>由乌拉帝国技术完成封装的一小块暗物质，这种神秘物质具有许多似乎可以打破所谓自然法则的性质。通过投入大量重金属，暗物质约束装置可以为部分消耗的暗物质补充质量。\n\n注意：暗物质约束装置很脆弱，受到冲击时将引发大范围湮灭反应！</description>
+    <graphicData>
+      <texPath>Wula/Item/WULA_Soul_Wedge</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <genericMarketSellable>false</genericMarketSellable>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MarketValue>100</MarketValue>
+      <Mass>0.01</Mass>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>true</smeltable>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <allowedArchonexusCount>80</allowedArchonexusCount>
+    <possessionCount>1</possessionCount>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>30</explosiveRadius>
+        <explosiveDamageType>BombSuper</explosiveDamageType>
+        <explosiveExpandPerStackcount>1</explosiveExpandPerStackcount>
+        <startWickOnDamageTaken>
+          <li>Bullet</li>
+          <li>Arrow</li>
+          <li>ArrowHighVelocity</li>
+        </startWickOnDamageTaken>
+        <startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+        <!-- <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef> -->
+        <preExplosionSpawnChance>1</preExplosionSpawnChance>
+        <wickTicks>1</wickTicks>
+      </li>
+    </comps>
+  </ThingDef>
+
   <ThingDef Abstract="True" Name="WULA_Syhth_Trainer">
     <!-- <defName>WULA_Syhth_Trainer</defName>
     <label>乌拉帝国技能预设</label> -->

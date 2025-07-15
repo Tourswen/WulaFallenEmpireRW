@@ -11,6 +11,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
     </graphicData>
+    <designationCategory>Structure</designationCategory>
     <researchPrerequisites>
       <li>WULA_Structure_Technology</li>
     </researchPrerequisites>
@@ -31,9 +32,9 @@
       <li>Metallic</li>
     </stuffCategories>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-    <placeWorkers>
+    <!-- <placeWorkers>
       <li>PlaceWorker_OnSubstructure</li>
-    </placeWorkers>
+    </placeWorkers> -->
     <damageMultipliers>
       <li>
         <damageDef>Bomb</damageDef>
@@ -143,39 +144,35 @@
       <li>WULA_Structure_Technology</li>
     </researchPrerequisites>
   </ThingDef>
-  
+
   <TerrainDef ParentName="FloorBase">
     <defName>WulaFloor</defName>
     <label>乌拉帝国地板</label>
-    <renderPrecedence>200</renderPrecedence>
-    <description>乌拉帝国堡垒中使用的地板，形似红毯但是实际上并非由布料制成。</description>
+    <description>乌拉帝国堡垒中使用的地板，美观易清洁的同时也做了防火处理。</description>
     <texturePath>Wula/Building/WULA_Floor</texturePath>
-    <color>(0.67, 0.67, 0.67)</color>
-    <pollutionTintColor>(0.95, 0.95, 0.93, 1)</pollutionTintColor>
+    <uiIconPath>Wula/Building/WULA_Floor_Icon</uiIconPath>
+    <color>(140,140,140)</color>
+    <edgeType>Hard</edgeType>
+    <renderPrecedence>70</renderPrecedence>
     <isPaintable>true</isPaintable>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-	  <uiIconPath>Wula/Building/WULA_Floor_UI</uiIconPath>
     <statBases>
-      <MarketValue>2</MarketValue>
-      <WorkToBuild>200</WorkToBuild>
-      <Cleanliness>1</Cleanliness>
-      <FilthMultiplier>0.05</FilthMultiplier>
-      <CleaningTimeFactor>0.1</CleaningTimeFactor>
-      <Beauty>16</Beauty>
+      <Beauty>3</Beauty>
+      <WorkToBuild>100</WorkToBuild>
+      <CleaningTimeFactor>0.5</CleaningTimeFactor>
+      <Flammability>0</Flammability>
     </statBases>
+    <!-- <costStuffCount>3</costStuffCount> -->
+    <!-- <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories> -->
     <costList>
-		  <Steel>1</Steel>
+		  <Steel>3</Steel>
     </costList>
-    <tags>
-      <li>Floor</li>
-      <li>FineFloor</li>
-    </tags>
-    <constructEffect>ConstructMetal</constructEffect>
-    <designationHotKey>Misc4</designationHotKey>
-    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
-    <!-- <uiOrder>2115</uiOrder>
+    <designationHotKey>Misc6</designationHotKey>
     <researchPrerequisites>
       <li>WULA_Structure_Technology</li>
-    </researchPrerequisites> -->
+    </researchPrerequisites>
+    <uiOrder>1138</uiOrder>
   </TerrainDef>
 </Defs>

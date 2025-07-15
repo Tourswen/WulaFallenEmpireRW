@@ -75,7 +75,50 @@
     <displayPriority>100</displayPriority>
     
     <researchPrerequisites>
-      <li>WULA_Base_Technology</li>
+      <li>WULA_Adv_WorkTable_Technology</li>
+    </researchPrerequisites>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>Make_WULA_Dark_Matter_Item</defName>
+    <label>制造乌拉帝国暗物质</label>
+    <description>制造1份封装的暗物质，由暗物质约束装置和暗物质组成，是乌拉帝国大型设施和武备所必须的能量来源。</description>
+    <jobString>正在制造乌拉帝国暗物质</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <!-- <requiredGiverWorkType>Crafting</requiredGiverWorkType> -->
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <!-- 允许混合成分 -->
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <skillRequirements>
+      <Crafting>15</Crafting>
+    </skillRequirements>
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WULA_Charge_Cube</li>
+          </thingDefs>
+        </filter>
+        <count>100</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentSpacer</li>
+          </thingDefs>
+        </filter>
+        <count>8</count>
+      </li>
+    </ingredients>
+    <products>
+      <WULA_Dark_Matter_Item>1</WULA_Dark_Matter_Item>
+    </products>
+    <workSkill>Crafting</workSkill>
+    <displayPriority>100</displayPriority>
+    
+    <researchPrerequisites>
+      <li>WULA_Adv_WorkTable_Technology</li>
     </researchPrerequisites>
   </RecipeDef>
 
