@@ -140,6 +140,36 @@
 
     <controlGroupPortraitZoom>1</controlGroupPortraitZoom>  
   </PawnKindDef>
+
+  <PawnKindDef ParentName="HeavyMechanoidKind">
+    <defName>Wula_AI_Engineer_Mother_PawnKind</defName>
+    <label>PMu-7"西比尔卡"</label>
+    <race>Wula_AI_Engineer_Mother</race>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <allowInMechClusters>false</allowInMechClusters>
+    <combatPower>500</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Wula/Things/Wula_AI_Bomb_Mother/Bodies/Naked_Thin</texPath>
+          <maskPath>Wula/Things/Wula_AI_Bomb_Mother/AllegianceOverlays/None</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>4</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <abilities>
+      <li>Wula_AI_Engineer_Mother_Ability1</li>
+    </abilities>
+    <weaponMoney>99999~99999</weaponMoney>
+    
+    <weaponTags>
+      <li>Wula_AI_Engineer_Mother_Weapon</li>
+    </weaponTags>
+
+    <controlGroupPortraitZoom>1</controlGroupPortraitZoom>  
+  </PawnKindDef>
     
   <PawnKindDef ParentName="NonCombatLightMechanoidKind">
     <defName>Mech_WULA_Cat</defName>
@@ -219,8 +249,50 @@
     <defName>Mech_WULA_Cat_Assault</defName>
     <label>突击乌拉猫猫</label>
     <race>Mech_WULA_Cat_Assault</race>
+    <lifeStages Inherit="False"> 
+      <li>
+        <bodyGraphicData>
+          <texPath>Wula/Things/WULA_Assault_Cat/WULA_Cat_Thin</texPath>
+          <maskPath>Wula/Things/WULA_Assault_Cat/AllegianceOverlays/None</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
     <weaponTags>
-      <li>Wula_Constructor_Cat_Weapon</li>
+      <li>Wula_Assault_Cat_Weapon</li>
     </weaponTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="Mech_WULA_Cat_Soldier_PawnKind">
+    <aiAvoidCover>true</aiAvoidCover>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+    <forceNoDeathNotification>true</forceNoDeathNotification>
+    <weaponMoney>9999~9999</weaponMoney>
+    <weaponTags />
+    <preventIdeo>true</preventIdeo>
+    <immuneToGameConditionEffects>true</immuneToGameConditionEffects>
+    <combatPower>10</combatPower>
+    <techHediffsChance>1</techHediffsChance>
+    <techHediffsMoney>9999~9999</techHediffsMoney>
+    <controlGroupPortraitZoom>1.8</controlGroupPortraitZoom>
+    <forceDeathOnDowned>true</forceDeathOnDowned>
+
+    <defName>Mech_WULA_Cat_Bomb</defName>
+    <label>敢死乌拉猫猫</label>
+    <race>Mech_WULA_Cat_Bomb</race>
+    <canOpenDoors>true</canOpenDoors>
+    <canOpenAnyDoor>true</canOpenAnyDoor>
+    <lifeStages Inherit="False">
+      <li>
+        <bodyGraphicData>
+          <texPath>Wula/Things/WULA_bomb_Cat/WULA_Cat_Thin</texPath>
+          <maskPath>Wula/Things/WULA_bomb_Cat/AllegianceOverlays/None</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
   </PawnKindDef>
 </Defs>

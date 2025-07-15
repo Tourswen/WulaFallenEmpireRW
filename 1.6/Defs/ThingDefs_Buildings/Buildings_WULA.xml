@@ -12,10 +12,7 @@
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(2,2)</drawSize>
       <damageData>
-        <cornerTL>Damage/Corner</cornerTL>
-        <cornerTR>Damage/Corner</cornerTR>
-        <cornerBL>Damage/Corner</cornerBL>
-        <cornerBR>Damage/Corner</cornerBR>
+        <enabled>false</enabled>
       </damageData>
     </graphicData>
     <castEdgeShadows>true</castEdgeShadows>
@@ -73,10 +70,7 @@
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(1,1)</drawSize>
       <damageData>
-        <cornerTL>Damage/Corner</cornerTL>
-        <cornerTR>Damage/Corner</cornerTR>
-        <cornerBL>Damage/Corner</cornerBL>
-        <cornerBR>Damage/Corner</cornerBR>
+        <enabled>false</enabled>
       </damageData>
     </graphicData>
     <constructEffect>ConstructMetal</constructEffect>
@@ -149,10 +143,7 @@
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(1,1)</drawSize>
       <damageData>
-        <cornerTL>Damage/Corner</cornerTL>
-        <cornerTR>Damage/Corner</cornerTR>
-        <cornerBL>Damage/Corner</cornerBL>
-        <cornerBR>Damage/Corner</cornerBR>
+        <enabled>false</enabled>
       </damageData>
     </graphicData>
     <castEdgeShadows>true</castEdgeShadows>
@@ -194,6 +185,11 @@
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>500</basePowerConsumption>
       </li>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>WULA_Cube_Productor_Component</li>
+        </linkableFacilities>
+      </li>
     </comps>
     <placeWorkers>
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
@@ -202,6 +198,64 @@
       <!-- <isMealSource>true</isMealSource> -->
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
     </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>WULA_Cube_Productor_Component</defName>
+    <label>乌拉帝国外置编织单元</label>
+    <description>用于辅助乌拉帝国编织体工作的特殊设备，可以加快其工作速度。每个乌拉帝国编织体最多连接一个此类设备。</description>
+    <graphicData>
+      <texPath>Wula/Building/WULA_Cube_Productor_Component</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+      <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.35</staticSunShadowHeight>
+    <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <pathCost>42</pathCost>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>30000</WorkToBuild>
+      <Mass>20</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <size>(2,2)</size>
+    <costList>
+      <Steel>200</Steel>
+    </costList>
+    <building>
+      <destroySound>BuildingDestroyed_Metal_Small</destroySound>
+    </building>
+    <researchPrerequisites>
+      <li>WULA_Dark_Matter_Technology</li>
+    </researchPrerequisites>
+    <designationCategory>Misc</designationCategory>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>500</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Facility">
+        <statOffsets>
+          <WorkTableWorkSpeedFactor>2</WorkTableWorkSpeedFactor>
+        </statOffsets>
+        <maxSimultaneous>1</maxSimultaneous>
+      </li>
+    </comps>
+    <designationHotKey>Misc6</designationHotKey>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
   </ThingDef>
 
   <!-- 床 -->
@@ -214,7 +268,7 @@
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(1,2)</drawSize>
       <damageData>
-        <rect>(0,0.05,1,1.95)</rect>
+        <enabled>false</enabled>
       </damageData>
     </graphicData>
     <statBases>
@@ -387,6 +441,7 @@
       <li>WULA_Build_Mech_Cat_Constructor</li>
       <li>WULA_Build_Mech_Cat_EMP</li>
       <li>WULA_Build_Mech_Cat_Fire</li>
+      <li>WULA_Build_Mech_Cat_Assault</li>
       <li>WULA_Build_AI_Heavy_Panzer</li>
       <li>WULA_Build_AI_Heavy_Panzer_Gunnery</li>
     </recipes>
@@ -535,110 +590,21 @@
   </ThingDef>
 
   <!-- 飞船暗物质引擎 -->
-  <ThingDef ParentName="GravshipComponentBase">
-    <defName>Wula_DarkEnergy_Engine</defName>
-    <label>乌拉帝国暗物质核心</label>
-    <description>乌拉帝国为登陆舰设计并使用失落科技所建造的暗物质核心，是战舰所用的暗物质核心的缩小版。它可以像闪耀世界的逆重引擎一样支撑一艘飞船的主体结构，并允许飞船在近地轨道移动。\n\n除此之外，内部通过金属启动的湮灭反应还能为全舰提供巨量电力——但是它只能在近地轨道上工作；当在地表停靠时，复杂的环境会使得能源核心进入闭锁状态。\n\n温馨提示：你可以建造多个暗物质核心，但是请确保你只有唯一一艘飞船，否则将导致不可预知的bug。</description>
-    <thingClass>Building_GravEngine</thingClass>
-    <drawerType>RealtimeOnly</drawerType>
-    <tickerType>Normal</tickerType>
-    <!-- <minifiedDef>MinifiedGravEngine</minifiedDef> -->
-    <graphicData>
-      <graphicClass>Graphic_Single</graphicClass>
-      <texPath>Wula/Building/Wula_DarkEnergy_Engine</texPath>
-      <drawSize>(3.2,3.5)</drawSize>
-    </graphicData>
-    <statBases>
-      <MaxHitPoints>800</MaxHitPoints>
-      <Mass>30</Mass>
-      <GravshipRange>0</GravshipRange>
-      <SubstructureSupport>500</SubstructureSupport>
-      <MarketValue>2000</MarketValue>
-    </statBases>
-    <size>(3,3)</size>
-    <castEdgeShadows>false</castEdgeShadows>
-    <fillPercent>0.6</fillPercent>
-    <passability>PassThroughOnly</passability>
-    <pathCost>20</pathCost>
-    <canOverlapZones>false</canOverlapZones>
-    <designationCategory>Odyssey</designationCategory>
-    <building>
-      <ai_neverTrashThis>true</ai_neverTrashThis>
-      <deconstructible>false</deconstructible>
-      <relatedBuildCommands>
-        <li>GravshipHull</li>
-      </relatedBuildCommands>
-      <relatedTerrain>
-        <li>Substructure</li>
-      </relatedTerrain>
-    </building>
-    <comps>
-      <li Class="CompProperties_Flickable"/>
-      <li Class="CompProperties_SubstructureFootprint">
-        <radius>25</radius>
-      </li>
-      <li Class="CompProperties_Glower">
-        <glowRadius>12</glowRadius>
-        <glowColor>(177, 0, 31, 0)</glowColor>
-        <colorPickerEnabled>true</colorPickerEnabled>
-        <darklightToggle>true</darklightToggle>
-      </li>
-      <li Class="CompProperties_AffectedByFacilities">
-        <linkableFacilities>
-          <li>GravFieldExtender</li>
-          <li>PilotConsole</li>
-          <li>ChemfuelTank</li>
-          <li>LargeChemfuelTank</li>
-          <li>SmallThruster</li>
-          <li>LargeThruster</li>
-          <li>FuelOptimizer</li>
-          <li>SignalJammer</li>
-          <li>PilotSubpersonaCore</li>
-          <li>GravshipShieldGenerator</li>
-          <li>Wula_DarkEnergy_FuelTank</li>
-        </linkableFacilities>
-      </li>
-      <li Class="CompProperties_AmbientSound">
-        <sound>GravshipEngine_Ambient</sound>
-      </li>
-      <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>-36000</basePowerConsumption>
-        <transmitsPower>true</transmitsPower>
-        <soundAmbientProducingPower>ChemfuelFiredGenerator_Ambience</soundAmbientProducingPower>
-      </li>
-      <li Class="CompProperties_LowPowerUnlessVacuum">
-        <lowPowerConsumptionFactor>0</lowPowerConsumptionFactor>
-        <checkRoomVacuum>false</checkRoomVacuum>
-      </li>
-      <li Class="CompProperties_Refuelable">
-        <fuelConsumptionRate>150</fuelConsumptionRate>
-        <fuelCapacity>1000.0</fuelCapacity>
-        <fuelFilter>
-          <thingDefs>
-            <li>Steel</li>
-          </thingDefs>
-        </fuelFilter>
-        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
-        <canEjectFuel>true</canEjectFuel>
-      </li>
-    </comps>
-    <costList>
-      <Steel>200</Steel>
-      <ComponentSpacer>6</ComponentSpacer>
-      <WULA_Dark_Matter_Item>1</WULA_Dark_Matter_Item>
-    </costList>
-  </ThingDef>
   <ThingDef ParentName="FuelTankBase">
     <defName>Wula_DarkEnergy_FuelTank</defName>
     <label>乌拉帝国暗物质引擎</label>
-    <description>乌拉帝国用于存储湮灭反应释放的巨量能源并将其转化为逆重飞船飞行所需燃料的设备。</description>
+    <description>乌拉帝国用于进行湮灭反应释放巨量能源并将其转化为逆重飞船飞行所需燃料的设备——它可以储存无限的能源，并且在真空环境下还能释放大量的电力。\n\n如果是想进入地表，请提前规划电源储存，非真空环境下内部的湮灭反应保险将启动以防止意外发生，这意味着在地表上该设施只生产燃料！</description>
     <tickerType>Normal</tickerType>
     <graphicData>
-      <graphicClass>Graphic_Multi</graphicClass>
       <texPath>Wula/Building/Wula_DarkEnergy_FuelTank</texPath>
-      <drawSize>(4,4)</drawSize>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3.2)</drawSize>
+      <drawOffset>(0,0,0.2)</drawOffset>
+      <damageData>
+        <enabled>false</enabled>
+      </damageData>
     </graphicData>
+    <rotatable>false</rotatable>
     <statBases>
       <MaxHitPoints>300</MaxHitPoints>
       <Mass>70</Mass>
@@ -657,22 +623,33 @@
       <WULA_Dark_Matter_Item>1</WULA_Dark_Matter_Item>
     </costList>
     <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(177, 0, 31, 0)</glowColor>
+        <colorPickerEnabled>true</colorPickerEnabled>
+        <darklightToggle>true</darklightToggle>
+      </li>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>1000</basePowerConsumption>
+        <basePowerConsumption>-36000</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+        <soundAmbientProducingPower>ChemfuelFiredGenerator_Ambience</soundAmbientProducingPower>
+      </li>
+      <li Class="CompProperties_LowPowerUnlessVacuum">
+        <lowPowerConsumptionFactor>0</lowPowerConsumptionFactor>
+        <checkRoomVacuum>false</checkRoomVacuum>
       </li>
       <li Class="CompProperties_Refuelable">
         <fuelConsumptionRate>-150</fuelConsumptionRate>
-        <fuelCapacity>750</fuelCapacity>
+        <fuelCapacity>1000</fuelCapacity>
         <targetFuelLevelConfigurable>false</targetFuelLevelConfigurable>
-        <initialConfigurableTargetFuelLevel>750</initialConfigurableTargetFuelLevel>
         <fuelFilter>
           <thingDefs>
             <li>Chemfuel</li>
           </thingDefs>
         </fuelFilter>
-        <fuelLabel>Chemfuel</fuelLabel>
-        <fuelGizmoLabel>Chemfuel</fuelGizmoLabel>
+        <fuelLabel>暗物质燃料</fuelLabel>
+        <fuelGizmoLabel>暗物质燃料</fuelGizmoLabel>
         <consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
         <autoRefuelPercent>1</autoRefuelPercent>
         <showFuelGizmo>true</showFuelGizmo>
@@ -680,10 +657,13 @@
         <showAllowAutoRefuelToggle>false</showAllowAutoRefuelToggle>
         <canEjectFuel>false</canEjectFuel>
         <drawFuelGaugeInMap>false</drawFuelGaugeInMap>
-        <initialFuelPercent>0.01</initialFuelPercent>
+        <initialFuelPercent>0.000001</initialFuelPercent>
       </li>
     </comps>
     <uiOrder>2155</uiOrder>
+    <researchPrerequisites>
+      <li>WULA_Dark_Matter_Technology</li>
+    </researchPrerequisites>
   </ThingDef>
 
   <!-- 联络台 -->
@@ -762,71 +742,4 @@
     </building>
     <clearBuildingArea>false</clearBuildingArea>
   </ThingDef> -->
-  
-  <!-- 外挂炮台 -->
-  <ThingDef ParentName="BuildingBase">
-    <defName>WUla_Cat_Turret</defName>
-    <label>乌拉猫猫炮塔</label>
-    <description>有时候乌拉星人会把拿着DLa-1"页岩"突击步枪的乌拉猫猫机械体挂在外壁上，充当临时炮台。这种“炮台”依附于墙壁，不会阻碍通行，深受爱猫TV好评。</description>
-    <thingClass>Building_TurretGun</thingClass>
-    <drawerType>MapMeshAndRealTime</drawerType>
-    <graphicData>
-      <texPath>Things/Building/Mech/TurretMechLarge_Base</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(1,1)</drawSize>
-      <drawOffset>(0,0,-0.16)</drawOffset>
-      <damageData>
-        <enabled>false</enabled>
-      </damageData>
-      <shadowData>
-        <offset>(-0.13,-0.87,-0.1)</offset>
-        <volume>(0.5,0.4,1.05)</volume>
-      </shadowData>
-    </graphicData>
-    <altitudeLayer>BuildingOnTop</altitudeLayer>
-    <designationCategory>Security</designationCategory>
-    <stealable>false</stealable>
-    <size>(1,1)</size>
-    <passability>Standable</passability>
-    <terrainAffordanceNeeded IsNull="True" />
-    <pathCost>0</pathCost>
-    <fillPercent>0.4</fillPercent>
-    <tickerType>Normal</tickerType>
-    <comps>
-      <li Class="CompProperties_Forbiddable"/>
-      <li Class="CompProperties_Stunnable">
-        <affectedDamageDefs>
-          <li>Stun</li>
-          <li>EMP</li>
-        </affectedDamageDefs>
-        <adaptableDamageDefs>
-          <li>EMP</li>
-        </adaptableDamageDefs>
-      </li>
-    </comps>
-    <statBases>
-      <MaxHitPoints>260</MaxHitPoints>
-      <Flammability>0</Flammability>
-      <Mass>30</Mass>
-      <ShootingAccuracyTurret>0.9</ShootingAccuracyTurret>
-      <Beauty>-20</Beauty>
-    </statBases>
-    <damageMultipliers>
-      <li>
-        <damageDef>Flame</damageDef>
-        <multiplier>0</multiplier>
-      </li>
-    </damageMultipliers>
-    <!-- <generateCommonality>4</generateCommonality> -->
-    <building>
-      <isEdifice>false</isEdifice>
-      <isAttachment>true</isAttachment>
-      <combatPower>220</combatPower>
-      <turretGunDef>WULA_RW_Base_AR</turretGunDef>
-      <turretBurstWarmupTime>1.0</turretBurstWarmupTime>
-      <turretBurstCooldownTime>1.2</turretBurstCooldownTime>
-      <soundAmbient>MechTurretBig_Call</soundAmbient>
-    </building>
-    <uiIconPath>Things/Building/Security/TurretMortar_MenuIcon</uiIconPath>
-  </ThingDef>
 </Defs>

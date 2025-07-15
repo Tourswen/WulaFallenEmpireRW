@@ -75,7 +75,7 @@
     <displayPriority>100</displayPriority>
     
     <researchPrerequisites>
-      <li>WULA_Adv_WorkTable_Technology</li>
+      <li>WULA_Base_Technology</li>
     </researchPrerequisites>
   </RecipeDef>
 
@@ -118,7 +118,7 @@
     <displayPriority>100</displayPriority>
     
     <researchPrerequisites>
-      <li>WULA_Adv_WorkTable_Technology</li>
+      <li>WULA_Dark_Matter_Technology</li>
     </researchPrerequisites>
   </RecipeDef>
 

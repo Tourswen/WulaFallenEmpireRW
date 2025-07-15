@@ -167,6 +167,10 @@
             </curve>
           </ArrestSuccessChance>
         </ageStatOverrides>
+        <!-- 生育设置，将妊娠设为男性来避免开局刷妊娠 -->
+        <reproduction>
+          <gestatingGender>Male</gestatingGender>
+        </reproduction>
       </generalSettings>
       <!-- 图形 -->
 			<graphicPaths>
@@ -534,6 +538,94 @@
 		<label>SMp-38A"斯佩萨特"</label>
 		<description>乌拉帝国所使用的中型突击战车，以逆重的方式悬浮于战场上，搭载了联装机炮和用于杀伤软目标的"石英"火箭弹，并且拥有足以保护一支突击小队的护盾。</description>
   </ThingDef>
+
+  <ThingDef Name="Wula_AI_Engineer_Mother" ParentName="HeavyMechanoid">
+		<defName>Wula_AI_Engineer_Mother</defName>
+		<label>PMu-7"西比尔卡"</label>
+		<description>乌拉帝国的机械开拓单元，通常被投放到荒无人烟的星球上进行初步开发。</description>
+    <uiIconPath>Wula/Things/Wula_AI_Bomb_Mother/Wula_AI_Bomb_Mother_Icon</uiIconPath>
+    <statBases>
+      <BandwidthCost>4</BandwidthCost>
+      <MoveSpeed>4</MoveSpeed>
+      <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">1</VacuumResistance>
+      <!-- 有自带护甲，对热量伤害有高抵抗 -->
+      <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+      <ArmorRating_Heat>2.00</ArmorRating_Heat>
+      <CarryingCapacity>1200</CarryingCapacity>
+      <ShootingAccuracyPawn>100</ShootingAccuracyPawn>
+      <IncomingDamageFactor>0.75</IncomingDamageFactor>
+
+      <MechEnergyLossPerHP MayRequire="Ludeon.RimWorld.Biotech">0.1</MechEnergyLossPerHP>
+      <WastepacksPerRecharge MayRequire="Ludeon.RimWorld.Biotech">5</WastepacksPerRecharge>
+    </statBases>
+    <race>
+      <body>WULA_AI_Heavy_Panzer_Body</body>
+      <baseBodySize>10.0</baseBodySize>
+			<baseHealthScale>4</baseHealthScale>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <soundWounded>Pawn_Mech_Tunneler_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Tunneler_Death</soundDeath>
+          <soundCall>Pawn_Mech_Tunneler_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <bulletStaggerEffecterDef>TunnelerSlowedDown</bulletStaggerEffecterDef>
+    </race>
+    <tools Inherit="False">
+      <li>
+        <label>碾压</label>
+        <labelNoLocation>碾压</labelNoLocation>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>2.9</cooldownTime>
+        <linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+      </li>
+    </tools>
+  </ThingDef>
+  <AbilityDef>
+    <defName>Wula_AI_Engineer_Mother_Ability1</defName>
+    <label>部署低角护盾</label>
+    <description>向所在单元格部署一个低角护盾，该护盾不会由于攻击而过载，但是会在几十秒后烧毁。</description>
+    <iconPath>Things/Building/Security/BroadshieldProjector</iconPath>
+    <writeCombatLog>True</writeCombatLog>
+    <showPsycastEffects>False</showPsycastEffects>
+    <cooldownTicksRange>3600</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>14.9</range>
+      <warmupTime>0.25</warmupTime>
+      <soundCast>AcidSpray_Resolve</soundCast>
+      <targetable>false</targetable>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityLaunchProjectile">
+        <projectileDef>Bullet_Wula_AI_Engineer_Mother_Ability1</projectileDef>
+      </li>
+    </comps>
+  </AbilityDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Wula_AI_Engineer_Mother_Ability1</defName>
+    <label>低角护盾</label>
+    <thingClass>Projectile_SpawnsThing</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Security/BroadshieldProjector</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <explosionRadius>19.9</explosionRadius> <!-- Must be kept in sync with range of Gun_TacticalTurret -->
+      <speed>41</speed>
+      <spawnsThingDef>BroadshieldProjector</spawnsThingDef>
+      <tryAdjacentFreeSpaces>true</tryAdjacentFreeSpaces>
+    </projectile>
+  </ThingDef>
     
   <ThingDef ParentName="LightMechanoid">
     <defName>Mech_WULA_Cat</defName>
@@ -617,7 +709,7 @@
       </lifeStageAges>
       <!-- <thinkTreeConstant>WarUrchinConstant</thinkTreeConstant> -->
       <!-- <baseHealthScale>4</baseHealthScale> -->
-       <canFlyInVacuum>true</canFlyInVacuum>
+      <canFlyInVacuum>true</canFlyInVacuum>
     </race>
     <!-- <comps Inherit="False">
       <li Class="CompProperties_CanBeDormant" />
@@ -660,7 +752,7 @@
     <defName>Mech_WULA_Cat_Assault</defName>
     <label>CAt-46"突击猫猫"</label>
     <description>乌拉帝国的一种小型机械体，可以执行搬运、狩猎和割除任务，装备了一把DLa-4"云母"突击步枪附下挂刺刀，以在战场上拖住敌军。</description>
-    <uiIconPath>Wula/Things/WULA_Cat/WULA_Cat_Thin_south</uiIconPath>
+    <uiIconPath>Wula/Things/WULA_Assault_Cat/WULA_Cat_Thin_south</uiIconPath>
     <race>
       <mechEnabledWorkTypes Inherit="False">
         <li>Hunting</li>
@@ -669,8 +761,48 @@
       </mechEnabledWorkTypes>
     </race>
     <statBases>
+      <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
       <!-- <WorkSpeedGlobal>2</WorkSpeedGlobal> -->
       <MoveSpeed>4</MoveSpeed>
     </statBases>
+  </ThingDef>
+  <ThingDef ParentName="BaseDrone">
+    <defName>Mech_WULA_Cat_Bomb</defName>
+    <label>CAt-89"敢死猫猫"</label>
+    <description>乌拉帝国的一种小型机械体，浑身缠满炸药，以自杀式袭击攻击敌方。</description>
+    <uiIconPath>Wula/Things/WULA_bomb_Cat/WULA_Cat_Thin_south</uiIconPath>
+    <race>
+      <thinkTreeConstant>HunterDroneConstant</thinkTreeConstant>
+      <baseHealthScale>0.35</baseHealthScale>
+      <baseBodySize>0.7</baseBodySize>
+      <hasCorpse>true</hasCorpse>
+      <body>DroneWithThreeLegs</body>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Hunter_Wounded</soundWounded>
+          <soundDeath>Pawn_Hunter_Death</soundDeath>
+          <soundCall>Pawn_Hunter_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <statBases>
+      <MoveSpeed>4</MoveSpeed>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_MechPowerCell">
+        <totalPowerTicks>12500</totalPowerTicks> <!-- 5 hours -->
+        <labelOverride>电池电量</labelOverride>
+        <tooltipOverride>这是被临时生产的乌拉猫猫，它们很快就会因为能源耗尽而倒地。</tooltipOverride>
+        <showGizmoOnNonPlayerControlled>true</showGizmoOnNonPlayerControlled>
+      </li>
+      <li Class="CompProperties_HunterDrone">
+        <explosionRadius>1.5</explosionRadius>
+        <explosionDamageType>Bomb</explosionDamageType>
+        <explosionDamageAmount>40</explosionDamageAmount>
+      </li>
+    </comps>
   </ThingDef>
 </Defs>
