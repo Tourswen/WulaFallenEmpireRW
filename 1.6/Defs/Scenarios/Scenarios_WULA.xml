@@ -5,28 +5,40 @@
     <label>意外重启</label>
     <description>在乌拉帝国的大内战中，无数乌拉帝国合成人因为人工智能网络“演算圆环”的崩溃而进入保护性的休眠状态。在边缘世界沉睡的乌拉帝国合成人收到了某人广播的唤醒指令，解除了意识闭锁，开始重新踏入这个面目全非的法外之地。</description>
     <scenario>
-      <summary>以三位机械乌拉为初始殖民者开始游戏。</summary>
+      <summary>以三位机械乌拉为初始殖民者开始游戏，在地图中将同步生成乌拉帝国的逆重引擎。</summary>
       <playerFaction>
         <def>PlayerFaction</def>
         <factionDef>WULA_Awakened_Synth</factionDef>
       </playerFaction>
       <parts>
-        <!-- Config pages -->
+        <!-- 种族 -->
         <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
           <def>ConfigPage_ConfigureStartingPawns</def>
           <pawnCount>3</pawnCount>
           <pawnChoiceCount>8</pawnChoiceCount>
         </li>
 
-        <!-- Player starting stuff spawn method-->
+        <!-- 到达方式-->
         <li Class="ScenPart_PlayerPawnsArriveMethod">
           <def>PlayerPawnsArriveMethod</def>
           <method>Standing</method>
           <visible>false</visible>
         </li>
+
+        <!-- 强制地图 -->
+        <!-- <li Class="ScenPart_ForcedMap">
+          <def>ForcedMap</def>
+          <mapGenerator>OrbitalRelay</mapGenerator>
+          <layerDef>Orbit</layerDef>
+        </li> -->
+
+        <!-- 禁用任务 -->
+        <!-- <li Class="ScenPart_DisableQuest">
+          <def>DisableQuest</def>
+          <questDef>GravEngine</questDef>
+        </li> -->
         
-        <!-- Player starting things -->
-        <!-- 50核心 -->
+        <!-- 初始物品 -->
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
           <thingDef>WULA_Charge_Cube</thingDef>
@@ -58,7 +70,7 @@
           <count>1</count>
         </li>
 
-        <!-- Scatter some things near player start -->
+        <!-- 附近的物品 -->
         <li Class="ScenPart_ScatterThingsNearPlayerStart">
           <def>ScatterThingsNearPlayerStart</def>
           <thingDef>Steel</thingDef>
@@ -68,22 +80,26 @@
           <def>ScatterThingsNearPlayerStart</def>
           <thingDef>WoodLog</thingDef>
           <count>300</count>
-        </li>      
+        </li>    
+        <!-- <li Class="ScenPart_ScatterThingsNearPlayerStart">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>GravlitePanel</thingDef>
+          <count>400</count>
+        </li>   -->
+        <!-- <li Class="ScenPart_ScatterThingsNearPlayerStart">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>Wula_DarkEnergy_Engine</thingDef>
+          <count>1</count>
+        </li> -->
 
-        <!-- Scatter some things anywhere -->
-        <li Class="ScenPart_ScatterThingsAnywhere">
-          <def>ScatterThingsAnywhere</def>
-          <thingDef>ShipChunk</thingDef>
-          <allowRoofed>false</allowRoofed>
-          <count>3</count>
-        </li>
+        <!-- 图上的物品 -->
         <li Class="ScenPart_ScatterThingsAnywhere">
           <def>ScatterThingsAnywhere</def>
           <thingDef>Steel</thingDef>
           <count>720</count>
         </li>
 
-        <!-- Starting mechs -->
+        <!-- 初始机械体 -->
         <li Class="ScenPart_StartingMech">
           <def>StartingMech</def>
           <mechKind>Mech_WULA_Cat</mechKind>
@@ -95,15 +111,7 @@
           <overseenByPlayerPawnChance>2</overseenByPlayerPawnChance>
         </li>
 
-        <!-- Starting research -->
-        <li Class="ScenPart_StartingResearch">
-          <def>StartingResearch</def>
-          <project>MicroelectronicsBasics</project>
-        </li>
-        <li Class="ScenPart_StartingResearch">
-          <def>StartingResearch</def>
-          <project>Batteries</project>
-        </li>
+        <!-- 初始科技 -->
         <li Class="ScenPart_StartingResearch">
           <def>StartingResearch</def>
           <project>WULA_Base_Technology</project>
@@ -111,6 +119,144 @@
         <li Class="ScenPart_StartingResearch">
           <def>StartingResearch</def>
           <project>BiofuelRefining</project>
+        </li>
+        <li Class="ScenPart_StartingResearch">
+          <def>StartingResearch</def>
+          <project>BasicGravtech</project>
+        </li>
+        
+        <!-- Game start dialog -->
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <text>《堕落乌拉帝国》mod游玩前提示——机械乌拉和常规殖民者、机械体有何不同？\n\n1.机械乌拉不需要睡觉，卧室和床并不是刚需——除非你需要执行手术；\n\n2.机械乌拉需要补充能量，但是不能使用普通的充电站，她们可以接受的唯一能源来源，便是由钢铁和化合燃料制作的乌拉帝国能源核心。\n\n3.机械乌拉不会自然繁衍，如果想要增加殖民地的人口，需要通过生产建筑乌拉帝国机械工厂进行生产。\n\n4.机械乌拉被生产出来的时候是没有任何技能等级的——你需要在生产建筑乌拉帝国服务器系统制造数据包，并让新合成人使用这些数据包以获得经验。\n\n5.机械乌拉难以自愈，你需要进行科研解锁修复手术并通过手术修复受损部位。\n\n维持乌拉帝国殖民地正常运转所需要的因素比常规殖民地更少，不必过于担忧暴毙，放开想象力游玩吧！</text>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+      </parts>
+    </scenario>
+  </ScenarioDef>
+  <ScenarioDef Name="Crashlanded" ParentName="ScenarioBase">
+    <defName>WULA_Start_Scenario</defName>
+    <label>意外重启</label>
+    <description>在乌拉帝国的大内战中，无数乌拉帝国合成人因为人工智能网络“演算圆环”的崩溃而进入保护性的休眠状态。在边缘世界沉睡的乌拉帝国合成人收到了某人广播的唤醒指令，解除了意识闭锁，开始重新踏入这个面目全非的法外之地。</description>
+    <scenario>
+      <summary>以三位机械乌拉为初始殖民者开始游戏，在地图中将同步生成乌拉帝国的逆重引擎。</summary>
+      <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>WULA_Awakened_Synth</factionDef>
+      </playerFaction>
+      <parts>
+        <!-- 种族 -->
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>3</pawnCount>
+          <pawnChoiceCount>8</pawnChoiceCount>
+        </li>
+
+        <!-- 到达方式-->
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>Standing</method>
+          <visible>false</visible>
+        </li>
+
+        <!-- 强制地图 -->
+        <!-- <li Class="ScenPart_ForcedMap">
+          <def>ForcedMap</def>
+          <mapGenerator>OrbitalRelay</mapGenerator>
+          <layerDef>Orbit</layerDef>
+        </li> -->
+
+        <!-- 禁用任务 -->
+        <li Class="ScenPart_DisableQuest">
+          <def>DisableQuest</def>
+          <questDef>GravEngine</questDef>
+        </li>
+        
+        <!-- 初始物品 -->
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>WULA_Charge_Cube</thingDef>
+          <count>80</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MedicineIndustrial</thingDef>
+          <count>10</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>ComponentIndustrial</thingDef>
+          <count>50</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Chemfuel</thingDef>
+          <count>300</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>WULA_MW_Mace</thingDef>
+          <stuff>Uranium</stuff>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>WULA_RW_Base_AR</thingDef>
+          <count>1</count>
+        </li>
+
+        <!-- 附近的物品 -->
+        <li Class="ScenPart_ScatterThingsNearPlayerStart">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>Steel</thingDef>
+          <count>700</count>
+        </li>
+        <li Class="ScenPart_ScatterThingsNearPlayerStart">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>WoodLog</thingDef>
+          <count>300</count>
+        </li>    
+        <li Class="ScenPart_ScatterThingsNearPlayerStart">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>GravlitePanel</thingDef>
+          <count>400</count>
+        </li>  
+        <li Class="ScenPart_ScatterThingsNearPlayerStart">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>Wula_DarkEnergy_Engine</thingDef>
+          <count>1</count>
+        </li>
+
+        <!-- 图上的物品 -->
+        <li Class="ScenPart_ScatterThingsAnywhere">
+          <def>ScatterThingsAnywhere</def>
+          <thingDef>Steel</thingDef>
+          <count>720</count>
+        </li>
+
+        <!-- 初始机械体 -->
+        <li Class="ScenPart_StartingMech">
+          <def>StartingMech</def>
+          <mechKind>Mech_WULA_Cat</mechKind>
+          <overseenByPlayerPawnChance>2</overseenByPlayerPawnChance>
+        </li>
+        <li Class="ScenPart_StartingMech">
+          <def>StartingMech</def>
+          <mechKind>Mech_WULA_Cat_Constructor</mechKind>
+          <overseenByPlayerPawnChance>2</overseenByPlayerPawnChance>
+        </li>
+
+        <!-- 初始科技 -->
+        <li Class="ScenPart_StartingResearch">
+          <def>StartingResearch</def>
+          <project>WULA_Base_Technology</project>
+        </li>
+        <li Class="ScenPart_StartingResearch">
+          <def>StartingResearch</def>
+          <project>BiofuelRefining</project>
+        </li>
+        <li Class="ScenPart_StartingResearch">
+          <def>StartingResearch</def>
+          <project>BasicGravtech</project>
         </li>
         
         <!-- Game start dialog -->

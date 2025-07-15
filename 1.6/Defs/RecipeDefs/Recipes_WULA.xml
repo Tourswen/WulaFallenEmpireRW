@@ -398,4 +398,34 @@
     </descriptionHyperlinks>
     <researchPrerequisite>WULA_Machine_Productor_1_Technology</researchPrerequisite>
   </RecipeDef>
+  <RecipeDef ParentName="LightMechanoidRecipe">
+    <defName>WULA_Build_Mech_Cat_Assault</defName>
+    <label>建造CAt-46"突击猫猫"</label>
+    <description>建造一台CAt-46"突击猫猫"辅助机器人，可以执行搬运、狩猎和割除任务，配备与DLa-1"页岩"性能相近的DLa-4"云母"突击步枪。</description>
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <products>
+      <Mech_WULA_Cat_Assault>1</Mech_WULA_Cat_Assault>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_WULA_Cat_Assault</ThingDef>
+    </descriptionHyperlinks>
+    <researchPrerequisite>WULA_Machine_Productor_1_Technology</researchPrerequisite>
+  </RecipeDef>
 </Defs>

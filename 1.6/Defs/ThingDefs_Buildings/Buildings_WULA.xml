@@ -538,7 +538,7 @@
   <ThingDef ParentName="GravshipComponentBase">
     <defName>Wula_DarkEnergy_Engine</defName>
     <label>乌拉帝国暗物质核心</label>
-    <description>乌拉帝国为登陆舰设计并使用失落科技所建造的暗物质核心，是战舰所用的暗物质核心的缩小版。它可以像闪耀世界的逆重引擎一样支撑一艘飞船的主体结构，并支持飞船在近地轨道移动。\n\n除此之外，内部通过金属启动的湮灭反应还能为全舰提供巨量电力——但是它只能在近地轨道上工作；当在地表停靠时，复杂的环境会使得能源核心进入闭锁状态。\n\n温馨提示：你可以建造多个暗物质核心，但是请确保你只有唯一一艘飞船，否则将导致不可预知的bug。</description>
+    <description>乌拉帝国为登陆舰设计并使用失落科技所建造的暗物质核心，是战舰所用的暗物质核心的缩小版。它可以像闪耀世界的逆重引擎一样支撑一艘飞船的主体结构，并允许飞船在近地轨道移动。\n\n除此之外，内部通过金属启动的湮灭反应还能为全舰提供巨量电力——但是它只能在近地轨道上工作；当在地表停靠时，复杂的环境会使得能源核心进入闭锁状态。\n\n温馨提示：你可以建造多个暗物质核心，但是请确保你只有唯一一艘飞船，否则将导致不可预知的bug。</description>
     <thingClass>Building_GravEngine</thingClass>
     <drawerType>RealtimeOnly</drawerType>
     <tickerType>Normal</tickerType>
@@ -631,8 +631,8 @@
   </ThingDef>
   <ThingDef ParentName="FuelTankBase">
     <defName>Wula_DarkEnergy_FuelTank</defName>
-    <label>暗物质引擎</label>
-    <description>乌拉帝国用于存储湮灭反应释放的巨量能源并将其转化为飞行器飞行所需燃料的设备——在星球环境下，这些能源无法直接输入引擎。</description>
+    <label>乌拉帝国暗物质引擎</label>
+    <description>乌拉帝国用于存储湮灭反应释放的巨量能源并将其转化为逆重飞船飞行所需燃料的设备。</description>
     <tickerType>Normal</tickerType>
     <graphicData>
       <graphicClass>Graphic_Multi</graphicClass>

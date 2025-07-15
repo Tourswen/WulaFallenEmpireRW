@@ -3,7 +3,7 @@
   <ThingDef ParentName="Wall">
     <defName>WulaWall</defName>
     <label>乌拉帝国堡垒</label>
-    <description>乌拉帝国堡垒外壁，相当厚实，能够抵御大量爆炸和震荡伤害，并且拥有气密性，可以用在飞船外壳上。</description>
+    <description>乌拉帝国堡垒外壁，相当厚实，能够抵御大量伤害，并且拥有气密性，可以用在飞船外壳上。</description>
     <uiOrder>1800</uiOrder>
     <uiIconPath>Wula/Building/Linked/WULA_Fortress_Wall_MenuIcon</uiIconPath>
     <graphicData>
@@ -42,7 +42,7 @@
       </li>
       <li>
         <damageDef>Thump</damageDef>
-        <multiplier>0.01</multiplier>
+        <multiplier>0.1</multiplier>
       </li>
     </damageMultipliers>
     <comps Inherit="False">
@@ -87,6 +87,7 @@
     </statBases>
     <costList>
       <Steel>50</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
     </costList>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <selectable>true</selectable>

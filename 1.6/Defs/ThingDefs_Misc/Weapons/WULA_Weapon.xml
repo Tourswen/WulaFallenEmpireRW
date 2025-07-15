@@ -142,6 +142,61 @@
       <li>Wula_Constructor_Cat_Weapon</li>
     </weaponTags>
   </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>WULA_RW_Base_AR_Cat</defName>
+    <label>DLa-4"云母"</label>
+    <description>乌拉帝国的旧式突击步枪，比起DLa-1"页岩"来说更小一些，射程和精度有所下降，但是下挂了一把刺刀用于近身战斗，专为乌拉猫猫机械体设计。</description>
+    <techLevel>Industrial</techLevel>
+    <tickerType>Normal</tickerType>
+    <!-- <techLevel>Spacer</techLevel> -->
+    <weaponTags>
+      <li>Wula_Assault_Cat_Weapon</li>
+    </weaponTags>
+    <graphicData>
+      <texPath>Wula/Weapon/WULA_RW_Base_AR</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <statBases>
+      <WorkToMake>700</WorkToMake>
+      <!-- <MarketValue>370</MarketValue> -->
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.6</AccuracyTouch>
+      <AccuracyShort>0.6</AccuracyShort>
+      <AccuracyMedium>0.5</AccuracyMedium>
+      <AccuracyLong>0.25</AccuracyLong>
+      <RangedWeapon_Cooldown>1.6</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_AssaultRifle</defaultProjectile>
+        <warmupTime>0.7</warmupTime>
+        <range>20</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+        <soundCast>Shot_AssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>7</muzzleFlashScale>
+      </li>
+    </verbs>
+    <costList Inherit="False">
+      <Steel>60</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+    </costList>
+    <tools>
+      <li>
+        <label>刺刀戳刺</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>15</power>
+        <armorPenetration>0.50</armorPenetration>
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
   
   <!-- 动力破墙锤 -->
   <ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
