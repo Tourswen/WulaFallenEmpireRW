@@ -129,6 +129,8 @@
       <texPath>Wula/Item/WULA_Dark_Matter_Item</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <tickerType>Normal</tickerType>
+    <smeltable>false</smeltable>
     <genericMarketSellable>false</genericMarketSellable>
     <soundInteract>Metal_Drop</soundInteract>
     <soundDrop>Metal_Drop</soundDrop>
@@ -142,7 +144,6 @@
       <li>ResourcesRaw</li>
     </thingCategories>
     <burnableByRecipe>false</burnableByRecipe>
-    <smeltable>true</smeltable>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
     <allowedArchonexusCount>80</allowedArchonexusCount>
     <possessionCount>1</possessionCount>

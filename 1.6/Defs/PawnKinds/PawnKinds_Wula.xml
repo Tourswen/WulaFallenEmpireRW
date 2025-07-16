@@ -160,7 +160,7 @@
       </li>
     </lifeStages>
     <abilities>
-      <li>Wula_AI_Engineer_Mother_Ability1</li>
+      <li>Wula_AI_Engineer_Mother_Ability</li>
     </abilities>
     <weaponMoney>99999~99999</weaponMoney>
     
@@ -189,7 +189,7 @@
       </li>
     </lifeStages>
     <abilities>
-      <li>Wula_AI_Engineer_Mother_Attack_Ability1</li>
+      <li>Wula_AI_Engineer_Mother_Attack_Ability</li>
     </abilities>
     <weaponMoney>99999~99999</weaponMoney>
     
@@ -346,8 +346,8 @@
     <lifeStages Inherit="False">
       <li>
         <bodyGraphicData>
-          <texPath>Wula/Things/WULA_bomb_Cat/WULA_Cat_Thin</texPath>
-          <maskPath>Wula/Things/WULA_bomb_Cat/AllegianceOverlays/None</maskPath>
+          <texPath>Wula/Things/WULA_Commander_Cat/WULA_Cat_Thin</texPath>
+          <maskPath>Wula/Things/WULA_Commander_Cat/AllegianceOverlays/None</maskPath>
           <shaderType>CutoutWithOverlay</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>1.1</drawSize>

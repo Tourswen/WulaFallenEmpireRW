@@ -35,7 +35,7 @@
     <!-- <placeWorkers>
       <li>PlaceWorker_OnSubstructure</li>
     </placeWorkers> -->
-    <damageMultipliers>
+    <damageMultipliers Inherit="False">
       <li>
         <damageDef>Bomb</damageDef>
         <multiplier>0.01</multiplier>

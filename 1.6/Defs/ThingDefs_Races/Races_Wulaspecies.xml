@@ -582,16 +582,16 @@
         </capacities>
         <power>5</power>
         <cooldownTime>3</cooldownTime>
-        <linkedBodyPartsGroup>Leg</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>Legs</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
       </li>
     </tools>
   </ThingDef>
   <AbilityDef>
-    <defName>Wula_AI_Engineer_Mother_Ability1</defName>
+    <defName>Wula_AI_Engineer_Mother_Ability</defName>
     <label>部署CAt-44"指挥官猫猫"</label>
     <description>向所在单元格部署一只CAt-44"指挥官猫猫"，这种机械体比起同类来说拥有很高的防御，在配备了远程武器的同时还配备了一个不会过载的护盾发生器，可以掩护敢死猫猫的前进。</description>
-    <iconPath>Things/Building/Security/BroadshieldProjector</iconPath>
+    <iconPath>Wula/Things/WULA_Commander_Cat/WULA_Cat_Thin_south</iconPath>
     <writeCombatLog>True</writeCombatLog>
     <showPsycastEffects>False</showPsycastEffects>
     <cooldownTicksRange>8000</cooldownTicksRange>
@@ -607,12 +607,12 @@
     </verbProperties>
     <comps>
       <li Class="CompProperties_AbilityLaunchProjectile">
-        <projectileDef>Bullet_Wula_AI_Engineer_Mother_Ability1</projectileDef>
+        <projectileDef>Bullet_Wula_AI_Engineer_Mother_Ability</projectileDef>
       </li>
     </comps>
   </AbilityDef>
   <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_Wula_AI_Engineer_Mother_Ability1</defName>
+    <defName>Bullet_Wula_AI_Engineer_Mother_Ability</defName>
     <label>CAt-44"指挥官猫猫"</label>
     <thingClass>Projectile_SpawnsPawnZeroAge</thingClass>
     <graphicData>
@@ -632,7 +632,7 @@
     <uiIconPath>Wula/Things/Wula_AI_Bomb_Mother/Wula_AI_Bomb_Mother_Icon</uiIconPath>
   </ThingDef>
   <AbilityDef>
-    <defName>Wula_AI_Engineer_Mother_Attack_Ability1</defName>
+    <defName>Wula_AI_Engineer_Mother_Attack_Ability</defName>
     <label>部署低角护盾</label>
     <description>向所在单元格部署一个低角护盾，该护盾不会由于攻击而过载，但是会在几十秒后烧毁。</description>
     <iconPath>Things/Building/Security/BroadshieldProjector</iconPath>
@@ -651,12 +651,12 @@
     </verbProperties>
     <comps>
       <li Class="CompProperties_AbilityLaunchProjectile">
-        <projectileDef>Bullet_Wula_AI_Engineer_Mother_Attack_Ability1</projectileDef>
+        <projectileDef>Bullet_Wula_AI_Engineer_Mother_Attack_Ability</projectileDef>
       </li>
     </comps>
   </AbilityDef>
   <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_Wula_AI_Engineer_Mother_Attack_Ability1</defName>
+    <defName>Bullet_Wula_AI_Engineer_Mother_Attack_Ability</defName>
     <label>低角护盾</label>
     <thingClass>Projectile_SpawnsThing</thingClass>
     <graphicData>
@@ -908,12 +908,24 @@
         <explosionDamageAmount>40</explosionDamageAmount>
       </li>
     </comps>
+    <tools Inherit="False">
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+      </li>
+    </tools>
   </ThingDef>
   <ThingDef ParentName="BaseDrone">
     <defName>Mech_WULA_Cat_Commander</defName>
     <label>CAt-44"指挥官猫猫"</label>
     <description>乌拉帝国的一种小型机械体，比起同类来说拥有很高的防御，在配备了远程武器的同时还配备了一个护盾发生器，这种盾会同时阻拦向外发射的射弹和向盾内发射的射弹。</description>
-    <uiIconPath>Wula/Things/WULA_Attack_Cat/WULA_Cat_Thin_south</uiIconPath>
+    <uiIconPath>Wula/Things/WULA_Commander_Cat/WULA_Cat_Thin_south</uiIconPath>
     <race>
 			<baseHealthScale>3</baseHealthScale>
       <thinkTreeConstant>SentryDroneConstant</thinkTreeConstant>
@@ -957,6 +969,18 @@
         <activeSound>Broadshield_Ambience</activeSound>
       </li>
     </comps>
+    <tools Inherit="False">
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+      </li>
+    </tools>
   </ThingDef>
   <ThingDef ParentName="BaseDrone">
     <defName>Mech_WULA_Cat_Inf</defName>
@@ -989,5 +1013,17 @@
         <showGizmoOnNonPlayerControlled>true</showGizmoOnNonPlayerControlled>
       </li>
     </comps>
+    <tools Inherit="False">
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+      </li>
+    </tools>
   </ThingDef>
 </Defs>

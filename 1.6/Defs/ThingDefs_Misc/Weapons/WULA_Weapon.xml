@@ -554,6 +554,7 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1.3</drawSize>
     </graphicData>
+    <relicChance>0</relicChance>
     <uiIconScale>1.1</uiIconScale>
     <descriptionHyperlinks>
       <ThingDef>WULA_Soul_Wedge</ThingDef>
@@ -649,6 +650,7 @@
       <drawSize>1.3</drawSize>
     </graphicData>
     <uiIconScale>1.1</uiIconScale>
+    <relicChance>0</relicChance>
     <descriptionHyperlinks>
       <ThingDef>WULA_Soul_Wedge</ThingDef>
     </descriptionHyperlinks>
@@ -734,6 +736,7 @@
       <drawSize>1.3</drawSize>
     </graphicData>
     <uiIconScale>1.1</uiIconScale>
+    <relicChance>0</relicChance>
     <descriptionHyperlinks>
       <ThingDef>WULA_Soul_Wedge</ThingDef>
     </descriptionHyperlinks>
@@ -825,6 +828,7 @@
       <drawSize>1.3</drawSize>
     </graphicData>
     <uiIconScale>1.1</uiIconScale>
+    <relicChance>0</relicChance>
     <descriptionHyperlinks>
       <ThingDef>WULA_Soul_Wedge</ThingDef>
     </descriptionHyperlinks>
@@ -914,6 +918,7 @@
       <drawSize>1.3</drawSize>
     </graphicData>
     <uiIconScale>1.1</uiIconScale>
+    <relicChance>0</relicChance>
     <descriptionHyperlinks>
       <ThingDef>WULA_Soul_Wedge</ThingDef>
     </descriptionHyperlinks>
@@ -1032,6 +1037,7 @@
       <drawSize>1.3</drawSize>
     </graphicData>
     <uiIconScale>1.1</uiIconScale>
+    <relicChance>0</relicChance>
     <weaponTags>
       <li>Spear</li>
     </weaponTags>
@@ -1133,6 +1139,7 @@
       <drawSize>1.3</drawSize>
     </graphicData>
     <uiIconScale>1.1</uiIconScale>
+    <relicChance>0</relicChance>
     <descriptionHyperlinks>
       <ThingDef>WULA_Soul_Wedge</ThingDef>
     </descriptionHyperlinks>
@@ -1706,6 +1713,7 @@
     <label>ATt-6"金红石"</label>
     <description>由乌拉帝国的"萨克森"战车所装备的战车炮塔，可以从极远距离上精准地点杀高价值目标。</description>
     <techLevel>Ultra</techLevel>
+    <relicChance>0</relicChance>
     <graphicData>
       <texPath>Wula/Weapon/WULA_WM_Panzer_Turret</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -1780,6 +1788,7 @@
     <label>SRc-15"辉锑"</label>
     <description>由乌拉帝国的"萨克森"战车所装备的自动炮，能够组织起高射速的弹幕压制杀伤大规模目标，并且外挂了两具PRr-34"石英"火箭发射器，用于对抗集群冲击。</description>
     <techLevel>Ultra</techLevel>
+    <relicChance>0</relicChance>
     <graphicData>
       <texPath>Wula/Weapon/WULA_WM_Panzer_Autocannon</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -1942,6 +1951,7 @@
     <description>PMu-7"西比尔卡"内置的生产单元，可以源源不断地放出绑着炸弹的乌拉猫猫，以自杀式袭击击溃敌人阵线。</description>
     <techLevel>Ultra</techLevel>
     <uiIconPath>Wula/Things/WULA_bomb_Cat/WULA_Cat_Thin_south</uiIconPath>
+    <relicChance>0</relicChance>
     <graphicData>
       <texPath>Wula/Things/WULA_Cat/AllegianceOverlays/None_north</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -2008,6 +2018,7 @@
     <label>步兵猫猫生产</label>
     <description>PMu-7A"斯托洛维耶"内置的生产单元，可以源源不断地放出端着DLa-4"云母"突击步枪的乌拉猫猫，构成一道坚韧的防线。</description>
     <techLevel>Ultra</techLevel>
+    <relicChance>0</relicChance>
     <uiIconPath>Wula/Things/WULA_Attack_Cat/WULA_Cat_Thin_south</uiIconPath>
     <graphicData>
       <texPath>Wula/Things/WULA_Cat/AllegianceOverlays/None_north</texPath>

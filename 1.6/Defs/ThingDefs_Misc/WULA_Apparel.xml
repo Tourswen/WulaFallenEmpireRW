@@ -738,8 +738,8 @@
       <MaxHitPoints>1000</MaxHitPoints>
       <Mass>20</Mass>
       <Flammability>0</Flammability>
-      <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
-      <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.2</ArmorRating_Blunt>
       <ArmorRating_Heat>2.0</ArmorRating_Heat>
       <EquipDelay>35</EquipDelay>
       <EnergyShieldEnergyMax>0.5</EnergyShieldEnergyMax>
@@ -830,8 +830,8 @@
       <MaxHitPoints>1000</MaxHitPoints>
       <Mass>3</Mass>
       <Flammability>0</Flammability>
-      <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
-      <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1</ArmorRating_Blunt>
       <ArmorRating_Heat>2.0</ArmorRating_Heat>
       <EquipDelay>15</EquipDelay>
     </statBases>
@@ -873,8 +873,8 @@
       <MaxHitPoints>1000</MaxHitPoints>
       <Mass>20</Mass>
       <Flammability>0</Flammability>
-      <ArmorRating_Sharp>1.85</ArmorRating_Sharp>
-      <ArmorRating_Blunt>1.85</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
       <ArmorRating_Heat>2.0</ArmorRating_Heat>
       <EquipDelay>40</EquipDelay>
       <!-- <EnergyShieldEnergyMax>0.25</EnergyShieldEnergyMax> -->
@@ -934,6 +934,7 @@
         <forcedMissRadius>2</forcedMissRadius>
         <targetable>true</targetable>
         <violent>true</violent>
+        <requireLineOfSight>false</requireLineOfSight>
         <targetParams>
           <canTargetPawns>true</canTargetPawns>
           <canTargetBuildings>true</canTargetBuildings>
@@ -966,6 +967,47 @@
       <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
       <soundAmbient>MortarRound_Ambient</soundAmbient>
     </projectile>
+  </ThingDef>
+  <ThingDef ParentName="WULA_ApparelHelmetBase">
+    <defName>WULA_Heavy_Infantry_Helmet</defName>
+    <label>乌拉帝国重装头盔</label>
+    <description>与乌拉帝国重装装甲配套的头盔，防御力强大。</description>
+    <thingCategories>
+      <li>HeadgearNoble</li>
+    </thingCategories>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>WULA_Synth_Armor_2_Technology</researchPrerequisite>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Wula/Apparel/WULA_Heavy_Infantry_Helmet</texPath>
+    </graphicData>
+    <statBases>
+      <WorkToMake>20000</WorkToMake>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+      <ArmorRating_Heat>2.0</ArmorRating_Heat>
+      <EquipDelay>15</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <IncomingDamageFactor>-0.5</IncomingDamageFactor>
+    </equippedStatOffsets>
+    <apparel>
+      <tags>
+        <li>RoyalTier5</li>
+        <li>Royal</li>
+      </tags>
+      <wornGraphicPath>Wula/Apparel/WULA_Heavy_Infantry_Helmet</wornGraphicPath>
+    </apparel>
+    <costStuffCount>100</costStuffCount>
+    <costList Inherit="False">
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
   </ThingDef>
 
   <!-- 盾牌 -->
