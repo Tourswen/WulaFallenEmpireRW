@@ -1988,7 +1988,6 @@
       </li>
     </verbs>
   </ThingDef>
-
   <ThingDef ParentName="BaseGrenadeProjectile">
     <defName>Grenade_WULA_SP_Engineer_Mother_FakeWeapon</defName>
     <label>绑着炸弹的乌拉猫猫</label>

@@ -542,7 +542,7 @@
   <ThingDef Name="Wula_AI_Engineer_Mother" ParentName="HeavyMechanoid">
 		<defName>Wula_AI_Engineer_Mother</defName>
 		<label>PMu-7"西比尔卡"</label>
-		<description>乌拉帝国的机械开拓单元，通常被投放到荒无人烟的星球上进行初步开发。</description>
+		<description>乌拉帝国的机械开拓单元，通常被投放到荒无人烟的星球上进行初步开发。这种型号的开拓单元可以生产以自杀式袭击攻击敌人的乌拉猫猫，以及配备护盾的指挥官乌拉猫猫。</description>
     <uiIconPath>Wula/Things/Wula_AI_Bomb_Mother/Wula_AI_Bomb_Mother_Icon</uiIconPath>
     <statBases>
       <BandwidthCost>4</BandwidthCost>
@@ -589,12 +589,12 @@
   </ThingDef>
   <AbilityDef>
     <defName>Wula_AI_Engineer_Mother_Ability1</defName>
-    <label>部署低角护盾</label>
-    <description>向所在单元格部署一个低角护盾，该护盾不会由于攻击而过载，但是会在几十秒后烧毁。</description>
+    <label>部署CAt-44"指挥官猫猫"</label>
+    <description>向所在单元格部署一只CAt-44"指挥官猫猫"，这种机械体比起同类来说拥有很高的防御，在配备了远程武器的同时还配备了一个不会过载的护盾发生器，可以掩护敢死猫猫的前进。</description>
     <iconPath>Things/Building/Security/BroadshieldProjector</iconPath>
     <writeCombatLog>True</writeCombatLog>
     <showPsycastEffects>False</showPsycastEffects>
-    <cooldownTicksRange>3600</cooldownTicksRange>
+    <cooldownTicksRange>8000</cooldownTicksRange>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <range>14.9</range>
@@ -613,6 +613,50 @@
   </AbilityDef>
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_Wula_AI_Engineer_Mother_Ability1</defName>
+    <label>CAt-44"监牢猫猫"</label>
+    <thingClass>Projectile_SpawnsPawnZeroAge</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Security/BroadshieldProjector</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <speed>41</speed>
+      <spawnsPawnKind>Mech_WULA_Cat_Commander</spawnsPawnKind>
+      <tryAdjacentFreeSpaces>true</tryAdjacentFreeSpaces>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="Wula_AI_Engineer_Mother">
+		<defName>Wula_AI_Engineer_Mother_Attack</defName>
+		<label>PMu-7A"斯托洛维耶"</label>
+		<description>乌拉帝国的机械开拓单元，通常被投放到荒无人烟的星球上进行初步开发。这种型号的开拓单元可以生产装备轻型武器的乌拉猫猫，并且可以在战场上投放低角护盾。</description>
+    <uiIconPath>Wula/Things/Wula_AI_Bomb_Mother/Wula_AI_Bomb_Mother_Icon</uiIconPath>
+  </ThingDef>
+  <AbilityDef>
+    <defName>Wula_AI_Engineer_Mother_Attack_Ability1</defName>
+    <label>部署低角护盾</label>
+    <description>向所在单元格部署一个低角护盾，该护盾不会由于攻击而过载，但是会在几十秒后烧毁。</description>
+    <iconPath>Things/Building/Security/BroadshieldProjector</iconPath>
+    <writeCombatLog>True</writeCombatLog>
+    <showPsycastEffects>False</showPsycastEffects>
+    <cooldownTicksRange>36000</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>14.9</range>
+      <warmupTime>0.25</warmupTime>
+      <soundCast>AcidSpray_Resolve</soundCast>
+      <targetable>false</targetable>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityLaunchProjectile">
+        <projectileDef>Bullet_Wula_AI_Engineer_Mother_Ability1</projectileDef>
+      </li>
+    </comps>
+  </AbilityDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Wula_AI_Engineer_Mother_Attack_Ability1</defName>
     <label>低角护盾</label>
     <thingClass>Projectile_SpawnsThing</thingClass>
     <graphicData>
@@ -622,9 +666,69 @@
     <projectile>
       <explosionRadius>19.9</explosionRadius> <!-- Must be kept in sync with range of Gun_TacticalTurret -->
       <speed>41</speed>
-      <spawnsThingDef>BroadshieldProjector</spawnsThingDef>
+      <spawnsThingDef>Wula_shieldProjector</spawnsThingDef>
       <tryAdjacentFreeSpaces>true</tryAdjacentFreeSpaces>
     </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Wula_shieldProjector</defName>
+    <label>乌拉帝国低角护盾</label>
+    <description>一个比常规低角护盾保护范围更大的护盾，由乌拉帝国的PMu-7系列机械体部署。它可以无限地吸收来袭火力，但是会在一段时间后烧毁。</description>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <pathCost>0</pathCost>
+    <passability>Standable</passability>
+    <fillPercent>0.35</fillPercent>
+    <graphicData>
+      <texPath>Things/Building/Security/BroadshieldProjector</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.9</drawSize>
+      <shadowData>
+        <volume>(0.3, 0.2, 0.3)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <killedLeavings/>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <repairEffect>ConstructMetal</repairEffect>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
+    <building>
+      <claimable>false</claimable>
+      <destroySound>BuildingDestroyed_Metal_Small</destroySound>
+      <ai_chillDestination>false</ai_chillDestination>
+      <isEdifice>false</isEdifice>
+      <destroyEffecter>Broadshield_Burnout</destroyEffecter>
+    </building>
+    <comps>
+      <li Class="CompProperties_ProjectileInterceptor">
+        <radius>6.9</radius>
+        <interceptGroundProjectiles>true</interceptGroundProjectiles>
+        <interceptNonHostileProjectiles>true</interceptNonHostileProjectiles>
+        <interceptOutgoingProjectiles>false</interceptOutgoingProjectiles>
+        <color>(0.9, 0.2, 0.2)</color>
+        <idlePulseSpeed>3</idlePulseSpeed>
+        <minIdleAlpha>0.2</minIdleAlpha>
+        <disarmedByEmpForTicks>600</disarmedByEmpForTicks>
+        <drawWithNoSelection>True</drawWithNoSelection>
+        <activeSound>Broadshield_Ambience</activeSound>
+      </li>
+      <li Class="CompProperties_DestroyAfterDelay">
+        <delayTicks>1800</delayTicks>
+        <destroyMode>KillFinalize</destroyMode>
+        <countdownLabel>烧毁于</countdownLabel>
+      </li>
+    </comps>
   </ThingDef>
     
   <ThingDef ParentName="LightMechanoid">
@@ -793,7 +897,7 @@
     </statBases>
     <comps>
       <li Class="CompProperties_MechPowerCell">
-        <totalPowerTicks>12500</totalPowerTicks> <!-- 5 hours -->
+        <totalPowerTicks>1100</totalPowerTicks> <!-- 5 hours -->
         <labelOverride>电池电量</labelOverride>
         <tooltipOverride>这是被临时生产的乌拉猫猫，它们很快就会因为能源耗尽而倒地。</tooltipOverride>
         <showGizmoOnNonPlayerControlled>true</showGizmoOnNonPlayerControlled>
@@ -802,6 +906,55 @@
         <explosionRadius>1.5</explosionRadius>
         <explosionDamageType>Bomb</explosionDamageType>
         <explosionDamageAmount>40</explosionDamageAmount>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="BaseDrone">
+    <defName>Mech_WULA_Cat_Commander</defName>
+    <label>CAt-44"指挥官猫猫"</label>
+    <description>乌拉帝国的一种小型机械体，比起同类来说拥有很高的防御，在配备了远程武器的同时还配备了一个护盾发生器，这种盾会同时阻拦向外发射的射弹和向盾内发射的射弹。</description>
+    <uiIconPath>Wula/Things/WULA_bomb_Cat/WULA_Cat_Thin_south</uiIconPath>
+    <race>
+			<baseHealthScale>3</baseHealthScale>
+      <thinkTreeConstant>SentryDroneConstant</thinkTreeConstant>
+      <baseBodySize>0.7</baseBodySize>
+      <hasCorpse>true</hasCorpse>
+      <body>DroneWithThreeLegs</body>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Hunter_Wounded</soundWounded>
+          <soundDeath>Pawn_Hunter_Death</soundDeath>
+          <soundCall>Pawn_Hunter_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <statBases>
+      <MoveSpeed>4</MoveSpeed>
+      <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+      <ArmorRating_Heat>1.00</ArmorRating_Heat>
+      <IncomingDamageFactor>0.75</IncomingDamageFactor>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_MechPowerCell">
+        <totalPowerTicks>2200</totalPowerTicks> <!-- 1 hours -->
+        <labelOverride>电池电量</labelOverride>
+        <tooltipOverride>这是被临时生产的乌拉猫猫，它们很快就会因为能源耗尽而倒地。</tooltipOverride>
+        <showGizmoOnNonPlayerControlled>true</showGizmoOnNonPlayerControlled>
+      </li>
+      <li Class="CompProperties_ProjectileInterceptor">
+        <radius>7.5</radius>
+        <interceptGroundProjectiles>true</interceptGroundProjectiles>
+        <interceptNonHostileProjectiles>true</interceptNonHostileProjectiles>
+        <interceptOutgoingProjectiles>true</interceptOutgoingProjectiles>
+        <color>(0.9, 0.2, 0.2)</color>
+        <idlePulseSpeed>3</idlePulseSpeed>
+        <minIdleAlpha>0.2</minIdleAlpha>
+        <disarmedByEmpForTicks>600</disarmedByEmpForTicks>
+        <drawWithNoSelection>True</drawWithNoSelection>
+        <activeSound>Broadshield_Ambience</activeSound>
       </li>
     </comps>
   </ThingDef>
