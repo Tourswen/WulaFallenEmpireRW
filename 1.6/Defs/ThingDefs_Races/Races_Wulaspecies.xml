@@ -560,7 +560,7 @@
       <WastepacksPerRecharge MayRequire="Ludeon.RimWorld.Biotech">5</WastepacksPerRecharge>
     </statBases>
     <race>
-      <body>WULA_AI_Heavy_Panzer_Body</body>
+      <body>Wula_AI_Engineer_Mother_Body</body>
       <baseBodySize>10.0</baseBodySize>
 			<baseHealthScale>4</baseHealthScale>
       <lifeStageAges>
@@ -575,14 +575,14 @@
     </race>
     <tools Inherit="False">
       <li>
-        <label>碾压</label>
-        <labelNoLocation>碾压</labelNoLocation>
+        <label>机械足踢击</label>
+        <labelNoLocation>踢击</labelNoLocation>
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>14</power>
-        <cooldownTime>2.9</cooldownTime>
-        <linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
+        <power>5</power>
+        <cooldownTime>3</cooldownTime>
+        <linkedBodyPartsGroup>Leg</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
       </li>
     </tools>
@@ -913,7 +913,7 @@
     <defName>Mech_WULA_Cat_Commander</defName>
     <label>CAt-44"指挥官猫猫"</label>
     <description>乌拉帝国的一种小型机械体，比起同类来说拥有很高的防御，在配备了远程武器的同时还配备了一个护盾发生器，这种盾会同时阻拦向外发射的射弹和向盾内发射的射弹。</description>
-    <uiIconPath>Wula/Things/WULA_bomb_Cat/WULA_Cat_Thin_south</uiIconPath>
+    <uiIconPath>Wula/Things/WULA_Attack_Cat/WULA_Cat_Thin_south</uiIconPath>
     <race>
 			<baseHealthScale>3</baseHealthScale>
       <thinkTreeConstant>SentryDroneConstant</thinkTreeConstant>

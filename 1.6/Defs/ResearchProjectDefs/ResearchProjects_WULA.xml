@@ -250,40 +250,28 @@
       <li>WULA_Machine_Productor_Technology</li>
     </prerequisites>
   </ResearchProjectDef>
-  <!-- <ResearchProjectDef ParentName="WULAtechBase">
-    <defName>WULA_Machine_Equipment_Technology</defName>
-    <label>机械体武装构装套件</label>
-    <description>获取构建乌拉帝国高级机械体武装的知识，以为机械体换装不同的武备。</description>
-    <baseCost>400</baseCost>
-    <researchViewX>3.00</researchViewX>
-    <researchViewY>5.30</researchViewY>
-    <prerequisites>
-      <li>WULA_Machine_Productor_Technology</li>
-    </prerequisites>
-  </ResearchProjectDef> -->
   <ResearchProjectDef ParentName="WULAtechBase">
     <defName>WULA_AI_Machine_Panzer_Technology</defName>
     <researchViewX>5.50</researchViewX>
     <researchViewY>5.50</researchViewY>
     <label>基础战车部署套件</label>
-    <description>获取构建乌拉帝国智能战车SMp-38"萨克森"的知识，并得以生产它所装备的各种强大火力武备。</description>
+    <description>获取乌拉帝国机械体SMp-38"萨克森"和其变种SMp-38A"斯佩萨特"的生产权限，一种携带突击区域护盾和强大火力武备的战车型机械体。</description>
     <baseCost>2400</baseCost>
     <prerequisites>
       <li>WULA_Machine_Productor_1_Technology</li>
     </prerequisites>
   </ResearchProjectDef>
-  <!-- <ResearchProjectDef ParentName="WULAtechBase">
+  <ResearchProjectDef ParentName="WULAtechBase">
     <defName>WULA_Armour_Technology</defName>
-    <label>基础战甲套件</label>
-    <description>获取构建乌拉帝国大型战甲SMp-11"甲胄"的知识，并得以生产它所装备的各种大型近战武器和远程武器。</description>
+    <label>开拓单元套件</label>
+    <description>获取乌拉帝国机械体PMu-7"西比尔卡"和其变种PMu-7A"斯托洛维耶"的生产权限，一种可以在战场上生产源源不断的临时单位并部署低角护盾掩护友军的辅助型机械体。</description>
     <baseCost>2400</baseCost>
-    <researchViewX>4.00</researchViewX>
-    <researchViewY>5.30</researchViewY>
+    <researchViewX>5.50</researchViewX>
+    <researchViewY>4.70</researchViewY>
     <prerequisites>
-      <li>WULA_Machine_Equipment_Technology</li>
       <li>WULA_Machine_Productor_1_Technology</li>
     </prerequisites>
-  </ResearchProjectDef> -->
+  </ResearchProjectDef>
   <!-- 植入物 -->
   <ResearchProjectDef ParentName="WULAtechBase">
     <defName>WULA_Synth_Addons_Technology</defName>
