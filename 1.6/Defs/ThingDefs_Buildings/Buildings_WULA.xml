@@ -444,6 +444,8 @@
       <li>WULA_Build_Mech_Cat_Assault</li>
       <li>WULA_Build_AI_Heavy_Panzer</li>
       <li>WULA_Build_AI_Heavy_Panzer_Gunnery</li>
+      <li>WULA_Build_AI_Engineer_Mother</li>
+      <li>WULA_Build_AI_Engineer_Mother_Attack</li>
     </recipes>
     <comps>
       <li Class="CompProperties_WasteProducer" />

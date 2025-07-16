@@ -613,7 +613,7 @@
   </AbilityDef>
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_Wula_AI_Engineer_Mother_Ability1</defName>
-    <label>CAt-44"监牢猫猫"</label>
+    <label>CAt-44"指挥官猫猫"</label>
     <thingClass>Projectile_SpawnsPawnZeroAge</thingClass>
     <graphicData>
       <texPath>Things/Building/Security/BroadshieldProjector</texPath>
@@ -651,7 +651,7 @@
     </verbProperties>
     <comps>
       <li Class="CompProperties_AbilityLaunchProjectile">
-        <projectileDef>Bullet_Wula_AI_Engineer_Mother_Ability1</projectileDef>
+        <projectileDef>Bullet_Wula_AI_Engineer_Mother_Attack_Ability1</projectileDef>
       </li>
     </comps>
   </AbilityDef>
@@ -855,7 +855,7 @@
   <ThingDef ParentName="Mech_WULA_Cat_Soldier">
     <defName>Mech_WULA_Cat_Assault</defName>
     <label>CAt-46"突击猫猫"</label>
-    <description>乌拉帝国的一种小型机械体，可以执行搬运、狩猎和割除任务，装备了一把DLa-4"云母"突击步枪附下挂刺刀，以在战场上拖住敌军。</description>
+    <description>乌拉帝国的一种小型机械体，可以执行搬运、狩猎和割除任务，身着轻甲，装备了一把DLa-4"云母"突击步枪附下挂刺刀，可以给敌方造成不小的麻烦。</description>
     <uiIconPath>Wula/Things/WULA_Assault_Cat/WULA_Cat_Thin_south</uiIconPath>
     <race>
       <mechEnabledWorkTypes Inherit="False">
@@ -881,7 +881,7 @@
       <baseHealthScale>0.35</baseHealthScale>
       <baseBodySize>0.7</baseBodySize>
       <hasCorpse>true</hasCorpse>
-      <body>DroneWithThreeLegs</body>
+      <body>Mech_Light</body>
       <lifeStageAges>
         <li>
           <def>MechanoidFullyFormed</def>
@@ -919,7 +919,7 @@
       <thinkTreeConstant>SentryDroneConstant</thinkTreeConstant>
       <baseBodySize>0.7</baseBodySize>
       <hasCorpse>true</hasCorpse>
-      <body>DroneWithThreeLegs</body>
+      <body>Mech_Light</body>
       <lifeStageAges>
         <li>
           <def>MechanoidFullyFormed</def>
@@ -955,6 +955,38 @@
         <disarmedByEmpForTicks>600</disarmedByEmpForTicks>
         <drawWithNoSelection>True</drawWithNoSelection>
         <activeSound>Broadshield_Ambience</activeSound>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="BaseDrone">
+    <defName>Mech_WULA_Cat_Inf</defName>
+    <label>CAt-90"步兵猫猫"</label>
+    <description>乌拉帝国的一种小型机械体，装备了一把DLa-4"云母"突击步枪附下挂刺刀，以在战场上拖住敌军。</description>
+    <uiIconPath>Wula/Things/WULA_Attack_Cat/WULA_Cat_Thin_south</uiIconPath>
+    <race>
+      <thinkTreeConstant>SentryDroneConstant</thinkTreeConstant>
+      <baseBodySize>0.7</baseBodySize>
+      <hasCorpse>true</hasCorpse>
+      <body>Mech_Light</body>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Hunter_Wounded</soundWounded>
+          <soundDeath>Pawn_Hunter_Death</soundDeath>
+          <soundCall>Pawn_Hunter_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <statBases>
+      <MoveSpeed>4</MoveSpeed>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_MechPowerCell">
+        <totalPowerTicks>4400</totalPowerTicks> <!-- 2 hours -->
+        <labelOverride>电池电量</labelOverride>
+        <tooltipOverride>这是被临时生产的乌拉猫猫，它们很快就会因为能源耗尽而倒地。</tooltipOverride>
+        <showGizmoOnNonPlayerControlled>true</showGizmoOnNonPlayerControlled>
       </li>
     </comps>
   </ThingDef>

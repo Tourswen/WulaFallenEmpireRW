@@ -358,4 +358,27 @@
       <li>Wula_Assault_Cat_Weapon</li>
     </weaponTags>
   </PawnKindDef>
+  <PawnKindDef ParentName="Mech_WULA_Cat_Soldier_PawnKind">
+    <aiAvoidCover>true</aiAvoidCover>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+    <forceNoDeathNotification>true</forceNoDeathNotification>
+    <weaponMoney>9999~9999</weaponMoney>
+    <weaponTags />
+    <preventIdeo>true</preventIdeo>
+    <immuneToGameConditionEffects>true</immuneToGameConditionEffects>
+    <combatPower>50</combatPower>
+    <techHediffsChance>1</techHediffsChance>
+    <techHediffsMoney>9999~9999</techHediffsMoney>
+    <controlGroupPortraitZoom>1.8</controlGroupPortraitZoom>
+    <forceDeathOnDowned>true</forceDeathOnDowned>
+
+    <defName>Mech_WULA_Cat_Inf</defName>
+    <label>步兵乌拉猫猫</label>
+    <race>Mech_WULA_Cat_Inf</race>
+    <canOpenDoors>true</canOpenDoors>
+    <canOpenAnyDoor>true</canOpenAnyDoor>
+    <weaponTags>
+      <li>Wula_Assault_Cat_Weapon</li>
+    </weaponTags>
+  </PawnKindDef>
 </Defs>
