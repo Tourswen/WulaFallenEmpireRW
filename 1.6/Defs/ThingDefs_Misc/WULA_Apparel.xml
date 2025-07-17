@@ -918,7 +918,7 @@
       </li>
       <li Class="CompProperties_CauseHediff_Apparel">
         <hediff>WULA_Heavy_Infantry_PowerArmor_PowerFist</hediff>
-        <!-- <part>Hand</part> -->
+        <part>Torso</part>
       </li>
     </comps>
     <verbs>

@@ -158,6 +158,7 @@
       <drawSize>0.7</drawSize>
     </graphicData>
     <soundInteract>Interact_Rifle</soundInteract>
+    <relicChance>0</relicChance>
     <statBases>
       <WorkToMake>700</WorkToMake>
       <!-- <MarketValue>370</MarketValue> -->
