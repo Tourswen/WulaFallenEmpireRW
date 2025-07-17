@@ -219,8 +219,19 @@
     <defName>Mech_WULA_Cat_Assault</defName>
     <label>突击乌拉猫猫</label>
     <race>Mech_WULA_Cat_Assault</race>
+    <lifeStages Inherit="False"> 
+      <li>
+        <bodyGraphicData>
+          <texPath>Wula/Things/WULA_Assault_Cat/WULA_Cat_Thin</texPath>
+          <maskPath>Wula/Things/WULA_Assault_Cat/AllegianceOverlays/None</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
     <weaponTags>
-      <li>Wula_Constructor_Cat_Weapon</li>
+      <li>Wula_Assault_Cat_Weapon</li>
     </weaponTags>
   </PawnKindDef>
 </Defs>

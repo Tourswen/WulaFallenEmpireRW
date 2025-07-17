@@ -1,0 +1,18 @@
+# Compiled output
+bin/
+obj/
+
+# Rider
+.idea/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosf
+*.sln.docstates
+
+# OS generated files
+.DS_Store
+.localized
+Thumbs.db

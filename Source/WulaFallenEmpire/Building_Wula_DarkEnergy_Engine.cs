@@ -1,43 +1,59 @@
 ﻿using RimWorld;
 using System;
-using System.Collections.Generic;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using UnityEngine;
 using Verse;
 
 namespace WulaFallenEmpire
 {
-    [StaticConstructorOnStartup]
-    public class Building_Wula_DarkEnergy_Engine : Building_GravEngine
+    // =========================================================================
+    // 1. 抽象的引擎父类 (Abstract Base Class)
+    //    它现在通过完全重写 DrawAt 方法来获得对绘制逻辑的控制权。
+    // =========================================================================
+    public abstract class Building_Wula_Engine_Base : Building_GravEngine
     {
-        // 子类自己的静态只读字段
-        private static readonly string _childStaticValue = "Child Value";
-        private static readonly CachedMaterial Wula_DarkEnergy_OrbMat = new CachedMaterial("Wula/Building/Wula_DarkEnergy_Engine_Orb", ShaderDatabase.Cutout);
+        // 契约：所有子类都必须提供一个用于绘制的能量球贴图。
+        // 这个部分保持不变。
+        protected abstract CachedMaterial OrbMat { get; }
 
-        // 通过实例属性暴露静态值
-        protected override string InstanceValue => _childStaticValue;
-        private static readonly CachedMaterial OrbMat = new CachedMaterial("Wula/Building/Wula_DarkEnergy_Engine_Orb", ShaderDatabase.Cutout);
-    }
-    public abstract class Building_Wula_DarkEnergy_Engine_Parent : Building_GravEngine
-    {
-        // 受保护的抽象属性（实例级别）
-        protected abstract string InstanceValue { get; }
-
-        // 公共访问点
-        public void PrintValue()
+        // **关键修正**: 完全重写 DrawAt 方法
+        protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
-            Console.WriteLine(InstanceValue);
+            // --- 第 1 部分：复制父类的 `base.DrawAt(drawLoc, flip)` 逻辑 ---
+            // 这会负责绘制建筑本身的基础图形。
+            base.DrawAt(drawLoc, flip);
+
+            // --- 第 2 部分：复制并修改 `Building_GravEngine` 的绘制逻辑 ---
+            if (base.Spawned)
+            {
+                // 这是原版引擎的“悬浮”动画逻辑，我们将其完整保留。
+                if (Find.TickManager.TicksGame >= cooldownCompleteTick)
+                {
+                    drawLoc.z += 0.5f * (1f + Mathf.Sin((float)Math.PI * 2f * (float)GenTicks.TicksGame / 500f)) * 0.3f;
+                }
+
+                // 这是原版引擎的高度微调，我们也保留。
+                drawLoc.y += 0.03658537f;
+
+                // 设置缩放，这部分也来自原版代码。
+                Vector3 s = new Vector3(def.graphicData.drawSize.x, 1f, def.graphicData.drawSize.y);
+
+                // **最终修改**: 使用我们自己的 OrbMat 属性，而不是父类的私有变量！
+                // 这使得子类可以自由决定能量球的外观。
+                Graphics.DrawMesh(MeshPool.plane10Back, Matrix4x4.TRS(drawLoc, base.Rotation.AsQuat, s), this.OrbMat.Material, 0);
+            }
         }
     }
 
-    public class Child : Parent
-    {
-        // 子类自己的静态只读字段
-        private static readonly string _childStaticValue = "Child Value";
 
-        // 通过实例属性暴露静态值
-        protected override string InstanceValue => _childStaticValue;
+    // =========================================================================
+    // 2. 具体的暗能量引擎子类 (Concrete Child Class)
+    //    这个类完全不需要修改，它已经正确地实现了父类的要求。
+    // =========================================================================
+    [StaticConstructorOnStartup]
+    public class Building_Wula_DarkEnergy_Engine : Building_Wula_Engine_Base
+    {
+        private static readonly CachedMaterial _darkEnergyOrbMat = new CachedMaterial("Wula/Building/Wula_DarkEnergy_Engine_Orb", ShaderDatabase.Cutout);
+
+        protected override CachedMaterial OrbMat => _darkEnergyOrbMat;
     }
 }
