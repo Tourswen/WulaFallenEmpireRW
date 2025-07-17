@@ -124,11 +124,13 @@
   <ThingDef ParentName="ResourceBase">
     <defName>WULA_Dark_Matter_Item</defName>
     <label>封装的暗物质</label>
-    <description>由乌拉帝国技术完成封装的一小块暗物质，这种神秘物质具有许多似乎可以打破所谓自然法则的性质。通过投入大量重金属，暗物质约束装置可以为部分消耗的暗物质补充质量。\n\n注意：暗物质约束装置很脆弱，受到冲击时将引发大范围湮灭反应！</description>
+    <description>由乌拉帝国技术完成封装的一小块暗物质，这种神秘物质具有许多似乎可以打破所谓自然法则的性质。\n\n注意：暗物质约束装置很脆弱，受到冲击时将引发大范围湮灭反应！</description>
     <graphicData>
-      <texPath>Wula/Item/WULA_Soul_Wedge</texPath>
+      <texPath>Wula/Item/WULA_Dark_Matter_Item</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <tickerType>Normal</tickerType>
+    <smeltable>false</smeltable>
     <genericMarketSellable>false</genericMarketSellable>
     <soundInteract>Metal_Drop</soundInteract>
     <soundDrop>Metal_Drop</soundDrop>
@@ -142,7 +144,6 @@
       <li>ResourcesRaw</li>
     </thingCategories>
     <burnableByRecipe>false</burnableByRecipe>
-    <smeltable>true</smeltable>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
     <allowedArchonexusCount>80</allowedArchonexusCount>
     <possessionCount>1</possessionCount>

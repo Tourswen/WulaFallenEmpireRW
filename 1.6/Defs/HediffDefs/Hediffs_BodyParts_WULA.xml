@@ -112,9 +112,9 @@
     <label>超载组件</label>
     <description>安装于能源炉的特殊改件，除了获得常驻的移动速度外，还可以短时间超载机体，获得力量上的爆发性增益。</description>
     <duplicationAllowed>false</duplicationAllowed>
-    <minSeverity>1</minSeverity>
     <stages>
       <li>
+        <minSeverity>0.01</minSeverity>
         <statOffsets>
           <MoveSpeed>1</MoveSpeed>
         </statOffsets>
@@ -236,6 +236,7 @@
     <duplicationAllowed>false</duplicationAllowed>
     <stages>
       <li>
+        <minSeverity>0.01</minSeverity>
         <hungerRateFactor>1</hungerRateFactor>
       </li>
     </stages>

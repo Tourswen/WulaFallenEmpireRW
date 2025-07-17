@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <ScenarioDef Name="Crashlanded" ParentName="ScenarioBase">
+  <ScenarioDef ParentName="ScenarioBase">
     <defName>WULA_Start_Scenario</defName>
     <label>意外重启</label>
     <description>在乌拉帝国的大内战中，无数乌拉帝国合成人因为人工智能网络“演算圆环”的崩溃而进入保护性的休眠状态。在边缘世界沉睡的乌拉帝国合成人收到了某人广播的唤醒指令，解除了意识闭锁，开始重新踏入这个面目全非的法外之地。</description>
     <scenario>
-      <summary>以三位机械乌拉为初始殖民者开始游戏，在地图中将同步生成乌拉帝国的逆重引擎。</summary>
+      <summary>以三位机械乌拉为初始殖民者开始游戏。</summary>
       <playerFaction>
         <def>PlayerFaction</def>
         <factionDef>WULA_Awakened_Synth</factionDef>
@@ -134,12 +134,12 @@
       </parts>
     </scenario>
   </ScenarioDef>
-  <ScenarioDef Name="Crashlanded" ParentName="ScenarioBase">
-    <defName>WULA_Start_Scenario</defName>
-    <label>意外重启</label>
+  <ScenarioDef ParentName="ScenarioBase">
+    <defName>WULA_Start_Scenario_On_Space</defName>
+    <label>意外重启-太空</label>
     <description>在乌拉帝国的大内战中，无数乌拉帝国合成人因为人工智能网络“演算圆环”的崩溃而进入保护性的休眠状态。在边缘世界沉睡的乌拉帝国合成人收到了某人广播的唤醒指令，解除了意识闭锁，开始重新踏入这个面目全非的法外之地。</description>
     <scenario>
-      <summary>以三位机械乌拉为初始殖民者开始游戏，在地图中将同步生成乌拉帝国的逆重引擎。</summary>
+      <summary>以三位机械乌拉为初始殖民者开始游戏，将生成在一个太空平台上。</summary>
       <playerFaction>
         <def>PlayerFaction</def>
         <factionDef>WULA_Awakened_Synth</factionDef>
@@ -160,11 +160,11 @@
         </li>
 
         <!-- 强制地图 -->
-        <!-- <li Class="ScenPart_ForcedMap">
+        <li Class="ScenPart_ForcedMap">
           <def>ForcedMap</def>
           <mapGenerator>OrbitalRelay</mapGenerator>
           <layerDef>Orbit</layerDef>
-        </li> -->
+        </li>
 
         <!-- 禁用任务 -->
         <li Class="ScenPart_DisableQuest">
@@ -190,17 +190,22 @@
         </li>
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
-          <thingDef>Chemfuel</thingDef>
-          <count>300</count>
-        </li>
-        <li Class="ScenPart_StartingThing_Defined">
-          <def>StartingThing_Defined</def>
           <thingDef>WULA_MW_Mace</thingDef>
           <stuff>Uranium</stuff>
         </li>
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
           <thingDef>WULA_RW_Base_AR</thingDef>
+          <count>1</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>GravEngine</thingDef>
+          <count>1</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>Wula_DarkEnergy_FuelTank</thingDef>
           <count>1</count>
         </li>
 
@@ -211,6 +216,11 @@
           <count>700</count>
         </li>
         <li Class="ScenPart_ScatterThingsNearPlayerStart">
+          <def>StartingThing_Defined</def>
+          <thingDef>Chemfuel</thingDef>
+          <count>1000</count>
+        </li>
+        <li Class="ScenPart_ScatterThingsNearPlayerStart">
           <def>ScatterThingsNearPlayerStart</def>
           <thingDef>WoodLog</thingDef>
           <count>300</count>
@@ -219,18 +229,13 @@
           <def>ScatterThingsNearPlayerStart</def>
           <thingDef>GravlitePanel</thingDef>
           <count>400</count>
-        </li>  
-        <li Class="ScenPart_ScatterThingsNearPlayerStart">
-          <def>ScatterThingsNearPlayerStart</def>
-          <thingDef>Wula_DarkEnergy_Engine</thingDef>
-          <count>1</count>
         </li>
 
         <!-- 图上的物品 -->
         <li Class="ScenPart_ScatterThingsAnywhere">
           <def>ScatterThingsAnywhere</def>
           <thingDef>Steel</thingDef>
-          <count>720</count>
+          <count>2000</count>
         </li>
 
         <!-- 初始机械体 -->

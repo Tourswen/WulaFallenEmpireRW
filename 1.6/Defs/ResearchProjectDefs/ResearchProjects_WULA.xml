@@ -30,33 +30,33 @@
   </ResearchProjectDef>
   <ResearchProjectDef ParentName="WULAtechBase">
     <defName>WULA_Repair_Arm_Technology</defName>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>4.70</researchViewY>
     <label>高级维修套件</label>
     <description>获取修复乌拉帝国合成人四肢和头部的必须知识。</description>
     <baseCost>400</baseCost>
-    <researchViewX>1.00</researchViewX>
-    <researchViewY>3.90</researchViewY>
     <prerequisites>
       <li>WULA_Base_Technology</li>
     </prerequisites>
   </ResearchProjectDef>
   <ResearchProjectDef ParentName="WULAtechBase">
     <defName>WULA_Repair_All_Technology</defName>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>4.70</researchViewY>
     <label>完全维修套件</label>
     <description>获取修复完全修复乌拉帝国合成人的必须知识。</description>
     <baseCost>600</baseCost>
-    <researchViewX>2.00</researchViewX>
-    <researchViewY>3.90</researchViewY>
     <prerequisites>
       <li>WULA_Repair_Arm_Technology</li>
     </prerequisites>
   </ResearchProjectDef>
   <ResearchProjectDef ParentName="WULAtechBase">
     <defName>WULA_Adv_WorkTable_Technology</defName>
+    <researchViewX>3.50</researchViewX>
+    <researchViewY>3.20</researchViewY>
     <label>高级编织体套件</label>
     <description>开发功能性更强的工作台，以支持后续的高级设备构建。</description>
     <baseCost>1000</baseCost>
-    <researchViewX>1.00</researchViewX> 
-    <researchViewY>1.70</researchViewY>
     <prerequisites>
       <li>WULA_Base_Technology</li>
       <li>MicroelectronicsBasics</li>
@@ -68,19 +68,30 @@
     <description>开发用于从上行链路下载各种预设技能包的套件，以增加殖民地的技能等级。</description>
     <baseCost>400</baseCost>
     <researchViewX>1.00</researchViewX>
-    <researchViewY>4.60</researchViewY>
+    <researchViewY>5.50</researchViewY>
     <prerequisites>
       <li>WULA_Base_Technology</li>
+    </prerequisites>
+  </ResearchProjectDef>
+  <ResearchProjectDef ParentName="WULAtechBase">
+    <defName>WULA_Dark_Matter_Technology</defName>
+    <researchViewX>8.00</researchViewX>
+    <researchViewY>3.10</researchViewY>
+    <label>暗物质基础套件</label>
+    <description>允许制造封装暗物质和相关的基础设施。</description>
+    <baseCost>1000</baseCost>
+    <prerequisites>
+      <li>WULA_Adv_WorkTable_Technology</li>
     </prerequisites>
   </ResearchProjectDef>
   <!-- 衣服 -->
   <ResearchProjectDef ParentName="WULAtechBase">
     <defName>WULA_Synth_Clothes_Technology</defName>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>1.80</researchViewY>
     <label>基础衣物套件</label>
     <description>开发能够被乌拉帝国合成人穿着的基础衣物。</description>
     <baseCost>400</baseCost>
-    <researchViewX>1.00</researchViewX>
-    <researchViewY>2.50</researchViewY>
     <prerequisites>
       <li>ComplexClothing</li>
       <li>WULA_Base_Technology</li>
@@ -88,11 +99,11 @@
   </ResearchProjectDef>
   <ResearchProjectDef ParentName="WULAtechBase">
     <defName>WULA_Synth_Clothes_2_Technology</defName>
+    <researchViewX>4.50</researchViewX>
+    <researchViewY>1.80</researchViewY>
     <label>复杂衣物套件</label>
     <description>开发能够被乌拉帝国合成人穿着的具有功能性的衣物。</description>
     <baseCost>1200</baseCost>
-    <researchViewX>2.00</researchViewX>
-    <researchViewY>2.50</researchViewY>
     <prerequisites>
       <li>WULA_Synth_Clothes_Technology</li>
       <li>WULA_Adv_WorkTable_Technology</li>
@@ -100,22 +111,22 @@
   </ResearchProjectDef>
   <ResearchProjectDef ParentName="WULAtechBase">
     <defName>WULA_Synth_Clothes_3_Technology</defName>
+    <researchViewX>5.50</researchViewX>
+    <researchViewY>1.80</researchViewY>
     <label>皇家衣物套件</label>
     <description>开发能够被乌拉帝国合成人穿着的昂贵的衣物，这类装备包含更多的加成，并且可以满足贵族的穿衣需求。</description>
     <baseCost>2400</baseCost>
-    <researchViewX>3.00</researchViewX>
-    <researchViewY>3.20</researchViewY>
     <prerequisites>
       <li>WULA_Synth_Clothes_2_Technology</li>
     </prerequisites>
   </ResearchProjectDef>
   <ResearchProjectDef ParentName="WULAtechBase">
     <defName>WULA_Synth_Armor_Technology</defName>
+    <researchViewX>5.50</researchViewX>
+    <researchViewY>2.50</researchViewY>
     <label>装甲套件</label>
     <description>开发能够被乌拉帝国合成人穿着的装甲，这类装备可以为乌拉帝国合成人提供保护。</description>
     <baseCost>2400</baseCost>
-    <researchViewX>3.00</researchViewX>
-    <researchViewY>2.50</researchViewY>
     <prerequisites>
       <li>MicroelectronicsBasics</li>
       <li>WULA_Synth_Clothes_2_Technology</li>
@@ -123,11 +134,11 @@
   </ResearchProjectDef>
   <ResearchProjectDef ParentName="WULAtechBase">
     <defName>WULA_Synth_Armor_2_Technology</defName>
+    <researchViewX>6.50</researchViewX>
+    <researchViewY>2.50</researchViewY>
     <label>皇家装甲套件</label>
     <description>开发能够被乌拉帝国合成人穿着的重型装甲，这类装备可以提供大量保护的同时兼具其他的功能性。</description>
     <baseCost>3200</baseCost>
-    <researchViewX>4.00</researchViewX>
-    <researchViewY>2.50</researchViewY>
     <prerequisites>
       <li>Fabrication</li>
       <li>WULA_Synth_Armor_Technology</li>
@@ -136,11 +147,11 @@
   <!-- 武器 -->
   <ResearchProjectDef ParentName="WULAtechBase">
     <defName>WULA_Synth_Weapon_Technology</defName>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>0.20</researchViewY>
     <label>基础武装套件</label>
     <description>开发能够武装乌拉帝国合成人的老式气动武器，以抵御针对殖民地的外部袭击。</description>
     <baseCost>600</baseCost>
-    <researchViewX>1.00</researchViewX>
-    <researchViewY>1.00</researchViewY>
     <prerequisites>
       <li>Machining</li>
       <li>WULA_Base_Technology</li>
@@ -151,7 +162,7 @@
     <label>短兵武装套件</label>
     <description>开发能够武装乌拉帝国合成人的近距离武器，可以在短距离上消灭敌人。</description>
     <baseCost>1600</baseCost>
-    <researchViewX>2.00</researchViewX>
+    <researchViewX>4.50</researchViewX>
     <researchViewY>1.00</researchViewY>
     <prerequisites>
       <li>WULA_Adv_WorkTable_Technology</li>
@@ -163,7 +174,7 @@
     <label>镇暴武装套件</label>
     <description>开发能够武装乌拉帝国合成人的镇暴类装备，以盾牌和失能武器构成，旨在抑制对手的行动。</description>
     <baseCost>2400</baseCost>
-    <researchViewX>3.00</researchViewX>
+    <researchViewX>5.50</researchViewX>
     <researchViewY>1.00</researchViewY>
     <prerequisites>
       <li>WULA_Synth_Weapon_2_Melee_Technology</li>
@@ -171,11 +182,11 @@
   </ResearchProjectDef>
   <ResearchProjectDef ParentName="WULAtechBase">
     <defName>WULA_Synth_Weapon_2_Ranged_Technology</defName>
+    <researchViewX>4.50</researchViewX>
+    <researchViewY>0.20</researchViewY>
     <label>远射武装套件</label>
     <description>开发能够武装乌拉帝国合成人的远距离武器，旨在构建密集火力网消灭敌人。</description>
     <baseCost>2400</baseCost>
-    <researchViewX>2.00</researchViewX>
-    <researchViewY>0.20</researchViewY>
     <prerequisites>
       <li>WULA_Adv_WorkTable_Technology</li>
       <li>MicroelectronicsBasics</li>
@@ -184,11 +195,11 @@
   </ResearchProjectDef>
   <ResearchProjectDef ParentName="WULAtechBase">
     <defName>WULA_Synth_Weapon_3_Bomb_Technology</defName>
+    <researchViewX>5.50</researchViewX>
+    <researchViewY>0.20</researchViewY>
     <label>轰炸武装套件</label>
     <description>开发能够武装乌拉帝国合成人的大范围杀伤性武器，用于对抗最难应付的敌人。</description>
     <baseCost>3200</baseCost>
-    <researchViewX>3.00</researchViewX>
-    <researchViewY>0.20</researchViewY>
     <prerequisites>
       <li>WULA_Synth_Weapon_2_Ranged_Technology</li>
     </prerequisites>
@@ -196,22 +207,22 @@
   <!-- 法杖 -->
   <ResearchProjectDef ParentName="WULAtechBase" MayRequire="Ludeon.RimWorld.Royalty">
     <defName>WULA_Synth_Psi_Technology</defName>
+    <researchViewX>4.50</researchViewX>
+    <researchViewY>4.00</researchViewY>
     <label>灵能基础套件</label>
     <description>开发能够供乌拉帝国合成人使用的基础灵能法杖，同时解锁从俘虏身上获取魂锲的能力。</description>
     <baseCost>1200</baseCost>
-    <researchViewX>2.00</researchViewX>
-    <researchViewY>1.70</researchViewY>
     <prerequisites>
       <li>WULA_Adv_WorkTable_Technology</li>
     </prerequisites>
   </ResearchProjectDef>
   <ResearchProjectDef ParentName="WULAtechBase" MayRequire="Ludeon.RimWorld.Royalty">
     <defName>WULA_Synth_Psi_2_Technology</defName>
+    <researchViewX>5.50</researchViewX>
+    <researchViewY>4.00</researchViewY>
     <label>灵能高级套件</label>
     <description>开发能够供乌拉帝国合成人使用的高级灵能法杖。</description>
     <baseCost>2400</baseCost>
-    <researchViewX>3.00</researchViewX>
-    <researchViewY>1.70</researchViewY>
     <prerequisites>
       <li>WULA_Synth_Psi_Technology</li>
     </prerequisites>
@@ -223,65 +234,54 @@
     <description>获取构建乌拉帝国机械体的设施，以支持后续的机械体开发。</description>
     <baseCost>800</baseCost>
     <researchViewX>2.00</researchViewX>
-    <researchViewY>4.60</researchViewY>
+    <researchViewY>5.50</researchViewY>
     <prerequisites>
       <li>WULA_New_Synth_Skill_Technology</li>
     </prerequisites>
   </ResearchProjectDef>
   <ResearchProjectDef ParentName="WULAtechBase">
     <defName>WULA_Machine_Productor_1_Technology</defName>
+    <researchViewX>4.50</researchViewX>
+    <researchViewY>5.50</researchViewY>
     <label>辅兵部署套件</label>
     <description>获取构建简单乌拉帝国机械体的知识，这些机械体本身战斗力不强但是可以辅助生产和战斗。</description>
     <baseCost>1000</baseCost>
-    <researchViewX>3.00</researchViewX>
-    <researchViewY>4.60</researchViewY>
     <prerequisites>
       <li>WULA_Machine_Productor_Technology</li>
     </prerequisites>
   </ResearchProjectDef>
-  <!-- <ResearchProjectDef ParentName="WULAtechBase">
-    <defName>WULA_Machine_Equipment_Technology</defName>
-    <label>机械体武装构装套件</label>
-    <description>获取构建乌拉帝国高级机械体武装的知识，以为机械体换装不同的武备。</description>
-    <baseCost>400</baseCost>
-    <researchViewX>3.00</researchViewX>
-    <researchViewY>5.30</researchViewY>
-    <prerequisites>
-      <li>WULA_Machine_Productor_Technology</li>
-    </prerequisites>
-  </ResearchProjectDef> -->
   <ResearchProjectDef ParentName="WULAtechBase">
     <defName>WULA_AI_Machine_Panzer_Technology</defName>
+    <researchViewX>5.50</researchViewX>
+    <researchViewY>5.50</researchViewY>
     <label>基础战车部署套件</label>
-    <description>获取构建乌拉帝国智能战车SMp-38"萨克森"的知识，并得以生产它所装备的各种强大火力武备。</description>
+    <description>获取乌拉帝国机械体SMp-38"萨克森"和其变种SMp-38A"斯佩萨特"的生产权限，一种携带突击区域护盾和强大火力武备的战车型机械体。</description>
     <baseCost>2400</baseCost>
-    <researchViewX>4.00</researchViewX>
-    <researchViewY>4.60</researchViewY>
     <prerequisites>
       <li>WULA_Machine_Productor_1_Technology</li>
     </prerequisites>
   </ResearchProjectDef>
-  <!-- <ResearchProjectDef ParentName="WULAtechBase">
+  <ResearchProjectDef ParentName="WULAtechBase">
     <defName>WULA_Armour_Technology</defName>
-    <label>基础战甲套件</label>
-    <description>获取构建乌拉帝国大型战甲SMp-11"甲胄"的知识，并得以生产它所装备的各种大型近战武器和远程武器。</description>
+    <label>开拓单元套件</label>
+    <description>获取乌拉帝国机械体PMu-7"西比尔卡"和其变种PMu-7A"斯托洛维耶"的生产权限，一种可以在战场上生产源源不断的临时单位并部署低角护盾掩护友军的辅助型机械体。</description>
     <baseCost>2400</baseCost>
-    <researchViewX>4.00</researchViewX>
-    <researchViewY>5.30</researchViewY>
+    <researchViewX>5.50</researchViewX>
+    <researchViewY>4.70</researchViewY>
     <prerequisites>
-      <li>WULA_Machine_Equipment_Technology</li>
       <li>WULA_Machine_Productor_1_Technology</li>
     </prerequisites>
-  </ResearchProjectDef> -->
+  </ResearchProjectDef>
   <!-- 植入物 -->
   <ResearchProjectDef ParentName="WULAtechBase">
     <defName>WULA_Synth_Addons_Technology</defName>
+    <researchViewX>4.50</researchViewX>
+    <researchViewY>4.70</researchViewY>
     <label>基础植入物套件</label>
     <description>获取构建乌拉帝国合成人基础植入物的技术，用以增强乌拉帝国合成人的机体性能。</description>
     <baseCost>800</baseCost>
-    <researchViewX>3.00</researchViewX>
-    <researchViewY>3.90</researchViewY>
     <prerequisites>
+      <li>WULA_Adv_WorkTable_Technology</li>
       <li>WULA_Repair_All_Technology</li>
     </prerequisites>
   </ResearchProjectDef>

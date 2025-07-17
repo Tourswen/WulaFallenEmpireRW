@@ -738,8 +738,8 @@
       <MaxHitPoints>1000</MaxHitPoints>
       <Mass>20</Mass>
       <Flammability>0</Flammability>
-      <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
-      <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.2</ArmorRating_Blunt>
       <ArmorRating_Heat>2.0</ArmorRating_Heat>
       <EquipDelay>35</EquipDelay>
       <EnergyShieldEnergyMax>0.5</EnergyShieldEnergyMax>
@@ -830,8 +830,8 @@
       <MaxHitPoints>1000</MaxHitPoints>
       <Mass>3</Mass>
       <Flammability>0</Flammability>
-      <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
-      <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1</ArmorRating_Blunt>
       <ArmorRating_Heat>2.0</ArmorRating_Heat>
       <EquipDelay>15</EquipDelay>
     </statBases>
@@ -873,8 +873,8 @@
       <MaxHitPoints>1000</MaxHitPoints>
       <Mass>20</Mass>
       <Flammability>0</Flammability>
-      <ArmorRating_Sharp>1.85</ArmorRating_Sharp>
-      <ArmorRating_Blunt>1.85</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
       <ArmorRating_Heat>2.0</ArmorRating_Heat>
       <EquipDelay>40</EquipDelay>
       <!-- <EnergyShieldEnergyMax>0.25</EnergyShieldEnergyMax> -->
@@ -918,7 +918,7 @@
       </li>
       <li Class="CompProperties_CauseHediff_Apparel">
         <hediff>WULA_Heavy_Infantry_PowerArmor_PowerFist</hediff>
-        <!-- <part>Hand</part> -->
+        <part>Torso</part>
       </li>
     </comps>
     <verbs>
@@ -934,6 +934,7 @@
         <forcedMissRadius>2</forcedMissRadius>
         <targetable>true</targetable>
         <violent>true</violent>
+        <requireLineOfSight>false</requireLineOfSight>
         <targetParams>
           <canTargetPawns>true</canTargetPawns>
           <canTargetBuildings>true</canTargetBuildings>
@@ -966,6 +967,47 @@
       <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
       <soundAmbient>MortarRound_Ambient</soundAmbient>
     </projectile>
+  </ThingDef>
+  <ThingDef ParentName="WULA_ApparelHelmetBase">
+    <defName>WULA_Heavy_Infantry_Helmet</defName>
+    <label>乌拉帝国重装头盔</label>
+    <description>与乌拉帝国重装装甲配套的头盔，防御力强大。</description>
+    <thingCategories>
+      <li>HeadgearNoble</li>
+    </thingCategories>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>WULA_Synth_Armor_2_Technology</researchPrerequisite>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Wula/Apparel/WULA_Heavy_Infantry_Helmet</texPath>
+    </graphicData>
+    <statBases>
+      <WorkToMake>20000</WorkToMake>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+      <ArmorRating_Heat>2.0</ArmorRating_Heat>
+      <EquipDelay>15</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <IncomingDamageFactor>-0.5</IncomingDamageFactor>
+    </equippedStatOffsets>
+    <apparel>
+      <tags>
+        <li>RoyalTier5</li>
+        <li>Royal</li>
+      </tags>
+      <wornGraphicPath>Wula/Apparel/WULA_Heavy_Infantry_Helmet</wornGraphicPath>
+    </apparel>
+    <costStuffCount>100</costStuffCount>
+    <costList Inherit="False">
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
   </ThingDef>
 
   <!-- 盾牌 -->
@@ -1216,464 +1258,6 @@
       <speed>55</speed>
     </projectile>
   </ThingDef>
-  <!-- 萨克森装备 -->
-  <ThingDef ParentName="ArmorMachineableBase">
-    <defName>WULA_SMp38_Shield</defName>
-    <label>SMp-38"萨克森"附加护盾</label>
-    <description>由乌拉帝国的"萨克森"战车所装备的中型护盾立场，可以保护车体免受敌方远程火力打击，但是会拖累战车的移动。</description>
-    <techLevel>Spacer</techLevel>
-    <tickerType>Normal</tickerType>
-    <thingCategories>
-      <li>ApparelNoble</li>
-    </thingCategories>
-    <recipeMaker>
-      <displayPriority>105</displayPriority>
-      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
-      <researchPrerequisite>WULA_AI_Machine_Panzer_Technology</researchPrerequisite>
-      <recipeUsers Inherit="False">
-        <li>WULA_War_Machine_Weapon_Productor</li>
-      </recipeUsers>
-      <skillRequirements>
-        <Crafting>10</Crafting>
-      </skillRequirements>
-    </recipeMaker>
-    <graphicData>
-      <texPath>Things/Item/Health/HealthItem</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <statBases>
-      <WorkToMake>60000</WorkToMake>
-      <MaxHitPoints>200</MaxHitPoints>
-      <Mass>100</Mass>
-      <Flammability>0</Flammability>
-      <!-- <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
-      <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
-      <ArmorRating_Heat>2.0</ArmorRating_Heat> -->
-      <EnergyShieldEnergyMax>2.0</EnergyShieldEnergyMax>
-    </statBases>
-    <equippedStatOffsets>
-			<MoveSpeed>-1</MoveSpeed>
-      <!-- <WorkSpeedGlobal>-0.5</WorkSpeedGlobal>
-      <IncomingDamageFactor>-0.5</IncomingDamageFactor> -->
-      <!-- <StaggerDurationFactor>-2</StaggerDurationFactor> -->
-			<!-- <CarryingCapacity>60</CarryingCapacity> -->
-    </equippedStatOffsets>
-    <costStuffCount>150</costStuffCount>
-    <stuffCategories>
-      <li>Metallic</li>
-    </stuffCategories>
-    <costList Inherit="False">
-      <ComponentSpacer>4</ComponentSpacer>
-    </costList>
-    <apparel>
-      <tags>
-        <li>Wula_AI_Heavy_Panzer_Armor</li>
-      </tags>
-      <bodyPartGroups>
-        <li>Torso</li>
-      </bodyPartGroups>
-      <!-- <wornGraphicPath>Wula/Apparel/WULA_Knight_PowerArmor</wornGraphicPath> -->
-      <layers>
-        <li>OnSkin</li>
-        <li>Middle</li>
-        <li>Shell</li>
-      </layers>
-      <useDeflectMetalEffect>true</useDeflectMetalEffect>
-      <soundWear>Wear_PowerArmor</soundWear>
-      <soundRemove>Remove_PowerArmor</soundRemove>
-      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
-      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
-      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
-    </apparel>
-    <thingClass>Apparel</thingClass>
-    <comps>
-      <li Class="CompProperties_Biocodable"/>
-      <li Class="CompProperties_Shield">
-        <startingTicksToReset>3600</startingTicksToReset>
-        <minDrawSize>3.5</minDrawSize>
-        <maxDrawSize>3.8</maxDrawSize>
-        <energyLossPerDamage>0.01</energyLossPerDamage>
-        <energyOnReset>4.0</energyOnReset>
-        <blocksRangedWeapons>false</blocksRangedWeapons>
-      </li>
-      <!-- <li Class="CompProperties_ProjectileInterceptor">
-        <radius>6</radius>
-        <interceptGroundProjectiles>true</interceptGroundProjectiles>
-        <color>(0.4, 0.4, 0.4)</color>
-        <reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
-        <activeSound>BulletShield_Ambience</activeSound>
-        <hitPoints>300</hitPoints>
-        <hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
-        <chargeDurationTicks>1800</chargeDurationTicks>
-        <rechargeHitPointsIntervalTicks>120</rechargeHitPointsIntervalTicks>
-        <minIdleAlpha>0.2</minIdleAlpha>
-        <drawWithNoSelection>True</drawWithNoSelection>
-        <disarmedByEmpForTicks>1500</disarmedByEmpForTicks>
-        <gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
-      </li> -->
-    </comps>
-    <thingSetMakerTags>
-      <li>RewardStandardHighFreq</li>
-    </thingSetMakerTags>
-  </ThingDef>
-  <ThingDef ParentName="ArmorMachineableBase">
-    <defName>WULA_SMp38_Armor</defName>
-    <label>SMp-38"萨克森"外置装甲</label>
-    <description>由乌拉帝国的"萨克森"战车所装备的额外的零素装甲，给予车体更大的防护力度,并减免受到的伤害。</description>
-    <techLevel>Spacer</techLevel>
-    <tickerType>Normal</tickerType>
-    <thingCategories>
-      <li>ApparelNoble</li>
-    </thingCategories>
-    <recipeMaker>
-      <displayPriority>105</displayPriority>
-      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
-      <researchPrerequisite>WULA_AI_Machine_Panzer_Technology</researchPrerequisite>
-      <recipeUsers Inherit="False">
-        <li>WULA_War_Machine_Weapon_Productor</li>
-      </recipeUsers>
-      <skillRequirements>
-        <Crafting>10</Crafting>
-      </skillRequirements>
-    </recipeMaker>
-    <graphicData>
-      <texPath>Things/Item/Health/HealthItem</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <statBases>
-      <WorkToMake>20000</WorkToMake>
-      <MaxHitPoints>5000</MaxHitPoints>
-      <Mass>100</Mass>
-      <Flammability>0</Flammability>
-      <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
-      <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
-      <ArmorRating_Heat>2.0</ArmorRating_Heat>
-      <!-- <EnergyShieldEnergyMax>2.0</EnergyShieldEnergyMax> -->
-    </statBases>
-    <equippedStatOffsets>
-			<!-- <MoveSpeed>-1</MoveSpeed> -->
-      <IncomingDamageFactor>-0.5</IncomingDamageFactor>
-    </equippedStatOffsets>
-    <costStuffCount>300</costStuffCount>
-    <stuffCategories>
-      <li>Metallic</li>
-    </stuffCategories>
-    <costList Inherit="False">
-      <!-- <ComponentSpacer>4</ComponentSpacer> -->
-    </costList>
-    <apparel>
-      <tags>
-        <li>Wula_AI_Heavy_Panzer_Armor</li>
-      </tags>
-      <bodyPartGroups>
-        <li>Torso</li>
-      </bodyPartGroups>
-      <!-- <wornGraphicPath>Wula/Apparel/WULA_Knight_PowerArmor</wornGraphicPath> -->
-      <layers>
-        <li>OnSkin</li>
-        <li>Middle</li>
-        <li>Shell</li>
-      </layers>
-      <useDeflectMetalEffect>true</useDeflectMetalEffect>
-      <soundWear>Wear_PowerArmor</soundWear>
-      <soundRemove>Remove_PowerArmor</soundRemove>
-      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
-      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
-      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
-    </apparel>
-    <thingClass>Apparel</thingClass>
-    <comps>
-      <li Class="CompProperties_Biocodable"/>
-      <!-- <li Class="CompProperties_Shield">
-        <startingTicksToReset>3600</startingTicksToReset>
-        <minDrawSize>3.5</minDrawSize>
-        <maxDrawSize>3.8</maxDrawSize>
-        <energyLossPerDamage>0.01</energyLossPerDamage>
-        <energyOnReset>4.0</energyOnReset>
-        <blocksRangedWeapons>false</blocksRangedWeapons>
-      </li> -->
-      <!-- <li Class="CompProperties_ProjectileInterceptor">
-        <radius>6</radius>
-        <interceptGroundProjectiles>true</interceptGroundProjectiles>
-        <color>(0.4, 0.4, 0.4)</color>
-        <reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
-        <activeSound>BulletShield_Ambience</activeSound>
-        <hitPoints>300</hitPoints>
-        <hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
-        <chargeDurationTicks>1800</chargeDurationTicks>
-        <rechargeHitPointsIntervalTicks>120</rechargeHitPointsIntervalTicks>
-        <minIdleAlpha>0.2</minIdleAlpha>
-        <drawWithNoSelection>True</drawWithNoSelection>
-        <disarmedByEmpForTicks>1500</disarmedByEmpForTicks>
-        <gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
-      </li> -->
-    </comps>
-    <thingSetMakerTags>
-      <li>RewardStandardHighFreq</li>
-    </thingSetMakerTags>
-  </ThingDef>
-  <ThingDef ParentName="ArmorMachineableBase">
-    <defName>WULA_SMp38_Engine</defName>
-    <label>SMp-38"萨克森"高推力喷口</label>
-    <description>由乌拉帝国的"萨克森"战车所装备的额外的移动组件，可以让战车获得更大的速度，并且增加额外的近战手段。</description>
-    <techLevel>Spacer</techLevel>
-    <tickerType>Normal</tickerType>
-    <thingCategories>
-      <li>ApparelNoble</li>
-    </thingCategories>
-    <recipeMaker>
-      <displayPriority>105</displayPriority>
-      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
-      <researchPrerequisite>WULA_AI_Machine_Panzer_Technology</researchPrerequisite>
-      <recipeUsers Inherit="False">
-        <li>WULA_War_Machine_Weapon_Productor</li>
-      </recipeUsers>
-      <skillRequirements>
-        <Crafting>10</Crafting>
-      </skillRequirements>
-    </recipeMaker>
-    <graphicData>
-      <texPath>Things/Item/Health/HealthItem</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <statBases>
-      <WorkToMake>30000</WorkToMake>
-      <MaxHitPoints>1000</MaxHitPoints>
-      <Mass>100</Mass>
-      <Flammability>0</Flammability>
-      <!-- <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
-      <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
-      <ArmorRating_Heat>2.0</ArmorRating_Heat> -->
-      <!-- <EnergyShieldEnergyMax>2.0</EnergyShieldEnergyMax> -->
-    </statBases>
-    <equippedStatOffsets>
-			<MoveSpeed>4</MoveSpeed>
-      <MeleeDamageFactor>5</MeleeDamageFactor>
-      <MeleeCooldownFactor>-0.85</MeleeCooldownFactor>
-    </equippedStatOffsets>
-    <costStuffCount>300</costStuffCount>
-    <stuffCategories>
-      <li>Metallic</li>
-    </stuffCategories>
-    <costList Inherit="False">
-      <!-- <ComponentSpacer>4</ComponentSpacer> -->
-    </costList>
-    <apparel>
-      <tags>
-        <li>Wula_AI_Heavy_Panzer_Armor</li>
-      </tags>
-      <bodyPartGroups>
-        <li>Torso</li>
-      </bodyPartGroups>
-      <!-- <wornGraphicPath>Wula/Apparel/WULA_Knight_PowerArmor</wornGraphicPath> -->
-      <layers>
-        <li>OnSkin</li>
-        <li>Middle</li>
-        <li>Shell</li>
-      </layers>
-      <useDeflectMetalEffect>true</useDeflectMetalEffect>
-      <soundWear>Wear_PowerArmor</soundWear>
-      <soundRemove>Remove_PowerArmor</soundRemove>
-      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
-      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
-      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
-    </apparel>
-    <thingClass>Apparel</thingClass>
-    <comps>
-      <li Class="CompProperties_Biocodable"/>
-      <!-- <li Class="CompProperties_Shield">
-        <startingTicksToReset>3600</startingTicksToReset>
-        <minDrawSize>3.5</minDrawSize>
-        <maxDrawSize>3.8</maxDrawSize>
-        <energyLossPerDamage>0.01</energyLossPerDamage>
-        <energyOnReset>4.0</energyOnReset>
-        <blocksRangedWeapons>false</blocksRangedWeapons>
-      </li> -->
-      <!-- <li Class="CompProperties_ProjectileInterceptor">
-        <radius>6</radius>
-        <interceptGroundProjectiles>true</interceptGroundProjectiles>
-        <color>(0.4, 0.4, 0.4)</color>
-        <reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
-        <activeSound>BulletShield_Ambience</activeSound>
-        <hitPoints>300</hitPoints>
-        <hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
-        <chargeDurationTicks>1800</chargeDurationTicks>
-        <rechargeHitPointsIntervalTicks>120</rechargeHitPointsIntervalTicks>
-        <minIdleAlpha>0.2</minIdleAlpha>
-        <drawWithNoSelection>True</drawWithNoSelection>
-        <disarmedByEmpForTicks>1500</disarmedByEmpForTicks>
-        <gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
-      </li> -->
-    </comps>
-    <thingSetMakerTags>
-      <li>RewardStandardHighFreq</li>
-    </thingSetMakerTags>
-  </ThingDef>
-  <!-- 风暴装备 -->
-  <ThingDef ParentName="ArmorMachineableBase">
-    <defName>WULA_SMp11_Armor</defName>
-    <label>SMp-11"甲胄"外装甲</label>
-    <description>由乌拉帝国的"甲胄"战甲所装备的额外装甲，提供大量护甲和高额的伤害减免，但是会拖慢机体的移动速度。</description>
-    <techLevel>Spacer</techLevel>
-    <tickerType>Normal</tickerType>
-    <thingCategories>
-      <li>ApparelNoble</li>
-    </thingCategories>
-    <recipeMaker>
-      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
-      <recipeUsers Inherit="False">
-        <li>WULA_War_Machine_Weapon_Productor</li>
-      </recipeUsers>
-      <researchPrerequisite>WULA_Armour_Technology</researchPrerequisite>
-      <skillRequirements>
-        <Crafting>7</Crafting>
-      </skillRequirements>
-      <useIngredientsForColor>false</useIngredientsForColor>
-    </recipeMaker>
-    <graphicData>
-      <texPath>Things/Item/Health/HealthItem</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <statBases>
-      <WorkToMake>25000</WorkToMake>
-      <MaxHitPoints>5000</MaxHitPoints>
-      <Mass>100</Mass>
-      <Flammability>0</Flammability>
-      <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
-      <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
-      <ArmorRating_Heat>2.0</ArmorRating_Heat>
-      <EquipDelay>15</EquipDelay>
-      <!-- <EnergyShieldEnergyMax>4.0</EnergyShieldEnergyMax> -->
-    </statBases>
-    <equippedStatOffsets>
-      <IncomingDamageFactor>-0.5</IncomingDamageFactor>
-			<MoveSpeed>-1.5</MoveSpeed>
-    </equippedStatOffsets>
-    <costStuffCount>200</costStuffCount>
-    <stuffCategories>
-      <li>Metallic</li>
-    </stuffCategories>
-    <costList Inherit="False">
-      <ComponentIndustrial>4</ComponentIndustrial>
-    </costList>
-    <apparel>
-      <tags>
-        <li>Wula_Armour_Armor</li>
-      </tags>
-      <bodyPartGroups>
-        <li>Torso</li>
-        <li>Neck</li>
-        <li>Shoulders</li>
-        <li>Arms</li>
-        <li>Legs</li>
-      </bodyPartGroups>
-      <!-- <wornGraphicPath>Wula/Apparel/WULA_SMp11_Shield</wornGraphicPath> -->
-      <layers>
-        <li>OnSkin</li>
-        <li>Middle</li>
-        <li>Shell</li>
-      </layers>
-      <useDeflectMetalEffect>true</useDeflectMetalEffect>
-      <!-- <soundWear>Wear_PowerArmor</soundWear>
-      <soundRemove>Remove_PowerArmor</soundRemove> -->
-      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
-      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
-      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
-    </apparel>
-    <thingClass>Apparel</thingClass>
-    <comps>
-      <li Class="CompProperties_Biocodable"/>
-    </comps>
-    <thingSetMakerTags>
-      <li>RewardStandardHighFreq</li>
-    </thingSetMakerTags>
-  </ThingDef>
-  <ThingDef ParentName="ArmorMachineableBase">
-    <defName>WULA_SMp11_Shield</defName>
-    <label>SMp-11"甲胄"附加护盾</label>
-    <description>由乌拉帝国的"甲胄"战甲所装备的中型护盾立场，在大型立场盾内部再附加一个小型立场盾，以实现对远程火力的绝对防御。</description>
-    <techLevel>Spacer</techLevel>
-    <tickerType>Normal</tickerType>
-    <thingCategories>
-      <li>Apparel</li>
-    </thingCategories>
-    <recipeMaker>
-      <displayPriority>105</displayPriority>
-      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
-      <researchPrerequisite>WULA_Armour_Technology</researchPrerequisite>
-      <recipeUsers Inherit="False">
-        <li>WULA_War_Machine_Weapon_Productor</li>
-      </recipeUsers>
-      <skillRequirements>
-        <Crafting>10</Crafting>
-      </skillRequirements>
-    </recipeMaker>
-    <graphicData>
-      <texPath>Things/Item/Health/HealthItem</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <statBases>
-      <WorkToMake>60000</WorkToMake>
-      <MaxHitPoints>200</MaxHitPoints>
-      <Mass>100</Mass>
-      <Flammability>0</Flammability>
-      <!-- <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
-      <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
-      <ArmorRating_Heat>2.0</ArmorRating_Heat> -->
-      <EnergyShieldEnergyMax>1.2</EnergyShieldEnergyMax>
-    </statBases>
-    <equippedStatOffsets>
-      <!-- <WorkSpeedGlobal>-0.5</WorkSpeedGlobal>
-      <IncomingDamageFactor>-0.5</IncomingDamageFactor> -->
-      <!-- <StaggerDurationFactor>-2</StaggerDurationFactor> -->
-			<!-- <CarryingCapacity>60</CarryingCapacity> -->
-    </equippedStatOffsets>
-    <costStuffCount>150</costStuffCount>
-    <stuffCategories>
-      <li>Metallic</li>
-    </stuffCategories>
-    <costList Inherit="False">
-      <ComponentSpacer>4</ComponentSpacer>
-    </costList>
-    <apparel>
-      <tags>
-        <li>Wula_Armour_Armor</li>
-      </tags>
-      <bodyPartGroups>
-        <li>Torso</li>
-      </bodyPartGroups>
-      <!-- <wornGraphicPath>Wula/Apparel/WULA_Knight_PowerArmor</wornGraphicPath> -->
-      <layers>
-        <li>OnSkin</li>
-        <li>Middle</li>
-        <li>Shell</li>
-      </layers>
-      <useDeflectMetalEffect>true</useDeflectMetalEffect>
-      <soundWear>Wear_PowerArmor</soundWear>
-      <soundRemove>Remove_PowerArmor</soundRemove>
-      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
-      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
-      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
-    </apparel>
-    <thingClass>Apparel</thingClass>
-    <comps>
-      <li Class="CompProperties_Biocodable"/>
-      <li Class="CompProperties_Shield">
-        <startingTicksToReset>3600</startingTicksToReset>
-        <minDrawSize>3.5</minDrawSize>
-        <maxDrawSize>3.8</maxDrawSize>
-        <energyLossPerDamage>0.01</energyLossPerDamage>
-        <energyOnReset>4.0</energyOnReset>
-        <blocksRangedWeapons>false</blocksRangedWeapons>
-      </li>
-    </comps>
-    <thingSetMakerTags>
-      <li>RewardStandardHighFreq</li>
-    </thingSetMakerTags>
-  </ThingDef>
-
-
-
 
 
 	<ApparelLayerDef>
