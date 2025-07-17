@@ -10,6 +10,7 @@
       <texPath>Wula/Building/Linked/WulaWall/WulaWall_Atlas</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
+      <color>(0.5, 0.5, 0.5)</color>
     </graphicData>
     <designationCategory>Structure</designationCategory>
     <researchPrerequisites>

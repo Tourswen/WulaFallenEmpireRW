@@ -10,7 +10,7 @@
     <targetDef>WulaWall</targetDef>
 
     <!-- 指定渲染时使用的着色器类型。CutoutComplex是建筑和墙体很常用的选项 -->
-    <shaderType>CutoutComplex</shaderType>
+    <shaderType>CutoutWithOverlay</shaderType>
 
     <!-- 占位符: 所有贴图路径都暂时指向原版奥德赛DLC的贴图 -->
     <texPath_Corner_NW>Wula/Building/Linked/WulaWall/AngledWulaWall_northwest</texPath_Corner_NW>
