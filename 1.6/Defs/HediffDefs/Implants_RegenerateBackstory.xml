@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ImplantBase">
+    <defName>Wula_BackstoryRegeneratorImplant</defName>
+    <label>backstory regenerator</label>
+    <description>A one-use implant that restructures a person's memories and experiences, effectively giving them a new backstory. The process is unstable and the implant is consumed on use.</description>
+    <statBases>
+      <MarketValue>1500</MarketValue>
+      <Mass>0.1</Mass>
+    </statBases>
+  </ThingDef>
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>Wula_RegenerateBackstory</defName>
+    <label>backstory regenerator</label>
+    <labelNoun>a backstory regenerator</labelNoun>
+    <description>A backstory regenerator is installed.</description>
+    <spawnThingOnRemoved>Wula_BackstoryRegeneratorImplant</spawnThingOnRemoved>
+    <comps>
+      <li Class="WulaFallenEmpire.HediffCompProperties_RegenerateBackstory">
+        <spawnCategories>
+          <li>Wula_Backstory_Categories</li>
+        </spawnCategories>
+        <regenerateChildhood>false</regenerateChildhood>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>InstallWulaBackstoryRegenerator</defName>
+    <label>install backstory regenerator</label>
+    <description>Installs a backstory regenerator.</description>
+    <jobString>Installing backstory regenerator.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Wula_BackstoryRegeneratorImplant</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Wula_BackstoryRegeneratorImplant</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>Wula_RegenerateBackstory</addsHediff>
+  </RecipeDef>
+
+</Defs>

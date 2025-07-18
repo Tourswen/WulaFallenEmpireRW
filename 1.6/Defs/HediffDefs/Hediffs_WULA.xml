@@ -71,6 +71,7 @@
         <damageDefIncoming>EMP</damageDefIncoming>
         <vomit>true</vomit>
       </li>
+      <li Class="WulaFallenEmpire.HediffCompProperties_MakesMechanitor"/>
     </comps>
   </HediffDef>
   <HediffDef>

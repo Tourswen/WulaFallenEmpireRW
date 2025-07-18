@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\2009463077\1.5\Assemblies\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\..\..\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
@@ -54,8 +58,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Building_Wula_DarkEnergy_Engine.cs" />
+    <Compile Include="MechanitorPatch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SectionLayer_WulaHull.cs" />
+    <Compile Include="HediffComp_RegenerateBackstory.cs" />
+    <Compile Include="WulaFallenEmpireMod.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
