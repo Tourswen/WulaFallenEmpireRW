@@ -387,7 +387,7 @@
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_WULA_MW_Lance</defaultProjectile>
-        <warmupTime>2.25</warmupTime>
+        <warmupTime>2.5</warmupTime>
         <minRange>3</minRange>
         <forcedMissRadius>0.1</forcedMissRadius>
         <range>38</range>
