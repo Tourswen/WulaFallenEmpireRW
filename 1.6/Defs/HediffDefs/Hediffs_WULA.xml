@@ -212,7 +212,7 @@
     </comps>
   </HediffDef>
 
-  <HediffDef ParentName="AddedBodyPartBase">
+  <HediffDef ParentName="ImplantHediffBase">
     <defName>WULA_Heavy_Infantry_PowerArmor_PowerFist</defName>
     <label>动力拳</label>
     <labelNoun>动力拳</labelNoun>
