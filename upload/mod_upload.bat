@@ -1,0 +1,1 @@
+E:\SteamLibrary\steamcmd\steamcmd.exe +login paul18762 (Steam)114514 +workshop_build_item E:\SteamLibrary\steamapps\common\RimWorld\Mods\upload\mod.vdf +quit
