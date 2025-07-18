@@ -1095,68 +1095,9 @@
     </apparel>
   </ThingDef>
   <ThingDef ParentName="WULA_ApparelShieldBase">
-    <defName>WULA_Shield_Advance</defName>
-    <label>乌拉帝国幻光盾</label>
-    <description>一面轻型盾牌，为乌拉帝国的突击队和骑士军团设计，轻便易携，可以提供抵御大量敌方投射火力的护盾立场，但是本身无法给予额外护甲。</description>
-    <thingCategories>
-      <li>ApparelNoble</li>
-    </thingCategories>
-    <recipeMaker>
-      <researchPrerequisite>WULA_Synth_Weapon_2_Stun_Technology</researchPrerequisite>
-      <skillRequirements>
-        <Crafting>10</Crafting>
-      </skillRequirements>
-    </recipeMaker>
-    <graphicData>
-      <texPath>Wula/Apparel/WULA_Shield_Advance</texPath>
-    </graphicData>
-    <statBases>
-      <WorkToMake>40000</WorkToMake>
-      <MaxHitPoints>200</MaxHitPoints>
-      <Mass>2</Mass>
-      <Flammability>0</Flammability>
-      <!-- <ArmorRating_Sharp>1.8</ArmorRating_Sharp>
-      <ArmorRating_Blunt>1.8</ArmorRating_Blunt>
-      <ArmorRating_Heat>2.0</ArmorRating_Heat> -->
-      <EquipDelay>1</EquipDelay>
-      <EnergyShieldEnergyMax>0.5</EnergyShieldEnergyMax>
-    </statBases>
-    <equippedStatOffsets>
-			<MoveSpeed>-0.2</MoveSpeed>
-			<!-- <MoveSpeed>-0.5</MoveSpeed> -->
-      <!-- <IncomingDamageFactor>-0.2</IncomingDamageFactor> -->
-      <!-- <StaggerDurationFactor>-2</StaggerDurationFactor> -->
-			<!-- <CarryingCapacity>60</CarryingCapacity> -->
-    </equippedStatOffsets>
-    <costStuffCount>50</costStuffCount>
-    <costList Inherit="False">
-      <ComponentSpacer>1</ComponentSpacer>
-    </costList>
-    <apparel>
-      <tags>
-        <li>RoyalTier5</li>
-        <li>Royal</li>
-      </tags>
-      <bodyPartGroups>
-        <li>Arms</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Wula/Apparel/WULA_Shield_Advance</wornGraphicPath>
-    </apparel>
-    <comps>
-      <li Class="CompProperties_Shield">
-        <startingTicksToReset>3600</startingTicksToReset><!-- 1 mins -->
-        <minDrawSize>2.5</minDrawSize>
-        <maxDrawSize>2.8</maxDrawSize>
-        <energyLossPerDamage>0.01</energyLossPerDamage>
-        <energyOnReset>4.0</energyOnReset>
-        <blocksRangedWeapons>false</blocksRangedWeapons>
-      </li>
-    </comps>
-  </ThingDef>
-  <ThingDef ParentName="WULA_ApparelShieldBase">
     <defName>WULA_Shield_Prismatic</defName>
     <label>乌拉帝国棱形盾</label>
-    <description>乌拉帝国骑士军团所偏好的一种盾牌，覆盖面积小护甲低，容易阻碍远程武器瞄准，但是可以提供大量的近战闪避能力，而且内置了可以近距离击倒敌军的梭镖发射装置。</description>
+    <description>乌拉帝国骑士军团所偏好的一种盾牌，覆盖面积小护甲低，但是轻便灵活可以提供大量的近战闪避能力，配置了个人护盾和可以近距离击倒敌军的梭镖发射装置。</description>
     <thingCategories>
       <li>ApparelNoble</li>
     </thingCategories>
@@ -1178,7 +1119,7 @@
       <ArmorRating_Blunt>1</ArmorRating_Blunt>
       <ArmorRating_Heat>1</ArmorRating_Heat>
       <EquipDelay>2</EquipDelay>
-      <!-- <EnergyShieldEnergyMax>0.5</EnergyShieldEnergyMax> -->
+      <EnergyShieldEnergyMax>0.5</EnergyShieldEnergyMax>
     </statBases>
     <equippedStatOffsets>
 			<MoveSpeed>-0.2</MoveSpeed>
@@ -1217,6 +1158,14 @@
         <hotKey>Misc4</hotKey>
         <chargeNoun>梭镖</chargeNoun>
         <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+      </li>
+      <li Class="CompProperties_Shield">
+        <startingTicksToReset>3600</startingTicksToReset><!-- 1 mins -->
+        <minDrawSize>2.5</minDrawSize>
+        <maxDrawSize>2.8</maxDrawSize>
+        <energyLossPerDamage>0.01</energyLossPerDamage>
+        <energyOnReset>4.0</energyOnReset>
+        <blocksRangedWeapons>false</blocksRangedWeapons>
       </li>
     </comps>
     <verbs>
