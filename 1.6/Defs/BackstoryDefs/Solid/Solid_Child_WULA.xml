@@ -22,7 +22,7 @@
       <Intellectual>5</Intellectual>
     </skillGains>
     <spawnCategories>
-      <li>Wula_Old_Synth_Backstory_Categories</li>
+      <li>Wula_Backstory_Categories</li>
     </spawnCategories>
     <requiredWorkTags>None</requiredWorkTags>
     <forcedHediffs>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!-- <ThingDef ParentName="ImplantBase">
+  <ThingDef ParentName="ImplantBase">
     <defName>Wula_BackstoryRegeneratorImplant</defName>
     <label>backstory regenerator</label>
     <thingClass>ThingWithComps</thingClass>
@@ -64,6 +64,6 @@
       <li>Brain</li>
     </appliedOnFixedBodyParts>
     <addsHediff>Wula_RegenerateBackstory</addsHediff>
-  </RecipeDef> -->
+  </RecipeDef>
 
 </Defs>
