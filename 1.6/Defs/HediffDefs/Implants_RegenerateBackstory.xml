@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef ParentName="ImplantBase">
+  <ThingDef ParentName="TechHediffBase">
     <defName>Wula_BackstoryRegeneratorImplant</defName>
     <label>backstory regenerator</label>
     <thingClass>ThingWithComps</thingClass>
