@@ -9,6 +9,10 @@
     <pawnSingular>colonist</pawnSingular>
     <pawnsPlural>colonists</pawnsPlural>
     <techLevel>Spacer</techLevel>
+    <backstoryCategories>
+      <li>Wula_Old_Synth_Backstory_Categories</li>
+      <li>Wula_Backstory_Categories</li>
+    </backstoryCategories>
     <!-- 命名规则 -->
     <factionNameMaker>NamerFactionOutlander</factionNameMaker>
     <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
