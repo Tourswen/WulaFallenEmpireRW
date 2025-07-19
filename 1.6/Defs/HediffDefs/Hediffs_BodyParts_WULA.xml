@@ -429,7 +429,7 @@
       </recipeUsers>
     </recipeMaker>
   </ThingDef>
-  <HediffDef ParentName="ImplantHediffBase">
+   <HediffDef ParentName="ImplantHediffBase">
     <defName>WULA_Addons_Antenna_Hediff_Base</defName>
     <hediffClass>Hediff_Mechlink</hediffClass>
     <label>基础上线链路天线</label>
@@ -448,6 +448,9 @@
     </stages>
     <defaultInstallPart>WULA_Addons_Antenna_Bodypart</defaultInstallPart>
     <!-- <spawnThingOnRemoved>WULA_Addons_Antenna_Base</spawnThingOnRemoved> -->
+    <comps>
+      <li Class="WulaFallenEmpire.HediffCompProperties_MakesMechanitor"/>
+    </comps>
   </HediffDef>
   <ThingDef ParentName="MechanitorImplantCraftableBase">
     <defName>WULA_Addons_Antenna_Expansion</defName>

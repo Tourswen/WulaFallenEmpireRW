@@ -1,21 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Steam\\steamapps\\workshop\\content\\294100\\3516260226\\Source\\WulaFallenEmpire\\",
+  "WorkspaceRootPath": "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\3516260226\\Source\\WulaFallenEmpire\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F5AE8C3B-0221-4C16-A128-9A62D521A8FF}|WulaFallenEmpire.csproj|C:\\Steam\\steamapps\\workshop\\content\\294100\\3516260226\\Source\\WulaFallenEmpire\\mechanitorpatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F5AE8C3B-0221-4C16-A128-9A62D521A8FF}|WulaFallenEmpire.csproj|c:\\steam\\steamapps\\common\\rimworld\\mods\\3516260226\\source\\wulafallenempire\\mechanitorpatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5AE8C3B-0221-4C16-A128-9A62D521A8FF}|WulaFallenEmpire.csproj|solutionrelative:mechanitorpatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5AE8C3B-0221-4C16-A128-9A62D521A8FF}|WulaFallenEmpire.csproj|c:\\steam\\steamapps\\workshop\\content\\294100\\3516260226\\source\\wulafallenempire\\hediffcomp_regeneratebackstory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F5AE8C3B-0221-4C16-A128-9A62D521A8FF}|WulaFallenEmpire.csproj|C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\3516260226\\Source\\WulaFallenEmpire\\hediffcomp_regeneratebackstory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5AE8C3B-0221-4C16-A128-9A62D521A8FF}|WulaFallenEmpire.csproj|solutionrelative:hediffcomp_regeneratebackstory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5AE8C3B-0221-4C16-A128-9A62D521A8FF}|WulaFallenEmpire.csproj|c:\\steam\\steamapps\\workshop\\content\\294100\\3516260226\\source\\wulafallenempire\\wulafallenempiremod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F5AE8C3B-0221-4C16-A128-9A62D521A8FF}|WulaFallenEmpire.csproj|C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\3516260226\\Source\\WulaFallenEmpire\\wulafallenempiremod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5AE8C3B-0221-4C16-A128-9A62D521A8FF}|WulaFallenEmpire.csproj|solutionrelative:wulafallenempiremod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5AE8C3B-0221-4C16-A128-9A62D521A8FF}|WulaFallenEmpire.csproj|C:\\Steam\\steamapps\\workshop\\content\\294100\\3516260226\\Source\\WulaFallenEmpire\\building_wula_darkenergy_engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F5AE8C3B-0221-4C16-A128-9A62D521A8FF}|WulaFallenEmpire.csproj|C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\3516260226\\Source\\WulaFallenEmpire\\building_wula_darkenergy_engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5AE8C3B-0221-4C16-A128-9A62D521A8FF}|WulaFallenEmpire.csproj|solutionrelative:building_wula_darkenergy_engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -29,44 +29,42 @@
           "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HediffComp_RegenerateBackstory.cs",
-              "DocumentMoniker": "C:\\Steam\\steamapps\\workshop\\content\\294100\\3516260226\\Source\\WulaFallenEmpire\\HediffComp_RegenerateBackstory.cs",
-              "RelativeDocumentMoniker": "HediffComp_RegenerateBackstory.cs",
-              "ToolTip": "C:\\Steam\\steamapps\\workshop\\content\\294100\\3516260226\\Source\\WulaFallenEmpire\\HediffComp_RegenerateBackstory.cs",
-              "RelativeToolTip": "HediffComp_RegenerateBackstory.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAIwHIAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T11:23:19.064Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HediffComp_RegenerateBackstory.cs",
+              "DocumentMoniker": "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\3516260226\\Source\\WulaFallenEmpire\\HediffComp_RegenerateBackstory.cs",
+              "RelativeDocumentMoniker": "HediffComp_RegenerateBackstory.cs",
+              "ToolTip": "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\3516260226\\Source\\WulaFallenEmpire\\HediffComp_RegenerateBackstory.cs",
+              "RelativeToolTip": "HediffComp_RegenerateBackstory.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAIwHIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T11:23:19.064Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "WulaFallenEmpireMod.cs",
-              "DocumentMoniker": "C:\\Steam\\steamapps\\workshop\\content\\294100\\3516260226\\Source\\WulaFallenEmpire\\WulaFallenEmpireMod.cs",
+              "DocumentMoniker": "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\3516260226\\Source\\WulaFallenEmpire\\WulaFallenEmpireMod.cs",
               "RelativeDocumentMoniker": "WulaFallenEmpireMod.cs",
-              "ToolTip": "C:\\Steam\\steamapps\\workshop\\content\\294100\\3516260226\\Source\\WulaFallenEmpire\\WulaFallenEmpireMod.cs",
+              "ToolTip": "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\3516260226\\Source\\WulaFallenEmpire\\WulaFallenEmpireMod.cs",
               "RelativeToolTip": "WulaFallenEmpireMod.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvxQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T10:23:17.898Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-18T10:23:17.898Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MechanitorPatch.cs",
-              "DocumentMoniker": "C:\\Steam\\steamapps\\workshop\\content\\294100\\3516260226\\Source\\WulaFallenEmpire\\MechanitorPatch.cs",
+              "DocumentMoniker": "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\3516260226\\Source\\WulaFallenEmpire\\MechanitorPatch.cs",
               "RelativeDocumentMoniker": "MechanitorPatch.cs",
-              "ToolTip": "C:\\Steam\\steamapps\\workshop\\content\\294100\\3516260226\\Source\\WulaFallenEmpire\\MechanitorPatch.cs",
+              "ToolTip": "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\3516260226\\Source\\WulaFallenEmpire\\MechanitorPatch.cs",
               "RelativeToolTip": "MechanitorPatch.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAiAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-18T10:20:31.368Z",
               "EditorCaption": ""
@@ -75,9 +73,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Building_Wula_DarkEnergy_Engine.cs",
-              "DocumentMoniker": "C:\\Steam\\steamapps\\workshop\\content\\294100\\3516260226\\Source\\WulaFallenEmpire\\Building_Wula_DarkEnergy_Engine.cs",
+              "DocumentMoniker": "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\3516260226\\Source\\WulaFallenEmpire\\Building_Wula_DarkEnergy_Engine.cs",
               "RelativeDocumentMoniker": "Building_Wula_DarkEnergy_Engine.cs",
-              "ToolTip": "C:\\Steam\\steamapps\\workshop\\content\\294100\\3516260226\\Source\\WulaFallenEmpire\\Building_Wula_DarkEnergy_Engine.cs",
+              "ToolTip": "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\3516260226\\Source\\WulaFallenEmpire\\Building_Wula_DarkEnergy_Engine.cs",
               "RelativeToolTip": "Building_Wula_DarkEnergy_Engine.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

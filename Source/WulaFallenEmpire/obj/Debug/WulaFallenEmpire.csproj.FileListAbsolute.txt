@@ -43,3 +43,9 @@ C:\Steam\steamapps\workshop\content\294100\3516260226\Source\WulaFallenEmpire\ob
 C:\Steam\steamapps\workshop\content\294100\3516260226\Source\WulaFallenEmpire\obj\Debug\WulaFallenEmpire.csproj.CoreCompileInputs.cache
 C:\Steam\steamapps\workshop\content\294100\3516260226\Source\WulaFallenEmpire\obj\Debug\WulaFallenEmpire.dll
 C:\Steam\steamapps\workshop\content\294100\3516260226\Source\WulaFallenEmpire\obj\Debug\WulaFallenEmpire.pdb
+C:\Steam\steamapps\common\RimWorld\Mods\3516260226\1.6\Assemblies\WulaFallenEmpire.dll
+C:\Steam\steamapps\common\RimWorld\Mods\3516260226\1.6\Assemblies\WulaFallenEmpire.pdb
+C:\Steam\steamapps\common\RimWorld\Mods\3516260226\Source\WulaFallenEmpire\obj\Debug\WulaFallenEmpire.csproj.AssemblyReference.cache
+C:\Steam\steamapps\common\RimWorld\Mods\3516260226\Source\WulaFallenEmpire\obj\Debug\WulaFallenEmpire.csproj.CoreCompileInputs.cache
+C:\Steam\steamapps\common\RimWorld\Mods\3516260226\Source\WulaFallenEmpire\obj\Debug\WulaFallenEmpire.dll
+C:\Steam\steamapps\common\RimWorld\Mods\3516260226\Source\WulaFallenEmpire\obj\Debug\WulaFallenEmpire.pdb
