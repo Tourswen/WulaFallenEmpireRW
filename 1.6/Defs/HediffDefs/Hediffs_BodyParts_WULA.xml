@@ -243,168 +243,161 @@
     <defaultInstallPart>WULA_Energy_Furnace_Bodypart</defaultInstallPart>
     <!-- <spawnThingOnRemoved>WULA_Addons_Antenna_Base</spawnThingOnRemoved> -->
   </HediffDef>
-  <!-- <ThingDef ParentName="BodyPartProstheticMakeableBase">
-    <defName>WULA_Energy_Furnace_Jumpdrive</defName>
-    <label>中央能源炉-跃迁组件</label>
-    <description>将一台精简的跃迁引擎直接安装在合成人的动力炉中，允许它们传送至附近的随机位置。</description>
-    <graphicData>
-      <texPath>Things/Item/Health/HealthItem</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WULA_Energy_Furnace_Hediff_DM_CPU</defName>
+    <label>暗物质处理器</label>
+    <description>由填充非交互性暗物质微粒的卡西米尔共振腔构成的处理器，极大增强合成人的意识。</description>
+    <descriptionHyperlinks><ThingDef>Install_WULA_Energy_Furnace_DM_CPU</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>WULA_Energy_Furnace_DM_CPU</spawnThingOnRemoved>
+    <addedPartProps>
+      <!-- <partEfficiency>1.5</partEfficiency> -->
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.3</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>WULA_Energy_Furnace_DM_CPU</defName>
+    <label>暗物质处理器</label>
+    <description>由填充非交互性暗物质微粒的卡西米尔共振腔构成的处理器，用于替换过时的生物处理器，极大增强合成人的意识。 </description>
+   <descriptionHyperlinks><RecipeDef>Install_WULA_Energy_Furnace_DM_CPU</RecipeDef></descriptionHyperlinks>
     <costList>
-      <Steel>200</Steel>
-      <Plasteel>25</Plasteel>
+      <Steel>100</Steel>
+      <ComponentSpacer>8</ComponentSpacer>
+      <WULA_Dark_Matter_Item>2</WULA_Dark_Matter_Item>
+    </costList>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <recipeMaker>
+      <researchPrerequisite>WULA_Synth_Addons_Technology</researchPrerequisite>
+      <recipeUsers>
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+    </recipeMaker>
+    <statBases>
+      <Mass>0.3</Mass>
+    </statBases>
+  </ThingDef>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>Install_WULA_Energy_Furnace_DM_CPU</defName>
+    <label>安装暗物质处理器</label>
+    <description>为合成人安装安装暗物质处理器。</description>
+    <descriptionHyperlinks>
+      <ThingDef>WULA_Energy_Furnace_DM_CPU</ThingDef>
+      <HediffDef>WULA_Energy_Furnace_Hediff_DM_CPU</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>安装暗物质处理器中</jobString>
+    <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
+    <anesthetize>false</anesthetize>
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WULA_Energy_Furnace_DM_CPU</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WULA_Energy_Furnace_DM_CPU</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>WULA_Energy_Furnace_Hediff_DM_CPU</addsHediff>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+  </RecipeDef>
+
+  <!-- 处理器 -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WULA_Energy_Furnace_Hediff_DM_Engine</defName>
+    <label>暗物质能源炉</label>
+    <description>一台由暗物质作为能源驱动的合成人能源炉，拥有永不枯竭的动力，合成人安装后将不再需要充电。</description>
+    <descriptionHyperlinks><ThingDef>WULA_Energy_Furnace_DM_Engine</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>WULA_Energy_Furnace_DM_Engine</spawnThingOnRemoved>
+    <addedPartProps>
+      <!-- <partEfficiency>1.5</partEfficiency> -->
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+        <disablesNeeds>
+          <li>WULA_Energy</li>
+        </disablesNeeds>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>WULA_Energy_Furnace_DM_Engine</defName>
+    <label>暗物质能源炉</label>
+    <description>一台由暗物质作为能源驱动的合成人能源炉，拥有永不枯竭的动力，合成人安装后将不再需要充电。</description>
+   <descriptionHyperlinks><RecipeDef>Install_WULA_Energy_Furnace_DM_Engine</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>100</Steel>
       <ComponentSpacer>4</ComponentSpacer>
+      <WULA_Dark_Matter_Item>1</WULA_Dark_Matter_Item>
     </costList>
-    <recipeMaker Inherit="False">
-      <researchPrerequisite>WULA_Synth_Addons_2_Technology</researchPrerequisite>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <recipeMaker>
+      <researchPrerequisite>WULA_Synth_Addons_Technology</researchPrerequisite>
       <recipeUsers>
         <li>WULA_Cube_Productor_Energy</li>
       </recipeUsers>
     </recipeMaker>
-    <comps>
-      <li Class="CompProperties_Usable">
-        <compClass>CompUsableImplant</compClass>
-        <useJob>UseItem</useJob>
-        <useLabel>安装中央能源炉跃迁组件</useLabel>
-      </li>
-      <li Class="CompProperties_UseEffectDestroySelf" />
-      <li Class="CompProperties_UseEffectInstallImplant">
-        <hediffDef>WULA_Energy_Furnace_Hediff_Jumpdrive</hediffDef>
-        <bodyPart>WULA_Energy_Furnace_Bodypart</bodyPart>
-        <canUpgrade>false</canUpgrade>
-        <maxSeverity>1</maxSeverity>
-      </li>
-    </comps>
-  </ThingDef>
-  <HediffDef ParentName="Wula_ImplantHediffBase_T3">
-    <defName>WULA_Energy_Furnace_Hediff_Jumpdrive</defName>
-    <label>跃迁组件</label>
-    <description>安装在合成人的动力炉中的精简的跃迁引擎，允许它们传送至附近的随机位置。</description>
-    <duplicationAllowed>false</duplicationAllowed>
-    <defaultInstallPart>WULA_Energy_Furnace_Bodypart</defaultInstallPart>
-    <comps>
-      <li Class="HediffCompProperties_GiveAbility">
-        <abilityDefs>
-          <li>WULA_Energy_Furnace_Skill_Jumpdrive</li>
-        </abilityDefs>
-      </li>
-    </comps>
-  </HediffDef>
-  <AbilityDef ParentName="PsycastBase">
-    <defName>WULA_Energy_Furnace_Skill_Jumpdrive</defName>
-    <label>短距离折跃</label>
-    <description>启动能源炉中的跃迁引擎，迅速折跃至附近6-8格外的随机位置，不需要目标位置的视野。</description>
-    <iconPath>UI/Abilities/Skip</iconPath>
-    <writeCombatLog>True</writeCombatLog>
-    <showPsycastEffects>False</showPsycastEffects>
-    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
-    <category>Skip</category>
-    <cooldownTicksRange>180~480</cooldownTicksRange>
     <statBases>
-      <Ability_EntropyGain>0</Ability_EntropyGain>
-      <Ability_PsyfocusCost>-1</Ability_PsyfocusCost>
+      <Mass>0.3</Mass>
     </statBases>
-    <verbProperties>
-      <warmupTime>1</warmupTime>
-      <range>6</range>
-      <targetable>false</targetable>
-      <targetParams>
-        <canTargetSelf>true</canTargetSelf>
-      </targetParams>
-    </verbProperties>
-    <comps>
-      <li Class = "CompProperties_AbilityTeleport">
-        <compClass>CompAbilityEffect_Teleport</compClass>
-        <destination>RandomInRange</destination>
-        <requiresLineOfSight>False</requiresLineOfSight>
-        <range>6~8</range>
-        <clamorType>Ability</clamorType>
-        <clamorRadius>10</clamorRadius>
-        <destClamorType>Ability</destClamorType>
-        <destClamorRadius>10</destClamorRadius>
-        <stunTicks>0</stunTicks>
-        <goodwillImpact>-15</goodwillImpact>
-        <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
-      </li>
-    </comps>
-  </AbilityDef>
-  <ThingDef ParentName="BodyPartProstheticMakeableBase">
-    <defName>WULA_Energy_Furnace_AntigrainShell</defName>
-    <label>中央能源炉-自爆组件</label>
-    <description>把一枚反粒子弹安装到体内的能源炉附近，允许合成人发起自杀式袭击。</description>
-    <graphicData>
-      <texPath>Things/Item/Health/HealthItem</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <costList>
-      <Shell_AntigrainWarhead>1</Shell_AntigrainWarhead>
-    </costList>
-    <recipeMaker Inherit="False">
-      <researchPrerequisite>WULA_Synth_Addons_2_Technology</researchPrerequisite>
-      <recipeUsers>
-        <li>WULA_Cube_Productor_Energy</li>
-      </recipeUsers>
-    </recipeMaker>
-    <comps>
-      <li Class="CompProperties_Usable">
-        <compClass>CompUsableImplant</compClass>
-        <useJob>UseItem</useJob>
-        <useLabel>安装中央能源炉自爆组件</useLabel>
-      </li>
-      <li Class="CompProperties_UseEffectDestroySelf" />
-      <li Class="CompProperties_UseEffectInstallImplant">
-        <hediffDef>WULA_Energy_Furnace_Hediff_AntigrainShell</hediffDef>
-        <bodyPart>WULA_Energy_Furnace_Bodypart</bodyPart>
-        <canUpgrade>false</canUpgrade>
-        <maxSeverity>1</maxSeverity>
-      </li>
-    </comps>
   </ThingDef>
-  <HediffDef ParentName="Wula_ImplantHediffBase_T1">
-    <defName>WULA_Energy_Furnace_AntigrainShell</defName>
-    <label>自爆组件</label>
-    <description>一枚安装到体内的能源炉附近的反粒子弹，允许合成人发起自杀式袭击。</description>
-    <duplicationAllowed>false</duplicationAllowed>
-    <defaultInstallPart>WULA_Energy_Furnace_Bodypart</defaultInstallPart>
-    <comps>
-      <li Class="HediffCompProperties_GiveAbility">
-        <abilityDefs>
-          <li>WULA_Energy_Furnace_Skill_AntigrainShell</li>
-        </abilityDefs>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>Install_WULA_Energy_Furnace_DM_Engine</defName>
+    <label>安装暗物质能源炉</label>
+    <description>为合成人安装安装暗物质能源炉。</description>
+    <descriptionHyperlinks>
+      <ThingDef>WULA_Energy_Furnace_DM_Engine</ThingDef>
+      <HediffDef>WULA_Energy_Furnace_Hediff_DM_Engine</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>安装暗物质能源炉中</jobString>
+    <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
+    <anesthetize>false</anesthetize>
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WULA_Energy_Furnace_DM_Engine</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
       </li>
-    </comps>
-  </HediffDef>
-  <AbilityDef ParentName="PsycastBase">
-    <defName>WULA_Energy_Furnace_Skill_AntigrainShell</defName>
-    <label>反物质自爆</label>
-    <description>启动能源炉附近的反粒子弹，将附近的一切都化为灰烬。</description>
-    <iconPath>UI/Abilities/AcidSpray</iconPath>
-    <writeCombatLog>True</writeCombatLog>
-    <showPsycastEffects>False</showPsycastEffects>
-    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
-    <statBases>
-      <Ability_EntropyGain>0</Ability_EntropyGain>
-      <Ability_PsyfocusCost>-1</Ability_PsyfocusCost>
-    </statBases>
-    <verbProperties>
-      <warmupTime>0</warmupTime>
-      <range>14.9</range>
-      <drawAimPie>true</drawAimPie>
-      <requireLineOfSight>false</requireLineOfSight>
-      <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
-      <soundCast>VoidTerrorCast</soundCast>
-      <targetable>false</targetable>
-      <targetParams>
-        <canTargetSelf>true</canTargetSelf>
-      </targetParams>
-    </verbProperties>
-    <comps>
-      <li Class="CompProperties_AbilityLaunchProjectile">
-        <projectileDef>Bullet_Shell_AntigrainWarhead</projectileDef>
-      </li>
-    </comps>
-  </AbilityDef> -->
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WULA_Energy_Furnace_DM_Engine</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>WULA_Energy_Furnace_Hediff_DM_Engine</addsHediff>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+  </RecipeDef>
 
   <!-- 天线 -->
   <ThingDef ParentName="BodyPartProstheticMakeableBase">
@@ -909,7 +902,6 @@
     <hideBodyPartNames>true</hideBodyPartNames>
     <targetsBodyPart>false</targetsBodyPart>
     <isViolation>true</isViolation>
-    <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
     <descriptionHyperlinks>
       <ThingDef>WULA_Soul_Wedge</ThingDef>
     </descriptionHyperlinks>
@@ -917,6 +909,7 @@
       <li>WULA_Synth_Psi_Technology</li>
     </researchPrerequisites>
     <uiIconThing>WULA_Soul_Wedge</uiIconThing>
+    <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
     <anesthetize>false</anesthetize>
     <workSkillLearnFactor>2</workSkillLearnFactor>
     <products>

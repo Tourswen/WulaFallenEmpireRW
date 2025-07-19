@@ -6,7 +6,7 @@
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
-  <packageId>Tourswen.WulaFallenEmpire</packageId>
+  <packageId>Tourswen.WulaFallenEmpireTest</packageId>
   
   <modDependencies>
     <li>
