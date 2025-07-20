@@ -1744,27 +1744,25 @@
     <statBases>
       <WorkToMake>40000</WorkToMake>
       <Mass>4.5</Mass>
-      <AccuracyTouch>0.5</AccuracyTouch>
-      <AccuracyShort>0.5</AccuracyShort>
-      <AccuracyMedium>0.5</AccuracyMedium>
-      <AccuracyLong>0.5</AccuracyLong>
-      <RangedWeapon_Cooldown>0.05</RangedWeapon_Cooldown>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>1</AccuracyMedium>
+      <AccuracyLong>1</AccuracyLong>
+      <RangedWeapon_Cooldown>0.25</RangedWeapon_Cooldown>
     </statBases>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_WULA_RW_DM_AR</defaultProjectile>
-        <warmupTime>0</warmupTime>
+        <warmupTime>0.1</warmupTime>
         <range>35.9</range>
         <burstShotCount>1</burstShotCount>
-        <!-- <ticksBetweenBurstShots>2</ticksBetweenBurstShots> -->
+        <!-- <ticksBetweenBurstShots>1</ticksBetweenBurstShots> -->
         <soundCast>Shot_BeamRepeater</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>0</muzzleFlashScale>
         <!-- <aimingChargeMote>Mote_BeamRepeater_Charge</aimingChargeMote> -->
-        <highlightColor>(180, 60, 10)</highlightColor>
-        <secondaryHighlightColor>(220, 210, 20)</secondaryHighlightColor>
       </li>
     </verbs>
   </ThingDef>
@@ -1778,8 +1776,75 @@
     </graphicData>
     <projectile>
       <damageDef>Wula_Darm_Matter_Beam</damageDef>
-      <damageAmountBase>3</damageAmountBase>
-      <beamMoteDef>Mote_BeamRepeaterLaser</beamMoteDef>
+      <damageAmountBase>50</damageAmountBase>
+      <beamMoteDef>Mote_Wula_Dark_Matter_Beam_Bigger</beamMoteDef>
+      <beamStartOffset>0.5</beamStartOffset>
+      <armorPenetrationBase>0.85</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+  <!-- 暗物质炮 -->
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>WULA_RW_DM_Cannon</defName>
+    <label>DMc-65"铋晶"</label>
+    <description>乌拉帝国一线部队携带的高射速反物质射线炮，射流掠过时一切如被漩涡吞噬般分崩离析，唯留尘埃飘散。</description>
+    <techLevel>Ultra</techLevel>
+    <!-- <techLevel>Spacer</techLevel> -->
+    <graphicData>
+      <texPath>Wula/Weapon/WULA_RW_DM_Cannon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.5</drawSize>
+    </graphicData>
+    <uiIconScale>0.8</uiIconScale>
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+      <researchPrerequisite>WULA_Synth_Weapon_4_DM_Base_Technology</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+    <costList Inherit="False">
+      <Steel>500</Steel>
+      <Plasteel>300</Plasteel>
+      <WULA_Dark_Matter_Item>6</WULA_Dark_Matter_Item>
+    </costList>
+    <statBases>
+      <WorkToMake>50000</WorkToMake>
+      <Mass>10</Mass>
+      <AccuracyTouch>0.6</AccuracyTouch>
+      <AccuracyShort>0.6</AccuracyShort>
+      <AccuracyMedium>0.6</AccuracyMedium>
+      <AccuracyLong>0.6</AccuracyLong>
+      <RangedWeapon_Cooldown>0.05</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_WULA_RW_DM_Cannon</defaultProjectile>
+        <warmupTime>0</warmupTime>
+        <range>42</range>
+        <burstShotCount>1</burstShotCount>
+        <!-- <ticksBetweenBurstShots>2</ticksBetweenBurstShots> -->
+        <soundCast>Shot_HellsphereCannonGun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>8</muzzleFlashScale>
+        <!-- <aimingChargeMote>Mote_BeamRepeater_Charge</aimingChargeMote> -->
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_WULA_RW_DM_Cannon</defName>
+    <label>铋晶暗物质射流</label>
+    <thingClass>Beam</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Wula_Darm_Matter_Beam</damageDef>
+      <damageAmountBase>30</damageAmountBase>
+      <beamMoteDef>Mote_Wula_Dark_Matter_Beam</beamMoteDef>
       <beamStartOffset>0.5</beamStartOffset>
       <armorPenetrationBase>0.85</armorPenetrationBase>
     </projectile>
