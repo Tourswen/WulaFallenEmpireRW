@@ -170,7 +170,23 @@
         <!-- 生育设置，将妊娠设为男性来避免开局刷妊娠 -->
         <reproduction>
           <gestatingGender>Male</gestatingGender>
+          <femaleFertilityAgeFactor>
+            <points>
+              <li>(0,0)</li>
+              <li>(1,0)</li>
+              <li>(999,0)</li>
+              <li>(9999,0)</li>
+            </points>
+          </femaleFertilityAgeFactor>
         </reproduction>
+        <growthFactorByAge>
+          <points>
+            <li>(0,0)</li>
+            <li>(1,0)</li>
+            <li>(999,0)</li>
+            <li>(9999,0)</li>
+          </points>
+        </growthFactorByAge>
       </generalSettings>
       <!-- 图形 -->
 			<graphicPaths>
@@ -411,7 +427,7 @@
 			<!-- 身体类型 -->
 			<body>WULA_Machine_Body</body>
       <!-- 年龄阶段 -->
-      <lifeExpectancy>5000</lifeExpectancy>
+      <!-- <lifeExpectancy>5000</lifeExpectancy> -->
       <lifeStageWorkSettings MayRequire="Ludeon.RimWorld.Biotech">
         <Firefighter>0</Firefighter>
         <Patient>0</Patient>
@@ -463,6 +479,7 @@
           <li>EMP</li>
         </adaptableDamageDefs>
       </li>
+      <!-- <li Class="CompProperties_DrugAddict"/> -->
     </comps>
 	</AlienRace.ThingDef_AlienRace>
 

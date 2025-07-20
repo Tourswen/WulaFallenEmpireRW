@@ -137,7 +137,7 @@
     <useHitPoints>false</useHitPoints>
     <healthAffectsPrice>false</healthAffectsPrice>
     <statBases>
-      <MarketValue>100</MarketValue>
+      <MarketValue>1000</MarketValue>
       <Mass>0.01</Mass>
     </statBases>
     <thingCategories>

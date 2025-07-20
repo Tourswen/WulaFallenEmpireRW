@@ -259,7 +259,7 @@
     <descriptionHyperlinks>
       <ThingDef>Wula_AI_Engineer_Mother</ThingDef>
     </descriptionHyperlinks>
-    <researchPrerequisite>WULA_AI_Machine_Panzer_Technology</researchPrerequisite>
+    <researchPrerequisite>Wula_AI_Engineer_Mother_Technology</researchPrerequisite>
   </RecipeDef>
   <RecipeDef ParentName="MediumMechanoidRecipe">
     <defName>WULA_Build_AI_Engineer_Mother_Attack</defName>
@@ -305,7 +305,7 @@
     <descriptionHyperlinks>
       <ThingDef>Wula_AI_Engineer_Mother_Attack</ThingDef>
     </descriptionHyperlinks>
-    <researchPrerequisite>WULA_AI_Machine_Panzer_Technology</researchPrerequisite>
+    <researchPrerequisite>Wula_AI_Engineer_Mother_Technology</researchPrerequisite>
   </RecipeDef>
 
   <RecipeDef ParentName="LightMechanoidRecipe">

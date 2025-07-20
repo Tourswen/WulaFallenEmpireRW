@@ -234,4 +234,47 @@
       <li>Wula_Assault_Cat_Weapon</li>
     </weaponTags>
   </PawnKindDef>
+  <PawnKindDef ParentName="Mech_WULA_Cat_Soldier_PawnKind">
+    <defName>Mech_WULA_Cat_Bomb</defName>
+    <label>炸弹乌拉猫猫</label>
+    <race>Mech_WULA_Cat_Bomb</race>
+    <lifeStages Inherit="False"> 
+      <li>
+        <bodyGraphicData>
+          <texPath>Wula/Things/WULA_bomb_Cat/WULA_Cat_Thin</texPath>
+          <maskPath>Wula/Things/WULA_bomb_Cat/AllegianceOverlays/None</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  <PawnKindDef ParentName="Mech_WULA_Cat_Soldier_PawnKind">
+    <defName>Mech_WULA_Cat_Inf</defName>
+    <label>步兵乌拉猫猫</label>
+    <race>Mech_WULA_Cat_Inf</race>
+    <weaponTags>
+      <li>Wula_Assault_Cat_Weapon</li>
+    </weaponTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="Mech_WULA_Cat_Soldier_PawnKind">
+    <defName>Mech_WULA_Cat_Commander</defName>
+    <label>指挥官乌拉猫猫</label>
+    <race>Mech_WULA_Cat_Commander</race>
+    <weaponTags>
+      <li>Wula_Assault_Cat_Weapon</li>
+    </weaponTags>
+    <lifeStages Inherit="False"> 
+      <li>
+        <bodyGraphicData>
+          <texPath>Wula/Things/WULA_Commander_Cat/WULA_Cat_Thin</texPath>
+          <maskPath>Wula/Things/WULA_Commander_Cat/AllegianceOverlays/None</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
 </Defs>

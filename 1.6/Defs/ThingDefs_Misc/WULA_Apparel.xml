@@ -104,6 +104,9 @@
 
   <!-- 平民服装 -->
   <ThingDef Name="WULA_ApparelCivilBase" ParentName="ApparelMakeableBase" Abstract="True">
+    <thingCategories>
+      <li>ApparelMisc</li>
+    </thingCategories>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
@@ -137,6 +140,9 @@
     </statBases>
   </ThingDef>
   <ThingDef Name="WULA_ApparelCivilHatBase" ParentName="HatMakeableBase" Abstract="True">
+    <thingCategories>
+      <li>ApparelMisc</li>
+    </thingCategories>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
@@ -421,6 +427,122 @@
       </skillRequirements>
     </recipeMaker>
   </ThingDef>
+  <ThingDef ParentName="WULA_ApparelCivilBase">
+		<defName>WULA_Nun_Uniform</defName>
+		<label>乌拉帝国修女服</label>
+		<description>乌拉帝国修女所着的衣服，虽然作为战斗服装来说几乎没有防护，但是它可以用乌拉帝国的技术抽出穿着者的灵能并形成一道灵能护盾——无论使用者是否愿意。</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Wula/Apparel/WULA_Nun_Uniform</texPath>
+    </graphicData>
+    <apparel>
+      <bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+      </bodyPartGroups>
+      <layers>
+        <!-- <li>OnSkin</li> -->
+        <li>Middle</li>
+      </layers>
+      <wornGraphicPath>Wula/Apparel/WULA_Nun_Uniform</wornGraphicPath>
+    </apparel>
+    <costList Inherit="False">
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <MaxHitPoints>200</MaxHitPoints>
+      <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.1</ArmorRating_Heat>
+      <EnergyShieldEnergyMax>1.5</EnergyShieldEnergyMax>
+    </statBases>
+    <equippedStatOffsets>
+			<MeleeDodgeChance>5</MeleeDodgeChance>	
+      <MentalBreakThreshold>-0.1</MentalBreakThreshold>
+    </equippedStatOffsets>
+    <costStuffCount>200</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <recipeMaker>
+      <researchPrerequisite>WULA_Synth_Clothes_2_Technology</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <comps>
+      <li Class="CompProperties_Shield">
+        <startingTicksToReset>3600</startingTicksToReset><!-- 1 mins -->
+        <minDrawSize>2.5</minDrawSize>
+        <maxDrawSize>2.8</maxDrawSize>
+        <energyLossPerDamage>0.01</energyLossPerDamage>
+        <energyOnReset>4.0</energyOnReset>
+        <blocksRangedWeapons>false</blocksRangedWeapons>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="WULA_ApparelCivilHatBase">
+    <defName>WULA_Nun_veil</defName>
+    <label>乌拉帝国修女头巾</label>
+    <description>乌拉帝国修女装的配套发饰，能像服装那样支起一个较小的灵能护盾。</description>
+    <tickerType>Normal</tickerType>
+    <recipeMaker>
+      <researchPrerequisite>WULA_Synth_Clothes_2_Technology</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+      <displayPriority>105</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Wula/Apparel/WULA_Nun_veil</texPath>
+    </graphicData>
+    <statBases>
+      <EnergyShieldEnergyMax>0.25</EnergyShieldEnergyMax>
+      <Mass>0.1</Mass>
+    </statBases>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <costStuffCount>50</costStuffCount>
+    <costList Inherit="False">
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <parentTagDef>ApparelHead</parentTagDef>
+      <wornGraphicPath>Wula/Apparel/WULA_Nun_veil</wornGraphicPath>
+    </apparel>
+    <thingSetMakerTags>
+      <li>RewardStandardHighFreq</li>
+    </thingSetMakerTags>
+    <comps>
+      <li Class="CompProperties_Shield">
+        <startingTicksToReset>3600</startingTicksToReset><!-- 1 mins -->
+        <minDrawSize>2.5</minDrawSize>
+        <maxDrawSize>2.8</maxDrawSize>
+        <energyLossPerDamage>0.01</energyLossPerDamage>
+        <energyOnReset>4.0</energyOnReset>
+        <blocksRangedWeapons>false</blocksRangedWeapons>
+      </li>
+    </comps>
+  </ThingDef>
 
   <!-- 内衬 -->
   <ThingDef Name="WULA_ApparelOnSkinBase" ParentName="ApparelMakeableBase" Abstract="True">
@@ -428,6 +550,9 @@
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
     </graphicData>
+    <thingCategories>
+      <li>ApparelMisc</li>
+    </thingCategories>
     <costStuffCount>30</costStuffCount>
     <stuffCategories>
       <li>Fabric</li>
@@ -521,6 +646,9 @@
     <graphicData>
       <texPath>Wula/Apparel/WULA_Body_Suit</texPath>
     </graphicData>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
     <costStuffCount>50</costStuffCount>
     <costList Inherit="False">
       <ComponentIndustrial>2</ComponentIndustrial>
@@ -555,7 +683,7 @@
     <techLevel>Spacer</techLevel>
     <tickerType>Normal</tickerType>
     <thingCategories>
-      <li>ApparelMisc</li>
+      <li>ApparelArmor</li>
     </thingCategories>
     <recipeMaker>
       <displayPriority>105</displayPriority>
@@ -605,6 +733,9 @@
   </ThingDef>
   <ThingDef Name="WULA_ApparelHelmetBase" ParentName="HatMakeableBase" Abstract="True">
     <techLevel>Spacer</techLevel>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
     <recipeMaker>
       <displayPriority>105</displayPriority>
       <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
@@ -1015,7 +1146,7 @@
     <techLevel>Spacer</techLevel>
     <tickerType>Normal</tickerType>
     <thingCategories>
-      <li>Apparel</li>
+      <li>ApparelArmor</li>
     </thingCategories>
     <recipeMaker>
       <displayPriority>105</displayPriority>
