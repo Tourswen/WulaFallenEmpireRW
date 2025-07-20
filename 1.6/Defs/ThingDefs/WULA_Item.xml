@@ -193,7 +193,7 @@
       <WorkToMake>15000</WorkToMake>
     </statBases>
     <graphicData>
-      <texPath>Things/Item/Special/MechSerumNeurotrainer</texPath>
+      <texPath>Wula/Item/WULA_Syhth_Trainer</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <researchPrerequisites>
