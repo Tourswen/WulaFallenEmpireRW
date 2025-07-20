@@ -14,10 +14,10 @@
       <MarketValue>24</MarketValue>
       <Mass>0.3</Mass>
       <WorkToMake>450</WorkToMake>
-      <Nutrition>1</Nutrition>
+      <Nutrition>1</Nutrition> <!-- Reverted to 1 as per user request -->
     </statBases>
     <ingestible>
-      <preferability>MealSimple</preferability>
+      <preferability>MealSimple</preferability> <!-- Reverted to MealSimple as per user request -->
       <optimalityOffsetHumanlikes>-1000</optimalityOffsetHumanlikes>
       <optimalityOffsetFeedingAnimals>-1000</optimalityOffsetFeedingAnimals>
       <ingestEffect>EatVegetarian</ingestEffect>
@@ -25,6 +25,11 @@
     </ingestible>
     <allowedArchonexusCount>200</allowedArchonexusCount>
     <tradeability>None</tradeability>
+    <modExtensions>
+      <li Class="WulaFallenEmpire.ThingDefExtension_EnergySource">
+        <energyAmount>1.0</energyAmount> <!-- Amount of energy this item provides -->
+      </li>
+    </modExtensions>
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
@@ -237,8 +242,12 @@
         <showUseGizmo>true</showUseGizmo>
         <userMustHaveHediff>Wula_Synth</userMustHaveHediff>
       </li>
-      <li Class="CompProperties_UseEffect_LearnSkill">
+      <li Class="WulaFallenEmpire.CompProperties_UseEffect_WulaSkillTrainer">
         <skill>Shooting</skill>
+        <learnAmount>100000</learnAmount>
+        <baseLossAmount>5000</baseLossAmount>
+        <noPassionLossFactor>2.0</noPassionLossFactor>
+        <minorPassionLossFactor>1.5</minorPassionLossFactor>
       </li>
     </comps>
   </ThingDef>
@@ -252,8 +261,12 @@
         <showUseGizmo>true</showUseGizmo>
         <userMustHaveHediff>Wula_Synth</userMustHaveHediff>
       </li>
-      <li Class="CompProperties_UseEffect_LearnSkill">
+      <li Class="WulaFallenEmpire.CompProperties_UseEffect_WulaSkillTrainer">
         <skill>Melee</skill>
+        <learnAmount>100000</learnAmount>
+        <baseLossAmount>5000</baseLossAmount>
+        <noPassionLossFactor>2.0</noPassionLossFactor>
+        <minorPassionLossFactor>1.5</minorPassionLossFactor>
       </li>
     </comps>
   </ThingDef>
@@ -267,8 +280,12 @@
         <showUseGizmo>true</showUseGizmo>
         <userMustHaveHediff>Wula_Synth</userMustHaveHediff>
       </li>
-      <li Class="CompProperties_UseEffect_LearnSkill">
+      <li Class="WulaFallenEmpire.CompProperties_UseEffect_WulaSkillTrainer">
         <skill>Animals</skill>
+        <learnAmount>100000</learnAmount>
+        <baseLossAmount>5000</baseLossAmount>
+        <noPassionLossFactor>2.0</noPassionLossFactor>
+        <minorPassionLossFactor>1.5</minorPassionLossFactor>
       </li>
     </comps>
   </ThingDef>
@@ -282,8 +299,12 @@
         <showUseGizmo>true</showUseGizmo>
         <userMustHaveHediff>Wula_Synth</userMustHaveHediff>
       </li>
-      <li Class="CompProperties_UseEffect_LearnSkill">
+      <li Class="WulaFallenEmpire.CompProperties_UseEffect_WulaSkillTrainer">
         <skill>Artistic</skill>
+        <learnAmount>100000</learnAmount>
+        <baseLossAmount>5000</baseLossAmount>
+        <noPassionLossFactor>2.0</noPassionLossFactor>
+        <minorPassionLossFactor>1.5</minorPassionLossFactor>
       </li>
     </comps>
   </ThingDef>
@@ -297,8 +318,12 @@
         <showUseGizmo>true</showUseGizmo>
         <userMustHaveHediff>Wula_Synth</userMustHaveHediff>
       </li>
-      <li Class="CompProperties_UseEffect_LearnSkill">
+      <li Class="WulaFallenEmpire.CompProperties_UseEffect_WulaSkillTrainer">
         <skill>Construction</skill>
+        <learnAmount>100000</learnAmount>
+        <baseLossAmount>5000</baseLossAmount>
+        <noPassionLossFactor>2.0</noPassionLossFactor>
+        <minorPassionLossFactor>1.5</minorPassionLossFactor>
       </li>
     </comps>
   </ThingDef>
@@ -312,8 +337,12 @@
         <showUseGizmo>true</showUseGizmo>
         <userMustHaveHediff>Wula_Synth</userMustHaveHediff>
       </li>
-      <li Class="CompProperties_UseEffect_LearnSkill">
+      <li Class="WulaFallenEmpire.CompProperties_UseEffect_WulaSkillTrainer">
         <skill>Cooking</skill>
+        <learnAmount>100000</learnAmount>
+        <baseLossAmount>5000</baseLossAmount>
+        <noPassionLossFactor>2.0</noPassionLossFactor>
+        <minorPassionLossFactor>1.5</minorPassionLossFactor>
       </li>
     </comps>
   </ThingDef>
@@ -327,8 +356,12 @@
         <showUseGizmo>true</showUseGizmo>
         <userMustHaveHediff>Wula_Synth</userMustHaveHediff>
       </li>
-      <li Class="CompProperties_UseEffect_LearnSkill">
+      <li Class="WulaFallenEmpire.CompProperties_UseEffect_WulaSkillTrainer">
         <skill>Crafting</skill>
+        <learnAmount>100000</learnAmount>
+        <baseLossAmount>5000</baseLossAmount>
+        <noPassionLossFactor>2.0</noPassionLossFactor>
+        <minorPassionLossFactor>1.5</minorPassionLossFactor>
       </li>
     </comps>
   </ThingDef>
@@ -342,8 +375,12 @@
         <showUseGizmo>true</showUseGizmo>
         <userMustHaveHediff>Wula_Synth</userMustHaveHediff>
       </li>
-      <li Class="CompProperties_UseEffect_LearnSkill">
+      <li Class="WulaFallenEmpire.CompProperties_UseEffect_WulaSkillTrainer">
         <skill>Intellectual</skill>
+        <learnAmount>100000</learnAmount>
+        <baseLossAmount>5000</baseLossAmount>
+        <noPassionLossFactor>2.0</noPassionLossFactor>
+        <minorPassionLossFactor>1.5</minorPassionLossFactor>
       </li>
     </comps>
   </ThingDef>
@@ -357,8 +394,12 @@
         <showUseGizmo>true</showUseGizmo>
         <userMustHaveHediff>Wula_Synth</userMustHaveHediff>
       </li>
-      <li Class="CompProperties_UseEffect_LearnSkill">
+      <li Class="WulaFallenEmpire.CompProperties_UseEffect_WulaSkillTrainer">
         <skill>Medicine</skill>
+        <learnAmount>100000</learnAmount>
+        <baseLossAmount>5000</baseLossAmount>
+        <noPassionLossFactor>2.0</noPassionLossFactor>
+        <minorPassionLossFactor>1.5</minorPassionLossFactor>
       </li>
     </comps>
   </ThingDef>
@@ -372,8 +413,12 @@
         <showUseGizmo>true</showUseGizmo>
         <userMustHaveHediff>Wula_Synth</userMustHaveHediff>
       </li>
-      <li Class="CompProperties_UseEffect_LearnSkill">
+      <li Class="WulaFallenEmpire.CompProperties_UseEffect_WulaSkillTrainer">
         <skill>Mining</skill>
+        <learnAmount>100000</learnAmount>
+        <baseLossAmount>5000</baseLossAmount>
+        <noPassionLossFactor>2.0</noPassionLossFactor>
+        <minorPassionLossFactor>1.5</minorPassionLossFactor>
       </li>
     </comps>
   </ThingDef>
@@ -387,8 +432,12 @@
         <showUseGizmo>true</showUseGizmo>
         <userMustHaveHediff>Wula_Synth</userMustHaveHediff>
       </li>
-      <li Class="CompProperties_UseEffect_LearnSkill">
+      <li Class="WulaFallenEmpire.CompProperties_UseEffect_WulaSkillTrainer">
         <skill>Plants</skill>
+        <learnAmount>100000</learnAmount>
+        <baseLossAmount>5000</baseLossAmount>
+        <noPassionLossFactor>2.0</noPassionLossFactor>
+        <minorPassionLossFactor>1.5</minorPassionLossFactor>
       </li>
     </comps>
   </ThingDef>
@@ -402,8 +451,12 @@
         <showUseGizmo>true</showUseGizmo>
         <userMustHaveHediff>Wula_Synth</userMustHaveHediff>
       </li>
-      <li Class="CompProperties_UseEffect_LearnSkill">
+      <li Class="WulaFallenEmpire.CompProperties_UseEffect_WulaSkillTrainer">
         <skill>Social</skill>
+        <learnAmount>100000</learnAmount>
+        <baseLossAmount>5000</baseLossAmount>
+        <noPassionLossFactor>2.0</noPassionLossFactor>
+        <minorPassionLossFactor>1.5</minorPassionLossFactor>
       </li>
     </comps>
   </ThingDef>

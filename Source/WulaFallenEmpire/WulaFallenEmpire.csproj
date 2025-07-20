@@ -63,6 +63,18 @@
     <Compile Include="SectionLayer_WulaHull.cs" />
     <Compile Include="HediffComp_RegenerateBackstory.cs" />
     <Compile Include="WulaFallenEmpireMod.cs" />
+    <Compile Include="Need_WulaEnergy.cs" />
+    <Compile Include="NeedDefExtension_Energy.cs" />
+    <Compile Include="WorkGiver_FeedWulaPatient.cs" />
+    <Compile Include="WorkGiverDefExtension_FeedWula.cs" />
+    <Compile Include="WorkGiver_Warden_FeedWula.cs" />
+    <Compile Include="WorkGiver_Warden_DeliverEnergy.cs" />
+    <Compile Include="ThingDefExtension_EnergySource.cs" />
+    <Compile Include="IngestPatch.cs" />
+    <Compile Include="JobDriver_IngestWulaEnergy.cs" />
+    <Compile Include="JobDriver_FeedWulaPatient.cs" />
+    <Compile Include="WulaStatDefOf.cs" />
+    <Compile Include="CompUseEffect_WulaSkillTrainer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

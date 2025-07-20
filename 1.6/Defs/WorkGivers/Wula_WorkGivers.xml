@@ -52,4 +52,58 @@
     </requiredCapacities>
     <prioritizeSustains>true</prioritizeSustains>
   </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>FeedWulaPatient</defName>
+    <label>为机械乌拉补充能量</label>
+    <giverClass>WulaFallenEmpire.WorkGiver_FeedWulaPatient</giverClass>
+    <workType>Doctor</workType>
+    <priorityInType>100</priorityInType>
+    <verb>补充能量</verb>
+    <gerund>补充能量于</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <modExtensions>
+      <li Class="WulaFallenEmpire.WorkGiverDefExtension_FeedWula">
+        <energySourceDef>WULA_Charge_Cube</energySourceDef>
+      </li>
+    </modExtensions>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>FeedWulaPrisoner</defName>
+    <label>为乌拉囚犯补充能量</label>
+    <giverClass>WulaFallenEmpire.WorkGiver_Warden_FeedWula</giverClass>
+    <workType>Warden</workType>
+    <priorityInType>100</priorityInType>
+    <verb>补充能量</verb>
+    <gerund>补充能量于</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <modExtensions>
+      <li Class="WulaFallenEmpire.WorkGiverDefExtension_FeedWula">
+        <energySourceDef>WULA_Charge_Cube</energySourceDef>
+      </li>
+    </modExtensions>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DeliverEnergyToWulaPrisoner</defName>
+    <label>为乌拉囚犯运送能量</label>
+    <giverClass>WulaFallenEmpire.WorkGiver_Warden_DeliverEnergy</giverClass>
+    <workType>Warden</workType>
+    <priorityInType>50</priorityInType>
+    <verb>运送能量</verb>
+    <gerund>运送能量于</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <modExtensions>
+      <li Class="WulaFallenEmpire.WorkGiverDefExtension_FeedWula">
+        <energySourceDef>WULA_Charge_Cube</energySourceDef>
+      </li>
+    </modExtensions>
+  </WorkGiverDef>
 </Defs>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>WULA_Energy_Regulator</defName>
+    <label>乌拉能量调节器</label>
+    <description>一个先进的乌拉植入物，能够微调宿主的能量系统，提高能量上限并降低能量消耗速度。</description>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1500</MarketValue>
+      <Mass>0.5</Mass>
+    </statBases>
+    <techLevel>Archotech</techLevel>
+    <recipeMaker>
+      <researchPrerequisite>WULA_New_Synth_Skill_Technology</researchPrerequisite>
+      <recipeUsers>
+        <li>WULA_Synth_Server</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <displayPriority>650</displayPriority>
+    </recipeMaker>
+    <costList>
+      <Plasteel>50</Plasteel>
+      <ComponentSpacer>2</ComponentSpacer>
+      <WULA_Charge_Cube>5</WULA_Charge_Cube>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <tradeTags>
+      <li>TechHediff</li>
+    </tradeTags>
+  </ThingDef>
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>WULA_Energy_Regulator_Implant</defName>
+    <label>乌拉能量调节器</label>
+    <description>已安装乌拉能量调节器。这提高了能量上限并降低了能量消耗速度。</description>
+    <spawnThingOnRemoved>WULA_Energy_Regulator</spawnThingOnRemoved>
+    <addedPartProps>
+      <partEfficiency>1.0</partEfficiency>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets> <!-- StatOffset 是加法偏移量，正数增加，负数减少 -->
+          <WulaEnergyMaxLevelOffset>0.2</WulaEnergyMaxLevelOffset> <!-- 能量上限增加 0.2 -->
+        </statOffsets>
+        <statFactors> <!-- StatFactor 是乘法因子，小于 1.0 减少，大于 1.0 增加 -->
+          <WulaEnergyFallRateFactor>0.8</WulaEnergyFallRateFactor> <!-- 能量消耗速度变为原来的 80% -->
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

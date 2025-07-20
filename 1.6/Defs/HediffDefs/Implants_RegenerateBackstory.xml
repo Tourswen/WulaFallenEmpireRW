@@ -10,6 +10,19 @@
       <MarketValue>1500</MarketValue>
       <Mass>0.1</Mass>
     </statBases>
+    <recipeMaker>
+      <researchPrerequisite>Prosthetics</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <Plasteel>50</Plasteel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
     <comps>
       <li Class="CompProperties_Usable">
         <compClass>CompUsableImplant</compClass>

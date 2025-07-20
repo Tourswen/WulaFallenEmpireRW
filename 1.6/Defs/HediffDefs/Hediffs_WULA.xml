@@ -106,4 +106,32 @@
       <li Class="HediffCompProperties_RemoveIfApparelDropped" />
     </comps>
   </HediffDef>
+
+  <HediffDef>
+    <defName>WULA_Shutdown</defName>
+    <label>停机</label>
+    <description>机体能量已完全耗尽，所有非核心功能已下线，需要立刻补充能量。</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <stages>
+      <li>
+        <label>停机</label>
+        <minSeverity>0</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <setMax>0.1</setMax>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
 </Defs>
