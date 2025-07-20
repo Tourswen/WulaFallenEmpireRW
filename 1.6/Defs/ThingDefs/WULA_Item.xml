@@ -139,6 +139,7 @@
     <statBases>
       <MarketValue>1000</MarketValue>
       <Mass>0.01</Mass>
+      <WorkToMake>30000</WorkToMake>
     </statBases>
     <thingCategories>
       <li>ResourcesRaw</li>

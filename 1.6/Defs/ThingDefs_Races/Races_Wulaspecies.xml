@@ -756,6 +756,7 @@
 
     <statBases>
       <MoveSpeed>6</MoveSpeed>
+      <FoodPoisonChance>0.001</FoodPoisonChance>
 
       <WastepacksPerRecharge MayRequire="Ludeon.RimWorld.Biotech">0</WastepacksPerRecharge>
     </statBases>

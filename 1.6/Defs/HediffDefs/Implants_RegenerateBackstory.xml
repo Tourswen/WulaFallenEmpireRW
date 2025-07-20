@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+<<<<<<< Updated upstream
   <ThingDef ParentName="BodyPartProstheticMakeableBase">
+=======
+  <ThingDef>
+>>>>>>> Stashed changes
     <defName>Wula_BackstoryRegeneratorImplant</defName>
     <label>backstory regenerator</label>
     <thingClass>ThingWithComps</thingClass>
