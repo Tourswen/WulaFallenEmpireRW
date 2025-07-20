@@ -63,20 +63,22 @@ namespace WulaFallenEmpire
             }
         }
 
-        public override bool CanBeUsedBy(Pawn p, out string failReason)
+        public override AcceptanceReport CanBeUsedBy(Pawn p)
         {
             if (p.skills == null)
             {
-                failReason = "PawnHasNoSkills".Translate(p.LabelShort);
-                return false;
+                return "PawnHasNoSkills".Translate(p.LabelShort);
             }
             if (Props.skill == null)
             {
-                failReason = "SkillTrainerHasNoSkill".Translate(parent.LabelShort);
-                return false;
+                return "SkillTrainerHasNoSkill".Translate(parent.LabelShort);
             }
-            failReason = null;
-            return true;
+            // 检查目标技能是否被禁用
+            if (p.skills.GetSkill(Props.skill).TotallyDisabled)
+            {
+                return "SkillDisabled".Translate();
+            }
+            return base.CanBeUsedBy(p);
         }
     }
 }

@@ -514,7 +514,7 @@
 				<!-- 脖子和头部 -->
 				<li>
 					<def>WULA_Outer_Armor_Bodypart</def>
-					<coverage>1</coverage>
+					<coverage>0.99</coverage>
 					<height>Top</height>
 					<groups>
 						<li>Torso</li>
@@ -597,7 +597,7 @@
 			<parts>
 				<li>
 					<def>WULA_Outer_Armor_Bodypart</def>
-					<coverage>1</coverage>
+					<coverage>0.99</coverage>
 					<height>Top</height>
 					<groups>
 						<li>Torso</li>
@@ -629,7 +629,7 @@
 						<li>
 							<def>Leg</def>
 							<customLabel>第一机械足</customLabel>
-							<coverage>0.14</coverage>
+							<coverage>0.13</coverage>
 							<height>Bottom</height>
 							<groups>
 								<li>Legs</li>
@@ -638,7 +638,7 @@
 						<li>
 							<def>Leg</def>
 							<customLabel>第二机械足</customLabel>
-							<coverage>0.14</coverage>
+							<coverage>0.13</coverage>
 							<height>Bottom</height>
 							<groups>
 								<li>Legs</li>
@@ -647,7 +647,7 @@
 						<li>
 							<def>Leg</def>
 							<customLabel>第三机械足</customLabel>
-							<coverage>0.14</coverage>
+							<coverage>0.13</coverage>
 							<height>Bottom</height>
 							<groups>
 								<li>Legs</li>
@@ -656,7 +656,7 @@
 						<li>
 							<def>Leg</def>
 							<customLabel>第四机械足</customLabel>
-							<coverage>0.14</coverage>
+							<coverage>0.13</coverage>
 							<height>Bottom</height>
 							<groups>
 								<li>Legs</li>
@@ -665,7 +665,7 @@
 						<li>
 							<def>Leg</def>
 							<customLabel>第五机械足</customLabel>
-							<coverage>0.14</coverage>
+							<coverage>0.13</coverage>
 							<height>Bottom</height>
 							<groups>
 								<li>Legs</li>
@@ -674,7 +674,7 @@
 						<li>
 							<def>Leg</def>
 							<customLabel>第六机械足</customLabel>
-							<coverage>0.14</coverage>
+							<coverage>0.13</coverage>
 							<height>Bottom</height>
 							<groups>
 								<li>Legs</li>
