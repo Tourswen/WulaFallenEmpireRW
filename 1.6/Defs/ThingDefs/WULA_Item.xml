@@ -144,6 +144,7 @@
     <statBases>
       <MarketValue>1000</MarketValue>
       <Mass>0.01</Mass>
+      <WorkToMake>30000</WorkToMake>
     </statBases>
     <thingCategories>
       <li>ResourcesRaw</li>
@@ -197,7 +198,7 @@
       <WorkToMake>15000</WorkToMake>
     </statBases>
     <graphicData>
-      <texPath>Things/Item/Special/MechSerumNeurotrainer</texPath>
+      <texPath>Wula/Item/WULA_Syhth_Trainer</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <researchPrerequisites>

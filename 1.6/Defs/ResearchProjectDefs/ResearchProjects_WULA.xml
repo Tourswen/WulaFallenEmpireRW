@@ -204,6 +204,18 @@
       <li>WULA_Synth_Weapon_2_Ranged_Technology</li>
     </prerequisites>
   </ResearchProjectDef>
+  <ResearchProjectDef ParentName="WULAtechBase">
+    <defName>WULA_Synth_Weapon_4_DM_Base_Technology</defName>
+    <researchViewX>9.00</researchViewX>
+    <researchViewY>0.20</researchViewY>
+    <label>暗物质远射套件</label>
+    <description>开发供乌拉帝国合成人使用的暗物质驱动远程武器——乌拉帝国科技极致伟力的具象化。</description>
+    <baseCost>4000</baseCost>
+    <prerequisites>
+      <li>WULA_Synth_Weapon_3_Bomb_Technology</li>
+      <li>WULA_Dark_Matter_Technology</li>
+    </prerequisites>
+  </ResearchProjectDef>
   <!-- 法杖 -->
   <ResearchProjectDef ParentName="WULAtechBase">
     <defName>WULA_Synth_Psi_Technology</defName>

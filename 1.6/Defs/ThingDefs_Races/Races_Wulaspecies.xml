@@ -378,7 +378,7 @@
     <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
     <statBases>
       <WorkToMake>7200</WorkToMake>
-      <MarketValue>3000</MarketValue>
+      <MarketValue>12000</MarketValue>
       <Mass>50</Mass>
       <MoveSpeed>4.5</MoveSpeed>
       <EatingSpeed>1000</EatingSpeed>
@@ -756,6 +756,7 @@
 
     <statBases>
       <MoveSpeed>6</MoveSpeed>
+      <FoodPoisonChance>0.001</FoodPoisonChance>
 
       <WastepacksPerRecharge MayRequire="Ludeon.RimWorld.Biotech">0</WastepacksPerRecharge>
     </statBases>
