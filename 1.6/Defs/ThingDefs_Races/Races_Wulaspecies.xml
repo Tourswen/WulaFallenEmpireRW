@@ -34,6 +34,7 @@
         <canLayDown>true</canLayDown>
         <validBeds>
           <li>WULA_Charging_Station_Synth</li>
+          <li>Wula_SleepingSpot</li>
         </validBeds>
         <!-- 各种零件定义 -->
         <alienPartGenerator Inherit="False">
