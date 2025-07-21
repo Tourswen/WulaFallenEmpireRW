@@ -4,7 +4,7 @@
     <defName>WULA_Energy</defName>
     <needClass>WulaFallenEmpire.Need_WulaEnergy</needClass>
     <label>能量</label>
-    <description>乌拉帝国的合成人正常活动需要能量维持，否则身体机能将持续恶化，最终导致有机部分不可逆的死亡。\n\n机械乌拉和常规机械体不同，她们只有一种指定的能量接口，只能通过能源核心补充能量，在乌拉帝国编织体工作台制造这种核心。</description>
+    <description>乌拉帝国的合成人正常活动需要能量维持，在缺少能量时将倒地不起，无法进行任何工作。\n\n机械乌拉和常规机械体不同，她们只有一种指定的能量接口，只能通过能源核心补充能量，在乌拉帝国编织体工作台制造这种核心。</description>
     <listPriority>800</listPriority>
     <major>true</major>
     <onlyIfCausedByHediff>true</onlyIfCausedByHediff>
@@ -16,9 +16,9 @@
     <showUnitTicks>true</showUnitTicks>
     <modExtensions>
       <li Class="WulaFallenEmpire.NeedDefExtension_Energy">
-        <fallPerDay>1.6</fallPerDay>
+        <fallPerDay>1</fallPerDay>
         <maxLevel>1.0</maxLevel>
-        <deliverEnergyThreshold>0.5</deliverEnergyThreshold>
+        <deliverEnergyThreshold>0.05</deliverEnergyThreshold>
       </li>
     </modExtensions>
   </NeedDef>

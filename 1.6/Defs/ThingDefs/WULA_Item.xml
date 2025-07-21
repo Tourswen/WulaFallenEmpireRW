@@ -174,7 +174,7 @@
   <ThingDef Abstract="True" Name="WULA_Syhth_Trainer">
     <!-- <defName>WULA_Syhth_Trainer</defName>
     <label>乌拉帝国技能预设</label> -->
-    <description>一个蕴含了提升特定技能所需知识的数据包，需要通过乌拉帝国合成人特有的神经接口接入，其他种族无法使用。</description>
+    <description>一个蕴含了提升特定技能所需知识的数据包，需要通过乌拉帝国合成人特有的神经接口接入，其他种族无法使用。\n\n机械乌拉的存储空间有限，每一次使用数据包都会迫使其遗忘其他非目标技能并损失经验值，没有热情的技能将更快被遗忘。</description>
     <thingClass>ThingWithComps</thingClass>
     <category>Item</category>
     <drawerType>MapMeshOnly</drawerType>
@@ -245,8 +245,8 @@
       </li>
       <li Class="WulaFallenEmpire.CompProperties_UseEffect_WulaSkillTrainer">
         <skill>Shooting</skill>
-        <xpGainAmount>100000</xpGainAmount>
-        <baseLossAmount>5000</baseLossAmount>
+        <xpGainAmount>50000</xpGainAmount>
+        <baseLossAmount>25000</baseLossAmount>
         <noPassionLossFactor>2.0</noPassionLossFactor>
         <minorPassionLossFactor>1.5</minorPassionLossFactor>
       </li>
@@ -264,8 +264,8 @@
       </li>
       <li Class="WulaFallenEmpire.CompProperties_UseEffect_WulaSkillTrainer">
         <skill>Melee</skill>
-        <xpGainAmount>100000</xpGainAmount>
-        <baseLossAmount>5000</baseLossAmount>
+        <xpGainAmount>50000</xpGainAmount>
+        <baseLossAmount>10000</baseLossAmount>
         <noPassionLossFactor>2.0</noPassionLossFactor>
         <minorPassionLossFactor>1.5</minorPassionLossFactor>
       </li>
@@ -283,8 +283,8 @@
       </li>
       <li Class="WulaFallenEmpire.CompProperties_UseEffect_WulaSkillTrainer">
         <skill>Animals</skill>
-        <xpGainAmount>100000</xpGainAmount>
-        <baseLossAmount>5000</baseLossAmount>
+        <xpGainAmount>50000</xpGainAmount>
+        <baseLossAmount>10000</baseLossAmount>
         <noPassionLossFactor>2.0</noPassionLossFactor>
         <minorPassionLossFactor>1.5</minorPassionLossFactor>
       </li>
@@ -302,8 +302,8 @@
       </li>
       <li Class="WulaFallenEmpire.CompProperties_UseEffect_WulaSkillTrainer">
         <skill>Artistic</skill>
-        <xpGainAmount>100000</xpGainAmount>
-        <baseLossAmount>5000</baseLossAmount>
+        <xpGainAmount>50000</xpGainAmount>
+        <baseLossAmount>10000</baseLossAmount>
         <noPassionLossFactor>2.0</noPassionLossFactor>
         <minorPassionLossFactor>1.5</minorPassionLossFactor>
       </li>
@@ -321,8 +321,8 @@
       </li>
       <li Class="WulaFallenEmpire.CompProperties_UseEffect_WulaSkillTrainer">
         <skill>Construction</skill>
-        <xpGainAmount>100000</xpGainAmount>
-        <baseLossAmount>5000</baseLossAmount>
+        <xpGainAmount>50000</xpGainAmount>
+        <baseLossAmount>10000</baseLossAmount>
         <noPassionLossFactor>2.0</noPassionLossFactor>
         <minorPassionLossFactor>1.5</minorPassionLossFactor>
       </li>
@@ -340,8 +340,8 @@
       </li>
       <li Class="WulaFallenEmpire.CompProperties_UseEffect_WulaSkillTrainer">
         <skill>Cooking</skill>
-        <xpGainAmount>100000</xpGainAmount>
-        <baseLossAmount>5000</baseLossAmount>
+        <xpGainAmount>50000</xpGainAmount>
+        <baseLossAmount>10000</baseLossAmount>
         <noPassionLossFactor>2.0</noPassionLossFactor>
         <minorPassionLossFactor>1.5</minorPassionLossFactor>
       </li>
@@ -359,8 +359,8 @@
       </li>
       <li Class="WulaFallenEmpire.CompProperties_UseEffect_WulaSkillTrainer">
         <skill>Crafting</skill>
-        <xpGainAmount>100000</xpGainAmount>
-        <baseLossAmount>5000</baseLossAmount>
+        <xpGainAmount>50000</xpGainAmount>
+        <baseLossAmount>10000</baseLossAmount>
         <noPassionLossFactor>2.0</noPassionLossFactor>
         <minorPassionLossFactor>1.5</minorPassionLossFactor>
       </li>
@@ -378,8 +378,8 @@
       </li>
       <li Class="WulaFallenEmpire.CompProperties_UseEffect_WulaSkillTrainer">
         <skill>Intellectual</skill>
-        <xpGainAmount>100000</xpGainAmount>
-        <baseLossAmount>5000</baseLossAmount>
+        <xpGainAmount>50000</xpGainAmount>
+        <baseLossAmount>10000</baseLossAmount>
         <noPassionLossFactor>2.0</noPassionLossFactor>
         <minorPassionLossFactor>1.5</minorPassionLossFactor>
       </li>
@@ -397,8 +397,8 @@
       </li>
       <li Class="WulaFallenEmpire.CompProperties_UseEffect_WulaSkillTrainer">
         <skill>Medicine</skill>
-        <xpGainAmount>100000</xpGainAmount>
-        <baseLossAmount>5000</baseLossAmount>
+        <xpGainAmount>50000</xpGainAmount>
+        <baseLossAmount>10000</baseLossAmount>
         <noPassionLossFactor>2.0</noPassionLossFactor>
         <minorPassionLossFactor>1.5</minorPassionLossFactor>
       </li>
@@ -416,8 +416,8 @@
       </li>
       <li Class="WulaFallenEmpire.CompProperties_UseEffect_WulaSkillTrainer">
         <skill>Mining</skill>
-        <xpGainAmount>100000</xpGainAmount>
-        <baseLossAmount>5000</baseLossAmount>
+        <xpGainAmount>50000</xpGainAmount>
+        <baseLossAmount>10000</baseLossAmount>
         <noPassionLossFactor>2.0</noPassionLossFactor>
         <minorPassionLossFactor>1.5</minorPassionLossFactor>
       </li>
@@ -435,8 +435,8 @@
       </li>
       <li Class="WulaFallenEmpire.CompProperties_UseEffect_WulaSkillTrainer">
         <skill>Plants</skill>
-        <xpGainAmount>100000</xpGainAmount>
-        <baseLossAmount>5000</baseLossAmount>
+        <xpGainAmount>50000</xpGainAmount>
+        <baseLossAmount>10000</baseLossAmount>
         <noPassionLossFactor>2.0</noPassionLossFactor>
         <minorPassionLossFactor>1.5</minorPassionLossFactor>
       </li>
@@ -454,8 +454,8 @@
       </li>
       <li Class="WulaFallenEmpire.CompProperties_UseEffect_WulaSkillTrainer">
         <skill>Social</skill>
-        <xpGainAmount>100000</xpGainAmount>
-        <baseLossAmount>5000</baseLossAmount>
+        <xpGainAmount>50000</xpGainAmount>
+        <baseLossAmount>10000</baseLossAmount>
         <noPassionLossFactor>2.0</noPassionLossFactor>
         <minorPassionLossFactor>1.5</minorPassionLossFactor>
       </li>

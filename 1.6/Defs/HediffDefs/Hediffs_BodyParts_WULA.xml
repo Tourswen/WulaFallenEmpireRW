@@ -106,6 +106,9 @@
         <maxSeverity>1</maxSeverity>
       </li>
     </comps>
+    <tradeTags>
+      <li>TechHediff</li>
+    </tradeTags>
   </ThingDef>
   <HediffDef ParentName="Wula_ImplantHediffBase_T2">
     <defName>WULA_Energy_Furnace_Hediff_Overdrive</defName>
@@ -194,6 +197,63 @@
     </comps>
   </HediffDef>
   <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <defName>WULA_Energy_Furnace_Regulator</defName>
+    <label>中央能源炉-调节组件</label>
+    <description>安装于能源炉的特殊改件，能够微调机械乌拉的能量系统，提高能量上限并降低能量消耗速度。</description>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <recipeMaker Inherit="False">
+      <researchPrerequisite>WULA_Synth_Addons_2_Technology</researchPrerequisite>
+      <recipeUsers>
+        <li>WULA_Cube_Productor_Energy</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <Steel>200</Steel>
+      <ComponentIndustrial>10</ComponentIndustrial>
+      <WULA_Charge_Cube>5</WULA_Charge_Cube>
+    </costList>
+    <tradeTags>
+      <li>TechHediff</li>
+    </tradeTags>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsableImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>安装中央能源炉调节组件</useLabel>
+        <!-- <userMustHaveHediff>WULA_Addons_Antenna_Hediff_Base</userMustHaveHediff> -->
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>WULA_Energy_Furnace_Hediff_Regulator</hediffDef>
+        <bodyPart>WULA_Energy_Furnace_Bodypart</bodyPart>
+        <canUpgrade>false</canUpgrade>
+        <maxSeverity>1</maxSeverity>
+      </li>
+    </comps>
+  </ThingDef>
+  <HediffDef ParentName="Wula_ImplantHediffBase_T1">
+    <defName>WULA_Energy_Furnace_Hediff_Regulator</defName>
+    <label>调节组件</label>
+    <description>安装于能源炉的特殊改件，提高能量上限并降低能量消耗速度。</description>
+    <!-- <spawnThingOnRemoved>WULA_Energy_Furnace_Regulator</spawnThingOnRemoved> -->
+    <addedPartProps>
+      <partEfficiency>1.0</partEfficiency>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets> <!-- StatOffset 是加法偏移量，正数增加，负数减少 -->
+          <WulaEnergyMaxLevelOffset>0.5</WulaEnergyMaxLevelOffset>
+        </statOffsets>
+        <statFactors> <!-- StatFactor 是乘法因子，小于 1.0 减少，大于 1.0 增加 -->
+          <WulaEnergyFallRateFactor>0.9</WulaEnergyFallRateFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+  <ThingDef ParentName="BodyPartProstheticMakeableBase">
     <defName>WULA_Energy_Furnace_Hunger</defName>
     <label>中央能源炉-偷吃组件</label>
     <description>安装于能源炉的特殊改件，通过增加能源需求变相制造满足感，以增加合成人的心情。</description>
@@ -228,6 +288,9 @@
         <maxSeverity>1</maxSeverity>
       </li>
     </comps>
+    <tradeTags>
+      <li>TechHediff</li>
+    </tradeTags>
   </ThingDef>
   <HediffDef ParentName="Wula_ImplantHediffBase_T2">
     <defName>WULA_Energy_Furnace_Hediff_Hunger</defName>
@@ -515,7 +578,7 @@
       </recipeUsers>
     </recipeMaker>
   </ThingDef>
-   <HediffDef ParentName="ImplantHediffBase">
+  <HediffDef ParentName="ImplantHediffBase">
     <defName>WULA_Addons_Antenna_Hediff_Base</defName>
     <hediffClass>Hediff_Mechlink</hediffClass>
     <label>基础上线链路天线</label>
@@ -985,6 +1048,7 @@
     </comps>
   </HediffDef>
 
+  <!-- 抽魂 -->
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
     <defName>WULA_Extract_Soul_Wedge</defName>
     <label>提取魂楔</label>
@@ -1071,4 +1135,91 @@
       </li>
     </stages>
   </HediffDef>
+
+  <!-- 背景故事重置 -->
+  <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <defName>Wula_BackstoryRegeneratorImplant</defName>
+    <label>合成人人格数据包</label>
+    <description>从乌拉帝国上行链路下载的数据包，内含随机的人格数据，机械乌拉在使用后会改变其人格，这会重置它禁止的工作，但是不会重设其热情和特质。\n\n新的人格有可能和旧人格一模一样！</description>
+    <thingClass>ThingWithComps</thingClass>
+    <graphicData>
+      <texPath>Wula/Item/WULA_Syhth_Trainer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1500</MarketValue>
+      <Mass>0.1</Mass>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisites Inherit="False">
+        <li>WULA_New_Synth_Skill_Technology</li>
+      </researchPrerequisites>
+      <researchPrerequisite>WULA_Synth_Addons_2_Technology</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>WULA_Synth_Server</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <Steel>50</Steel>
+      <ComponentSpacer>1</ComponentSpacer>
+      <WULA_Charge_Cube>1</WULA_Charge_Cube>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsableImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>使用 {0_label}</useLabel>
+      </li>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>Wula_RegenerateBackstory</hediffDef>
+        <bodyPart>Brain</bodyPart>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+  </ThingDef>
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>Wula_RegenerateBackstory</defName>
+    <label>backstory regenerator</label>
+    <labelNoun>a backstory regenerator</labelNoun>
+    <description>A backstory regenerator is installed.</description>
+    <spawnThingOnRemoved>Wula_BackstoryRegeneratorImplant</spawnThingOnRemoved>
+    <comps>
+      <li Class="WulaFallenEmpire.HediffCompProperties_RegenerateBackstory">
+        <spawnCategories>
+          <li>Wula_Backstory_Categories</li>
+        </spawnCategories>
+        <regenerateChildhood>false</regenerateChildhood>
+      </li>
+    </comps>
+  </HediffDef>
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>InstallWulaBackstoryRegenerator</defName>
+    <label>install backstory regenerator</label>
+    <description>Installs a backstory regenerator.</description>
+    <jobString>Installing backstory regenerator.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Wula_BackstoryRegeneratorImplant</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Wula_BackstoryRegeneratorImplant</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>Wula_RegenerateBackstory</addsHediff>
+  </RecipeDef>
+
+  <!-- 能量电池 -->
 </Defs>

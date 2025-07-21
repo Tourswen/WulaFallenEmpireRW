@@ -609,6 +609,20 @@
     </researchPrerequisites>
   </ThingDef>
 
+  <!-- 乌拉族睡眠点 -->
+  <ThingDef ParentName="SleepingSpotBase">
+    <defName>Wula_SleepingSpot</defName>
+    <label>乌拉帝国抢修点</label>
+    <description>指定一块地方，供机械乌拉躺下以进行抢修。</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/Bed/SleepSpot</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,4)</drawSize>
+    </graphicData>
+    <size>(1,2)</size>
+    <designationHotKey>Misc1</designationHotKey>
+  </ThingDef>
+
   <!-- 联络台 -->
   <!-- <ThingDef ParentName="BuildingBase">
     <defName>WULA_Communicator_Station</defName>
